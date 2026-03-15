@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-03-12 20:08:28",
+  "config": {
+    "controller": "enhanced",
+    "episodes": 50,
+    "max_steps": 300,
+    "placement_mode": "scene",
+    "placement_jitter": 0.002,
+    "enable_catch_task": true,
+    "object_fall_speed": -0.3,
+    "task_name": "catch_and_hold",
+    "success_rule": "palm_or_fingers_contact_for_50_steps_and_object_not_on_floor",
+    "seed": null
+  },
+  "summary": {
+    "episodes": 50,
+    "success_count": 46,
+    "success_rate": 0.92,
+    "avg_steps": 300.0,
+    "avg_reward": 6449.34521484375,
+    "avg_final_distance": 0.09020503141075423,
+    "avg_max_contact_duration": 169.56
+  }
+}

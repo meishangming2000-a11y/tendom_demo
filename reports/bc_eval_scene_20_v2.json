@@ -1,0 +1,484 @@
+{
+  "generated_at": "2026-03-12 11:10:21",
+  "config": {
+    "model": "models/bc_expert_v2_50_100ep.pth",
+    "episodes": 20,
+    "max_steps": 80,
+    "placement_mode": "scene",
+    "placement_jitter": 0.01,
+    "enable_catch_task": false,
+    "object_fall_speed": -0.3,
+    "device": "cpu",
+    "seed": null,
+    "success_rule": "palm_or_fingers_contact_for_50_steps",
+    "training_metadata": {
+      "num_episodes": 50,
+      "obs_dim": 70,
+      "act_dim": 24,
+      "timestamp": "2026-03-12 11:03:10",
+      "env": "ShadowGraspEnv",
+      "version": "2.0",
+      "controller": "enhanced",
+      "max_steps": 80,
+      "grasp_strength": 0.7,
+      "placement_mode": "demo",
+      "placement_jitter": 0.01,
+      "enable_catch_task": false,
+      "object_fall_speed": -0.3,
+      "success_rule": "palm_or_fingers_contact_for_50_steps",
+      "seed": null
+    }
+  },
+  "summary": {
+    "episodes": 20,
+    "success_count": 0,
+    "success_rate": 0.0,
+    "avg_steps": 80.0,
+    "avg_total_reward": -9.852888665948031,
+    "avg_contact_rate": 0.0,
+    "avg_max_contact_duration": 0.0,
+    "avg_final_distance": 0.1045179958362279
+  },
+  "episodes": [
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.11473882876253642,
+      "object_height": 0.07550947609411407,
+      "object_on_floor": false,
+      "total_reward": -10.668203699682167,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.30716507412273786,
+          0.0028860673268469167,
+          0.10650907609411403
+        ]
+      },
+      "episode_idx": 0
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.1031212689769988,
+      "object_height": 0.07382416704054232,
+      "object_on_floor": false,
+      "total_reward": -9.81433528730482,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.2939163572892221,
+          0.003825332298797635,
+          0.10482376704054228
+        ]
+      },
+      "episode_idx": 1
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.11343719362559793,
+      "object_height": 0.07374610409575266,
+      "object_on_floor": false,
+      "total_reward": -10.551612623354057,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.3066717045694594,
+          -0.0056494431060205045,
+          0.10474570409575262
+        ]
+      },
+      "episode_idx": 2
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.10766878286293595,
+      "object_height": 0.0651545122266498,
+      "object_on_floor": false,
+      "total_reward": -10.021427387573011,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.30496439602450254,
+          -0.009743491981591723,
+          0.09615411222664975
+        ]
+      },
+      "episode_idx": 3
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.09612999189852257,
+      "object_height": 0.062216805239919605,
+      "object_on_floor": false,
+      "total_reward": -9.152535752103267,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.2936689394158208,
+          -0.0029182332431238736,
+          0.09321640523991956
+        ]
+      },
+      "episode_idx": 4
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.10389487059790856,
+      "object_height": 0.06408904576812392,
+      "object_on_floor": false,
+      "total_reward": -9.7347050933915,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.3013008462097638,
+          0.008558372509642446,
+          0.09508864576812388
+        ]
+      },
+      "episode_idx": 5
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.1015880909724243,
+      "object_height": 0.06819156330454745,
+      "object_on_floor": false,
+      "total_reward": -9.627006509909194,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.29571122188415927,
+          0.00971545606039464,
+          0.09919116330454741
+        ]
+      },
+      "episode_idx": 6
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.11223364427973427,
+      "object_height": 0.07665261440678986,
+      "object_on_floor": false,
+      "total_reward": -10.502211049293738,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.3028574761749991,
+          -0.00901392955556515,
+          0.10765221440678982
+        ]
+      },
+      "episode_idx": 7
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.10309464831255352,
+      "object_height": 0.062450189723600134,
+      "object_on_floor": false,
+      "total_reward": -9.6541108877995,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.3015819564103989,
+          -0.005700232125259599,
+          0.09344978972360009
+        ]
+      },
+      "episode_idx": 8
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.11083546719844801,
+      "object_height": 0.07696669842041536,
+      "object_on_floor": false,
+      "total_reward": -10.406034265589271,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.3011242202937989,
+          -0.005987175776879934,
+          0.10796629842041532
+        ]
+      },
+      "episode_idx": 9
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.10293181458890475,
+      "object_height": 0.07707551069058324,
+      "object_on_floor": false,
+      "total_reward": -9.845546818592291,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.2910271794357948,
+          -0.0030255632608020997,
+          0.1080751106905832
+        ]
+      },
+      "episode_idx": 10
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.09818285167680117,
+      "object_height": 0.06944684125886871,
+      "object_on_floor": false,
+      "total_reward": -9.403454766084906,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.29114724755712273,
+          -0.0007183118602124526,
+          0.10044644125886867
+        ]
+      },
+      "episode_idx": 11
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.10117665860899824,
+      "object_height": 0.0714694836228838,
+      "object_on_floor": false,
+      "total_reward": -9.643772991456835,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.2931678294179355,
+          -0.005739443650995515,
+          0.10246908362288376
+        ]
+      },
+      "episode_idx": 12
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.10424520530144049,
+      "object_height": 0.061527982231508044,
+      "object_on_floor": false,
+      "total_reward": -9.724249082904752,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.30356086724459375,
+          0.0035313335640842856,
+          0.09252758223150799
+        ]
+      },
+      "episode_idx": 13
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.09708017166631457,
+      "object_height": 0.06452390722135294,
+      "object_on_floor": false,
+      "total_reward": -9.253977190517334,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.293279942501938,
+          -0.0029050994499274308,
+          0.0955235072213529
+        ]
+      },
+      "episode_idx": 14
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.09995456388337802,
+      "object_height": 0.06521673445011954,
+      "object_on_floor": false,
+      "total_reward": -9.468439683744888,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.2960408961153951,
+          0.006920792444204063,
+          0.0962163344501195
+        ]
+      },
+      "episode_idx": 15
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.10269647417972043,
+      "object_height": 0.06496394672538634,
+      "object_on_floor": false,
+      "total_reward": -9.660884828673339,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.29975728462435364,
+          -0.0006625553684465064,
+          0.0959635467253863
+        ]
+      },
+      "episode_idx": 16
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.10414094377571441,
+      "object_height": 0.07143356708304123,
+      "object_on_floor": false,
+      "total_reward": -9.853934434820825,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.29709984844680504,
+          0.00038780683766975223,
+          0.10243316708304119
+        ]
+      },
+      "episode_idx": 17
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.10977282177659488,
+      "object_height": 0.0721416535499515,
+      "object_on_floor": false,
+      "total_reward": -10.266690097369569,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.3034744643849442,
+          0.0021605504898121273,
+          0.10314125354995146
+        ]
+      },
+      "episode_idx": 18
+    },
+    {
+      "success": false,
+      "steps": 80,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "final_distance": 0.10343562377903077,
+      "object_height": 0.07150044965068059,
+      "object_on_floor": false,
+      "total_reward": -9.804640868795351,
+      "placement_info": {
+        "placement_mode": "scene",
+        "placement_jitter": 0.01,
+        "repositioned": false,
+        "position": [
+          0.2961611183529821,
+          0.0015857099260787686,
+          0.10250004965068055
+        ]
+      },
+      "episode_idx": 19
+    }
+  ]
+}

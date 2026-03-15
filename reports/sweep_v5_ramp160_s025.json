@@ -1,0 +1,418 @@
+{
+  "generated_at": "2026-03-14 09:20:27",
+  "config": {
+    "model": "models\\bc_showcase_v5_success400_phase_h128_80ep.pth",
+    "episodes": 10,
+    "max_steps": 400,
+    "placement_mode": "demo",
+    "placement_jitter": 0.01,
+    "enable_catch_task": false,
+    "object_fall_speed": -0.3,
+    "device": "cpu",
+    "seed": 0,
+    "viewer_step_sleep": 0.02,
+    "viewer_hold_secs": 2.0,
+    "finger_ramp_steps": 160,
+    "finger_ramp_start_scale": 0.25,
+    "task_name": "static_grasp",
+    "success_rule": "palm_and_thumb_plus_3_finger_groups_contact_for_50_steps",
+    "training_metadata": {
+      "num_episodes": 50,
+      "obs_dim": 71,
+      "act_dim": 24,
+      "timestamp": "2026-03-14 09:19:43",
+      "env": "ShadowGraspEnv",
+      "version": "2.0",
+      "controller": "enhanced",
+      "max_steps": 400,
+      "grasp_strength": 0.7,
+      "placement_mode": "demo",
+      "placement_jitter": 0.01,
+      "enable_catch_task": false,
+      "object_fall_speed": -0.3,
+      "task_name": "static_grasp",
+      "success_rule": "palm_and_thumb_plus_3_finger_groups_contact_for_50_steps",
+      "controller_profile": "expert_collection",
+      "seed": 0,
+      "early_stop_on_stable_grasp": true,
+      "stable_grasp_target_steps": 80,
+      "post_success_padding": 20,
+      "base_obs_dim": 70,
+      "phase_feature": true,
+      "phase_feature_horizon": 400
+    }
+  },
+  "summary": {
+    "episodes": 10,
+    "success_count": 6,
+    "success_rate": 0.6,
+    "avg_steps": 400.0,
+    "avg_total_reward": 17970.419933693833,
+    "avg_contact_rate": 1.0,
+    "avg_max_contact_duration": 400.0,
+    "avg_grasp_contact_rate": 0.65,
+    "avg_max_grasp_contact_duration": 101.3,
+    "avg_final_distance": 0.11408559205970104
+  },
+  "episodes": [
+    {
+      "success": true,
+      "task_name": "static_grasp",
+      "steps": 400,
+      "contact_steps": 400,
+      "contact_rate": 1.0,
+      "max_contact_duration": 400,
+      "grasp_contact_steps": 253,
+      "grasp_contact_rate": 0.6325,
+      "max_grasp_contact_duration": 106,
+      "final_distance": 0.11349698864090221,
+      "object_height": 0.04786476190466211,
+      "object_on_floor": false,
+      "finger_contact_count": 4,
+      "finger_contact_groups": [
+        "index",
+        "middle",
+        "ring",
+        "thumb"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 17970.791274027357,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.01,
+        "repositioned": true,
+        "position": [
+          0.33048627007854653,
+          -0.012196212672551611,
+          0.042055267521432876
+        ]
+      },
+      "episode_idx": 0
+    },
+    {
+      "success": true,
+      "task_name": "static_grasp",
+      "steps": 400,
+      "contact_steps": 400,
+      "contact_rate": 1.0,
+      "max_contact_duration": 400,
+      "grasp_contact_steps": 274,
+      "grasp_contact_rate": 0.685,
+      "max_grasp_contact_duration": 154,
+      "final_distance": 0.1134477946023197,
+      "object_height": 0.04781561309058368,
+      "object_on_floor": false,
+      "finger_contact_count": 4,
+      "finger_contact_groups": [
+        "index",
+        "middle",
+        "ring",
+        "thumb"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 17970.397456941977,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.01,
+        "repositioned": true,
+        "position": [
+          0.33040766365993796,
+          -0.018026904013221906,
+          0.042917882261333126
+        ]
+      },
+      "episode_idx": 1
+    },
+    {
+      "success": false,
+      "task_name": "static_grasp",
+      "steps": 400,
+      "contact_steps": 400,
+      "contact_rate": 1.0,
+      "max_contact_duration": 400,
+      "grasp_contact_steps": 254,
+      "grasp_contact_rate": 0.635,
+      "max_grasp_contact_duration": 97,
+      "final_distance": 0.11395934392870438,
+      "object_height": 0.04790768439060833,
+      "object_on_floor": false,
+      "finger_contact_count": 4,
+      "finger_contact_groups": [
+        "index",
+        "middle",
+        "ring",
+        "thumb"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 17970.687138859554,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.01,
+        "repositioned": true,
+        "position": [
+          0.3282617442252539,
+          -0.008664539984358404,
+          0.049273255210020586
+        ]
+      },
+      "episode_idx": 2
+    },
+    {
+      "success": true,
+      "task_name": "static_grasp",
+      "steps": 400,
+      "contact_steps": 400,
+      "contact_rate": 1.0,
+      "max_contact_duration": 400,
+      "grasp_contact_steps": 251,
+      "grasp_contact_rate": 0.6275,
+      "max_grasp_contact_duration": 98,
+      "final_distance": 0.11471460046366046,
+      "object_height": 0.047922229870000076,
+      "object_on_floor": false,
+      "finger_contact_count": 4,
+      "finger_contact_groups": [
+        "index",
+        "middle",
+        "ring",
+        "thumb"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 17970.595828649984,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.01,
+        "repositioned": true,
+        "position": [
+          0.3271788303765156,
+          -0.01066549923834671,
+          0.04057789839505809
+        ]
+      },
+      "episode_idx": 3
+    },
+    {
+      "success": false,
+      "task_name": "static_grasp",
+      "steps": 400,
+      "contact_steps": 400,
+      "contact_rate": 1.0,
+      "max_contact_duration": 400,
+      "grasp_contact_steps": 265,
+      "grasp_contact_rate": 0.6625,
+      "max_grasp_contact_duration": 84,
+      "final_distance": 0.11986017286417965,
+      "object_height": 0.04787394429176907,
+      "object_on_floor": false,
+      "finger_contact_count": 4,
+      "finger_contact_groups": [
+        "index",
+        "middle",
+        "ring",
+        "thumb"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 17968.29742961231,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.01,
+        "repositioned": true,
+        "position": [
+          0.3308708912218787,
+          -0.007988067234146782,
+          0.035
+        ]
+      },
+      "episode_idx": 4
+    },
+    {
+      "success": true,
+      "task_name": "static_grasp",
+      "steps": 400,
+      "contact_steps": 400,
+      "contact_rate": 1.0,
+      "max_contact_duration": 400,
+      "grasp_contact_steps": 261,
+      "grasp_contact_rate": 0.6525,
+      "max_grasp_contact_duration": 86,
+      "final_distance": 0.10674826582846073,
+      "object_height": 0.04836154587848159,
+      "object_on_floor": false,
+      "finger_contact_count": 4,
+      "finger_contact_groups": [
+        "index",
+        "middle",
+        "ring",
+        "thumb"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 17973.475216194176,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.01,
+        "repositioned": true,
+        "position": [
+          0.32125258599403084,
+          -0.026095632051193487,
+          0.04665239691095876
+        ]
+      },
+      "episode_idx": 5
+    },
+    {
+      "success": true,
+      "task_name": "static_grasp",
+      "steps": 400,
+      "contact_steps": 400,
+      "contact_rate": 1.0,
+      "max_contact_duration": 400,
+      "grasp_contact_steps": 256,
+      "grasp_contact_rate": 0.64,
+      "max_grasp_contact_duration": 116,
+      "final_distance": 0.1189670159103564,
+      "object_height": 0.047388657561789595,
+      "object_on_floor": false,
+      "finger_contact_count": 4,
+      "finger_contact_groups": [
+        "index",
+        "middle",
+        "ring",
+        "thumb"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 17968.568674858845,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.01,
+        "repositioned": true,
+        "position": [
+          0.33507313501899705,
+          -0.009099757035063617,
+          0.04957236684465528
+        ]
+      },
+      "episode_idx": 6
+    },
+    {
+      "success": false,
+      "task_name": "static_grasp",
+      "steps": 400,
+      "contact_steps": 400,
+      "contact_rate": 1.0,
+      "max_contact_duration": 400,
+      "grasp_contact_steps": 268,
+      "grasp_contact_rate": 0.67,
+      "max_grasp_contact_duration": 48,
+      "final_distance": 0.11928728983429353,
+      "object_height": 0.04773564120270941,
+      "object_on_floor": false,
+      "finger_contact_count": 3,
+      "finger_contact_groups": [
+        "index",
+        "middle",
+        "ring"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 17968.016599857277,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.01,
+        "repositioned": true,
+        "position": [
+          0.3354931712843345,
+          -0.017270412754941365,
+          0.04561058352572911
+        ]
+      },
+      "episode_idx": 7
+    },
+    {
+      "success": true,
+      "task_name": "static_grasp",
+      "steps": 400,
+      "contact_steps": 400,
+      "contact_rate": 1.0,
+      "max_contact_duration": 400,
+      "grasp_contact_steps": 255,
+      "grasp_contact_rate": 0.6375,
+      "max_grasp_contact_duration": 129,
+      "final_distance": 0.10495833771113668,
+      "object_height": 0.04861143185929129,
+      "object_on_floor": false,
+      "finger_contact_count": 4,
+      "finger_contact_groups": [
+        "index",
+        "middle",
+        "ring",
+        "thumb"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 17974.239811020816,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.01,
+        "repositioned": true,
+        "position": [
+          0.3218754885173787,
+          -0.013701579573449524,
+          0.035
+        ]
+      },
+      "episode_idx": 8
+    },
+    {
+      "success": false,
+      "task_name": "static_grasp",
+      "steps": 400,
+      "contact_steps": 400,
+      "contact_rate": 1.0,
+      "max_contact_duration": 400,
+      "grasp_contact_steps": 263,
+      "grasp_contact_rate": 0.6575,
+      "max_grasp_contact_duration": 95,
+      "final_distance": 0.11541611081299681,
+      "object_height": 0.047558690977062175,
+      "object_on_floor": false,
+      "finger_contact_count": 4,
+      "finger_contact_groups": [
+        "index",
+        "middle",
+        "ring",
+        "thumb"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 17969.129906916023,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.01,
+        "repositioned": true,
+        "position": [
+          0.3384033783409917,
+          -0.016063033564998566,
+          0.038293238799810475
+        ]
+      },
+      "episode_idx": 9
+    }
+  ]
+}

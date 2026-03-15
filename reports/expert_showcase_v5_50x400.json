@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-03-14 09:19:43",
+  "config": {
+    "controller": "enhanced",
+    "episodes": 50,
+    "max_steps": 400,
+    "placement_mode": "demo",
+    "placement_jitter": 0.01,
+    "enable_catch_task": false,
+    "object_fall_speed": -0.3,
+    "task_name": "static_grasp",
+    "success_rule": "palm_and_thumb_plus_3_finger_groups_contact_for_50_steps",
+    "controller_profile": "expert_collection",
+    "seed": 0
+  },
+  "summary": {
+    "episodes": 50,
+    "success_count": 47,
+    "success_rate": 0.94,
+    "terminal_success_count": 25,
+    "terminal_success_rate": 0.5,
+    "avg_steps": 372.66,
+    "avg_reward": 11843.9091796875,
+    "avg_final_distance": 0.11634576271585033,
+    "avg_max_contact_duration": 194.44,
+    "avg_max_grasp_contact_duration": 85.92,
+    "avg_first_success_step": 296.3829787234043
+  }
+}

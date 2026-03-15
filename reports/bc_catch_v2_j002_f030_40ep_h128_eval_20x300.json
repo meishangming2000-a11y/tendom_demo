@@ -1,0 +1,548 @@
+{
+  "generated_at": "2026-03-12 20:08:40",
+  "config": {
+    "model": "models\\bc_catch_v2_j002_f030_40ep_h128.pth",
+    "episodes": 20,
+    "max_steps": 300,
+    "placement_mode": "scene",
+    "placement_jitter": 0.002,
+    "enable_catch_task": true,
+    "object_fall_speed": -0.3,
+    "device": "cpu",
+    "seed": null,
+    "viewer_step_sleep": 0.02,
+    "viewer_hold_secs": 2.0,
+    "task_name": "catch_and_hold",
+    "success_rule": "palm_or_fingers_contact_for_50_steps_and_object_not_on_floor",
+    "training_metadata": {
+      "num_episodes": 50,
+      "obs_dim": 70,
+      "act_dim": 24,
+      "timestamp": "2026-03-12 20:08:27",
+      "env": "ShadowGraspEnv",
+      "version": "2.0",
+      "controller": "enhanced",
+      "max_steps": 300,
+      "grasp_strength": 0.7,
+      "placement_mode": "scene",
+      "placement_jitter": 0.002,
+      "enable_catch_task": true,
+      "object_fall_speed": -0.3,
+      "task_name": "catch_and_hold",
+      "success_rule": "palm_or_fingers_contact_for_50_steps_and_object_not_on_floor",
+      "seed": null
+    }
+  },
+  "summary": {
+    "episodes": 20,
+    "success_count": 20,
+    "success_rate": 1.0,
+    "avg_steps": 300.0,
+    "avg_total_reward": 6159.842546768935,
+    "avg_contact_rate": 0.6386666666666667,
+    "avg_max_contact_duration": 150.85,
+    "avg_final_distance": 0.07883561693361243
+  },
+  "episodes": [
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 200,
+      "contact_rate": 0.6666666666666666,
+      "max_contact_duration": 200,
+      "final_distance": 0.07560041294445283,
+      "object_height": 0.0508094269304974,
+      "object_on_floor": false,
+      "total_reward": 6978.678758644721,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.3018579776368257,
+          0.0012729786188703544,
+          0.10016814114313236
+        ]
+      },
+      "episode_idx": 0
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 201,
+      "contact_rate": 0.67,
+      "max_contact_duration": 201,
+      "final_distance": 0.08891743420486768,
+      "object_height": 0.04896224048148237,
+      "object_on_floor": false,
+      "total_reward": 7023.177794265302,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.3008100222900187,
+          0.0006344099657575827,
+          0.09916857421565035
+        ]
+      },
+      "episode_idx": 1
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 198,
+      "contact_rate": 0.66,
+      "max_contact_duration": 198,
+      "final_distance": 0.07978778517995049,
+      "object_height": 0.050590262598149985,
+      "object_on_floor": false,
+      "total_reward": 6889.3211536214385,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.29874711282249183,
+          -0.0012001319032768406,
+          0.10180898164903165
+        ]
+      },
+      "episode_idx": 2
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 191,
+      "contact_rate": 0.6366666666666667,
+      "max_contact_duration": 117,
+      "final_distance": 0.07322864846694621,
+      "object_height": 0.05077871189893493,
+      "object_on_floor": false,
+      "total_reward": 5712.358001016525,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.298140837071381,
+          5.8598318533596185e-05,
+          0.09835806846858532
+        ]
+      },
+      "episode_idx": 3
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 179,
+      "contact_rate": 0.5966666666666667,
+      "max_contact_duration": 107,
+      "final_distance": 0.07410578586521391,
+      "object_height": 0.051831845049740685,
+      "object_on_floor": false,
+      "total_reward": 5284.8532138121345,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.29966366675787465,
+          -0.001562210769327502,
+          0.10014197589560545
+        ]
+      },
+      "episode_idx": 4
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 188,
+      "contact_rate": 0.6266666666666667,
+      "max_contact_duration": 107,
+      "final_distance": 0.0759395721437629,
+      "object_height": 0.05044455810808661,
+      "object_on_floor": false,
+      "total_reward": 5578.914013874395,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.30192787875610355,
+          -0.0003050262282913493,
+          0.09875067038044964
+        ]
+      },
+      "episode_idx": 5
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 201,
+      "contact_rate": 0.67,
+      "max_contact_duration": 201,
+      "final_distance": 0.08078337617493142,
+      "object_height": 0.05016312534413925,
+      "object_on_floor": false,
+      "total_reward": 7023.871200954075,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.29836067085536594,
+          0.0010604517098785314,
+          0.09940636851448219
+        ]
+      },
+      "episode_idx": 6
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 167,
+      "contact_rate": 0.5566666666666666,
+      "max_contact_duration": 102,
+      "final_distance": 0.08376969264920908,
+      "object_height": 0.05001779508096635,
+      "object_on_floor": false,
+      "total_reward": 4883.446342612471,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.2980126085421917,
+          -0.001696284124891995,
+          0.10179574918503986
+        ]
+      },
+      "episode_idx": 7
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 200,
+      "contact_rate": 0.6666666666666666,
+      "max_contact_duration": 121,
+      "final_distance": 0.07824739310527525,
+      "object_height": 0.04989253965109164,
+      "object_on_floor": false,
+      "total_reward": 6022.973005316263,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.3001228764996564,
+          3.1210580936173564e-05,
+          0.09848020190312884
+        ]
+      },
+      "episode_idx": 8
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 188,
+      "contact_rate": 0.6266666666666667,
+      "max_contact_duration": 111,
+      "final_distance": 0.076731459778114,
+      "object_height": 0.05027000385988737,
+      "object_on_floor": false,
+      "total_reward": 5590.781356159966,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.30075174773112506,
+          3.0387610726960966e-05,
+          0.09998005517505221
+        ]
+      },
+      "episode_idx": 9
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 200,
+      "contact_rate": 0.6666666666666666,
+      "max_contact_duration": 200,
+      "final_distance": 0.08641554892290564,
+      "object_height": 0.0495883855290579,
+      "object_on_floor": false,
+      "total_reward": 6978.549911525839,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.29870321469572864,
+          -0.0017279339107417844,
+          0.09986209778780694
+        ]
+      },
+      "episode_idx": 10
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 199,
+      "contact_rate": 0.6633333333333333,
+      "max_contact_duration": 199,
+      "final_distance": 0.07526006561623584,
+      "object_height": 0.053117409894023554,
+      "object_on_floor": false,
+      "total_reward": 6933.7224342442805,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.30144864334635196,
+          -0.0004673000724661955,
+          0.10172763023200598
+        ]
+      },
+      "episode_idx": 11
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 188,
+      "contact_rate": 0.6266666666666667,
+      "max_contact_duration": 136,
+      "final_distance": 0.08331257072867239,
+      "object_height": 0.049287058921494854,
+      "object_on_floor": false,
+      "total_reward": 5737.895334562809,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.29966633650546876,
+          0.0005754633915686013,
+          0.09950869697141704
+        ]
+      },
+      "episode_idx": 12
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 200,
+      "contact_rate": 0.6666666666666666,
+      "max_contact_duration": 200,
+      "final_distance": 0.07403349252709202,
+      "object_height": 0.05061796676913856,
+      "object_on_floor": false,
+      "total_reward": 6978.891500557649,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.30135535272028846,
+          -0.0015136774067758024,
+          0.0999882445560804
+        ]
+      },
+      "episode_idx": 13
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 179,
+      "contact_rate": 0.5966666666666667,
+      "max_contact_duration": 105,
+      "final_distance": 0.07581883445255473,
+      "object_height": 0.05022774396878568,
+      "object_on_floor": false,
+      "total_reward": 5278.49009589117,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.29885923062670317,
+          -0.0019993842344583784,
+          0.09916444225804116
+        ]
+      },
+      "episode_idx": 14
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 193,
+      "contact_rate": 0.6433333333333333,
+      "max_contact_duration": 109,
+      "final_distance": 0.0754498993760657,
+      "object_height": 0.05064771071069167,
+      "object_on_floor": false,
+      "total_reward": 5750.361338407929,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.30006757876000134,
+          -0.001997895095556347,
+          0.10033804175836668
+        ]
+      },
+      "episode_idx": 15
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 199,
+      "contact_rate": 0.6633333333333333,
+      "max_contact_duration": 199,
+      "final_distance": 0.07922130517685977,
+      "object_height": 0.050117487772628595,
+      "object_on_floor": false,
+      "total_reward": 6933.908740635864,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.2986585168999797,
+          -0.0004471879910991263,
+          0.10157472062247562
+        ]
+      },
+      "episode_idx": 16
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 184,
+      "contact_rate": 0.6133333333333333,
+      "max_contact_duration": 103,
+      "final_distance": 0.07651089003926646,
+      "object_height": 0.050365321593741935,
+      "object_on_floor": false,
+      "total_reward": 5436.585658042839,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.3013588513014189,
+          -0.0008073179047507809,
+          0.10038098600206745
+        ]
+      },
+      "episode_idx": 17
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 177,
+      "contact_rate": 0.59,
+      "max_contact_duration": 101,
+      "final_distance": 0.08462448079825263,
+      "object_height": 0.04994133279353346,
+      "object_on_floor": false,
+      "total_reward": 5201.244673622769,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.2989477329831698,
+          -0.0009661985096305354,
+          0.10153425734572553
+        ]
+      },
+      "episode_idx": 18
+    },
+    {
+      "success": true,
+      "task_name": "catch_and_hold",
+      "steps": 300,
+      "contact_steps": 200,
+      "contact_rate": 0.6666666666666666,
+      "max_contact_duration": 200,
+      "final_distance": 0.07895369052162021,
+      "object_height": 0.05035485537442622,
+      "object_on_floor": false,
+      "total_reward": 6978.82640761026,
+      "placement_info": {
+        "placement_mode": "scene",
+        "requested_placement_mode": "scene",
+        "effective_placement_mode": "scene",
+        "placement_jitter": 0.002,
+        "repositioned": false,
+        "position": [
+          0.2991022237634149,
+          0.0005838667163061621,
+          0.09996870363063333
+        ]
+      },
+      "episode_idx": 19
+    }
+  ]
+}

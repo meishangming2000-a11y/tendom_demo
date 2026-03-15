@@ -1,0 +1,28 @@
+<mujoco model="tendon_min">
+  <option timestep="0.002"/>
+
+  <worldbody>
+    <body name="base" pos="0 0 0">
+      <geom type="sphere" size="0.03" rgba="0.2 0.2 0.2 1"/>
+
+      <site name="s_fixed" pos="-0.15 0 0" size="0.01" rgba="0 1 0 1"/>
+
+      <body name="slider_body" pos="0 0 0">
+        <joint name="j_slide" type="slide" axis="1 0 0" range="-0.2 0.2"/>
+        <geom type="box" size="0.03 0.03 0.03" rgba="0.2 0.6 1 1"/>
+        <site name="s_move" pos="0 0 0" size="0.01" rgba="1 0 0 1"/>
+      </body>
+    </body>
+  </worldbody>
+
+  <tendon>
+    <spatial name="t1">
+      <site site="s_fixed"/>
+      <site site="s_move"/>
+    </spatial>
+  </tendon>
+
+  <actuator>
+    <motor name="m_tendon" tendon="t1" gear="1"/>
+  </actuator>
+</mujoco>
