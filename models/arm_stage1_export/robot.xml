@@ -1,0 +1,50 @@
+<mujoco model="arm_stage1_export">
+  <compiler angle="radian" meshdir="meshes/" />
+  <asset>
+    <mesh name="base_link" content_type="model/stl" file="base_link.STL" />
+    <mesh name="link_1" content_type="model/stl" file="link_1.STL" />
+    <mesh name="link_2" content_type="model/stl" file="link_2.STL" />
+    <mesh name="link_3" content_type="model/stl" file="link_3.STL" />
+    <mesh name="ee_mount" content_type="model/stl" file="ee_mount.STL" />
+  </asset>
+
+  <worldbody>
+    <body name="base_link">
+      <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="base_link" contype="0" conaffinity="0" group="2" />
+      <body name="link_1">
+        <inertial pos="-0.00080533 0.00036071 0.12429" quat="0.980381 0.00856504 0.0465314 -0.191348" mass="0.21219" diaginertia="0.000359117 0.00030086 0.000220613" />
+        <joint name="j1" pos="0 0 0" axis="0 0 1" range="-3.1416 3.1416" actuatorfrcrange="-40 40" damping="0.35" armature="0.01" frictionloss="0.02" />
+        <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="link_1" contype="0" conaffinity="0" group="2" />
+        <body name="link_2" pos="-0.036371 0.014755 0.133" quat="0.694019 0.135411 0.694021 -0.135411">
+          <inertial pos="-0.087672 -0.00423 0.039635" quat="-0.0143222 0.888828 0.0183859 0.457648" mass="0.22311" diaginertia="0.000321943 0.000302617 0.00022746" />
+          <joint name="j2" pos="0 0 0" axis="0 0 -1" range="-1.5708 1.5708" actuatorfrcrange="-40 40" damping="0.35" armature="0.01" frictionloss="0.02" />
+          <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="link_2" contype="0" conaffinity="0" group="2" />
+          <body name="link_3" pos="-0.13083 -0.0066553 0.039258" quat="0.697216 -0.153172 0.690318 -0.117851">
+            <inertial pos="0.0048491 0.00031295 -0.064941" quat="0.999326 0.00100038 0.00348265 0.0365284" mass="0.16921" diaginertia="0.000277833 0.000267455 0.000120912" />
+            <joint name="j3" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-40 40" damping="0.35" armature="0.01" frictionloss="0.02" />
+            <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="link_3" contype="0" conaffinity="0" group="2" />
+            <body name="ee_mount" pos="0.054866 0.0045957 -0.1465" quat="0.70699 0.0462811 -0.705591 0.0128699">
+              <inertial pos="-0.007089 0.0080757 0.041502" quat="0.413358 0.160944 -0.0901551 0.891686" mass="0.10378" diaginertia="5.41847e-05 4.45169e-05 3.71264e-05" />
+              <joint name="j4" pos="0 0 0" axis="0 0 1" range="-3.1416 3.1416" actuatorfrcrange="-40 40" damping="0.35" armature="0.01" frictionloss="0.02" />
+              <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="ee_mount" contype="0" conaffinity="0" group="2" />
+              <body name="ee_tool_frame" pos="0.02175 0.01956 0.05656" euler="-1.5708 0 -0.7854">
+                <site name="ee_tool_frame_site" pos="0 0 0" size="0.004" rgba="1 0.5 0.2 1" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <position name="a_j1" joint="j1" ctrlrange="-3.1416 3.1416" kp="40" forcerange="-40 40" />
+    <position name="a_j2" joint="j2" ctrlrange="-1.5708 1.5708" kp="30" forcerange="-40 40" />
+    <position name="a_j3" joint="j3" ctrlrange="-1.5708 1.5708" kp="25" forcerange="-40 40" />
+    <position name="a_j4" joint="j4" ctrlrange="-3.1416 3.1416" kp="20" forcerange="-40 40" />
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0 0" ctrl="0 0 0 0" />
+  </keyframe>
+</mujoco>

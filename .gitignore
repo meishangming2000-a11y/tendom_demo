@@ -57,21 +57,14 @@ improved_logs/
 models/checkpoints/
 models/best_model/
 models/eval_logs/
+models/archive/
+models/**/archive/
+models/**/backups/
 models/final_model.zip
 models/vec_normalize.pkl
 
-# Training outputs
-*.pkl
-*.zip
-*.h5
-*.pt
-*.pth
-
 # Local datasets and generated media
-data/*.npz
-data/*.npy
 data/archive/
-models/archive/
 reports/archive/
 figures/*.gif
 figures/*.mp4

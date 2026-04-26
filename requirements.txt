@@ -1,4 +1,4 @@
-# MuJoCo Tendon Demo Core - runtime dependencies
+# Tendon Project Simulations - runtime dependencies
 
 # Core runtime
 mujoco>=3.0.0

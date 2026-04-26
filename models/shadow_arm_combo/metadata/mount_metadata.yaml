@@ -1,0 +1,25 @@
+combo_name: shadow_arm_combo_stage1
+wrapper_strategy: equality_weld
+mount_relation:
+  arm_body: pa_ee_mount
+  arm_site: pa_ee_mount_site
+  shadow_body: rh_forearm
+  shadow_root_joint: combo_shadow_root_freejoint
+  shadow_wrapper_model: shadow_right_hand_mountable.xml
+  shadow_source_reference: ../shadow_hand/right_hand.xml
+  weld_name: combo_shadow_mount_weld
+  joint_policy: wrapper_local_freejoint_welded_to_arm_mount
+home_pose_expectation:
+  arm_mount_world_position_m: [0.0, 0.0, 0.0]
+  shadow_root_world_position_m: [0.0, 0.0, 0.0]
+  arm_mount_world_quaternion_wxyz: [0.5, -0.5, 0.5, -0.5]
+  shadow_root_world_quaternion_wxyz: [0.5, -0.5, 0.5, -0.5]
+stage1_wrist_policy:
+  mode: wrapper_side_lock_actuator
+  joint_names: [rh_WRJ1, rh_WRJ2]
+  actuator_names: [combo_lock_rh_WRJ1, combo_lock_rh_WRJ2]
+notes:
+  - Shadow source files remain unchanged in Stage 1.
+  - The combo scene is only a structural wrapper at this stage.
+  - The wrapper file only makes the Shadow model mountable from this directory and fixes asset paths for combo loading.
+  - The wrapper-local freejoint keeps the Shadow root movable so the weld does not lock the arm to the world frame.

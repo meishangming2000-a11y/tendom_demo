@@ -106,6 +106,20 @@ def main(argv=None):
     parser.add_argument("--report", type=str, default="", help="Optional JSON report path")
     parser.add_argument("--enable-catch-task", action="store_true", help="Run the falling-object catch task")
     parser.add_argument("--object-fall-speed", type=float, default=None, help="Catch-task fall speed in m/s")
+    parser.add_argument(
+        "--observation-mode",
+        type=str,
+        default="oracle",
+        choices=["oracle", "deployable"],
+        help="Observation layer to expose through env.get_obs()",
+    )
+    parser.add_argument(
+        "--structured-task",
+        type=str,
+        default="",
+        choices=["", "pre_grasp", "stable_grasp", "lift_and_hold"],
+        help="Optional task-driven interface override",
+    )
     parser.add_argument("--finger-ramp-steps", type=int, default=None, help="Optional finger action ramp length")
     parser.add_argument(
         "--finger-ramp-start-scale",
@@ -139,6 +153,9 @@ def main(argv=None):
     print(f"Viewer: {'disabled' if args.no_viewer else 'enabled'}")
     print(f"Viewer step sleep: {args.viewer_step_sleep:.3f}s")
     print(f"Viewer hold: {args.viewer_hold_secs:.1f}s")
+    print(f"Observation mode: {args.observation_mode}")
+    if args.structured_task:
+        print(f"Structured task: {args.structured_task}")
     if args.finger_ramp_steps > 0:
         print(f"Finger ramp: {args.finger_ramp_start_scale:.2f} -> 1.00 over {args.finger_ramp_steps} steps")
     if args.enable_catch_task:
@@ -148,6 +165,8 @@ def main(argv=None):
         max_steps=args.max_steps,
         enable_catch_task=args.enable_catch_task,
         object_fall_speed=args.object_fall_speed,
+        task_name=args.structured_task or None,
+        observation_mode=args.observation_mode,
     )
     result = eval_bc.run_policy_episode(
         model=model,
@@ -185,6 +204,8 @@ def main(argv=None):
             "placement_jitter": args.placement_jitter,
             "enable_catch_task": args.enable_catch_task,
             "object_fall_speed": args.object_fall_speed,
+            "observation_mode": args.observation_mode,
+            "structured_task_name": args.structured_task or None,
             "device": args.device,
             "seed": args.seed,
             "viewer_step_sleep": args.viewer_step_sleep,

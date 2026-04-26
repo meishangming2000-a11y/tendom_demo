@@ -1,0 +1,23 @@
+layout_name: printed_arm_stage1_reserved_layout
+stage1_active_dofs:
+  - name: pa_J1
+    actuator: pa_A_J1
+    slice_index: 0
+  - name: pa_J2
+    actuator: pa_A_J2
+    slice_index: 1
+  - name: pa_J3
+    actuator: pa_A_J3
+    slice_index: 2
+  - name: pa_J4
+    actuator: pa_A_J4
+    slice_index: 3
+reserved_for_combo:
+  shadow_wrist:
+    joint_names: [rh_WRJ1, rh_WRJ2]
+    stage1_policy: locked_by_wrapper
+  shadow_hand:
+    note: reserved_only_in_stage1_no_runtime_wiring_yet
+notes:
+  - This file is metadata only.
+  - No environment or adapter reads it yet.

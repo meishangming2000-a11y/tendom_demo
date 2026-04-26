@@ -1,0 +1,29 @@
+layout_name: shadow_arm_combo_reserved_layout
+stage1_execution_scope:
+  active_slice: arm_only_for_stage1_contract
+  debug_drive_slices: [shadow_wrist_source, shadow_hand_reserved]
+  frozen_or_locked_slices:
+    - shadow_wrist_wrapper_lock
+slices:
+  - name: arm
+    index_start: 0
+    index_end_exclusive: 4
+    actuator_names: [pa_A_J1, pa_A_J2, pa_A_J3, pa_A_J4]
+  - name: shadow_wrist_source
+    index_start: 4
+    index_end_exclusive: 6
+    actuator_names: [rh_A_WRJ2, rh_A_WRJ1]
+    stage1_policy: keep_zero_for_locked-wrist_debug_runs
+  - name: shadow_hand_reserved
+    index_start: 6
+    index_end_exclusive: 28
+    note: reserve_only_no_runtime_contract_yet
+  - name: shadow_wrist_wrapper_lock
+    index_start: 28
+    index_end_exclusive: 30
+    actuator_names: [combo_lock_rh_WRJ1, combo_lock_rh_WRJ2]
+    stage1_policy: wrapper_side_zero_lock
+notes:
+  - Metadata only in Stage 1.
+  - Exact hand slice count assumes the current Shadow actuator set in `shadow_right_hand_mountable.xml`.
+  - The freejoint added for mounting changes qpos/nv layout, but it does not add an actuator.

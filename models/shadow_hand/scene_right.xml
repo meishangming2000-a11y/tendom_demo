@@ -7,7 +7,7 @@
   <visual>
     <rgba haze="0.15 0.25 0.35 1"/>
     <quality shadowsize="8192"/>
-    <global azimuth="220" elevation="-30"/>
+    <global azimuth="220" elevation="-30" offwidth="1280" offheight="900"/>
   </visual>
 
   <asset>
@@ -26,6 +26,10 @@
       <geom type="sphere" size="0.03" rgba="0.5 0.7 0.5 1" condim="3" priority="1"
         friction="0.5 0.01 0.003" contype="7"/>
     </body>
+    <camera name="shadow_front" pos="-0.22 -0.40 0.33"
+      xyaxes="0.688749 -0.724999 0 0.236066 0.224262 0.945505" fovy="45"/>
+    <camera name="shadow_side" pos="0.18 -0.52 0.20"
+      xyaxes="0.999201 -0.039968 0 0.00553714 0.138428 0.990357" fovy="45"/>
   </worldbody>
 
 </mujoco>

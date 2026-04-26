@@ -20,7 +20,13 @@ import numpy as np
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from scripts.common.grasp_workflow import configure_controller, get_success_rule, get_task_name, place_object
+from scripts.common.grasp_workflow import (
+    compute_pre_grasp_expert_action,
+    configure_controller,
+    get_success_rule,
+    get_task_name,
+    place_object,
+)
 from src.controllers import create_controller
 from src.environments.shadow_grasp_env import ShadowGraspEnv
 
@@ -45,6 +51,8 @@ def _create_env_and_controller(
     object_fall_speed,
     controller_name,
     controller_profile="default",
+    observation_mode="oracle",
+    structured_task_name=None,
 ):
     """Create a fresh environment/controller pair."""
     print("Creating environment...")
@@ -52,6 +60,8 @@ def _create_env_and_controller(
         max_steps=max_steps,
         enable_catch_task=enable_catch_task,
         object_fall_speed=object_fall_speed,
+        task_name=structured_task_name,
+        observation_mode=observation_mode,
     )
 
     print(f"Creating controller '{controller_name}'...")
@@ -65,8 +75,37 @@ def _create_env_and_controller(
     return env, controller
 
 
+def _resolve_structured_task_name(task_name_arg="", structured_task_name=None):
+    """Prefer the new --task alias while preserving the legacy --structured-task flag."""
+    return (task_name_arg or structured_task_name or "").strip() or None
+
+
+def _print_pre_grasp_pose_debug(step_count, info, action=None):
+    """Emit task-space pose debug for pre-grasp episodes."""
+    palm_pos = np.asarray(info.get("current_palm_position", []), dtype=np.float32)
+    target_pos = np.asarray(info.get("target_palm_position", []), dtype=np.float32)
+    object_pos = np.asarray(info.get("object_position", []), dtype=np.float32)
+    if palm_pos.size != 3 or target_pos.size != 3 or object_pos.size != 3:
+        return
+
+    print(
+        f"Step {step_count:3d}: success = task.check_success(...) -> {bool(info.get('success', False))} | "
+        f"hold={int(info.get('pre_grasp_hold_steps', 0))}/{int(info.get('pre_grasp_required_hold_steps', 0))} | "
+        f"distance={float(info.get('position_error', 0.0)):.4f} | "
+        f"ori_err={float(info.get('orientation_error_rad', 0.0)):.4f}"
+    )
+    print(f"  palm_pose(position):   {np.array2string(palm_pos, precision=4)}")
+    print(f"  target_pose(position): {np.array2string(target_pos, precision=4)}")
+    print(f"  object_pose(position): {np.array2string(object_pos, precision=4)}")
+    if action is not None:
+        print(
+            f"  action stats: min={float(np.min(action)):.3f}, "
+            f"max={float(np.max(action)):.3f}, std={float(np.std(action)):.3f}"
+        )
+
+
 def _run_grasp_episode(env, controller, max_steps, with_viewer=False, verbose=True,
-                       placement_mode="demo", placement_jitter=0.0):
+                       placement_mode="demo", placement_jitter=0.0, structured_task_name=None):
     """Run one grasp episode and return metrics."""
     if hasattr(controller, "reset"):
         controller.reset()
@@ -101,9 +140,13 @@ def _run_grasp_episode(env, controller, max_steps, with_viewer=False, verbose=Tr
 
     if verbose:
         print("\nStarting grasp demo...")
-        print("Stages: approach -> close_fingers -> lift")
+        if structured_task_name == "pre_grasp":
+            print("Task-only rollout: hold current hand pose and evaluate pre_grasp success.")
+        else:
+            print("Stages: approach -> close_fingers -> lift")
 
-    controller.start_grasp_sequence()
+    if structured_task_name != "pre_grasp" and hasattr(controller, "start_grasp_sequence"):
+        controller.start_grasp_sequence()
 
     done = False
     step_count = 0
@@ -114,6 +157,7 @@ def _run_grasp_episode(env, controller, max_steps, with_viewer=False, verbose=Tr
     max_contact_duration = 0
     max_grasp_contact_duration = 0
     hold_mode_enabled = False
+    first_success_step = None
     last_info = {
         "distance": env._get_distance(),
         "contact": False,
@@ -127,11 +171,14 @@ def _run_grasp_episode(env, controller, max_steps, with_viewer=False, verbose=Tr
 
     while not done and step_count < max_steps:
         step_count += 1
-        control_values = controller.compute_control(
-            t=step_count * env.control_timestep,
-            control_mode="position",
-        )
-        action = env._denormalize_action(control_values)
+        if structured_task_name == "pre_grasp":
+            action, _pose_debug = compute_pre_grasp_expert_action(env)
+        else:
+            control_values = controller.compute_control(
+                t=step_count * env.control_timestep,
+                control_mode="position",
+            )
+            action = env._denormalize_action(control_values)
         _, reward, done, info = env.step(action)
 
         last_info = info
@@ -144,8 +191,14 @@ def _run_grasp_episode(env, controller, max_steps, with_viewer=False, verbose=Tr
             max_grasp_contact_duration,
             int(info.get("grasp_contact_duration", 0)),
         )
+        if info.get("success") and first_success_step is None:
+            first_success_step = step_count
 
-        if verbose and step_count % 20 == 0:
+        if verbose and structured_task_name == "pre_grasp" and (
+            step_count <= 5 or step_count % 10 == 0 or info.get("success")
+        ):
+            _print_pre_grasp_pose_debug(step_count, info, action=action)
+        elif verbose and step_count % 20 == 0:
             phase = controller.grasp_phase
             phase_timer = controller.grasp_phase_timer
             phase_duration = controller.phase_durations.get(phase, 100)
@@ -161,7 +214,11 @@ def _run_grasp_episode(env, controller, max_steps, with_viewer=False, verbose=Tr
             viewer.sync()
             time.sleep(0.01)
 
-        if not controller.is_grasping and not hold_mode_enabled:
+        if (
+            structured_task_name != "pre_grasp"
+            and not controller.is_grasping
+            and not hold_mode_enabled
+        ):
             if verbose:
                 print(f"\nSequence finished. Switching to hold mode until step limit {max_steps}.")
             controller.set_grasping(False, strength=1.0)
@@ -181,8 +238,10 @@ def _run_grasp_episode(env, controller, max_steps, with_viewer=False, verbose=Tr
     grasp_contact_rate = grasp_contact_steps / total_steps if total_steps else 0.0
 
     return {
-        "success": bool(env.is_success()),
+        "success": bool(last_info.get("success", env.is_success())),
         "steps": int(total_steps),
+        "task_name": env.get_task_name(),
+        "first_success_step": int(first_success_step) if first_success_step is not None else -1,
         "contact_steps": int(contact_steps),
         "contact_rate": float(contact_rate),
         "max_contact_duration": int(max_contact_duration),
@@ -190,6 +249,7 @@ def _run_grasp_episode(env, controller, max_steps, with_viewer=False, verbose=Tr
         "grasp_contact_rate": float(grasp_contact_rate),
         "max_grasp_contact_duration": int(max_grasp_contact_duration),
         "final_distance": float(env._get_distance()),
+        "final_legacy_distance": float(env._get_distance()),
         "final_phase": controller.grasp_phase,
         "phase_counts": phase_counts,
         "total_reward": float(sum(reward_history)),
@@ -198,6 +258,11 @@ def _run_grasp_episode(env, controller, max_steps, with_viewer=False, verbose=Tr
         "finger_contact_count": int(last_info.get("finger_contact_count", 0)),
         "finger_contact_groups": list(last_info.get("finger_contact_groups", [])),
         "palm_only_contact": bool(last_info.get("palm_only_contact", False)),
+        "final_task_distance": float(last_info.get("position_error", 0.0)),
+        "position_error": float(last_info.get("position_error", 0.0)),
+        "orientation_error_rad": float(last_info.get("orientation_error_rad", 0.0)),
+        "target_palm_position": list(last_info.get("target_palm_position", [])),
+        "current_palm_position": list(last_info.get("current_palm_position", [])),
         "placement_info": placement_info,
         "repositioned_object": bool(placement_info.get("repositioned", False)),
     }
@@ -213,12 +278,21 @@ def _print_episode_summary(result, header="Demo Summary"):
     print(f"Stable-grasp steps: {result['grasp_contact_steps']} ({result['grasp_contact_rate']:.1%})")
     print(f"Max any-contact duration: {result['max_contact_duration']} steps")
     print(f"Max stable-grasp duration: {result['max_grasp_contact_duration']} steps")
-    print(f"Final distance: {result['final_distance']:.3f}")
+    if result.get("task_name") == "pre_grasp":
+        print(f"Final task-space distance: {result.get('final_task_distance', 0.0):.4f}")
+        print(f"Final legacy hand-body distance: {result.get('final_legacy_distance', result['final_distance']):.3f}")
+    else:
+        print(f"Final distance: {result['final_distance']:.3f}")
     print(f"Object height: {result['object_height']:.3f}")
     print(f"Success: {result['success']}")
+    if result.get("first_success_step", -1) >= 0:
+        print(f"First success step: {result['first_success_step']}")
     print(f"Final phase: {result['final_phase']}")
     print(f"Final finger groups: {result['finger_contact_groups']}")
     print(f"Total reward: {result['total_reward']:.3f}")
+    if result.get("task_name") == "pre_grasp":
+        print(f"Final position error: {result.get('position_error', 0.0):.4f}")
+        print(f"Final orientation error: {result.get('orientation_error_rad', 0.0):.4f}")
 
     print("\nPhase distribution:")
     total_steps = max(1, result["steps"])
@@ -232,7 +306,9 @@ def _print_episode_summary(result, header="Demo Summary"):
             print("\n[Success] The active task success criterion was satisfied.")
     else:
         print("\n[Warning] The active task success criterion was not satisfied.")
-        if result["contact_steps"] == 0:
+        if result.get("task_name") == "pre_grasp":
+            print("  Reason: the palm pose never stayed within the target tolerance for enough steps.")
+        elif result["contact_steps"] == 0:
             print("  Reason: no valid palm/finger contact was detected.")
         elif result["max_grasp_contact_duration"] < 50:
             print("  Reason: palm contact plus thumb and at least three finger groups did not last for 50 steps.")
@@ -256,6 +332,7 @@ def _summarize_batch_results(episode_results):
         "avg_grasp_contact_rate": float(np.mean([item["grasp_contact_rate"] for item in episode_results])) if episode_results else 0.0,
         "avg_max_grasp_contact_duration": float(np.mean([item["max_grasp_contact_duration"] for item in episode_results])) if episode_results else 0.0,
         "avg_final_distance": float(np.mean([item["final_distance"] for item in episode_results])) if episode_results else 0.0,
+        "avg_final_task_distance": float(np.mean([item.get("final_task_distance", 0.0) for item in episode_results])) if episode_results else 0.0,
         "avg_total_reward": float(np.mean([item["total_reward"] for item in episode_results])) if episode_results else 0.0,
     }
 
@@ -284,12 +361,14 @@ def run_batch_evaluation(
     placement_mode=None,
     placement_jitter=0.0,
     report_path=None,
+    observation_mode="oracle",
+    structured_task_name=None,
 ):
     """Run the demo repeatedly and report success metrics."""
     print("=" * 60)
     print("Batch Demo Evaluation")
     print("=" * 60)
-    print(f"Task: {get_task_name(enable_catch_task)}")
+    print(f"Task: {get_task_name(enable_catch_task, structured_task_name=structured_task_name)}")
     print(f"Episodes: {num_episodes}")
     print(f"Step limit: {max_steps}")
     print(f"Controller: {controller_name}")
@@ -299,6 +378,9 @@ def run_batch_evaluation(
     effective_placement_mode = placement_mode or ("scene" if enable_catch_task else "demo")
     print(f"Placement mode: {effective_placement_mode}")
     print(f"Placement jitter: {placement_jitter:.4f} m")
+    print(f"Observation mode: {observation_mode}")
+    if structured_task_name:
+        print(f"Structured task: {structured_task_name}")
     if enable_catch_task:
         print(f"Object fall speed: {object_fall_speed:.3f} m/s")
 
@@ -312,6 +394,8 @@ def run_batch_evaluation(
             object_fall_speed=object_fall_speed,
             controller_name=controller_name,
             controller_profile=controller_profile,
+            observation_mode=observation_mode,
+            structured_task_name=structured_task_name,
         )
         result = _run_grasp_episode(
             env,
@@ -321,6 +405,7 @@ def run_batch_evaluation(
             verbose=False,
             placement_mode=effective_placement_mode,
             placement_jitter=placement_jitter,
+            structured_task_name=structured_task_name,
         )
         result["episode_idx"] = episode_idx
         episode_results.append(result)
@@ -342,7 +427,11 @@ def run_batch_evaluation(
     print(f"Average max any-contact: {summary['avg_max_contact_duration']:.1f} steps")
     print(f"Average stable-grasp ratio: {summary['avg_grasp_contact_rate']:.1%}")
     print(f"Average max stable-grasp: {summary['avg_max_grasp_contact_duration']:.1f} steps")
-    print(f"Average final distance: {summary['avg_final_distance']:.3f}")
+    if structured_task_name == "pre_grasp":
+        print(f"Average final task-space distance: {summary['avg_final_task_distance']:.4f}")
+        print(f"Average final legacy distance: {summary['avg_final_distance']:.3f}")
+    else:
+        print(f"Average final distance: {summary['avg_final_distance']:.3f}")
     print(f"Average total reward: {summary['avg_total_reward']:.3f}")
 
     if report_path:
@@ -355,8 +444,10 @@ def run_batch_evaluation(
             "object_fall_speed": object_fall_speed,
             "placement_mode": effective_placement_mode,
             "placement_jitter": placement_jitter,
-            "task_name": get_task_name(enable_catch_task),
-            "success_rule": get_success_rule(enable_catch_task),
+            "observation_mode": observation_mode,
+            "structured_task_name": structured_task_name,
+            "task_name": get_task_name(enable_catch_task, structured_task_name=structured_task_name),
+            "success_rule": get_success_rule(enable_catch_task, structured_task_name=structured_task_name),
         }
         _save_batch_report(report_path, config, summary, episode_results)
 
@@ -372,14 +463,23 @@ def run_grasp_demo(
     controller_profile="default",
     placement_mode=None,
     placement_jitter=0.0,
+    observation_mode="oracle",
+    structured_task_name=None,
 ):
     """Run a single interactive demo episode."""
     print("=" * 60)
     if enable_catch_task:
-        print(f"Grasp Demo - {get_task_name(enable_catch_task)} (fall speed: {object_fall_speed:.3f} m/s)")
+        print(
+            f"Grasp Demo - "
+            f"{get_task_name(enable_catch_task, structured_task_name=structured_task_name)} "
+            f"(fall speed: {object_fall_speed:.3f} m/s)"
+        )
     else:
-        print(f"Grasp Demo - {get_task_name(enable_catch_task)}")
+        print(f"Grasp Demo - {get_task_name(enable_catch_task, structured_task_name=structured_task_name)}")
     print("=" * 60)
+    print(f"Observation mode: {observation_mode}")
+    if structured_task_name:
+        print(f"Structured task: {structured_task_name}")
 
     env, controller = _create_env_and_controller(
         max_steps=max_steps,
@@ -387,6 +487,8 @@ def run_grasp_demo(
         object_fall_speed=object_fall_speed,
         controller_name=controller_name,
         controller_profile=controller_profile,
+        observation_mode=observation_mode,
+        structured_task_name=structured_task_name,
     )
 
     print("\nController info:")
@@ -400,6 +502,7 @@ def run_grasp_demo(
         verbose=True,
         placement_mode=placement_mode or ("scene" if enable_catch_task else "demo"),
         placement_jitter=placement_jitter,
+        structured_task_name=structured_task_name,
     )
     _print_episode_summary(result)
     print("\nDemo finished.")
@@ -457,8 +560,33 @@ def main():
         default=-0.3,
         help="Initial object fall speed in m/s",
     )
+    parser.add_argument(
+        "--observation-mode",
+        type=str,
+        default="oracle",
+        choices=["oracle", "deployable"],
+        help="Observation layer to expose through env.get_obs()",
+    )
+    parser.add_argument(
+        "--task",
+        type=str,
+        default="",
+        choices=["", "pre_grasp", "stable_grasp", "lift_and_hold"],
+        help="Preferred alias for --structured-task",
+    )
+    parser.add_argument(
+        "--structured-task",
+        type=str,
+        default="",
+        choices=["", "pre_grasp", "stable_grasp", "lift_and_hold"],
+        help="Optional task-driven interface override",
+    )
 
     args = parser.parse_args()
+    structured_task_name = _resolve_structured_task_name(
+        task_name_arg=args.task,
+        structured_task_name=args.structured_task,
+    )
 
     try:
         if args.episodes > 1:
@@ -474,6 +602,8 @@ def main():
                 placement_mode=args.placement_mode or None,
                 placement_jitter=args.placement_jitter,
                 report_path=args.report or None,
+                observation_mode=args.observation_mode,
+                structured_task_name=structured_task_name,
             )
         else:
             run_grasp_demo(
@@ -485,6 +615,8 @@ def main():
                 controller_profile=args.controller_profile,
                 placement_mode=args.placement_mode or None,
                 placement_jitter=args.placement_jitter,
+                observation_mode=args.observation_mode,
+                structured_task_name=structured_task_name,
             )
     except KeyboardInterrupt:
         print("\n\nDemo interrupted by user.")

@@ -1,0 +1,43 @@
+model_name: printed_arm_stage1
+joint_tree:
+  - joint_name: pa_J1
+    stage_label: J1
+    joint_type: hinge
+    axis_xyz: [0.0, 0.0, 1.0]
+    range_rad: [-1.5708, 1.5708]
+    parent_body: pa_root
+    child_body: pa_j1_link
+    source_cad_hint: "J1-电机固定.SLDPRT"
+    status: placeholder_axis_and_range
+  - joint_name: pa_J2
+    stage_label: J2
+    joint_type: slide
+    axis_xyz: [1.0, 0.0, 0.0]
+    range_m: [0.0, 0.08]
+    parent_body: pa_j1_link
+    child_body: pa_j2_carriage
+    source_cad_hint: "J2 伸出后.SLDPRT / J2电机固定.SLDPRT"
+    status: placeholder_axis_and_range
+  - joint_name: pa_J3
+    stage_label: J3
+    joint_type: hinge
+    axis_xyz: [0.0, 1.0, 0.0]
+    range_rad: [-1.0472, 1.0472]
+    parent_body: pa_j2_carriage
+    child_body: pa_j3_link
+    source_cad_hint: "J3电机固定件.SLDPRT / J3电机固定件2.SLDPRT"
+    status: placeholder_axis_and_range
+  - joint_name: pa_J4
+    stage_label: J4
+    joint_type: hinge
+    axis_xyz: [0.0, 0.0, 1.0]
+    range_rad: [-1.22173, 1.22173]
+    parent_body: pa_j3_link
+    child_body: pa_j4_link
+    source_cad_hint: "J4 旋转前.SLDPRT / J4电机固定件1.SLDPRT"
+    status: placeholder_axis_and_range
+fixed_stage:
+  body_name: pa_j5_fixed
+  stage_label: J5
+  source_cad_hint: "J5 固定打印.SLDPRT"
+  status: fixed_mount_stage_placeholder

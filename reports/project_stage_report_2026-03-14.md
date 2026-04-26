@@ -2,9 +2,15 @@
 
 Date: 2026-03-14
 
-Project: MuJoCo Tendon Demo Core
+Project: Tendon Project Simulations
 
 Scope: Shadow Hand static grasping and catch-and-hold behavior cloning pipeline
+
+Update note (2026-03-20):
+
+- This is a stage report for the earlier static-grasp and catch-centered phase.
+- It remains useful as historical evidence, but it is not the current project baseline.
+- The current maintained learning loop is `pre_grasp expert -> dataset -> BC -> eval -> report`.
 
 ## 1. Original Goal
 

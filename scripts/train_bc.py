@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """
-Behavior-cloning training script for grasp demos.
+Behavior-cloning training script.
 
-Example:
-    python scripts/train_bc.py --data data/expert_data.npz --epochs 50 --output models/bc_model.pth
+Canonical example:
+    python scripts/train_bc.py --task pre_grasp --data data/expert_pre_grasp_mixed_v2.npz --epochs 20 --output models/bc_pre_grasp_v2.pth
+
+Compatibility note:
+    Generic defaults such as data/expert_data.npz and models/bc_model.pth remain for backward compatibility.
 """
 
 import argparse
@@ -21,6 +24,25 @@ try:
 except ImportError:
     print("PyTorch is required. Install it with: pip install torch")
     sys.exit(1)
+
+
+def resolve_structured_task_name(task_name_arg=""):
+    """Normalize the optional task selector used for task-specific defaults."""
+    return (task_name_arg or "").strip() or None
+
+
+def default_dataset_path_for_task(structured_task_name):
+    """Return the dataset path implied by the selected task."""
+    if structured_task_name:
+        return f"data/expert_{structured_task_name}.npz"
+    return "data/expert_data.npz"
+
+
+def default_model_path_for_task(structured_task_name):
+    """Return the checkpoint path implied by the selected task."""
+    if structured_task_name:
+        return f"models/bc_{structured_task_name}.pth"
+    return "models/bc_model.pth"
 
 
 def append_phase_feature(observations, horizon):
@@ -243,8 +265,15 @@ def save_model(model, metadata, output_path, args):
 
 def main():
     parser = argparse.ArgumentParser(description="Train a behavior-cloning model")
-    parser.add_argument("--data", type=str, required=True, help="Path to the expert dataset (.npz)")
-    parser.add_argument("--output", type=str, default="models/bc_model.pth", help="Output checkpoint path")
+    parser.add_argument("--data", type=str, default="", help="Path to the expert dataset (.npz)")
+    parser.add_argument("--output", type=str, default="", help="Output checkpoint path")
+    parser.add_argument(
+        "--task",
+        type=str,
+        default="",
+        choices=["", "pre_grasp", "stable_grasp", "lift_and_hold"],
+        help="Optional task selector used to infer default dataset/output paths",
+    )
     parser.add_argument("--epochs", type=int, default=50, help="Number of training epochs")
     parser.add_argument("--batch-size", type=int, default=32, help="Batch size")
     parser.add_argument("--lr", type=float, default=0.001, help="Learning rate")
@@ -271,10 +300,17 @@ def main():
     )
 
     args = parser.parse_args()
+    structured_task_name = resolve_structured_task_name(args.task)
+    args.data = args.data or default_dataset_path_for_task(structured_task_name)
+    args.output = args.output or default_model_path_for_task(structured_task_name)
 
     print("=" * 60)
     print("Behavior Cloning Training")
     print("=" * 60)
+    if structured_task_name:
+        print(f"Structured task: {structured_task_name}")
+    print(f"Dataset: {args.data}")
+    print(f"Output: {args.output}")
 
     result = load_dataset(
         args.data,
@@ -291,7 +327,7 @@ def main():
     act_dim = metadata.get("act_dim", y.shape[1])
 
     print("\nTraining config:")
-    print(f"  Task: {metadata.get('task_name', 'static_grasp')}")
+    print(f"  Task: {metadata.get('task_name', structured_task_name or 'static_grasp')}")
     print(f"  Success rule: {metadata.get('success_rule', 'unknown')}")
     print(f"  Obs dim: {obs_dim}")
     print(f"  Act dim: {act_dim}")
@@ -317,6 +353,11 @@ def main():
     eval_cmd = f"python scripts/eval_bc.py --model {args.output} --episodes 1"
     if metadata.get("enable_catch_task", False):
         eval_cmd += " --enable-catch-task"
+    elif metadata.get("structured_task_name") == "pre_grasp":
+        eval_cmd += " --placement-mode demo"
+        placement_jitters = metadata.get("placement_jitters", [])
+        if placement_jitters:
+            eval_cmd += " --placement-jitters " + ",".join(str(item) for item in placement_jitters)
     else:
         eval_cmd += " --placement-mode demo --finger-ramp-steps 200 --finger-ramp-start-scale 0.25"
     print(f"Next: {eval_cmd}")

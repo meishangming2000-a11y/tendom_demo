@@ -1,0 +1,29 @@
+mount_name: printed_arm_stage1_ee_mount
+mount_body: pa_ee_mount
+mount_site: pa_ee_mount_site
+mount_axes_sites:
+  x: pa_ee_axis_x
+  y: pa_ee_axis_y
+  z: pa_ee_axis_z
+home_pose_assumption:
+  position_m: [0.0, 0.0, 0.0]
+  quaternion_wxyz: [0.5, -0.5, 0.5, -0.5]
+alignment_target:
+  intended_shadow_root_body: rh_forearm
+  intended_wrapper_strategy: equality_weld_in_combo_wrapper
+stage1_visual_alignment_check:
+  ee_mount_geom_origin_to_mount_site_error_m: [2.4e-08, 1.56e-07, -4.83e-07]
+  j5_rotating_output_candidate_geom_origin_to_mount_site_error_m: [-1.56e-07, -1.36e-07, -1.88e-07]
+  j5_rotating_output_candidate_geom_origin_to_ee_mount_geom_origin_error_m: [-1.8e-07, -2.93e-07, 2.95e-07]
+  j5_rotating_output_candidate_to_ee_mount_orientation_max_abs_diff: 2.33e-06
+  j5_fixed_support_candidate_geom_origin_to_mount_site_m: [0.081259, 0.017001, 0.001152]
+  j5_fixed_support_candidate_geom_origin_to_rotating_output_candidate_geom_origin_m: [0.081259, 0.017001, 0.001153]
+  status: rotating_output_candidate_preserved_and_fixed_support_candidate_added_for_stage1_visual_validation
+notes:
+  - Stage 1 keeps the mount frame explicit even before combo env integration exists.
+  - The quaternion matches the current Shadow root home orientation from the source XML.
+  - `assets/meshes/visual/pa_j5_fixed.stl` is kept as a legacy imported filename, but it now maps semantically to `pa_j5_rotating_output_candidate` rather than a fixed support part.
+  - `assets/meshes/visual/pa_j5_fixed_support.stl` is copied from `hardwares/打印装配体/realtosim/pa_j5_fixed.STL` and is the current fixed-side support/bracket candidate in Stage 1.
+  - The rotating-output candidate remains centered on `pa_ee_mount_site` for Stage 1 flange validation, while the fixed-support candidate is placed using the current assembly-frame offset relative to that rotating-output candidate.
+  - `pa_ee_mount.stl` is exported in assembly frame, so the visual geom applies the inverse body quaternion to preserve the CAD home orientation.
+  - The current visual placement centers the imported mount mesh on `pa_ee_mount_site`; hole-pattern origin calibration is still pending a dedicated mount-frame pass.

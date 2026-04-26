@@ -1,0 +1,1045 @@
+{
+  "generated_at": "2026-03-19 16:18:06",
+  "config": {
+    "model": "models/bc_pre_grasp_v2.pth",
+    "episodes": 20,
+    "max_steps": 200,
+    "placement_mode": "demo",
+    "placement_jitter": 0.02,
+    "placement_jitters": [
+      0.02
+    ],
+    "enable_catch_task": false,
+    "object_fall_speed": -0.3,
+    "observation_mode": "oracle",
+    "structured_task_name": "pre_grasp",
+    "task_kwargs": {
+      "target_offset": [
+        0.008,
+        0.0165,
+        0.0
+      ]
+    },
+    "pre_grasp_start_bias": [
+      0.01,
+      0.0,
+      -0.005
+    ],
+    "device": "cpu",
+    "seed": 0,
+    "viewer_step_sleep": 0.02,
+    "viewer_hold_secs": 2.0,
+    "finger_ramp_steps": 0,
+    "finger_ramp_start_scale": 1.0,
+    "task_name": "pre_grasp",
+    "success_rule": "palm_pose_matches_object_pose_plus_offset_for_hold_steps",
+    "training_metadata": {
+      "num_episodes": 40,
+      "obs_dim": 70,
+      "act_dim": 24,
+      "timestamp": "2026-03-19 16:16:51",
+      "env": "ShadowGraspEnv",
+      "version": "2.0",
+      "controller": "enhanced",
+      "max_steps": 200,
+      "grasp_strength": 0.7,
+      "placement_mode": "demo",
+      "placement_jitter": "mixed",
+      "placement_jitters": [
+        0.02,
+        0.04
+      ],
+      "enable_catch_task": false,
+      "object_fall_speed": -0.3,
+      "observation_mode": "oracle",
+      "structured_task_name": "pre_grasp",
+      "task_name": "pre_grasp",
+      "success_rule": "palm_pose_matches_object_pose_plus_offset_for_hold_steps",
+      "controller_profile": "expert_collection",
+      "seed": 0,
+      "early_stop_on_stable_grasp": false,
+      "stable_grasp_target_steps": null,
+      "post_success_padding": 0,
+      "task_kwargs": {
+        "target_offset": [
+          0.008,
+          0.0165,
+          0.0
+        ]
+      },
+      "pre_grasp_policy_config": {
+        "gain_scale": 1.0,
+        "clip_scale": 1.0,
+        "start_bias": [
+          0.01,
+          0.0,
+          -0.005
+        ]
+      },
+      "base_obs_dim": 70,
+      "phase_feature": false,
+      "phase_feature_horizon": 0
+    }
+  },
+  "summary": {
+    "episodes": 20,
+    "success_count": 20,
+    "success_rate": 1.0,
+    "avg_steps": 10.05,
+    "avg_total_reward": 19.330398243715685,
+    "avg_contact_rate": 0.845,
+    "avg_max_contact_duration": 8.5,
+    "avg_grasp_contact_rate": 0.0,
+    "avg_max_grasp_contact_duration": 0.0,
+    "avg_final_distance": 0.13174419643796798,
+    "avg_mean_abs_action": 0.08187219909476962,
+    "avg_mean_abs_finger_action": 0.06841407332738692,
+    "avg_zero_like_action_ratio": 0.045,
+    "avg_initial_position_error": 0.019258241928573585,
+    "avg_min_position_error": 0.017939049325507345,
+    "avg_final_position_error": 0.01811142215313308,
+    "avg_position_error_improvement": 0.0011468197754405031,
+    "avg_aligned_rate": 0.9954545454545455
+  },
+  "episodes": [
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.1320801848549839,
+      "mean_abs_action": 0.06641150712966919,
+      "mean_abs_finger_action": 0.05099858585745096,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.016238003377317522,
+      "min_position_error": 0.01389816971688174,
+      "final_position_error": 0.01389816971688174,
+      "position_error_improvement": 0.002339833660435782,
+      "aligned_rate": 1.0,
+      "object_height": 0.038769606328474884,
+      "object_on_floor": false,
+      "finger_contact_count": 2,
+      "finger_contact_groups": [
+        "middle",
+        "ring"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 19.34238196855962,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.3414625399335756,
+          -0.007892425345103222,
+          0.03911053515462447
+        ]
+      },
+      "episode_idx": 0
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.13328862188946605,
+      "mean_abs_action": 0.09570113159716129,
+      "mean_abs_finger_action": 0.0802766427397728,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.013330380926021514,
+      "min_position_error": 0.011744210247321198,
+      "final_position_error": 0.011744210247321198,
+      "position_error_improvement": 0.001586170678700316,
+      "aligned_rate": 1.0,
+      "object_height": 0.04039431463442496,
+      "object_on_floor": false,
+      "finger_contact_count": 2,
+      "finger_contact_groups": [
+        "index",
+        "middle"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 19.367590268142138,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.34130532709635847,
+          -0.01955380802644381,
+          0.040835764634424954
+        ]
+      },
+      "episode_idx": 1
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.1312844191422043,
+      "mean_abs_action": 0.07811555378139019,
+      "mean_abs_finger_action": 0.055875911563634875,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.01956436536972508,
+      "min_position_error": 0.01956436536972508,
+      "final_position_error": 0.019846495031461558,
+      "position_error_improvement": -0.00028212966173647713,
+      "aligned_rate": 1.0,
+      "object_height": 0.05310506053179989,
+      "object_on_floor": false,
+      "finger_contact_count": 0,
+      "finger_contact_groups": [],
+      "palm_only_contact": false,
+      "total_reward": 19.29612984095528,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.3370134882269903,
+          -0.0008290799687168081,
+          0.05354651053179989
+        ]
+      },
+      "episode_idx": 2
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.12499974145357907,
+      "mean_abs_action": 0.07350000888109207,
+      "mean_abs_finger_action": 0.07004695869982243,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.015757174683090343,
+      "min_position_error": 0.013478624011706979,
+      "final_position_error": 0.013478624011706979,
+      "position_error_improvement": 0.0022785506713833645,
+      "aligned_rate": 1.0,
+      "object_height": 0.03593863466922864,
+      "object_on_floor": false,
+      "finger_contact_count": 2,
+      "finger_contact_groups": [
+        "middle",
+        "ring"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 19.34795849051788,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.3348476605295137,
+          -0.00483099847669342,
+          0.036155796901874884
+        ]
+      },
+      "episode_idx": 3
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.1321049971358078,
+      "mean_abs_action": 0.07493848986923694,
+      "mean_abs_finger_action": 0.07179611474275589,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.023756869596423907,
+      "min_position_error": 0.022040850043035416,
+      "final_position_error": 0.022040850043035416,
+      "position_error_improvement": 0.0017160195533884905,
+      "aligned_rate": 1.0,
+      "object_height": 0.03461283113437042,
+      "object_on_floor": false,
+      "finger_contact_count": 3,
+      "finger_contact_groups": [
+        "little",
+        "middle",
+        "ring"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 19.265257661106467,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.3422317822202399,
+          0.0005238655317064377,
+          0.035
+        ]
+      },
+      "episode_idx": 4
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.12167266396007975,
+      "mean_abs_action": 0.08892841152846813,
+      "mean_abs_finger_action": 0.074469456076622,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.02038362003303177,
+      "min_position_error": 0.02038362003303177,
+      "final_position_error": 0.022455856020991816,
+      "position_error_improvement": -0.0020722359879600458,
+      "aligned_rate": 1.0,
+      "object_height": 0.047863343933676236,
+      "object_on_floor": false,
+      "finger_contact_count": 0,
+      "finger_contact_groups": [],
+      "palm_only_contact": true,
+      "total_reward": 19.28222186617846,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.32299517176454423,
+          -0.035691264102386974,
+          0.04830479393367623
+        ]
+      },
+      "episode_idx": 5
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.14440864069064038,
+      "mean_abs_action": 0.08459954261779785,
+      "mean_abs_finger_action": 0.0635224398225546,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.02775589269435262,
+      "min_position_error": 0.027411632965585384,
+      "final_position_error": 0.027411632965585384,
+      "position_error_improvement": 0.00034425972876723707,
+      "aligned_rate": 1.0,
+      "object_height": 0.05370328380106927,
+      "object_on_floor": false,
+      "finger_contact_count": 0,
+      "finger_contact_groups": [],
+      "palm_only_contact": false,
+      "total_reward": 19.216924448043358,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.3506362698144766,
+          -0.001699514070127233,
+          0.05414473380106927
+        ]
+      },
+      "episode_idx": 6
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 9,
+      "contact_rate": 0.9,
+      "max_contact_duration": 9,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.14414779744346617,
+      "mean_abs_action": 0.0963792022317648,
+      "mean_abs_finger_action": 0.08052207678556442,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.022549555382913426,
+      "min_position_error": 0.021747082482106973,
+      "final_position_error": 0.021747082482106973,
+      "position_error_improvement": 0.0008024729008064523,
+      "aligned_rate": 1.0,
+      "object_height": 0.04577971716321694,
+      "object_on_floor": false,
+      "finger_contact_count": 0,
+      "finger_contact_groups": [],
+      "palm_only_contact": false,
+      "total_reward": 19.271701298600945,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.35147634234515157,
+          -0.018040825509882726,
+          0.046221167163216934
+        ]
+      },
+      "episode_idx": 7
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.11441683918909457,
+      "mean_abs_action": 0.08239053525030612,
+      "mean_abs_finger_action": 0.0691248808056116,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.012407232854192545,
+      "min_position_error": 0.010120232845720426,
+      "final_position_error": 0.010120232845720426,
+      "position_error_improvement": 0.0022870000084721197,
+      "aligned_rate": 1.0,
+      "object_height": 0.03460481872082569,
+      "object_on_floor": false,
+      "finger_contact_count": 0,
+      "finger_contact_groups": [],
+      "palm_only_contact": true,
+      "total_reward": 19.380315880748658,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.3242409768112399,
+          -0.010903159146899048,
+          0.035
+        ]
+      },
+      "episode_idx": 8
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 11,
+      "contact_steps": 11,
+      "contact_rate": 1.0,
+      "max_contact_duration": 11,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.14745771717372888,
+      "mean_abs_action": 0.060322956944053825,
+      "mean_abs_finger_action": 0.04706510495055805,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.030009522618487633,
+      "min_position_error": 0.027913001000443628,
+      "final_position_error": 0.027913001000443628,
+      "position_error_improvement": 0.0020965216180440054,
+      "aligned_rate": 0.9090909090909091,
+      "object_height": 0.03415236597903334,
+      "object_on_floor": false,
+      "finger_contact_count": 2,
+      "finger_contact_groups": [
+        "index",
+        "middle"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 19.674190151414336,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.357296756458466,
+          -0.015626067129997135,
+          0.035
+        ]
+      },
+      "episode_idx": 9
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.12039605303868367,
+      "mean_abs_action": 0.057093238458037376,
+      "mean_abs_finger_action": 0.04804285280406475,
+      "zero_like_action_ratio": 0.2,
+      "initial_position_error": 0.014877281145912793,
+      "min_position_error": 0.012303243424210302,
+      "final_position_error": 0.012303243424210302,
+      "position_error_improvement": 0.0025740377217024907,
+      "aligned_rate": 1.0,
+      "object_height": 0.034799967243422804,
+      "object_on_floor": false,
+      "finger_contact_count": 2,
+      "finger_contact_groups": [
+        "middle",
+        "ring"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 19.35798585521677,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.3300922242606677,
+          -0.005530652422631333,
+          0.035
+        ]
+      },
+      "episode_idx": 10
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.13724657826879427,
+      "mean_abs_action": 0.10235093906521797,
+      "mean_abs_finger_action": 0.09103221073746681,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.02394981819615667,
+      "min_position_error": 0.02354834132249794,
+      "final_position_error": 0.02357375952509876,
+      "position_error_improvement": 0.0003760586710579092,
+      "aligned_rate": 1.0,
+      "object_height": 0.0392639699947938,
+      "object_on_floor": false,
+      "finger_contact_count": 1,
+      "finger_contact_groups": [
+        "index"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 19.256461031488502,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.34224735773122855,
+          -0.03574840798254579,
+          0.039705419994793795
+        ]
+      },
+      "episode_idx": 11
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 0,
+      "contact_rate": 0.0,
+      "max_contact_duration": 0,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.13815406293537158,
+      "mean_abs_action": 0.08650922998785973,
+      "mean_abs_finger_action": 0.067277692258358,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.017506733048570783,
+      "min_position_error": 0.017506733048570783,
+      "final_position_error": 0.01788196152598273,
+      "position_error_improvement": -0.00037522847741194854,
+      "aligned_rate": 1.0,
+      "object_height": 0.05230847325234368,
+      "object_on_floor": false,
+      "finger_contact_count": 0,
+      "finger_contact_groups": [],
+      "palm_only_contact": false,
+      "total_reward": 19.31704355399441,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.3439938286853795,
+          -0.011822640125009724,
+          0.05274992325234368
+        ]
+      },
+      "episode_idx": 12
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.1380962842465634,
+      "mean_abs_action": 0.06597445905208588,
+      "mean_abs_finger_action": 0.0489605501294136,
+      "zero_like_action_ratio": 0.4,
+      "initial_position_error": 0.021146731647921295,
+      "min_position_error": 0.01938864022173849,
+      "final_position_error": 0.01938864022173849,
+      "position_error_improvement": 0.0017580914261828041,
+      "aligned_rate": 1.0,
+      "object_height": 0.0344333611393475,
+      "object_on_floor": false,
+      "finger_contact_count": 2,
+      "finger_contact_groups": [
+        "index",
+        "middle"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 19.290699766685627,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.3467828117406219,
+          -0.02211968397704856,
+          0.035
+        ]
+      },
+      "episode_idx": 13
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.14213454781741666,
+      "mean_abs_action": 0.1028202336281538,
+      "mean_abs_finger_action": 0.09121963083744049,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.025673167121666726,
+      "min_position_error": 0.025228479994442426,
+      "final_position_error": 0.025236873874462756,
+      "position_error_improvement": 0.0004362932472039699,
+      "aligned_rate": 1.0,
+      "object_height": 0.04122921872958542,
+      "object_on_floor": false,
+      "finger_contact_count": 1,
+      "finger_contact_groups": [
+        "index"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 19.239333817497958,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.34741524761357323,
+          -0.03409098113482921,
+          0.041670668729585414
+        ]
+      },
+      "episode_idx": 14
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.1386889053132582,
+      "mean_abs_action": 0.06456584483385086,
+      "mean_abs_finger_action": 0.04957782458513975,
+      "zero_like_action_ratio": 0.3,
+      "initial_position_error": 0.023110845228791095,
+      "min_position_error": 0.02176311297156082,
+      "final_position_error": 0.02176311297156082,
+      "position_error_improvement": 0.001347732257230276,
+      "aligned_rate": 1.0,
+      "object_height": 0.034395473855828376,
+      "object_on_floor": false,
+      "finger_contact_count": 2,
+      "finger_contact_groups": [
+        "index",
+        "middle"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 19.270140443643736,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.346335514561209,
+          -0.028084697557046366,
+          0.035
+        ]
+      },
+      "episode_idx": 15
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.12417602003226218,
+      "mean_abs_action": 0.09433082602918148,
+      "mean_abs_finger_action": 0.07921931967139244,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.009540900968650104,
+      "min_position_error": 0.0078390322147932,
+      "final_position_error": 0.0078390322147932,
+      "position_error_improvement": 0.0017018687538569045,
+      "aligned_rate": 1.0,
+      "object_height": 0.0373664209284739,
+      "object_on_floor": false,
+      "finger_contact_count": 2,
+      "finger_contact_groups": [
+        "index",
+        "middle"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 19.406546969379082,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.33212713381344994,
+          -0.021951569162295098,
+          0.037807870928473895
+        ]
+      },
+      "episode_idx": 16
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.126992180643383,
+      "mean_abs_action": 0.07597229033708572,
+      "mean_abs_finger_action": 0.07256498225033284,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.023369106898807692,
+      "min_position_error": 0.02156825862204636,
+      "final_position_error": 0.02156825862204636,
+      "position_error_improvement": 0.0018008482767613333,
+      "aligned_rate": 1.0,
+      "object_height": 0.03487083006548142,
+      "object_on_floor": false,
+      "finger_contact_count": 3,
+      "finger_contact_groups": [
+        "little",
+        "middle",
+        "ring"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 19.269202795666466,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.3370540603149754,
+          0.0030349535223690473,
+          0.035
+        ]
+      },
+      "episode_idx": 17
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.12262131075480723,
+      "mean_abs_action": 0.09332105405628681,
+      "mean_abs_finger_action": 0.07918724343180657,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.014135551356476426,
+      "min_position_error": 0.014117348512513377,
+      "final_position_error": 0.01480139885529854,
+      "position_error_improvement": -0.0006658474988221145,
+      "aligned_rate": 1.0,
+      "object_height": 0.04068288313037465,
+      "object_on_floor": false,
+      "finger_contact_count": 0,
+      "finger_contact_groups": [],
+      "palm_only_contact": true,
+      "total_reward": 19.35078020621431,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.327865070020276,
+          -0.03004761928460015,
+          0.04112433313037465
+        ]
+      },
+      "episode_idx": 18
+    },
+    {
+      "success": true,
+      "task_name": "pre_grasp",
+      "steps": 10,
+      "contact_steps": 10,
+      "contact_rate": 1.0,
+      "max_contact_duration": 10,
+      "grasp_contact_steps": 0,
+      "grasp_contact_rate": 0.0,
+      "max_grasp_contact_duration": 0,
+      "final_distance": 0.12051636277576834,
+      "mean_abs_action": 0.09321852661669254,
+      "mean_abs_finger_action": 0.07750098779797554,
+      "zero_like_action_ratio": 0.0,
+      "initial_position_error": 0.01010208542296174,
+      "min_position_error": 0.0072160074622145435,
+      "final_position_error": 0.0072160074622145435,
+      "position_error_improvement": 0.002886077960747197,
+      "aligned_rate": 1.0,
+      "object_height": 0.034561301445214895,
+      "object_on_floor": false,
+      "finger_contact_count": 2,
+      "finger_contact_groups": [
+        "index",
+        "middle"
+      ],
+      "palm_only_contact": false,
+      "total_reward": 19.40509856025973,
+      "placement_info": {
+        "placement_mode": "demo",
+        "requested_placement_mode": "demo",
+        "effective_placement_mode": "demo",
+        "placement_jitter": 0.02,
+        "structured_task_name": "pre_grasp",
+        "repositioned": true,
+        "pre_grasp_start_bias": [
+          0.009999999776482582,
+          0.0,
+          -0.004999999888241291
+        ],
+        "position": [
+          0.32964166387807387,
+          -0.01784756908574775,
+          0.035
+        ]
+      },
+      "episode_idx": 19
+    }
+  ]
+}

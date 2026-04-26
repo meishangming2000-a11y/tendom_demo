@@ -1,0 +1,93 @@
+<mujoco model="printed_arm_stage1_robot">
+  <compiler angle="radian"/>
+
+  <include file="defaults.xml"/>
+
+  <asset>
+    <material name="pa_dark" rgba="0.20 0.21 0.24 1" specular="0.3" shininess="0.2"/>
+    <material name="pa_mid" rgba="0.46 0.49 0.52 1" specular="0.2" shininess="0.15"/>
+    <material name="pa_mount" rgba="0.81 0.36 0.20 1" specular="0.4" shininess="0.3"/>
+
+    <mesh name="pa_unit_box" file="assets/meshes/visual/unit_box.obj"/>
+    <mesh name="pa_base_visual" file="assets/meshes/visual/pa_base.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="pa_link_long_visual" file="assets/meshes/visual/pa_j1_link.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="pa_link_mid_visual" file="assets/meshes/visual/unit_box.obj" scale="0.060 0.030 0.026"/>
+    <mesh name="pa_j3_link_visual" file="assets/meshes/visual/pa_j3_link.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="pa_link_short_visual" file="assets/meshes/visual/unit_box.obj" scale="0.050 0.028 0.024"/>
+    <mesh name="pa_j4_link_main_visual" file="assets/meshes/visual/pa_j4_link_main.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="pa_j4_link_aux_visual" file="assets/meshes/visual/pa_j4_link_aux.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="pa_j4_link_cover_visual" file="assets/meshes/visual/pa_j4_link_cover.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="pa_j5_rotating_output_candidate_visual" file="assets/meshes/visual/pa_j5_fixed.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="pa_j5_fixed_support_visual" file="assets/meshes/visual/pa_j5_fixed_support.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="pa_mount_visual" file="assets/meshes/visual/pa_ee_mount.stl" scale="0.001 0.001 0.001"/>
+  </asset>
+
+  <worldbody>
+    <body name="pa_root" pos="-0.34 0 0">
+      <site name="pa_base_origin" pos="0 0 0" size="0.004" rgba="0.9 0.9 0.9 1"/>
+      <geom name="pa_base_visual_geom" class="pa_visual_mesh" mesh="pa_base_visual" material="pa_dark"
+        pos="-0.581117 -0.066195 -1.289088"/>
+      <geom name="pa_base_collision_geom" class="pa_collision_box" size="0.05 0.04 0.03" pos="0.05 0 0"/>
+
+      <body name="pa_j1_link" pos="0.05 0 0">
+        <joint name="pa_J1" class="pa_hinge" axis="0 0 1" range="-1.5708 1.5708"/>
+        <geom name="pa_j1_visual_geom" class="pa_visual_mesh" mesh="pa_link_long_visual" material="pa_mid"
+          pos="0.631176 0.066194 -1.289088" quat="0 0 0 1"/>
+        <geom name="pa_j1_collision_geom" class="pa_collision_capsule" fromto="0 0 0 0.09 0 0" size="0.018"/>
+
+        <body name="pa_j2_carriage" pos="0.09 0 0">
+          <joint name="pa_J2" class="pa_slide" axis="1 0 0" range="0 0.08"/>
+          <geom name="pa_j2_visual_geom" class="pa_visual_mesh" mesh="pa_link_mid_visual" material="pa_mid" pos="0.03 0 0"/>
+          <geom name="pa_j2_collision_geom" class="pa_collision_box" size="0.03 0.025 0.022" pos="0.03 0 0"/>
+
+          <body name="pa_j3_link" pos="0.06 0 0">
+            <joint name="pa_J3" class="pa_hinge" axis="0 1 0" range="-1.0472 1.0472"/>
+            <geom name="pa_j3_visual_geom" class="pa_visual_mesh" mesh="pa_j3_link_visual" material="pa_dark"
+              pos="0.544517 0.073785 -1.290771" quat="0 0 0 1"/>
+            <geom name="pa_j3_collision_geom" class="pa_collision_capsule" fromto="0 0 0 0.06 0 0" size="0.016"/>
+
+            <body name="pa_j4_link" pos="0.06 0 0">
+              <joint name="pa_J4" class="pa_hinge" axis="0 0 1" range="-1.22173 1.22173"/>
+              <geom name="pa_j4_visual_geom" class="pa_visual_mesh" mesh="pa_j4_link_main_visual" material="pa_mid"
+                pos="0.453779 0.070294 -1.295769" quat="0 0 0 1"/>
+              <geom name="pa_j4_aux_visual_geom" class="pa_visual_mesh" mesh="pa_j4_link_aux_visual" material="pa_dark"
+                pos="0.477679 0.072694 -1.292822" quat="0 0 0 1"/>
+              <geom name="pa_j4_cover_visual_geom" class="pa_visual_mesh" mesh="pa_j4_link_cover_visual" material="pa_mid"
+                pos="0.464439 0.072821 -1.290089" quat="0 0 0 1"/>
+              <geom name="pa_j4_collision_geom" class="pa_collision_capsule" fromto="0 0 0 0.05 0 0" size="0.014"/>
+
+              <body name="pa_j5_fixed" pos="0.05 0 0">
+                <geom name="pa_j5_visual_geom" class="pa_visual_mesh" mesh="pa_j5_fixed_support_visual" material="pa_dark"
+                  pos="-0.219294 -0.039144 -1.290664"/>
+                <geom name="pa_j5_rotating_output_candidate_visual_geom" class="pa_visual_mesh"
+                  mesh="pa_j5_rotating_output_candidate_visual" material="pa_mount" pos="-0.205556 -0.038908 -1.292929"/>
+                <geom name="pa_j5_collision_geom" class="pa_collision_box" size="0.025 0.020 0.018" pos="0.025 0 0"/>
+
+                <!-- Stage 1 mount frame: position and orientation are chosen to match Shadow's root body home pose. -->
+                <body name="pa_ee_mount" pos="0.03 0 0" quat="1 -1 1 -1">
+                  <site name="pa_ee_mount_site" pos="0 0 0" size="0.005" rgba="1 0.6 0.2 1"/>
+                  <site name="pa_ee_axis_x" pos="0.03 0 0" size="0.003" rgba="1 0 0 1"/>
+                  <site name="pa_ee_axis_y" pos="0 0.03 0" size="0.003" rgba="0 1 0 1"/>
+                  <site name="pa_ee_axis_z" pos="0 0 0.03" size="0.003" rgba="0 0.6 1 1"/>
+                  <geom name="pa_ee_mount_visual_geom" class="pa_visual_mesh" mesh="pa_mount_visual" material="pa_mount"
+                    pos="0.038083 1.292871 -0.234842" quat="0.5 0.5 -0.5 0.5"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <position name="pa_A_J1" joint="pa_J1" class="pa_position" ctrlrange="-1.5708 1.5708"/>
+    <position name="pa_A_J2" joint="pa_J2" class="pa_position" kp="120" ctrlrange="0 0.08" forcerange="-80 80"/>
+    <position name="pa_A_J3" joint="pa_J3" class="pa_position" ctrlrange="-1.0472 1.0472"/>
+    <position name="pa_A_J4" joint="pa_J4" class="pa_position" ctrlrange="-1.22173 1.22173"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0 0" ctrl="0 0 0 0"/>
+  </keyframe>
+</mujoco>

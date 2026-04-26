@@ -16,6 +16,9 @@ Shadow Hand 抓取环境
 import numpy as np
 import mujoco
 from typing import Tuple, Dict, Any, Optional
+from observations import get_observation_builder
+from tasks import create_task
+from ..adapters import create_hand_adapter
 
 # 导入项目工具模块
 from ..utils import model_loader, path_utils
@@ -24,8 +27,16 @@ from ..utils import model_loader, path_utils
 class ShadowGraspEnv:
     """Shadow Hand 抓取环境"""
 
-    def __init__(self, max_steps: int = 500, control_timestep: float = 0.002,
-                 enable_catch_task: bool = False, object_fall_speed: float = -0.3):
+    def __init__(
+        self,
+        max_steps: int = 500,
+        control_timestep: float = 0.002,
+        enable_catch_task: bool = False,
+        object_fall_speed: float = -0.3,
+        task_name: Optional[str] = None,
+        observation_mode: str = "oracle",
+        task_kwargs: Optional[Dict[str, Any]] = None,
+    ):
         """
         初始化环境
 
@@ -48,6 +59,13 @@ class ShadowGraspEnv:
         # 接住任务参数
         self.enable_catch_task = enable_catch_task
         self.object_fall_speed = object_fall_speed
+        self.task_name = task_name
+        self.task_kwargs = dict(task_kwargs or {})
+        self.task = create_task(task_name, **self.task_kwargs) if task_name else None
+        self.observation_mode = "oracle"
+        self.observation_builder = None
+        self.set_observation_mode(observation_mode)
+        self.initial_object_height = 0.0
 
         # 获取模型信息
         self.nu = self.model.nu  # 执行器数量
@@ -58,6 +76,7 @@ class ShadowGraspEnv:
         self.object_body_id = self._find_object_body()
         self.hand_body_id = self._find_hand_body()
         self.floor_body_id = self._find_floor_body()
+        self.grasp_site_id = self._find_grasp_site()
         self.grasp_contact_body_ids = self._find_grasp_contact_body_ids()
 
         if self.object_body_id is None:
@@ -98,12 +117,57 @@ class ShadowGraspEnv:
 
         # 查找物体关节ID（用于设置速度）
         self.object_joint_id = self._find_object_joint()
+        self.hand_adapter = create_hand_adapter(self)
 
         # 打印接住任务参数
         if self.enable_catch_task:
             print(f"接住任务已启用:")
             print(f"  - 物体下落速度: {self.object_fall_speed:.3f} m/s")
             print(f"  - 物体关节ID: {self.object_joint_id}")
+
+        if self.task is not None:
+            print(f"Structured task enabled: {self.task.get_name()}")
+        print(f"Observation mode: {self.observation_mode}")
+
+    def set_observation_mode(self, mode: str) -> None:
+        """Set the active observation layer."""
+        self.observation_mode = str(mode or "oracle").strip().lower()
+        self.observation_builder = get_observation_builder(self.observation_mode)
+
+    def set_task(self, task_name: Optional[str] = None, task=None, **task_kwargs) -> None:
+        """Replace the active structured task."""
+        if task is not None:
+            self.task = task
+            self.task_name = task.get_name()
+            self.task_kwargs = {}
+            return
+
+        self.task_name = task_name
+        self.task_kwargs = dict(task_kwargs)
+        self.task = create_task(task_name, **self.task_kwargs) if task_name else None
+
+    def get_hand_adapter(self):
+        """Return the backend adapter used by task logic."""
+        return self.hand_adapter
+
+    def get_task_name(self) -> str:
+        """Return the active structured task name or the legacy task label."""
+        if self.task is not None:
+            return self.task.get_name()
+        return "catch_task" if self.enable_catch_task else "stable_grasp_legacy"
+
+    def get_action_spec(self) -> Dict[str, Any]:
+        """Return the current action interface spec."""
+        if self.task is not None:
+            return self.task.get_action_spec(self)
+
+        return {
+            "control_level": "joint",
+            "shape": (self.nu,),
+            "normalized": True,
+            "range": [-1.0, 1.0],
+            "notes": "Legacy environment action interface.",
+        }
 
     def _find_object_joint(self) -> Optional[int]:
         """
@@ -207,6 +271,20 @@ class ShadowGraspEnv:
                 body_id = self.model.geom_bodyid[geom_id]
                 return int(body_id)
 
+        return None
+
+    def _find_grasp_site(self) -> Optional[int]:
+        """Return the palm-aligned grasp reference site when present."""
+        preferred_names = ("grasp_site", "palm_site", "palm_center")
+        for site_id in range(self.model.nsite):
+            site_name = mujoco.mj_id2name(self.model, mujoco.mjtObj.mjOBJ_SITE, site_id)
+            if site_name and site_name.lower() in preferred_names:
+                return site_id
+
+        for site_id in range(self.model.nsite):
+            site_name = mujoco.mj_id2name(self.model, mujoco.mjtObj.mjOBJ_SITE, site_id)
+            if site_name and "grasp" in site_name.lower():
+                return site_id
         return None
 
     def _find_grasp_contact_body_ids(self) -> set[int]:
@@ -367,9 +445,33 @@ class ShadowGraspEnv:
         """获取手部主体位置（手掌或手腕）"""
         return self.data.xpos[self.hand_body_id].copy()
 
+    def _get_palm_reference_position(self) -> np.ndarray:
+        """Return the task-space palm reference point used by pre-grasp."""
+        if self.grasp_site_id is not None:
+            return self.data.site_xpos[self.grasp_site_id].copy()
+        return self._get_hand_position()
+
     def _get_object_position(self) -> np.ndarray:
         """获取物体位置"""
         return self.data.xpos[self.object_body_id].copy()
+
+    def _get_hand_orientation(self) -> np.ndarray:
+        """Return the current hand-body orientation quaternion."""
+        return self.data.xquat[self.hand_body_id].copy()
+
+    def _get_object_orientation(self) -> np.ndarray:
+        """Return the current object orientation quaternion."""
+        return self.data.xquat[self.object_body_id].copy()
+
+    def _get_object_velocity(self) -> np.ndarray:
+        """Return the object's linear velocity when available."""
+        if self.object_body_id is None:
+            return np.zeros(3, dtype=np.float32)
+
+        body_joint_adr = self.model.body_jntadr[self.object_body_id]
+        if body_joint_adr >= 0 and (body_joint_adr + 3) <= len(self.data.qvel):
+            return self.data.qvel[body_joint_adr: body_joint_adr + 3].copy()
+        return np.zeros(3, dtype=np.float32)
 
     def _get_distance(self) -> float:
         """计算手部与物体之间的距离"""
@@ -438,6 +540,9 @@ class ShadowGraspEnv:
 
         # 前进一步以确保数据有效
         mujoco.mj_step(self.model, self.data)
+        self.initial_object_height = float(self._get_object_height())
+        if self.task is not None:
+            self.task.reset_task(self)
 
         return self.get_obs()
 
@@ -618,6 +723,146 @@ class ShadowGraspEnv:
 
         # 真正接住：手接触物体 AND 物体不接触地面
         return contact_success and (not ground_contact)
+
+    def get_observation_dict(self, mode: Optional[str] = None) -> Dict[str, Any]:
+        """Return the structured observation payload for the requested mode."""
+        builder = self.observation_builder if mode is None else get_observation_builder(mode)
+        return builder.get_dict(self)
+
+    def get_observation(self, mode: Optional[str] = None) -> np.ndarray:
+        """Return the flattened observation vector for the requested mode."""
+        builder = self.observation_builder if mode is None else get_observation_builder(mode)
+        return builder.get_vector(self)
+
+    def get_obs(self) -> np.ndarray:
+        """Backward-compatible observation accessor."""
+        return self.get_observation()
+
+    def _build_base_info(self, contact_state: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """Build the shared info dictionary used by tasks and legacy scripts."""
+        contact_state = contact_state or self._get_contact_state()
+        is_contact = bool(contact_state["has_valid_contact"])
+        is_grasp_contact = bool(contact_state["is_grasp_contact"])
+        ground_contact = self._check_object_on_floor()
+
+        return {
+            "step": self.current_step,
+            "control_timestep": self.control_timestep,
+            "max_steps": self.max_steps,
+            "distance": self._get_distance(),
+            "contact": is_contact,
+            "contact_duration": self.contact_duration,
+            "grasp_contact": is_grasp_contact,
+            "grasp_contact_duration": self.grasp_contact_duration,
+            "palm_contact": contact_state["has_palm_contact"],
+            "thumb_contact": contact_state["has_thumb_contact"],
+            "palm_only_contact": contact_state["is_palm_only_contact"],
+            "finger_contact_count": contact_state["finger_group_count"],
+            "finger_contact_groups": contact_state["finger_groups"],
+            "contact_body_names": contact_state["contact_body_names"],
+            "object_on_floor": ground_contact,
+            "object_height": self._get_object_height(),
+            "catch_success": (is_grasp_contact and not ground_contact),
+            "task_name": self.get_task_name(),
+            "observation_mode": self.observation_mode,
+            "backend_type": self.hand_adapter.get_backend_type(),
+            "model_family": self.hand_adapter.get_model_family(),
+        }
+
+    def compute_default_reward(self, action: np.ndarray, info: Optional[Dict[str, Any]] = None) -> float:
+        """Return the legacy environment reward."""
+        reward_info = info or self._build_base_info()
+        return self.compute_reward(action, is_contact=bool(reward_info.get("contact", False)))
+
+    def compute_reward(self, action: np.ndarray, is_contact: Optional[bool] = None) -> float:
+        """Return the default environment reward."""
+        coeffs = self.reward_coeffs
+        if is_contact is None:
+            is_contact = self._check_contact()
+
+        distance = self._get_distance()
+        distance_reward = coeffs["distance"] * distance
+        contact_reward = coeffs["contact"] if is_contact else 0.0
+        maintain_reward = coeffs["maintain"] * self.contact_duration if is_contact else 0.0
+        ground_contact = self._check_object_on_floor()
+        catch_reward = coeffs["catch"] if (is_contact and not ground_contact) else 0.0
+        ground_penalty = coeffs["ground_penalty"] if ground_contact else 0.0
+        action_penalty = coeffs["action_penalty"] * np.sum(action ** 2)
+        total_reward = (
+            distance_reward
+            + contact_reward
+            + maintain_reward
+            + catch_reward
+            + ground_penalty
+            + action_penalty
+        )
+        return float(total_reward)
+
+    def _check_done(self, task_success: bool = False, task_failure: bool = False) -> bool:
+        """Check whether the episode should terminate."""
+        if self.current_step >= self.max_steps:
+            return True
+        if self.task is not None and (task_success or task_failure):
+            return True
+        return False
+
+    def is_success(self) -> bool:
+        """Check success for the active task or the legacy grasp rule."""
+        if self.task is not None:
+            return bool(self.task.check_success(self, info=self._build_base_info()))
+
+        contact_success = self.grasp_contact_duration >= self.success_contact_duration
+        if not self.enable_catch_task:
+            return contact_success
+
+        ground_contact = self._check_object_on_floor()
+        return contact_success and (not ground_contact)
+
+    def step(self, action: np.ndarray) -> Tuple[np.ndarray, float, bool, Dict[str, Any]]:
+        """Execute one environment step."""
+        if action.shape != (self.nu,):
+            raise ValueError(f"鍔ㄤ綔褰㈢姸搴斾负 ({self.nu},)锛屼絾寰楀埌 {action.shape}")
+
+        ctrl = self._normalize_action(action)
+        self.data.ctrl[:] = ctrl
+        mujoco.mj_step(self.model, self.data)
+        self.current_step += 1
+
+        contact_state = self._get_contact_state()
+        is_contact = bool(contact_state["has_valid_contact"])
+        is_grasp_contact = bool(contact_state["is_grasp_contact"])
+
+        if is_contact:
+            self.contact_duration += 1
+        else:
+            self.contact_duration = 0
+
+        if is_grasp_contact:
+            self.grasp_contact_duration += 1
+        else:
+            self.grasp_contact_duration = 0
+
+        obs = self.get_obs()
+        base_info = self._build_base_info(contact_state=contact_state)
+        task_success = False
+        task_failure = False
+
+        if self.task is not None:
+            reward = float(self.task.get_reward(self, action, info=base_info))
+            task_success = bool(self.task.check_success(self, info=base_info))
+            task_failure = bool(self.task.check_failure(self, info=base_info))
+            info = dict(base_info)
+            info.update(self.task.get_info(self, info=base_info) or {})
+            info["success"] = task_success
+            info["failure"] = task_failure
+        else:
+            reward = self.compute_default_reward(action, info=base_info)
+            info = dict(base_info)
+            info["success"] = self.is_success()
+            info["failure"] = False
+
+        done = self._check_done(task_success=task_success, task_failure=task_failure)
+        return obs, reward, done, info
 
     def render(self, viewer=None):
         """渲染环境（可选，目前不实现）"""

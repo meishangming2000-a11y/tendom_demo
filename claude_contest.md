@@ -1,10 +1,18 @@
-# Claude Contest - MuJoCo Tendon Demo Core Project
+# Claude Contest - Tendon Project Simulations
 
-Historical note: this file reflects an older project snapshot. The active script layout now uses `scripts/common/`, `scripts/data_tools/`, and `scripts/diagnostics/`.
+Historical note: this file reflects an older project snapshot.
+
+Update note (2026-03-20):
+
+- Do not use this file as the current project brief.
+- The active script layout now uses `scripts/common/`, `scripts/data_tools/`, and `scripts/diagnostics/`.
+- The current maintained learning loop is `pre_grasp expert -> dataset -> BC -> eval -> report`.
+- For the current baseline and next steps, read `README.md` and `reports/next_steps_handoff_2026-03-20.md`.
+- The detailed milestone and TODO sections below are preserved as historical context and are not continuously updated.
 
 ## Project Overview
 
-**Project Name**: MuJoCo Tendon Demo Core
+**Project Name**: Tendon Project Simulations
 **Status**: Complete training pipeline with behavior cloning implemented
 **Current Phase**: BC training operational, three-phase grasping demo running
 **Next Milestone**: BC policy evaluation and improvement

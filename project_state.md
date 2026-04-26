@@ -1,6 +1,13 @@
-# Project State - MuJoCO Tendon Demo Core
+# Project State - Tendon Project Simulations
 
-Historical note: this file reflects an older project snapshot. The active script layout now uses `scripts/common/`, `scripts/data_tools/`, and `scripts/diagnostics/`.
+Historical note: this file reflects an older simulation-focused snapshot.
+
+Update note (2026-03-20):
+
+- Do not treat this file as the canonical source of current project status.
+- The current maintained learning pipeline is `pre_grasp expert -> dataset -> BC -> eval -> report`.
+- For current truth, read `README.md`, `reports/README.md`, and `reports/next_steps_handoff_2026-03-20.md` first.
+- The roadmap and issue lists below are retained for historical context and are not continuously updated.
 
 ## Current Status Summary
 
@@ -18,7 +25,7 @@ The project has a fully operational training pipeline with three-phase grasping 
 8. ✅ **Controller infrastructure** for coordinated grasping motions
 9. ✅ **Catch task implementation** - True object catching (not just contact detection)
 
-**Next Phase**: BC policy evaluation and larger dataset collection for robust training.
+**Next Phase**: refreshed catch-task training, stronger robustness evaluation, and clearer repository-level documentation.
 
 ## ✅ Working Components
 
@@ -112,9 +119,9 @@ The project has a fully operational training pipeline with three-phase grasping 
 - **Priority**: High - Collect larger dataset before serious BC training
 
 **BC Policy Evaluation**:
-- No evaluation script to test trained BC models
-- Cannot measure success rate of learned policies
-- **Priority**: Medium - Need to create `eval_bc.py` or similar
+- A runnable evaluation script now exists at `scripts/eval_bc.py`
+- The remaining gap is refreshed benchmark reporting after the recent project reorganization
+- **Priority**: Medium - Re-run evaluation with the current recommended checkpoints and document defaults
 
 ### 2. **Minor Issues**
 
@@ -270,7 +277,7 @@ nmocap = 0   # Motion capture bodies
 
 ### Needs Verification:
 - [ ] Action range constraint enforcement (exceeds [-1, 1])
-- [ ] BC policy evaluation (need evaluation script)
+- [ ] Refreshed BC benchmark reporting with the current `eval_bc.py` workflow
 - [ ] Larger dataset collection (100+ episodes)
 - [ ] BC model generalization performance
 
@@ -283,7 +290,7 @@ nmocap = 0   # Motion capture bodies
 ## 📝 TODO List
 
 ### High Priority (BC Training Completion):
-1. **BC policy evaluation script** - Create `eval_bc.py` to test trained models
+1. **BC policy evaluation refresh** - Re-run `eval_bc.py` on the current recommended checkpoints and record the default report
 2. **Large-scale data collection** - Collect 100+ episodes for robust BC training
 3. **Action range enforcement** - Ensure controller outputs stay within [-1, 1] bounds
 4. **Dataset quality improvement** - Tune controller for consistent high-success demonstrations
@@ -302,12 +309,12 @@ nmocap = 0   # Motion capture bodies
 
 ## 🚀 Recommended Next Steps
 
-### Immediate (1-2 hours): BC Evaluation Setup
-1. **Create BC evaluation script** (`eval_bc.py`):
-   - Load trained BC model
-   - Run policy in environment
+### Immediate (1-2 hours): BC Evaluation Refresh
+1. **Run BC evaluation script** (`eval_bc.py`):
+   - Load the trained BC model
+   - Run policy in the environment
    - Measure success rate and rewards
-   - Compare with expert controller
+   - Compare with the expert controller
 
 2. **Collect larger dataset** (10-20 episodes):
    ```bash
@@ -319,7 +326,7 @@ nmocap = 0   # Motion capture bodies
    # Train on larger dataset
    python scripts/train_bc.py --data data/bc_dataset_20.npz --epochs 50 --output models/bc_20ep.pth
 
-   # Evaluate (once eval_bc.py exists)
+   # Evaluate with the existing script
    python scripts/eval_bc.py --model models/bc_20ep.pth --episodes 10
    ```
 
@@ -471,7 +478,7 @@ nmocap = 0   # Motion capture bodies
 - Script organization (core + archive structure)
 
 ### Phase 4: BC Evaluation & Enhancement (Current):
-- BC policy evaluation script development
+- BC policy evaluation refresh and benchmark reporting
 - Larger dataset collection (100+ episodes)
 - Action range enforcement and quality improvements
 - Hyperparameter tuning for BC models

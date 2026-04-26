@@ -1,0 +1,195 @@
+stage1_semantic_groups:
+  formal_main_visual_chain:
+    assets: [pa_base_visual, pa_link_long_visual, pa_j3_link_visual, pa_j4_link_main_visual, pa_j4_link_aux_visual, pa_j4_link_cover_visual, pa_j5_fixed_support_visual, pa_mount_visual]
+    note: current Stage 1 main visual chain is defined semantically; imported CAD visuals and body tree do not need a strict one_to_one mapping
+  reference_candidate_visuals:
+    assets: [pa_j5_rotating_output_candidate_visual]
+    note: retained as a rotating_side reference visual and not the fixed_side primary meaning
+  placeholder_logic_layers:
+    assets: [pa_link_mid_visual]
+    note: pa_j2_carriage remains a placeholder logic layer and does not block current Stage 1 structural validation
+visual_meshes:
+  - body_name: pa_root
+    asset_name: pa_base_visual
+    stage1_visual_class: formal_main_visual
+    current_file: assets/meshes/visual/pa_base.stl
+    replacement_source: "printed assembly base export"
+    source_file: hardwares/打印装配体/realtosim/PA_BASE.STL
+    units: mm_export_scaled_to_m
+    measured_bbox_mm: [65.0, 131.953, 132.0]
+    visual_geom_pose_m:
+      pos: [-0.581117, -0.066195, -1.289088]
+      quat_wxyz: [1.0, 0.0, 0.0, 0.0]
+    semantic_review:
+      stage1_role: current_main_visual_chain_component
+      chain_position: base
+      note: pa_base is part of the current formal Stage 1 main visual chain
+    orientation_note: assembly_frame_orientation_preserved
+    stage1_status: imported_and_centered_on_existing_visual_slot
+  - body_name: pa_j1_link
+    asset_name: pa_link_long_visual
+    stage1_visual_class: formal_main_visual
+    current_file: assets/meshes/visual/pa_j1_link.stl
+    replacement_source: "printed assembly J1 link export"
+    source_file: hardwares/打印装配体/realtosim/pa_j1_link.STL
+    units: mm_export_scaled_to_m
+    measured_bbox_mm: [125.0, 124.902, 103.698]
+    visual_geom_pose_m:
+      pos: [0.631176, 0.066194, -1.289088]
+      quat_wxyz: [0.0, 0.0, 0.0, 1.0]
+    semantic_review:
+      stage1_role: current_main_visual_chain_component
+      chain_position: j1
+      note: pa_j1_link is part of the current formal Stage 1 main visual chain
+    orientation_note: assembly_frame_orientation_rotated_180deg_about_z_to_match_stage1_positive_x_chain
+    stage1_status: imported_with_base_relative_visual_alignment
+  - body_name: pa_j2_carriage
+    asset_name: pa_link_mid_visual
+    stage1_visual_class: placeholder_logic_layer
+    current_file: assets/meshes/visual/unit_box.obj
+    replacement_source: "printed assembly J2 carriage export"
+    semantic_review:
+      cad_recheck_interpretation: no_one_to_one_independent_cad_visual_confirmed_yet
+      stage1_role: placeholder_only_for_joint_tree_continuity
+      adjacent_real_visuals_cover_main_chain: [pa_j1_link, pa_j3_link]
+      note: neighboring imported real visuals already cover the main visible chain well enough for current Stage 1 loading and structural validation
+    stage1_status: placeholder_retained_until_a_discrete_pa_j2_carriage_visual_is_confirmed
+  - body_name: pa_j3_link
+    asset_name: pa_j3_link_visual
+    stage1_visual_class: formal_main_visual
+    current_file: assets/meshes/visual/pa_j3_link.stl
+    replacement_source: "printed assembly J3 link export"
+    source_file: hardwares/打印装配体/realtosim/pa_j3link/pa_j3_link.STL
+    units: mm_export_scaled_to_m
+    measured_bbox_mm: [125.0, 124.902, 103.698]
+    visual_geom_name: pa_j3_visual_geom
+    visual_geom_pose_m:
+      pos: [0.544517, 0.073785, -1.290771]
+      quat_wxyz: [0.0, 0.0, 0.0, 1.0]
+    semantic_review:
+      cad_recheck_interpretation: directly_coupled_to_motor_inside_fixed_lower_support_per_user_review
+      stage1_role: current_main_visual_chain_component
+      chain_position: j3
+      relation_to_pa_j4_main_geom_origin_mm: [-67.261, -0.654, -2.884]
+      note: hash_differs_from_pa_j1_link_but_compiled_mesh_frame_matches
+    orientation_note: assembly_frame_orientation_rotated_180deg_about_z_to_match_stage1_upstream_direction
+    stage1_status: integrated_as_current_main_visual_chain_component
+  - body_name: pa_j4_link
+    asset_name: pa_j4_link_main_visual
+    stage1_visual_class: formal_main_visual
+    current_file: assets/meshes/visual/pa_j4_link_main.stl
+    replacement_source: "printed assembly J4 rigid pair main export"
+    source_file: hardwares/打印装配体/realtosim/pa_j4_link/pa_j4_link - J3电机固定件-1.STL
+    units: mm_export_scaled_to_m
+    measured_bbox_mm: [161.496, 89.147, 89.172]
+    visual_geom_name: pa_j4_visual_geom
+    visual_geom_pose_m:
+      pos: [0.453779, 0.070294, -1.295769]
+      quat_wxyz: [0.0, 0.0, 0.0, 1.0]
+    semantic_review:
+      cad_recheck_interpretation: rigidly_connected_j4_motor_shell_or_outer_housing_candidate
+      stage1_role: component_of_current_main_pa_j4_visual_assembly
+      assembly_role: main_shell
+      rigid_pair_group: [pa_j4_link_main_visual, pa_j4_link_aux_visual, pa_j4_link_cover_visual]
+      excluded_export: "pa_j4_link - J2 伸出后-1.STL"
+    orientation_note: assembly_frame_orientation_rotated_180deg_about_z_to_match_stage1_upstream_direction
+    stage1_status: integrated_as_component_of_current_main_pa_j4_visual_assembly
+  - body_name: pa_j4_link
+    asset_name: pa_j4_link_aux_visual
+    stage1_visual_class: formal_main_visual
+    current_file: assets/meshes/visual/pa_j4_link_aux.stl
+    replacement_source: "printed assembly J4 rigid pair auxiliary export"
+    source_file: hardwares/打印装配体/realtosim/pa_j4_link/pa_j4_link - J3电机固定件2-1.STL
+    units: mm_export_scaled_to_m
+    measured_bbox_mm: [18.034, 86.064, 86.015]
+    visual_geom_name: pa_j4_aux_visual_geom
+    visual_geom_pose_m:
+      pos: [0.477679, 0.072694, -1.292822]
+      quat_wxyz: [0.0, 0.0, 0.0, 1.0]
+    semantic_review:
+      cad_recheck_interpretation: rigidly_connected_j4_motor_connection_disk_candidate
+      stage1_role: component_of_current_main_pa_j4_visual_assembly
+      assembly_role: motor_connection_disk
+      rigid_pair_group: [pa_j4_link_main_visual, pa_j4_link_aux_visual, pa_j4_link_cover_visual]
+      note: same_radius_appearance_as_main_motor_shell_from_user_review
+    orientation_note: assembly_frame_orientation_rotated_180deg_about_z_to_match_stage1_upstream_direction
+    stage1_status: integrated_as_component_of_current_main_pa_j4_visual_assembly
+  - body_name: pa_j4_link
+    asset_name: pa_j4_link_cover_visual
+    stage1_visual_class: formal_main_visual
+    current_file: assets/meshes/visual/pa_j4_link_cover.stl
+    replacement_source: "printed assembly J4 removable cover export"
+    source_file: hardwares/打印装配体/realtosim/pa_j4_link/pa_j4_link - J2 伸出后-1.STL
+    units: mm_export_scaled_to_m
+    measured_bbox_mm: [90.478, 46.825, 26.401]
+    visual_geom_name: pa_j4_cover_visual_geom
+    visual_geom_pose_m:
+      pos: [0.464439, 0.072821, -1.290089]
+      quat_wxyz: [0.0, 0.0, 0.0, 1.0]
+    semantic_review:
+      cad_recheck_interpretation: removable_pa_j4_link_cover_or_motor_insertion_shell_subcomponent
+      stage1_role: component_of_current_main_pa_j4_visual_assembly
+      assembly_role: removable_cover
+      rigid_pair_group: [pa_j4_link_main_visual, pa_j4_link_aux_visual, pa_j4_link_cover_visual]
+      note: fixed_to_main_shell_but_removable_for_next_motor_installation_per_user_review
+    orientation_note: assembly_frame_orientation_rotated_180deg_about_z_to_match_stage1_upstream_direction
+    stage1_status: integrated_as_component_of_current_main_pa_j4_visual_assembly
+  - body_name: pa_j5_fixed
+    asset_name: pa_j5_rotating_output_candidate_visual
+    stage1_visual_class: reference_candidate_visual
+    current_file: assets/meshes/visual/pa_j5_fixed.stl
+    replacement_source: "legacy Stage 1 import; actually rotating output candidate"
+    source_file: hardwares/打印装配体/realtosim/pa_j5_rotating_output_candidate.STL
+    units: mm_export_scaled_to_m
+    measured_bbox_mm: [36.308, 32.381, 44.172]
+    visual_geom_name: pa_j5_rotating_output_candidate_visual_geom
+    visual_geom_pose_m:
+      pos: [-0.205556, -0.038908, -1.292929]
+      quat_wxyz: [1.0, 0.0, 0.0, 0.0]
+    semantic_review:
+      current_name_status: legacy_filename_preserved_on_disk
+      cad_recheck_interpretation: closer_to_pa_j5_rotating_output_candidate_or_end_rotation_output_flange
+      stage1_role: rotating_side_reference_visual_retained_for_stage1_semantic_review
+      final_link_assignment: pending_future_confirmation
+    orientation_note: assembly_frame_orientation_preserved_and_centered_on_mount_site_for_stage1_rotating_output_candidate_check
+    stage1_status: preserved_as_reference_candidate_visual_not_fixed_side_primary_semantics
+  - body_name: pa_j5_fixed
+    asset_name: pa_j5_fixed_support_visual
+    stage1_visual_class: formal_main_visual
+    current_file: assets/meshes/visual/pa_j5_fixed_support.stl
+    replacement_source: "printed assembly J5 fixed-side support/bracket candidate export"
+    source_file: hardwares/打印装配体/realtosim/pa_j5_fixed.STL
+    units: mm_export_scaled_to_m
+    measured_bbox_mm: [167.586, 93.603, 72.769]
+    visual_geom_name: pa_j5_visual_geom
+    visual_geom_pose_m:
+      pos: [-0.219294, -0.039144, -1.290664]
+      quat_wxyz: [1.0, 0.0, 0.0, 0.0]
+    semantic_review:
+      current_name_status: candidate_matches_current_fixed_side_support_interpretation
+      cad_recheck_interpretation: closer_to_end_motor_fixed_support_or_bracket
+      stage1_role: current_main_visual_chain_component_for_fixed_side_j5_layer
+      final_link_assignment: pending_future_confirmation
+      note: this is the current Stage 1 main visual for the fixed_side j5 layer even though final body naming may still evolve later
+    orientation_note: assembly_frame_orientation_preserved_and_offset_from_rotating_output_candidate_by_current_assembly_delta
+    stage1_status: integrated_as_current_main_visual_chain_component
+  - body_name: pa_ee_mount
+    asset_name: pa_mount_visual
+    stage1_visual_class: formal_main_visual
+    current_file: assets/meshes/visual/pa_ee_mount.stl
+    replacement_source: "mount bracket export"
+    source_file: hardwares/打印装配体/realtosim/pa_ee_mount.STL
+    units: mm_export_scaled_to_m
+    measured_bbox_mm: [30.71, 27.871, 35.274]
+    visual_geom_pose_m:
+      pos: [0.038083, 1.292871, -0.234842]
+      quat_wxyz: [0.5, 0.5, -0.5, 0.5]
+    semantic_review:
+      stage1_role: current_main_visual_chain_component
+      chain_position: ee_mount
+      note: pa_ee_mount closes the current formal Stage 1 main visual chain
+    orientation_note: assembly_frame_orientation_preserved_via_inverse_mount_body_quaternion
+    stage1_status: imported_with_body_quat_compensation
+collision_strategy:
+  current: primitive_geoms_only
+  future: simplified_convex_or_decimated_meshes

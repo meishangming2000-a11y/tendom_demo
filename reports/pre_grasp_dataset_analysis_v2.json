@@ -1,0 +1,121 @@
+{
+  "task_name": "pre_grasp",
+  "num_episodes": 40,
+  "total_steps": 1920,
+  "success_count": 35,
+  "success_rate": 0.875,
+  "action": {
+    "shape": [
+      1920,
+      24
+    ],
+    "min": -1.0,
+    "max": 0.8354526162147522,
+    "mean": -0.015744512900710106,
+    "std": 0.1974070817232132,
+    "mean_abs": 0.1399228274822235,
+    "near_zero_ratio_abs_lt_0p05": 0.3346137152777778,
+    "top_mean_abs_actuators": [
+      {
+        "actuator": 1,
+        "mean_abs_action": 0.3258628249168396
+      },
+      {
+        "actuator": 0,
+        "mean_abs_action": 0.29117831587791443
+      },
+      {
+        "actuator": 19,
+        "mean_abs_action": 0.22053784132003784
+      },
+      {
+        "actuator": 15,
+        "mean_abs_action": 0.22053784132003784
+      },
+      {
+        "actuator": 11,
+        "mean_abs_action": 0.22053784132003784
+      },
+      {
+        "actuator": 7,
+        "mean_abs_action": 0.22053784132003784
+      },
+      {
+        "actuator": 21,
+        "mean_abs_action": 0.12244632095098495
+      },
+      {
+        "actuator": 23,
+        "mean_abs_action": 0.12244632095098495
+      }
+    ]
+  },
+  "distance": {
+    "avg_initial_position_error": 0.026966729074464124,
+    "avg_min_position_error": 0.02324651006175531,
+    "avg_final_position_error": 0.024799681650104745,
+    "avg_position_error_improvement": 0.0021670474243593724
+  },
+  "per_jitter": [
+    {
+      "placement_jitter": 0.02,
+      "episodes": 20,
+      "success_count": 20,
+      "success_rate": 1.0,
+      "avg_final_position_error": 0.019145065013959225,
+      "avg_position_error_improvement": 0.0010141680126672815
+    },
+    {
+      "placement_jitter": 0.04,
+      "episodes": 20,
+      "success_count": 15,
+      "success_rate": 0.75,
+      "avg_final_position_error": 0.03045429828625027,
+      "avg_position_error_improvement": 0.0033199268360514637
+    }
+  ],
+  "metadata": {
+    "num_episodes": 40,
+    "obs_dim": 70,
+    "act_dim": 24,
+    "timestamp": "2026-03-19 16:16:51",
+    "env": "ShadowGraspEnv",
+    "version": "2.0",
+    "controller": "enhanced",
+    "max_steps": 200,
+    "grasp_strength": 0.7,
+    "placement_mode": "demo",
+    "placement_jitter": "mixed",
+    "placement_jitters": [
+      0.02,
+      0.04
+    ],
+    "enable_catch_task": false,
+    "object_fall_speed": -0.3,
+    "observation_mode": "oracle",
+    "structured_task_name": "pre_grasp",
+    "task_name": "pre_grasp",
+    "success_rule": "palm_pose_matches_object_pose_plus_offset_for_hold_steps",
+    "controller_profile": "expert_collection",
+    "seed": 0,
+    "early_stop_on_stable_grasp": false,
+    "stable_grasp_target_steps": null,
+    "post_success_padding": 0,
+    "task_kwargs": {
+      "target_offset": [
+        0.008,
+        0.0165,
+        0.0
+      ]
+    },
+    "pre_grasp_policy_config": {
+      "gain_scale": 1.0,
+      "clip_scale": 1.0,
+      "start_bias": [
+        0.01,
+        0.0,
+        -0.005
+      ]
+    }
+  }
+}

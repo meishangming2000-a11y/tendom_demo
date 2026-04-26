@@ -1,0 +1,27 @@
+<mujoco model="printed_arm_stage1_defaults">
+  <default>
+    <default class="pa_visual_mesh">
+      <geom type="mesh" group="2" contype="0" conaffinity="0" rgba="0.22 0.23 0.25 1"/>
+    </default>
+
+    <default class="pa_collision_box">
+      <geom type="box" group="3" density="650" friction="0.8 0.02 0.002" rgba="0.8 0.2 0.2 0.15"/>
+    </default>
+
+    <default class="pa_collision_capsule">
+      <geom type="capsule" group="3" density="650" friction="0.8 0.02 0.002" rgba="0.8 0.2 0.2 0.15"/>
+    </default>
+
+    <default class="pa_hinge">
+      <joint type="hinge" damping="0.35" armature="0.01" limited="true"/>
+    </default>
+
+    <default class="pa_slide">
+      <joint type="slide" damping="1.0" armature="0.02" limited="true"/>
+    </default>
+
+    <default class="pa_position">
+      <position kp="60" dampratio="1.0" forcerange="-40 40"/>
+    </default>
+  </default>
+</mujoco>

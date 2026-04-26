@@ -4,6 +4,11 @@ Date: 2026-03-14
 
 Purpose: define which assets remain first-class in the repository, which assets are archived for historical reference, and which temporary files can be safely deleted after smoke validation.
 
+Update note (2026-03-20):
+
+- This manifest predates the current `pre_grasp` baseline.
+- Treat the newer `pre_grasp` assets listed below as current keep-list additions rather than contradictions.
+
 ## Keep List
 
 ### Scripts
@@ -35,6 +40,10 @@ Keep already-archived legacy scripts under:
 
 ### Data
 
+Keep current pre_grasp baseline data:
+
+- `data/expert_pre_grasp_mixed_v2.npz`
+
 Keep current static baseline data:
 
 - `data/expert_showcase_v5_50x400.npz`
@@ -55,6 +64,10 @@ Keep current recommended static model:
 
 - `models/bc_showcase_v5_success400_phase_h128_80ep.pth`
 
+Keep current recommended pre_grasp model:
+
+- `models/bc_pre_grasp_v2.pth`
+
 Keep one historical static baseline for comparison:
 
 - `models/bc_showcase_v3_hold400_phase_h128_80ep.pth`
@@ -64,6 +77,13 @@ Keep latest catch reference model:
 - `models/bc_catch_v2_j002_f030_40ep_h128.pth`
 
 ### Reports
+
+Keep current pre_grasp reports:
+
+- `reports/expert_pre_grasp_mixed_v2.json`
+- `reports/pre_grasp_dataset_analysis_v2.json`
+- `reports/bc_pre_grasp_v2_eval_j002.json`
+- `reports/bc_pre_grasp_v2_eval_j004.json`
 
 Keep current static reports:
 
