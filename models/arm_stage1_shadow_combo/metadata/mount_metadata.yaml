@@ -1,0 +1,27 @@
+combo_name: arm_stage1_shadow_combo
+wrapper_strategy: equality_weld
+model: models/arm_stage1_shadow_combo/scene.xml
+mount_relation:
+  arm_model_family: arm_stage1_export
+  arm_body: ee_mount
+  arm_site: arm_stage1_ee_mount_site
+  arm_tool_site: ee_tool_frame_site
+  shadow_body: rh_forearm
+  shadow_root_joint: combo_shadow_root_freejoint
+  shadow_wrapper_model: ../shadow_arm_combo/shadow_right_hand_mountable.xml
+  shadow_source_reference: ../shadow_hand/right_hand.xml
+  weld_name: active_arm_shadow_mount_weld
+  joint_policy: wrapper_local_freejoint_welded_to_active_arm_mount
+future_custom_hand_slot:
+  expected_root_body: custom_hand_root
+  expected_palm_site: custom_palm_site
+  expected_mount_site: custom_hand_mount_site
+  required_decision: replace_shadow_wrapper_and_weld_custom_hand_root_to_ee_mount
+open_calibration_items:
+  - ee_tool_frame vs physical flange mating frame: needs_user_confirmation
+  - Shadow root orientation on current arm mount: temporary_bridge_only
+  - custom hand root frame orientation: TBD until SolidWorks/MuJoCo hand export exists
+notes:
+  - This combo uses the active arm import, not the older printed_arm_stage1 comparison model.
+  - The weld is a structural bridge and does not validate final dynamics.
+  - The custom tendon hand should replace the Shadow wrapper without changing the arm-side ee_mount naming.

@@ -1,0 +1,21 @@
+mount_name: custom_tendon_hand_mount_template
+status: template_pending_real_model
+arm_side:
+  model_family: arm_stage1_export
+  body: ee_mount
+  bridge_mount_site: arm_stage1_ee_mount_site
+  tool_site: ee_tool_frame_site
+hand_side:
+  root_body: custom_hand_root
+  mount_site: custom_hand_mount_site
+  palm_site: custom_palm_site
+expected_combo:
+  directory: models/arm_stage1_custom_hand_combo
+  weld_name: arm_stage1_custom_hand_mount_weld
+open_calibration_items:
+  arm_tool_site_is_physical_flange_frame: needs_user_confirmation
+  hand_mount_site_is_physical_flange_frame: needs_user_confirmation
+  fixed_transform_arm_mount_to_hand_mount: TBD
+notes:
+  - Start with a weld for structural validation.
+  - Replace or refine the weld only after the physical mount frame and fixed transform are confirmed.

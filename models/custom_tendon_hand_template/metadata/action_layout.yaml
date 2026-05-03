@@ -1,0 +1,25 @@
+layout_name: custom_tendon_hand_action_layout_template
+status: template_pending_real_model
+control_level: TBD
+normalized_policy_range: [-1.0, 1.0]
+expected_sections:
+  - name: wrist_or_mount
+    index_start: TBD
+    index_end_exclusive: TBD
+    actuator_names: TBD
+  - name: thumb
+    index_start: TBD
+    index_end_exclusive: TBD
+    actuator_names: TBD
+  - name: fingers
+    index_start: TBD
+    index_end_exclusive: TBD
+    actuator_names: TBD
+  - name: tendon_or_coupling
+    index_start: TBD
+    index_end_exclusive: TBD
+    actuator_names: TBD
+notes:
+  - Fill this after the MuJoCo actuator block exists.
+  - Do not assume one motor maps to one joint unless the mechanical design confirms it.
+  - This file should become the source of truth for policy action ordering.

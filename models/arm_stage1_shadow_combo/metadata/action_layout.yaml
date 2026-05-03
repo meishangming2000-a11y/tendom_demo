@@ -1,0 +1,30 @@
+layout_name: arm_stage1_shadow_combo_reserved_layout
+model: models/arm_stage1_shadow_combo/scene.xml
+stage1_execution_scope:
+  active_slice: arm_only_for_mount_and_reach_debug
+  debug_drive_slices: [shadow_wrist_source, shadow_hand_reserved]
+  frozen_or_locked_slices:
+    - shadow_wrist_wrapper_lock
+slices:
+  - name: arm
+    index_start: 0
+    index_end_exclusive: 4
+    actuator_names: [a_j1, a_j2, a_j3, a_j4]
+  - name: shadow_wrist_source
+    index_start: 4
+    index_end_exclusive: 6
+    actuator_names: [rh_A_WRJ2, rh_A_WRJ1]
+    stage1_policy: keep_zero_for_locked_wrist_debug_runs
+  - name: shadow_hand_reserved
+    index_start: 6
+    index_end_exclusive: 28
+    note: reserve_only_no_runtime_contract_yet
+  - name: shadow_wrist_wrapper_lock
+    index_start: 28
+    index_end_exclusive: 30
+    actuator_names: [active_combo_lock_rh_WRJ1, active_combo_lock_rh_WRJ2]
+    stage1_policy: wrapper_side_zero_lock
+notes:
+  - Metadata only. No training script consumes this layout yet.
+  - This is a bridge layout for checking combined actuator ordering before the custom tendon hand exists.
+  - The Shadow hand slice will be replaced by a custom tendon-hand slice after import.

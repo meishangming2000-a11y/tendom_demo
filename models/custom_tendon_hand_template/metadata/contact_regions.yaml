@@ -1,0 +1,21 @@
+contract_name: custom_tendon_hand_contact_regions_template
+status: template_pending_real_model
+required_task_regions:
+  palm:
+    body_or_geom_names: TBD
+  thumb:
+    body_or_geom_names: TBD
+  index:
+    body_or_geom_names: TBD
+  middle:
+    body_or_geom_names: TBD
+  ring:
+    body_or_geom_names: TBD
+  little:
+    body_or_geom_names: TBD
+optional_regions:
+  wrist:
+    body_or_geom_names: TBD
+notes:
+  - Stable-grasp task logic needs abstract support regions, not raw backend body names.
+  - The future custom adapter should translate model-specific contact bodies into these task regions.

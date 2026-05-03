@@ -1,0 +1,45 @@
+<mujoco model="arm_stage1_shadow_combo">
+  <include file="arm_stage1_mountable.xml"/>
+  <include file="../shadow_arm_combo/shadow_right_hand_mountable.xml"/>
+
+  <statistic extent="1.0" center="0 0 0.10"/>
+
+  <visual>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <quality shadowsize="8192"/>
+    <global azimuth="205" elevation="-22" offwidth="1280" offheight="900"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072"/>
+    <texture type="2d" name="active_combo_groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3"
+      markrgb="0.8 0.8 0.8" width="300" height="300"/>
+    <material name="active_combo_groundplane" texture="active_combo_groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+  </asset>
+
+  <worldbody>
+    <light name="active_combo_fill_light" pos="0 0 1"/>
+    <light name="active_combo_key_light" pos="0.3 0 1.5" dir="0 0 -1" directional="true"/>
+    <geom name="active_combo_floor" pos="0 0 -0.12" size="0 0 0.05" type="plane" material="active_combo_groundplane" contype="0" conaffinity="4"/>
+    <body name="active_combo_object" pos="0.3 0 0.1">
+      <freejoint/>
+      <geom name="active_combo_object_geom" type="sphere" size="0.03" rgba="0.5 0.7 0.5 1" condim="3" priority="1"
+        friction="0.5 0.01 0.003" contype="7"/>
+    </body>
+    <camera name="active_combo_overview" pos="-0.55 -0.95 0.42"
+      xyaxes="0.865 0.502 0 -0.150 0.258 0.954" fovy="55"/>
+    <camera name="active_combo_mount" pos="0.20 -0.45 0.24"
+      xyaxes="0.914 0.406 0 -0.145 0.327 0.934" fovy="45"/>
+  </worldbody>
+
+  <equality>
+    <!-- Transitional mount: current active arm export to the temporary Shadow backend. -->
+    <weld name="active_arm_shadow_mount_weld" body1="ee_mount" body2="rh_forearm"/>
+  </equality>
+
+  <actuator>
+    <!-- Wrapper-side wrist lock for structural inspection. Keep Shadow source files untouched. -->
+    <position name="active_combo_lock_rh_WRJ1" joint="rh_WRJ1" kp="150" ctrlrange="0 0" forcerange="-40 40"/>
+    <position name="active_combo_lock_rh_WRJ2" joint="rh_WRJ2" kp="150" ctrlrange="0 0" forcerange="-40 40"/>
+  </actuator>
+</mujoco>

@@ -1,0 +1,34 @@
+contract_name: custom_tendon_hand_import_contract
+contract_version: v0
+status: template_pending_real_model
+recommended_model_directory: models/custom_tendon_hand
+recommended_model_file: robot.xml
+required_runtime_names:
+  root_body: custom_hand_root
+  mount_site: custom_hand_mount_site
+  palm_site: custom_palm_site
+  optional_wrist_site: custom_wrist_site
+required_metadata:
+  - joint_limits
+  - actuator_layout
+  - tendon_or_transmission_map
+  - contact_regions
+  - palm_reference_definition
+  - mount_frame_definition
+minimum_compile_checks:
+  - model_loads_in_mujoco
+  - zero_control_steps_without_error
+  - mount_site_exists
+  - palm_site_exists
+  - actuator_count_matches_metadata
+  - joint_count_matches_metadata
+open_items:
+  dof_count: TBD
+  tendon_routing: TBD
+  actuator_type: TBD
+  underactuation_or_coupling: TBD
+  palm_frame_physical_definition: needs_user_confirmation
+  mount_frame_physical_definition: needs_user_confirmation
+notes:
+  - This file is a template, not evidence that the custom hand runtime exists.
+  - Keep unresolved mechanical meaning explicit as TBD, unknown, or needs_user_confirmation.
