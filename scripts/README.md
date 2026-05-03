@@ -25,6 +25,140 @@ python scripts/eval_bc.py --model models/bc_pre_grasp_v2.pth --episodes 20 --no-
 python scripts/eval_bc.py --model models/bc_pre_grasp_v2.pth --episodes 20 --no-viewer --placement-mode demo --placement-jitter 0.04 --report reports/bc_pre_grasp_v2_eval_j004.json
 ```
 
+## Vision Palm Trace Add-On
+
+The vision palm-trace path is a bridge for bringing camera-derived hand/palm landmarks into the existing BC dataset format. It does not replace the canonical oracle-observation baseline yet.
+
+Convert recorded 21-landmark frames, or collect with MediaPipe if `opencv-python` and `mediapipe` are installed:
+
+```bash
+python scripts/vision/collect_palm_trace.py --input-json data/raw_palm_frames.json --output data/vision_palm_trace_latest.npz --report reports/vision_palm_trace_latest.json
+```
+
+For newer MediaPipe Tasks builds, pass a downloaded `hand_landmarker.task` model:
+
+```bash
+python scripts/vision/collect_palm_trace.py --source path/to/hand_video.mp4 --hand-landmarker-model path/to/hand_landmarker.task --output data/vision_palm_trace_latest.npz --report reports/vision_palm_trace_latest.json
+```
+
+For batch videos, use `--max-source-frames` to cap how many raw video frames
+are scanned, and `--max-frames` to cap how many detected hand frames are kept.
+
+Attach the palm features to an existing expert dataset:
+
+```bash
+python scripts/vision/attach_palm_trace_to_dataset.py --dataset data/expert_pre_grasp_mixed_v2.npz --palm-trace data/vision_palm_trace_latest.npz --output data/expert_pre_grasp_mixed_v2_vision.npz
+```
+
+Train on the fused observation field:
+
+```bash
+python scripts/train_bc.py --task pre_grasp --data data/expert_pre_grasp_mixed_v2_vision.npz --observation-field fused_observations --epochs 20 --output models/bc_pre_grasp_v2_vision.pth
+```
+
+Retarget the same 21-landmark trace into the current Shadow Hand action layout
+for a diagnostic MuJoCo replay:
+
+```bash
+python scripts/vision/retarget_palm_trace_to_shadow.py --palm-trace data/vision_palm_trace_latest.npz --output data/vision_shadow_retarget_latest.npz --rollout-output data/vision_shadow_retarget_replay_latest.npz --report reports/vision_shadow_retarget_latest.json
+```
+
+Use `--start-frame`, `--end-frame`, and `--stride` to keep only a coherent
+gesture segment before replaying it as one diagnostic rollout.
+
+Visualize the retargeted trace, action curves, optional rollout metrics, and
+fixed-camera Shadow keyframes:
+
+```bash
+python scripts/vision/visualize_shadow_retarget.py --retarget data/vision_shadow_retarget_latest.npz --rollout data/vision_shadow_retarget_replay_latest.npz --output-dir artifacts/vision_shadow_retarget_latest --render-mujoco
+```
+
+Run the organized real-hand video through extraction, Shadow retarget, MuJoCo
+replay, and a full-vs-segment visual comparison in one command:
+
+```bash
+python scripts/vision/run_real_hand_video_compare.py --force --open
+```
+
+By default this uses
+`../artifacts/vision_real_hand/hand_example_20260429/source/hand-example_video.mp4`
+and writes the comparison sheet to
+`../artifacts/vision_real_hand/hand_example_20260429/one_command_compare/comparison_overview.png`.
+It also writes synchronized MP4 comparisons under
+`../artifacts/vision_real_hand/hand_example_20260429/one_command_compare/videos/`.
+Each MP4 shows the source video frame, the intermediate 21-point hand graph,
+and the Shadow MuJoCo replay side by side.
+Use `--video path/to/hand_video.mp4` for a different recording, and
+`--segment-start`, `--segment-end`, and `--segment-stride` to choose the
+coherent gesture window shown beside the full-video replay.
+The one-command runner defaults to `--retarget-time-scale 3`, which slows fast
+real-hand motion by inserting interpolated MuJoCo action steps between visual
+frames. Increase it when the Shadow fingers visibly lag behind the gesture.
+Use `--video-frame-stride 1` for smoother MP4 output, or keep the default
+stride of 2 for faster diagnostic videos.
+
+Build a trainable dataset from the diagnostic Shadow retarget output:
+
+```bash
+python scripts/vision/build_shadow_retarget_bc_dataset.py --retarget ../artifacts/vision_real_hand/hand_example_20260429/one_command_compare/data/segment_shadow_retarget.npz --rollout ../artifacts/vision_real_hand/hand_example_20260429/one_command_compare/data/segment_shadow_retarget_replay.npz --output ../artifacts/vision_real_hand/hand_example_20260429/training/segment_shadow_retarget_bc_dataset.npz --report ../artifacts/vision_real_hand/hand_example_20260429/training/segment_shadow_retarget_bc_dataset.json
+```
+
+Train a diagnostic visual-to-Shadow imitation model on the 76D palm feature
+field:
+
+```bash
+python scripts/train_bc.py --data ../artifacts/vision_real_hand/hand_example_20260429/training/segment_shadow_retarget_bc_dataset.npz --output ../artifacts/vision_real_hand/hand_example_20260429/training/bc_vision_shadow_segment_phase_h256.pth --epochs 200 --batch-size 128 --hidden-dim 256 --add-phase-feature
+```
+
+Evaluate that model on the same retarget trace by predicting Shadow actions
+from palm features and replaying the prediction in MuJoCo:
+
+```bash
+python scripts/vision/eval_shadow_retarget_bc.py --model ../artifacts/vision_real_hand/hand_example_20260429/training/bc_vision_shadow_segment_phase_h256.pth --retarget ../artifacts/vision_real_hand/hand_example_20260429/one_command_compare/data/segment_shadow_retarget.npz --output ../artifacts/vision_real_hand/hand_example_20260429/training/segment_shadow_retarget_phase_model_prediction.npz --rollout-output ../artifacts/vision_real_hand/hand_example_20260429/training/segment_shadow_retarget_phase_model_prediction_replay.npz --report ../artifacts/vision_real_hand/hand_example_20260429/training/segment_shadow_retarget_phase_model_prediction_report.json --visualization-dir ../artifacts/vision_real_hand/hand_example_20260429/training/segment_shadow_retarget_phase_model_prediction_visualization --render-mujoco
+```
+
+Experimental sequence model branch:
+
+```bash
+python scripts/vision/train_sequence_shadow_bc.py --data ../artifacts/vision_web_hand/commons_hand_20260430/training/commons_shadow_retarget_bc_dataset.npz --output ../artifacts/vision_web_hand/commons_hand_20260430/sequence_experiment/seq_tcn_gru_h32_c8_vphase_h256.pth --report ../artifacts/vision_web_hand/commons_hand_20260430/sequence_experiment/seq_tcn_gru_h32_c8_vphase_h256_report.json --history 32 --chunk 8 --sample-stride 2 --add-velocity --add-phase-feature --epochs 80 --batch-size 256 --hidden-dim 256 --eval-retarget ../artifacts/vision_real_hand/hand_example_20260429/one_command_compare/data/segment_shadow_retarget.npz --prediction-output ../artifacts/vision_web_hand/commons_hand_20260430/sequence_experiment/user_segment_seq_prediction.npz --rollout-output ../artifacts/vision_web_hand/commons_hand_20260430/sequence_experiment/user_segment_seq_prediction_replay.npz --visualization-dir ../artifacts/vision_web_hand/commons_hand_20260430/sequence_experiment/user_segment_seq_prediction_visualization --render-mujoco
+```
+
+This trains a small TCN + GRU model on history windows and predicts an action
+chunk. It is diagnostic-only and should be judged by episode-level held-out
+metrics plus MuJoCo replay, not by training loss alone.
+
+Train from a local folder of hand open/close videos:
+
+```bash
+python scripts/vision/run_video_folder_training.py --video-dir ../videos --output-root ../artifacts/vision_real_hand/video_folder_20260504
+```
+
+This wrapper runs MediaPipe extraction, Shadow retargeting, dataset building,
+single-frame BC training, and sequence-model training. Raw videos and generated
+artifacts remain outside Git by default.
+
+Current boundary: this is a data and training workflow integration only. Evaluation still needs a runtime observation provider before a fused-vision policy can be treated as a deployable baseline.
+The Shadow retarget path is also diagnostic-only: it maps landmark geometry to
+the temporary 24D Shadow normalized action interface, without camera
+calibration, IK, object alignment, or custom tendon-hand semantics.
+
+## Stage-1 Arm + Shadow Mount Demo
+
+The arm-plus-Shadow combo has a structural inspection demo for checking mount direction, scale, and actuator ordering while the custom tendon-hand model is still being built:
+
+```bash
+python scripts/demo_arm_stage1_shadow.py
+```
+
+Headless smoke check:
+
+```bash
+python scripts/demo_arm_stage1_shadow.py --no-viewer --steps 200
+```
+
+This demo drives gentle arm motion and a temporary Shadow hand open-close cycle. It is not a promoted training environment.
+By default, the demo hides the temporary Shadow forearm shell, aligns `rh_wrist` to `ee_tool_frame_site` with a small forward offset, and re-projects that visual mount each step. This avoids reading the Shadow forearm shell as a real mechanical adapter while the custom tendon-hand model is still missing.
+
 ## Script Roles
 
 - `collect_expert_data.py`

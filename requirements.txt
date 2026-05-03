@@ -8,6 +8,9 @@ torch>=2.0.0
 # Optional utilities
 # matplotlib>=3.5.0
 # pytest>=7.0.0
+# opencv-python>=4.0.0        # video input for scripts/vision/collect_palm_trace.py
+# mediapipe>=0.10.0           # hand landmark extraction for video input
+# protobuf>=4.0.0             # required by recent MediaPipe Tasks builds
 
 # Notes:
 # 1. Install MuJoCo from the official Python package channel: pip install mujoco

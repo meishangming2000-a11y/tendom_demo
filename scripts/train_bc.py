@@ -58,6 +58,7 @@ def load_dataset(
     truncate_steps=None,
     add_phase_feature=False,
     min_grasp_duration=0,
+    observation_field="observations",
 ):
     """Load the dataset and flatten it into BC training arrays."""
     print(f"Loading dataset: {data_path}")
@@ -82,7 +83,9 @@ def load_dataset(
 
     print("Dataset info:")
     print(f"  Episodes: {len(episodes)}")
-    print(f"  Obs dim: {metadata.get('obs_dim', 'unknown')}")
+    obs_dim_key = "obs_dim" if observation_field == "observations" else f"{observation_field}_dim"
+    print(f"  Observation field: {observation_field}")
+    print(f"  Obs dim: {metadata.get(obs_dim_key, metadata.get('obs_dim', 'unknown'))}")
     print(f"  Act dim: {metadata.get('act_dim', 'unknown')}")
     if success_only:
         print("  Filter: success-only episodes")
@@ -105,8 +108,12 @@ def load_dataset(
         if int(episode_metrics.get("max_grasp_contact_duration", 0)) < min_grasp_duration:
             continue
 
-        observations = episode["observations"]
-        actions = episode["actions"]
+        if observation_field not in episode:
+            print(f"Warning: episode {episode_idx} missing observation field '{observation_field}', skipping")
+            continue
+
+        observations = np.asarray(episode[observation_field], dtype=np.float32)
+        actions = np.asarray(episode["actions"], dtype=np.float32)
 
         if truncate_steps is not None:
             observations = observations[:truncate_steps]
@@ -146,7 +153,9 @@ def load_dataset(
     if np.any(np.isnan(X)) or np.any(np.isnan(y)):
         print("Warning: NaN values detected in the dataset")
 
-    metadata["base_obs_dim"] = int(metadata.get("obs_dim", X.shape[1] - (1 if add_phase_feature else 0)))
+    source_obs_dim = X.shape[1] - (1 if add_phase_feature else 0)
+    metadata["observation_field"] = observation_field
+    metadata["base_obs_dim"] = int(metadata.get(obs_dim_key, source_obs_dim))
     metadata["obs_dim"] = int(X.shape[1])
     metadata["phase_feature"] = bool(add_phase_feature)
     metadata["phase_feature_horizon"] = int(phase_horizon if add_phase_feature else 0)
@@ -280,6 +289,11 @@ def main():
     parser.add_argument("--hidden-dim", type=int, default=64, help="Hidden layer dimension")
     parser.add_argument("--log-interval", type=int, default=10, help="Epoch interval for progress logs")
     parser.add_argument("--no-cuda", action="store_true", help="Disable CUDA even if available")
+    parser.add_argument(
+        "--observation-field",
+        default="observations",
+        help="Episode observation field to train on, for example fused_observations",
+    )
     parser.add_argument("--success-only", action="store_true", help="Train only on successful episodes")
     parser.add_argument(
         "--truncate-steps",
@@ -311,6 +325,7 @@ def main():
         print(f"Structured task: {structured_task_name}")
     print(f"Dataset: {args.data}")
     print(f"Output: {args.output}")
+    print(f"Observation field: {args.observation_field}")
 
     result = load_dataset(
         args.data,
@@ -318,6 +333,7 @@ def main():
         truncate_steps=args.truncate_steps,
         add_phase_feature=args.add_phase_feature,
         min_grasp_duration=args.min_grasp_duration,
+        observation_field=args.observation_field,
     )
     if result is None:
         sys.exit(1)
@@ -329,6 +345,7 @@ def main():
     print("\nTraining config:")
     print(f"  Task: {metadata.get('task_name', structured_task_name or 'static_grasp')}")
     print(f"  Success rule: {metadata.get('success_rule', 'unknown')}")
+    print(f"  Observation field: {metadata.get('observation_field', args.observation_field)}")
     print(f"  Obs dim: {obs_dim}")
     print(f"  Act dim: {act_dim}")
     print(f"  Total samples: {X.shape[0]}")

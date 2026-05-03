@@ -54,6 +54,19 @@ The current placeholder deployable layer includes:
 This is intentionally not a full perception stack.
 The goal in this version is interface layering, not final sensing fidelity.
 
+## Vision Palm Trace Bridge
+
+The first camera-aligned bridge lives outside the environment observation API:
+
+- `scripts/vision/collect_palm_trace.py`
+  converts or records 21-landmark hand traces into a compact palm feature sequence.
+- `scripts/vision/attach_palm_trace_to_dataset.py`
+  aligns that sequence to existing expert episodes and writes `vision_palm_observations`.
+- `train_bc.py --observation-field fused_observations`
+  can train on simulator observations concatenated with the palm features.
+
+This bridge is intentionally dataset-first. It lets the training workflow consume visual palm data before the final real-time deployable observation provider exists.
+
 ## Current Compatibility Decision
 
 To avoid breaking the current demo, training, and evaluation scripts:
