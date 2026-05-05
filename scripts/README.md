@@ -137,6 +137,21 @@ This wrapper runs MediaPipe extraction, Shadow retargeting, dataset building,
 single-frame BC training, and sequence-model training. Raw videos and generated
 artifacts remain outside Git by default.
 
+Build the device-independent open/close manifest and intermediate-feature
+dataset from the processed video folder:
+
+```bash
+python scripts/vision/build_open_close_manifest.py --video-dir ../videos --trace-dir ../artifacts/vision_real_hand/video_folder_20260504/data --retarget-dir ../artifacts/vision_real_hand/video_folder_20260504/retarget --reports-dir ../artifacts/vision_real_hand/video_folder_20260504/reports --output ../artifacts/vision_real_hand/open_close_v1/open_close_manifest.json
+python scripts/vision/build_open_close_bc_dataset.py --manifest ../artifacts/vision_real_hand/open_close_v1/open_close_manifest.json --output ../artifacts/vision_real_hand/open_close_v1/training/open_close_shadow_retarget_bc_dataset.npz --report ../artifacts/vision_real_hand/open_close_v1/training/open_close_shadow_retarget_bc_dataset.json
+python scripts/train_bc.py --data ../artifacts/vision_real_hand/open_close_v1/training/open_close_shadow_retarget_bc_dataset.npz --output ../artifacts/vision_real_hand/open_close_v1/training/bc_open_close_shadow_retarget_phase_h128.pth --epochs 120 --batch-size 256 --hidden-dim 128 --add-phase-feature
+```
+
+This path uses `vision/hand_open_close.py` to convert 21 landmarks into a
+35D semantic vector with per-finger curl, spread, palm normal, and global
+open/close fields. It is the preferred bridge for future custom-hand mapping,
+because it separates visual hand understanding from the temporary Shadow action
+layout.
+
 Current boundary: this is a data and training workflow integration only. Evaluation still needs a runtime observation provider before a fused-vision policy can be treated as a deployable baseline.
 The Shadow retarget path is also diagnostic-only: it maps landmark geometry to
 the temporary 24D Shadow normalized action interface, without camera

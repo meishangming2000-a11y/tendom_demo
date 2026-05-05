@@ -24,6 +24,7 @@ except ImportError:
     sys.exit(1)
 
 from scripts.vision.retarget_palm_trace_to_shadow import rollout_actions, save_rollout_dataset
+from vision.hand_open_close import open_close_features_from_landmarks
 from vision.palm_landmarks import build_palm_feature
 
 
@@ -64,7 +65,9 @@ def _json_ready(value):
     return value
 
 
-def _features_from_landmarks(landmarks: np.ndarray) -> np.ndarray:
+def _features_from_landmarks(landmarks: np.ndarray, observation_schema: str) -> np.ndarray:
+    if observation_schema == "hand_open_close_feature_v1":
+        return open_close_features_from_landmarks(landmarks)
     return np.asarray([build_palm_feature(frame)[0] for frame in landmarks], dtype=np.float32)
 
 
@@ -159,7 +162,8 @@ def main() -> None:
         landmarks = landmarks[:limit]
         target_actions = target_actions[:limit]
 
-    observations = _features_from_landmarks(landmarks)
+    observation_schema = str(model_metadata.get("observation_schema", "normalized_21_landmarks_plus_palm_frame_v1"))
+    observations = _features_from_landmarks(landmarks, observation_schema=observation_schema)
     if model_metadata.get("phase_feature"):
         horizon = int(model_metadata.get("phase_feature_horizon") or observations.shape[0])
         observations = _append_phase_feature(observations, horizon)
@@ -189,7 +193,7 @@ def main() -> None:
         "source_retarget_metadata": source_metadata,
         "model": str(model_path),
         "model_metadata": model_metadata,
-        "observation_schema": "normalized_21_landmarks_plus_palm_frame_v1",
+        "observation_schema": observation_schema,
         "action_schema": "shadow_hand_normalized_action_v1",
         "summary": metrics,
         "boundary": "Diagnostic learned imitation of the heuristic visual-to-Shadow retarget output.",
