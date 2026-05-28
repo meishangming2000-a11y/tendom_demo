@@ -110,7 +110,7 @@ def write_outputs(payload: dict[str, Any]) -> None:
     lines.extend(
         [
             "\n## Next Step\n\n",
-            "Use this contract to create dataset-v0 metadata and rollout rows. Keep BC/RL training blocked until dataset replay and QA pass against this contract.\n",
+            "Use this contract as the authority for dataset-v0 rows, replay QA, and any later training-readiness review. Keep BC/RL training blocked until dataset QA and policy-readiness criteria are explicitly accepted.\n",
         ]
     )
     REPORT.write_text("".join(lines), encoding="utf-8")

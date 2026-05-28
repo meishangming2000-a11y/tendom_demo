@@ -38,6 +38,17 @@ Stage2 kickoff status:
   `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_task_contract.md`
 - Task contract version: `stage2_lift_ball_v0_1`
 - Observation/action/reward/done status: frozen for dataset-v0 collection
+- Dataset v0:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0.npz`
+- Dataset v0 collection script:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\collect_arm_hand_stage1_v2_dataset_v0.py`
+- Dataset v0 report:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_report.md`
+- Dataset v0 replay QA script:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\replay_arm_hand_stage1_v2_dataset_v0.py`
+- Dataset v0 replay QA report:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_replay_report.md`
+- Dataset v0 result: `9 episodes / 9067 rows`, `9 / 9` success, replay QA `PASS`
 
 Guardrails:
 
@@ -49,8 +60,7 @@ Guardrails:
 
 Recommended Stage2 continuation:
 
-1. define dataset-v0 metadata and row layout against `stage2_lift_ball_v0_1`;
-2. collect tiny scripted dataset v0 from the current lift-scene task harness;
-3. replay dataset v0 and compare against the sweep/report metrics;
-4. keep Shadow/video comparison as regression;
-5. only then discuss BC/RL training.
+1. run a training-readiness review for dataset v0 quality and bias;
+2. keep Shadow/video comparison as regression;
+3. decide whether the first policy experiment should be BC-only, still gated as experimental;
+4. keep RL blocked until a broader reset distribution and reward QA are accepted.

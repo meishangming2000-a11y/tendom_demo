@@ -1,6 +1,6 @@
 # Arm-Hand Stage1 V2 Task Contract
 
-Generated: 2026-05-28T19:48:00
+Generated: 2026-05-28T20:07:18
 
 ## Purpose
 
@@ -64,4 +64,4 @@ Plain meaning: each observation records the model state, current controls, finge
 
 ## Next Step
 
-Use this contract to create dataset-v0 metadata and rollout rows. Keep BC/RL training blocked until dataset replay and QA pass against this contract.
+Use this contract as the authority for dataset-v0 rows, replay QA, and any later training-readiness review. Keep BC/RL training blocked until dataset QA and policy-readiness criteria are explicitly accepted.

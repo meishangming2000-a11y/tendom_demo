@@ -10,7 +10,7 @@ This workspace contains the current arm + export4 hand MuJoCo assembly.
 - Clean STL meshes remain visual-only.
 - The ball in the passive viewer can still slide/fall because gravity is active; use the scripted demo to see closure.
 - A new arm+hand lift-ball scripted smoke demo can now close around a ball and lift it in pure-physics mode using collision proxy v2.
-- Stage2 kickoff has started: the task API now defaults to collision proxy v2, a small lift-scene ball-pose sweep is available, and the first observation/action/reward/done contract is frozen.
+- Stage2 kickoff has started: the task API now defaults to collision proxy v2, a small lift-scene ball-pose sweep is available, the first observation/action/reward/done contract is frozen, and dataset v0 replay QA passes.
 - No RL/BC training has been run or approved.
 
 ## Current Files
@@ -89,6 +89,18 @@ Stage2 task contract:
 python D:\tendon_project\simulations\models\arm_hand_stage1_export\write_arm_hand_stage1_v2_task_contract.py
 ```
 
+Stage2 dataset v0 collection:
+
+```powershell
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\collect_arm_hand_stage1_v2_dataset_v0.py
+```
+
+Stage2 dataset v0 replay QA:
+
+```powershell
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\replay_arm_hand_stage1_v2_dataset_v0.py
+```
+
 Older physics-v0 regression and tiny dataset scaffold are still available:
 
 ```powershell
@@ -153,6 +165,8 @@ Stage2 kickoff:
 - Task contract version: `stage2_lift_ball_v0_1`.
 - Task contract status: observation/action/reward/done frozen for dataset-v0 collection.
 - Max episode steps: `1230`.
+- Dataset v0: `9 episodes / 9067 rows`, all terminal reason `success_lift_ball`.
+- Dataset v0 replay QA: `PASS`, max obs/next_obs/reward error `0`.
 
 ## Reports
 
@@ -162,6 +176,9 @@ Stage2 kickoff:
 - Stage2 task API report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_task_api_report.md`
 - Stage2 ball-pose sweep report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_ball_pose_sweep_report.md`
 - Stage2 task contract: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_task_contract.md`
+- Stage2 dataset v0 report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_report.md`
+- Stage2 dataset v0 replay QA: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_replay_report.md`
+- Stage2 dataset v0 file: `D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0.npz`
 - Collision v2 smoke: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_smoke_report.md`
 - Collision v2 visual check: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_visual_check_report.md`
 - Shadow comparison: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_shadow_video_comparison_report.md`

@@ -1,0 +1,2698 @@
+{
+  "generated_at": "2026-05-28T20:07:24",
+  "task_name": "arm_hand_stage1_lift_ball",
+  "contract_version": "stage2_lift_ball_v0_1",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_lift_ball_demo.xml",
+  "dataset": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\arm_hand_stage1_v2_lift_ball_dataset_v0.npz",
+  "episodes": 9,
+  "total_rows": 9067,
+  "obs_shape": [
+    9067,
+    124
+  ],
+  "actions_shape": [
+    9067,
+    26
+  ],
+  "next_obs_shape": [
+    9067,
+    124
+  ],
+  "reward_shape": [
+    9067
+  ],
+  "success_count": 9,
+  "terminal_reason_counts": {
+    "success_lift_ball": 9
+  },
+  "grid": {
+    "x_offsets": [
+      -0.015,
+      0.0,
+      0.015
+    ],
+    "y_offsets": [
+      -0.015,
+      0.0,
+      0.015
+    ],
+    "z_offsets": [
+      0.0
+    ]
+  },
+  "episode_summaries": [
+    {
+      "episode_id": 0,
+      "initial_ball": [
+        0.17522381999999997,
+        0.17270200000000002,
+        -0.06538044
+      ],
+      "offset": [
+        -0.015,
+        -0.015,
+        0.0
+      ],
+      "step_count": 1009,
+      "terminal_phase": "lift",
+      "terminal_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1009,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.20790747928168152,
+            0.2159716698857359,
+            0.015056072773362425
+          ],
+          "initial_ball_position": [
+            0.17522381999999997,
+            0.17270200000000002,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08043651277336242,
+          "ball_displacement": 0.09700782702030235,
+          "ball_velocity_norm": 1.336244558584215,
+          "contact": {
+            "contact_count": 7,
+            "max_penetration": 0.0031336047566104773,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.05254541149621413,
+          "thumb_ball_distance": 0.03820671755977072,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.768540742595574,
+          "terms": {
+            "lift_height": 0.8043651277336241,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.026272705748107066,
+            "thumb_distance_penalty": -0.00955167938994268,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "phase_summaries": [
+        {
+          "phase": "default_hold",
+          "start_step": 0,
+          "end_step": 90,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.17522381999999997,
+              0.17270200000000002,
+              -0.0655645633828913
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412338289129637,
+            "ball_displacement": 0.00018412338289129637,
+            "ball_velocity_norm": 1.2337966930181545e-08,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.00018412335821537187,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.6834241848905146,
+            "thumb_ball_distance": 0.5647848161971608,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "move_to_pre_approach",
+          "start_step": 90,
+          "end_step": 350,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.17522381999999997,
+              0.17270200000000002,
+              -0.06556456351751806
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412351751806444,
+            "ball_displacement": 0.00018412351751806444,
+            "ball_velocity_norm": 1.316563548697986e-15,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.0001841235175180679,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.12550460143146505,
+            "thumb_ball_distance": 0.18174464471667534,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "approach_ball",
+          "start_step": 350,
+          "end_step": 530,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.21791088999088018,
+              0.15269177376923404,
+              -0.0666487770604217
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0012683370604217037,
+            "ball_displacement": 0.04716146495934557,
+            "ball_velocity_norm": 9.411927166835621,
+            "contact": {
+              "contact_count": 3,
+              "max_penetration": 0.0012554405141584797,
+              "ball_hand_contact_count": 2,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.0818754659564698,
+            "thumb_ball_distance": 0.07395115653076881,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "preshape",
+          "start_step": 530,
+          "end_step": 650,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.20186853044211978,
+              0.15876364960407918,
+              -0.066710214978291
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0013297749782909957,
+            "ball_displacement": 0.03009960976153617,
+            "ball_velocity_norm": 2.7201277480370356,
+            "contact": {
+              "contact_count": 3,
+              "max_penetration": 0.0013321947631022325,
+              "ball_hand_contact_count": 2,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.07869288920803247,
+            "thumb_ball_distance": 0.06266092324965496,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "start_step": 650,
+          "end_step": 770,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.19044484517211846,
+              0.16853238831897713,
+              -0.06641709251791744
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.001036652517917444,
+            "ball_displacement": 0.015815812255578012,
+            "ball_velocity_norm": 0.28706150948372355,
+            "contact": {
+              "contact_count": 4,
+              "max_penetration": 0.00337780516979665,
+              "ball_hand_contact_count": 3,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.05826494962734616,
+            "thumb_ball_distance": 0.05767302357081235,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_thumb",
+          "start_step": 770,
+          "end_step": 890,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.18400919114811726,
+              0.17385583211952205,
+              -0.06645175848854605
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0010713184885460525,
+            "ball_displacement": 0.008925345823782564,
+            "ball_velocity_norm": 0.6202110930100143,
+            "contact": {
+              "contact_count": 7,
+              "max_penetration": 0.003961275167581078,
+              "ball_hand_contact_count": 6,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.053658445993932484,
+            "thumb_ball_distance": 0.038388643071332836,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "lift",
+          "start_step": 890,
+          "end_step": 1009,
+          "status": "success",
+          "terminal_reason": "success_lift_ball",
+          "metrics": {
+            "ball_position": [
+              0.20790747928168152,
+              0.2159716698857359,
+              0.015056072773362425
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": 0.08043651277336242,
+            "ball_displacement": 0.09700782702030235,
+            "ball_velocity_norm": 1.336244558584215,
+            "contact": {
+              "contact_count": 7,
+              "max_penetration": 0.0031336047566104773,
+              "ball_hand_contact_count": 7,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 0
+            },
+            "four_finger_avg_tip_ball_distance": 0.05254541149621413,
+            "thumb_ball_distance": 0.03820671755977072,
+            "finite_state": true
+          }
+        }
+      ]
+    },
+    {
+      "episode_id": 1,
+      "initial_ball": [
+        0.19022382,
+        0.17270200000000002,
+        -0.06538044
+      ],
+      "offset": [
+        0.0,
+        -0.015,
+        0.0
+      ],
+      "step_count": 1009,
+      "terminal_phase": "lift",
+      "terminal_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1009,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.20851791665047006,
+            0.216270853089565,
+            0.015170281316026131
+          ],
+          "initial_ball_position": [
+            0.19022382,
+            0.17270200000000002,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08055072131602613,
+          "ball_displacement": 0.0933881022204057,
+          "ball_velocity_norm": 1.3376653233291123,
+          "contact": {
+            "contact_count": 7,
+            "max_penetration": 0.003128070510365639,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.05288000764634221,
+          "thumb_ball_distance": 0.03820634445294127,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.769515623223855,
+          "terms": {
+            "lift_height": 0.8055072131602613,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.026440003823171104,
+            "thumb_distance_penalty": -0.009551586113235318,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "phase_summaries": [
+        {
+          "phase": "default_hold",
+          "start_step": 0,
+          "end_step": 90,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.19022382,
+              0.17270200000000002,
+              -0.0655645633828913
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412338289129637,
+            "ball_displacement": 0.00018412338289129637,
+            "ball_velocity_norm": 1.2337966930950374e-08,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.00018412335821537187,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.6881781965882929,
+            "thumb_ball_distance": 0.5677162168186122,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "move_to_pre_approach",
+          "start_step": 90,
+          "end_step": 350,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.19022382,
+              0.17270200000000002,
+              -0.06556456351751806
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412351751806444,
+            "ball_displacement": 0.00018412351751806444,
+            "ball_velocity_norm": 1.3173323775090565e-15,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.0001841235175180679,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.11295558669924788,
+            "thumb_ball_distance": 0.17795195630651472,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "approach_ball",
+          "start_step": 350,
+          "end_step": 530,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.2329530344975653,
+              0.15228688441724067,
+              -0.06700796143739306
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.001627521437393059,
+            "ball_displacement": 0.047383663238140875,
+            "ball_velocity_norm": 8.954622065790774,
+            "contact": {
+              "contact_count": 4,
+              "max_penetration": 0.001616853514232245,
+              "ball_hand_contact_count": 3,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.07624826042468678,
+            "thumb_ball_distance": 0.07756110715274606,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "preshape",
+          "start_step": 530,
+          "end_step": 650,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.2101516400582422,
+              0.1572218990210698,
+              -0.06690419299298724
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0015237529929872373,
+            "ball_displacement": 0.025279900351369938,
+            "ball_velocity_norm": 3.084343228967892,
+            "contact": {
+              "contact_count": 4,
+              "max_penetration": 0.001523758078957247,
+              "ball_hand_contact_count": 3,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.07535147473988799,
+            "thumb_ball_distance": 0.06293607673383744,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "start_step": 650,
+          "end_step": 770,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.19216128710305247,
+              0.16821606786027038,
+              -0.066403179570596
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0010227395705959957,
+            "ball_displacement": 0.004992330334316113,
+            "ball_velocity_norm": 0.372374471950598,
+            "contact": {
+              "contact_count": 4,
+              "max_penetration": 0.003275438461379416,
+              "ball_hand_contact_count": 3,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.05852918393385327,
+            "thumb_ball_distance": 0.05743081273149479,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_thumb",
+          "start_step": 770,
+          "end_step": 890,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.18521495319247624,
+              0.17400791541462843,
+              -0.06644163896210933
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.001061198962109336,
+            "ball_displacement": 0.00528396678669152,
+            "ball_velocity_norm": 0.6416961099249319,
+            "contact": {
+              "contact_count": 7,
+              "max_penetration": 0.003999287182715205,
+              "ball_hand_contact_count": 6,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.05414806666787955,
+            "thumb_ball_distance": 0.03837817798453398,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "lift",
+          "start_step": 890,
+          "end_step": 1009,
+          "status": "success",
+          "terminal_reason": "success_lift_ball",
+          "metrics": {
+            "ball_position": [
+              0.20851791665047006,
+              0.216270853089565,
+              0.015170281316026131
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": 0.08055072131602613,
+            "ball_displacement": 0.0933881022204057,
+            "ball_velocity_norm": 1.3376653233291123,
+            "contact": {
+              "contact_count": 7,
+              "max_penetration": 0.003128070510365639,
+              "ball_hand_contact_count": 7,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 0
+            },
+            "four_finger_avg_tip_ball_distance": 0.05288000764634221,
+            "thumb_ball_distance": 0.03820634445294127,
+            "finite_state": true
+          }
+        }
+      ]
+    },
+    {
+      "episode_id": 2,
+      "initial_ball": [
+        0.20522382,
+        0.17270200000000002,
+        -0.06538044
+      ],
+      "offset": [
+        0.015,
+        -0.015,
+        0.0
+      ],
+      "step_count": 1006,
+      "terminal_phase": "lift",
+      "terminal_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1006,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.22345294837267038,
+            0.22830231002577173,
+            0.015186009954258861
+          ],
+          "initial_ball_position": [
+            0.20522382,
+            0.17270200000000002,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08056644995425886,
+          "ball_displacement": 0.09957232775435816,
+          "ball_velocity_norm": 1.5705361759026646,
+          "contact": {
+            "contact_count": 7,
+            "max_penetration": 0.003446695737272078,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.06326560293843377,
+          "thumb_ball_distance": 0.041385257424757245,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.763685383717183,
+          "terms": {
+            "lift_height": 0.8056644995425887,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.03163280146921688,
+            "thumb_distance_penalty": -0.010346314356189311,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "phase_summaries": [
+        {
+          "phase": "default_hold",
+          "start_step": 0,
+          "end_step": 90,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.20522382,
+              0.17270200000000002,
+              -0.0655645633828913
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412338289129637,
+            "ball_displacement": 0.00018412338289129637,
+            "ball_velocity_norm": 1.2337966930950374e-08,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.00018412335821537187,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.6932243716834497,
+            "thumb_ball_distance": 0.5710267218535523,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "move_to_pre_approach",
+          "start_step": 90,
+          "end_step": 350,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.20522382,
+              0.17270200000000002,
+              -0.06556456351751806
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412351751806444,
+            "ball_displacement": 0.00018412351751806444,
+            "ball_velocity_norm": 1.3173323775090565e-15,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.0001841235175180679,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.10112030665028346,
+            "thumb_ball_distance": 0.17536442519348364,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "approach_ball",
+          "start_step": 350,
+          "end_step": 530,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.2434391673009609,
+              0.14817107506687574,
+              -0.06737132505632212
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0019908850563221253,
+            "ball_displacement": 0.0454548421041711,
+            "ball_velocity_norm": 9.025882552979754,
+            "contact": {
+              "contact_count": 3,
+              "max_penetration": 0.0019527163091415285,
+              "ball_hand_contact_count": 2,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.07159582204352398,
+            "thumb_ball_distance": 0.08193854281058939,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "preshape",
+          "start_step": 530,
+          "end_step": 650,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.2255189987086316,
+              0.15697763743325668,
+              -0.06766304552689592
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0022826055268959228,
+            "ball_displacement": 0.025775184673191155,
+            "ball_velocity_norm": 1.9214813604988898,
+            "contact": {
+              "contact_count": 4,
+              "max_penetration": 0.0022891898135015167,
+              "ball_hand_contact_count": 3,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.07974084001029781,
+            "thumb_ball_distance": 0.0596051573480625,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "start_step": 650,
+          "end_step": 770,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.21012233836719824,
+              0.17745473487720673,
+              -0.06666813856199717
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0012876985619971748,
+            "ball_displacement": 0.006945656095241477,
+            "ball_velocity_norm": 0.5332711528945812,
+            "contact": {
+              "contact_count": 5,
+              "max_penetration": 0.00282901943242868,
+              "ball_hand_contact_count": 4,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.06524324007351663,
+            "thumb_ball_distance": 0.05261737681849356,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_thumb",
+          "start_step": 770,
+          "end_step": 890,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.20160592731530436,
+              0.1848122072301528,
+              -0.06672215058336554
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0013417105833655463,
+            "ball_displacement": 0.012710092600950388,
+            "ball_velocity_norm": 0.3906580098769073,
+            "contact": {
+              "contact_count": 7,
+              "max_penetration": 0.003549710667911137,
+              "ball_hand_contact_count": 6,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.0632862054371924,
+            "thumb_ball_distance": 0.040534626093167006,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "lift",
+          "start_step": 890,
+          "end_step": 1006,
+          "status": "success",
+          "terminal_reason": "success_lift_ball",
+          "metrics": {
+            "ball_position": [
+              0.22345294837267038,
+              0.22830231002577173,
+              0.015186009954258861
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.17270200000000002,
+              -0.06538044
+            ],
+            "ball_lift_height": 0.08056644995425886,
+            "ball_displacement": 0.09957232775435816,
+            "ball_velocity_norm": 1.5705361759026646,
+            "contact": {
+              "contact_count": 7,
+              "max_penetration": 0.003446695737272078,
+              "ball_hand_contact_count": 7,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 0
+            },
+            "four_finger_avg_tip_ball_distance": 0.06326560293843377,
+            "thumb_ball_distance": 0.041385257424757245,
+            "finite_state": true
+          }
+        }
+      ]
+    },
+    {
+      "episode_id": 3,
+      "initial_ball": [
+        0.17522381999999997,
+        0.187702,
+        -0.06538044
+      ],
+      "offset": [
+        -0.015,
+        0.0,
+        0.0
+      ],
+      "step_count": 1008,
+      "terminal_phase": "lift",
+      "terminal_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1008,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.20897410964585356,
+            0.21690655690228008,
+            0.014706757816622673
+          ],
+          "initial_ball_position": [
+            0.17522381999999997,
+            0.187702,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08008719781662267,
+          "ball_displacement": 0.09168395415314709,
+          "ball_velocity_norm": 1.4029500720346315,
+          "contact": {
+            "contact_count": 6,
+            "max_penetration": 0.003148763569673998,
+            "ball_hand_contact_count": 6,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.05329181545893606,
+          "thumb_ball_distance": 0.03815855823142981,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.764686430878902,
+          "terms": {
+            "lift_height": 0.8008719781662267,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.02664590772946803,
+            "thumb_distance_penalty": -0.009539639557857452,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "phase_summaries": [
+        {
+          "phase": "default_hold",
+          "start_step": 0,
+          "end_step": 90,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.17522381999999997,
+              0.187702,
+              -0.0655645633828913
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412338289129637,
+            "ball_displacement": 0.00018412338289129637,
+            "ball_velocity_norm": 1.2337966930950374e-08,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.00018412335821537187,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.6832797194509351,
+            "thumb_ball_distance": 0.5653047790223382,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "move_to_pre_approach",
+          "start_step": 90,
+          "end_step": 350,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.17522381999999997,
+              0.187702,
+              -0.06556456351751806
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412351751806444,
+            "ball_displacement": 0.00018412351751806444,
+            "ball_velocity_norm": 1.3173323775090565e-15,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.0001841235175180679,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.12627691844139155,
+            "thumb_ball_distance": 0.1725523118290526,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "approach_ball",
+          "start_step": 350,
+          "end_step": 530,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.2096747174411353,
+              0.16614526903286503,
+              -0.06616025809812254
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0007798180981225394,
+            "ball_displacement": 0.040646833834324915,
+            "ball_velocity_norm": 9.800428464400298,
+            "contact": {
+              "contact_count": 2,
+              "max_penetration": 0.000775949578582953,
+              "ball_hand_contact_count": 1,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.09084078276000156,
+            "thumb_ball_distance": 0.06751582449844956,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "preshape",
+          "start_step": 530,
+          "end_step": 650,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.1959600421563329,
+              0.17276374472595196,
+              -0.06665451323121603
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.001274073231216033,
+            "ball_displacement": 0.02558838882282192,
+            "ball_velocity_norm": 1.1122775279208474,
+            "contact": {
+              "contact_count": 4,
+              "max_penetration": 0.0015064819734183603,
+              "ball_hand_contact_count": 3,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.08269168922052458,
+            "thumb_ball_distance": 0.061473743037168266,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "start_step": 650,
+          "end_step": 770,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.189185932899037,
+              0.17581679670124065,
+              -0.06649345130553894
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0011130113055389385,
+            "ball_displacement": 0.01836947054829165,
+            "ball_velocity_norm": 0.30888555270777157,
+            "contact": {
+              "contact_count": 5,
+              "max_penetration": 0.0037159099322235205,
+              "ball_hand_contact_count": 4,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.0590368455747323,
+            "thumb_ball_distance": 0.05699339772568738,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_thumb",
+          "start_step": 770,
+          "end_step": 890,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.18462568482836922,
+              0.17784492592587703,
+              -0.06645026838247123
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0010698283824712301,
+            "ball_displacement": 0.013663875889425189,
+            "ball_velocity_norm": 0.6457582445554848,
+            "contact": {
+              "contact_count": 7,
+              "max_penetration": 0.004129885997863788,
+              "ball_hand_contact_count": 6,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.05450700002568728,
+            "thumb_ball_distance": 0.03837762827752995,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "lift",
+          "start_step": 890,
+          "end_step": 1008,
+          "status": "success",
+          "terminal_reason": "success_lift_ball",
+          "metrics": {
+            "ball_position": [
+              0.20897410964585356,
+              0.21690655690228008,
+              0.014706757816622673
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": 0.08008719781662267,
+            "ball_displacement": 0.09168395415314709,
+            "ball_velocity_norm": 1.4029500720346315,
+            "contact": {
+              "contact_count": 6,
+              "max_penetration": 0.003148763569673998,
+              "ball_hand_contact_count": 6,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 0
+            },
+            "four_finger_avg_tip_ball_distance": 0.05329181545893606,
+            "thumb_ball_distance": 0.03815855823142981,
+            "finite_state": true
+          }
+        }
+      ]
+    },
+    {
+      "episode_id": 4,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.06538044
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "step_count": 1006,
+      "terminal_phase": "lift",
+      "terminal_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1006,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.22354568256191196,
+            0.22844142856844882,
+            0.015366295711543696
+          ],
+          "initial_ball_position": [
+            0.19022382,
+            0.187702,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.0807467357115437,
+          "ball_displacement": 0.09638507608934374,
+          "ball_velocity_norm": 1.613678859804523,
+          "contact": {
+            "contact_count": 7,
+            "max_penetration": 0.0034486275650198097,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.06319435937649984,
+          "thumb_ball_distance": 0.04123143751591972,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.765562318048207,
+          "terms": {
+            "lift_height": 0.8074673571154369,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.03159717968824992,
+            "thumb_distance_penalty": -0.01030785937897993,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "phase_summaries": [
+        {
+          "phase": "default_hold",
+          "start_step": 0,
+          "end_step": 90,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.19022382,
+              0.187702,
+              -0.0655645633828913
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412338289129637,
+            "ball_displacement": 0.00018412338289129637,
+            "ball_velocity_norm": 1.2337966930950374e-08,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.00018412335821537187,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.6880348612980705,
+            "thumb_ball_distance": 0.5682334972680433,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "move_to_pre_approach",
+          "start_step": 90,
+          "end_step": 350,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.19022382,
+              0.187702,
+              -0.06556456351751806
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412351751806444,
+            "ball_displacement": 0.00018412351751806444,
+            "ball_velocity_norm": 1.3173323775090565e-15,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.0001841235175180679,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.11382870947932941,
+            "thumb_ball_distance": 0.16855290916408353,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "approach_ball",
+          "start_step": 350,
+          "end_step": 530,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.2155346280310424,
+              0.18572440022525916,
+              -0.06603948388395124
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0006590438839512436,
+            "ball_displacement": 0.025396500603317565,
+            "ball_velocity_norm": 8.011234044672136,
+            "contact": {
+              "contact_count": 3,
+              "max_penetration": 0.0006493545869661506,
+              "ball_hand_contact_count": 2,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.09969608177742696,
+            "thumb_ball_distance": 0.060847012536728765,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "preshape",
+          "start_step": 530,
+          "end_step": 650,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.2057701156926788,
+              0.18607415530592217,
+              -0.06666210390364428
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0012816639036442867,
+            "ball_displacement": 0.015683744784781028,
+            "ball_velocity_norm": 0.5176278132166284,
+            "contact": {
+              "contact_count": 4,
+              "max_penetration": 0.001557391433348921,
+              "ball_hand_contact_count": 3,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.08801673680383248,
+            "thumb_ball_distance": 0.05686961066561197,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "start_step": 650,
+          "end_step": 770,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.20048648999624125,
+              0.18806864857695046,
+              -0.06671590595207075
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0013354659520707496,
+            "ball_displacement": 0.010355689061567587,
+            "ball_velocity_norm": 0.4286016741420752,
+            "contact": {
+              "contact_count": 5,
+              "max_penetration": 0.003572129705743981,
+              "ball_hand_contact_count": 4,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.06567686184511932,
+            "thumb_ball_distance": 0.052575772217915644,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_thumb",
+          "start_step": 770,
+          "end_step": 890,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.19783432638637055,
+              0.189782977235142,
+              -0.06677322327331416
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0013927832733141576,
+            "ball_displacement": 0.008011873623353658,
+            "ball_velocity_norm": 0.44152792894644355,
+            "contact": {
+              "contact_count": 8,
+              "max_penetration": 0.003730842996215667,
+              "ball_hand_contact_count": 7,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.06306954399632715,
+            "thumb_ball_distance": 0.04050153955196187,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "lift",
+          "start_step": 890,
+          "end_step": 1006,
+          "status": "success",
+          "terminal_reason": "success_lift_ball",
+          "metrics": {
+            "ball_position": [
+              0.22354568256191196,
+              0.22844142856844882,
+              0.015366295711543696
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": 0.0807467357115437,
+            "ball_displacement": 0.09638507608934374,
+            "ball_velocity_norm": 1.613678859804523,
+            "contact": {
+              "contact_count": 7,
+              "max_penetration": 0.0034486275650198097,
+              "ball_hand_contact_count": 7,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 0
+            },
+            "four_finger_avg_tip_ball_distance": 0.06319435937649984,
+            "thumb_ball_distance": 0.04123143751591972,
+            "finite_state": true
+          }
+        }
+      ]
+    },
+    {
+      "episode_id": 5,
+      "initial_ball": [
+        0.20522382,
+        0.187702,
+        -0.06538044
+      ],
+      "offset": [
+        0.015,
+        0.0,
+        0.0
+      ],
+      "step_count": 1007,
+      "terminal_phase": "lift",
+      "terminal_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1007,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.2239408884748558,
+            0.22879464036279465,
+            0.015539178278336717
+          ],
+          "initial_ball_position": [
+            0.20522382,
+            0.187702,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08091961827833671,
+          "ball_displacement": 0.09266562667240828,
+          "ball_velocity_norm": 1.6873216083243734,
+          "contact": {
+            "contact_count": 7,
+            "max_penetration": 0.003445444921222991,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.06309519862007187,
+          "thumb_ball_distance": 0.04101553409842001,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.767394699948726,
+          "terms": {
+            "lift_height": 0.8091961827833671,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.03154759931003594,
+            "thumb_distance_penalty": -0.010253883524605002,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "phase_summaries": [
+        {
+          "phase": "default_hold",
+          "start_step": 0,
+          "end_step": 90,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.20522382,
+              0.187702,
+              -0.0655645633828913
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412338289129637,
+            "ball_displacement": 0.00018412338289129637,
+            "ball_velocity_norm": 1.2337966930950374e-08,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.00018412335821537187,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.6930822176453855,
+            "thumb_ball_distance": 0.5715410060961926,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "move_to_pre_approach",
+          "start_step": 90,
+          "end_step": 350,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.20522382,
+              0.187702,
+              -0.06556456351751806
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412351751806444,
+            "ball_displacement": 0.00018412351751806444,
+            "ball_velocity_norm": 1.3173323775090565e-15,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.0001841235175180679,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.10209934234106033,
+            "thumb_ball_distance": 0.1658187747446018,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "approach_ball",
+          "start_step": 350,
+          "end_step": 530,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.24199616527362575,
+              0.17091491203352044,
+              -0.06759884201076553
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0022184020107655356,
+            "ball_displacement": 0.04048373755964779,
+            "ball_velocity_norm": 7.250732110340863,
+            "contact": {
+              "contact_count": 4,
+              "max_penetration": 0.0022107837981105057,
+              "ball_hand_contact_count": 3,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.0878149582173823,
+            "thumb_ball_distance": 0.0736754971569574,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "preshape",
+          "start_step": 530,
+          "end_step": 650,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.23517408690275765,
+              0.17716004574713456,
+              -0.06791202468994204
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0025315846899420374,
+            "ball_displacement": 0.031852161748589014,
+            "ball_velocity_norm": 1.215422790406638,
+            "contact": {
+              "contact_count": 4,
+              "max_penetration": 0.0026433672883550783,
+              "ball_hand_contact_count": 3,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.07833450682819251,
+            "thumb_ball_distance": 0.06311916587654655,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "start_step": 650,
+          "end_step": 770,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.21369068548155853,
+              0.18974358953693238,
+              -0.06683645101431596
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0014560110143159583,
+            "ball_displacement": 0.008830394498204965,
+            "ball_velocity_norm": 0.7321115597288692,
+            "contact": {
+              "contact_count": 5,
+              "max_penetration": 0.001964791373657711,
+              "ball_hand_contact_count": 4,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.06202603567911893,
+            "thumb_ball_distance": 0.04729643589766095,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_thumb",
+          "start_step": 770,
+          "end_step": 890,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.20327444589456906,
+              0.19287192857725097,
+              -0.06664664857747048
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.001266208577470479,
+            "ball_displacement": 0.00566846584698723,
+            "ball_velocity_norm": 1.1155224585541135,
+            "contact": {
+              "contact_count": 8,
+              "max_penetration": 0.0031274437416441044,
+              "ball_hand_contact_count": 7,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.06195839419374394,
+            "thumb_ball_distance": 0.03950747457539649,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "lift",
+          "start_step": 890,
+          "end_step": 1007,
+          "status": "success",
+          "terminal_reason": "success_lift_ball",
+          "metrics": {
+            "ball_position": [
+              0.2239408884748558,
+              0.22879464036279465,
+              0.015539178278336717
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.187702,
+              -0.06538044
+            ],
+            "ball_lift_height": 0.08091961827833671,
+            "ball_displacement": 0.09266562667240828,
+            "ball_velocity_norm": 1.6873216083243734,
+            "contact": {
+              "contact_count": 7,
+              "max_penetration": 0.003445444921222991,
+              "ball_hand_contact_count": 7,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 0
+            },
+            "four_finger_avg_tip_ball_distance": 0.06309519862007187,
+            "thumb_ball_distance": 0.04101553409842001,
+            "finite_state": true
+          }
+        }
+      ]
+    },
+    {
+      "episode_id": 6,
+      "initial_ball": [
+        0.17522381999999997,
+        0.202702,
+        -0.06538044
+      ],
+      "offset": [
+        -0.015,
+        0.015,
+        0.0
+      ],
+      "step_count": 1008,
+      "terminal_phase": "lift",
+      "terminal_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1008,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.2094244485996044,
+            0.21723112557336277,
+            0.014832690156458403
+          ],
+          "initial_ball_position": [
+            0.17522381999999997,
+            0.202702,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.0802131301564584,
+          "ball_displacement": 0.0884020629625325,
+          "ball_velocity_norm": 1.4028357916638339,
+          "contact": {
+            "contact_count": 6,
+            "max_penetration": 0.003171445054584176,
+            "ball_hand_contact_count": 6,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.053559728445204735,
+          "thumb_ball_distance": 0.03815461889188886,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.76581278261901,
+          "terms": {
+            "lift_height": 0.8021313015645839,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.026779864222602368,
+            "thumb_distance_penalty": -0.009538654722972216,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "phase_summaries": [
+        {
+          "phase": "default_hold",
+          "start_step": 0,
+          "end_step": 90,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.17522381999999997,
+              0.202702,
+              -0.0655645633828913
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412338289129637,
+            "ball_displacement": 0.00018412338289129637,
+            "ball_velocity_norm": 1.2337966930950374e-08,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.00018412335821537187,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.6834642352044035,
+            "thumb_ball_distance": 0.5662217743641873,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "move_to_pre_approach",
+          "start_step": 90,
+          "end_step": 350,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.17522381999999997,
+              0.202702,
+              -0.06556456351751806
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412351751806444,
+            "ball_displacement": 0.00018412351751806444,
+            "ball_velocity_norm": 1.3173323775090565e-15,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.0001841235175180679,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.12876806571202137,
+            "thumb_ball_distance": 0.16421779669667555,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "approach_ball",
+          "start_step": 350,
+          "end_step": 530,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.20640538759297225,
+              0.16795736144380696,
+              -0.06605944392983845
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0006790039298384537,
+            "ball_displacement": 0.04668983949739311,
+            "ball_velocity_norm": 9.902759829192508,
+            "contact": {
+              "contact_count": 2,
+              "max_penetration": 0.0006657547954904593,
+              "ball_hand_contact_count": 1,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.09300035753062803,
+            "thumb_ball_distance": 0.06629789962382335,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "preshape",
+          "start_step": 530,
+          "end_step": 650,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.1956354557372809,
+              0.17423847408281096,
+              -0.06656120286756477
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0011807628675647719,
+            "ball_displacement": 0.03504570418837885,
+            "ball_velocity_norm": 0.8210274175049261,
+            "contact": {
+              "contact_count": 3,
+              "max_penetration": 0.0015002523386457266,
+              "ball_hand_contact_count": 2,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.08298732313390805,
+            "thumb_ball_distance": 0.06102839335613572,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "start_step": 650,
+          "end_step": 770,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.18947165946298575,
+              0.17674811156064807,
+              -0.06649528804836058
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.001114848048360581,
+            "ball_displacement": 0.029628502166938405,
+            "ball_velocity_norm": 0.31485373617808193,
+            "contact": {
+              "contact_count": 5,
+              "max_penetration": 0.0037297251151062576,
+              "ball_hand_contact_count": 4,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.05921594640147492,
+            "thumb_ball_distance": 0.056847536175179396,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_thumb",
+          "start_step": 770,
+          "end_step": 890,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.18504357563889173,
+              0.17843558477296154,
+              -0.06644416262063814
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0010637226206381412,
+            "ball_displacement": 0.026199580427790206,
+            "ball_velocity_norm": 0.6743848791440804,
+            "contact": {
+              "contact_count": 6,
+              "max_penetration": 0.004171315546143969,
+              "ball_hand_contact_count": 5,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.054792169386261504,
+            "thumb_ball_distance": 0.038378252177959454,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "lift",
+          "start_step": 890,
+          "end_step": 1008,
+          "status": "success",
+          "terminal_reason": "success_lift_ball",
+          "metrics": {
+            "ball_position": [
+              0.2094244485996044,
+              0.21723112557336277,
+              0.014832690156458403
+            ],
+            "initial_ball_position": [
+              0.17522381999999997,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": 0.0802131301564584,
+            "ball_displacement": 0.0884020629625325,
+            "ball_velocity_norm": 1.4028357916638339,
+            "contact": {
+              "contact_count": 6,
+              "max_penetration": 0.003171445054584176,
+              "ball_hand_contact_count": 6,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 0
+            },
+            "four_finger_avg_tip_ball_distance": 0.053559728445204735,
+            "thumb_ball_distance": 0.03815461889188886,
+            "finite_state": true
+          }
+        }
+      ]
+    },
+    {
+      "episode_id": 7,
+      "initial_ball": [
+        0.19022382,
+        0.202702,
+        -0.06538044
+      ],
+      "offset": [
+        0.0,
+        0.015,
+        0.0
+      ],
+      "step_count": 1006,
+      "terminal_phase": "lift",
+      "terminal_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1006,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.22358713744838082,
+            0.22845400381437783,
+            0.015322216791826061
+          ],
+          "initial_ball_position": [
+            0.19022382,
+            0.202702,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08070265679182606,
+          "ball_displacement": 0.09104501889107626,
+          "ball_velocity_norm": 1.629163952241632,
+          "contact": {
+            "contact_count": 7,
+            "max_penetration": 0.003449452190825786,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.06319216824820034,
+          "thumb_ball_distance": 0.04122925455221872,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.765123170156105,
+          "terms": {
+            "lift_height": 0.8070265679182607,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.03159608412410017,
+            "thumb_distance_penalty": -0.01030731363805468,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "phase_summaries": [
+        {
+          "phase": "default_hold",
+          "start_step": 0,
+          "end_step": 90,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.19022382,
+              0.202702,
+              -0.0655645633828913
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412338289129637,
+            "ball_displacement": 0.00018412338289129637,
+            "ball_velocity_norm": 1.2337966930950374e-08,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.00018412335821537187,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.6882182370619203,
+            "thumb_ball_distance": 0.569145773942059,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "move_to_pre_approach",
+          "start_step": 90,
+          "end_step": 350,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.19022382,
+              0.202702,
+              -0.06556456351751806
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412351751806444,
+            "ball_displacement": 0.00018412351751806444,
+            "ball_velocity_norm": 1.3173323775090565e-15,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.0001841235175180679,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.11658667059892962,
+            "thumb_ball_distance": 0.16001021099303586,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "approach_ball",
+          "start_step": 350,
+          "end_step": 530,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.21807939925319222,
+              0.1943775132680714,
+              -0.0661643319359027
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0007838919359026975,
+            "ball_displacement": 0.029083412135581726,
+            "ball_velocity_norm": 8.904821862052884,
+            "contact": {
+              "contact_count": 2,
+              "max_penetration": 0.0007721633058013939,
+              "ball_hand_contact_count": 1,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.0969687022830343,
+            "thumb_ball_distance": 0.06105806756097588,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "preshape",
+          "start_step": 530,
+          "end_step": 650,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.20727549725250471,
+              0.18882109804175876,
+              -0.06672044972548183
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0013400097254818305,
+            "ball_displacement": 0.02202804490558067,
+            "ball_velocity_norm": 0.5270553725020936,
+            "contact": {
+              "contact_count": 4,
+              "max_penetration": 0.0013725964523950938,
+              "ball_hand_contact_count": 3,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.08785324018620935,
+            "thumb_ball_distance": 0.05656534224419721,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "start_step": 650,
+          "end_step": 770,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.20107808192868593,
+              0.18947154970138694,
+              -0.06668435760806812
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0013039176080681253,
+            "ball_displacement": 0.017162750893991947,
+            "ball_velocity_norm": 0.4516440901201373,
+            "contact": {
+              "contact_count": 5,
+              "max_penetration": 0.0035054521029014123,
+              "ball_hand_contact_count": 4,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.06561863570149183,
+            "thumb_ball_distance": 0.052489956048070344,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_thumb",
+          "start_step": 770,
+          "end_step": 890,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.19807143341039282,
+              0.19050225408867363,
+              -0.06676219721997462
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0013817572199746192,
+            "ball_displacement": 0.014571482064459114,
+            "ball_velocity_norm": 0.4287291090212658,
+            "contact": {
+              "contact_count": 8,
+              "max_penetration": 0.0037018450257583872,
+              "ball_hand_contact_count": 7,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.06304416752085734,
+            "thumb_ball_distance": 0.040476092247716165,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "lift",
+          "start_step": 890,
+          "end_step": 1006,
+          "status": "success",
+          "terminal_reason": "success_lift_ball",
+          "metrics": {
+            "ball_position": [
+              0.22358713744838082,
+              0.22845400381437783,
+              0.015322216791826061
+            ],
+            "initial_ball_position": [
+              0.19022382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": 0.08070265679182606,
+            "ball_displacement": 0.09104501889107626,
+            "ball_velocity_norm": 1.629163952241632,
+            "contact": {
+              "contact_count": 7,
+              "max_penetration": 0.003449452190825786,
+              "ball_hand_contact_count": 7,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 0
+            },
+            "four_finger_avg_tip_ball_distance": 0.06319216824820034,
+            "thumb_ball_distance": 0.04122925455221872,
+            "finite_state": true
+          }
+        }
+      ]
+    },
+    {
+      "episode_id": 8,
+      "initial_ball": [
+        0.20522382,
+        0.202702,
+        -0.06538044
+      ],
+      "offset": [
+        0.015,
+        0.015,
+        0.0
+      ],
+      "step_count": 1008,
+      "terminal_phase": "lift",
+      "terminal_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1008,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.2238411149234082,
+            0.22975112298024314,
+            0.01559325792945453
+          ],
+          "initial_ball_position": [
+            0.20522382,
+            0.202702,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08097369792945452,
+          "ball_displacement": 0.08737847836072694,
+          "ball_velocity_norm": 1.7404715301281555,
+          "contact": {
+            "contact_count": 6,
+            "max_penetration": 0.0033110807267241003,
+            "ball_hand_contact_count": 6,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.06258768443289654,
+          "thumb_ball_distance": 0.04071351124784704,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.768264759266135,
+          "terms": {
+            "lift_height": 0.8097369792945452,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.03129384221644827,
+            "thumb_distance_penalty": -0.01017837781196176,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "phase_summaries": [
+        {
+          "phase": "default_hold",
+          "start_step": 0,
+          "end_step": 90,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.20522382,
+              0.202702,
+              -0.0655645633828913
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412338289129637,
+            "ball_displacement": 0.00018412338289129637,
+            "ball_velocity_norm": 1.2337966930950374e-08,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.00018412335821537187,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.6932643989316581,
+            "thumb_ball_distance": 0.5724480118124983,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "move_to_pre_approach",
+          "start_step": 90,
+          "end_step": 350,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.20522382,
+              0.202702,
+              -0.06556456351751806
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.00018412351751806444,
+            "ball_displacement": 0.00018412351751806444,
+            "ball_velocity_norm": 1.3173323775090565e-15,
+            "contact": {
+              "contact_count": 1,
+              "max_penetration": 0.0001841235175180679,
+              "ball_hand_contact_count": 0,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.10514892963078326,
+            "thumb_ball_distance": 0.15712749756857022,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "approach_ball",
+          "start_step": 350,
+          "end_step": 530,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.23570113025767192,
+              0.21674880816247794,
+              -0.06742618273093619
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0020457427309361897,
+            "ball_displacement": 0.033620891175235514,
+            "ball_velocity_norm": 10.881188579530155,
+            "contact": {
+              "contact_count": 2,
+              "max_penetration": 0.002013586315309599,
+              "ball_hand_contact_count": 1,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.09093084938400393,
+            "thumb_ball_distance": 0.06711155717218983,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "preshape",
+          "start_step": 530,
+          "end_step": 650,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.2353789616317939,
+              0.20371688477816782,
+              -0.06767705450637664
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0022966145063766374,
+            "ball_displacement": 0.030259494313973682,
+            "ball_velocity_norm": 2.1279898322129025,
+            "contact": {
+              "contact_count": 4,
+              "max_penetration": 0.0027782958199927994,
+              "ball_hand_contact_count": 3,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.0780172379302852,
+            "thumb_ball_distance": 0.06154324039872925,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "start_step": 650,
+          "end_step": 770,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.21348753177776528,
+              0.20369141686236256,
+              -0.06669108228831253
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0013106422883125274,
+            "ball_displacement": 0.008425298883803294,
+            "ball_velocity_norm": 0.6437366397008364,
+            "contact": {
+              "contact_count": 6,
+              "max_penetration": 0.001911413231861267,
+              "ball_hand_contact_count": 5,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.06092592870234856,
+            "thumb_ball_distance": 0.045070332086406144,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "close_thumb",
+          "start_step": 770,
+          "end_step": 890,
+          "status": "running",
+          "terminal_reason": "running",
+          "metrics": {
+            "ball_position": [
+              0.2029621610345117,
+              0.2001969821766124,
+              -0.06663347241568418
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": -0.0012530324156841827,
+            "ball_displacement": 0.0036000424728631366,
+            "ball_velocity_norm": 1.2881755840211586,
+            "contact": {
+              "contact_count": 8,
+              "max_penetration": 0.0029918668157642055,
+              "ball_hand_contact_count": 7,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 1
+            },
+            "four_finger_avg_tip_ball_distance": 0.060570499291408744,
+            "thumb_ball_distance": 0.038838065442439146,
+            "finite_state": true
+          }
+        },
+        {
+          "phase": "lift",
+          "start_step": 890,
+          "end_step": 1008,
+          "status": "success",
+          "terminal_reason": "success_lift_ball",
+          "metrics": {
+            "ball_position": [
+              0.2238411149234082,
+              0.22975112298024314,
+              0.01559325792945453
+            ],
+            "initial_ball_position": [
+              0.20522382,
+              0.202702,
+              -0.06538044
+            ],
+            "ball_lift_height": 0.08097369792945452,
+            "ball_displacement": 0.08737847836072694,
+            "ball_velocity_norm": 1.7404715301281555,
+            "contact": {
+              "contact_count": 6,
+              "max_penetration": 0.0033110807267241003,
+              "ball_hand_contact_count": 6,
+              "ball_arm_contact_count": 0,
+              "ball_floor_contact_count": 0
+            },
+            "four_finger_avg_tip_ball_distance": 0.06258768443289654,
+            "thumb_ball_distance": 0.04071351124784704,
+            "finite_state": true
+          }
+        }
+      ]
+    }
+  ],
+  "training_ready": false,
+  "notes": [
+    "Dataset v0 is tiny and scripted.",
+    "Rows follow obs_t, action_t, reward_t, done_t, next_obs_t.",
+    "Reward/done/success labels are computed by the frozen task contract.",
+    "This is not a BC/RL training run."
+  ]
+}

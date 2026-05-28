@@ -1,0 +1,611 @@
+{
+  "generated_at": "2026-05-28T20:10:07",
+  "dataset": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\arm_hand_stage1_v2_lift_ball_dataset_v0.npz",
+  "dataset_metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\arm_hand_stage1_v2_dataset_v0.json",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_lift_ball_demo.xml",
+  "contract_version": "stage2_lift_ball_v0_1",
+  "episodes_checked": 9,
+  "available_episodes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "shape_check": {
+    "obs_dim_matches": true,
+    "next_obs_dim_matches": true,
+    "action_dim_matches": true,
+    "row_counts_match": true,
+    "contract_version_matches": true
+  },
+  "shape_status": "PASS",
+  "replay_status": "PASS",
+  "status": "PASS",
+  "max_obs_error": 0.0,
+  "max_next_obs_error": 0.0,
+  "max_reward_error": 0.0,
+  "episode_results": [
+    {
+      "episode_id": 0,
+      "frames": 1009,
+      "terminal_dataset_index": 1008,
+      "expected_terminal_reason": "success_lift_ball",
+      "replay_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1009,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.20790747928168152,
+            0.2159716698857359,
+            0.015056072773362425
+          ],
+          "initial_ball_position": [
+            0.17522381999999997,
+            0.17270200000000002,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08043651277336242,
+          "ball_displacement": 0.09700782702030235,
+          "ball_velocity_norm": 1.336244558584215,
+          "contact": {
+            "contact_count": 7,
+            "max_penetration": 0.0031336047566104773,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.05254541149621413,
+          "thumb_ball_distance": 0.03820671755977072,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.768540742595574,
+          "terms": {
+            "lift_height": 0.8043651277336241,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.026272705748107066,
+            "thumb_distance_penalty": -0.00955167938994268,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "max_obs_error": 0.0,
+      "max_next_obs_error": 0.0,
+      "max_reward_error": 0.0,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "episode_id": 1,
+      "frames": 1009,
+      "terminal_dataset_index": 2017,
+      "expected_terminal_reason": "success_lift_ball",
+      "replay_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1009,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.20851791665047006,
+            0.216270853089565,
+            0.015170281316026131
+          ],
+          "initial_ball_position": [
+            0.19022382,
+            0.17270200000000002,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08055072131602613,
+          "ball_displacement": 0.0933881022204057,
+          "ball_velocity_norm": 1.3376653233291123,
+          "contact": {
+            "contact_count": 7,
+            "max_penetration": 0.003128070510365639,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.05288000764634221,
+          "thumb_ball_distance": 0.03820634445294127,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.769515623223855,
+          "terms": {
+            "lift_height": 0.8055072131602613,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.026440003823171104,
+            "thumb_distance_penalty": -0.009551586113235318,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "max_obs_error": 0.0,
+      "max_next_obs_error": 0.0,
+      "max_reward_error": 0.0,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "episode_id": 2,
+      "frames": 1006,
+      "terminal_dataset_index": 3023,
+      "expected_terminal_reason": "success_lift_ball",
+      "replay_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1006,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.22345294837267038,
+            0.22830231002577173,
+            0.015186009954258861
+          ],
+          "initial_ball_position": [
+            0.20522382,
+            0.17270200000000002,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08056644995425886,
+          "ball_displacement": 0.09957232775435816,
+          "ball_velocity_norm": 1.5705361759026646,
+          "contact": {
+            "contact_count": 7,
+            "max_penetration": 0.003446695737272078,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.06326560293843377,
+          "thumb_ball_distance": 0.041385257424757245,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.763685383717183,
+          "terms": {
+            "lift_height": 0.8056644995425887,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.03163280146921688,
+            "thumb_distance_penalty": -0.010346314356189311,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "max_obs_error": 0.0,
+      "max_next_obs_error": 0.0,
+      "max_reward_error": 0.0,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "episode_id": 3,
+      "frames": 1008,
+      "terminal_dataset_index": 4031,
+      "expected_terminal_reason": "success_lift_ball",
+      "replay_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1008,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.20897410964585356,
+            0.21690655690228008,
+            0.014706757816622673
+          ],
+          "initial_ball_position": [
+            0.17522381999999997,
+            0.187702,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08008719781662267,
+          "ball_displacement": 0.09168395415314709,
+          "ball_velocity_norm": 1.4029500720346315,
+          "contact": {
+            "contact_count": 6,
+            "max_penetration": 0.003148763569673998,
+            "ball_hand_contact_count": 6,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.05329181545893606,
+          "thumb_ball_distance": 0.03815855823142981,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.764686430878902,
+          "terms": {
+            "lift_height": 0.8008719781662267,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.02664590772946803,
+            "thumb_distance_penalty": -0.009539639557857452,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "max_obs_error": 0.0,
+      "max_next_obs_error": 0.0,
+      "max_reward_error": 0.0,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "episode_id": 4,
+      "frames": 1006,
+      "terminal_dataset_index": 5037,
+      "expected_terminal_reason": "success_lift_ball",
+      "replay_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1006,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.22354568256191196,
+            0.22844142856844882,
+            0.015366295711543696
+          ],
+          "initial_ball_position": [
+            0.19022382,
+            0.187702,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.0807467357115437,
+          "ball_displacement": 0.09638507608934374,
+          "ball_velocity_norm": 1.613678859804523,
+          "contact": {
+            "contact_count": 7,
+            "max_penetration": 0.0034486275650198097,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.06319435937649984,
+          "thumb_ball_distance": 0.04123143751591972,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.765562318048207,
+          "terms": {
+            "lift_height": 0.8074673571154369,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.03159717968824992,
+            "thumb_distance_penalty": -0.01030785937897993,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "max_obs_error": 0.0,
+      "max_next_obs_error": 0.0,
+      "max_reward_error": 0.0,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "episode_id": 5,
+      "frames": 1007,
+      "terminal_dataset_index": 6044,
+      "expected_terminal_reason": "success_lift_ball",
+      "replay_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1007,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.2239408884748558,
+            0.22879464036279465,
+            0.015539178278336717
+          ],
+          "initial_ball_position": [
+            0.20522382,
+            0.187702,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08091961827833671,
+          "ball_displacement": 0.09266562667240828,
+          "ball_velocity_norm": 1.6873216083243734,
+          "contact": {
+            "contact_count": 7,
+            "max_penetration": 0.003445444921222991,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.06309519862007187,
+          "thumb_ball_distance": 0.04101553409842001,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.767394699948726,
+          "terms": {
+            "lift_height": 0.8091961827833671,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.03154759931003594,
+            "thumb_distance_penalty": -0.010253883524605002,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "max_obs_error": 0.0,
+      "max_next_obs_error": 0.0,
+      "max_reward_error": 0.0,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "episode_id": 6,
+      "frames": 1008,
+      "terminal_dataset_index": 7052,
+      "expected_terminal_reason": "success_lift_ball",
+      "replay_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1008,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.2094244485996044,
+            0.21723112557336277,
+            0.014832690156458403
+          ],
+          "initial_ball_position": [
+            0.17522381999999997,
+            0.202702,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.0802131301564584,
+          "ball_displacement": 0.0884020629625325,
+          "ball_velocity_norm": 1.4028357916638339,
+          "contact": {
+            "contact_count": 6,
+            "max_penetration": 0.003171445054584176,
+            "ball_hand_contact_count": 6,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.053559728445204735,
+          "thumb_ball_distance": 0.03815461889188886,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.76581278261901,
+          "terms": {
+            "lift_height": 0.8021313015645839,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.026779864222602368,
+            "thumb_distance_penalty": -0.009538654722972216,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "max_obs_error": 0.0,
+      "max_next_obs_error": 0.0,
+      "max_reward_error": 0.0,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "episode_id": 7,
+      "frames": 1006,
+      "terminal_dataset_index": 8058,
+      "expected_terminal_reason": "success_lift_ball",
+      "replay_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1006,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.22358713744838082,
+            0.22845400381437783,
+            0.015322216791826061
+          ],
+          "initial_ball_position": [
+            0.19022382,
+            0.202702,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08070265679182606,
+          "ball_displacement": 0.09104501889107626,
+          "ball_velocity_norm": 1.629163952241632,
+          "contact": {
+            "contact_count": 7,
+            "max_penetration": 0.003449452190825786,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.06319216824820034,
+          "thumb_ball_distance": 0.04122925455221872,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.765123170156105,
+          "terms": {
+            "lift_height": 0.8070265679182607,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.03159608412410017,
+            "thumb_distance_penalty": -0.01030731363805468,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "max_obs_error": 0.0,
+      "max_next_obs_error": 0.0,
+      "max_reward_error": 0.0,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "episode_id": 8,
+      "frames": 1008,
+      "terminal_dataset_index": 9066,
+      "expected_terminal_reason": "success_lift_ball",
+      "replay_eval": {
+        "task_name": "arm_hand_stage1_lift_ball",
+        "contract_version": "stage2_lift_ball_v0_1",
+        "episode_status": "success",
+        "terminal_reason": "success_lift_ball",
+        "success": true,
+        "failure": false,
+        "done": true,
+        "step_count": 1008,
+        "success_reasons": [
+          "success_lift_ball"
+        ],
+        "failure_reasons": [],
+        "official_metrics": {
+          "ball_position": [
+            0.2238411149234082,
+            0.22975112298024314,
+            0.01559325792945453
+          ],
+          "initial_ball_position": [
+            0.20522382,
+            0.202702,
+            -0.06538044
+          ],
+          "ball_lift_height": 0.08097369792945452,
+          "ball_displacement": 0.08737847836072694,
+          "ball_velocity_norm": 1.7404715301281555,
+          "contact": {
+            "contact_count": 6,
+            "max_penetration": 0.0033110807267241003,
+            "ball_hand_contact_count": 6,
+            "ball_arm_contact_count": 0,
+            "ball_floor_contact_count": 0
+          },
+          "four_finger_avg_tip_ball_distance": 0.06258768443289654,
+          "thumb_ball_distance": 0.04071351124784704,
+          "finite_state": true
+        },
+        "reward": {
+          "total": 11.768264759266135,
+          "terms": {
+            "lift_height": 0.8097369792945452,
+            "hand_contact_bonus": 1.0,
+            "floor_contact_after_lift_penalty": 0.0,
+            "penetration_penalty": -0.0,
+            "four_finger_distance_penalty": -0.03129384221644827,
+            "thumb_distance_penalty": -0.01017837781196176,
+            "success_bonus": 10.0,
+            "failure_penalty": 0.0
+          },
+          "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training."
+        }
+      },
+      "max_obs_error": 0.0,
+      "max_next_obs_error": 0.0,
+      "max_reward_error": 0.0,
+      "status": "PASS",
+      "failures": []
+    }
+  ],
+  "training_ready": false
+}
