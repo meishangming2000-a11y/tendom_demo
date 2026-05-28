@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-05-29T01:18:00",
+  "scope": "first experimental BC smoke training on dataset v0",
+  "status": "PASS_after_one_repair",
+  "training_ready": false,
+  "final_checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_smoke.pth",
+  "attempt_1": {
+    "feature_mode": "obs_phase",
+    "offline_result": "learned dataset action mapping",
+    "online_success_count": 0,
+    "online_episode_count": 9,
+    "terminal_reasons": {
+      "timeout": 7,
+      "floor_contact_after_lift": 2
+    },
+    "diagnosis": "tiny dataset was too narrow for closed-loop observation-conditioned BC; online state drift caused compounding action error"
+  },
+  "repair": {
+    "feature_mode": "phase_only",
+    "meaning": "schedule-conditioned BC smoke policy",
+    "promoted_baseline": false
+  },
+  "final_result": {
+    "feature_dim": 10,
+    "hidden_dim": 256,
+    "depth": 3,
+    "epochs": 200,
+    "final_val_mse_normalized": 5.429479301710671e-7,
+    "val_action_rmse_raw": 0.000347222201526165,
+    "online_success_count": 9,
+    "online_episode_count": 9,
+    "terminal_reason": "success_lift_ball",
+    "lift_min_m": 0.08010784294544088,
+    "lift_max_m": 0.080856789103201,
+    "demo_episode": 4,
+    "demo_success": true
+  },
+  "next_step": "Expand dataset v0.1 before trying a real observation-conditioned policy again."
+}

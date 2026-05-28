@@ -1,0 +1,161 @@
+{
+  "generated_at": "2026-05-29T01:20:07",
+  "dataset": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\arm_hand_stage1_v2_lift_ball_dataset_v0.npz",
+  "contract_version": "stage2_lift_ball_v0_1",
+  "task_name": "arm_hand_stage1_lift_ball",
+  "status": "PASS",
+  "bc_smoke_ready": true,
+  "training_ready": false,
+  "training_scope": "BC smoke only; not a promoted baseline; RL remains blocked.",
+  "hard_checks": {
+    "required_fields_present": true,
+    "obs_is_2d": true,
+    "actions_is_2d": true,
+    "next_obs_shape_matches": true,
+    "row_counts_match": true,
+    "obs_finite": true,
+    "actions_finite": true,
+    "next_obs_finite": true,
+    "contract_version_matches": true,
+    "all_episodes_terminal_success": true,
+    "episode_split_has_train": true,
+    "episode_split_has_val": true,
+    "replay_qa_pass": true
+  },
+  "replay_status": "PASS",
+  "row_count": 9067,
+  "obs_shape": [
+    9067,
+    124
+  ],
+  "actions_shape": [
+    9067,
+    26
+  ],
+  "next_obs_shape": [
+    9067,
+    124
+  ],
+  "episode_count": 9,
+  "episode_lengths": {
+    "0": 1009,
+    "1": 1009,
+    "2": 1006,
+    "3": 1008,
+    "4": 1006,
+    "5": 1007,
+    "6": 1008,
+    "7": 1006,
+    "8": 1008
+  },
+  "success_count": 9,
+  "terminal_reason_counts": {
+    "success_lift_ball": 9
+  },
+  "phase_names": [
+    "default_hold",
+    "move_to_pre_approach",
+    "approach_ball",
+    "preshape",
+    "close_four_fingers",
+    "close_thumb",
+    "lift",
+    "hold_lift"
+  ],
+  "phase_lengths_observed": [
+    90,
+    260,
+    180,
+    120,
+    120,
+    120,
+    119,
+    0
+  ],
+  "phase_counts": {
+    "default_hold": 810,
+    "move_to_pre_approach": 2340,
+    "approach_ball": 1620,
+    "preshape": 1080,
+    "close_four_fingers": 1080,
+    "close_thumb": 1080,
+    "lift": 1057
+  },
+  "feature_config": {
+    "base_obs_dim": 124,
+    "feature_dim": 10,
+    "feature_mode": "phase_only",
+    "use_observation": false,
+    "include_phase_features": true,
+    "phase_names": [
+      "default_hold",
+      "move_to_pre_approach",
+      "approach_ball",
+      "preshape",
+      "close_four_fingers",
+      "close_thumb",
+      "lift",
+      "hold_lift"
+    ],
+    "phase_lengths": [
+      90,
+      260,
+      180,
+      120,
+      120,
+      120,
+      119,
+      0
+    ],
+    "max_episode_steps": 1009,
+    "extra_features": [
+      "phase_one_hot",
+      "phase_progress",
+      "episode_progress"
+    ]
+  },
+  "train_episodes": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8
+  ],
+  "val_episodes": [
+    1,
+    6
+  ],
+  "train_samples": 7050,
+  "val_samples": 2017,
+  "obs_range": [
+    -20.939607618016897,
+    11.478420647066349
+  ],
+  "action_range": [
+    -1.5439603100000001,
+    2.8411226300000005
+  ],
+  "reward_range": [
+    -0.591198534649208,
+    11.769515623223855
+  ],
+  "low_variance_action_dims": [
+    4,
+    5,
+    23
+  ],
+  "low_variance_obs_dims": [
+    69,
+    70,
+    88,
+    118
+  ],
+  "warnings": [
+    "Dataset v0 has only 9 scripted episodes and should be used only for first BC smoke training.",
+    "Phase features are enabled by default because this dataset is a scripted multi-stage controller.",
+    "Online rollout success is not guaranteed by low offline validation loss."
+  ],
+  "next_step": "Run train_arm_hand_stage1_v2_bc_smoke.py only if status is PASS."
+}

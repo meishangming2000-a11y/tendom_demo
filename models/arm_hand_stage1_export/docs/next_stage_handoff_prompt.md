@@ -49,18 +49,39 @@ Stage2 kickoff status:
 - Dataset v0 replay QA report:
   `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_replay_report.md`
 - Dataset v0 result: `9 episodes / 9067 rows`, `9 / 9` success, replay QA `PASS`
+- Training readiness review:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_training_readiness_report.md`
+- BC smoke training script:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\train_arm_hand_stage1_v2_bc_smoke.py`
+- BC smoke checkpoint:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_smoke.pth`
+- BC smoke train report:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_smoke_train_report.md`
+- BC smoke eval script:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand_stage1_v2_bc_smoke.py`
+- BC smoke eval report:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_smoke_eval_report.md`
+- BC smoke demo script:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_arm_hand_stage1_v2_bc_smoke.py`
+- BC smoke demo video:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_smoke\bc_smoke_policy_demo.mp4`
+- Latest BC smoke result: readiness `PASS`; phase-only schedule-conditioned BC train final val MSE about `5.43e-7`; online eval `9 / 9` success; demo episode 4 success.
+- Repair note: the first obs+phase BC attempt fit offline but failed online rollout (`0 / 9` success), so the retained smoke checkpoint uses `phase_only` features. This is a schedule-conditioned smoke artifact, not a robust closed-loop policy.
 
 Guardrails:
 
 - Do not modify CAD/STL.
 - Do not overwrite the Stage1 baseline unless explicitly promoted.
-- Do not train yet.
+- Do not promote BC/RL training yet.
 - Do not add tendon routing yet.
 - Treat collision proxy v2 as smoke-test geometry, not final physics.
+- Treat the current BC checkpoint as experimental smoke only; it is not a maintained baseline.
+- Keep RL blocked until broader reset coverage and reward QA are accepted.
 
 Recommended Stage2 continuation:
 
-1. run a training-readiness review for dataset v0 quality and bias;
-2. keep Shadow/video comparison as regression;
-3. decide whether the first policy experiment should be BC-only, still gated as experimental;
-4. keep RL blocked until a broader reset distribution and reward QA are accepted.
+1. inspect the BC smoke demo video and online eval report;
+2. decide whether to expand dataset v0.1 with more ball offsets and perturbed phase timings;
+3. replace the schedule-conditioned smoke policy with a real closed-loop obs+phase BC only after dataset coverage is broadened;
+4. keep Shadow/video comparison as regression;
+5. keep RL blocked until a broader reset distribution and reward QA are accepted.
