@@ -18,6 +18,21 @@ Latest known result:
 - ball-hand contacts: `7`
 - max penetration: about `0.0034 m`
 
+Stage2 kickoff status:
+
+- Task API: `D:\tendon_project\simulations\models\arm_hand_stage1_export\arm_hand_stage1_task_api.py`
+- Task API report:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_task_api_report.md`
+- Task API default scene: collision proxy v2 with ball
+- Action dim: `26`
+- Observation dim: `124`
+- Ball-pose sweep script:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\run_arm_hand_stage1_v2_ball_pose_sweep.py`
+- Ball-pose sweep report:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_ball_pose_sweep_report.md`
+- Default sweep: x/y offsets `[-0.015, 0.0, 0.015]`, z offset `[0.0]`
+- Default sweep result: `9 / 9` PASS
+
 Guardrails:
 
 - Do not modify CAD/STL.
@@ -26,11 +41,11 @@ Guardrails:
 - Do not add tendon routing yet.
 - Treat collision proxy v2 as smoke-test geometry, not final physics.
 
-Recommended Stage2 start:
+Recommended Stage2 continuation:
 
-1. build task API around current baseline;
-2. run small ball-pose sweep for success region;
-3. define observation/action/reward schema;
-4. collect tiny scripted dataset v0;
+1. freeze observation/action/reward/done schema;
+2. define episode result and dataset-v0 metadata contract;
+3. collect tiny scripted dataset v0 from the current lift-scene task harness;
+4. replay dataset v0 and compare against the sweep/report metrics;
 5. keep Shadow/video comparison as regression;
 6. only then discuss BC/RL training.

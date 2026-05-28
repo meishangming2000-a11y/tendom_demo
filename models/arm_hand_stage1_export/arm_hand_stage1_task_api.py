@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Minimal task API for the arm + export4 hand physics-v0 scene.
+"""Minimal task API for the arm + export4 hand Stage1 v2 baseline.
 
 This is deliberately not a Gym wrapper yet. It gives the next scripts a stable
 adapter surface for smoke rollouts, replay, and future retargeting scaffolds.
@@ -19,9 +19,21 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent
 DOCS = ROOT / "docs"
 META = ROOT / "metadata"
-DEFAULT_SCENE = ROOT / "mjcf" / "scene_arm_hand_export4_joint_limit_collision_proxy_ball.xml"
-DEFAULT_REPORT = DOCS / "arm_hand_stage1_task_api_report.md"
-DEFAULT_META = META / "arm_hand_stage1_task_api.json"
+CURRENT_BASELINE_VERSION = "collision_proxy_v2"
+CURRENT_MODEL = ROOT / "mjcf" / "arm_hand_export4_collision_proxy_v2.xml"
+CURRENT_SCENE_WITHOUT_BALL = ROOT / "mjcf" / "scene_arm_hand_export4_collision_proxy_v2.xml"
+CURRENT_SCENE_WITH_BALL = ROOT / "mjcf" / "scene_arm_hand_export4_collision_proxy_v2_ball.xml"
+CURRENT_LIFT_SCENE = ROOT / "mjcf" / "scene_arm_hand_export4_lift_ball_demo.xml"
+DEFAULT_SCENE = CURRENT_SCENE_WITH_BALL
+DEFAULT_REPORT = DOCS / "arm_hand_stage1_v2_task_api_report.md"
+DEFAULT_META = META / "arm_hand_stage1_v2_task_api.json"
+
+SCENE_REGISTRY = {
+    "model": CURRENT_MODEL,
+    "v2": CURRENT_SCENE_WITHOUT_BALL,
+    "v2_ball": CURRENT_SCENE_WITH_BALL,
+    "lift_demo": CURRENT_LIFT_SCENE,
+}
 
 TIP_SITES = {
     "index": "index_tip_site",
@@ -30,6 +42,18 @@ TIP_SITES = {
     "little": "little_tip_site",
     "thumb": "thumb_tip_site",
 }
+FINGER_ORDER = ("index", "middle", "ring", "little", "thumb")
+OBSERVATION_SCALAR_NAMES = (
+    "contact_count",
+    "max_penetration",
+    "ball_hand_contact_count",
+    "ball_arm_contact_count",
+    "index_tip_ball_distance",
+    "middle_tip_ball_distance",
+    "ring_tip_ball_distance",
+    "little_tip_ball_distance",
+    "thumb_tip_ball_distance",
+)
 
 
 def json_ready(value: Any) -> Any:
@@ -48,6 +72,14 @@ def json_ready(value: Any) -> Any:
 
 def name_or(model, mujoco, objtype, idx: int, fallback: str) -> str:
     return mujoco.mj_id2name(model, objtype, idx) or fallback
+
+
+def actuator_to_joint_name(actuator_name: str) -> str:
+    if actuator_name.startswith("a_"):
+        return actuator_name[2:]
+    if actuator_name.endswith("_pos"):
+        return actuator_name[:-4]
+    return actuator_name
 
 
 class ArmHandStage1TaskAPI:
@@ -74,25 +106,74 @@ class ArmHandStage1TaskAPI:
         self.ball_position = self._current_ball_position()
         self.reset_hand_open()
 
+    def has_ball(self) -> bool:
+        return self.ball_body_id >= 0 and self.ball_qadr is not None
+
     def _current_ball_position(self) -> np.ndarray:
         if self.ball_body_id >= 0:
             return self.data.xpos[self.ball_body_id].copy()
         return np.zeros(3, dtype=np.float64)
 
-    def set_ball_pose(self, x: float, y: float, z: float) -> None:
-        self.ball_position = np.asarray([x, y, z], dtype=np.float64)
+    def get_scene_role(self) -> str:
+        for role, path in SCENE_REGISTRY.items():
+            if self.scene_path == path.resolve():
+                return role
+        return "custom"
+
+    def get_scene_info(self) -> dict[str, Any]:
+        return {
+            "scene": self.scene_path,
+            "scene_role": self.get_scene_role(),
+            "baseline_version": CURRENT_BASELINE_VERSION,
+            "has_ball": self.has_ball(),
+            "registry": SCENE_REGISTRY,
+        }
+
+    def set_ball_pose_world(self, position: Iterable[float], quat: Iterable[float] | None = None) -> None:
+        self.ball_position = np.asarray(list(position), dtype=np.float64)
+        if self.ball_position.shape != (3,):
+            raise ValueError(f"Expected ball position shape {(3,)}, got {self.ball_position.shape}")
         if self.ball_qadr is not None:
             self.data.qpos[self.ball_qadr : self.ball_qadr + 3] = self.ball_position
-            self.data.qpos[self.ball_qadr + 3 : self.ball_qadr + 7] = [1.0, 0.0, 0.0, 0.0]
+            self.data.qpos[self.ball_qadr + 3 : self.ball_qadr + 7] = (
+                np.asarray(list(quat), dtype=np.float64) if quat is not None else [1.0, 0.0, 0.0, 0.0]
+            )
             if self.ball_dadr is not None:
                 self.data.qvel[self.ball_dadr : self.ball_dadr + 6] = 0.0
         self.mujoco.mj_forward(self.model, self.data)
 
-    def reset_hand_open(self) -> dict[str, Any]:
+    def set_ball_pose(self, x: float, y: float, z: float) -> None:
+        self.set_ball_pose_world([x, y, z])
+
+    def get_body_position(self, body_name: str) -> np.ndarray:
+        bid = self.mujoco.mj_name2id(self.model, self.mujoco.mjtObj.mjOBJ_BODY, body_name)
+        if bid < 0:
+            raise KeyError(body_name)
+        return self.data.xpos[bid].copy()
+
+    def get_body_frame(self, body_name: str) -> tuple[np.ndarray, np.ndarray]:
+        bid = self.mujoco.mj_name2id(self.model, self.mujoco.mjtObj.mjOBJ_BODY, body_name)
+        if bid < 0:
+            raise KeyError(body_name)
+        return self.data.xpos[bid].copy(), self.data.xmat[bid].reshape(3, 3).copy()
+
+    def world_from_body_local(self, body_name: str, local_xyz: Iterable[float]) -> np.ndarray:
+        pos, mat = self.get_body_frame(body_name)
+        return pos + mat @ np.asarray(list(local_xyz), dtype=np.float64)
+
+    def set_ball_pose_body_local(self, body_name: str, local_xyz: Iterable[float]) -> np.ndarray:
+        world = self.world_from_body_local(body_name, local_xyz)
+        self.set_ball_pose_world(world)
+        return world
+
+    def reset_hand_open(self, ball_position: Iterable[float] | None = None) -> dict[str, Any]:
         self.data.qpos[:] = self.model.qpos0
         self.data.qvel[:] = 0.0
         self.data.ctrl[:] = 0.0
-        self.set_ball_pose(*self.ball_position)
+        if ball_position is not None:
+            self.set_ball_pose_world(ball_position)
+        else:
+            self.set_ball_pose_world(self.ball_position)
         self.mujoco.mj_forward(self.model, self.data)
         return self.get_observation()
 
@@ -102,8 +183,51 @@ class ArmHandStage1TaskAPI:
     def get_actuator_names(self) -> list[str]:
         return list(self._actuator_names)
 
+    def get_actuator_joint_names(self) -> list[str]:
+        return [actuator_to_joint_name(name) for name in self._actuator_names]
+
     def get_action_dim(self) -> int:
         return int(self.model.nu)
+
+    def get_action_schema(self) -> dict[str, Any]:
+        rows = []
+        for aid, actuator_name in enumerate(self._actuator_names):
+            ctrlrange = self.model.actuator_ctrlrange[aid].copy() if bool(self.model.actuator_ctrllimited[aid]) else np.array([np.nan, np.nan])
+            rows.append(
+                {
+                    "index": int(aid),
+                    "actuator": actuator_name,
+                    "joint": actuator_to_joint_name(actuator_name),
+                    "ctrl_limited": bool(self.model.actuator_ctrllimited[aid]),
+                    "ctrlrange": ctrlrange,
+                }
+            )
+        return {"type": "position_target_vector", "dim": self.get_action_dim(), "entries": rows}
+
+    def get_observation_schema(self) -> dict[str, Any]:
+        nq = int(self.model.nq)
+        nv = int(self.model.nv)
+        nu = int(self.model.nu)
+        start = 0
+        slices = {}
+        for name, length in [
+            ("qpos", nq),
+            ("qvel", nv),
+            ("ctrl", nu),
+            ("fingertip_positions_xyz", 3 * len(FINGER_ORDER)),
+            ("ball_position_xyz", 3),
+            ("ball_velocity_6d", 6),
+            ("contact_and_distance_scalars", len(OBSERVATION_SCALAR_NAMES)),
+        ]:
+            slices[name] = {"start": start, "stop": start + length, "length": length}
+            start += length
+        return {
+            "type": "flat_vector",
+            "dim": start,
+            "finger_order": FINGER_ORDER,
+            "scalar_names": OBSERVATION_SCALAR_NAMES,
+            "slices": slices,
+        }
 
     def get_model_summary(self) -> dict[str, int]:
         return {
@@ -131,15 +255,28 @@ class ArmHandStage1TaskAPI:
     def action_from_targets(self, targets: dict[str, float]) -> np.ndarray:
         action = np.zeros(self.model.nu, dtype=np.float64)
         for aid, actuator_name in enumerate(self._actuator_names):
-            joint_name = actuator_name[:-4] if actuator_name.endswith("_pos") else actuator_name
-            if actuator_name.startswith("a_"):
-                joint_name = actuator_name[2:]
+            joint_name = actuator_to_joint_name(actuator_name)
             value = float(targets.get(joint_name, 0.0))
             if bool(self.model.actuator_ctrllimited[aid]):
                 low, high = self.model.actuator_ctrlrange[aid]
                 value = float(np.clip(value, low, high))
             action[aid] = value
         return action
+
+    def targets_from_current_qpos(self) -> dict[str, float]:
+        targets = {}
+        for actuator_name in self._actuator_names:
+            joint_name = actuator_to_joint_name(actuator_name)
+            jid = self.mujoco.mj_name2id(self.model, self.mujoco.mjtObj.mjOBJ_JOINT, joint_name)
+            if jid < 0:
+                continue
+            qadr = int(self.model.jnt_qposadr[jid])
+            targets[joint_name] = float(self.data.qpos[qadr])
+        return targets
+
+    def step_action(self, action: Iterable[float], n: int = 1, *, pin_ball: bool = False) -> dict[str, Any]:
+        self.apply_action(action)
+        return self.step(n=n, pin_ball=pin_ball)
 
     def step(self, n: int = 1, *, pin_ball: bool = True) -> dict[str, Any]:
         for _ in range(max(1, int(n))):
@@ -169,6 +306,7 @@ class ArmHandStage1TaskAPI:
         max_pen = 0.0
         ball_hand = 0
         ball_arm = 0
+        ball_floor = 0
         for i in range(self.data.ncon):
             c = self.data.contact[i]
             g1, g2 = int(c.geom1), int(c.geom2)
@@ -193,6 +331,8 @@ class ArmHandStage1TaskAPI:
                     ball_hand += 1
                 if arm_hit:
                     ball_arm += 1
+                if any("floor" in n for n in names):
+                    ball_floor += 1
             rows.append(
                 {
                     "geom1": geom1,
@@ -210,6 +350,7 @@ class ArmHandStage1TaskAPI:
             "max_penetration": float(max_pen),
             "ball_hand_contact_count": int(ball_hand),
             "ball_arm_contact_count": int(ball_arm),
+            "ball_floor_contact_count": int(ball_floor),
             "top_contacts": rows[:top_n],
         }
 
@@ -264,43 +405,66 @@ def load_model(scene_path: str | Path = DEFAULT_SCENE) -> ArmHandStage1TaskAPI:
     return ArmHandStage1TaskAPI(scene_path)
 
 
+def load_current_baseline(scene_role: str = "v2_ball") -> ArmHandStage1TaskAPI:
+    if scene_role not in SCENE_REGISTRY:
+        raise KeyError(f"Unknown scene role {scene_role!r}; available={sorted(SCENE_REGISTRY)}")
+    return ArmHandStage1TaskAPI(SCENE_REGISTRY[scene_role])
+
+
 def write_api_report(api: ArmHandStage1TaskAPI, report_path: Path = DEFAULT_REPORT, metadata_path: Path = DEFAULT_META) -> None:
     report_path.parent.mkdir(parents=True, exist_ok=True)
     metadata_path.parent.mkdir(parents=True, exist_ok=True)
     obs = api.get_observation()
     payload = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
-        "scene": str(api.scene_path),
+        "scene_info": api.get_scene_info(),
         "model_summary": api.get_model_summary(),
         "joint_names": api.get_joint_names(),
         "actuator_names": api.get_actuator_names(),
+        "actuator_joint_names": api.get_actuator_joint_names(),
         "action_dim": api.get_action_dim(),
+        "action_schema": api.get_action_schema(),
+        "observation_schema": api.get_observation_schema(),
         "observation_dim": int(len(obs["vector"])),
         "ball_position": obs["ball_position"],
         "contact_summary": obs["contact_summary"],
         "tip_sites": TIP_SITES,
+        "stage2_status": "api_surface_ready_for_pose_sweep",
         "training_ready": False,
     }
     metadata_path.write_text(json.dumps(json_ready(payload), indent=2, ensure_ascii=False), encoding="utf-8")
     lines = [
         "# Arm-Hand Stage1 Task API Report\n\n",
         f"Generated: {payload['generated_at']}\n\n",
-        f"- Scene: `{payload['scene']}`\n",
+        f"- Scene: `{payload['scene_info']['scene']}`\n",
+        f"- Scene role: `{payload['scene_info']['scene_role']}`\n",
+        f"- Baseline version: `{payload['scene_info']['baseline_version']}`\n",
         f"- Model summary: `{payload['model_summary']}`\n",
         f"- Action dim: `{payload['action_dim']}`\n",
         f"- Observation dim: `{payload['observation_dim']}`\n",
         f"- Default ball position: `{json_ready(payload['ball_position'])}`\n",
         f"- Open contact count: `{payload['contact_summary']['contact_count']}`\n",
         f"- Open max penetration: `{payload['contact_summary']['max_penetration']:.6f} m`\n\n",
+        "## Schema\n\n",
+        f"- Action schema: `{json.dumps(json_ready(payload['action_schema']), ensure_ascii=False)}`\n",
+        f"- Observation schema: `{json.dumps(json_ready(payload['observation_schema']), ensure_ascii=False)}`\n\n",
         "## Interface\n\n",
         "- `load_model(scene_path)`\n",
+        "- `load_current_baseline(scene_role='v2_ball')`\n",
         "- `reset_hand_open()`\n",
         "- `set_ball_pose(x, y, z)`\n",
+        "- `set_ball_pose_world(position, quat=None)`\n",
+        "- `set_ball_pose_body_local(body_name, local_xyz)`\n",
+        "- `world_from_body_local(body_name, local_xyz)`\n",
         "- `get_joint_names()`\n",
         "- `get_actuator_names()`\n",
+        "- `get_action_schema()`\n",
+        "- `get_observation_schema()`\n",
         "- `get_action_dim()`\n",
         "- `apply_action(action)`\n",
         "- `action_from_targets(targets)`\n",
+        "- `targets_from_current_qpos()`\n",
+        "- `step_action(action, n=1, pin_ball=False)`\n",
         "- `get_observation()`\n",
         "- `get_fingertip_positions()`\n",
         "- `get_ball_pose()`\n",
@@ -309,6 +473,7 @@ def write_api_report(api: ArmHandStage1TaskAPI, report_path: Path = DEFAULT_REPO
         "- `step(n=1, pin_ball=True)`\n\n",
         "## Notes\n\n",
         "- This is an adapter scaffold, not a training environment.\n",
+        "- Default loading now targets collision proxy v2 with ball; legacy physics-v0 scenes remain available by explicit path.\n",
         "- Observation includes qpos, qvel, ctrl, fingertip positions, ball pose/velocity, contact summary, and fingertip-ball distances.\n",
         "- Current `*_mcp_flex_joint` names are preserved; semantic aliases should be handled above this API.\n",
     ]

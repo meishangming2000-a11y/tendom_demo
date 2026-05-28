@@ -10,6 +10,7 @@ This workspace contains the current arm + export4 hand MuJoCo assembly.
 - Clean STL meshes remain visual-only.
 - The ball in the passive viewer can still slide/fall because gravity is active; use the scripted demo to see closure.
 - A new arm+hand lift-ball scripted smoke demo can now close around a ball and lift it in pure-physics mode using collision proxy v2.
+- Stage2 kickoff has started: the task API now defaults to collision proxy v2, and a small lift-scene ball-pose sweep is available.
 - No RL/BC training has been run or approved.
 
 ## Current Files
@@ -70,6 +71,18 @@ Default-posture to lift-ball full demo:
 python D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_arm_hand_lift_ball_from_default.py
 ```
 
+Stage2 task API report:
+
+```powershell
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\arm_hand_stage1_task_api.py
+```
+
+Stage2 ball-pose sweep:
+
+```powershell
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\run_arm_hand_stage1_v2_ball_pose_sweep.py
+```
+
 Older physics-v0 regression and tiny dataset scaffold are still available:
 
 ```powershell
@@ -122,11 +135,23 @@ Default-posture lift-ball demo:
 - Final max penetration: `0.0034 m`
 - Phases: default hold, move to pre-approach, approach ball, preshape, close four fingers, close thumb, lift, hold lift.
 
+Stage2 kickoff:
+
+- Task API default scene: collision proxy v2 with ball.
+- Task API action dim: `26`.
+- Task API observation dim: `124`.
+- Ball-pose sweep scene: lift-ball demo scene.
+- Ball-pose sweep grid: x/y offsets `[-0.015, 0.0, 0.015]`, z offset `[0.0]`.
+- Ball-pose sweep result: `9 / 9` PASS.
+- Final lift range across sweep: about `0.1517 m` to `0.1588 m`.
+
 ## Reports
 
 - Stage closeout: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\stage1_virtual_prototype_closeout.md`
 - Current baseline manifest: `D:\tendon_project\simulations\models\arm_hand_stage1_export\metadata\current_baseline_manifest.json`
 - Next-stage handoff prompt: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\next_stage_handoff_prompt.md`
+- Stage2 task API report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_task_api_report.md`
+- Stage2 ball-pose sweep report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_ball_pose_sweep_report.md`
 - Collision v2 smoke: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_smoke_report.md`
 - Collision v2 visual check: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_visual_check_report.md`
 - Shadow comparison: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_shadow_video_comparison_report.md`
