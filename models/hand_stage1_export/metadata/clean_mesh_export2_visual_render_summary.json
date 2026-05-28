@@ -1,0 +1,109 @@
+{
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_clean_mesh_export2_draft.xml",
+  "load_success": true,
+  "model": {
+    "nbody": 25,
+    "njnt": 22,
+    "ngeom": 101,
+    "nmesh": 23
+  },
+  "views": [
+    {
+      "camera": "front",
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export2\\front_view.png",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 35.6707954248366
+    },
+    {
+      "camera": "side",
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export2\\side_view.png",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 30.822947385620914
+    },
+    {
+      "camera": "top",
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export2\\top_view.png",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 3,
+      "max_pixel": 255,
+      "mean_pixel": 92.2802477124183
+    },
+    {
+      "camera": "palm",
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export2\\palm_view.png",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 62.592356535947715
+    },
+    {
+      "camera": "finger_root_closeup",
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export2\\finger_root_closeup.png",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 68.79447352941176
+    },
+    {
+      "camera": "thumb_root_closeup",
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export2\\thumb_root_closeup.png",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 253,
+      "mean_pixel": 72.57793300653594
+    },
+    {
+      "camera": "index_finger_closeup",
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export2\\index_finger_closeup.png",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 33.75593137254902
+    },
+    {
+      "camera": "full_hand_with_ball",
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export2\\full_hand_with_ball.png",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 31.931022875816993
+    }
+  ],
+  "mesh_scale": "1 1 1"
+}

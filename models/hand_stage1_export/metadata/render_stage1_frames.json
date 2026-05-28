@@ -1,0 +1,88 @@
+{
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_primitive.xml",
+  "renders": [
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\renders\\neutral_front.png",
+      "camera": "front",
+      "shape": [
+        650,
+        900,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 31.9379150997151
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\renders\\neutral_side.png",
+      "camera": "side",
+      "shape": [
+        650,
+        900,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 26.965549857549856
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\renders\\neutral_top.png",
+      "camera": "top",
+      "shape": [
+        650,
+        900,
+        3
+      ],
+      "min_pixel": 2,
+      "max_pixel": 255,
+      "mean_pixel": 90.97491225071225
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\renders\\scripted_close_front.png",
+      "camera": "front",
+      "shape": [
+        650,
+        900,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 31.639674643874645
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\renders\\scripted_close_side.png",
+      "camera": "side",
+      "shape": [
+        650,
+        900,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 27.557784045584047
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\renders\\scripted_close_top.png",
+      "camera": "top",
+      "shape": [
+        650,
+        900,
+        3
+      ],
+      "min_pixel": 3,
+      "max_pixel": 255,
+      "mean_pixel": 94.77531282051282
+    }
+  ],
+  "observed": [
+    "Neutral primitive skeleton renders show root, wrist, palm, fingers, thumb, and ball without using suspicious STL meshes.",
+    "Scripted close renders use the enhanced primitive staged target close_thumb pose.",
+    "Palm is represented by a visible ellipsoid plus MCP spokes and joint markers.",
+    "Fingertip sites are rendered as blue site markers in the primitive model.",
+    "Thumb direction remains TODO for manual semantic review; it does not yet provide a Shadow-like opposition grasp."
+  ],
+  "notes": [
+    "Rendered frames are fixed-camera visual checks for neutral and scripted close poses.",
+    "They are not a substitute for interactive axis/sign inspection in the MuJoCo viewer."
+  ]
+}

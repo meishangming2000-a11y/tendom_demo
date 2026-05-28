@@ -1,0 +1,465 @@
+{
+  "generated_at": "2026-05-25 01:42:23",
+  "schema": "export4_thumb_tuned_close_demo_v1",
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_export4_thumb_tuned.xml",
+  "thumb_visual_target": {
+    "thumb_cmc_abd_joint": -0.3,
+    "thumb_cmc_joint": 0.0,
+    "thumb_mcp_joint": 0.25,
+    "thumb_ip_joint": -0.25
+  },
+  "long_finger_targets": {
+    "index_mcp_flex_joint": -0.06,
+    "middle_mcp_flex_joint": -0.06,
+    "ring_mcp_flex_joint": -0.05,
+    "little_mcp_flex_joint": -0.04,
+    "index_mcp_abd_joint": -0.58,
+    "middle_mcp_abd_joint": -0.64,
+    "ring_mcp_abd_joint": -0.62,
+    "little_mcp_abd_joint": -0.54,
+    "index_pip_joint": -0.82,
+    "middle_pip_joint": -0.88,
+    "ring_pip_joint": -0.84,
+    "little_pip_joint": -0.76,
+    "index_dip_joint": -0.42,
+    "middle_dip_joint": -0.46,
+    "ring_dip_joint": -0.44,
+    "little_dip_joint": -0.4
+  },
+  "preshape_targets": {
+    "index_mcp_flex_joint": -0.035,
+    "middle_mcp_flex_joint": -0.035,
+    "ring_mcp_flex_joint": -0.02,
+    "little_mcp_flex_joint": -0.015,
+    "index_mcp_abd_joint": -0.34,
+    "middle_mcp_abd_joint": -0.38,
+    "ring_mcp_abd_joint": -0.2,
+    "little_mcp_abd_joint": -0.15,
+    "index_pip_joint": -0.48,
+    "middle_pip_joint": -0.52,
+    "ring_pip_joint": -0.2,
+    "little_pip_joint": -0.16,
+    "index_dip_joint": -0.22,
+    "middle_dip_joint": -0.24,
+    "ring_dip_joint": -0.1,
+    "little_dip_joint": -0.08
+  },
+  "stages": [
+    {
+      "name": "open_hand",
+      "joint_targets": {},
+      "ctrl": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "metrics": {
+        "thumb_index_distance": 0.13073542543271882,
+        "thumb_middle_distance": 0.15345342443771276,
+        "thumb_long_tip_centroid_distance": 0.14487489447640067,
+        "long_tip_spread_mean": 0.028179090385457642,
+        "contact_count": 0,
+        "max_penetration": 0.0,
+        "tip_positions": {
+          "thumb": [
+            -0.04619743223236554,
+            0.06372933108992791,
+            0.20608946214204954
+          ],
+          "index": [
+            -0.018910047281096295,
+            -0.03796370255689423,
+            0.2835857652364651
+          ],
+          "middle": [
+            0.0049100857302289205,
+            -0.05140826188637726,
+            0.2937211331462395
+          ],
+          "ring": [
+            0.026959021515102783,
+            -0.050984726555695734,
+            0.27592877963762696
+          ],
+          "little": [
+            0.054943706781413484,
+            -0.040085664045358266,
+            0.2582253105019075
+          ]
+        }
+      },
+      "images": {
+        "front": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\01_open_hand_front.png",
+        "top": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\01_open_hand_top.png",
+        "thumbside": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\01_open_hand_thumbside.png"
+      }
+    },
+    {
+      "name": "preshape",
+      "joint_targets": {
+        "index_mcp_flex_joint": -0.035,
+        "middle_mcp_flex_joint": -0.035,
+        "ring_mcp_flex_joint": -0.02,
+        "little_mcp_flex_joint": -0.015,
+        "index_mcp_abd_joint": -0.34,
+        "middle_mcp_abd_joint": -0.38,
+        "ring_mcp_abd_joint": -0.2,
+        "little_mcp_abd_joint": -0.15,
+        "index_pip_joint": -0.48,
+        "middle_pip_joint": -0.52,
+        "ring_pip_joint": -0.2,
+        "little_pip_joint": -0.16,
+        "index_dip_joint": -0.22,
+        "middle_dip_joint": -0.24,
+        "ring_dip_joint": -0.1,
+        "little_dip_joint": -0.08
+      },
+      "ctrl": [
+        0.0,
+        0.0,
+        -0.035,
+        -0.34,
+        -0.48,
+        -0.22,
+        -0.035,
+        -0.38,
+        -0.52,
+        -0.24,
+        -0.02,
+        -0.2,
+        -0.2,
+        -0.1,
+        -0.015,
+        -0.15,
+        -0.16,
+        -0.08,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "metrics": {
+        "thumb_index_distance": 0.08345423798713285,
+        "thumb_middle_distance": 0.10401458158482751,
+        "thumb_long_tip_centroid_distance": 0.11238528364515603,
+        "long_tip_spread_mean": 0.03368195145070387,
+        "contact_count": 0,
+        "max_penetration": 0.0,
+        "tip_positions": {
+          "thumb": [
+            -0.046194079710197365,
+            0.06392676510187656,
+            0.20598438011836537
+          ],
+          "index": [
+            -0.022157240455342175,
+            0.0173668090728299,
+            0.2709382921731639
+          ],
+          "middle": [
+            0.0015865702449219805,
+            0.018941817394514286,
+            0.2866838048492702
+          ],
+          "ring": [
+            0.024457790456027514,
+            -0.018702139600336384,
+            0.2818473660282594
+          ],
+          "little": [
+            0.05461502421728945,
+            -0.01860604088104406,
+            0.2619649674683776
+          ]
+        }
+      },
+      "images": {
+        "front": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\02_preshape_front.png",
+        "top": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\02_preshape_top.png",
+        "thumbside": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\02_preshape_thumbside.png"
+      }
+    },
+    {
+      "name": "four_fingers_closed",
+      "joint_targets": {
+        "index_mcp_flex_joint": -0.06,
+        "middle_mcp_flex_joint": -0.06,
+        "ring_mcp_flex_joint": -0.05,
+        "little_mcp_flex_joint": -0.04,
+        "index_mcp_abd_joint": -0.58,
+        "middle_mcp_abd_joint": -0.64,
+        "ring_mcp_abd_joint": -0.62,
+        "little_mcp_abd_joint": -0.54,
+        "index_pip_joint": -0.82,
+        "middle_pip_joint": -0.88,
+        "ring_pip_joint": -0.84,
+        "little_pip_joint": -0.76,
+        "index_dip_joint": -0.42,
+        "middle_dip_joint": -0.46,
+        "ring_dip_joint": -0.44,
+        "little_dip_joint": -0.4
+      },
+      "ctrl": [
+        0.0,
+        0.0,
+        -0.06,
+        -0.58,
+        -0.82,
+        -0.42,
+        -0.06,
+        -0.64,
+        -0.88,
+        -0.46,
+        -0.05,
+        -0.62,
+        -0.84,
+        -0.44,
+        -0.04,
+        -0.54,
+        -0.76,
+        -0.4,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "metrics": {
+        "thumb_index_distance": 0.039820309102938836,
+        "thumb_middle_distance": 0.05843593555391583,
+        "thumb_long_tip_centroid_distance": 0.06489528218393728,
+        "long_tip_spread_mean": 0.02410706329849422,
+        "contact_count": 0,
+        "max_penetration": 0.0,
+        "tip_positions": {
+          "thumb": [
+            -0.04621573810009166,
+            0.064165774731051,
+            0.20584801781034326
+          ],
+          "index": [
+            -0.02684034803015028,
+            0.04458680913420955,
+            0.23460415424848302
+          ],
+          "middle": [
+            -0.004003650368122841,
+            0.05601988786545875,
+            0.2454275926001631
+          ],
+          "ring": [
+            0.015138286339095629,
+            0.05054101209270909,
+            0.24197414693300867
+          ],
+          "little": [
+            0.04422270268093897,
+            0.04104539309078174,
+            0.23440866364836443
+          ]
+        }
+      },
+      "images": {
+        "front": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\03_four_fingers_closed_front.png",
+        "top": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\03_four_fingers_closed_top.png",
+        "thumbside": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\03_four_fingers_closed_thumbside.png"
+      }
+    },
+    {
+      "name": "thumb_visual_close",
+      "joint_targets": {
+        "index_mcp_flex_joint": -0.06,
+        "middle_mcp_flex_joint": -0.06,
+        "ring_mcp_flex_joint": -0.05,
+        "little_mcp_flex_joint": -0.04,
+        "index_mcp_abd_joint": -0.58,
+        "middle_mcp_abd_joint": -0.64,
+        "ring_mcp_abd_joint": -0.62,
+        "little_mcp_abd_joint": -0.54,
+        "index_pip_joint": -0.82,
+        "middle_pip_joint": -0.88,
+        "ring_pip_joint": -0.84,
+        "little_pip_joint": -0.76,
+        "index_dip_joint": -0.42,
+        "middle_dip_joint": -0.46,
+        "ring_dip_joint": -0.44,
+        "little_dip_joint": -0.4,
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": -0.25
+      },
+      "ctrl": [
+        0.0,
+        0.0,
+        -0.06,
+        -0.58,
+        -0.82,
+        -0.42,
+        -0.06,
+        -0.64,
+        -0.88,
+        -0.46,
+        -0.05,
+        -0.62,
+        -0.84,
+        -0.44,
+        -0.04,
+        -0.54,
+        -0.76,
+        -0.4,
+        -0.3,
+        0.0,
+        0.25,
+        -0.25
+      ],
+      "metrics": {
+        "thumb_index_distance": 0.01791676748463607,
+        "thumb_middle_distance": 0.03327232150030187,
+        "thumb_long_tip_centroid_distance": 0.03300854880089051,
+        "long_tip_spread_mean": 0.023698940599139913,
+        "contact_count": 0,
+        "max_penetration": 0.0,
+        "tip_positions": {
+          "thumb": [
+            -0.019835033738930627,
+            0.04394413203530988,
+            0.2142238433469797
+          ],
+          "index": [
+            -0.027310667648245128,
+            0.0455134436916089,
+            0.23043071582990568
+          ],
+          "middle": [
+            -0.0045719854199330655,
+            0.05750946552282789,
+            0.24049299752833503
+          ],
+          "ring": [
+            0.014281661594199893,
+            0.05388217460491545,
+            0.23420040157535768
+          ],
+          "little": [
+            0.04265198856770428,
+            0.04467787354906693,
+            0.22838423687853718
+          ]
+        }
+      },
+      "images": {
+        "front": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\04_thumb_visual_close_front.png",
+        "top": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\04_thumb_visual_close_top.png",
+        "thumbside": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\04_thumb_visual_close_thumbside.png"
+      }
+    },
+    {
+      "name": "hold",
+      "joint_targets": {
+        "index_mcp_flex_joint": -0.06,
+        "middle_mcp_flex_joint": -0.06,
+        "ring_mcp_flex_joint": -0.05,
+        "little_mcp_flex_joint": -0.04,
+        "index_mcp_abd_joint": -0.58,
+        "middle_mcp_abd_joint": -0.64,
+        "ring_mcp_abd_joint": -0.62,
+        "little_mcp_abd_joint": -0.54,
+        "index_pip_joint": -0.82,
+        "middle_pip_joint": -0.88,
+        "ring_pip_joint": -0.84,
+        "little_pip_joint": -0.76,
+        "index_dip_joint": -0.42,
+        "middle_dip_joint": -0.46,
+        "ring_dip_joint": -0.44,
+        "little_dip_joint": -0.4,
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": -0.25
+      },
+      "ctrl": [
+        0.0,
+        0.0,
+        -0.06,
+        -0.58,
+        -0.82,
+        -0.42,
+        -0.06,
+        -0.64,
+        -0.88,
+        -0.46,
+        -0.05,
+        -0.62,
+        -0.84,
+        -0.44,
+        -0.04,
+        -0.54,
+        -0.76,
+        -0.4,
+        -0.3,
+        0.0,
+        0.25,
+        -0.25
+      ],
+      "metrics": {
+        "thumb_index_distance": 0.019538762075169167,
+        "thumb_middle_distance": 0.03320014916947432,
+        "thumb_long_tip_centroid_distance": 0.03136763088709197,
+        "long_tip_spread_mean": 0.02369890644245537,
+        "contact_count": 0,
+        "max_penetration": 0.0,
+        "tip_positions": {
+          "thumb": [
+            -0.016944137056955834,
+            0.04096575117104233,
+            0.2145023160023407
+          ],
+          "index": [
+            -0.02730448893145069,
+            0.045501430012882996,
+            0.2304351107951697
+          ],
+          "middle": [
+            -0.004565438656852849,
+            0.05749666948228954,
+            0.24049743997937736
+          ],
+          "ring": [
+            0.01428797314617311,
+            0.0538700182746826,
+            0.23420349412516298
+          ],
+          "little": [
+            0.04265794929558079,
+            0.04466638653231412,
+            0.22838557332651438
+          ]
+        }
+      },
+      "images": {
+        "front": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\05_hold_front.png",
+        "top": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\05_hold_top.png",
+        "thumbside": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuned_close\\05_hold_thumbside.png"
+      }
+    }
+  ]
+}

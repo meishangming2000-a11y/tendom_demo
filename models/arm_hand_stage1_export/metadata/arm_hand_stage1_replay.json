@@ -1,0 +1,162 @@
+{
+  "generated_at": "2026-05-27T09:15:51",
+  "dataset": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\arm_hand_stage1_scripted_smoke_dataset_v0.npz",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_joint_limit_collision_proxy_ball.xml",
+  "episode_id": 0,
+  "frames_replayed": 240,
+  "available_episodes": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "dataset_files": [
+    "qpos",
+    "qvel",
+    "ctrl",
+    "obs",
+    "episode_ids",
+    "step_ids",
+    "phase_ids",
+    "ball_positions",
+    "joint_names",
+    "actuator_names",
+    "phase_name_table",
+    "scene"
+  ],
+  "qpos_shape": [
+    1200,
+    33
+  ],
+  "qvel_shape": [
+    1200,
+    32
+  ],
+  "ctrl_shape": [
+    1200,
+    26
+  ],
+  "obs_shape": [
+    1200,
+    124
+  ],
+  "task_action_dim": 26,
+  "task_obs_dim": 124,
+  "action_dim_matches": true,
+  "qpos_matches": true,
+  "qvel_matches": true,
+  "obs_dim_matches": true,
+  "final_contact": {
+    "contact_count": 7,
+    "max_penetration": 0.003999090799215765,
+    "ball_hand_contact_count": 7,
+    "ball_arm_contact_count": 0,
+    "top_contacts": [
+      {
+        "geom1": "ball_geom",
+        "geom2": "index_proximal_inter_link_collision_proxy",
+        "body1": "ball",
+        "body2": "index_proximal_inter_link",
+        "dist": -0.003999090799215765,
+        "penetration": 0.003999090799215765,
+        "pos": [
+          0.014889567628877606,
+          0.17073468327088978,
+          0.51993448618035
+        ]
+      },
+      {
+        "geom1": "ball_geom",
+        "geom2": "middle_proximal_phalanx_link_collision_proxy",
+        "body1": "ball",
+        "body2": "middle_proximal_phalanx_link",
+        "dist": -0.0024578362914171757,
+        "penetration": 0.0024578362914171757,
+        "pos": [
+          -0.002521929557456587,
+          0.14809942588367048,
+          0.5306967800024485
+        ]
+      },
+      {
+        "geom1": "ball_geom",
+        "geom2": "index_distal_link_collision_proxy",
+        "body1": "ball",
+        "body2": "index_distal_link",
+        "dist": -0.0019604307074072543,
+        "penetration": 0.0019604307074072543,
+        "pos": [
+          0.0227807155346186,
+          0.1724547170801425,
+          0.5210988644787764
+        ]
+      },
+      {
+        "geom1": "ball_geom",
+        "geom2": "middle_proximal_inter_link_collision_proxy",
+        "body1": "ball",
+        "body2": "middle_proximal_inter_link",
+        "dist": -0.001953322802080973,
+        "penetration": 0.001953322802080973,
+        "pos": [
+          0.014727066282340582,
+          0.1595089788060918,
+          0.5410034312747514
+        ]
+      },
+      {
+        "geom1": "ball_geom",
+        "geom2": "ring_proximal_inter_link_collision_proxy",
+        "body1": "ball",
+        "body2": "ring_proximal_inter_link",
+        "dist": -0.0006514721077238734,
+        "penetration": 0.0006514721077238734,
+        "pos": [
+          0.016456800497629664,
+          0.14374727392458445,
+          0.5459950200686166
+        ]
+      },
+      {
+        "geom1": "thumb_tip_collision_proxy_sphere",
+        "geom2": "ball_geom",
+        "body1": "thumb_distal_link",
+        "body2": "ball",
+        "dist": -0.00035433330220371526,
+        "penetration": 0.00035433330220371526,
+        "pos": [
+          0.04801166587621016,
+          0.14900307257959283,
+          0.5116984554316208
+        ]
+      },
+      {
+        "geom1": "index_tip_collision_proxy_sphere",
+        "geom2": "ball_geom",
+        "body1": "index_distal_link",
+        "body2": "ball",
+        "dist": -0.00033318317814295603,
+        "penetration": 0.00033318317814295603,
+        "pos": [
+          0.04056151012343066,
+          0.16569246321896627,
+          0.5184686411170846
+        ]
+      }
+    ]
+  },
+  "final_distances": {
+    "index": 0.042666816821857044,
+    "middle": 0.0531688497809357,
+    "ring": 0.0514614477270782,
+    "little": 0.06269889351260935,
+    "thumb": 0.042645666697796285
+  },
+  "screenshots": {
+    "frame_0_open_hand": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_replay\\episode_0_frame_0000_open_hand.png",
+    "frame_120_close_four_fingers": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_replay\\episode_0_frame_0120_close_four_fingers.png",
+    "frame_239_hold": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_replay\\episode_0_frame_0239_hold.png"
+  },
+  "status": "PASS"
+}

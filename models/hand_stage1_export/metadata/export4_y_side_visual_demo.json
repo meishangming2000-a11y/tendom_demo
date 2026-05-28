@@ -1,0 +1,697 @@
+{
+  "generated_at": "2026-05-26T10:30:05",
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_palmar_ypos_collision_candidate.xml",
+  "plus_y": {
+    "label": "plus_y",
+    "ball_position": [
+      0.0,
+      0.08,
+      0.21
+    ],
+    "metrics": {
+      "open": {
+        "contact_count": 0,
+        "ball_hand_contact_count": 0,
+        "max_penetration": 0.0,
+        "four_finger_avg_tip_ball_distance": 0.1459985006354153,
+        "thumb_ball_distance": 0.048945642808706114
+      },
+      "preshape": {
+        "contact_count": 0,
+        "ball_hand_contact_count": 0,
+        "max_penetration": 0.0,
+        "four_finger_avg_tip_ball_distance": 0.11070090199021493,
+        "thumb_ball_distance": 0.04907599451207867
+      },
+      "close_four_fingers": {
+        "contact_count": 0,
+        "ball_hand_contact_count": 0,
+        "max_penetration": 0.0,
+        "four_finger_avg_tip_ball_distance": 0.05271288983928523,
+        "thumb_ball_distance": 0.04902685393225743
+      },
+      "close_thumb": {
+        "contact_count": 2,
+        "ball_hand_contact_count": 2,
+        "max_penetration": 0.0010453785058186713,
+        "four_finger_avg_tip_ball_distance": 0.04650445020282058,
+        "thumb_ball_distance": 0.041426719659377234
+      },
+      "hold": {
+        "contact_count": 2,
+        "ball_hand_contact_count": 2,
+        "max_penetration": 0.0010428800133375632,
+        "four_finger_avg_tip_ball_distance": 0.0465086515396361,
+        "thumb_ball_distance": 0.04327144640708389
+      }
+    },
+    "images": {
+      "open": {
+        "front": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_open_front.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 31.972122974537037,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.34,
+          "azimuth": 145,
+          "elevation": -25
+        },
+        "top": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_open_top.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 2,
+          "max_pixel": 255,
+          "mean_pixel": 86.25735734953703,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.3,
+          "azimuth": 180,
+          "elevation": -78
+        },
+        "thumb": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_open_thumb.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 45.36433275462963,
+          "lookat": [
+            -0.015,
+            0.035,
+            0.19
+          ],
+          "distance": 0.26,
+          "azimuth": 75,
+          "elevation": -18
+        }
+      },
+      "preshape": {
+        "front": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_preshape_front.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 33.140655671296294,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.34,
+          "azimuth": 145,
+          "elevation": -25
+        },
+        "top": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_preshape_top.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 2,
+          "max_pixel": 255,
+          "mean_pixel": 85.09731799768518,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.3,
+          "azimuth": 180,
+          "elevation": -78
+        },
+        "thumb": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_preshape_thumb.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 48.275315104166665,
+          "lookat": [
+            -0.015,
+            0.035,
+            0.19
+          ],
+          "distance": 0.26,
+          "azimuth": 75,
+          "elevation": -18
+        }
+      },
+      "close_four_fingers": {
+        "front": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_close_four_fingers_front.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 35.79468113425926,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.34,
+          "azimuth": 145,
+          "elevation": -25
+        },
+        "top": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_close_four_fingers_top.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 3,
+          "max_pixel": 255,
+          "mean_pixel": 89.5870546875,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.3,
+          "azimuth": 180,
+          "elevation": -78
+        },
+        "thumb": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_close_four_fingers_thumb.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 44.44479513888889,
+          "lookat": [
+            -0.015,
+            0.035,
+            0.19
+          ],
+          "distance": 0.26,
+          "azimuth": 75,
+          "elevation": -18
+        }
+      },
+      "close_thumb": {
+        "front": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_close_thumb_front.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 35.46128819444444,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.34,
+          "azimuth": 145,
+          "elevation": -25
+        },
+        "top": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_close_thumb_top.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 3,
+          "max_pixel": 255,
+          "mean_pixel": 90.00494878472222,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.3,
+          "azimuth": 180,
+          "elevation": -78
+        },
+        "thumb": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_close_thumb_thumb.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 42.61813744212963,
+          "lookat": [
+            -0.015,
+            0.035,
+            0.19
+          ],
+          "distance": 0.26,
+          "azimuth": 75,
+          "elevation": -18
+        }
+      },
+      "hold": {
+        "front": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_hold_front.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 35.4598052662037,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.34,
+          "azimuth": 145,
+          "elevation": -25
+        },
+        "top": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_hold_top.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 3,
+          "max_pixel": 255,
+          "mean_pixel": 89.98381481481482,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.3,
+          "azimuth": 180,
+          "elevation": -78
+        },
+        "thumb": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\plus_y\\plus_y_hold_thumb.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 42.43977199074074,
+          "lookat": [
+            -0.015,
+            0.035,
+            0.19
+          ],
+          "distance": 0.26,
+          "azimuth": 75,
+          "elevation": -18
+        }
+      }
+    }
+  },
+  "minus_y": {
+    "label": "minus_y",
+    "ball_position": [
+      0.0,
+      -0.08,
+      0.21
+    ],
+    "metrics": {
+      "open": {
+        "contact_count": 0,
+        "ball_hand_contact_count": 0,
+        "max_penetration": 0.0,
+        "four_finger_avg_tip_ball_distance": 0.0842940131963762,
+        "thumb_ball_distance": 0.15113199253653875
+      },
+      "preshape": {
+        "contact_count": 0,
+        "ball_hand_contact_count": 0,
+        "max_penetration": 0.0,
+        "four_finger_avg_tip_ball_distance": 0.10848127386548033,
+        "thumb_ball_distance": 0.15120024851368657
+      },
+      "close_four_fingers": {
+        "contact_count": 0,
+        "ball_hand_contact_count": 0,
+        "max_penetration": 0.0,
+        "four_finger_avg_tip_ball_distance": 0.13379028542187124,
+        "thumb_ball_distance": 0.15145022659160084
+      },
+      "close_thumb": {
+        "contact_count": 0,
+        "ball_hand_contact_count": 0,
+        "max_penetration": 0.0,
+        "four_finger_avg_tip_ball_distance": 0.13521008756624625,
+        "thumb_ball_distance": 0.1267276489947709
+      },
+      "hold": {
+        "contact_count": 0,
+        "ball_hand_contact_count": 0,
+        "max_penetration": 0.0,
+        "four_finger_avg_tip_ball_distance": 0.1351983360786529,
+        "thumb_ball_distance": 0.12223531611730126
+      }
+    },
+    "images": {
+      "open": {
+        "front": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_open_front.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 32.410152199074076,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.34,
+          "azimuth": 145,
+          "elevation": -25
+        },
+        "top": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_open_top.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 2,
+          "max_pixel": 255,
+          "mean_pixel": 86.22215972222222,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.3,
+          "azimuth": 180,
+          "elevation": -78
+        },
+        "thumb": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_open_thumb.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 44.47901446759259,
+          "lookat": [
+            -0.015,
+            0.035,
+            0.19
+          ],
+          "distance": 0.26,
+          "azimuth": 75,
+          "elevation": -18
+        }
+      },
+      "preshape": {
+        "front": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_preshape_front.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 33.57866579861111,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.34,
+          "azimuth": 145,
+          "elevation": -25
+        },
+        "top": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_preshape_top.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 2,
+          "max_pixel": 255,
+          "mean_pixel": 85.33146325231482,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.3,
+          "azimuth": 180,
+          "elevation": -78
+        },
+        "thumb": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_preshape_thumb.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 47.55244444444445,
+          "lookat": [
+            -0.015,
+            0.035,
+            0.19
+          ],
+          "distance": 0.26,
+          "azimuth": 75,
+          "elevation": -18
+        }
+      },
+      "close_four_fingers": {
+        "front": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_close_four_fingers_front.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 36.5671015625,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.34,
+          "azimuth": 145,
+          "elevation": -25
+        },
+        "top": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_close_four_fingers_top.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 3,
+          "max_pixel": 255,
+          "mean_pixel": 89.62745630787037,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.3,
+          "azimuth": 180,
+          "elevation": -78
+        },
+        "thumb": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_close_four_fingers_thumb.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 43.06626128472222,
+          "lookat": [
+            -0.015,
+            0.035,
+            0.19
+          ],
+          "distance": 0.26,
+          "azimuth": 75,
+          "elevation": -18
+        }
+      },
+      "close_thumb": {
+        "front": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_close_thumb_front.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 36.23069994212963,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.34,
+          "azimuth": 145,
+          "elevation": -25
+        },
+        "top": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_close_thumb_top.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 3,
+          "max_pixel": 255,
+          "mean_pixel": 90.07748408564815,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.3,
+          "azimuth": 180,
+          "elevation": -78
+        },
+        "thumb": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_close_thumb_thumb.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 41.297023726851855,
+          "lookat": [
+            -0.015,
+            0.035,
+            0.19
+          ],
+          "distance": 0.26,
+          "azimuth": 75,
+          "elevation": -18
+        }
+      },
+      "hold": {
+        "front": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_hold_front.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 36.229161168981484,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.34,
+          "azimuth": 145,
+          "elevation": -25
+        },
+        "top": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_hold_top.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 3,
+          "max_pixel": 255,
+          "mean_pixel": 90.0566015625,
+          "lookat": [
+            0.0,
+            0.045,
+            0.2
+          ],
+          "distance": 0.3,
+          "azimuth": 180,
+          "elevation": -78
+        },
+        "thumb": {
+          "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\minus_y\\minus_y_hold_thumb.png",
+          "shape": [
+            900,
+            1280,
+            3
+          ],
+          "min_pixel": 0,
+          "max_pixel": 255,
+          "mean_pixel": 41.080706597222225,
+          "lookat": [
+            -0.015,
+            0.035,
+            0.19
+          ],
+          "distance": 0.26,
+          "azimuth": 75,
+          "elevation": -18
+        }
+      }
+    }
+  },
+  "comparison_sheets": {
+    "hold_front": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\comparison_hold_front_plus_y_vs_minus_y.png",
+    "hold_top": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\comparison_hold_top_plus_y_vs_minus_y.png",
+    "open_front": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_y_side_demo\\comparison_open_front_plus_y_vs_minus_y.png"
+  },
+  "notes": [
+    "Same model and scripted targets; only ball Y side differs.",
+    "This demo is for visual side confirmation, not training."
+  ]
+}

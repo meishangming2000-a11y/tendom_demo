@@ -1,0 +1,122 @@
+{
+  "generated_at": "2026-05-27T01:58:14",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\scene_arm_hand_export4_cad_mount_candidate.xml",
+  "model_summary": {
+    "nbody": 31,
+    "njnt": 26,
+    "nu": 26,
+    "ngeom": 59,
+    "nsite": 14,
+    "nmesh": 29
+  },
+  "metrics": {
+    "ee_tool_frame_site": [
+      -0.001834985849268972,
+      0.006282641995320741,
+      0.38844054371922093
+    ],
+    "ee_tool_frame_body": [
+      -0.001834985849268972,
+      0.006282641995320741,
+      0.38844054371922093
+    ],
+    "hand_base_link": [
+      -0.0035980071122547613,
+      0.011073700587086642,
+      0.4310565690259039
+    ],
+    "wrist_middle_link": [
+      -0.0027974665046797123,
+      0.022397347097025302,
+      0.4408613721577152
+    ],
+    "palm_link": [
+      -0.0023990888402606455,
+      0.03737573540451329,
+      0.45454516993781147
+    ],
+    "ee_site_to_hand_base": 0.04292071876545541,
+    "ee_body_to_hand_base": 0.04292071876545541,
+    "hand_base_to_wrist_middle": 0.014999999999999986,
+    "wrist_middle_to_palm": 0.02029179988911699
+  },
+  "views": {
+    "overview": {
+      "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks\\arm_hand_overview.png",
+      "mean_pixel": 69.47852112268518,
+      "min_pixel": 4,
+      "max_pixel": 255,
+      "lookat": [
+        -0.0021170373447648087,
+        0.021829188699917016,
+        0.4214928568285162
+      ],
+      "distance": 0.75,
+      "azimuth": 205,
+      "elevation": -22
+    },
+    "side": {
+      "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks\\arm_hand_side.png",
+      "mean_pixel": 68.20923148148148,
+      "min_pixel": 3,
+      "max_pixel": 255,
+      "lookat": [
+        -0.0021170373447648087,
+        0.021829188699917016,
+        0.4214928568285162
+      ],
+      "distance": 0.58,
+      "azimuth": 100,
+      "elevation": -18
+    },
+    "top": {
+      "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks\\arm_hand_top.png",
+      "mean_pixel": 107.0156802662037,
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "lookat": [
+        -0.0021170373447648087,
+        0.021829188699917016,
+        0.4214928568285162
+      ],
+      "distance": 0.58,
+      "azimuth": 180,
+      "elevation": -78
+    },
+    "wrist_closeup": {
+      "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks\\arm_hand_wrist_closeup.png",
+      "mean_pixel": 92.56191493055556,
+      "min_pixel": 6,
+      "max_pixel": 255,
+      "lookat": [
+        -0.0021170373447648087,
+        0.021829188699917016,
+        0.4214928568285162
+      ],
+      "distance": 0.18,
+      "azimuth": 110,
+      "elevation": -12
+    },
+    "flange_axis": {
+      "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks\\arm_hand_flange_axis.png",
+      "mean_pixel": 71.5232572337963,
+      "min_pixel": 1,
+      "max_pixel": 255,
+      "lookat": [
+        -0.001834985849268972,
+        0.006282641995320741,
+        0.38844054371922093
+      ],
+      "distance": 0.16,
+      "azimuth": 205,
+      "elevation": -4
+    }
+  },
+  "visual_conclusion": "PASS_FIRST_ASSEMBLY_CANDIDATE",
+  "notes": [
+    "Hand is a child body under ee_tool_frame.",
+    "Identity hand transform is used in this first assembly candidate.",
+    "Visual close-up shows flange/wrist attachment instead of a separate one-point connection.",
+    "TODO: final CAD-flange calibration may still need a small fixed transform adjustment."
+  ]
+}

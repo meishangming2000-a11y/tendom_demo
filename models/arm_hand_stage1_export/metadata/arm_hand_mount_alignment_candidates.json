@@ -1,0 +1,525 @@
+{
+  "generated_at": "2026-05-26T15:40:04",
+  "base_xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\arm_hand_export4_palmar_ypos_candidate.xml",
+  "candidates": [
+    {
+      "label": "identity",
+      "pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quat": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "Current first assembly transform.",
+      "xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\arm_hand_export4_mount_identity.xml",
+      "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_identity.xml",
+      "render": {
+        "label": "identity",
+        "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_identity.xml",
+        "ee_tool_frame_world": [
+          -0.001834985849268972,
+          0.006282641995320741,
+          0.38844054371922093
+        ],
+        "hand_base_world": [
+          -0.001834985849268972,
+          0.006282641995320741,
+          0.38844054371922093
+        ],
+        "palm_world": [
+          0.0019770889347825336,
+          0.0413597315664609,
+          0.3885617312512554
+        ],
+        "ee_to_hand_base_distance": 0.0,
+        "views": {
+          "flange_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\identity_flange_closeup.png",
+            "mean_pixel": 103.29151041666667,
+            "min_pixel": 2,
+            "max_pixel": 255
+          },
+          "wrist_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\identity_wrist_closeup.png",
+            "mean_pixel": 94.69754195601851,
+            "min_pixel": 3,
+            "max_pixel": 255
+          },
+          "top": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\identity_top.png",
+            "mean_pixel": 126.14805603780864,
+            "min_pixel": 4,
+            "max_pixel": 255
+          }
+        }
+      }
+    },
+    {
+      "label": "tool_z_plus_12mm",
+      "pos": [
+        0.0,
+        0.0,
+        0.012
+      ],
+      "quat": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "Move hand outward along ee_tool_frame local +Z.",
+      "xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\arm_hand_export4_mount_tool_z_plus_12mm.xml",
+      "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_z_plus_12mm.xml",
+      "render": {
+        "label": "tool_z_plus_12mm",
+        "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_z_plus_12mm.xml",
+        "ee_tool_frame_world": [
+          -0.001834985849268972,
+          0.006282641995320741,
+          0.38844054371922093
+        ],
+        "hand_base_world": [
+          -0.0008326168838050873,
+          0.01824069416907332,
+          0.3884561855505061
+        ],
+        "palm_world": [
+          0.0029794579002464182,
+          0.05331778374021348,
+          0.3885773730825406
+        ],
+        "ee_to_hand_base_distance": 0.011999999999999993,
+        "views": {
+          "flange_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_z_plus_12mm_flange_closeup.png",
+            "mean_pixel": 97.18932629243827,
+            "min_pixel": 2,
+            "max_pixel": 255
+          },
+          "wrist_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_z_plus_12mm_wrist_closeup.png",
+            "mean_pixel": 95.61242332175927,
+            "min_pixel": 3,
+            "max_pixel": 255
+          },
+          "top": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_z_plus_12mm_top.png",
+            "mean_pixel": 126.09767650462963,
+            "min_pixel": 3,
+            "max_pixel": 255
+          }
+        }
+      }
+    },
+    {
+      "label": "tool_z_plus_25mm",
+      "pos": [
+        0.0,
+        0.0,
+        0.025
+      ],
+      "quat": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "Move hand outward along ee_tool_frame local +Z by about hand-base half-depth.",
+      "xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\arm_hand_export4_mount_tool_z_plus_25mm.xml",
+      "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_z_plus_25mm.xml",
+      "render": {
+        "label": "tool_z_plus_25mm",
+        "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_z_plus_25mm.xml",
+        "ee_tool_frame_world": [
+          -0.001834985849268972,
+          0.006282641995320741,
+          0.38844054371922093
+        ],
+        "hand_base_world": [
+          0.00025328282878078756,
+          0.031195250690638616,
+          0.38847313086773166
+        ],
+        "palm_world": [
+          0.004065357612832293,
+          0.06627234026177878,
+          0.38859431839976616
+        ],
+        "ee_to_hand_base_distance": 0.02499999999999999,
+        "views": {
+          "flange_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_z_plus_25mm_flange_closeup.png",
+            "mean_pixel": 91.12404947916667,
+            "min_pixel": 2,
+            "max_pixel": 255
+          },
+          "wrist_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_z_plus_25mm_wrist_closeup.png",
+            "mean_pixel": 96.61398871527778,
+            "min_pixel": 3,
+            "max_pixel": 255
+          },
+          "top": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_z_plus_25mm_top.png",
+            "mean_pixel": 126.18146894290123,
+            "min_pixel": 3,
+            "max_pixel": 255
+          }
+        }
+      }
+    },
+    {
+      "label": "tool_z_minus_12mm",
+      "pos": [
+        0.0,
+        0.0,
+        -0.012
+      ],
+      "quat": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "Move hand inward along ee_tool_frame local -Z.",
+      "xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\arm_hand_export4_mount_tool_z_minus_12mm.xml",
+      "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_z_minus_12mm.xml",
+      "render": {
+        "label": "tool_z_minus_12mm",
+        "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_z_minus_12mm.xml",
+        "ee_tool_frame_world": [
+          -0.001834985849268972,
+          0.006282641995320741,
+          0.38844054371922093
+        ],
+        "hand_base_world": [
+          -0.0028373548147328565,
+          -0.005675410178431839,
+          0.38842490188793577
+        ],
+        "palm_world": [
+          0.000974719969318649,
+          0.029401679392708324,
+          0.38854608941997026
+        ],
+        "ee_to_hand_base_distance": 0.011999999999999995,
+        "views": {
+          "flange_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_z_minus_12mm_flange_closeup.png",
+            "mean_pixel": 108.55247347608025,
+            "min_pixel": 2,
+            "max_pixel": 255
+          },
+          "wrist_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_z_minus_12mm_wrist_closeup.png",
+            "mean_pixel": 93.74548418209876,
+            "min_pixel": 3,
+            "max_pixel": 255
+          },
+          "top": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_z_minus_12mm_top.png",
+            "mean_pixel": 126.2199826388889,
+            "min_pixel": 3,
+            "max_pixel": 255
+          }
+        }
+      }
+    },
+    {
+      "label": "tool_z_minus_25mm",
+      "pos": [
+        0.0,
+        0.0,
+        -0.025
+      ],
+      "quat": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "Move hand inward along ee_tool_frame local -Z by about hand-base half-depth.",
+      "xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\arm_hand_export4_mount_tool_z_minus_25mm.xml",
+      "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_z_minus_25mm.xml",
+      "render": {
+        "label": "tool_z_minus_25mm",
+        "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_z_minus_25mm.xml",
+        "ee_tool_frame_world": [
+          -0.001834985849268972,
+          0.006282641995320741,
+          0.38844054371922093
+        ],
+        "hand_base_world": [
+          -0.003923254527318731,
+          -0.018629966699997134,
+          0.3884079565707102
+        ],
+        "palm_world": [
+          -0.00011117974326722586,
+          0.016447122871143027,
+          0.3885291441027447
+        ],
+        "ee_to_hand_base_distance": 0.02499999999999999,
+        "views": {
+          "flange_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_z_minus_25mm_flange_closeup.png",
+            "mean_pixel": 112.59855516975308,
+            "min_pixel": 2,
+            "max_pixel": 255
+          },
+          "wrist_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_z_minus_25mm_wrist_closeup.png",
+            "mean_pixel": 92.82121431327161,
+            "min_pixel": 2,
+            "max_pixel": 255
+          },
+          "top": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_z_minus_25mm_top.png",
+            "mean_pixel": 125.96772714120371,
+            "min_pixel": 3,
+            "max_pixel": 255
+          }
+        }
+      }
+    },
+    {
+      "label": "tool_x_plus_15mm",
+      "pos": [
+        0.015,
+        0.0,
+        0.0
+      ],
+      "quat": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "Lateral local +X centering diagnostic.",
+      "xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\arm_hand_export4_mount_tool_x_plus_15mm.xml",
+      "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_x_plus_15mm.xml",
+      "render": {
+        "label": "tool_x_plus_15mm",
+        "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_x_plus_15mm.xml",
+        "ee_tool_frame_world": [
+          -0.001834985849268972,
+          0.006282641995320741,
+          0.38844054371922093
+        ],
+        "hand_base_world": [
+          0.00889444616747912,
+          0.005396923066281578,
+          0.377995698551545
+        ],
+        "palm_world": [
+          0.012706520951530624,
+          0.040474012637421744,
+          0.3781168860835795
+        ],
+        "ee_to_hand_base_distance": 0.015000000000000003,
+        "views": {
+          "flange_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_x_plus_15mm_flange_closeup.png",
+            "mean_pixel": 111.64697771990741,
+            "min_pixel": 2,
+            "max_pixel": 255
+          },
+          "wrist_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_x_plus_15mm_wrist_closeup.png",
+            "mean_pixel": 95.76031491126543,
+            "min_pixel": 2,
+            "max_pixel": 255
+          },
+          "top": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_x_plus_15mm_top.png",
+            "mean_pixel": 126.02659191743827,
+            "min_pixel": 4,
+            "max_pixel": 255
+          }
+        }
+      }
+    },
+    {
+      "label": "tool_x_minus_15mm",
+      "pos": [
+        -0.015,
+        0.0,
+        0.0
+      ],
+      "quat": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "Lateral local -X centering diagnostic.",
+      "xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\arm_hand_export4_mount_tool_x_minus_15mm.xml",
+      "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_x_minus_15mm.xml",
+      "render": {
+        "label": "tool_x_minus_15mm",
+        "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_x_minus_15mm.xml",
+        "ee_tool_frame_world": [
+          -0.001834985849268972,
+          0.006282641995320741,
+          0.38844054371922093
+        ],
+        "hand_base_world": [
+          -0.012564417866017063,
+          0.007168360924359904,
+          0.39888538888689684
+        ],
+        "palm_world": [
+          -0.008752343081965559,
+          0.04224545049550007,
+          0.39900657641893134
+        ],
+        "ee_to_hand_base_distance": 0.015000000000000003,
+        "views": {
+          "flange_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_x_minus_15mm_flange_closeup.png",
+            "mean_pixel": 95.81321228780864,
+            "min_pixel": 2,
+            "max_pixel": 255
+          },
+          "wrist_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_x_minus_15mm_wrist_closeup.png",
+            "mean_pixel": 93.31306664737654,
+            "min_pixel": 3,
+            "max_pixel": 255
+          },
+          "top": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_x_minus_15mm_top.png",
+            "mean_pixel": 126.4713888888889,
+            "min_pixel": 3,
+            "max_pixel": 255
+          }
+        }
+      }
+    },
+    {
+      "label": "tool_y_plus_15mm",
+      "pos": [
+        0.0,
+        0.015,
+        0.0
+      ],
+      "quat": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "Local +Y diagnostic.",
+      "xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\arm_hand_export4_mount_tool_y_plus_15mm.xml",
+      "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_y_plus_15mm.xml",
+      "render": {
+        "label": "tool_y_plus_15mm",
+        "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_y_plus_15mm.xml",
+        "ee_tool_frame_world": [
+          -0.001834985849268972,
+          0.006282641995320741,
+          0.38844054371922093
+        ],
+        "hand_base_world": [
+          -0.01224216494891746,
+          0.007169093379532841,
+          0.3776746333010878
+        ],
+        "palm_world": [
+          -0.008430090164865955,
+          0.042246182950673006,
+          0.3777958208331223
+        ],
+        "ee_to_hand_base_distance": 0.014999999999999977,
+        "views": {
+          "flange_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_y_plus_15mm_flange_closeup.png",
+            "mean_pixel": 100.76719907407407,
+            "min_pixel": 2,
+            "max_pixel": 255
+          },
+          "wrist_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_y_plus_15mm_wrist_closeup.png",
+            "mean_pixel": 91.60858265817902,
+            "min_pixel": 3,
+            "max_pixel": 255
+          },
+          "top": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_y_plus_15mm_top.png",
+            "mean_pixel": 126.53572675540123,
+            "min_pixel": 3,
+            "max_pixel": 255
+          }
+        }
+      }
+    },
+    {
+      "label": "tool_y_minus_15mm",
+      "pos": [
+        0.0,
+        -0.015,
+        0.0
+      ],
+      "quat": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "Local -Y diagnostic.",
+      "xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\arm_hand_export4_mount_tool_y_minus_15mm.xml",
+      "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_y_minus_15mm.xml",
+      "render": {
+        "label": "tool_y_minus_15mm",
+        "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_alignment_candidates\\scene_arm_hand_export4_mount_tool_y_minus_15mm.xml",
+        "ee_tool_frame_world": [
+          -0.001834985849268972,
+          0.006282641995320741,
+          0.38844054371922093
+        ],
+        "hand_base_world": [
+          0.008572193250379516,
+          0.005396190611108641,
+          0.39920645413735406
+        ],
+        "palm_world": [
+          0.012384268034431021,
+          0.0404732801822488,
+          0.39932764166938856
+        ],
+        "ee_to_hand_base_distance": 0.014999999999999977,
+        "views": {
+          "flange_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_y_minus_15mm_flange_closeup.png",
+            "mean_pixel": 104.4156925154321,
+            "min_pixel": 2,
+            "max_pixel": 255
+          },
+          "wrist_closeup": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_y_minus_15mm_wrist_closeup.png",
+            "mean_pixel": 96.51953896604938,
+            "min_pixel": 4,
+            "max_pixel": 255
+          },
+          "top": {
+            "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\tool_y_minus_15mm_top.png",
+            "mean_pixel": 125.8910368441358,
+            "min_pixel": 4,
+            "max_pixel": 255
+          }
+        }
+      }
+    }
+  ],
+  "contact_sheets": {
+    "flange_closeup": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\contact_sheet_flange_closeup.png",
+    "wrist_closeup": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\contact_sheet_wrist_closeup.png",
+    "top": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\contact_sheet_top.png"
+  },
+  "status": "PENDING_VISUAL_SELECTION"
+}

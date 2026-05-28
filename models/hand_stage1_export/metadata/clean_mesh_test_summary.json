@@ -1,0 +1,972 @@
+{
+  "clean_mesh_test_dir": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test",
+  "suspicious_baseline": {
+    "classification": "suspicious_export_mesh",
+    "unique_byte_sizes": [
+      3955184
+    ],
+    "unique_triangle_counts": [
+      79102
+    ]
+  },
+  "stl_files": [
+    {
+      "filename": "hand_base_link.STL",
+      "normalized_name": "hand_base_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\hand_base_link.STL",
+      "size_bytes": 143484,
+      "triangle_count": 2868,
+      "bbox_min": [
+        0.8426797986030579,
+        15.558634757995605,
+        4.054023265838623
+      ],
+      "bbox_max": [
+        49.785282135009766,
+        40.33301544189453,
+        43.40011215209961
+      ],
+      "bbox_span": [
+        48.94260233640671,
+        24.774380683898926,
+        39.346088886260986
+      ],
+      "bbox_volume_estimate": 47708.02443340801,
+      "sha256": "a65d10279446ef511f29d51da7e245a95d47e1762a4359efede2c0d5fed63c3f",
+      "stl_format": "binary",
+      "link_name": "hand_base_link",
+      "logical_link_name": "hand_base_link",
+      "mjcf_filename": "hand_base_link.STL"
+    },
+    {
+      "filename": "index_distal_link.STL",
+      "normalized_name": "index_distal_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\index_distal_link.STL",
+      "size_bytes": 252584,
+      "triangle_count": 5050,
+      "bbox_min": [
+        2.191312789916992,
+        220.55628967285156,
+        0.9281489849090576
+      ],
+      "bbox_max": [
+        20.163103103637695,
+        254.9551239013672,
+        15.688651084899902
+      ],
+      "bbox_span": [
+        17.971790313720703,
+        34.398834228515625,
+        14.760502099990845
+      ],
+      "bbox_volume_estimate": 9125.069866830274,
+      "sha256": "238b49f685859ddf2c24d8a888ac1444772356e519de9d11aa7ed79d0b94ef10",
+      "stl_format": "binary",
+      "link_name": "index_distal_link",
+      "logical_link_name": "index_distal_link",
+      "mjcf_filename": "index_distal_link.STL"
+    },
+    {
+      "filename": "index_mcp_flex_link.STL",
+      "normalized_name": "index_mcp_flex_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\index_mcp_flex_link.STL",
+      "size_bytes": 72284,
+      "triangle_count": 1444,
+      "bbox_min": [
+        1.0690407752990723,
+        151.6769256591797,
+        0.8904012441635132
+      ],
+      "bbox_max": [
+        19.66216468811035,
+        171.44496154785156,
+        15.42387580871582
+      ],
+      "bbox_span": [
+        18.59312391281128,
+        19.768035888671875,
+        14.533474564552307
+      ],
+      "bbox_volume_estimate": 5341.771902298539,
+      "sha256": "0edf8f31ae0a82de6311bed0474b60997990873e1527673e8b3f847399934b29",
+      "stl_format": "binary",
+      "link_name": "index_mcp_flex_link",
+      "logical_link_name": "index_mcp_flex_link",
+      "mjcf_filename": "index_mcp_flex_link.STL"
+    },
+    {
+      "filename": "index_proximal_inter_link.STL",
+      "normalized_name": "index_proximal_inter_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\index_proximal_inter_link.STL",
+      "size_bytes": 108584,
+      "triangle_count": 2170,
+      "bbox_min": [
+        1.8299099206924438,
+        191.7568359375,
+        1.8980199098587036
+      ],
+      "bbox_max": [
+        20.739145278930664,
+        235.2780303955078,
+        20.227783203125
+      ],
+      "bbox_span": [
+        18.90923535823822,
+        43.52119445800781,
+        18.329763293266296
+      ],
+      "bbox_volume_estimate": 15084.524693001571,
+      "sha256": "81b4981541d0e1f629ee213dc92c72168e69bf60423e52f8012cbd9cb43ef38f",
+      "stl_format": "binary",
+      "link_name": "index_proximal_inter_link",
+      "logical_link_name": "index_proximal_inter_link",
+      "mjcf_filename": "index_proximal_inter_link.STL"
+    },
+    {
+      "filename": "index_proximal_phalanx_link.STL",
+      "normalized_name": "index_proximal_phalanx_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\index_proximal_phalanx_link.STL",
+      "size_bytes": 120184,
+      "triangle_count": 2402,
+      "bbox_min": [
+        1.882838487625122,
+        156.757568359375,
+        0.5055965781211853
+      ],
+      "bbox_max": [
+        21.271881103515625,
+        206.4761199951172,
+        17.098543167114258
+      ],
+      "bbox_span": [
+        19.389042615890503,
+        49.71855163574219,
+        16.592946588993073
+      ],
+      "bbox_volume_estimate": 15995.519479566474,
+      "sha256": "c04ee967e90d32a60cbd8fcd21baa19a00c65b9f9db38ff1967780087c18f787",
+      "stl_format": "binary",
+      "link_name": "index_proximal_phalanx_link",
+      "logical_link_name": "index_proximal_phalanx_link",
+      "mjcf_filename": "index_proximal_phalanx_link.STL"
+    },
+    {
+      "filename": "little_distal_link.STL",
+      "normalized_name": "little_distal_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\little_distal_link.STL",
+      "size_bytes": 252084,
+      "triangle_count": 5040,
+      "bbox_min": [
+        67.44819641113281,
+        196.8752899169922,
+        3.187565565109253
+      ],
+      "bbox_max": [
+        86.2957534790039,
+        230.38356018066406,
+        23.087717056274414
+      ],
+      "bbox_span": [
+        18.847557067871094,
+        33.508270263671875,
+        19.90015149116516
+      ],
+      "bbox_volume_estimate": 12567.92149129938,
+      "sha256": "e5e36943b587d09b691df943ff513990253bdcf765f9b815751e01e9f8a824ec",
+      "stl_format": "binary",
+      "link_name": "little_distal_link",
+      "logical_link_name": "little_distal_link",
+      "mjcf_filename": "little_distal_link.STL"
+    },
+    {
+      "filename": "little_mcp_flex_link.STL",
+      "normalized_name": "little_mcp_flex_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\little_mcp_flex_link.STL",
+      "size_bytes": 72284,
+      "triangle_count": 1444,
+      "bbox_min": [
+        53.520172119140625,
+        133.6918182373047,
+        0.8904012441635132
+      ],
+      "bbox_max": [
+        73.39434051513672,
+        154.20147705078125,
+        15.42387580871582
+      ],
+      "bbox_span": [
+        19.874168395996094,
+        20.509658813476562,
+        14.533474564552307
+      ],
+      "bbox_volume_estimate": 5924.0246365815565,
+      "sha256": "3c04adc6977db8d3e3a9b17e42312847e421bd24403171f1fbecb8ab959e9f00",
+      "stl_format": "binary",
+      "link_name": "little_mcp_flex_link",
+      "logical_link_name": "little_mcp_flex_link",
+      "mjcf_filename": "little_mcp_flex_link.STL"
+    },
+    {
+      "filename": "little_proximal_inter_link.STL",
+      "normalized_name": "little_proximal_inter_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\little_proximal_inter_link.STL",
+      "size_bytes": 101184,
+      "triangle_count": 2022,
+      "bbox_min": [
+        63.195579528808594,
+        172.2649383544922,
+        1.2626110315322876
+      ],
+      "bbox_max": [
+        84.87261962890625,
+        213.29681396484375,
+        17.897478103637695
+      ],
+      "bbox_span": [
+        21.677040100097656,
+        41.03187561035156,
+        16.634867072105408
+      ],
+      "bbox_volume_estimate": 14795.876079387815,
+      "sha256": "dfbd152a60a7bf4081da104e63ebaa6c9f7c0417b2ad1cbf2c4282f21534b6e1",
+      "stl_format": "binary",
+      "link_name": "little_proximal_inter_link",
+      "logical_link_name": "little_proximal_inter_link",
+      "mjcf_filename": "little_proximal_inter_link.STL"
+    },
+    {
+      "filename": "little_proximal_phalanx_link.STL",
+      "normalized_name": "little_proximal_phalanx_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\little_proximal_phalanx_link.STL",
+      "size_bytes": 119684,
+      "triangle_count": 2392,
+      "bbox_min": [
+        56.48748779296875,
+        137.92530822753906,
+        0.7912147641181946
+      ],
+      "bbox_max": [
+        80.21588897705078,
+        188.81175231933594,
+        18.132482528686523
+      ],
+      "bbox_span": [
+        23.72840118408203,
+        50.886444091796875,
+        17.34126776456833
+      ],
+      "bbox_volume_estimate": 20938.78243793659,
+      "sha256": "89d4008196e7f7f10c7abc443a52b71d588b8d35d329dd294929192faec03a02",
+      "stl_format": "binary",
+      "link_name": "little_proximal_phalanx_link",
+      "logical_link_name": "little_proximal_phalanx_link",
+      "mjcf_filename": "little_proximal_phalanx_link.STL"
+    },
+    {
+      "filename": "middle_distal_link.STL",
+      "normalized_name": "middle_distal_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\middle_distal_link.STL",
+      "size_bytes": 252584,
+      "triangle_count": 5050,
+      "bbox_min": [
+        19.578704833984375,
+        233.67056274414062,
+        5.260056495666504
+      ],
+      "bbox_max": [
+        37.54288864135742,
+        267.270751953125,
+        23.91813087463379
+      ],
+      "bbox_span": [
+        17.964183807373047,
+        33.600189208984375,
+        18.658074378967285
+      ],
+      "bbox_volume_estimate": 11262.013227064088,
+      "sha256": "8f23eb753bf72d9ff3d247f272f7edb7d60395808b79e05db240381a57565922",
+      "stl_format": "binary",
+      "link_name": "middle_distal_link",
+      "logical_link_name": "middle_distal_link",
+      "mjcf_filename": "middle_distal_link.STL"
+    },
+    {
+      "filename": "middle_mcp_flex_link.STL",
+      "normalized_name": "middle_mcp_flex_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\middle_mcp_flex_link.STL",
+      "size_bytes": 72284,
+      "triangle_count": 1444,
+      "bbox_min": [
+        12.955754280090332,
+        148.9091033935547,
+        0.8904012441635132
+      ],
+      "bbox_max": [
+        31.68558120727539,
+        168.7589569091797,
+        15.42387580871582
+      ],
+      "bbox_span": [
+        18.72982692718506,
+        19.849853515625,
+        14.533474564552307
+      ],
+      "bbox_volume_estimate": 5403.31797097442,
+      "sha256": "e68f49ec9ca3eaa88ffe5bacb56cd232eef3ca6987140b685d9baab2afe412e4",
+      "stl_format": "binary",
+      "link_name": "middle_mcp_flex_link",
+      "logical_link_name": "middle_mcp_flex_link",
+      "mjcf_filename": "middle_mcp_flex_link.STL"
+    },
+    {
+      "filename": "middle_proximal_inter_link.STL",
+      "normalized_name": "middle_proximal_inter_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\middle_proximal_inter_link.STL",
+      "size_bytes": 103584,
+      "triangle_count": 2070,
+      "bbox_min": [
+        17.526615142822266,
+        198.70877075195312,
+        2.9333839416503906
+      ],
+      "bbox_max": [
+        37.179832458496094,
+        248.54554748535156,
+        20.01601791381836
+      ],
+      "bbox_span": [
+        19.653217315673828,
+        49.83677673339844,
+        17.08263397216797
+      ],
+      "bbox_volume_estimate": 16731.637150948613,
+      "sha256": "9bad4562b029edd608bdffc5c880cfd439cad0ade389ce6f83cfbce61e6c0a82",
+      "stl_format": "binary",
+      "link_name": "middle_proximal_inter_link",
+      "logical_link_name": "middle_proximal_inter_link",
+      "mjcf_filename": "middle_proximal_inter_link.STL"
+    },
+    {
+      "filename": "middle_proximal_phalanx_link.STL",
+      "normalized_name": "middle_proximal_phalanx_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\middle_proximal_phalanx_link.STL",
+      "size_bytes": 110784,
+      "triangle_count": 2214,
+      "bbox_min": [
+        14.333442687988281,
+        153.91329956054688,
+        1.269820213317871
+      ],
+      "bbox_max": [
+        34.697784423828125,
+        213.65628051757812,
+        20.008100509643555
+      ],
+      "bbox_span": [
+        20.364341735839844,
+        59.74298095703125,
+        18.738280296325684
+      ],
+      "bbox_volume_estimate": 22797.488008042583,
+      "sha256": "9bd35a43bf1ea2dc1e8f40bf0097eef7e307ddb396f234aae41cb20e5052c1b7",
+      "stl_format": "binary",
+      "link_name": "middle_proximal_phalanx_link",
+      "logical_link_name": "middle_proximal_phalanx_link",
+      "mjcf_filename": "middle_proximal_phalanx_link.STL"
+    },
+    {
+      "filename": "palm_link.STL",
+      "normalized_name": "palm_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\palm_link.STL",
+      "size_bytes": 977984,
+      "triangle_count": 19558,
+      "bbox_min": [
+        18.387523651123047,
+        50.978702545166016,
+        34.214515686035156
+      ],
+      "bbox_max": [
+        100.62866973876953,
+        156.81581115722656,
+        69.57150268554688
+      ],
+      "bbox_span": [
+        82.24114608764648,
+        105.83710861206055,
+        35.35698699951172
+      ],
+      "bbox_volume_estimate": 307753.05266623024,
+      "sha256": "6ea0aad9f47df722859b29660fd6e4585e1567b00db22f98fe5a3960a9c46979",
+      "stl_format": "binary",
+      "link_name": "palm_link",
+      "logical_link_name": "palm_link",
+      "mjcf_filename": "palm_link.STL"
+    },
+    {
+      "filename": "ring_distal_link.STL",
+      "normalized_name": "ring_distal_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\ring_distal_link.STL",
+      "size_bytes": 257784,
+      "triangle_count": 5154,
+      "bbox_min": [
+        40.930381774902344,
+        216.6483612060547,
+        7.620538711547852
+      ],
+      "bbox_max": [
+        58.87339782714844,
+        249.68507385253906,
+        28.229692459106445
+      ],
+      "bbox_span": [
+        17.943016052246094,
+        33.036712646484375,
+        20.609153747558594
+      ],
+      "bbox_volume_estimate": 12216.658408382846,
+      "sha256": "fa15302e158bfbbbd4f75c3d2421e65f1ee06e8180345cd957d303f63496fa5b",
+      "stl_format": "binary",
+      "link_name": "ring_distal_link",
+      "logical_link_name": "ring_distal_link",
+      "mjcf_filename": "ring_distal_link.STL"
+    },
+    {
+      "filename": "ring_mcp_flex_link.STL",
+      "normalized_name": "ring_mcp_flex_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\ring_mcp_flex_link.STL",
+      "size_bytes": 72284,
+      "triangle_count": 1444,
+      "bbox_min": [
+        33.05633544921875,
+        142.33554077148438,
+        0.8904012441635132
+      ],
+      "bbox_max": [
+        52.027584075927734,
+        162.32614135742188,
+        15.42387580871582
+      ],
+      "bbox_span": [
+        18.971248626708984,
+        19.9906005859375,
+        14.533474564552307
+      ],
+      "bbox_volume_estimate": 5511.771598336951,
+      "sha256": "16b25a86f0e67109782f7fc6a50589fe29df89aeaa251ae9f2d3b2bccf111f4b",
+      "stl_format": "binary",
+      "link_name": "ring_mcp_flex_link",
+      "logical_link_name": "ring_mcp_flex_link",
+      "mjcf_filename": "ring_mcp_flex_link.STL"
+    },
+    {
+      "filename": "ring_proximal_inter_link.STL",
+      "normalized_name": "ring_proximal_inter_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\ring_proximal_inter_link.STL",
+      "size_bytes": 107384,
+      "triangle_count": 2146,
+      "bbox_min": [
+        38.544403076171875,
+        186.9356689453125,
+        3.397818088531494
+      ],
+      "bbox_max": [
+        58.54715347290039,
+        231.8014678955078,
+        22.35363006591797
+      ],
+      "bbox_span": [
+        20.002750396728516,
+        44.86579895019531,
+        18.955811977386475
+      ],
+      "bbox_volume_estimate": 17011.69210574235,
+      "sha256": "84732bf610607621dee944c292aa5e499e244ba660095b09025de43b3600c2cc",
+      "stl_format": "binary",
+      "link_name": "ring_proximal_inter_link",
+      "logical_link_name": "ring_proximal_inter_link",
+      "mjcf_filename": "ring_proximal_inter_link.STL"
+    },
+    {
+      "filename": "ring_proximal_phalanx_link.STL",
+      "normalized_name": "ring_proximal_phalanx_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\ring_proximal_phalanx_link.STL",
+      "size_bytes": 111884,
+      "triangle_count": 2236,
+      "bbox_min": [
+        34.77324676513672,
+        147.18734741210938,
+        1.2042467594146729
+      ],
+      "bbox_max": [
+        55.6280517578125,
+        202.2015838623047,
+        19.407733917236328
+      ],
+      "bbox_span": [
+        20.85480499267578,
+        55.01423645019531,
+        18.203487157821655
+      ],
+      "bbox_volume_estimate": 20885.064203544745,
+      "sha256": "cc90277a41156ea189bebe3c0ab949922272419a8efbeac078eada1ffe69144e",
+      "stl_format": "binary",
+      "link_name": "ring_proximal_phalanx_link",
+      "logical_link_name": "ring_proximal_phalanx_link",
+      "mjcf_filename": "ring_proximal_phalanx_link.STL"
+    },
+    {
+      "filename": "thumb_distal_link.STL",
+      "normalized_name": "thumb_distal_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\thumb_distal_link.STL",
+      "size_bytes": 193484,
+      "triangle_count": 3868,
+      "bbox_min": [
+        2.3506131172180176,
+        132.66702270507812,
+        7.128955841064453
+      ],
+      "bbox_max": [
+        18.611785888671875,
+        167.86526489257812,
+        41.717857360839844
+      ],
+      "bbox_span": [
+        16.261172771453857,
+        35.1982421875,
+        34.58890151977539
+      ],
+      "bbox_volume_estimate": 19797.466153923455,
+      "sha256": "fad34f036d58e67757459ea750b480ee022b09bfb8b054e78b07b35a444ef400",
+      "stl_format": "binary",
+      "link_name": "thumb_distal_link",
+      "logical_link_name": "thumb_distal_link",
+      "mjcf_filename": "thumb_distal_link.STL"
+    },
+    {
+      "filename": "thumb_metacarpal_link.STL",
+      "normalized_name": "thumb_metacarpal_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\thumb_metacarpal_link.STL",
+      "size_bytes": 116784,
+      "triangle_count": 2334,
+      "bbox_min": [
+        8.145120620727539,
+        73.98660278320312,
+        7.413809299468994
+      ],
+      "bbox_max": [
+        39.143524169921875,
+        128.04971313476562,
+        57.089759826660156
+      ],
+      "bbox_span": [
+        30.998403549194336,
+        54.0631103515625,
+        49.67595052719116
+      ],
+      "bbox_volume_estimate": 83250.44076389236,
+      "sha256": "0d5e5bc3e6f5405431fcaa850657a5b7635f07b70e50c4a0f780e44e9b2b3383",
+      "stl_format": "binary",
+      "link_name": "thumb_metacarpal_link",
+      "logical_link_name": "thumb_metacarpal_link",
+      "mjcf_filename": "thumb_metacarpal_link.STL"
+    },
+    {
+      "filename": "thumb_proximal_link.STL",
+      "normalized_name": "thumb_proximal_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\thumb_proximal_link.STL",
+      "size_bytes": 103584,
+      "triangle_count": 2070,
+      "bbox_min": [
+        4.133835792541504,
+        109.1093521118164,
+        3.0181972980499268
+      ],
+      "bbox_max": [
+        23.022911071777344,
+        153.49179077148438,
+        46.16484832763672
+      ],
+      "bbox_span": [
+        18.88907527923584,
+        44.38243865966797,
+        43.14665102958679
+      ],
+      "bbox_volume_estimate": 36171.70256857843,
+      "sha256": "c2b3751ad131eb825369a9aa808f52d7a36c052b38bd7b9d585a026990b1e5a4",
+      "stl_format": "binary",
+      "link_name": "thumb_proximal_link",
+      "logical_link_name": "thumb_proximal_link",
+      "mjcf_filename": "thumb_proximal_link.STL"
+    },
+    {
+      "filename": "thumb_root_connector_link - hand 装配(1).STEP-1 D18d12H4.STEP-1.STL",
+      "normalized_name": "thumb_root_connector_link - hand 装配(1).step-1 d18d12h4.step-1.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\thumb_root_connector_link - hand 装配(1).STEP-1 D18d12H4.STEP-1.STL",
+      "size_bytes": 41684,
+      "triangle_count": 832,
+      "bbox_min": [
+        4.88400936126709,
+        65.82970428466797,
+        9.63332748413086
+      ],
+      "bbox_max": [
+        22.918994903564453,
+        80.79141998291016,
+        25.331506729125977
+      ],
+      "bbox_span": [
+        18.034985542297363,
+        14.961715698242188,
+        15.698179244995117
+      ],
+      "bbox_volume_estimate": 4235.907620800343,
+      "sha256": "707ff91f1939809ac6352aec927a79bc989e89efeeb29cae64ca4d2368c8dfc9",
+      "stl_format": "binary",
+      "link_name": "thumb_root_connector_link - hand 装配(1).STEP-1 D18d12H4.STEP-1",
+      "logical_link_name": "thumb_root_connector_link",
+      "mjcf_filename": "thumb_root_connector_link_707ff91f.STL"
+    },
+    {
+      "filename": "thumb_root_connector_link - hand 装配(1).STEP-1 Trapezium1.STEP-1.STL",
+      "normalized_name": "thumb_root_connector_link - hand 装配(1).step-1 trapezium1.step-1.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\thumb_root_connector_link - hand 装配(1).STEP-1 Trapezium1.STEP-1.STL",
+      "size_bytes": 38484,
+      "triangle_count": 768,
+      "bbox_min": [
+        1.7422229051589966,
+        74.9057388305664,
+        2.4906606674194336
+      ],
+      "bbox_max": [
+        18.788677215576172,
+        87.85006713867188,
+        17.694421768188477
+      ],
+      "bbox_span": [
+        17.046454310417175,
+        12.944328308105469,
+        15.203761100769043
+      ],
+      "bbox_volume_estimate": 3354.7844017821817,
+      "sha256": "b6051f8180a437a6cccb0dcf367bf50c4f490c78904fb97e540ec86932715e24",
+      "stl_format": "binary",
+      "link_name": "thumb_root_connector_link - hand 装配(1).STEP-1 Trapezium1.STEP-1",
+      "logical_link_name": "thumb_root_connector_link",
+      "mjcf_filename": "thumb_root_connector_link_b6051f81.STL"
+    },
+    {
+      "filename": "thumb_root_connector_link - hand 装配(1).STEP-1 Trapezium3.STEP-1.STL",
+      "normalized_name": "thumb_root_connector_link - hand 装配(1).step-1 trapezium3.step-1.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\thumb_root_connector_link - hand 装配(1).STEP-1 Trapezium3.STEP-1.STL",
+      "size_bytes": 121584,
+      "triangle_count": 2430,
+      "bbox_min": [
+        3.7671070098876953,
+        67.73348999023438,
+        6.270061492919922
+      ],
+      "bbox_max": [
+        21.002077102661133,
+        84.3815689086914,
+        23.244213104248047
+      ],
+      "bbox_span": [
+        17.234970092773438,
+        16.64807891845703,
+        16.974151611328125
+      ],
+      "bbox_volume_estimate": 4870.378762459092,
+      "sha256": "36a50eba5f344f78bb85407fd2014a2b9b4d7579746da333d59b6d73c26183fb",
+      "stl_format": "binary",
+      "link_name": "thumb_root_connector_link - hand 装配(1).STEP-1 Trapezium3.STEP-1",
+      "logical_link_name": "thumb_root_connector_link",
+      "mjcf_filename": "thumb_root_connector_link_36a50eba.STL"
+    },
+    {
+      "filename": "wrist_middle_link.STL",
+      "normalized_name": "wrist_middle_link.stl",
+      "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\wrist_middle_link.STL",
+      "size_bytes": 32684,
+      "triangle_count": 652,
+      "bbox_min": [
+        0.6783256530761719,
+        29.868755340576172,
+        2.3375706672668457
+      ],
+      "bbox_max": [
+        56.67832565307617,
+        57.913272857666016,
+        34.49541091918945
+      ],
+      "bbox_span": [
+        56.0,
+        28.044517517089844,
+        32.15784025192261
+      ],
+      "bbox_volume_estimate": 50503.662398381945,
+      "sha256": "664f7388a8b0de164ff95bf0a84249af7705d7c6083281233ab9e45f5f2da428",
+      "stl_format": "binary",
+      "link_name": "wrist_middle_link",
+      "logical_link_name": "wrist_middle_link",
+      "mjcf_filename": "wrist_middle_link.STL"
+    }
+  ],
+  "evaluation": {
+    "stl_count": 25,
+    "unique_size_count": 20,
+    "unique_triangle_count": 20,
+    "duplicate_hash_groups": [],
+    "expected_present": [
+      "hand_base_link",
+      "index_distal_link",
+      "index_mcp_flex_link",
+      "index_proximal_inter_link",
+      "index_proximal_phalanx_link",
+      "little_distal_link",
+      "little_mcp_flex_link",
+      "little_proximal_inter_link",
+      "little_proximal_phalanx_link",
+      "middle_distal_link",
+      "middle_mcp_flex_link",
+      "middle_proximal_inter_link",
+      "middle_proximal_phalanx_link",
+      "palm_link",
+      "ring_distal_link",
+      "ring_mcp_flex_link",
+      "ring_proximal_inter_link",
+      "ring_proximal_phalanx_link",
+      "thumb_distal_link",
+      "thumb_metacarpal_link",
+      "thumb_proximal_link",
+      "thumb_root_connector_link",
+      "wrist_middle_link"
+    ],
+    "missing_expected_links": [],
+    "special_checks": {
+      "palm_link_present": true,
+      "index_distal_link_present": true,
+      "hand_base_link_present": true,
+      "index_distal_smaller_than_palm_by_volume": true,
+      "index_distal_smaller_than_palm_by_max_span": true,
+      "hand_base_not_identical_to_palm": true,
+      "hand_base_not_identical_to_index_distal": true,
+      "thumb_metacarpal_link_present": true,
+      "thumb_proximal_link_present": true,
+      "thumb_distal_link_present": true,
+      "thumb_root_connector_link_part_count": 3,
+      "thumb_root_connector_link_files": [
+        "thumb_root_connector_link - hand 装配(1).STEP-1 D18d12H4.STEP-1.STL",
+        "thumb_root_connector_link - hand 装配(1).STEP-1 Trapezium1.STEP-1.STL",
+        "thumb_root_connector_link - hand 装配(1).STEP-1 Trapezium3.STEP-1.STL"
+      ],
+      "oversized_bbox_over_300mm_count": 0,
+      "oversized_bbox_over_300mm_files": []
+    },
+    "more_credible_than_suspicious_export_mesh": true,
+    "passed": true
+  },
+  "copied_files": [
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\hand_base_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\hand_base_link.STL",
+      "original_filename": "hand_base_link.STL",
+      "mjcf_filename": "hand_base_link.STL",
+      "sha256": "a65d10279446ef511f29d51da7e245a95d47e1762a4359efede2c0d5fed63c3f"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\index_distal_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\index_distal_link.STL",
+      "original_filename": "index_distal_link.STL",
+      "mjcf_filename": "index_distal_link.STL",
+      "sha256": "238b49f685859ddf2c24d8a888ac1444772356e519de9d11aa7ed79d0b94ef10"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\index_mcp_flex_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\index_mcp_flex_link.STL",
+      "original_filename": "index_mcp_flex_link.STL",
+      "mjcf_filename": "index_mcp_flex_link.STL",
+      "sha256": "0edf8f31ae0a82de6311bed0474b60997990873e1527673e8b3f847399934b29"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\index_proximal_inter_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\index_proximal_inter_link.STL",
+      "original_filename": "index_proximal_inter_link.STL",
+      "mjcf_filename": "index_proximal_inter_link.STL",
+      "sha256": "81b4981541d0e1f629ee213dc92c72168e69bf60423e52f8012cbd9cb43ef38f"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\index_proximal_phalanx_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\index_proximal_phalanx_link.STL",
+      "original_filename": "index_proximal_phalanx_link.STL",
+      "mjcf_filename": "index_proximal_phalanx_link.STL",
+      "sha256": "c04ee967e90d32a60cbd8fcd21baa19a00c65b9f9db38ff1967780087c18f787"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\little_distal_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\little_distal_link.STL",
+      "original_filename": "little_distal_link.STL",
+      "mjcf_filename": "little_distal_link.STL",
+      "sha256": "e5e36943b587d09b691df943ff513990253bdcf765f9b815751e01e9f8a824ec"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\little_mcp_flex_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\little_mcp_flex_link.STL",
+      "original_filename": "little_mcp_flex_link.STL",
+      "mjcf_filename": "little_mcp_flex_link.STL",
+      "sha256": "3c04adc6977db8d3e3a9b17e42312847e421bd24403171f1fbecb8ab959e9f00"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\little_proximal_inter_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\little_proximal_inter_link.STL",
+      "original_filename": "little_proximal_inter_link.STL",
+      "mjcf_filename": "little_proximal_inter_link.STL",
+      "sha256": "dfbd152a60a7bf4081da104e63ebaa6c9f7c0417b2ad1cbf2c4282f21534b6e1"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\little_proximal_phalanx_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\little_proximal_phalanx_link.STL",
+      "original_filename": "little_proximal_phalanx_link.STL",
+      "mjcf_filename": "little_proximal_phalanx_link.STL",
+      "sha256": "89d4008196e7f7f10c7abc443a52b71d588b8d35d329dd294929192faec03a02"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\middle_distal_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\middle_distal_link.STL",
+      "original_filename": "middle_distal_link.STL",
+      "mjcf_filename": "middle_distal_link.STL",
+      "sha256": "8f23eb753bf72d9ff3d247f272f7edb7d60395808b79e05db240381a57565922"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\middle_mcp_flex_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\middle_mcp_flex_link.STL",
+      "original_filename": "middle_mcp_flex_link.STL",
+      "mjcf_filename": "middle_mcp_flex_link.STL",
+      "sha256": "e68f49ec9ca3eaa88ffe5bacb56cd232eef3ca6987140b685d9baab2afe412e4"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\middle_proximal_inter_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\middle_proximal_inter_link.STL",
+      "original_filename": "middle_proximal_inter_link.STL",
+      "mjcf_filename": "middle_proximal_inter_link.STL",
+      "sha256": "9bad4562b029edd608bdffc5c880cfd439cad0ade389ce6f83cfbce61e6c0a82"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\middle_proximal_phalanx_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\middle_proximal_phalanx_link.STL",
+      "original_filename": "middle_proximal_phalanx_link.STL",
+      "mjcf_filename": "middle_proximal_phalanx_link.STL",
+      "sha256": "9bd35a43bf1ea2dc1e8f40bf0097eef7e307ddb396f234aae41cb20e5052c1b7"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\palm_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\palm_link.STL",
+      "original_filename": "palm_link.STL",
+      "mjcf_filename": "palm_link.STL",
+      "sha256": "6ea0aad9f47df722859b29660fd6e4585e1567b00db22f98fe5a3960a9c46979"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\ring_distal_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\ring_distal_link.STL",
+      "original_filename": "ring_distal_link.STL",
+      "mjcf_filename": "ring_distal_link.STL",
+      "sha256": "fa15302e158bfbbbd4f75c3d2421e65f1ee06e8180345cd957d303f63496fa5b"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\ring_mcp_flex_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\ring_mcp_flex_link.STL",
+      "original_filename": "ring_mcp_flex_link.STL",
+      "mjcf_filename": "ring_mcp_flex_link.STL",
+      "sha256": "16b25a86f0e67109782f7fc6a50589fe29df89aeaa251ae9f2d3b2bccf111f4b"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\ring_proximal_inter_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\ring_proximal_inter_link.STL",
+      "original_filename": "ring_proximal_inter_link.STL",
+      "mjcf_filename": "ring_proximal_inter_link.STL",
+      "sha256": "84732bf610607621dee944c292aa5e499e244ba660095b09025de43b3600c2cc"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\ring_proximal_phalanx_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\ring_proximal_phalanx_link.STL",
+      "original_filename": "ring_proximal_phalanx_link.STL",
+      "mjcf_filename": "ring_proximal_phalanx_link.STL",
+      "sha256": "cc90277a41156ea189bebe3c0ab949922272419a8efbeac078eada1ffe69144e"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\thumb_distal_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\thumb_distal_link.STL",
+      "original_filename": "thumb_distal_link.STL",
+      "mjcf_filename": "thumb_distal_link.STL",
+      "sha256": "fad34f036d58e67757459ea750b480ee022b09bfb8b054e78b07b35a444ef400"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\thumb_metacarpal_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\thumb_metacarpal_link.STL",
+      "original_filename": "thumb_metacarpal_link.STL",
+      "mjcf_filename": "thumb_metacarpal_link.STL",
+      "sha256": "0d5e5bc3e6f5405431fcaa850657a5b7635f07b70e50c4a0f780e44e9b2b3383"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\thumb_proximal_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\thumb_proximal_link.STL",
+      "original_filename": "thumb_proximal_link.STL",
+      "mjcf_filename": "thumb_proximal_link.STL",
+      "sha256": "c2b3751ad131eb825369a9aa808f52d7a36c052b38bd7b9d585a026990b1e5a4"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\thumb_root_connector_link - hand 装配(1).STEP-1 D18d12H4.STEP-1.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\thumb_root_connector_link_707ff91f.STL",
+      "original_filename": "thumb_root_connector_link - hand 装配(1).STEP-1 D18d12H4.STEP-1.STL",
+      "mjcf_filename": "thumb_root_connector_link_707ff91f.STL",
+      "sha256": "707ff91f1939809ac6352aec927a79bc989e89efeeb29cae64ca4d2368c8dfc9"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\thumb_root_connector_link - hand 装配(1).STEP-1 Trapezium1.STEP-1.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\thumb_root_connector_link_b6051f81.STL",
+      "original_filename": "thumb_root_connector_link - hand 装配(1).STEP-1 Trapezium1.STEP-1.STL",
+      "mjcf_filename": "thumb_root_connector_link_b6051f81.STL",
+      "sha256": "b6051f8180a437a6cccb0dcf367bf50c4f490c78904fb97e540ec86932715e24"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\thumb_root_connector_link - hand 装配(1).STEP-1 Trapezium3.STEP-1.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\thumb_root_connector_link_36a50eba.STL",
+      "original_filename": "thumb_root_connector_link - hand 装配(1).STEP-1 Trapezium3.STEP-1.STL",
+      "mjcf_filename": "thumb_root_connector_link_36a50eba.STL",
+      "sha256": "36a50eba5f344f78bb85407fd2014a2b9b4d7579746da333d59b6d73c26183fb"
+    },
+    {
+      "source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\clean_mesh_test\\wrist_middle_link.STL",
+      "destination": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes_clean\\wrist_middle_link.STL",
+      "original_filename": "wrist_middle_link.STL",
+      "mjcf_filename": "wrist_middle_link.STL",
+      "sha256": "664f7388a8b0de164ff95bf0a84249af7705d7c6083281233ab9e45f5f2da428"
+    }
+  ],
+  "clean_links_used_in_draft": [
+    "hand_base_link",
+    "index_distal_link",
+    "index_mcp_flex_link",
+    "index_proximal_inter_link",
+    "index_proximal_phalanx_link",
+    "little_distal_link",
+    "little_mcp_flex_link",
+    "little_proximal_inter_link",
+    "little_proximal_phalanx_link",
+    "middle_distal_link",
+    "middle_mcp_flex_link",
+    "middle_proximal_inter_link",
+    "middle_proximal_phalanx_link",
+    "palm_link",
+    "ring_distal_link",
+    "ring_mcp_flex_link",
+    "ring_proximal_inter_link",
+    "ring_proximal_phalanx_link",
+    "thumb_distal_link",
+    "thumb_metacarpal_link",
+    "thumb_proximal_link",
+    "thumb_root_connector_link",
+    "wrist_middle_link"
+  ],
+  "clean_mesh_draft_created": true,
+  "passed": true
+}

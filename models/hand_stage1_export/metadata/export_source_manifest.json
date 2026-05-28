@@ -1,0 +1,7 @@
+﻿{
+    "urdf_source":  "D:\\tendon_project\\hardwares\\hand\\hand_export\\urdf\\hand_export.urdf",
+    "target":  "D:\\tendon_project\\simulations\\models\\hand_stage1_export",
+    "source":  "D:\\tendon_project\\hardwares\\hand\\hand_export",
+    "robot_urdf":  "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\robot.urdf",
+    "copied_at_local":  "2026-05-13T02:29:52"
+}

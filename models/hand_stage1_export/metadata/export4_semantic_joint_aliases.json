@@ -1,0 +1,219 @@
+{
+  "generated_at": "2026-05-26T02:03:55",
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+  "keypoints": {
+    "palm_reference": {
+      "body": "palm_link",
+      "note": "Use palm_link pose as the current palm reference. TODO: finalize palmar/dorsal side convention."
+    },
+    "index_tip": {
+      "site": "index_tip_site"
+    },
+    "middle_tip": {
+      "site": "middle_tip_site"
+    },
+    "ring_tip": {
+      "site": "ring_tip_site"
+    },
+    "little_tip": {
+      "site": "little_tip_site"
+    },
+    "thumb_tip": {
+      "site": "thumb_tip_site"
+    }
+  },
+  "action_groups": {
+    "wrist_joints": [
+      "wrist_1_joint",
+      "wrist_2_joint"
+    ],
+    "four_finger_spread_joints_currently_named_mcp_flex": [
+      "index_mcp_flex_joint",
+      "middle_mcp_flex_joint",
+      "ring_mcp_flex_joint",
+      "little_mcp_flex_joint"
+    ],
+    "four_finger_flex_joints": [
+      "index_mcp_abd_joint",
+      "index_pip_joint",
+      "index_dip_joint",
+      "middle_mcp_abd_joint",
+      "middle_pip_joint",
+      "middle_dip_joint",
+      "ring_mcp_abd_joint",
+      "ring_pip_joint",
+      "ring_dip_joint",
+      "little_mcp_abd_joint",
+      "little_pip_joint",
+      "little_dip_joint"
+    ],
+    "thumb_joints": [
+      "thumb_cmc_abd_joint",
+      "thumb_cmc_joint",
+      "thumb_mcp_joint",
+      "thumb_ip_joint"
+    ]
+  },
+  "semantic_joint_aliases": [
+    {
+      "semantic_name": "wrist_yaw_or_roll_1",
+      "current_joint_name": "wrist_1_joint",
+      "actual_motion_semantics": "wrist root DOF, exact anatomical meaning TBD",
+      "note": "Keep as explicit wrist group for Shadow/human alignment.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "wrist_yaw_or_roll_2",
+      "current_joint_name": "wrist_2_joint",
+      "actual_motion_semantics": "wrist/palm active hinge, confirmed should be revolute",
+      "note": "Included in action mapping after wrist2 experiment.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "index_spread",
+      "current_joint_name": "index_mcp_flex_joint",
+      "actual_motion_semantics": "spread / abduction-adduction",
+      "note": "Name is misleading; do not rename yet. Semantic alias used for retargeting.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "index_mcp_flexion",
+      "current_joint_name": "index_mcp_abd_joint",
+      "actual_motion_semantics": "likely primary MCP flexion for current export4",
+      "note": "Name may be semantically reversed relative to CAD labels; verify with visual audit before training.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "index_pip_flexion",
+      "current_joint_name": "index_pip_joint",
+      "actual_motion_semantics": "PIP flexion",
+      "note": "Current scripted close uses negative target sign.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "index_dip_flexion",
+      "current_joint_name": "index_dip_joint",
+      "actual_motion_semantics": "DIP flexion",
+      "note": "Current scripted close uses negative target sign.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "middle_spread",
+      "current_joint_name": "middle_mcp_flex_joint",
+      "actual_motion_semantics": "spread / abduction-adduction",
+      "note": "Name is misleading; do not rename yet. Semantic alias used for retargeting.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "middle_mcp_flexion",
+      "current_joint_name": "middle_mcp_abd_joint",
+      "actual_motion_semantics": "likely primary MCP flexion for current export4",
+      "note": "Name may be semantically reversed relative to CAD labels; verify with visual audit before training.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "middle_pip_flexion",
+      "current_joint_name": "middle_pip_joint",
+      "actual_motion_semantics": "PIP flexion",
+      "note": "Current scripted close uses negative target sign.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "middle_dip_flexion",
+      "current_joint_name": "middle_dip_joint",
+      "actual_motion_semantics": "DIP flexion",
+      "note": "Current scripted close uses negative target sign.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "ring_spread",
+      "current_joint_name": "ring_mcp_flex_joint",
+      "actual_motion_semantics": "spread / abduction-adduction",
+      "note": "Name is misleading; do not rename yet. Semantic alias used for retargeting.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "ring_mcp_flexion",
+      "current_joint_name": "ring_mcp_abd_joint",
+      "actual_motion_semantics": "likely primary MCP flexion for current export4",
+      "note": "Name may be semantically reversed relative to CAD labels; verify with visual audit before training.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "ring_pip_flexion",
+      "current_joint_name": "ring_pip_joint",
+      "actual_motion_semantics": "PIP flexion",
+      "note": "Current scripted close uses negative target sign.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "ring_dip_flexion",
+      "current_joint_name": "ring_dip_joint",
+      "actual_motion_semantics": "DIP flexion",
+      "note": "Current scripted close uses negative target sign.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "little_spread",
+      "current_joint_name": "little_mcp_flex_joint",
+      "actual_motion_semantics": "spread / abduction-adduction",
+      "note": "Name is misleading; do not rename yet. Semantic alias used for retargeting.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "little_mcp_flexion",
+      "current_joint_name": "little_mcp_abd_joint",
+      "actual_motion_semantics": "likely primary MCP flexion for current export4",
+      "note": "Name may be semantically reversed relative to CAD labels; verify with visual audit before training.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "little_pip_flexion",
+      "current_joint_name": "little_pip_joint",
+      "actual_motion_semantics": "PIP flexion",
+      "note": "Current scripted close uses negative target sign.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "little_dip_flexion",
+      "current_joint_name": "little_dip_joint",
+      "actual_motion_semantics": "DIP flexion",
+      "note": "Current scripted close uses negative target sign.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "thumb_cmc_abduction",
+      "current_joint_name": "thumb_cmc_abd_joint",
+      "actual_motion_semantics": "thumb first CMC DOF; axis confirmed through center in SolidWorks",
+      "note": "Sign selected by scripted target; do not flip axis automatically.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "thumb_cmc_flexion",
+      "current_joint_name": "thumb_cmc_joint",
+      "actual_motion_semantics": "thumb second CMC/flexion DOF in export4 naming",
+      "note": "Export3/4 naming kept as `thumb_cmc_joint`; semantic alias records actual role.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "thumb_mcp_flexion",
+      "current_joint_name": "thumb_mcp_joint",
+      "actual_motion_semantics": "thumb MCP flexion",
+      "note": "Axis previously confirmed by user as mechanically credible.",
+      "exists_in_model": "True"
+    },
+    {
+      "semantic_name": "thumb_ip_flexion",
+      "current_joint_name": "thumb_ip_joint",
+      "actual_motion_semantics": "thumb IP flexion",
+      "note": "Target sign remains scripted/audited.",
+      "exists_in_model": "True"
+    }
+  ],
+  "notes": [
+    "This is a scaffold only, not real human/Shadow retargeting.",
+    "Four-finger *_mcp_flex_joint names are retained but aliased as spread/abd-add.",
+    "Four-finger *_mcp_abd_joint may be the primary MCP flexion in current export4.",
+    "TODO: finalize palm-side convention before mapping video hand pose to ball-relative targets."
+  ]
+}

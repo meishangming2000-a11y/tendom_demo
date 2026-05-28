@@ -1,0 +1,148 @@
+# Primitive Scripted Grasp Ball Report
+
+- Scene: `D:\tendon_project\simulations\models\hand_stage1_export\mjcf\scene_ball_primitive.xml`
+- Load success: yes
+- Ball position: `[0.01, -0.045, 0.215]`
+- Ball radius: 0.025 m
+- Visual grasp status: approximate_wrap_visible_in_primitive_skeleton
+- Steps per stage: 8
+
+## Stages
+
+- `open_hand`
+  - `index_dip_joint`: 0 rad
+  - `index_mcp_abd_joint`: 0 rad
+  - `index_mcp_flex_joint`: 0 rad
+  - `index_pip_joint`: 0 rad
+  - `little_dip_joint`: 0 rad
+  - `little_mcp_abd_joint`: 0 rad
+  - `little_mcp_flex_joint`: 0 rad
+  - `little_pip_joint`: 0 rad
+  - `middle_dip_joint`: 0 rad
+  - `middle_mcp_abd_joint`: 0 rad
+  - `middle_mcp_flex_joint`: 0 rad
+  - `middle_pip_joint`: 0 rad
+  - `ring_dip_joint`: 0 rad
+  - `ring_mcp_abd_joint`: 0 rad
+  - `ring_mcp_flex_joint`: 0 rad
+  - `ring_pip_joint`: 0 rad
+  - `thumb_cmc_joint`: 0 rad
+  - `thumb_ip_joint`: 0 rad
+  - `thumb_mcp_joint`: 0 rad
+- `approach_pre_shape`
+  - `index_dip_joint`: 0 rad
+  - `index_mcp_abd_joint`: 0.16 rad
+  - `index_mcp_flex_joint`: -0.04 rad
+  - `index_pip_joint`: 0 rad
+  - `little_dip_joint`: 0 rad
+  - `little_mcp_abd_joint`: 0.16 rad
+  - `little_mcp_flex_joint`: 0.06 rad
+  - `little_pip_joint`: 0 rad
+  - `middle_dip_joint`: 0 rad
+  - `middle_mcp_abd_joint`: 0.18 rad
+  - `middle_mcp_flex_joint`: 0 rad
+  - `middle_pip_joint`: 0 rad
+  - `ring_dip_joint`: 0 rad
+  - `ring_mcp_abd_joint`: 0.18 rad
+  - `ring_mcp_flex_joint`: 0.03 rad
+  - `ring_pip_joint`: 0 rad
+  - `thumb_cmc_joint`: 0.12 rad
+  - `thumb_ip_joint`: 0.08 rad
+  - `thumb_mcp_joint`: 0.1 rad
+- `close_four_fingers`
+  - `index_dip_joint`: 0.35 rad
+  - `index_mcp_abd_joint`: 0.45 rad
+  - `index_mcp_flex_joint`: -0.08 rad
+  - `index_pip_joint`: 0.65 rad
+  - `little_dip_joint`: 0.35 rad
+  - `little_mcp_abd_joint`: 0.45 rad
+  - `little_mcp_flex_joint`: 0.08 rad
+  - `little_pip_joint`: 0.65 rad
+  - `middle_dip_joint`: 0.38 rad
+  - `middle_mcp_abd_joint`: 0.5 rad
+  - `middle_mcp_flex_joint`: 0 rad
+  - `middle_pip_joint`: 0.7 rad
+  - `ring_dip_joint`: 0.38 rad
+  - `ring_mcp_abd_joint`: 0.5 rad
+  - `ring_mcp_flex_joint`: 0.04 rad
+  - `ring_pip_joint`: 0.7 rad
+  - `thumb_cmc_joint`: 0.12 rad
+  - `thumb_ip_joint`: 0.08 rad
+  - `thumb_mcp_joint`: 0.1 rad
+- `close_thumb`
+  - `index_dip_joint`: 0.35 rad
+  - `index_mcp_abd_joint`: 0.45 rad
+  - `index_mcp_flex_joint`: -0.08 rad
+  - `index_pip_joint`: 0.65 rad
+  - `little_dip_joint`: 0.35 rad
+  - `little_mcp_abd_joint`: 0.45 rad
+  - `little_mcp_flex_joint`: 0.08 rad
+  - `little_pip_joint`: 0.65 rad
+  - `middle_dip_joint`: 0.38 rad
+  - `middle_mcp_abd_joint`: 0.5 rad
+  - `middle_mcp_flex_joint`: 0 rad
+  - `middle_pip_joint`: 0.7 rad
+  - `ring_dip_joint`: 0.38 rad
+  - `ring_mcp_abd_joint`: 0.5 rad
+  - `ring_mcp_flex_joint`: 0.04 rad
+  - `ring_pip_joint`: 0.7 rad
+  - `thumb_cmc_joint`: 0.25 rad
+  - `thumb_ip_joint`: 0.35 rad
+  - `thumb_mcp_joint`: 0.45 rad
+- `hold`
+  - `index_dip_joint`: 0.35 rad
+  - `index_mcp_abd_joint`: 0.45 rad
+  - `index_mcp_flex_joint`: -0.08 rad
+  - `index_pip_joint`: 0.65 rad
+  - `little_dip_joint`: 0.35 rad
+  - `little_mcp_abd_joint`: 0.45 rad
+  - `little_mcp_flex_joint`: 0.08 rad
+  - `little_pip_joint`: 0.65 rad
+  - `middle_dip_joint`: 0.38 rad
+  - `middle_mcp_abd_joint`: 0.5 rad
+  - `middle_mcp_flex_joint`: 0 rad
+  - `middle_pip_joint`: 0.7 rad
+  - `ring_dip_joint`: 0.38 rad
+  - `ring_mcp_abd_joint`: 0.5 rad
+  - `ring_mcp_flex_joint`: 0.04 rad
+  - `ring_pip_joint`: 0.7 rad
+  - `thumb_cmc_joint`: 0.25 rad
+  - `thumb_ip_joint`: 0.35 rad
+  - `thumb_mcp_joint`: 0.45 rad
+
+## Applied Joint Targets
+
+- `index_dip_joint`: 0.35 rad
+- `index_mcp_abd_joint`: 0.45 rad
+- `index_mcp_flex_joint`: -0.08 rad
+- `index_pip_joint`: 0.65 rad
+- `little_dip_joint`: 0.35 rad
+- `little_mcp_abd_joint`: 0.45 rad
+- `little_mcp_flex_joint`: 0.08 rad
+- `little_pip_joint`: 0.65 rad
+- `middle_dip_joint`: 0.38 rad
+- `middle_mcp_abd_joint`: 0.5 rad
+- `middle_mcp_flex_joint`: 0 rad
+- `middle_pip_joint`: 0.7 rad
+- `ring_dip_joint`: 0.38 rad
+- `ring_mcp_abd_joint`: 0.5 rad
+- `ring_mcp_flex_joint`: 0.04 rad
+- `ring_pip_joint`: 0.7 rad
+- `thumb_cmc_joint`: 0.25 rad
+- `thumb_ip_joint`: 0.35 rad
+- `thumb_mcp_joint`: 0.45 rad
+
+## Fingertip Sites
+
+- `index_tip_site`
+- `middle_tip_site`
+- `ring_tip_site`
+- `little_tip_site`
+- `thumb_tip_site`
+
+## Notes
+
+- This primitive demo does not use suspicious STL meshes.
+- No RL, tendon routing, or actuator controller is used; qpos is interpolated directly through scripted stages.
+- The demo validates joint-tree and scripted pose logic only, not final CAD appearance.
+- TODO: manually confirm MCP flex/abd semantics and thumb opposition direction.

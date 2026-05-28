@@ -1,0 +1,992 @@
+{
+  "generated_at": "2026-05-26T02:09:10",
+  "ball_positions": [
+    [
+      0.0,
+      -0.1,
+      0.21
+    ],
+    [
+      0.0,
+      -0.08,
+      0.21
+    ],
+    [
+      0.0,
+      -0.1,
+      0.195
+    ],
+    [
+      0.0,
+      0.1,
+      0.21
+    ]
+  ],
+  "default_ball_position": [
+    0.0,
+    -0.1,
+    0.21
+  ],
+  "scenes": [
+    {
+      "label": "current_baseline",
+      "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+      "summary": {
+        "nbody": 26,
+        "njnt": 23,
+        "nq": 29,
+        "nv": 28,
+        "nu": 22,
+        "ngeom": 50,
+        "nsite": 5,
+        "nmesh": 24
+      },
+      "rows": [
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.21
+          ],
+          "stage": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.09448206516761762,
+            "four_finger_tip_ball_distances": {
+              "index": 0.09856821577035274,
+              "middle": 0.09742410126439903,
+              "ring": 0.08701097548685363,
+              "little": 0.09492496814886507
+            },
+            "thumb_ball_distance": 0.17028111168878912,
+            "thumb_index_distance": 0.1304302904985086
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.21
+          ],
+          "stage": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.1271618240857768,
+            "four_finger_tip_ball_distances": {
+              "index": 0.1369807878757748,
+              "middle": 0.14505912734873055,
+              "ring": 0.11382918487250304,
+              "little": 0.1127781962460989
+            },
+            "thumb_ball_distance": 0.17028111168878912,
+            "thumb_index_distance": 0.0773352270745434
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.21
+          ],
+          "stage": "close_four_fingers",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.154493288692294,
+            "four_finger_tip_ball_distances": {
+              "index": 0.1493884213979114,
+              "middle": 0.1604145868049622,
+              "ring": 0.1562956697193111,
+              "little": 0.15187447684699132
+            },
+            "thumb_ball_distance": 0.17028111168878912,
+            "thumb_index_distance": 0.035951737392570335
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.21
+          ],
+          "stage": "close_thumb",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.154493288692294,
+            "four_finger_tip_ball_distances": {
+              "index": 0.1493884213979114,
+              "middle": 0.1604145868049622,
+              "ring": 0.1562956697193111,
+              "little": 0.15187447684699132
+            },
+            "thumb_ball_distance": 0.14190475510014172,
+            "thumb_index_distance": 0.019642240905234955
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            -0.08,
+            0.21
+          ],
+          "stage": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.08429759878387104,
+            "four_finger_tip_ball_distances": {
+              "index": 0.08723103611570089,
+              "middle": 0.08899418723552438,
+              "ring": 0.07734556725604873,
+              "little": 0.08361960452821017
+            },
+            "thumb_ball_distance": 0.1511293473092624,
+            "thumb_index_distance": 0.1304302904985086
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            -0.08,
+            0.21
+          ],
+          "stage": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.11153948765859056,
+            "four_finger_tip_ball_distances": {
+              "index": 0.11944084278013276,
+              "middle": 0.1281280711346953,
+              "ring": 0.0997886737055362,
+              "little": 0.098800363013998
+            },
+            "thumb_ball_distance": 0.1511293473092624,
+            "thumb_index_distance": 0.0773352270745434
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            -0.08,
+            0.21
+          ],
+          "stage": "close_four_fingers",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.1351233967366047,
+            "four_finger_tip_ball_distances": {
+              "index": 0.12999895934378114,
+              "middle": 0.1408447378149457,
+              "ring": 0.13667422884263858,
+              "little": 0.13297566094505345
+            },
+            "thumb_ball_distance": 0.1511293473092624,
+            "thumb_index_distance": 0.035951737392570335
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            -0.08,
+            0.21
+          ],
+          "stage": "close_thumb",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.1351233967366047,
+            "four_finger_tip_ball_distances": {
+              "index": 0.12999895934378114,
+              "middle": 0.1408447378149457,
+              "ring": 0.13667422884263858,
+              "little": 0.13297566094505345
+            },
+            "thumb_ball_distance": 0.1220818554504718,
+            "thumb_index_distance": 0.019642240905234955
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.195
+          ],
+          "stage": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.10577644867347959,
+            "four_finger_tip_ball_distances": {
+              "index": 0.11023511508254254,
+              "middle": 0.1106040937747145,
+              "ring": 0.09889150438011113,
+              "little": 0.10337508145655015
+            },
+            "thumb_ball_distance": 0.17059477664441489,
+            "thumb_index_distance": 0.1304302904985086
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.195
+          ],
+          "stage": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.1353143924099324,
+            "four_finger_tip_ball_distances": {
+              "index": 0.14387595094452893,
+              "middle": 0.15310916002706254,
+              "ring": 0.12383568351926423,
+              "little": 0.1204367751488739
+            },
+            "thumb_ball_distance": 0.17059477664441489,
+            "thumb_index_distance": 0.0773352270745434
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.195
+          ],
+          "stage": "close_four_fingers",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.1574677027098374,
+            "four_finger_tip_ball_distances": {
+              "index": 0.15217941540424484,
+              "middle": 0.16394480329835234,
+              "ring": 0.15932859347416375,
+              "little": 0.1544179986625886
+            },
+            "thumb_ball_distance": 0.17059477664441489,
+            "thumb_index_distance": 0.035951737392570335
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.195
+          ],
+          "stage": "close_thumb",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.1574677027098374,
+            "four_finger_tip_ball_distances": {
+              "index": 0.15217941540424484,
+              "middle": 0.16394480329835234,
+              "ring": 0.15932859347416375,
+              "little": 0.1544179986625886
+            },
+            "thumb_ball_distance": 0.14317303752203892,
+            "thumb_index_distance": 0.019642240905234955
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            0.1,
+            0.21
+          ],
+          "stage": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.16337908296724177,
+            "four_finger_tip_ball_distances": {
+              "index": 0.15700731886389827,
+              "middle": 0.17255884229019627,
+              "ring": 0.1663886385695699,
+              "little": 0.15756153214530266
+            },
+            "thumb_ball_distance": 0.05865051747007677,
+            "thumb_index_distance": 0.1304302904985086
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            0.1,
+            0.21
+          ],
+          "stage": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.11971881608129556,
+            "four_finger_tip_ball_distances": {
+              "index": 0.09893191101293747,
+              "middle": 0.10386853364902347,
+              "ring": 0.13770999978379725,
+              "little": 0.13836481987942403
+            },
+            "thumb_ball_distance": 0.05865051747007677,
+            "thumb_index_distance": 0.0773352270745434
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            0.1,
+            0.21
+          ],
+          "stage": "close_four_fingers",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.060917155745471324,
+            "four_finger_tip_ball_distances": {
+              "index": 0.06438315210380006,
+              "middle": 0.05269577557401675,
+              "ring": 0.05425330349598612,
+              "little": 0.07233639180808234
+            },
+            "thumb_ball_distance": 0.05865051747007677,
+            "thumb_index_distance": 0.035951737392570335
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "current_baseline",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+          "ball_position": [
+            0.0,
+            0.1,
+            0.21
+          ],
+          "stage": "close_thumb",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.060917155745471324,
+            "four_finger_tip_ball_distances": {
+              "index": 0.06438315210380006,
+              "middle": 0.05269577557401675,
+              "ring": 0.05425330349598612,
+              "little": 0.07233639180808234
+            },
+            "thumb_ball_distance": 0.06170217680129433,
+            "thumb_index_distance": 0.019642240905234955
+          },
+          "top_contacts": [],
+          "images": {}
+        }
+      ]
+    },
+    {
+      "label": "wrist2_collision_tuned",
+      "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+      "summary": {
+        "nbody": 26,
+        "njnt": 23,
+        "nq": 29,
+        "nv": 28,
+        "nu": 22,
+        "ngeom": 50,
+        "nsite": 5,
+        "nmesh": 24
+      },
+      "rows": [
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.21
+          ],
+          "stage": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.09448206516761762,
+            "four_finger_tip_ball_distances": {
+              "index": 0.09856821577035274,
+              "middle": 0.09742410126439903,
+              "ring": 0.08701097548685363,
+              "little": 0.09492496814886507
+            },
+            "thumb_ball_distance": 0.17028111168878912,
+            "thumb_index_distance": 0.1304302904985086
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.21
+          ],
+          "stage": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.1271618240857768,
+            "four_finger_tip_ball_distances": {
+              "index": 0.1369807878757748,
+              "middle": 0.14505912734873055,
+              "ring": 0.11382918487250304,
+              "little": 0.1127781962460989
+            },
+            "thumb_ball_distance": 0.17028111168878912,
+            "thumb_index_distance": 0.0773352270745434
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.21
+          ],
+          "stage": "close_four_fingers",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.154493288692294,
+            "four_finger_tip_ball_distances": {
+              "index": 0.1493884213979114,
+              "middle": 0.1604145868049622,
+              "ring": 0.1562956697193111,
+              "little": 0.15187447684699132
+            },
+            "thumb_ball_distance": 0.17028111168878912,
+            "thumb_index_distance": 0.035951737392570335
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.21
+          ],
+          "stage": "close_thumb",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.154493288692294,
+            "four_finger_tip_ball_distances": {
+              "index": 0.1493884213979114,
+              "middle": 0.1604145868049622,
+              "ring": 0.1562956697193111,
+              "little": 0.15187447684699132
+            },
+            "thumb_ball_distance": 0.14190475510014172,
+            "thumb_index_distance": 0.019642240905234955
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            -0.08,
+            0.21
+          ],
+          "stage": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.08429759878387104,
+            "four_finger_tip_ball_distances": {
+              "index": 0.08723103611570089,
+              "middle": 0.08899418723552438,
+              "ring": 0.07734556725604873,
+              "little": 0.08361960452821017
+            },
+            "thumb_ball_distance": 0.1511293473092624,
+            "thumb_index_distance": 0.1304302904985086
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            -0.08,
+            0.21
+          ],
+          "stage": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.11153948765859056,
+            "four_finger_tip_ball_distances": {
+              "index": 0.11944084278013276,
+              "middle": 0.1281280711346953,
+              "ring": 0.0997886737055362,
+              "little": 0.098800363013998
+            },
+            "thumb_ball_distance": 0.1511293473092624,
+            "thumb_index_distance": 0.0773352270745434
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            -0.08,
+            0.21
+          ],
+          "stage": "close_four_fingers",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.1351233967366047,
+            "four_finger_tip_ball_distances": {
+              "index": 0.12999895934378114,
+              "middle": 0.1408447378149457,
+              "ring": 0.13667422884263858,
+              "little": 0.13297566094505345
+            },
+            "thumb_ball_distance": 0.1511293473092624,
+            "thumb_index_distance": 0.035951737392570335
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            -0.08,
+            0.21
+          ],
+          "stage": "close_thumb",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.1351233967366047,
+            "four_finger_tip_ball_distances": {
+              "index": 0.12999895934378114,
+              "middle": 0.1408447378149457,
+              "ring": 0.13667422884263858,
+              "little": 0.13297566094505345
+            },
+            "thumb_ball_distance": 0.1220818554504718,
+            "thumb_index_distance": 0.019642240905234955
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.195
+          ],
+          "stage": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.10577644867347959,
+            "four_finger_tip_ball_distances": {
+              "index": 0.11023511508254254,
+              "middle": 0.1106040937747145,
+              "ring": 0.09889150438011113,
+              "little": 0.10337508145655015
+            },
+            "thumb_ball_distance": 0.17059477664441489,
+            "thumb_index_distance": 0.1304302904985086
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.195
+          ],
+          "stage": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.1353143924099324,
+            "four_finger_tip_ball_distances": {
+              "index": 0.14387595094452893,
+              "middle": 0.15310916002706254,
+              "ring": 0.12383568351926423,
+              "little": 0.1204367751488739
+            },
+            "thumb_ball_distance": 0.17059477664441489,
+            "thumb_index_distance": 0.0773352270745434
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.195
+          ],
+          "stage": "close_four_fingers",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.1574677027098374,
+            "four_finger_tip_ball_distances": {
+              "index": 0.15217941540424484,
+              "middle": 0.16394480329835234,
+              "ring": 0.15932859347416375,
+              "little": 0.1544179986625886
+            },
+            "thumb_ball_distance": 0.17059477664441489,
+            "thumb_index_distance": 0.035951737392570335
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            -0.1,
+            0.195
+          ],
+          "stage": "close_thumb",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.1574677027098374,
+            "four_finger_tip_ball_distances": {
+              "index": 0.15217941540424484,
+              "middle": 0.16394480329835234,
+              "ring": 0.15932859347416375,
+              "little": 0.1544179986625886
+            },
+            "thumb_ball_distance": 0.14317303752203892,
+            "thumb_index_distance": 0.019642240905234955
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            0.1,
+            0.21
+          ],
+          "stage": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.16337908296724177,
+            "four_finger_tip_ball_distances": {
+              "index": 0.15700731886389827,
+              "middle": 0.17255884229019627,
+              "ring": 0.1663886385695699,
+              "little": 0.15756153214530266
+            },
+            "thumb_ball_distance": 0.05865051747007677,
+            "thumb_index_distance": 0.1304302904985086
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            0.1,
+            0.21
+          ],
+          "stage": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.11971881608129556,
+            "four_finger_tip_ball_distances": {
+              "index": 0.09893191101293747,
+              "middle": 0.10386853364902347,
+              "ring": 0.13770999978379725,
+              "little": 0.13836481987942403
+            },
+            "thumb_ball_distance": 0.05865051747007677,
+            "thumb_index_distance": 0.0773352270745434
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            0.1,
+            0.21
+          ],
+          "stage": "close_four_fingers",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.060917155745471324,
+            "four_finger_tip_ball_distances": {
+              "index": 0.06438315210380006,
+              "middle": 0.05269577557401675,
+              "ring": 0.05425330349598612,
+              "little": 0.07233639180808234
+            },
+            "thumb_ball_distance": 0.05865051747007677,
+            "thumb_index_distance": 0.035951737392570335
+          },
+          "top_contacts": [],
+          "images": {}
+        },
+        {
+          "scene_label": "wrist2_collision_tuned",
+          "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+          "ball_position": [
+            0.0,
+            0.1,
+            0.21
+          ],
+          "stage": "close_thumb",
+          "metrics": {
+            "contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_contact_count": 0,
+            "ball_hand_max_penetration": 0.0,
+            "source_counts": {},
+            "ball_displacement": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.060917155745471324,
+            "four_finger_tip_ball_distances": {
+              "index": 0.06438315210380006,
+              "middle": 0.05269577557401675,
+              "ring": 0.05425330349598612,
+              "little": 0.07233639180808234
+            },
+            "thumb_ball_distance": 0.06170217680129433,
+            "thumb_index_distance": 0.019642240905234955
+          },
+          "top_contacts": [],
+          "images": {}
+        }
+      ]
+    }
+  ]
+}

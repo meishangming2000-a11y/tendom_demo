@@ -1,0 +1,2144 @@
+{
+  "filtered_count": 5354,
+  "best_filtered": [
+    {
+      "pos": [
+        0.0049999999999999975,
+        -0.1,
+        0.2
+      ],
+      "score": 0.02128548418360242,
+      "open_pen": 0.0,
+      "hold_pen": 0.010407352565667646,
+      "closure_gain": 0.07136241531499177,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10114858551300913,
+        "mean_all_tip_dist": 0.11527313702688294,
+        "distances": {
+          "index_tip_site": 0.10726195522048652,
+          "middle_tip_site": 0.10604727520457984,
+          "ring_tip_site": 0.09353896089098108,
+          "little_tip_site": 0.09774615073598907,
+          "thumb_tip_site": 0.1717713430823781
+        }
+      },
+      "hold": {
+        "ball_ncon": 3,
+        "ball_min_contact_dist": -0.010407352565667646,
+        "ball_contacts": [
+          {
+            "dist": -0.0002706739622561228,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.010076734069172685,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.010407352565667646,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.02978617019801736,
+        "mean_all_tip_dist": 0.05801149729135631,
+        "distances": {
+          "index_tip_site": 0.03347794034140487,
+          "middle_tip_site": 0.021509250251150063,
+          "ring_tip_site": 0.020970990046194894,
+          "little_tip_site": 0.04318650015331963,
+          "thumb_tip_site": 0.17091280566471212
+        }
+      }
+    },
+    {
+      "pos": [
+        0.03,
+        -0.11000000000000001,
+        0.22000000000000003
+      ],
+      "score": 0.02260197950182405,
+      "open_pen": 0.0,
+      "hold_pen": 0.008175408389938004,
+      "closure_gain": 0.06223484003755235,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09308434135004025,
+        "mean_all_tip_dist": 0.11252969522217779,
+        "distances": {
+          "index_tip_site": 0.10830608269802255,
+          "middle_tip_site": 0.09800966952216841,
+          "ring_tip_site": 0.0820086558280102,
+          "little_tip_site": 0.08401295735195986,
+          "thumb_tip_site": 0.19031111071072804
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.008175408389938004,
+        "ball_contacts": [
+          {
+            "dist": -0.007405493624019373,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.008175408389938004,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.030849501312487898,
+        "mean_all_tip_dist": 0.06167106898674222,
+        "distances": {
+          "index_tip_site": 0.04258656219770679,
+          "middle_tip_site": 0.02383843670247397,
+          "ring_tip_site": 0.0232433690721254,
+          "little_tip_site": 0.033729637277645434,
+          "thumb_tip_site": 0.18495733968375946
+        }
+      }
+    },
+    {
+      "pos": [
+        0.0049999999999999975,
+        -0.09500000000000001,
+        0.2
+      ],
+      "score": 0.022608398121954525,
+      "open_pen": 0.0,
+      "hold_pen": 0.010475258974581497,
+      "closure_gain": 0.06792793380871377,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09848789251468461,
+        "mean_all_tip_dist": 0.11219175176396831,
+        "distances": {
+          "index_tip_site": 0.10441962277363503,
+          "middle_tip_site": 0.10381755784933014,
+          "ring_tip_site": 0.0909798612240846,
+          "little_tip_site": 0.09473452821168864,
+          "thumb_tip_site": 0.16700718876110313
+        }
+      },
+      "hold": {
+        "ball_ncon": 4,
+        "ball_min_contact_dist": -0.010475258974581497,
+        "ball_contacts": [
+          {
+            "dist": -0.0020321308993692996,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.00807675536110251,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.002720209604883809,
+            "other": "ring_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.010475258974581497,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.03055995870597084,
+        "mean_all_tip_dist": 0.05763176646489915,
+        "distances": {
+          "index_tip_site": 0.03362650896721948,
+          "middle_tip_site": 0.024679218615196678,
+          "ring_tip_site": 0.021886116849692248,
+          "little_tip_site": 0.04204799039177495,
+          "thumb_tip_site": 0.16591899750061237
+        }
+      }
+    },
+    {
+      "pos": [
+        0.019999999999999997,
+        -0.12000000000000001,
+        0.20500000000000002
+      ],
+      "score": 0.022616839213932174,
+      "open_pen": 0.0,
+      "hold_pen": 0.010979160632509886,
+      "closure_gain": 0.0774587418560204,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.1092048120321007,
+        "mean_all_tip_dist": 0.1264443597506656,
+        "distances": {
+          "index_tip_site": 0.12058913777390681,
+          "middle_tip_site": 0.11371761525376428,
+          "ring_tip_site": 0.09983961774680664,
+          "little_tip_site": 0.10267287735392502,
+          "thumb_tip_site": 0.19540255062492518
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.010979160632509886,
+        "ball_contacts": [
+          {
+            "dist": -0.010979160632509886,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.010746537260120374,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.03174607017608029,
+        "mean_all_tip_dist": 0.06384140030364407,
+        "distances": {
+          "index_tip_site": 0.04442628238605034,
+          "middle_tip_site": 0.02022083936749011,
+          "ring_tip_site": 0.02045346273987964,
+          "little_tip_site": 0.04188369621090108,
+          "thumb_tip_site": 0.1922227208138992
+        }
+      }
+    },
+    {
+      "pos": [
+        0.0049999999999999975,
+        -0.11000000000000001,
+        0.195
+      ],
+      "score": 0.02275073683591209,
+      "open_pen": 0.0,
+      "hold_pen": 0.008356314526114628,
+      "closure_gain": 0.07747025374068835,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.11066337137464638,
+        "mean_all_tip_dist": 0.12484541657861237,
+        "distances": {
+          "index_tip_site": 0.11713466809355252,
+          "middle_tip_site": 0.11530761158561989,
+          "ring_tip_site": 0.10310270433602582,
+          "little_tip_site": 0.10710850148338731,
+          "thumb_tip_site": 0.1815735973944763
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.008356314526114628,
+        "ball_contacts": [
+          {
+            "dist": -0.008356314526114628,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.00830311877014955,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.03319311763395803,
+        "mean_all_tip_dist": 0.06274258648003159,
+        "distances": {
+          "index_tip_site": 0.039697947844191984,
+          "middle_tip_site": 0.022843685473885374,
+          "ring_tip_site": 0.02289688122985046,
+          "little_tip_site": 0.04733395598790433,
+          "thumb_tip_site": 0.18094046186432577
+        }
+      }
+    },
+    {
+      "pos": [
+        0.0049999999999999975,
+        -0.10500000000000001,
+        0.195
+      ],
+      "score": 0.022791210571389445,
+      "open_pen": 0.0,
+      "hold_pen": 0.009671255092443137,
+      "closure_gain": 0.07549402832134167,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10777371559471079,
+        "mean_all_tip_dist": 0.12157712744139659,
+        "distances": {
+          "index_tip_site": 0.11410022371517636,
+          "middle_tip_site": 0.1128180217388308,
+          "ring_tip_site": 0.10028940913771084,
+          "little_tip_site": 0.10388720778712514,
+          "thumb_tip_site": 0.17679077482813982
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.009671255092443137,
+        "ball_contacts": [
+          {
+            "dist": -0.007362006143136267,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.009671255092443137,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.03227968727336913,
+        "mean_all_tip_dist": 0.061013167166017256,
+        "distances": {
+          "index_tip_site": 0.03854733037267322,
+          "middle_tip_site": 0.023837993856863738,
+          "ring_tip_site": 0.02152874490755687,
+          "little_tip_site": 0.04520467995638268,
+          "thumb_tip_site": 0.17594708673660978
+        }
+      }
+    },
+    {
+      "pos": [
+        0.025,
+        -0.12000000000000001,
+        0.21000000000000002
+      ],
+      "score": 0.02285452410447263,
+      "open_pen": 0.0,
+      "hold_pen": 0.009562769021812207,
+      "closure_gain": 0.07394327019297794,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10610790031549115,
+        "mean_all_tip_dist": 0.12432337202280921,
+        "distances": {
+          "index_tip_site": 0.11913721318318268,
+          "middle_tip_site": 0.11065128117223072,
+          "ring_tip_site": 0.09610931104576435,
+          "little_tip_site": 0.09853379586078687,
+          "thumb_tip_site": 0.19718525885208144
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.009562769021812207,
+        "ball_contacts": [
+          {
+            "dist": -0.009562769021812207,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.009484992627091383,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.032164630122513214,
+        "mean_all_tip_dist": 0.06435476858012637,
+        "distances": {
+          "index_tip_site": 0.04551079223657702,
+          "middle_tip_site": 0.021637230978187788,
+          "ring_tip_site": 0.02171500737290863,
+          "little_tip_site": 0.03979548990237942,
+          "thumb_tip_site": 0.19311532241057894
+        }
+      }
+    },
+    {
+      "pos": [
+        0.03,
+        -0.10500000000000001,
+        0.22000000000000003
+      ],
+      "score": 0.023048523851255782,
+      "open_pen": 0.0,
+      "hold_pen": 0.010622909968925839,
+      "closure_gain": 0.05987927887281516,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.0895982395705303,
+        "mean_all_tip_dist": 0.10882927167900991,
+        "distances": {
+          "index_tip_site": 0.10501684689542666,
+          "middle_tip_site": 0.09506816533060783,
+          "ring_tip_site": 0.0784424475300601,
+          "little_tip_site": 0.0798654985260266,
+          "thumb_tip_site": 0.18575340011292837
+        }
+      },
+      "hold": {
+        "ball_ncon": 4,
+        "ball_min_contact_dist": -0.010622909968925839,
+        "ball_contacts": [
+          {
+            "dist": -0.007147673904726512,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.003144982042125778,
+            "other": "ring_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.010622909968925839,
+            "other": "ring_distal_link_primitive"
+          },
+          {
+            "dist": -0.0005300125305593142,
+            "other": "little_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.029718960697715135,
+        "mean_all_tip_dist": 0.059790245453449256,
+        "distances": {
+          "index_tip_site": 0.04151607996474351,
+          "middle_tip_site": 0.024792883041468365,
+          "ring_tip_site": 0.02189689231520795,
+          "little_tip_site": 0.030669987469440704,
+          "thumb_tip_site": 0.1800753844763857
+        }
+      }
+    },
+    {
+      "pos": [
+        0.03,
+        -0.11500000000000002,
+        0.21500000000000002
+      ],
+      "score": 0.023078550458351287,
+      "open_pen": 0.0,
+      "hold_pen": 0.00966030084703862,
+      "closure_gain": 0.06827875080157343,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09976896345664142,
+        "mean_all_tip_dist": 0.11873452462426663,
+        "distances": {
+          "index_tip_site": 0.1146470303301509,
+          "middle_tip_site": 0.10482259666022435,
+          "ring_tip_site": 0.08907215059345823,
+          "little_tip_site": 0.09053407624273219,
+          "thumb_tip_site": 0.19459676929476752
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.00966030084703862,
+        "ball_contacts": [
+          {
+            "dist": -0.007244349953066768,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.00966030084703862,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.03149021265506799,
+        "mean_all_tip_dist": 0.06306321853510846,
+        "distances": {
+          "index_tip_site": 0.045593195426253036,
+          "middle_tip_site": 0.02395565004693323,
+          "ring_tip_site": 0.02153969915296139,
+          "little_tip_site": 0.034872305994124296,
+          "thumb_tip_site": 0.18935524205527035
+        }
+      }
+    },
+    {
+      "pos": [
+        0.015,
+        -0.12000000000000001,
+        0.2
+      ],
+      "score": 0.0231146816238533,
+      "open_pen": 0.0,
+      "hold_pen": 0.00999634642217934,
+      "closure_gain": 0.07959453773645538,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.11265022680968731,
+        "mean_all_tip_dist": 0.1288924845894981,
+        "distances": {
+          "index_tip_site": 0.12243285806127963,
+          "middle_tip_site": 0.11713106339887071,
+          "ring_tip_site": 0.10391775052398629,
+          "little_tip_site": 0.10711923525461262,
+          "thumb_tip_site": 0.19386151570874122
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.00999634642217934,
+        "ball_contacts": [
+          {
+            "dist": -0.00999634642217934,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.009632739374278134,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.033055689073231934,
+        "mean_all_tip_dist": 0.06476197342890104,
+        "distances": {
+          "index_tip_site": 0.04445398658488679,
+          "middle_tip_site": 0.021203653577820655,
+          "ring_tip_site": 0.021567260625721882,
+          "little_tip_site": 0.0449978555044984,
+          "thumb_tip_site": 0.19158711085157745
+        }
+      }
+    },
+    {
+      "pos": [
+        0.0,
+        -0.1,
+        0.2
+      ],
+      "score": 0.02311540178385707,
+      "open_pen": 0.0,
+      "hold_pen": 0.009237921911870606,
+      "closure_gain": 0.06992709682605511,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10191260217788514,
+        "mean_all_tip_dist": 0.11560055824787843,
+        "distances": {
+          "index_tip_site": 0.1062597149681976,
+          "middle_tip_site": 0.10616059712545171,
+          "ring_tip_site": 0.09483807506632347,
+          "little_tip_site": 0.10039202155156782,
+          "thumb_tip_site": 0.17035238252785156
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.009237921911870606,
+        "ball_contacts": [
+          {
+            "dist": -0.009237921911870606,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.005412399257495096,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.03198550535183003,
+        "mean_all_tip_dist": 0.059736972043640556,
+        "distances": {
+          "index_tip_site": 0.03159337020594181,
+          "middle_tip_site": 0.022390675220851246,
+          "ring_tip_site": 0.025954978238209834,
+          "little_tip_site": 0.048002997742317234,
+          "thumb_tip_site": 0.17074283881088267
+        }
+      }
+    },
+    {
+      "pos": [
+        0.0049999999999999975,
+        -0.1,
+        0.195
+      ],
+      "score": 0.02318693665470334,
+      "open_pen": 0.0,
+      "hold_pen": 0.009924001915109101,
+      "closure_gain": 0.07288460006187182,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10504222576830138,
+        "mean_all_tip_dist": 0.11843784133886186,
+        "distances": {
+          "index_tip_site": 0.11120787577469447,
+          "middle_tip_site": 0.1104987184022802,
+          "ring_tip_site": 0.0976512341395661,
+          "little_tip_site": 0.10081107475666473,
+          "thumb_tip_site": 0.1720203036211037
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.009924001915109101,
+        "ball_contacts": [
+          {
+            "dist": -0.005500183182298022,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.009924001915109101,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.03215762570642956,
+        "mean_all_tip_dist": 0.05991692034035503,
+        "distances": {
+          "index_tip_site": 0.03802454857956691,
+          "middle_tip_site": 0.025781115883722817,
+          "ring_tip_site": 0.021276901666723785,
+          "little_tip_site": 0.04354793669570474,
+          "thumb_tip_site": 0.1709540988760569
+        }
+      }
+    },
+    {
+      "pos": [
+        0.0,
+        -0.09500000000000001,
+        0.2
+      ],
+      "score": 0.02342068032856591,
+      "open_pen": 0.0,
+      "hold_pen": 0.007366142540073755,
+      "closure_gain": 0.06655432509319928,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.0992750829157082,
+        "mean_all_tip_dist": 0.1125295459578812,
+        "distances": {
+          "index_tip_site": 0.10338983319257837,
+          "middle_tip_site": 0.10393331093309588,
+          "ring_tip_site": 0.09231499567283101,
+          "little_tip_site": 0.09746219186432752,
+          "thumb_tip_site": 0.16554739812657324
+        }
+      },
+      "hold": {
+        "ball_ncon": 3,
+        "ball_min_contact_dist": -0.007366142540073755,
+        "ball_contacts": [
+          {
+            "dist": -0.0016745728585557725,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.007366142540073755,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.0055029075869318786,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.032720757822508925,
+        "mean_all_tip_dist": 0.05932538819437616,
+        "distances": {
+          "index_tip_site": 0.031750758365581125,
+          "middle_tip_site": 0.025451096674519023,
+          "ring_tip_site": 0.026699823643363704,
+          "little_tip_site": 0.046981352606571845,
+          "thumb_tip_site": 0.1657439096818451
+        }
+      }
+    },
+    {
+      "pos": [
+        0.010000000000000002,
+        -0.11500000000000002,
+        0.195
+      ],
+      "score": 0.02342665913434039,
+      "open_pen": 0.0,
+      "hold_pen": 0.00995926058290909,
+      "closure_gain": 0.07980890722641726,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.1132272721532657,
+        "mean_all_tip_dist": 0.12814159650184248,
+        "distances": {
+          "index_tip_site": 0.12139275060529435,
+          "middle_tip_site": 0.11806666229880682,
+          "ring_tip_site": 0.1051553442288676,
+          "little_tip_site": 0.10829433148009406,
+          "thumb_tip_site": 0.18779889389614965
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.00995926058290909,
+        "ball_contacts": [
+          {
+            "dist": -0.008032706449378094,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.00995926058290909,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.03341836492684843,
+        "mean_all_tip_dist": 0.0639796079882283,
+        "distances": {
+          "index_tip_site": 0.043457897967496446,
+          "middle_tip_site": 0.023167293550621904,
+          "ring_tip_site": 0.02124073941709092,
+          "little_tip_site": 0.04580752877218444,
+          "thumb_tip_site": 0.1862245802337478
+        }
+      }
+    },
+    {
+      "pos": [
+        0.0,
+        -0.10500000000000001,
+        0.195
+      ],
+      "score": 0.023623596790090795,
+      "open_pen": 0.0,
+      "hold_pen": 0.0065637575592600575,
+      "closure_gain": 0.07404322915623415,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10849143154013004,
+        "mean_all_tip_dist": 0.12187562974670216,
+        "distances": {
+          "index_tip_site": 0.11315856591197256,
+          "middle_tip_site": 0.11292454929190497,
+          "ring_tip_site": 0.10150216186324444,
+          "little_tip_site": 0.10638044909339815,
+          "thumb_tip_site": 0.17541242257299067
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.0065637575592600575,
+        "ball_contacts": [
+          {
+            "dist": -0.0065637575592600575,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.00479232442786764,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.03444820238389589,
+        "mean_all_tip_dist": 0.06271495944504173,
+        "distances": {
+          "index_tip_site": 0.03692242178307164,
+          "middle_tip_site": 0.02463624244073995,
+          "ring_tip_site": 0.026407675572132364,
+          "little_tip_site": 0.04982646973963961,
+          "thumb_tip_site": 0.17578198768962505
+        }
+      }
+    },
+    {
+      "pos": [
+        0.0,
+        -0.10500000000000001,
+        0.2
+      ],
+      "score": 0.023634931031235512,
+      "open_pen": 0.0,
+      "hold_pen": 0.011077218091039946,
+      "closure_gain": 0.07271812927198731,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10472217064850095,
+        "mean_all_tip_dist": 0.11881139315886777,
+        "distances": {
+          "index_tip_site": 0.10928310227412111,
+          "middle_tip_site": 0.1085726100015531,
+          "ring_tip_site": 0.09755235793406741,
+          "little_tip_site": 0.10348061238426222,
+          "thumb_tip_site": 0.1751682832003351
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.011077218091039946,
+        "ball_contacts": [
+          {
+            "dist": -0.011077218091039946,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.005038172691779189,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.03200404137651364,
+        "mean_all_tip_dist": 0.06075159887475692,
+        "distances": {
+          "index_tip_site": 0.03222066767076472,
+          "middle_tip_site": 0.02012278190896006,
+          "ring_tip_site": 0.026161827308220816,
+          "little_tip_site": 0.04951088861810896,
+          "thumb_tip_site": 0.17574182886773004
+        }
+      }
+    },
+    {
+      "pos": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "score": 0.023643529046877408,
+      "open_pen": 0.0,
+      "hold_pen": 0.0050004377336230295,
+      "closure_gain": 0.07142385953936581,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10578096751714808,
+        "mean_all_tip_dist": 0.11874545676567297,
+        "distances": {
+          "index_tip_site": 0.1102415149647392,
+          "middle_tip_site": 0.11060747973018369,
+          "ring_tip_site": 0.0988963437478933,
+          "little_tip_site": 0.10337853162577618,
+          "thumb_tip_site": 0.17060341375977248
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.0050004377336230295,
+        "ball_contacts": [
+          {
+            "dist": -0.004783312164478924,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.0050004377336230295,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.03435710797778228,
+        "mean_all_tip_dist": 0.061642521005791304,
+        "distances": {
+          "index_tip_site": 0.036376295112983556,
+          "middle_tip_site": 0.026520943171180544,
+          "ring_tip_site": 0.026202767341709808,
+          "little_tip_site": 0.04832842628525518,
+          "thumb_tip_site": 0.17078417311782743
+        }
+      }
+    },
+    {
+      "pos": [
+        0.0049999999999999975,
+        -0.09000000000000001,
+        0.20500000000000002
+      ],
+      "score": 0.023752839600530963,
+      "open_pen": 0.0,
+      "hold_pen": 0.010881830666395472,
+      "closure_gain": 0.06147703297838217,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09201051219247272,
+        "mean_all_tip_dist": 0.10603791319629238,
+        "distances": {
+          "index_tip_site": 0.09767150867093535,
+          "middle_tip_site": 0.09719158331384256,
+          "ring_tip_site": 0.08437361416774218,
+          "little_tip_site": 0.08880534261737077,
+          "thumb_tip_site": 0.1621475172115711
+        }
+      },
+      "hold": {
+        "ball_ncon": 5,
+        "ball_min_contact_dist": -0.010881830666395472,
+        "ball_contacts": [
+          {
+            "dist": -0.0013870864393339876,
+            "other": "index_distal_link_primitive"
+          },
+          {
+            "dist": -0.0079923639392197,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.010649232488180484,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.007453476796060543,
+            "other": "ring_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.010881830666395472,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.030533479214090553,
+        "mean_all_tip_dist": 0.05663418844569083,
+        "distances": {
+          "index_tip_site": 0.03025917903653601,
+          "middle_tip_site": 0.025562897462991084,
+          "ring_tip_site": 0.024602798153489223,
+          "little_tip_site": 0.041709042203345904,
+          "thumb_tip_site": 0.16103702537209194
+        }
+      }
+    },
+    {
+      "pos": [
+        0.03,
+        -0.11500000000000002,
+        0.22000000000000003
+      ],
+      "score": 0.02375491637271493,
+      "open_pen": 0.0,
+      "hold_pen": 0.007286508424577841,
+      "closure_gain": 0.06399038078339336,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09670060006132837,
+        "mean_all_tip_dist": 0.11633858265367306,
+        "distances": {
+          "index_tip_site": 0.11172232080888903,
+          "middle_tip_site": 0.10111297928733755,
+          "ring_tip_site": 0.0857182692716543,
+          "little_tip_site": 0.08824883087743256,
+          "thumb_tip_site": 0.19489051302305177
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.007286508424577841,
+        "ball_contacts": [
+          {
+            "dist": -0.007286508424577841,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.00568462191966857,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.032710219277935014,
+        "mean_all_tip_dist": 0.06413726332894332,
+        "distances": {
+          "index_tip_site": 0.044200064072344065,
+          "middle_tip_site": 0.02391349157542216,
+          "ring_tip_site": 0.025515378080331438,
+          "little_tip_site": 0.03721194338364239,
+          "thumb_tip_site": 0.1898454395329765
+        }
+      }
+    },
+    {
+      "pos": [
+        0.03,
+        -0.12000000000000001,
+        0.21500000000000002
+      ],
+      "score": 0.0238590619076723,
+      "open_pen": 0.0,
+      "hold_pen": 0.006205221498094704,
+      "closure_gain": 0.06924748789635246,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10339106223943027,
+        "mean_all_tip_dist": 0.12255348022149515,
+        "distances": {
+          "index_tip_site": 0.11809153644972173,
+          "middle_tip_site": 0.107961641480245,
+          "ring_tip_site": 0.09276879899812489,
+          "little_tip_site": 0.09474227202962947,
+          "thumb_tip_site": 0.19920315214975462
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.006205221498094704,
+        "ball_contacts": [
+          {
+            "dist": -0.006150904525690739,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.006205221498094704,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.03414357434307781,
+        "mean_all_tip_dist": 0.06616713410665616,
+        "distances": {
+          "index_tip_site": 0.04763160561388491,
+          "middle_tip_site": 0.025049095474309255,
+          "ring_tip_site": 0.024994778501905304,
+          "little_tip_site": 0.03889881778221178,
+          "thumb_tip_site": 0.19426137316096956
+        }
+      }
+    }
+  ],
+  "best_any": [
+    {
+      "pos": [
+        0.015,
+        -0.10500000000000001,
+        0.21000000000000002
+      ],
+      "score": 0.020086528575122782,
+      "open_pen": 0.0,
+      "hold_pen": 0.0179192727371025,
+      "closure_gain": 0.0710630417302791,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09584939019639249,
+        "mean_all_tip_dist": 0.11260673111234805,
+        "distances": {
+          "index_tip_site": 0.10564405940353082,
+          "middle_tip_site": 0.10043895584352999,
+          "ring_tip_site": 0.08665933334904741,
+          "little_tip_site": 0.09065521218946178,
+          "thumb_tip_site": 0.17963609477617026
+        }
+      },
+      "hold": {
+        "ball_ncon": 4,
+        "ball_min_contact_dist": -0.0179192727371025,
+        "ball_contacts": [
+          {
+            "dist": -0.003805924361227198,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.0179192727371025,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.0027131734491873376,
+            "other": "ring_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.015465314472885544,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.024786348466113398,
+        "mean_all_tip_dist": 0.05523030318902996,
+        "distances": {
+          "index_tip_site": 0.0324942788871275,
+          "middle_tip_site": 0.013594362825515207,
+          "ring_tip_site": 0.016029895526312406,
+          "little_tip_site": 0.037026856625498476,
+          "thumb_tip_site": 0.17700612208069622
+        }
+      }
+    },
+    {
+      "pos": [
+        0.019999999999999997,
+        -0.11000000000000001,
+        0.21000000000000002
+      ],
+      "score": 0.020148840582309688,
+      "open_pen": 0.0,
+      "hold_pen": 0.015907538081938146,
+      "closure_gain": 0.07289663294203651,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.0990261994246826,
+        "mean_all_tip_dist": 0.11643309725005728,
+        "distances": {
+          "index_tip_site": 0.11057276661723367,
+          "middle_tip_site": 0.10383580937103959,
+          "ring_tip_site": 0.08937180111752813,
+          "little_tip_site": 0.09232442059292897,
+          "thumb_tip_site": 0.18606068855155602
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.015907538081938146,
+        "ball_contacts": [
+          {
+            "dist": -0.015398220826038762,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.015907538081938146,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.026129566482646093,
+        "mean_all_tip_dist": 0.05741190474524053,
+        "distances": {
+          "index_tip_site": 0.037663510100726987,
+          "middle_tip_site": 0.01580177917396124,
+          "ring_tip_site": 0.015292461918061863,
+          "little_tip_site": 0.03576051473783427,
+          "thumb_tip_site": 0.18254125779561828
+        }
+      }
+    },
+    {
+      "pos": [
+        0.015,
+        -0.11000000000000001,
+        0.20500000000000002
+      ],
+      "score": 0.02022131964724997,
+      "open_pen": 0.0,
+      "hold_pen": 0.016012439815377175,
+      "closure_gain": 0.0759685450035682,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10257892649366482,
+        "mean_all_tip_dist": 0.11892434589930538,
+        "distances": {
+          "index_tip_site": 0.11235836106578088,
+          "middle_tip_site": 0.10733063542943355,
+          "ring_tip_site": 0.09363903265801066,
+          "little_tip_site": 0.09698767682143418,
+          "thumb_tip_site": 0.18430602352186762
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.016012439815377175,
+        "ball_contacts": [
+          {
+            "dist": -0.0156948780919006,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.016012439815377175,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.02661038149009661,
+        "mean_all_tip_dist": 0.057635166099155775,
+        "distances": {
+          "index_tip_site": 0.03702704889336675,
+          "middle_tip_site": 0.0155051219080994,
+          "ring_tip_site": 0.015187560184622835,
+          "little_tip_site": 0.03872179497429747,
+          "thumb_tip_site": 0.18173430453539244
+        }
+      }
+    },
+    {
+      "pos": [
+        0.010000000000000002,
+        -0.1,
+        0.20500000000000002
+      ],
+      "score": 0.020271314680623403,
+      "open_pen": 0.0,
+      "hold_pen": 0.014844793504242313,
+      "closure_gain": 0.07038901963336038,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09679629050686668,
+        "mean_all_tip_dist": 0.11208108749271428,
+        "distances": {
+          "index_tip_site": 0.10467598795197729,
+          "middle_tip_site": 0.10177442991424117,
+          "ring_tip_site": 0.08842277762221397,
+          "little_tip_site": 0.09231196653903427,
+          "thumb_tip_site": 0.1732202754361047
+        }
+      },
+      "hold": {
+        "ball_ncon": 4,
+        "ball_min_contact_dist": -0.014844793504242313,
+        "ball_contacts": [
+          {
+            "dist": -0.004214969560020669,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.014208420876020738,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.004017283826982765,
+            "other": "ring_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.014844793504242313,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.026407270873506306,
+        "mean_all_tip_dist": 0.05539250051432899,
+        "distances": {
+          "index_tip_site": 0.03191097198235203,
+          "middle_tip_site": 0.017942554613103737,
+          "ring_tip_site": 0.01711665360610644,
+          "little_tip_site": 0.03865890329246303,
+          "thumb_tip_site": 0.17133341907761973
+        }
+      }
+    },
+    {
+      "pos": [
+        0.015,
+        -0.1,
+        0.21000000000000002
+      ],
+      "score": 0.020313192196649985,
+      "open_pen": 0.0,
+      "hold_pen": 0.017347460899855064,
+      "closure_gain": 0.06793202868903059,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09276129473910763,
+        "mean_all_tip_dist": 0.1091976815724511,
+        "distances": {
+          "index_tip_site": 0.10251340336621027,
+          "middle_tip_site": 0.09782660471682376,
+          "ring_tip_site": 0.08359209292923894,
+          "little_tip_site": 0.08711307794415757,
+          "thumb_tip_site": 0.17494322890582503
+        }
+      },
+      "hold": {
+        "ball_ncon": 4,
+        "ball_min_contact_dist": -0.017347460899855064,
+        "ball_contacts": [
+          {
+            "dist": -0.006766911390305141,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.01618648645968044,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.007348828447424937,
+            "other": "ring_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.017347460899855064,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.024829266050077042,
+        "mean_all_tip_dist": 0.054272187212579405,
+        "distances": {
+          "index_tip_site": 0.03187236696911995,
+          "middle_tip_site": 0.016769695457038613,
+          "ring_tip_site": 0.015690036259526877,
+          "little_tip_site": 0.03498496551462273,
+          "thumb_tip_site": 0.17204387186258882
+        }
+      }
+    },
+    {
+      "pos": [
+        0.015,
+        -0.10500000000000001,
+        0.20500000000000002
+      ],
+      "score": 0.020452606217288026,
+      "open_pen": 0.0,
+      "hold_pen": 0.018176879988056074,
+      "closure_gain": 0.07398613430536408,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09944822067442868,
+        "mean_all_tip_dist": 0.115477773134125,
+        "distances": {
+          "index_tip_site": 0.10919126285493254,
+          "middle_tip_site": 0.10465145025831746,
+          "ring_tip_site": 0.09053212899803686,
+          "little_tip_site": 0.0934180405864279,
+          "thumb_tip_site": 0.1795959829729103
+        }
+      },
+      "hold": {
+        "ball_ncon": 4,
+        "ball_min_contact_dist": -0.018176879988056074,
+        "ball_contacts": [
+          {
+            "dist": -0.0002493804788780505,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.014287633301523259,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.00179854676841275,
+            "other": "ring_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.018176879988056074,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.0254620863690646,
+        "mean_all_tip_dist": 0.055722340302043004,
+        "distances": {
+          "index_tip_site": 0.03579066869411076,
+          "middle_tip_site": 0.016935902411005312,
+          "ring_tip_site": 0.0130338663336064,
+          "little_tip_site": 0.036087908037535935,
+          "thumb_tip_site": 0.17676335603395663
+        }
+      }
+    },
+    {
+      "pos": [
+        0.019999999999999997,
+        -0.10500000000000001,
+        0.21000000000000002
+      ],
+      "score": 0.02047658471390284,
+      "open_pen": 0.0,
+      "hold_pen": 0.018356122854284583,
+      "closure_gain": 0.07084805126748005,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.0957737822443626,
+        "mean_all_tip_dist": 0.1128982686860697,
+        "distances": {
+          "index_tip_site": 0.10735300321768278,
+          "middle_tip_site": 0.10106401954811609,
+          "ring_tip_site": 0.08611107233556091,
+          "little_tip_site": 0.08856703387609059,
+          "thumb_tip_site": 0.1813962144528981
+        }
+      },
+      "hold": {
+        "ball_ncon": 4,
+        "ball_min_contact_dist": -0.018356122854284583,
+        "ball_contacts": [
+          {
+            "dist": -0.0016300448923208307,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.01418961694718859,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.003958831553226136,
+            "other": "ring_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.018356122854284583,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.024925730976882554,
+        "mean_all_tip_dist": 0.05545916436404617,
+        "distances": {
+          "index_tip_site": 0.03644872575176521,
+          "middle_tip_site": 0.017207911266411934,
+          "ring_tip_site": 0.013155952217766291,
+          "little_tip_site": 0.032890334671586786,
+          "thumb_tip_site": 0.17759289791270066
+        }
+      }
+    },
+    {
+      "pos": [
+        0.010000000000000002,
+        -0.10500000000000001,
+        0.20500000000000002
+      ],
+      "score": 0.020481484055587945,
+      "open_pen": 0.0,
+      "hold_pen": 0.016230401748897685,
+      "closure_gain": 0.07338181407505394,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09975536936745114,
+        "mean_all_tip_dist": 0.11539601196203661,
+        "distances": {
+          "index_tip_site": 0.1077438252117304,
+          "middle_tip_site": 0.10428793719738477,
+          "ring_tip_site": 0.09132792376178439,
+          "little_tip_site": 0.09566179129890498,
+          "thumb_tip_site": 0.1779585823403786
+        }
+      },
+      "hold": {
+        "ball_ncon": 3,
+        "ball_min_contact_dist": -0.016230401748897685,
+        "ball_contacts": [
+          {
+            "dist": -0.0014991292651441186,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.016230401748897685,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.013787124239085145,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.026373555292397197,
+        "mean_all_tip_dist": 0.05636197733431183,
+        "distances": {
+          "index_tip_site": 0.03253214590276251,
+          "middle_tip_site": 0.015017299389508706,
+          "ring_tip_site": 0.0174287160580078,
+          "little_tip_site": 0.040516059819309766,
+          "thumb_tip_site": 0.1763156655019704
+        }
+      }
+    },
+    {
+      "pos": [
+        0.019999999999999997,
+        -0.10500000000000001,
+        0.21500000000000002
+      ],
+      "score": 0.02057085170459224,
+      "open_pen": 0.0,
+      "hold_pen": 0.016272274398943225,
+      "closure_gain": 0.06684166351778338,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09230262755057152,
+        "mean_all_tip_dist": 0.11015683517414229,
+        "distances": {
+          "index_tip_site": 0.10398366555982524,
+          "middle_tip_site": 0.09695356546817381,
+          "ring_tip_site": 0.08233401760125844,
+          "little_tip_site": 0.0859392615730286,
+          "thumb_tip_site": 0.18157366566842548
+        }
+      },
+      "hold": {
+        "ball_ncon": 4,
+        "ball_min_contact_dist": -0.016272274398943225,
+        "ball_contacts": [
+          {
+            "dist": -0.004452863230913864,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.016272274398943225,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.0040435056037798015,
+            "other": "ring_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.014431163343241224,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.025460964032788136,
+        "mean_all_tip_dist": 0.05596378245347411,
+        "distances": {
+          "index_tip_site": 0.033961975851681724,
+          "middle_tip_site": 0.0156235117790259,
+          "ring_tip_site": 0.017611216815947787,
+          "little_tip_site": 0.03464715168449715,
+          "thumb_tip_site": 0.17797505613621797
+        }
+      }
+    },
+    {
+      "pos": [
+        0.025,
+        -0.11000000000000001,
+        0.21500000000000002
+      ],
+      "score": 0.020940732622530323,
+      "open_pen": 0.0,
+      "hold_pen": 0.012861152393676533,
+      "closure_gain": 0.06812022759734498,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09584841816263878,
+        "mean_all_tip_dist": 0.11429173725103989,
+        "distances": {
+          "index_tip_site": 0.10921662938119846,
+          "middle_tip_site": 0.10071685714810491,
+          "ring_tip_site": 0.08547730244254328,
+          "little_tip_site": 0.08798288367870842,
+          "thumb_tip_site": 0.18806501360464434
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.012861152393676533,
+        "ball_contacts": [
+          {
+            "dist": -0.012253136282216876,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.012861152393676533,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.027728190565293805,
+        "mean_all_tip_dist": 0.05890598592474683,
+        "distances": {
+          "index_tip_site": 0.03957369879684431,
+          "middle_tip_site": 0.01894686371778313,
+          "ring_tip_site": 0.01835910669583909,
+          "little_tip_site": 0.03403309305070868,
+          "thumb_tip_site": 0.18361716736255895
+        }
+      }
+    },
+    {
+      "pos": [
+        0.010000000000000002,
+        -0.11000000000000001,
+        0.2
+      ],
+      "score": 0.021127743059570245,
+      "open_pen": 0.0,
+      "hold_pen": 0.013104017650105063,
+      "closure_gain": 0.07729896196940744,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10646954049933627,
+        "mean_all_tip_dist": 0.12173727393187687,
+        "distances": {
+          "index_tip_site": 0.11455333205711457,
+          "middle_tip_site": 0.11116589088219947,
+          "ring_tip_site": 0.09823043336596338,
+          "little_tip_site": 0.10192850569206767,
+          "thumb_tip_site": 0.1828082076620393
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.013104017650105063,
+        "ball_contacts": [
+          {
+            "dist": -0.013003258926186461,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.013104017650105063,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.02917057852992883,
+        "mean_all_tip_dist": 0.059576443007336735,
+        "distances": {
+          "index_tip_site": 0.03772883123548859,
+          "middle_tip_site": 0.01819674107381354,
+          "ring_tip_site": 0.018095982349894943,
+          "little_tip_site": 0.04266075946051824,
+          "thumb_tip_site": 0.18119990091696833
+        }
+      }
+    },
+    {
+      "pos": [
+        0.019999999999999997,
+        -0.1,
+        0.21500000000000002
+      ],
+      "score": 0.02127290578711414,
+      "open_pen": 0.0,
+      "hold_pen": 0.01686353016482241,
+      "closure_gain": 0.06369020033447617,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.08908487108935054,
+        "mean_all_tip_dist": 0.10665433656683934,
+        "distances": {
+          "index_tip_site": 0.10080145477980053,
+          "middle_tip_site": 0.09424465288001534,
+          "ring_tip_site": 0.07909923133731159,
+          "little_tip_site": 0.08219414536027467,
+          "thumb_tip_site": 0.17693219847679456
+        }
+      },
+      "hold": {
+        "ball_ncon": 4,
+        "ball_min_contact_dist": -0.01686353016482241,
+        "ball_contacts": [
+          {
+            "dist": -0.007491255318600036,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.01519163197945574,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.008942829832884117,
+            "other": "ring_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.01686353016482241,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.025394670754874362,
+        "mean_all_tip_dist": 0.05492385541906451,
+        "distances": {
+          "index_tip_site": 0.03336743052094423,
+          "middle_tip_site": 0.018452915905065866,
+          "ring_tip_site": 0.017302446213732316,
+          "little_tip_site": 0.032455890379755034,
+          "thumb_tip_site": 0.17304059407582514
+        }
+      }
+    },
+    {
+      "pos": [
+        0.010000000000000002,
+        -0.10500000000000001,
+        0.2
+      ],
+      "score": 0.021277357870355583,
+      "open_pen": 0.0,
+      "hold_pen": 0.014869529570508792,
+      "closure_gain": 0.07531978872729023,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10346035012148494,
+        "mean_all_tip_dist": 0.11837999029603685,
+        "distances": {
+          "index_tip_site": 0.111448627034406,
+          "middle_tip_site": 0.1085813797808639,
+          "ring_tip_site": 0.09527337499561024,
+          "little_tip_site": 0.09853801867505964,
+          "thumb_tip_site": 0.17805855099424447
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.014869529570508792,
+        "ball_contacts": [
+          {
+            "dist": -0.011769679086605797,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.014869529570508792,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.02814056139419472,
+        "mean_all_tip_dist": 0.05775522464949536,
+        "distances": {
+          "index_tip_site": 0.03651621998805199,
+          "middle_tip_site": 0.01943032091339421,
+          "ring_tip_site": 0.01633047042949121,
+          "little_tip_site": 0.04028523424584147,
+          "thumb_tip_site": 0.17621387767069793
+        }
+      }
+    },
+    {
+      "pos": [
+        0.0049999999999999975,
+        -0.1,
+        0.2
+      ],
+      "score": 0.02128548418360242,
+      "open_pen": 0.0,
+      "hold_pen": 0.010407352565667646,
+      "closure_gain": 0.07136241531499177,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10114858551300913,
+        "mean_all_tip_dist": 0.11527313702688294,
+        "distances": {
+          "index_tip_site": 0.10726195522048652,
+          "middle_tip_site": 0.10604727520457984,
+          "ring_tip_site": 0.09353896089098108,
+          "little_tip_site": 0.09774615073598907,
+          "thumb_tip_site": 0.1717713430823781
+        }
+      },
+      "hold": {
+        "ball_ncon": 3,
+        "ball_min_contact_dist": -0.010407352565667646,
+        "ball_contacts": [
+          {
+            "dist": -0.0002706739622561228,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.010076734069172685,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.010407352565667646,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.02978617019801736,
+        "mean_all_tip_dist": 0.05801149729135631,
+        "distances": {
+          "index_tip_site": 0.03347794034140487,
+          "middle_tip_site": 0.021509250251150063,
+          "ring_tip_site": 0.020970990046194894,
+          "little_tip_site": 0.04318650015331963,
+          "thumb_tip_site": 0.17091280566471212
+        }
+      }
+    },
+    {
+      "pos": [
+        0.025,
+        -0.10500000000000001,
+        0.21500000000000002
+      ],
+      "score": 0.021356055519442908,
+      "open_pen": 0.0,
+      "hold_pen": 0.015402209862303212,
+      "closure_gain": 0.06593178029645638,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09247649792921614,
+        "mean_all_tip_dist": 0.11067150013317983,
+        "distances": {
+          "index_tip_site": 0.10595566391588818,
+          "middle_tip_site": 0.09785676294091732,
+          "ring_tip_site": 0.08206197156200438,
+          "little_tip_site": 0.08403159329805468,
+          "thumb_tip_site": 0.18345150894903464
+        }
+      },
+      "hold": {
+        "ball_ncon": 5,
+        "ball_min_contact_dist": -0.015402209862303212,
+        "ball_contacts": [
+          {
+            "dist": -0.0014071075930249689,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.011531534223028054,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.004435295213423852,
+            "other": "ring_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.015402209862303212,
+            "other": "ring_distal_link_primitive"
+          },
+          {
+            "dist": -0.00019659497583667234,
+            "other": "little_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.02654471763275976,
+        "mean_all_tip_dist": 0.056975494721609676,
+        "distances": {
+          "index_tip_site": 0.038419360383577246,
+          "middle_tip_site": 0.020134538232358803,
+          "ring_tip_site": 0.016621566890939656,
+          "little_tip_site": 0.03100340502416334,
+          "thumb_tip_site": 0.17869860307700935
+        }
+      }
+    },
+    {
+      "pos": [
+        0.015,
+        -0.1,
+        0.20500000000000002
+      ],
+      "score": 0.021458190722237425,
+      "open_pen": 0.0,
+      "hold_pen": 0.01954982021981609,
+      "closure_gain": 0.07112268452124493,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09647436781176104,
+        "mean_all_tip_dist": 0.11215990241945084,
+        "distances": {
+          "index_tip_site": 0.1061652601669753,
+          "middle_tip_site": 0.10214688825731409,
+          "ring_tip_site": 0.0876005954586291,
+          "little_tip_site": 0.08998472736412565,
+          "thumb_tip_site": 0.17490204085021008
+        }
+      },
+      "hold": {
+        "ball_ncon": 4,
+        "ball_min_contact_dist": -0.01954982021981609,
+        "ball_contacts": [
+          {
+            "dist": -0.0028493517510815736,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.012400392869912152,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.006270168799427321,
+            "other": "ring_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.01954982021981609,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.025351683290516118,
+        "mean_all_tip_dist": 0.05464016537102023,
+        "distances": {
+          "index_tip_site": 0.03522700074362602,
+          "middle_tip_site": 0.019576536352612715,
+          "ring_tip_site": 0.012613538712157504,
+          "little_tip_site": 0.033989657353668226,
+          "thumb_tip_site": 0.17179409369303666
+        }
+      }
+    },
+    {
+      "pos": [
+        0.015,
+        -0.11000000000000001,
+        0.21000000000000002
+      ],
+      "score": 0.021477735355164174,
+      "open_pen": 0.0,
+      "hold_pen": 0.019436041672052803,
+      "closure_gain": 0.07333318787141427,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09909288057126418,
+        "mean_all_tip_dist": 0.11614332655029207,
+        "distances": {
+          "index_tip_site": 0.10891435490691832,
+          "middle_tip_site": 0.10322753078251679,
+          "ring_tip_site": 0.08990017860222592,
+          "little_tip_site": 0.09432945799339572,
+          "thumb_tip_site": 0.18434511046640362
+        }
+      },
+      "hold": {
+        "ball_ncon": 3,
+        "ball_min_contact_dist": -0.019436041672052803,
+        "ball_contacts": [
+          {
+            "dist": -0.00033144078355421165,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.019436041672052803,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.013374796962062042,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.02575969269984991,
+        "mean_all_tip_dist": 0.05700184195590624,
+        "distances": {
+          "index_tip_site": 0.033851270944745805,
+          "middle_tip_site": 0.011763958327947197,
+          "ring_tip_site": 0.01782520303793797,
+          "little_tip_site": 0.039598338488768675,
+          "thumb_tip_site": 0.18197043898013154
+        }
+      }
+    },
+    {
+      "pos": [
+        0.010000000000000002,
+        -0.1,
+        0.21000000000000002
+      ],
+      "score": 0.021654092620133826,
+      "open_pen": 0.0,
+      "hold_pen": 0.018571705565086378,
+      "closure_gain": 0.0675876675319223,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09309405749930127,
+        "mean_all_tip_dist": 0.1091276186562086,
+        "distances": {
+          "index_tip_site": 0.10097028204934495,
+          "middle_tip_site": 0.09743763335661568,
+          "ring_tip_site": 0.08445330827156292,
+          "little_tip_site": 0.08951500631968157,
+          "thumb_tip_site": 0.17326186328383786
+        }
+      },
+      "hold": {
+        "ball_ncon": 5,
+        "ball_min_contact_dist": -0.018571705565086378,
+        "ball_contacts": [
+          {
+            "dist": -0.003035903570657978,
+            "other": "index_distal_link_primitive"
+          },
+          {
+            "dist": -0.00835585245131582,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.018571705565086378,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.005006433254643278,
+            "other": "ring_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.013239595594357535,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.02550638996737898,
+        "mean_all_tip_dist": 0.05472188554630435,
+        "distances": {
+          "index_tip_site": 0.028164096429342023,
+          "middle_tip_site": 0.014829604721666202,
+          "ring_tip_site": 0.019495017559715323,
+          "little_tip_site": 0.03953684115879237,
+          "thumb_tip_site": 0.17158386786200586
+        }
+      }
+    },
+    {
+      "pos": [
+        0.019999999999999997,
+        -0.11000000000000001,
+        0.21500000000000002
+      ],
+      "score": 0.021684134675226556,
+      "open_pen": 0.0,
+      "hold_pen": 0.017140259278871247,
+      "closure_gain": 0.06918114425486463,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.09567232092888525,
+        "mean_all_tip_dist": 0.11378459580612228,
+        "distances": {
+          "index_tip_site": 0.10730457642053765,
+          "middle_tip_site": 0.09983953684542185,
+          "ring_tip_site": 0.08573851241172274,
+          "little_tip_site": 0.08980665803785874,
+          "thumb_tip_site": 0.18623369531507042
+        }
+      },
+      "hold": {
+        "ball_ncon": 3,
+        "ball_min_contact_dist": -0.017140259278871247,
+        "ball_contacts": [
+          {
+            "dist": -0.0009064681757694152,
+            "other": "middle_proximal_inter_link_primitive"
+          },
+          {
+            "dist": -0.017140259278871247,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.011970399434060093,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.02649117667402063,
+        "mean_all_tip_dist": 0.05777555689101399,
+        "distances": {
+          "index_tip_site": 0.0352625323527733,
+          "middle_tip_site": 0.014059805660793805,
+          "ring_tip_site": 0.01925967991679884,
+          "little_tip_site": 0.03738268876571657,
+          "thumb_tip_site": 0.18291307775898744
+        }
+      }
+    },
+    {
+      "pos": [
+        0.019999999999999997,
+        -0.11000000000000001,
+        0.20500000000000002
+      ],
+      "score": 0.021697403790607903,
+      "open_pen": 0.0,
+      "hold_pen": 0.019084575429098666,
+      "closure_gain": 0.07596360836205987,
+      "open": {
+        "ball_ncon": 0,
+        "ball_min_contact_dist": 0.0,
+        "ball_contacts": [],
+        "mean_four_tip_dist": 0.10251326569242741,
+        "mean_all_tip_dist": 0.11921500497088741,
+        "distances": {
+          "index_tip_site": 0.11396666755673542,
+          "middle_tip_site": 0.10791578891881114,
+          "ring_tip_site": 0.09313186973000633,
+          "little_tip_site": 0.09503873656415682,
+          "thumb_tip_site": 0.1860219620847275
+        }
+      },
+      "hold": {
+        "ball_ncon": 2,
+        "ball_min_contact_dist": -0.019084575429098666,
+        "ball_contacts": [
+          {
+            "dist": -0.012445952039466763,
+            "other": "middle_distal_link_primitive"
+          },
+          {
+            "dist": -0.019084575429098666,
+            "other": "ring_distal_link_primitive"
+          }
+        ],
+        "mean_four_tip_dist": 0.02654965733036755,
+        "mean_all_tip_dist": 0.057700898407122315,
+        "distances": {
+          "index_tip_site": 0.040541753764295196,
+          "middle_tip_site": 0.01875404796053324,
+          "ring_tip_site": 0.012115424570901347,
+          "little_tip_site": 0.03478740302574041,
+          "thumb_tip_site": 0.18230586271414134
+        }
+      }
+    }
+  ],
+  "current": {
+    "pos": [
+      0.01,
+      -0.045,
+      0.215
+    ],
+    "open": {
+      "ball_ncon": 4,
+      "ball_min_contact_dist": -0.012229776453227417,
+      "ball_contacts": [
+        {
+          "dist": -0.012229776453227417,
+          "other": "middle_proximal_phalanx_link_primitive"
+        },
+        {
+          "dist": -0.00735280952517991,
+          "other": "middle_proximal_inter_link_primitive"
+        },
+        {
+          "dist": -0.011521269458070279,
+          "other": "ring_proximal_phalanx_link_primitive"
+        },
+        {
+          "dist": -0.010921908931985256,
+          "other": "ring_proximal_inter_link_primitive"
+        }
+      ],
+      "mean_four_tip_dist": 0.07013057013177312,
+      "mean_all_tip_dist": 0.08066471460911025,
+      "distances": {
+        "index_tip_site": 0.07493043218651867,
+        "middle_tip_site": 0.07926423114004222,
+        "ring_tip_site": 0.06365463325852237,
+        "little_tip_site": 0.0626729839420092,
+        "thumb_tip_site": 0.12280129251845871
+      }
+    },
+    "hold": {
+      "ball_ncon": 6,
+      "ball_min_contact_dist": -0.022274969638614833,
+      "ball_contacts": [
+        {
+          "dist": -0.0038777319726915113,
+          "other": "index_proximal_phalanx_link_primitive"
+        },
+        {
+          "dist": -0.003995993155525056,
+          "other": "index_proximal_inter_link_primitive"
+        },
+        {
+          "dist": -0.022274969638614833,
+          "other": "middle_proximal_phalanx_link_primitive"
+        },
+        {
+          "dist": -0.017991285350798726,
+          "other": "middle_proximal_inter_link_primitive"
+        },
+        {
+          "dist": -0.020049502057774973,
+          "other": "ring_proximal_phalanx_link_primitive"
+        },
+        {
+          "dist": -0.019969795146661487,
+          "other": "ring_proximal_inter_link_primitive"
+        }
+      ],
+      "mean_four_tip_dist": 0.06127139886849693,
+      "mean_all_tip_dist": 0.07253230519554137,
+      "distances": {
+        "index_tip_site": 0.05897277589296785,
+        "middle_tip_site": 0.06729394417292174,
+        "ring_tip_site": 0.06081568998444674,
+        "little_tip_site": 0.05800318542365141,
+        "thumb_tip_site": 0.11757593050371913
+      }
+    }
+  }
+}

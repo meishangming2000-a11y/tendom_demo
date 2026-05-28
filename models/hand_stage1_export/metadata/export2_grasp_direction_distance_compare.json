@@ -1,0 +1,126 @@
+{
+  "export2_original": [
+    {
+      "stage": "open_hand",
+      "distances": {
+        "index_tip_site": 0.07493043218651867,
+        "middle_tip_site": 0.07926423114004222,
+        "ring_tip_site": 0.06365463325852237,
+        "little_tip_site": 0.0626729839420092,
+        "thumb_tip_site": 0.12280129251845871
+      },
+      "mean_four_fingers": 0.07013057013177312,
+      "mean_all": 0.08066471460911025
+    },
+    {
+      "stage": "approach_pre_shape",
+      "distances": {
+        "index_tip_site": 0.06963396528362012,
+        "middle_tip_site": 0.07589664841056068,
+        "ring_tip_site": 0.0604463910110328,
+        "little_tip_site": 0.05653583896636602,
+        "thumb_tip_site": 0.12033171931244441
+      },
+      "mean_four_fingers": 0.0656282109178949,
+      "mean_all": 0.0765689125968048
+    },
+    {
+      "stage": "close_four_fingers",
+      "distances": {
+        "index_tip_site": 0.05897277589296785,
+        "middle_tip_site": 0.06729394417292174,
+        "ring_tip_site": 0.06081568998444674,
+        "little_tip_site": 0.05800318542365141,
+        "thumb_tip_site": 0.12033171931244441
+      },
+      "mean_four_fingers": 0.06127139886849693,
+      "mean_all": 0.07308346295728643
+    },
+    {
+      "stage": "close_thumb",
+      "distances": {
+        "index_tip_site": 0.05897277589296785,
+        "middle_tip_site": 0.06729394417292174,
+        "ring_tip_site": 0.06081568998444674,
+        "little_tip_site": 0.05800318542365141,
+        "thumb_tip_site": 0.11757593050371913
+      },
+      "mean_four_fingers": 0.06127139886849693,
+      "mean_all": 0.07253230519554137
+    },
+    {
+      "stage": "hold",
+      "distances": {
+        "index_tip_site": 0.05897277589296785,
+        "middle_tip_site": 0.06729394417292174,
+        "ring_tip_site": 0.06081568998444674,
+        "little_tip_site": 0.05800318542365141,
+        "thumb_tip_site": 0.11757593050371913
+      },
+      "mean_four_fingers": 0.06127139886849693,
+      "mean_all": 0.07253230519554137
+    }
+  ],
+  "export2_graspfix_all_flexion_axes_flipped": [
+    {
+      "stage": "open_hand",
+      "distances": {
+        "index_tip_site": 0.07493043218651867,
+        "middle_tip_site": 0.07926423114004222,
+        "ring_tip_site": 0.06365463325852237,
+        "little_tip_site": 0.0626729839420092,
+        "thumb_tip_site": 0.12280129251845871
+      },
+      "mean_four_fingers": 0.07013057013177312,
+      "mean_all": 0.08066471460911025
+    },
+    {
+      "stage": "approach_pre_shape",
+      "distances": {
+        "index_tip_site": 0.07760686498032593,
+        "middle_tip_site": 0.08377944874151483,
+        "ring_tip_site": 0.06724705724530973,
+        "little_tip_site": 0.06339738734039187,
+        "thumb_tip_site": 0.12617361668562607
+      },
+      "mean_four_fingers": 0.07300768957688558,
+      "mean_all": 0.08364087499863368
+    },
+    {
+      "stage": "close_four_fingers",
+      "distances": {
+        "index_tip_site": 0.09503297996551295,
+        "middle_tip_site": 0.10316803762975457,
+        "ring_tip_site": 0.09156201519740731,
+        "little_tip_site": 0.08894226903702414,
+        "thumb_tip_site": 0.12617361668562607
+      },
+      "mean_four_fingers": 0.09467632545742474,
+      "mean_all": 0.10097578370306501
+    },
+    {
+      "stage": "close_thumb",
+      "distances": {
+        "index_tip_site": 0.09503297996551295,
+        "middle_tip_site": 0.10316803762975457,
+        "ring_tip_site": 0.09156201519740731,
+        "little_tip_site": 0.08894226903702414,
+        "thumb_tip_site": 0.1327995375140161
+      },
+      "mean_four_fingers": 0.09467632545742474,
+      "mean_all": 0.10230096786874301
+    },
+    {
+      "stage": "hold",
+      "distances": {
+        "index_tip_site": 0.09503297996551295,
+        "middle_tip_site": 0.10316803762975457,
+        "ring_tip_site": 0.09156201519740731,
+        "little_tip_site": 0.08894226903702414,
+        "thumb_tip_site": 0.1327995375140161
+      },
+      "mean_four_fingers": 0.09467632545742474,
+      "mean_all": 0.10230096786874301
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_primitive.xml",
+  "load_success": true,
+  "positive_angle": 0.2,
+  "ball_position": [
+    0.01,
+    -0.045,
+    0.215
+  ],
+  "results": [
+    {
+      "joint": "wrist_1_joint",
+      "test_angle": 0.2,
+      "range": [
+        -0.8,
+        0.8
+      ],
+      "selected_site": "all_tip_sites",
+      "site_displacement_vector": null,
+      "site_displacement_norm": 0.04570305219747572,
+      "distance_delta_to_ball": null,
+      "classification": "moves_body_no_single_fingertip_site"
+    },
+    {
+      "joint": "wrist_2_joint",
+      "test_angle": 0.2,
+      "range": [
+        -0.8,
+        0.8
+      ],
+      "selected_site": "all_tip_sites",
+      "site_displacement_vector": null,
+      "site_displacement_norm": 0.04283979446134219,
+      "distance_delta_to_ball": null,
+      "classification": "moves_body_no_single_fingertip_site"
+    },
+    {
+      "joint": "index_mcp_flex_joint",
+      "test_angle": 0.2,
+      "range": [
+        -0.5,
+        0.5
+      ],
+      "selected_site": "index_tip_site",
+      "site_displacement_vector": [
+        -0.02020350785686195,
+        -0.0013516131966857803,
+        -0.0012193309933768437
+      ],
+      "site_displacement_norm": 0.020285348309239035,
+      "distance_delta_to_ball": 0.008768734583529725,
+      "classification": "moves_tip_needs_mcp_semantic_review"
+    },
+    {
+      "joint": "index_mcp_abd_joint",
+      "test_angle": 0.2,
+      "range": [
+        -0.2,
+        1.2
+      ],
+      "selected_site": "index_tip_site",
+      "site_displacement_vector": [
+        0.001334305975901829,
+        -0.017731896488953805,
+        -0.004518087840277241
+      ],
+      "site_displacement_norm": 0.01834703363666074,
+      "distance_delta_to_ball": -0.0043519797582835945,
+      "classification": "moves_tip_needs_mcp_semantic_review"
+    },
+    {
+      "joint": "index_pip_joint",
+      "test_angle": 0.2,
+      "range": [
+        0.0,
+        1.57
+      ],
+      "selected_site": "index_tip_site",
+      "site_displacement_vector": [
+        0.0008369218575925291,
+        -0.01102458075770265,
+        -0.002620618457503554
+      ],
+      "site_displacement_norm": 0.01136263438550374,
+      "distance_delta_to_ball": -0.00305450733930554,
+      "classification": "positive_angle_moves_tip_toward_ball"
+    },
+    {
+      "joint": "index_dip_joint",
+      "test_angle": 0.2,
+      "range": [
+        0.0,
+        1.2
+      ],
+      "selected_site": "index_tip_site",
+      "site_displacement_vector": [
+        0.0010627611351093323,
+        -0.005282658887842184,
+        -0.0014897922418050102
+      ],
+      "site_displacement_norm": 0.005590655335409195,
+      "distance_delta_to_ball": -0.0021384194287123875,
+      "classification": "positive_angle_moves_tip_toward_ball"
+    },
+    {
+      "joint": "middle_mcp_flex_joint",
+      "test_angle": 0.2,
+      "range": [
+        -0.5,
+        0.5
+      ],
+      "selected_site": "middle_tip_site",
+      "site_displacement_vector": [
+        -0.023273157352416522,
+        -0.0016313943921699228,
+        -0.0009993241551528032
+      ],
+      "site_displacement_norm": 0.023351658390363083,
+      "distance_delta_to_ball": 0.0039596710795195555,
+      "classification": "moves_tip_needs_mcp_semantic_review"
+    },
+    {
+      "joint": "middle_mcp_abd_joint",
+      "test_angle": 0.2,
+      "range": [
+        -0.2,
+        1.2
+      ],
+      "selected_site": "middle_tip_site",
+      "site_displacement_vector": [
+        0.001340702118850198,
+        -0.019959156014779877,
+        -0.007877065775718117
+      ],
+      "site_displacement_norm": 0.02149915245373182,
+      "distance_delta_to_ball": -0.003658434496247448,
+      "classification": "moves_tip_needs_mcp_semantic_review"
+    },
+    {
+      "joint": "middle_pip_joint",
+      "test_angle": 0.2,
+      "range": [
+        0.0,
+        1.57
+      ],
+      "selected_site": "middle_tip_site",
+      "site_displacement_vector": [
+        0.0007572235254027062,
+        -0.011515243586312209,
+        -0.004862307447672298
+      ],
+      "site_displacement_norm": 0.012522629757172304,
+      "distance_delta_to_ball": -0.003132004590949408,
+      "classification": "positive_angle_moves_tip_toward_ball"
+    },
+    {
+      "joint": "middle_dip_joint",
+      "test_angle": 0.2,
+      "range": [
+        0.0,
+        1.2
+      ],
+      "selected_site": "middle_tip_site",
+      "site_displacement_vector": [
+        0.00028854054114841373,
+        -0.004885844414809493,
+        -0.002702001122387887
+      ],
+      "site_displacement_norm": 0.005590665555637963,
+      "distance_delta_to_ball": -0.002189287305611423,
+      "classification": "positive_angle_moves_tip_toward_ball"
+    },
+    {
+      "joint": "ring_mcp_flex_joint",
+      "test_angle": 0.2,
+      "range": [
+        -0.5,
+        0.5
+      ],
+      "selected_site": "ring_tip_site",
+      "site_displacement_vector": [
+        0.0011382959957901076,
+        -0.01951350329873079,
+        -0.008719468860736324
+      ],
+      "site_displacement_norm": 0.021403309696795953,
+      "distance_delta_to_ball": -0.0029191917414273655,
+      "classification": "moves_tip_needs_mcp_semantic_review"
+    },
+    {
+      "joint": "ring_mcp_abd_joint",
+      "test_angle": 0.2,
+      "range": [
+        -0.2,
+        1.2
+      ],
+      "selected_site": "ring_tip_site",
+      "site_displacement_vector": [
+        0.0010125187134890946,
+        -0.017660924181881865,
+        -0.008128683921515667
+      ],
+      "site_displacement_norm": 0.01946815192562593,
+      "distance_delta_to_ball": -0.0031724883648060545,
+      "classification": "moves_tip_needs_mcp_semantic_review"
+    },
+    {
+      "joint": "ring_pip_joint",
+      "test_angle": 0.2,
+      "range": [
+        0.0,
+        1.57
+      ],
+      "selected_site": "ring_tip_site",
+      "site_displacement_vector": [
+        0.0005211361906772467,
+        -0.010143275525209591,
+        -0.005477322802697804
+      ],
+      "site_displacement_norm": 0.0115394404714658,
+      "distance_delta_to_ball": -0.003319793808227209,
+      "classification": "positive_angle_moves_tip_toward_ball"
+    },
+    {
+      "joint": "ring_dip_joint",
+      "test_angle": 0.2,
+      "range": [
+        0.0,
+        1.2
+      ],
+      "selected_site": "ring_tip_site",
+      "site_displacement_vector": [
+        0.00019857588837330492,
+        -0.004666895741557292,
+        -0.0030718361231504288
+      ],
+      "site_displacement_norm": 0.00559066412991343,
+      "distance_delta_to_ball": -0.002305863669597119,
+      "classification": "positive_angle_moves_tip_toward_ball"
+    },
+    {
+      "joint": "little_mcp_flex_joint",
+      "test_angle": 0.2,
+      "range": [
+        -0.5,
+        0.5
+      ],
+      "selected_site": "little_tip_site",
+      "site_displacement_vector": [
+        -0.019167389328969303,
+        -0.001766824968826533,
+        0.0014817207073681282
+      ],
+      "site_displacement_norm": 0.01930559453664659,
+      "distance_delta_to_ball": -0.010831025015084032,
+      "classification": "moves_tip_needs_mcp_semantic_review"
+    },
+    {
+      "joint": "little_mcp_abd_joint",
+      "test_angle": 0.2,
+      "range": [
+        -0.2,
+        1.2
+      ],
+      "selected_site": "little_tip_site",
+      "site_displacement_vector": [
+        0.0006405760927871082,
+        -0.01616397283508192,
+        -0.006567056000158666
+      ],
+      "site_displacement_norm": 0.017458825277009232,
+      "distance_delta_to_ball": -0.0031410068270045013,
+      "classification": "moves_tip_needs_mcp_semantic_review"
+    },
+    {
+      "joint": "little_pip_joint",
+      "test_angle": 0.2,
+      "range": [
+        0.0,
+        1.57
+      ],
+      "selected_site": "little_tip_site",
+      "site_displacement_vector": [
+        0.0002792959519638538,
+        -0.00951851469251283,
+        -0.004435539930709997
+      ],
+      "site_displacement_norm": 0.010504958003594725,
+      "distance_delta_to_ball": -0.002884675698975686,
+      "classification": "positive_angle_moves_tip_toward_ball"
+    },
+    {
+      "joint": "little_dip_joint",
+      "test_angle": 0.2,
+      "range": [
+        0.0,
+        1.2
+      ],
+      "selected_site": "little_tip_site",
+      "site_displacement_vector": [
+        2.124001069896131e-05,
+        -0.004771736016442103,
+        -0.002913006348091829
+      ],
+      "site_displacement_norm": 0.005590663800720675,
+      "distance_delta_to_ball": -0.0022057224797143657,
+      "classification": "positive_angle_moves_tip_toward_ball"
+    },
+    {
+      "joint": "thumb_cmc_joint",
+      "test_angle": 0.2,
+      "range": [
+        -0.8,
+        0.8
+      ],
+      "selected_site": "thumb_tip_site",
+      "site_displacement_vector": [
+        0.02142442205150952,
+        0.005709497339672465,
+        -0.00029336715494315824
+      ],
+      "site_displacement_norm": 0.022174090384963572,
+      "distance_delta_to_ball": -0.0027217029620772853,
+      "classification": "moves_thumb_tip_needs_opposition_review"
+    },
+    {
+      "joint": "thumb_mcp_joint",
+      "test_angle": 0.2,
+      "range": [
+        0.0,
+        1.2
+      ],
+      "selected_site": "thumb_tip_site",
+      "site_displacement_vector": [
+        0.011671552258961548,
+        0.002299929831991482,
+        -0.0013206287952973184
+      ],
+      "site_displacement_norm": 0.011969079738255704,
+      "distance_delta_to_ball": -0.0026361335003288605,
+      "classification": "moves_thumb_tip_needs_opposition_review"
+    },
+    {
+      "joint": "thumb_ip_joint",
+      "test_angle": 0.2,
+      "range": [
+        0.0,
+        1.2
+      ],
+      "selected_site": "thumb_tip_site",
+      "site_displacement_vector": [
+        -0.005370609743386857,
+        -0.0015500973114986674,
+        -9.669369779091719e-05
+      ],
+      "site_displacement_norm": 0.005590670832920654,
+      "distance_delta_to_ball": 0.0012048988040478936,
+      "classification": "moves_thumb_tip_needs_opposition_review"
+    }
+  ],
+  "notes": [
+    "This audit applies a positive qpos offset to one hinge joint at a time in the primitive model.",
+    "Classifications are heuristics for inspection, not mechanical truth.",
+    "mcp_flex/mcp_abd names are intentionally not changed; semantic review remains TODO.",
+    "A positive angle moving a fingertip away from the ball may be correct if the ball pose or open pose is not aligned with that joint axis."
+  ]
+}

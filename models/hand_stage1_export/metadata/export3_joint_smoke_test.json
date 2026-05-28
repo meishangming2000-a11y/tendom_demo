@@ -1,0 +1,299 @@
+{
+  "load_success": true,
+  "xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export3.xml",
+  "body_count": 25,
+  "joint_count": 21,
+  "hinge_count": 21,
+  "actuator_count": 21,
+  "geom_count": 53,
+  "site_count": 5,
+  "mesh_count": 24,
+  "joint_names": [
+    "wrist_1_joint",
+    "index_mcp_flex_joint",
+    "index_mcp_abd_joint",
+    "index_pip_joint",
+    "index_dip_joint",
+    "middle_mcp_flex_joint",
+    "middle_mcp_abd_joint",
+    "middle_pip_joint",
+    "middle_dip_joint",
+    "ring_mcp_flex_joint",
+    "ring_mcp_abd_joint",
+    "ring_pip_joint",
+    "ring_dip_joint",
+    "little_mcp_flex_joint",
+    "little_mcp_abd_joint",
+    "little_pip_joint",
+    "little_dip_joint",
+    "thumb_cmc_abd_joint",
+    "thumb_cmc_flex_joint",
+    "thumb_mcp_joint",
+    "thumb_ip_joint"
+  ],
+  "rows": [
+    {
+      "joint": "wrist_1_joint",
+      "range": [
+        -0.8,
+        0.8
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "index_mcp_flex_joint",
+      "range": [
+        -0.5,
+        0.5
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "index_mcp_abd_joint",
+      "range": [
+        0.2,
+        1.2
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "index_pip_joint",
+      "range": [
+        0.0,
+        1.57
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "index_dip_joint",
+      "range": [
+        0.0,
+        1.2
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "middle_mcp_flex_joint",
+      "range": [
+        -0.5,
+        0.5
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "middle_mcp_abd_joint",
+      "range": [
+        0.2,
+        1.2
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "middle_pip_joint",
+      "range": [
+        0.0,
+        1.57
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "middle_dip_joint",
+      "range": [
+        0.0,
+        1.2
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "ring_mcp_flex_joint",
+      "range": [
+        -0.5,
+        0.5
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "ring_mcp_abd_joint",
+      "range": [
+        -0.2,
+        1.2
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "ring_pip_joint",
+      "range": [
+        0.0,
+        1.57
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "ring_dip_joint",
+      "range": [
+        0.0,
+        1.2
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "little_mcp_flex_joint",
+      "range": [
+        -0.5,
+        0.5
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "little_mcp_abd_joint",
+      "range": [
+        -0.2,
+        1.2
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "little_pip_joint",
+      "range": [
+        0.0,
+        1.57
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "little_dip_joint",
+      "range": [
+        0.0,
+        1.2
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "thumb_cmc_abd_joint",
+      "range": [
+        -0.8,
+        0.8
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": true
+    },
+    {
+      "joint": "thumb_cmc_flex_joint",
+      "range": [
+        0.0,
+        1.2
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": true
+    },
+    {
+      "joint": "thumb_mcp_joint",
+      "range": [
+        0.0,
+        1.2
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    },
+    {
+      "joint": "thumb_ip_joint",
+      "range": [
+        0.0,
+        1.2
+      ],
+      "target": 0.2,
+      "baseline": 0.0,
+      "actual": 0.2,
+      "moved": true,
+      "expected_new_export3_thumb_joint": false
+    }
+  ],
+  "all_hinges_moved": true,
+  "thumb_cmc_abd_present": true,
+  "thumb_cmc_flex_present": true,
+  "old_thumb_cmc_joint_present": false,
+  "wrist_2_joint_present_as_hinge": false,
+  "missing_expected_controlled_joints": [],
+  "notes": [
+    "This smoke test directly sets qpos for small positive hinge motion only.",
+    "It verifies numerical mobility, not visual correctness or physical contact stability.",
+    "export3 URDF has wrist_2_joint as fixed, so it is not expected in the hinge list unless the CAD export changes."
+  ]
+}

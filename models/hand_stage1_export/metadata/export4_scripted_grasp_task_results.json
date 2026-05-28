@@ -1,0 +1,577 @@
+{
+  "generated_at": "2026-05-26T02:09:11",
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+  "episodes": 3,
+  "ball_position": [
+    0.0,
+    -0.1,
+    0.21
+  ],
+  "pin_ball": true,
+  "seed": 7,
+  "four_tip_threshold": 0.08,
+  "success_count": 0,
+  "status": "FAIL_EXPECTED_UNTIL_GRASP_SIDE_FIXED",
+  "rollout_path": null,
+  "episode_results": [
+    {
+      "episode": 0,
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "pin_ball": true,
+      "stages": [
+        {
+          "name": "open_hand",
+          "target": {},
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.0940205842360423,
+            "thumb_ball_distance": 0.17018078467046185,
+            "thumb_index_distance": 0.13073194054001455,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "name": "preshape",
+          "target": {
+            "index_mcp_flex_joint": -0.035,
+            "middle_mcp_flex_joint": -0.035,
+            "ring_mcp_flex_joint": -0.02,
+            "little_mcp_flex_joint": -0.015,
+            "index_mcp_abd_joint": -0.34,
+            "middle_mcp_abd_joint": -0.38,
+            "ring_mcp_abd_joint": -0.2,
+            "little_mcp_abd_joint": -0.15,
+            "index_pip_joint": -0.48,
+            "middle_pip_joint": -0.52,
+            "ring_pip_joint": -0.2,
+            "little_pip_joint": -0.16,
+            "index_dip_joint": -0.22,
+            "middle_dip_joint": -0.24,
+            "ring_dip_joint": -0.1,
+            "little_dip_joint": -0.08
+          },
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.12178450992117337,
+            "thumb_ball_distance": 0.17038292235513028,
+            "thumb_index_distance": 0.08925343308424809,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "name": "close_four_fingers",
+          "target": {
+            "index_mcp_flex_joint": -0.06,
+            "middle_mcp_flex_joint": -0.06,
+            "ring_mcp_flex_joint": -0.05,
+            "little_mcp_flex_joint": -0.04,
+            "index_mcp_abd_joint": -0.58,
+            "middle_mcp_abd_joint": -0.64,
+            "ring_mcp_abd_joint": -0.62,
+            "little_mcp_abd_joint": -0.54,
+            "index_pip_joint": -0.82,
+            "middle_pip_joint": -0.88,
+            "ring_pip_joint": -0.84,
+            "little_pip_joint": -0.76,
+            "index_dip_joint": -0.42,
+            "middle_dip_joint": -0.46,
+            "ring_dip_joint": -0.44,
+            "little_dip_joint": -0.4
+          },
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.15185410568716656,
+            "thumb_ball_distance": 0.17062621107423798,
+            "thumb_index_distance": 0.04380604569495763,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "name": "close_thumb",
+          "target": {
+            "index_mcp_flex_joint": -0.06,
+            "middle_mcp_flex_joint": -0.06,
+            "ring_mcp_flex_joint": -0.05,
+            "little_mcp_flex_joint": -0.04,
+            "index_mcp_abd_joint": -0.58,
+            "middle_mcp_abd_joint": -0.64,
+            "ring_mcp_abd_joint": -0.62,
+            "little_mcp_abd_joint": -0.54,
+            "index_pip_joint": -0.82,
+            "middle_pip_joint": -0.88,
+            "ring_pip_joint": -0.84,
+            "little_pip_joint": -0.76,
+            "index_dip_joint": -0.42,
+            "middle_dip_joint": -0.46,
+            "ring_dip_joint": -0.44,
+            "little_dip_joint": -0.4,
+            "thumb_cmc_abd_joint": -0.3,
+            "thumb_cmc_joint": 0.0,
+            "thumb_mcp_joint": 0.25,
+            "thumb_ip_joint": -0.25
+          },
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.15458047690320864,
+            "thumb_ball_distance": 0.14866704742909767,
+            "thumb_index_distance": 0.017428343902528825,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "name": "hold",
+          "target": {
+            "index_mcp_flex_joint": -0.06,
+            "middle_mcp_flex_joint": -0.06,
+            "ring_mcp_flex_joint": -0.05,
+            "little_mcp_flex_joint": -0.04,
+            "index_mcp_abd_joint": -0.58,
+            "middle_mcp_abd_joint": -0.64,
+            "ring_mcp_abd_joint": -0.62,
+            "little_mcp_abd_joint": -0.54,
+            "index_pip_joint": -0.82,
+            "middle_pip_joint": -0.88,
+            "ring_pip_joint": -0.84,
+            "little_pip_joint": -0.76,
+            "index_dip_joint": -0.42,
+            "middle_dip_joint": -0.46,
+            "ring_dip_joint": -0.44,
+            "little_dip_joint": -0.4,
+            "thumb_cmc_abd_joint": -0.3,
+            "thumb_cmc_joint": 0.0,
+            "thumb_mcp_joint": 0.25,
+            "thumb_ip_joint": -0.25
+          },
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.15456961080803377,
+            "thumb_ball_distance": 0.1420757845367128,
+            "thumb_index_distance": 0.019528838124255155,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        }
+      ],
+      "success": false,
+      "label": "fail_far_or_wrong_side",
+      "ball_displacement": 0.0
+    },
+    {
+      "episode": 1,
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "pin_ball": true,
+      "stages": [
+        {
+          "name": "open_hand",
+          "target": {},
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.0940205842360423,
+            "thumb_ball_distance": 0.17018078467046185,
+            "thumb_index_distance": 0.13073194054001455,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "name": "preshape",
+          "target": {
+            "index_mcp_flex_joint": -0.035,
+            "middle_mcp_flex_joint": -0.035,
+            "ring_mcp_flex_joint": -0.02,
+            "little_mcp_flex_joint": -0.015,
+            "index_mcp_abd_joint": -0.34,
+            "middle_mcp_abd_joint": -0.38,
+            "ring_mcp_abd_joint": -0.2,
+            "little_mcp_abd_joint": -0.15,
+            "index_pip_joint": -0.48,
+            "middle_pip_joint": -0.52,
+            "ring_pip_joint": -0.2,
+            "little_pip_joint": -0.16,
+            "index_dip_joint": -0.22,
+            "middle_dip_joint": -0.24,
+            "ring_dip_joint": -0.1,
+            "little_dip_joint": -0.08
+          },
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.12178450992117337,
+            "thumb_ball_distance": 0.17038292235513028,
+            "thumb_index_distance": 0.08925343308424809,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "name": "close_four_fingers",
+          "target": {
+            "index_mcp_flex_joint": -0.06,
+            "middle_mcp_flex_joint": -0.06,
+            "ring_mcp_flex_joint": -0.05,
+            "little_mcp_flex_joint": -0.04,
+            "index_mcp_abd_joint": -0.58,
+            "middle_mcp_abd_joint": -0.64,
+            "ring_mcp_abd_joint": -0.62,
+            "little_mcp_abd_joint": -0.54,
+            "index_pip_joint": -0.82,
+            "middle_pip_joint": -0.88,
+            "ring_pip_joint": -0.84,
+            "little_pip_joint": -0.76,
+            "index_dip_joint": -0.42,
+            "middle_dip_joint": -0.46,
+            "ring_dip_joint": -0.44,
+            "little_dip_joint": -0.4
+          },
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.15185410568716656,
+            "thumb_ball_distance": 0.17062621107423798,
+            "thumb_index_distance": 0.04380604569495763,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "name": "close_thumb",
+          "target": {
+            "index_mcp_flex_joint": -0.06,
+            "middle_mcp_flex_joint": -0.06,
+            "ring_mcp_flex_joint": -0.05,
+            "little_mcp_flex_joint": -0.04,
+            "index_mcp_abd_joint": -0.58,
+            "middle_mcp_abd_joint": -0.64,
+            "ring_mcp_abd_joint": -0.62,
+            "little_mcp_abd_joint": -0.54,
+            "index_pip_joint": -0.82,
+            "middle_pip_joint": -0.88,
+            "ring_pip_joint": -0.84,
+            "little_pip_joint": -0.76,
+            "index_dip_joint": -0.42,
+            "middle_dip_joint": -0.46,
+            "ring_dip_joint": -0.44,
+            "little_dip_joint": -0.4,
+            "thumb_cmc_abd_joint": -0.3,
+            "thumb_cmc_joint": 0.0,
+            "thumb_mcp_joint": 0.25,
+            "thumb_ip_joint": -0.25
+          },
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.15458047690320864,
+            "thumb_ball_distance": 0.14866704742909767,
+            "thumb_index_distance": 0.017428343902528825,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "name": "hold",
+          "target": {
+            "index_mcp_flex_joint": -0.06,
+            "middle_mcp_flex_joint": -0.06,
+            "ring_mcp_flex_joint": -0.05,
+            "little_mcp_flex_joint": -0.04,
+            "index_mcp_abd_joint": -0.58,
+            "middle_mcp_abd_joint": -0.64,
+            "ring_mcp_abd_joint": -0.62,
+            "little_mcp_abd_joint": -0.54,
+            "index_pip_joint": -0.82,
+            "middle_pip_joint": -0.88,
+            "ring_pip_joint": -0.84,
+            "little_pip_joint": -0.76,
+            "index_dip_joint": -0.42,
+            "middle_dip_joint": -0.46,
+            "ring_dip_joint": -0.44,
+            "little_dip_joint": -0.4,
+            "thumb_cmc_abd_joint": -0.3,
+            "thumb_cmc_joint": 0.0,
+            "thumb_mcp_joint": 0.25,
+            "thumb_ip_joint": -0.25
+          },
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.15456961080803377,
+            "thumb_ball_distance": 0.1420757845367128,
+            "thumb_index_distance": 0.019528838124255155,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        }
+      ],
+      "success": false,
+      "label": "fail_far_or_wrong_side",
+      "ball_displacement": 0.0
+    },
+    {
+      "episode": 2,
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "pin_ball": true,
+      "stages": [
+        {
+          "name": "open_hand",
+          "target": {},
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.0940205842360423,
+            "thumb_ball_distance": 0.17018078467046185,
+            "thumb_index_distance": 0.13073194054001455,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "name": "preshape",
+          "target": {
+            "index_mcp_flex_joint": -0.035,
+            "middle_mcp_flex_joint": -0.035,
+            "ring_mcp_flex_joint": -0.02,
+            "little_mcp_flex_joint": -0.015,
+            "index_mcp_abd_joint": -0.34,
+            "middle_mcp_abd_joint": -0.38,
+            "ring_mcp_abd_joint": -0.2,
+            "little_mcp_abd_joint": -0.15,
+            "index_pip_joint": -0.48,
+            "middle_pip_joint": -0.52,
+            "ring_pip_joint": -0.2,
+            "little_pip_joint": -0.16,
+            "index_dip_joint": -0.22,
+            "middle_dip_joint": -0.24,
+            "ring_dip_joint": -0.1,
+            "little_dip_joint": -0.08
+          },
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.12178450992117337,
+            "thumb_ball_distance": 0.17038292235513028,
+            "thumb_index_distance": 0.08925343308424809,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "name": "close_four_fingers",
+          "target": {
+            "index_mcp_flex_joint": -0.06,
+            "middle_mcp_flex_joint": -0.06,
+            "ring_mcp_flex_joint": -0.05,
+            "little_mcp_flex_joint": -0.04,
+            "index_mcp_abd_joint": -0.58,
+            "middle_mcp_abd_joint": -0.64,
+            "ring_mcp_abd_joint": -0.62,
+            "little_mcp_abd_joint": -0.54,
+            "index_pip_joint": -0.82,
+            "middle_pip_joint": -0.88,
+            "ring_pip_joint": -0.84,
+            "little_pip_joint": -0.76,
+            "index_dip_joint": -0.42,
+            "middle_dip_joint": -0.46,
+            "ring_dip_joint": -0.44,
+            "little_dip_joint": -0.4
+          },
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.15185410568716656,
+            "thumb_ball_distance": 0.17062621107423798,
+            "thumb_index_distance": 0.04380604569495763,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "name": "close_thumb",
+          "target": {
+            "index_mcp_flex_joint": -0.06,
+            "middle_mcp_flex_joint": -0.06,
+            "ring_mcp_flex_joint": -0.05,
+            "little_mcp_flex_joint": -0.04,
+            "index_mcp_abd_joint": -0.58,
+            "middle_mcp_abd_joint": -0.64,
+            "ring_mcp_abd_joint": -0.62,
+            "little_mcp_abd_joint": -0.54,
+            "index_pip_joint": -0.82,
+            "middle_pip_joint": -0.88,
+            "ring_pip_joint": -0.84,
+            "little_pip_joint": -0.76,
+            "index_dip_joint": -0.42,
+            "middle_dip_joint": -0.46,
+            "ring_dip_joint": -0.44,
+            "little_dip_joint": -0.4,
+            "thumb_cmc_abd_joint": -0.3,
+            "thumb_cmc_joint": 0.0,
+            "thumb_mcp_joint": 0.25,
+            "thumb_ip_joint": -0.25
+          },
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.15458047690320864,
+            "thumb_ball_distance": 0.14866704742909767,
+            "thumb_index_distance": 0.017428343902528825,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "name": "hold",
+          "target": {
+            "index_mcp_flex_joint": -0.06,
+            "middle_mcp_flex_joint": -0.06,
+            "ring_mcp_flex_joint": -0.05,
+            "little_mcp_flex_joint": -0.04,
+            "index_mcp_abd_joint": -0.58,
+            "middle_mcp_abd_joint": -0.64,
+            "ring_mcp_abd_joint": -0.62,
+            "little_mcp_abd_joint": -0.54,
+            "index_pip_joint": -0.82,
+            "middle_pip_joint": -0.88,
+            "ring_pip_joint": -0.84,
+            "little_pip_joint": -0.76,
+            "index_dip_joint": -0.42,
+            "middle_dip_joint": -0.46,
+            "ring_dip_joint": -0.44,
+            "little_dip_joint": -0.4,
+            "thumb_cmc_abd_joint": -0.3,
+            "thumb_cmc_joint": 0.0,
+            "thumb_mcp_joint": 0.25,
+            "thumb_ip_joint": -0.25
+          },
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "max_penetration": 0.0,
+            "ball_hand_max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.15456961080803377,
+            "thumb_ball_distance": 0.1420757845367128,
+            "thumb_index_distance": 0.019528838124255155,
+            "ball_position": [
+              0.0,
+              -0.1,
+              0.21
+            ],
+            "ball_velocity_norm": 0.0
+          }
+        }
+      ],
+      "success": false,
+      "label": "fail_far_or_wrong_side",
+      "ball_displacement": 0.0
+    }
+  ],
+  "notes": [
+    "Default -Y ball side is expected to fail based on prior palm-side diagnostics.",
+    "This scaffold verifies control/data plumbing, not training readiness."
+  ]
+}

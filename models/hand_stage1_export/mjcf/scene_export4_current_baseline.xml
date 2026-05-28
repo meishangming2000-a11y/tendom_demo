@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="hand_stage1_export4_thumb_tuned_scene">
+  <include file="hand_stage1_export4_thumb_tuned.xml"/>
+  <visual>
+    <global azimuth="145" elevation="-25" offwidth="1280" offheight="900"/>
+  </visual>
+  <asset>
+    <texture type="2d" name="thumb_tuned_ground_checker" builtin="checker"
+      rgb1="0.18 0.20 0.22" rgb2="0.28 0.30 0.32" width="300" height="300"/>
+    <material name="thumb_tuned_ground_mat" texture="thumb_tuned_ground_checker"
+      texrepeat="4 4" reflectance="0.15"/>
+  </asset>
+  <worldbody>
+    <light pos="0 -0.3 0.8" dir="0 0 -1" directional="true"/>
+    <light pos="-0.25 -0.25 0.55" directional="false"/>
+    <geom name="ground" type="plane" pos="0 0 0" size="0.4 0.4 0.02"
+      material="thumb_tuned_ground_mat" contype="0" conaffinity="0"/>
+  </worldbody>
+</mujoco>

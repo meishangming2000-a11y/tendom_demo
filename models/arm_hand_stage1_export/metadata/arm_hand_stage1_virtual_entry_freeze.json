@@ -1,0 +1,179 @@
+{
+  "generated_at": "2026-05-27T02:26:14",
+  "frozen_reference_model": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\arm_hand_export4_cad_mount_candidate.xml",
+  "frozen_reference_scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\scene_arm_hand_export4_cad_mount_candidate.xml",
+  "status": "FROZEN_VIRTUAL_ENTRY_POINT",
+  "model_summary": {
+    "nbody": 31,
+    "njnt": 26,
+    "nu": 26,
+    "ngeom": 59,
+    "nsite": 14,
+    "nmesh": 29,
+    "nq": 26,
+    "nv": 26
+  },
+  "joint_names": [
+    "j1",
+    "j2",
+    "j3",
+    "j4",
+    "wrist_1_joint",
+    "wrist_2_joint",
+    "index_mcp_flex_joint",
+    "index_mcp_abd_joint",
+    "index_pip_joint",
+    "index_dip_joint",
+    "little_mcp_flex_joint",
+    "little_mcp_abd_joint",
+    "little_pip_joint",
+    "little_dip_joint",
+    "middle_mcp_flex_joint",
+    "middle_mcp_abd_joint",
+    "middle_pip_joint",
+    "middle_dip_joint",
+    "ring_mcp_flex_joint",
+    "ring_mcp_abd_joint",
+    "ring_pip_joint",
+    "ring_dip_joint",
+    "thumb_cmc_abd_joint",
+    "thumb_cmc_joint",
+    "thumb_mcp_joint",
+    "thumb_ip_joint"
+  ],
+  "actuator_names": [
+    "a_j1",
+    "a_j2",
+    "a_j3",
+    "a_j4",
+    "wrist_1_joint_pos",
+    "wrist_2_joint_pos",
+    "index_mcp_flex_joint_pos",
+    "index_mcp_abd_joint_pos",
+    "index_pip_joint_pos",
+    "index_dip_joint_pos",
+    "middle_mcp_flex_joint_pos",
+    "middle_mcp_abd_joint_pos",
+    "middle_pip_joint_pos",
+    "middle_dip_joint_pos",
+    "ring_mcp_flex_joint_pos",
+    "ring_mcp_abd_joint_pos",
+    "ring_pip_joint_pos",
+    "ring_dip_joint_pos",
+    "little_mcp_flex_joint_pos",
+    "little_mcp_abd_joint_pos",
+    "little_pip_joint_pos",
+    "little_dip_joint_pos",
+    "thumb_cmc_abd_joint_pos",
+    "thumb_cmc_joint_pos",
+    "thumb_mcp_joint_pos",
+    "thumb_ip_joint_pos"
+  ],
+  "wrist_2_joint_type": "hinge",
+  "mount_alignment": {
+    "arm_csv": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_csys_exports\\打印装配体_mount_csys_export.csv",
+    "hand_csv": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mount_csys_exports\\hand_export_mount_csys_export.csv",
+    "t_j4_flange": [
+      [
+        0.7574292662983947,
+        -0.015155594898157782,
+        -0.6527413074855607,
+        -0.020887721839373374
+      ],
+      [
+        0.6526106776051288,
+        -0.013058253088891192,
+        0.7575808772019268,
+        0.024242588070523124
+      ],
+      [
+        -0.020005250072183445,
+        -0.9997998749597591,
+        -2.6235694468223953e-13,
+        0.055047999796798974
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "t_hand_base_wrist": [
+      [
+        -1.0000000000000002,
+        -1.7674320121021987e-17,
+        2.8598789027504517e-20,
+        -6.938893903907228e-18
+      ],
+      [
+        -5.138013779943757e-18,
+        -1.0,
+        2.7982736653969434e-17,
+        0.0
+      ],
+      [
+        -9.972835716932457e-19,
+        5.1387648286043846e-18,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "t_j4_hand_base": [
+      [
+        -0.7574292662983945,
+        0.015155594898157793,
+        -0.6527413074855607,
+        -0.02088772183937338
+      ],
+      [
+        -0.6526106776051287,
+        0.013058253088891207,
+        0.7575808772019268,
+        0.02424258807052312
+      ],
+      [
+        0.02000525007218344,
+        0.9997998749597591,
+        -2.6238492239097315e-13,
+        0.055047999796798974
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "hand_base_pos_in_ee_mount": [
+      -0.02088772183937338,
+      0.02424258807052312,
+      0.055047999796798974
+    ],
+    "hand_base_quat_in_ee_mount": [
+      0.2527988265351695,
+      0.23953730430403544,
+      -0.665298338978001,
+      -0.6603731924467483
+    ],
+    "alignment_translation_error_m": 0.0,
+    "alignment_rotation_error_fro": 0.0
+  },
+  "render": {
+    "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_joint_limit_tuning\\phase0_frozen_cad_mount_open.png",
+    "mean_pixel": 68.67087673611111,
+    "min_pixel": 4,
+    "max_pixel": 255
+  },
+  "notes": [
+    "User visually accepted the CAD-frame mount as correct.",
+    "+Y has been confirmed as the hand palm/grasp side.",
+    "This file is a frozen reference. Later physics changes are generated as experiments under mjcf/."
+  ]
+}

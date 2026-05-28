@@ -1,0 +1,371 @@
+{
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_clean_mesh_draft.xml",
+  "load_success": true,
+  "angle": 0.2,
+  "renders": [
+    {
+      "joint": "wrist_1_joint",
+      "camera": "front",
+      "target": 0.2,
+      "before": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\wrist_1_joint\\before.png",
+        "camera": "front",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 39.39560693400167
+      },
+      "after_positive_angle": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\wrist_1_joint\\after_positive_angle.png",
+        "camera": "front",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 39.97768462823726
+      },
+      "status": "rendered"
+    },
+    {
+      "joint": "wrist_2_joint",
+      "camera": "front",
+      "target": 0.2,
+      "before": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\wrist_2_joint\\before.png",
+        "camera": "front",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 39.39560693400167
+      },
+      "after_positive_angle": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\wrist_2_joint\\after_positive_angle.png",
+        "camera": "front",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 39.059378028404346
+      },
+      "status": "rendered"
+    },
+    {
+      "joint": "index_mcp_flex_joint",
+      "camera": "index_finger_closeup",
+      "target": 0.2,
+      "before": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\index_mcp_flex_joint\\before.png",
+        "camera": "index_finger_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 56.66007978279031
+      },
+      "after_positive_angle": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\index_mcp_flex_joint\\after_positive_angle.png",
+        "camera": "index_finger_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 56.388903926482875
+      },
+      "status": "rendered"
+    },
+    {
+      "joint": "index_mcp_abd_joint",
+      "camera": "index_finger_closeup",
+      "target": 0.2,
+      "before": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\index_mcp_abd_joint\\before.png",
+        "camera": "index_finger_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 56.66007978279031
+      },
+      "after_positive_angle": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\index_mcp_abd_joint\\after_positive_angle.png",
+        "camera": "index_finger_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 57.891776524644946
+      },
+      "status": "rendered"
+    },
+    {
+      "joint": "index_pip_joint",
+      "camera": "index_finger_closeup",
+      "target": 0.2,
+      "before": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\index_pip_joint\\before.png",
+        "camera": "index_finger_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 56.66007978279031
+      },
+      "after_positive_angle": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\index_pip_joint\\after_positive_angle.png",
+        "camera": "index_finger_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 57.04211361737678
+      },
+      "status": "rendered"
+    },
+    {
+      "joint": "index_dip_joint",
+      "camera": "index_finger_closeup",
+      "target": 0.2,
+      "before": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\index_dip_joint\\before.png",
+        "camera": "index_finger_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 56.66007978279031
+      },
+      "after_positive_angle": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\index_dip_joint\\after_positive_angle.png",
+        "camera": "index_finger_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 56.177819131161236
+      },
+      "status": "rendered"
+    },
+    {
+      "joint": "middle_mcp_flex_joint",
+      "camera": "finger_root_closeup",
+      "target": 0.2,
+      "before": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\middle_mcp_flex_joint\\before.png",
+        "camera": "finger_root_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 254,
+        "mean_pixel": 70.77100208855472
+      },
+      "after_positive_angle": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\middle_mcp_flex_joint\\after_positive_angle.png",
+        "camera": "finger_root_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 254,
+        "mean_pixel": 70.77086340852131
+      },
+      "status": "rendered"
+    },
+    {
+      "joint": "ring_mcp_flex_joint",
+      "camera": "finger_root_closeup",
+      "target": 0.2,
+      "before": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\ring_mcp_flex_joint\\before.png",
+        "camera": "finger_root_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 254,
+        "mean_pixel": 70.77100208855472
+      },
+      "after_positive_angle": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\ring_mcp_flex_joint\\after_positive_angle.png",
+        "camera": "finger_root_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 254,
+        "mean_pixel": 70.34558103592315
+      },
+      "status": "rendered"
+    },
+    {
+      "joint": "little_mcp_flex_joint",
+      "camera": "finger_root_closeup",
+      "target": 0.2,
+      "before": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\little_mcp_flex_joint\\before.png",
+        "camera": "finger_root_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 254,
+        "mean_pixel": 70.77100208855472
+      },
+      "after_positive_angle": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\little_mcp_flex_joint\\after_positive_angle.png",
+        "camera": "finger_root_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 254,
+        "mean_pixel": 70.88029072681704
+      },
+      "status": "rendered"
+    },
+    {
+      "joint": "thumb_cmc_joint",
+      "camera": "thumb_root_closeup",
+      "target": 0.2,
+      "before": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\thumb_cmc_joint\\before.png",
+        "camera": "thumb_root_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 70.37906808688388
+      },
+      "after_positive_angle": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\thumb_cmc_joint\\after_positive_angle.png",
+        "camera": "thumb_root_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 71.31316123642439
+      },
+      "status": "rendered"
+    },
+    {
+      "joint": "thumb_mcp_joint",
+      "camera": "thumb_root_closeup",
+      "target": 0.2,
+      "before": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\thumb_mcp_joint\\before.png",
+        "camera": "thumb_root_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 70.37906808688388
+      },
+      "after_positive_angle": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\thumb_mcp_joint\\after_positive_angle.png",
+        "camera": "thumb_root_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 254,
+        "mean_pixel": 69.02287969924812
+      },
+      "status": "rendered"
+    },
+    {
+      "joint": "thumb_ip_joint",
+      "camera": "thumb_root_closeup",
+      "target": 0.2,
+      "before": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\thumb_ip_joint\\before.png",
+        "camera": "thumb_root_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 70.37906808688388
+      },
+      "after_positive_angle": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks\\joint_motion\\thumb_ip_joint\\after_positive_angle.png",
+        "camera": "thumb_root_closeup",
+        "shape": [
+          760,
+          1050,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 72.99820091896407
+      },
+      "status": "rendered"
+    }
+  ],
+  "notes": [
+    "These frames are for visual audit; script does not classify mechanical correctness.",
+    "mcp_flex/mcp_abd semantic direction remains TODO and should not be renamed based on this script alone."
+  ]
+}

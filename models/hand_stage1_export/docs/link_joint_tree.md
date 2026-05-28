@@ -1,0 +1,52 @@
+# Link-Joint Tree
+
+- `hand_base_link`
+  - `wrist_1_joint` (revolute) -> `wrist_middle_link`
+    - `wrist_middle_link`
+      - `wrist_2_joint` (revolute) -> `palm_link`
+        - `palm_link`
+          - `index_mcp_flex_joint` (revolute) -> `index_mcp_flex_link`
+            - `index_mcp_flex_link`
+              - `index_mcp_abd_joint` (revolute) -> `index_proximal_phalanx_link`
+                - `index_proximal_phalanx_link`
+                  - `index_pip_joint` (revolute) -> `index_proximal_inter_link`
+                    - `index_proximal_inter_link`
+                      - `index_dip_joint` (revolute) -> `index_distal_link`
+                        - `index_distal_link`
+          - `middle_mcp_flex_joint` (revolute) -> `middle_mcp_flex_link`
+            - `middle_mcp_flex_link`
+              - `middle_mcp_abd_joint` (revolute) -> `middle_proximal_phalanx_link`
+                - `middle_proximal_phalanx_link`
+                  - `middle_pip_joint` (revolute) -> `middle_proximal_inter_link`
+                    - `middle_proximal_inter_link`
+                      - `middle_dip_joint` (revolute) -> `middle_distal_link`
+                        - `middle_distal_link`
+          - `ring_mcp_flex_joint` (revolute) -> `ring_mcp_flex_link`
+            - `ring_mcp_flex_link`
+              - `ring_mcp_abd_joint` (revolute) -> `ring_proximal_phalanx_link`
+                - `ring_proximal_phalanx_link`
+                  - `ring_pip_joint` (revolute) -> `ring_proximal_inter_link`
+                    - `ring_proximal_inter_link`
+                      - `ring_dip_joint` (revolute) -> `ring_distal_link`
+                        - `ring_distal_link`
+          - `little_mcp_flex_joint` (revolute) -> `little_mcp_flex_link`
+            - `little_mcp_flex_link`
+              - `little_mcp_abd_joint` (revolute) -> `little_proximal_phalanx_link`
+                - `little_proximal_phalanx_link`
+                  - `little_pip_joint` (revolute) -> `little_proximal_inter_link`
+                    - `little_proximal_inter_link`
+                      - `little_dip_joint` (revolute) -> `little_distal_link`
+                        - `little_distal_link`
+          - `thumb_root_connector_fixed_joint` (fixed) -> `thumb_root_connector_link`
+            - `thumb_root_connector_link`
+              - `thumb_cmc_joint` (revolute) -> `thumb_metacarpal_link`
+                - `thumb_metacarpal_link`
+                  - `thumb_mcp_joint` (revolute) -> `thumb_proximal_link`
+                    - `thumb_proximal_link`
+                      - `thumb_ip_joint` (revolute) -> `thumb_distal_link`
+                        - `thumb_distal_link`
+
+## Notes
+
+- Tip coordinate systems currently not present as URDF link/joint nodes: `index_tip_csys`, `little_tip_csys`, `middle_tip_csys`, `ring_tip_csys`, `thumb_tip_csys`.
+- CAD/URDF current names `mcp_flex` and `mcp_abd` may need later review against actual motion-axis semantics.

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="hand_stage1_ball_scene_visual_clean_collision_proxy">
+  <include file="hand_stage1_visual_clean_collision_proxy.xml" />
+  <visual>
+    <global azimuth="145" elevation="-25" offwidth="1400" offheight="1000" />
+  </visual>
+  <asset>
+    <texture type="2d" name="export2_ground_checker" builtin="checker" rgb1="0.18 0.20 0.22" rgb2="0.28 0.30 0.32" width="300" height="300" />
+    <material name="export2_ground_mat" texture="export2_ground_checker" texrepeat="4 4" reflectance="0.15" />
+  </asset>
+  <worldbody>
+    <light name="key_light" pos="0 -0.35 0.85" dir="0 0 -1" directional="true" />
+    <light name="fill_light" pos="-0.35 0.25 0.55" />
+    <geom name="ground" type="plane" pos="0 0 0" size="0.5 0.5 0.02" material="export2_ground_mat" contype="1" conaffinity="3" />
+    <body name="ball" pos="0 -0.1 0.195">
+      <freejoint name="ball_freejoint" />
+      <geom name="ball_geom" type="sphere" size="0.025" rgba="0.95 0.23 0.18 1" mass="0.03" friction="0.8 0.05 0.001" condim="3" contype="2" conaffinity="1" />
+    </body>
+    <camera name="front" pos="0.20 -0.34 0.30" xyaxes="0.834219 0.551433 0 -0.16379 0.247785 0.954869" fovy="45" />
+    <camera name="side" pos="0.34 0.02 0.25" xyaxes="-0.190477 0.981692 0 -0.169999 -0.0329848 0.984892" fovy="45" />
+    <camera name="top" pos="0.02 -0.06 0.55" xyaxes="0.707107 0.707107 0 -0.705346 0.705346 0.0705346" fovy="45" />
+    <camera name="palm" pos="0.11 -0.20 0.24" xyaxes="0.875 0.484 0 -0.204 0.368 0.907" fovy="34" />
+    <camera name="finger_root_closeup" pos="0.11 -0.20 0.25" xyaxes="0.875 0.484 0 -0.204 0.368 0.907" fovy="24" />
+    <camera name="thumb_root_closeup" pos="-0.15 -0.11 0.19" xyaxes="0.594 -0.804 0 0.372 0.275 0.887" fovy="26" />
+    <camera name="index_finger_closeup" pos="-0.14 -0.17 0.36" xyaxes="0.844 -0.537 0 0.211 0.331 0.920" fovy="24" />
+    <camera name="full_hand_with_ball" pos="0.23 -0.38 0.34" xyaxes="0.850 0.527 0 -0.165 0.267 0.949" fovy="48" />
+  </worldbody>
+</mujoco>

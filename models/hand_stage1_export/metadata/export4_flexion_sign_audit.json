@@ -1,0 +1,1276 @@
+{
+  "generated_at": "2026-05-25 00:52:14",
+  "schema": "export4_flexion_sign_audit_v1",
+  "input_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4.xml",
+  "fixed_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_flexion_sign_fixed.xml",
+  "scene_output": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_export4_flexion_sign_fixed.xml",
+  "ball_scene_output": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_flexion_sign_fixed.xml",
+  "perturb": 0.35,
+  "tolerance": 0.0008,
+  "audit": [
+    {
+      "joint": "index_mcp_flex_joint",
+      "finger": "index",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        -0.5,
+        0.5
+      ],
+      "new_range": [
+        -0.5,
+        0.5
+      ],
+      "current_limit_bias": "contains_zero_or_bidirectional",
+      "neutral_tip": [
+        -0.01889905333518982,
+        -0.03733901306986809,
+        0.28370290994644165
+      ],
+      "positive_tip": [
+        -0.053910356014966965,
+        -0.03920197859406471,
+        0.27897974848747253
+      ],
+      "negative_tip": [
+        0.015462801791727543,
+        -0.033302754163742065,
+        0.27631765604019165
+      ],
+      "neutral_tip_palm_distance": 0.15528254210948944,
+      "positive_tip_palm_distance": 0.15982472896575928,
+      "negative_tip_palm_distance": 0.14638522267341614,
+      "positive_distance_delta": 0.004542186856269836,
+      "negative_distance_delta": -0.008897319436073303,
+      "positive_world_delta": [
+        -0.035011302679777145,
+        -0.0018629655241966248,
+        -0.004723161458969116
+      ],
+      "negative_world_delta": [
+        0.03436185419559479,
+        0.004036258906126022,
+        -0.00738525390625
+      ],
+      "positive_palmar_y_delta": -0.0018629655241966248,
+      "negative_palmar_y_delta": 0.004036258906126022,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": false,
+      "reason": "mcp_flex_audit_only_possible_spread_joint"
+    },
+    {
+      "joint": "index_mcp_abd_joint",
+      "finger": "index",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        0.2,
+        1.2
+      ],
+      "new_range": [
+        -1.2,
+        0.0
+      ],
+      "current_limit_bias": "positive_only",
+      "neutral_tip": [
+        -0.01889905333518982,
+        -0.03733901306986809,
+        0.28370290994644165
+      ],
+      "positive_tip": [
+        -0.016717303544282913,
+        -0.06759493052959442,
+        0.2735227048397064
+      ],
+      "negative_tip": [
+        -0.02164153754711151,
+        -0.005470422562211752,
+        0.2828727960586548
+      ],
+      "neutral_tip_palm_distance": 0.15528254210948944,
+      "positive_tip_palm_distance": 0.1538456380367279,
+      "negative_tip_palm_distance": 0.1523430347442627,
+      "positive_distance_delta": -0.0014369040727615356,
+      "negative_distance_delta": -0.0029395073652267456,
+      "positive_world_delta": [
+        0.002181749790906906,
+        -0.030255917459726334,
+        -0.01018020510673523
+      ],
+      "negative_world_delta": [
+        -0.002742484211921692,
+        0.0318685919046402,
+        -0.0008301138877868652
+      ],
+      "positive_palmar_y_delta": -0.030255917459726334,
+      "negative_palmar_y_delta": 0.0318685919046402,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": true,
+      "reason": "current_limit_positive_or_positive_dominant_but_negative_angle_moves_palmar"
+    },
+    {
+      "joint": "index_pip_joint",
+      "finger": "index",
+      "axis": [
+        0.10977355390787125,
+        -0.048392996191978455,
+        -0.9927778840065002
+      ],
+      "old_range": [
+        0.0,
+        1.57
+      ],
+      "new_range": [
+        -1.57,
+        0.0
+      ],
+      "current_limit_bias": "positive_only",
+      "neutral_tip": [
+        -0.01889905333518982,
+        -0.03733901306986809,
+        0.28370290994644165
+      ],
+      "positive_tip": [
+        -0.017527887597680092,
+        -0.05617476627230644,
+        0.27770116925239563
+      ],
+      "negative_tip": [
+        -0.02060876600444317,
+        -0.017614154145121574,
+        0.28287017345428467
+      ],
+      "neutral_tip_palm_distance": 0.15528254210948944,
+      "positive_tip_palm_distance": 0.1539236158132553,
+      "negative_tip_palm_distance": 0.1523681879043579,
+      "positive_distance_delta": -0.0013589262962341309,
+      "negative_distance_delta": -0.0029143542051315308,
+      "positive_world_delta": [
+        0.0013711657375097275,
+        -0.018835753202438354,
+        -0.0060017406940460205
+      ],
+      "negative_world_delta": [
+        -0.0017097126692533493,
+        0.019724858924746513,
+        -0.0008327364921569824
+      ],
+      "positive_palmar_y_delta": -0.018835753202438354,
+      "negative_palmar_y_delta": 0.019724858924746513,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": true,
+      "reason": "current_limit_positive_or_positive_dominant_but_negative_angle_moves_palmar"
+    },
+    {
+      "joint": "index_dip_joint",
+      "finger": "index",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        0.0,
+        1.2
+      ],
+      "new_range": [
+        -1.2,
+        0.0
+      ],
+      "current_limit_bias": "positive_only",
+      "neutral_tip": [
+        -0.01889905333518982,
+        -0.03733901306986809,
+        0.28370290994644165
+      ],
+      "positive_tip": [
+        -0.017102044075727463,
+        -0.04633765295147896,
+        0.28040772676467896
+      ],
+      "negative_tip": [
+        -0.020868347957730293,
+        -0.027790067717432976,
+        0.28365230560302734
+      ],
+      "neutral_tip_palm_distance": 0.15528254210948944,
+      "positive_tip_palm_distance": 0.15375621616840363,
+      "negative_tip_palm_distance": 0.1540752649307251,
+      "positive_distance_delta": -0.0015263259410858154,
+      "negative_distance_delta": -0.0012072771787643433,
+      "positive_world_delta": [
+        0.0017970092594623566,
+        -0.00899863988161087,
+        -0.0032951831817626953
+      ],
+      "negative_world_delta": [
+        -0.001969294622540474,
+        0.009548945352435112,
+        -5.060434341430664e-05
+      ],
+      "positive_palmar_y_delta": -0.00899863988161087,
+      "negative_palmar_y_delta": 0.009548945352435112,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": true,
+      "reason": "current_limit_positive_or_positive_dominant_but_negative_angle_moves_palmar"
+    },
+    {
+      "joint": "middle_mcp_flex_joint",
+      "finger": "middle",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        -0.5,
+        0.5
+      ],
+      "new_range": [
+        -0.5,
+        0.5
+      ],
+      "current_limit_bias": "contains_zero_or_bidirectional",
+      "neutral_tip": [
+        0.004906580783426762,
+        -0.050712745636701584,
+        0.2938936650753021
+      ],
+      "positive_tip": [
+        -0.03547807037830353,
+        -0.05299234762787819,
+        0.28915730118751526
+      ],
+      "negative_tip": [
+        0.04429471865296364,
+        -0.045952897518873215,
+        0.28470298647880554
+      ],
+      "neutral_tip_palm_distance": 0.16665790975093842,
+      "positive_tip_palm_distance": 0.1670476794242859,
+      "negative_tip_palm_distance": 0.16203711926937103,
+      "positive_distance_delta": 0.00038976967334747314,
+      "negative_distance_delta": -0.004620790481567383,
+      "positive_world_delta": [
+        -0.040384650230407715,
+        -0.0022796019911766052,
+        -0.004736363887786865
+      ],
+      "negative_world_delta": [
+        0.03938813880085945,
+        0.004759848117828369,
+        -0.009190678596496582
+      ],
+      "positive_palmar_y_delta": -0.0022796019911766052,
+      "negative_palmar_y_delta": 0.004759848117828369,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": false,
+      "reason": "mcp_flex_audit_only_possible_spread_joint"
+    },
+    {
+      "joint": "middle_mcp_abd_joint",
+      "finger": "middle",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        0.2,
+        1.2
+      ],
+      "new_range": [
+        -1.2,
+        0.0
+      ],
+      "current_limit_bias": "positive_only",
+      "neutral_tip": [
+        0.004906580783426762,
+        -0.050712745636701584,
+        0.2938936650753021
+      ],
+      "positive_tip": [
+        0.0070156194269657135,
+        -0.08440801501274109,
+        0.277583509683609
+      ],
+      "negative_tip": [
+        0.0018498715944588184,
+        -0.013532975688576698,
+        0.29765692353248596
+      ],
+      "neutral_tip_palm_distance": 0.16665790975093842,
+      "positive_tip_palm_distance": 0.16347834467887878,
+      "negative_tip_palm_distance": 0.16520485281944275,
+      "positive_distance_delta": -0.0031795650720596313,
+      "negative_distance_delta": -0.0014530569314956665,
+      "positive_world_delta": [
+        0.002109038643538952,
+        -0.033695269376039505,
+        -0.016310155391693115
+      ],
+      "negative_world_delta": [
+        -0.003056709188967943,
+        0.037179768085479736,
+        0.003763258457183838
+      ],
+      "positive_palmar_y_delta": -0.033695269376039505,
+      "negative_palmar_y_delta": 0.037179768085479736,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": true,
+      "reason": "current_limit_positive_or_positive_dominant_but_negative_angle_moves_palmar"
+    },
+    {
+      "joint": "middle_pip_joint",
+      "finger": "middle",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        0.0,
+        1.57
+      ],
+      "new_range": [
+        -1.57,
+        0.0
+      ],
+      "current_limit_bias": "positive_only",
+      "neutral_tip": [
+        0.004906580783426762,
+        -0.050712745636701584,
+        0.2938936650753021
+      ],
+      "positive_tip": [
+        0.006091437302529812,
+        -0.0701114684343338,
+        0.28393134474754333
+      ],
+      "negative_tip": [
+        0.0031572941225022078,
+        -0.02911217510700226,
+        0.29659879207611084
+      ],
+      "neutral_tip_palm_distance": 0.16665790975093842,
+      "positive_tip_palm_distance": 0.16325825452804565,
+      "negative_tip_palm_distance": 0.1652950942516327,
+      "positive_distance_delta": -0.0033996552228927612,
+      "negative_distance_delta": -0.001362815499305725,
+      "positive_world_delta": [
+        0.0011848565191030502,
+        -0.019398722797632217,
+        -0.009962320327758789
+      ],
+      "negative_world_delta": [
+        -0.0017492866609245539,
+        0.021600570529699326,
+        0.002705127000808716
+      ],
+      "positive_palmar_y_delta": -0.019398722797632217,
+      "negative_palmar_y_delta": 0.021600570529699326,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": true,
+      "reason": "current_limit_positive_or_positive_dominant_but_negative_angle_moves_palmar"
+    },
+    {
+      "joint": "middle_dip_joint",
+      "finger": "middle",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        0.0,
+        1.2
+      ],
+      "new_range": [
+        -1.2,
+        0.0
+      ],
+      "current_limit_bias": "positive_only",
+      "neutral_tip": [
+        0.004906580783426762,
+        -0.050712745636701584,
+        0.2938936650753021
+      ],
+      "positive_tip": [
+        0.005345083307474852,
+        -0.05886010825634003,
+        0.28855592012405396
+      ],
+      "negative_tip": [
+        0.004193037748336792,
+        -0.041246023029088974,
+        0.2961152493953705
+      ],
+      "neutral_tip_palm_distance": 0.16665790975093842,
+      "positive_tip_palm_distance": 0.1637861728668213,
+      "negative_tip_palm_distance": 0.16672511398792267,
+      "positive_distance_delta": -0.0028717368841171265,
+      "negative_distance_delta": 6.720423698425293e-05,
+      "positive_world_delta": [
+        0.00043850252404809,
+        -0.008147362619638443,
+        -0.005337744951248169
+      ],
+      "negative_world_delta": [
+        -0.0007135430350899696,
+        0.00946672260761261,
+        0.0022215843200683594
+      ],
+      "positive_palmar_y_delta": -0.008147362619638443,
+      "negative_palmar_y_delta": 0.00946672260761261,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": true,
+      "reason": "current_limit_positive_or_positive_dominant_but_negative_angle_moves_palmar"
+    },
+    {
+      "joint": "ring_mcp_flex_joint",
+      "finger": "ring",
+      "axis": [
+        -0.9959987998008728,
+        -0.08936689049005508,
+        0.0
+      ],
+      "old_range": [
+        -0.5,
+        0.5
+      ],
+      "new_range": [
+        -0.5,
+        0.5
+      ],
+      "current_limit_bias": "contains_zero_or_bidirectional",
+      "neutral_tip": [
+        0.026971353217959404,
+        -0.05028567463159561,
+        0.276120662689209
+      ],
+      "positive_tip": [
+        0.028658399358391762,
+        -0.08310005813837051,
+        0.25840994715690613
+      ],
+      "negative_tip": [
+        0.02399936504662037,
+        -0.013472668826580048,
+        0.28153079748153687
+      ],
+      "neutral_tip_palm_distance": 0.15135756134986877,
+      "positive_tip_palm_distance": 0.14830927550792694,
+      "negative_tip_palm_distance": 0.15061458945274353,
+      "positive_distance_delta": -0.0030482858419418335,
+      "negative_distance_delta": -0.0007429718971252441,
+      "positive_world_delta": [
+        0.0016870461404323578,
+        -0.0328143835067749,
+        -0.017710715532302856
+      ],
+      "negative_world_delta": [
+        -0.002971988171339035,
+        0.036813005805015564,
+        0.005410134792327881
+      ],
+      "positive_palmar_y_delta": -0.0328143835067749,
+      "negative_palmar_y_delta": 0.036813005805015564,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": false,
+      "reason": "mcp_flex_audit_only_possible_spread_joint"
+    },
+    {
+      "joint": "ring_mcp_abd_joint",
+      "finger": "ring",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        -0.2,
+        1.2
+      ],
+      "new_range": [
+        -1.2,
+        0.0
+      ],
+      "current_limit_bias": "contains_zero_or_bidirectional",
+      "neutral_tip": [
+        0.026971353217959404,
+        -0.05028567463159561,
+        0.276120662689209
+      ],
+      "positive_tip": [
+        0.02846464142203331,
+        -0.07995376735925674,
+        0.25967937707901
+      ],
+      "negative_tip": [
+        0.02430099993944168,
+        -0.016855556517839432,
+        0.28141579031944275
+      ],
+      "neutral_tip_palm_distance": 0.15135756134986877,
+      "positive_tip_palm_distance": 0.14782275259494781,
+      "negative_tip_palm_distance": 0.15067847073078156,
+      "positive_distance_delta": -0.0035348087549209595,
+      "negative_distance_delta": -0.0006790906190872192,
+      "positive_world_delta": [
+        0.001493288204073906,
+        -0.029668092727661133,
+        -0.016441285610198975
+      ],
+      "negative_world_delta": [
+        -0.002670353278517723,
+        0.03343011811375618,
+        0.005295127630233765
+      ],
+      "positive_palmar_y_delta": -0.029668092727661133,
+      "negative_palmar_y_delta": 0.03343011811375618,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": true,
+      "reason": "current_limit_positive_or_positive_dominant_but_negative_angle_moves_palmar"
+    },
+    {
+      "joint": "ring_pip_joint",
+      "finger": "ring",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        0.0,
+        1.57
+      ],
+      "new_range": [
+        -1.57,
+        0.0
+      ],
+      "current_limit_bias": "positive_only",
+      "neutral_tip": [
+        0.026971353217959404,
+        -0.05028567463159561,
+        0.276120662689209
+      ],
+      "positive_tip": [
+        0.027714373543858528,
+        -0.06721944361925125,
+        0.2652721405029297
+      ],
+      "negative_tip": [
+        0.02550414390861988,
+        -0.030703244730830193,
+        0.28052186965942383
+      ],
+      "neutral_tip_palm_distance": 0.15135756134986877,
+      "positive_tip_palm_distance": 0.14705996215343475,
+      "negative_tip_palm_distance": 0.15131649374961853,
+      "positive_distance_delta": -0.004297599196434021,
+      "negative_distance_delta": -4.106760025024414e-05,
+      "positive_world_delta": [
+        0.0007430203258991241,
+        -0.01693376898765564,
+        -0.010848522186279297
+      ],
+      "negative_world_delta": [
+        -0.0014672093093395233,
+        0.01958242990076542,
+        0.004401206970214844
+      ],
+      "positive_palmar_y_delta": -0.01693376898765564,
+      "negative_palmar_y_delta": 0.01958242990076542,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": true,
+      "reason": "current_limit_positive_or_positive_dominant_but_negative_angle_moves_palmar"
+    },
+    {
+      "joint": "ring_dip_joint",
+      "finger": "ring",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        0.0,
+        1.2
+      ],
+      "new_range": [
+        -1.2,
+        0.0
+      ],
+      "current_limit_bias": "positive_only",
+      "neutral_tip": [
+        0.026971353217959404,
+        -0.05028567463159561,
+        0.276120662689209
+      ],
+      "positive_tip": [
+        0.02723502181470394,
+        -0.05800488591194153,
+        0.2701702415943146
+      ],
+      "negative_tip": [
+        0.026341628283262253,
+        -0.041014887392520905,
+        0.2790735065937042
+      ],
+      "neutral_tip_palm_distance": 0.15135756134986877,
+      "positive_tip_palm_distance": 0.14813028275966644,
+      "negative_tip_palm_distance": 0.15185314416885376,
+      "positive_distance_delta": -0.0032272785902023315,
+      "negative_distance_delta": 0.0004955828189849854,
+      "positive_world_delta": [
+        0.00026366859674453735,
+        -0.007719211280345917,
+        -0.005950421094894409
+      ],
+      "negative_world_delta": [
+        -0.0006297249346971512,
+        0.009270787239074707,
+        0.0029528439044952393
+      ],
+      "positive_palmar_y_delta": -0.007719211280345917,
+      "negative_palmar_y_delta": 0.009270787239074707,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": true,
+      "reason": "current_limit_positive_or_positive_dominant_but_negative_angle_moves_palmar"
+    },
+    {
+      "joint": "little_mcp_flex_joint",
+      "finger": "little",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        -0.5,
+        0.5
+      ],
+      "new_range": [
+        -0.5,
+        0.5
+      ],
+      "current_limit_bias": "contains_zero_or_bidirectional",
+      "neutral_tip": [
+        0.05492513254284859,
+        -0.0395372174680233,
+        0.2583552598953247
+      ],
+      "positive_tip": [
+        0.021359967067837715,
+        -0.04217375069856644,
+        0.25845789909362793
+      ],
+      "negative_tip": [
+        0.08625797927379608,
+        -0.03499016538262367,
+        0.24690279364585876
+      ],
+      "neutral_tip_palm_distance": 0.139642134308815,
+      "positive_tip_palm_distance": 0.1315464973449707,
+      "negative_tip_palm_distance": 0.14406991004943848,
+      "positive_distance_delta": -0.0080956369638443,
+      "negative_distance_delta": 0.004427775740623474,
+      "positive_world_delta": [
+        -0.03356516361236572,
+        -0.0026365332305431366,
+        0.00010263919830322266
+      ],
+      "negative_world_delta": [
+        0.031332846730947495,
+        0.004547052085399628,
+        -0.011452466249465942
+      ],
+      "positive_palmar_y_delta": -0.0026365332305431366,
+      "negative_palmar_y_delta": 0.004547052085399628,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": false,
+      "reason": "mcp_flex_audit_only_possible_spread_joint"
+    },
+    {
+      "joint": "little_mcp_abd_joint",
+      "finger": "little",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        -0.2,
+        1.2
+      ],
+      "new_range": [
+        -1.2,
+        0.0
+      ],
+      "current_limit_bias": "contains_zero_or_bidirectional",
+      "neutral_tip": [
+        0.05492513254284859,
+        -0.0395372174680233,
+        0.2583552598953247
+      ],
+      "positive_tip": [
+        0.05559049919247627,
+        -0.06682062149047852,
+        0.24485522508621216
+      ],
+      "negative_tip": [
+        0.052223771810531616,
+        -0.009410898201167583,
+        0.26184606552124023
+      ],
+      "neutral_tip_palm_distance": 0.139642134308815,
+      "positive_tip_palm_distance": 0.13695034384727478,
+      "negative_tip_palm_distance": 0.13854089379310608,
+      "positive_distance_delta": -0.002691790461540222,
+      "negative_distance_delta": -0.0011012405157089233,
+      "positive_world_delta": [
+        0.0006653666496276855,
+        -0.027283404022455215,
+        -0.013500034809112549
+      ],
+      "negative_world_delta": [
+        -0.002701360732316971,
+        0.030126318335533142,
+        0.0034908056259155273
+      ],
+      "positive_palmar_y_delta": -0.027283404022455215,
+      "negative_palmar_y_delta": 0.030126318335533142,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": true,
+      "reason": "current_limit_positive_or_positive_dominant_but_negative_angle_moves_palmar"
+    },
+    {
+      "joint": "little_pip_joint",
+      "finger": "little",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        0.0,
+        1.57
+      ],
+      "new_range": [
+        -1.57,
+        0.0
+      ],
+      "current_limit_bias": "positive_only",
+      "neutral_tip": [
+        0.05492513254284859,
+        -0.0395372174680233,
+        0.2583552598953247
+      ],
+      "positive_tip": [
+        0.05513868108391762,
+        -0.05552869290113449,
+        0.24941837787628174
+      ],
+      "negative_tip": [
+        0.05346981808543205,
+        -0.02152513712644577,
+        0.26136988401412964
+      ],
+      "neutral_tip_palm_distance": 0.139642134308815,
+      "positive_tip_palm_distance": 0.13630680739879608,
+      "negative_tip_palm_distance": 0.1390981674194336,
+      "positive_distance_delta": -0.003335326910018921,
+      "negative_distance_delta": -0.0005439668893814087,
+      "positive_world_delta": [
+        0.00021354854106903076,
+        -0.01599147543311119,
+        -0.008936882019042969
+      ],
+      "negative_world_delta": [
+        -0.0014553144574165344,
+        0.01801208034157753,
+        0.0030146241188049316
+      ],
+      "positive_palmar_y_delta": -0.01599147543311119,
+      "negative_palmar_y_delta": 0.01801208034157753,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": true,
+      "reason": "current_limit_positive_or_positive_dominant_but_negative_angle_moves_palmar"
+    },
+    {
+      "joint": "little_dip_joint",
+      "finger": "little",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        0.0,
+        1.2
+      ],
+      "new_range": [
+        -1.2,
+        0.0
+      ],
+      "current_limit_bias": "positive_only",
+      "neutral_tip": [
+        0.05492513254284859,
+        -0.0395372174680233,
+        0.2583552598953247
+      ],
+      "positive_tip": [
+        0.054815955460071564,
+        -0.04746299609541893,
+        0.2526777982711792
+      ],
+      "negative_tip": [
+        0.05435984954237938,
+        -0.030178213492035866,
+        0.26102975010871887
+      ],
+      "neutral_tip_palm_distance": 0.139642134308815,
+      "positive_tip_palm_distance": 0.13651306927204132,
+      "negative_tip_palm_distance": 0.14014525711536407,
+      "positive_distance_delta": -0.0031290650367736816,
+      "negative_distance_delta": 0.0005031228065490723,
+      "positive_world_delta": [
+        -0.00010917708277702332,
+        -0.00792577862739563,
+        -0.005677461624145508
+      ],
+      "negative_world_delta": [
+        -0.0005652830004692078,
+        0.009359003975987434,
+        0.002674490213394165
+      ],
+      "positive_palmar_y_delta": -0.00792577862739563,
+      "negative_palmar_y_delta": 0.009359003975987434,
+      "criterion": "world_plus_y_palmar_displacement",
+      "observed_closing_sign": "negative",
+      "planned_change": true,
+      "reason": "current_limit_positive_or_positive_dominant_but_negative_angle_moves_palmar"
+    },
+    {
+      "joint": "thumb_cmc_abd_joint",
+      "finger": "thumb",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        -1.2,
+        1.2
+      ],
+      "new_range": [
+        -1.2,
+        1.2
+      ],
+      "current_limit_bias": "contains_zero_or_bidirectional",
+      "neutral_tip": [
+        -0.04604800045490265,
+        0.06388943642377853,
+        0.20606403052806854
+      ],
+      "positive_tip": [
+        -0.05197786167263985,
+        0.09088795632123947,
+        0.17952066659927368
+      ],
+      "negative_tip": [
+        -0.03538690134882927,
+        0.030621519312262535,
+        0.22181902825832367
+      ],
+      "neutral_tip_palm_distance": 0.11450927704572678,
+      "positive_tip_palm_distance": 0.12328165024518967,
+      "negative_tip_palm_distance": 0.1048828735947609,
+      "positive_distance_delta": 0.00877237319946289,
+      "negative_distance_delta": -0.009626403450965881,
+      "positive_world_delta": [
+        -0.005929861217737198,
+        0.026998519897460938,
+        -0.02654336392879486
+      ],
+      "negative_world_delta": [
+        0.01066109910607338,
+        -0.03326791524887085,
+        0.015754997730255127
+      ],
+      "positive_palmar_y_delta": 0.026998519897460938,
+      "negative_palmar_y_delta": -0.03326791524887085,
+      "criterion": "tip_to_palm_distance",
+      "observed_closing_sign": "negative",
+      "planned_change": false,
+      "reason": "thumb_cmc_audit_only_do_not_autoflip"
+    },
+    {
+      "joint": "thumb_cmc_joint",
+      "finger": "thumb",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        -1.2,
+        1.2
+      ],
+      "new_range": [
+        -1.2,
+        1.2
+      ],
+      "current_limit_bias": "contains_zero_or_bidirectional",
+      "neutral_tip": [
+        -0.04604800045490265,
+        0.06388943642377853,
+        0.20606403052806854
+      ],
+      "positive_tip": [
+        -0.008403250016272068,
+        0.07224767655134201,
+        0.20315143465995789
+      ],
+      "negative_tip": [
+        -0.08060912787914276,
+        0.04861099645495415,
+        0.1978440135717392
+      ],
+      "neutral_tip_palm_distance": 0.11450927704572678,
+      "positive_tip_palm_distance": 0.1083548367023468,
+      "negative_tip_palm_distance": 0.12052439898252487,
+      "positive_distance_delta": -0.006154440343379974,
+      "negative_distance_delta": 0.006015121936798096,
+      "positive_world_delta": [
+        0.037644751369953156,
+        0.008358240127563477,
+        -0.0029125958681106567
+      ],
+      "negative_world_delta": [
+        -0.03456112742424011,
+        -0.015278439968824387,
+        -0.008220016956329346
+      ],
+      "positive_palmar_y_delta": 0.008358240127563477,
+      "negative_palmar_y_delta": -0.015278439968824387,
+      "criterion": "tip_to_palm_distance",
+      "observed_closing_sign": "positive",
+      "planned_change": false,
+      "reason": "thumb_cmc_audit_only_do_not_autoflip"
+    },
+    {
+      "joint": "thumb_mcp_joint",
+      "finger": "thumb",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_range": [
+        -0.2,
+        1.4
+      ],
+      "new_range": [
+        -0.2,
+        1.4
+      ],
+      "current_limit_bias": "contains_zero_or_bidirectional",
+      "neutral_tip": [
+        -0.04604800045490265,
+        0.06388943642377853,
+        0.20606403052806854
+      ],
+      "positive_tip": [
+        -0.025720374658703804,
+        0.06700001657009125,
+        0.20248182117938995
+      ],
+      "negative_tip": [
+        -0.06553009897470474,
+        0.05680488795042038,
+        0.20361915230751038
+      ],
+      "neutral_tip_palm_distance": 0.11450927704572678,
+      "positive_tip_palm_distance": 0.10723487287759781,
+      "negative_tip_palm_distance": 0.11852128803730011,
+      "positive_distance_delta": -0.007274404168128967,
+      "negative_distance_delta": 0.004012010991573334,
+      "positive_world_delta": [
+        0.020327625796198845,
+        0.0031105801463127136,
+        -0.003582209348678589
+      ],
+      "negative_world_delta": [
+        -0.019482098519802094,
+        -0.007084548473358154,
+        -0.0024448782205581665
+      ],
+      "positive_palmar_y_delta": 0.0031105801463127136,
+      "negative_palmar_y_delta": -0.007084548473358154,
+      "criterion": "tip_to_palm_distance",
+      "observed_closing_sign": "positive",
+      "planned_change": false,
+      "reason": "limit_already_supports_observed_closing_sign"
+    },
+    {
+      "joint": "thumb_ip_joint",
+      "finger": "thumb",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "old_range": [
+        -0.2,
+        1.2
+      ],
+      "new_range": [
+        -1.2,
+        0.0
+      ],
+      "current_limit_bias": "contains_zero_or_bidirectional",
+      "neutral_tip": [
+        -0.04604800045490265,
+        0.06388943642377853,
+        0.20606403052806854
+      ],
+      "positive_tip": [
+        -0.05526470020413399,
+        0.06080460175871849,
+        0.20528952777385712
+      ],
+      "negative_tip": [
+        -0.03658715635538101,
+        0.06508148461580276,
+        0.20403055846691132
+      ],
+      "neutral_tip_palm_distance": 0.11450927704572678,
+      "positive_tip_palm_distance": 0.11635635048151016,
+      "negative_tip_palm_distance": 0.11028445512056351,
+      "positive_distance_delta": 0.0018470734357833862,
+      "negative_distance_delta": -0.004224821925163269,
+      "positive_world_delta": [
+        -0.009216699749231339,
+        -0.0030848346650600433,
+        -0.0007745027542114258
+      ],
+      "negative_world_delta": [
+        0.009460844099521637,
+        0.001192048192024231,
+        -0.0020334720611572266
+      ],
+      "positive_palmar_y_delta": -0.0030848346650600433,
+      "negative_palmar_y_delta": 0.001192048192024231,
+      "criterion": "tip_to_palm_distance",
+      "observed_closing_sign": "negative",
+      "planned_change": true,
+      "reason": "current_limit_positive_or_positive_dominant_but_negative_angle_moves_palmar"
+    }
+  ],
+  "change_log": [
+    {
+      "kind": "joint_range",
+      "name": "index_mcp_abd_joint",
+      "old": "0.2 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "joint_range",
+      "name": "index_pip_joint",
+      "old": "0 1.57",
+      "new": "-1.57 0"
+    },
+    {
+      "kind": "joint_range",
+      "name": "index_dip_joint",
+      "old": "0 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "joint_range",
+      "name": "little_mcp_abd_joint",
+      "old": "-0.2 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "joint_range",
+      "name": "little_pip_joint",
+      "old": "0 1.57",
+      "new": "-1.57 0"
+    },
+    {
+      "kind": "joint_range",
+      "name": "little_dip_joint",
+      "old": "0 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "joint_range",
+      "name": "middle_mcp_abd_joint",
+      "old": "0.2 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "joint_range",
+      "name": "middle_pip_joint",
+      "old": "0 1.57",
+      "new": "-1.57 0"
+    },
+    {
+      "kind": "joint_range",
+      "name": "middle_dip_joint",
+      "old": "0 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "joint_range",
+      "name": "ring_mcp_abd_joint",
+      "old": "-0.2 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "joint_range",
+      "name": "ring_pip_joint",
+      "old": "0 1.57",
+      "new": "-1.57 0"
+    },
+    {
+      "kind": "joint_range",
+      "name": "ring_dip_joint",
+      "old": "0 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "joint_range",
+      "name": "thumb_ip_joint",
+      "old": "-0.2 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "index_mcp_abd_joint_pos",
+      "joint": "index_mcp_abd_joint",
+      "old": "0.2 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "index_pip_joint_pos",
+      "joint": "index_pip_joint",
+      "old": "0 1.57",
+      "new": "-1.57 0"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "index_dip_joint_pos",
+      "joint": "index_dip_joint",
+      "old": "0 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "middle_mcp_abd_joint_pos",
+      "joint": "middle_mcp_abd_joint",
+      "old": "0.2 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "middle_pip_joint_pos",
+      "joint": "middle_pip_joint",
+      "old": "0 1.57",
+      "new": "-1.57 0"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "middle_dip_joint_pos",
+      "joint": "middle_dip_joint",
+      "old": "0 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "ring_mcp_abd_joint_pos",
+      "joint": "ring_mcp_abd_joint",
+      "old": "-0.2 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "ring_pip_joint_pos",
+      "joint": "ring_pip_joint",
+      "old": "0 1.57",
+      "new": "-1.57 0"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "ring_dip_joint_pos",
+      "joint": "ring_dip_joint",
+      "old": "0 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "little_mcp_abd_joint_pos",
+      "joint": "little_mcp_abd_joint",
+      "old": "-0.2 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "little_pip_joint_pos",
+      "joint": "little_pip_joint",
+      "old": "0 1.57",
+      "new": "-1.57 0"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "little_dip_joint_pos",
+      "joint": "little_dip_joint",
+      "old": "0 1.2",
+      "new": "-1.2 0"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "thumb_ip_joint_pos",
+      "joint": "thumb_ip_joint",
+      "old": "-0.2 1.2",
+      "new": "-1.2 0"
+    }
+  ],
+  "visual": {
+    "frames": [
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_flexion_sign\\original_open.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_flexion_sign\\original_old_positive_close.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_flexion_sign\\fixed_observed_close.png"
+    ],
+    "sheet": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_flexion_sign\\export4_flexion_sign_summary.png"
+  },
+  "notes": [
+    "CAD/STL/joint tree unchanged.",
+    "mcp_flex and thumb CMC joints are audit-only.",
+    "Use this fixed MJCF as experimental evidence before repairing SolidWorks/URDF limits."
+  ]
+}

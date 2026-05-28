@@ -1,0 +1,87 @@
+{
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_clean_mesh_export2_graspfix.xml",
+  "stage": "hold",
+  "applied": {
+    "index_mcp_flex_joint": -0.08,
+    "index_mcp_abd_joint": 0.45,
+    "index_pip_joint": 0.65,
+    "index_dip_joint": 0.35,
+    "middle_mcp_flex_joint": 0.0,
+    "middle_mcp_abd_joint": 0.5,
+    "middle_pip_joint": 0.7,
+    "middle_dip_joint": 0.38,
+    "ring_mcp_flex_joint": 0.04,
+    "ring_mcp_abd_joint": 0.5,
+    "ring_pip_joint": 0.7,
+    "ring_dip_joint": 0.38,
+    "little_mcp_flex_joint": 0.08,
+    "little_mcp_abd_joint": 0.45,
+    "little_pip_joint": 0.65,
+    "little_dip_joint": 0.35,
+    "thumb_cmc_joint": 0.25,
+    "thumb_mcp_joint": 0.45,
+    "thumb_ip_joint": 0.35
+  },
+  "renders": [
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export2_graspfix\\hold_multiview\\front_hold.png",
+      "camera": "front",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 36.886398039215685
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export2_graspfix\\hold_multiview\\side_hold.png",
+      "camera": "side",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 31.57052320261438
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export2_graspfix\\hold_multiview\\top_hold.png",
+      "camera": "top",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 3,
+      "max_pixel": 255,
+      "mean_pixel": 95.83145816993463
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export2_graspfix\\hold_multiview\\palm_hold.png",
+      "camera": "palm",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 64.63383823529412
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export2_graspfix\\hold_multiview\\full_hold.png",
+      "camera": "full_hand_with_ball",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 33.048926470588235
+    }
+  ]
+}

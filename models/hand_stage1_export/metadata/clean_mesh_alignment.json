@@ -1,0 +1,1078 @@
+{
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_clean_mesh_draft.xml",
+  "load_success": true,
+  "model_summary": {
+    "nbody": 25,
+    "njnt": 22,
+    "nq": 28,
+    "nv": 27,
+    "ngeom": 103,
+    "nsite": 5,
+    "nmesh": 25,
+    "nu": 0,
+    "ncam": 8
+  },
+  "mesh_files_from_draft": [
+    {
+      "name": "hand_base_link_clean_mesh",
+      "file": "hand_base_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "index_distal_link_clean_mesh",
+      "file": "index_distal_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "index_mcp_flex_link_clean_mesh",
+      "file": "index_mcp_flex_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "index_proximal_inter_link_clean_mesh",
+      "file": "index_proximal_inter_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "index_proximal_phalanx_link_clean_mesh",
+      "file": "index_proximal_phalanx_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "little_distal_link_clean_mesh",
+      "file": "little_distal_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "little_mcp_flex_link_clean_mesh",
+      "file": "little_mcp_flex_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "little_proximal_inter_link_clean_mesh",
+      "file": "little_proximal_inter_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "little_proximal_phalanx_link_clean_mesh",
+      "file": "little_proximal_phalanx_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "middle_distal_link_clean_mesh",
+      "file": "middle_distal_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "middle_mcp_flex_link_clean_mesh",
+      "file": "middle_mcp_flex_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "middle_proximal_inter_link_clean_mesh",
+      "file": "middle_proximal_inter_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "middle_proximal_phalanx_link_clean_mesh",
+      "file": "middle_proximal_phalanx_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "palm_link_clean_mesh",
+      "file": "palm_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "ring_distal_link_clean_mesh",
+      "file": "ring_distal_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "ring_mcp_flex_link_clean_mesh",
+      "file": "ring_mcp_flex_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "ring_proximal_inter_link_clean_mesh",
+      "file": "ring_proximal_inter_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "ring_proximal_phalanx_link_clean_mesh",
+      "file": "ring_proximal_phalanx_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "thumb_distal_link_clean_mesh",
+      "file": "thumb_distal_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "thumb_metacarpal_link_clean_mesh",
+      "file": "thumb_metacarpal_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "thumb_proximal_link_clean_mesh",
+      "file": "thumb_proximal_link.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "thumb_root_connector_link_clean_mesh_part_1",
+      "file": "thumb_root_connector_link_707ff91f.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "thumb_root_connector_link_clean_mesh_part_2",
+      "file": "thumb_root_connector_link_b6051f81.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "thumb_root_connector_link_clean_mesh_part_3",
+      "file": "thumb_root_connector_link_36a50eba.STL",
+      "scale": "0.001 0.001 0.001"
+    },
+    {
+      "name": "wrist_middle_link_clean_mesh",
+      "file": "wrist_middle_link.STL",
+      "scale": "0.001 0.001 0.001"
+    }
+  ],
+  "missing_mesh_files": [],
+  "body_positions": [
+    {
+      "name": "world",
+      "world_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distance_from_palm": 0.08527757870654387,
+      "far_from_palm": false
+    },
+    {
+      "name": "hand_base_link",
+      "world_position": [
+        0.0,
+        0.0,
+        0.05
+      ],
+      "distance_from_palm": 0.03528389614165074,
+      "far_from_palm": false
+    },
+    {
+      "name": "wrist_middle_link",
+      "world_position": [
+        0.0,
+        0.0,
+        0.065
+      ],
+      "distance_from_palm": 0.020291862802611294,
+      "far_from_palm": false
+    },
+    {
+      "name": "palm_link",
+      "world_position": [
+        0.0005711414461814196,
+        -0.0006588301028311388,
+        0.08527312103115989
+      ],
+      "distance_from_palm": 0.0,
+      "far_from_palm": false
+    },
+    {
+      "name": "index_mcp_flex_link",
+      "world_position": [
+        -0.02404996894947014,
+        -0.022053008989421596,
+        0.18336210507393455
+      ],
+      "distance_from_palm": 0.10337000898660112,
+      "far_from_palm": false
+    },
+    {
+      "name": "index_proximal_phalanx_link",
+      "world_position": [
+        -0.02351435693827736,
+        -0.024035235717801934,
+        0.19290269242409075
+      ],
+      "distance_from_palm": 0.11274170572653851,
+      "far_from_palm": false
+    },
+    {
+      "name": "index_proximal_inter_link",
+      "world_position": [
+        -0.021930986084601232,
+        -0.030022585760575073,
+        0.22735093739138384
+      ],
+      "distance_from_palm": 0.1468151279379234,
+      "far_from_palm": false
+    },
+    {
+      "name": "index_distal_link",
+      "world_position": [
+        -0.020386529251323737,
+        -0.03280902178236666,
+        0.2561143713143963
+      ],
+      "distance_from_palm": 0.17509880520561916,
+      "far_from_palm": false
+    },
+    {
+      "name": "middle_mcp_flex_link",
+      "world_position": [
+        -0.004108125941274545,
+        -0.02004785559064734,
+        0.18091102644527643
+      ],
+      "distance_from_palm": 0.09769564373425255,
+      "far_from_palm": false
+    },
+    {
+      "name": "middle_proximal_phalanx_link",
+      "world_position": [
+        -0.0034471022574412966,
+        -0.0220192668635245,
+        0.19044597494024926
+      ],
+      "distance_from_palm": 0.10739526870608378,
+      "far_from_palm": false
+    },
+    {
+      "name": "middle_proximal_inter_link",
+      "world_position": [
+        1.1388099327495644e-05,
+        -0.032569970505035455,
+        0.23405531090126963
+      ],
+      "distance_from_palm": 0.15216692882529995,
+      "far_from_palm": false
+    },
+    {
+      "name": "middle_distal_link",
+      "world_position": [
+        0.0025965104557686583,
+        -0.03982947012973841,
+        0.26819652646034375
+      ],
+      "distance_from_palm": 0.18708130161390293,
+      "far_from_palm": false
+    },
+    {
+      "name": "ring_mcp_flex_link",
+      "world_position": [
+        0.015832932592421377,
+        -0.0173555167851306,
+        0.1747175152866507
+      ],
+      "distance_from_palm": 0.0922605076882303,
+      "far_from_palm": false
+    },
+    {
+      "name": "ring_proximal_phalanx_link",
+      "world_position": [
+        0.016722554908673627,
+        -0.01930646801459798,
+        0.1842381241589007
+      ],
+      "distance_from_palm": 0.10199350175672217,
+      "far_from_palm": false
+    },
+    {
+      "name": "ring_proximal_inter_link",
+      "world_position": [
+        0.020755950288630604,
+        -0.02845990678604012,
+        0.22296818733218254
+      ],
+      "distance_from_palm": 0.14191637557517775,
+      "far_from_palm": false
+    },
+    {
+      "name": "ring_distal_link",
+      "world_position": [
+        0.023908567560781434,
+        -0.037488677498200146,
+        0.2514042042869633
+      ],
+      "distance_from_palm": 0.17175741596963803,
+      "far_from_palm": false
+    },
+    {
+      "name": "little_mcp_flex_link",
+      "world_position": [
+        0.03577439710232203,
+        -0.014290536165675096,
+        0.16649493856139388
+      ],
+      "distance_from_palm": 0.0895660441344263,
+      "far_from_palm": false
+    },
+    {
+      "name": "little_proximal_phalanx_link",
+      "world_position": [
+        0.03759826584518095,
+        -0.016147493274710194,
+        0.17590043435968258
+      ],
+      "distance_from_palm": 0.0991171859429894,
+      "far_from_palm": false
+    },
+    {
+      "name": "little_proximal_inter_link",
+      "world_position": [
+        0.0444424197013427,
+        -0.022895909115631184,
+        0.2095558085350085
+      ],
+      "distance_from_palm": 0.13366137494408242,
+      "far_from_palm": false
+    },
+    {
+      "name": "little_distal_link",
+      "world_position": [
+        0.04931713586528689,
+        -0.0277178381253637,
+        0.23359789488122606
+      ],
+      "distance_from_palm": 0.15845693555267382,
+      "far_from_palm": false
+    },
+    {
+      "name": "thumb_root_connector_link",
+      "world_position": [
+        -0.01629353129730358,
+        0.0009584153283358401,
+        0.10522530517000854
+      ],
+      "distance_from_palm": 0.02617484138328254,
+      "far_from_palm": false
+    },
+    {
+      "name": "thumb_metacarpal_link",
+      "world_position": [
+        -0.02055211003591495,
+        0.006585662339311594,
+        0.1144151543643048
+      ],
+      "distance_from_palm": 0.036714200668273834,
+      "far_from_palm": false
+    },
+    {
+      "name": "thumb_proximal_link",
+      "world_position": [
+        -0.03904783716879892,
+        0.031027382893601945,
+        0.15642127762237137
+      ],
+      "distance_from_palm": 0.08738271995581934,
+      "far_from_palm": false
+    },
+    {
+      "name": "thumb_distal_link",
+      "world_position": [
+        -0.04403022747364993,
+        0.048277485525662266,
+        0.18290965124710554
+      ],
+      "distance_from_palm": 0.11797006878621244,
+      "far_from_palm": false
+    },
+    {
+      "name": "ball",
+      "world_position": [
+        0.01,
+        -0.045,
+        0.215
+      ],
+      "distance_from_palm": 0.13741945222010457,
+      "far_from_palm": false
+    }
+  ],
+  "mesh_geoms": [
+    {
+      "geom": "hand_base_link_clean_visual",
+      "mesh": "hand_base_link_clean_mesh",
+      "world_center": [
+        0.025574727088925334,
+        0.02710819212230178,
+        0.07231452864758227
+      ],
+      "bbox_min": [
+        0.0008426791492107399,
+        0.0155586344209197,
+        0.05405402286264683
+      ],
+      "bbox_max": [
+        0.0497852830468653,
+        0.04033301515154186,
+        0.09340011198846457
+      ],
+      "bbox_span": [
+        0.04894260389765456,
+        0.024774380730622162,
+        0.03934608912581774
+      ],
+      "max_span": 0.04894260389765456,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "wrist_middle_link_clean_visual",
+      "mesh": "wrist_middle_link_clean_mesh",
+      "world_center": [
+        -0.030528013667843402,
+        0.015044346307161435,
+        0.11050957770104686
+      ],
+      "bbox_min": [
+        -0.05848456066697173,
+        -0.0008542640771157413,
+        0.09446967902977477
+      ],
+      "bbox_max": [
+        -0.00257146350008413,
+        0.03222424193548927,
+        0.1228140436676647
+      ],
+      "bbox_span": [
+        0.0559130971668876,
+        0.03307850601260501,
+        0.028344364637889932
+      ],
+      "max_span": 0.0559130971668876,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "palm_link_clean_visual",
+      "mesh": "palm_link_clean_mesh",
+      "world_center": [
+        0.05055476070280219,
+        0.041600775298588945,
+        0.19433345923295292
+      ],
+      "bbox_min": [
+        0.031533795794722895,
+        -0.004705375356130845,
+        0.1409264605866889
+      ],
+      "bbox_max": [
+        0.06680293620520397,
+        0.08357989672196955,
+        0.24656460212035544
+      ],
+      "bbox_span": [
+        0.03526914041048108,
+        0.0882852720781004,
+        0.10563814153366655
+      ],
+      "max_span": 0.10563814153366655,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "index_mcp_flex_link_clean_visual",
+      "mesh": "index_mcp_flex_link_clean_mesh",
+      "world_center": [
+        -0.034916625466333534,
+        -0.0429720653189674,
+        0.34288603958436203
+      ],
+      "bbox_min": [
+        -0.04451966851125563,
+        -0.05168058642536082,
+        0.3330640281120148
+      ],
+      "bbox_max": [
+        -0.025416508928706373,
+        -0.034957929602557614,
+        0.353573441265578
+      ],
+      "bbox_span": [
+        0.01910315958254926,
+        0.016722656822803203,
+        0.020509413153563194
+      ],
+      "max_span": 0.020509413153563194,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "index_proximal_phalanx_link_clean_visual",
+      "mesh": "index_proximal_phalanx_link_clean_mesh",
+      "world_center": [
+        -0.022352878746795903,
+        -0.06751659183277885,
+        0.3692263756036326
+      ],
+      "bbox_min": [
+        -0.03116065265828767,
+        -0.08193254476417583,
+        0.3445308943126264
+      ],
+      "bbox_max": [
+        -0.01332157845350148,
+        -0.056231296304703124,
+        0.3955967260226625
+      ],
+      "bbox_span": [
+        0.01783907420478619,
+        0.025701248459472706,
+        0.05106583171003609
+      ],
+      "max_span": 0.05106583171003609,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "index_proximal_inter_link_clean_visual",
+      "mesh": "index_proximal_inter_link_clean_mesh",
+      "world_center": [
+        -0.03741657501757741,
+        0.007314640100842332,
+        0.437045581084015
+      ],
+      "bbox_min": [
+        -0.04655132126809799,
+        -0.003097257922788258,
+        0.41540369317243525
+      ],
+      "bbox_max": [
+        -0.027849519398076582,
+        0.020401693138757192,
+        0.460112895263656
+      ],
+      "bbox_span": [
+        0.018701801870021406,
+        0.02349895106154545,
+        0.04470920209122076
+      ],
+      "max_span": 0.04470920209122076,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "index_distal_link_clean_visual",
+      "mesh": "index_distal_link_clean_mesh",
+      "world_center": [
+        -0.03422246951622235,
+        0.01023203820355359,
+        0.49017294118401056
+      ],
+      "bbox_min": [
+        -0.041476048231483265,
+        0.0002525839858563486,
+        0.4722597091819224
+      ],
+      "bbox_max": [
+        -0.02526093253828068,
+        0.019466840324906594,
+        0.5071612767902323
+      ],
+      "bbox_span": [
+        0.016215115693202584,
+        0.019214256339050245,
+        0.03490156760830987
+      ],
+      "max_span": 0.03490156760830987,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "middle_mcp_flex_link_clean_visual",
+      "mesh": "middle_mcp_flex_link_clean_mesh",
+      "world_center": [
+        -0.026855689961341783,
+        -0.0413620232577054,
+        0.33754121793748265
+      ],
+      "bbox_min": [
+        -0.03653905078482316,
+        -0.05005659236689811,
+        0.3276893344226501
+      ],
+      "bbox_max": [
+        -0.017326558891581887,
+        -0.03335309592687129,
+        0.3483140510911493
+      ],
+      "bbox_span": [
+        0.019212491893241274,
+        0.016703496440026826,
+        0.020624716668499243
+      ],
+      "max_span": 0.020624716668499243,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "middle_proximal_phalanx_link_clean_visual",
+      "mesh": "middle_proximal_phalanx_link_clean_mesh",
+      "world_center": [
+        -0.026631476999988538,
+        0.15231329281322833,
+        0.24740292257439628
+      ],
+      "bbox_min": [
+        -0.03746019179481082,
+        0.12317503964962068,
+        0.23458022589062796
+      ],
+      "bbox_max": [
+        -0.016235158411911053,
+        0.18344870455397957,
+        0.2634496697146707
+      ],
+      "bbox_span": [
+        0.021225033382899765,
+        0.0602736649043589,
+        0.028869443824042745
+      ],
+      "max_span": 0.0602736649043589,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "middle_proximal_inter_link_clean_visual",
+      "mesh": "middle_proximal_inter_link_clean_mesh",
+      "world_center": [
+        -0.027016341377433705,
+        0.18044728008998231,
+        0.3010722135198856
+      ],
+      "bbox_min": [
+        -0.03656934477806765,
+        0.155863790003249,
+        0.2894320641885243
+      ],
+      "bbox_max": [
+        -0.01759583591212012,
+        0.20668625799577092,
+        0.3157756828581816
+      ],
+      "bbox_span": [
+        0.01897350886594753,
+        0.050822467992521936,
+        0.026343618669657287
+      ],
+      "max_span": 0.050822467992521936,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "middle_distal_link_clean_visual",
+      "mesh": "middle_distal_link_clean_mesh",
+      "world_center": [
+        -0.029463288835670547,
+        0.19981074218822661,
+        0.3423895181214252
+      ],
+      "bbox_min": [
+        -0.03963315796692802,
+        0.1823928289738197,
+        0.332381344467011
+      ],
+      "bbox_max": [
+        -0.018788703832060036,
+        0.21551763529699336,
+        0.35245638619209824
+      ],
+      "bbox_span": [
+        0.020844454134867983,
+        0.03312480632317366,
+        0.020075041725087228
+      ],
+      "max_span": 0.03312480632317366,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "ring_mcp_flex_link_clean_visual",
+      "mesh": "ring_mcp_flex_link_clean_mesh",
+      "world_center": [
+        -0.027005344410084356,
+        -0.03899501930743911,
+        0.32458763263546697
+      ],
+      "bbox_min": [
+        -0.036842868387994096,
+        -0.047663548073119164,
+        0.3146848626518331
+      ],
+      "bbox_max": [
+        -0.017427194278919568,
+        -0.030996350320000088,
+        0.33551179443573825
+      ],
+      "bbox_span": [
+        0.019415674109074528,
+        0.016667197753119076,
+        0.020826931783905156
+      ],
+      "max_span": 0.020826931783905156,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "ring_proximal_phalanx_link_clean_visual",
+      "mesh": "ring_proximal_phalanx_link_clean_mesh",
+      "world_center": [
+        -0.0030577061664147295,
+        0.14262183635149406,
+        0.2598761138026491
+      ],
+      "bbox_min": [
+        -0.013355721838307895,
+        0.11583644564573549,
+        0.24704194300285798
+      ],
+      "bbox_max": [
+        0.006903256952076884,
+        0.17132610696560696,
+        0.27584283444966917
+      ],
+      "bbox_span": [
+        0.02025897879038478,
+        0.05548966131987147,
+        0.028800891446811194
+      ],
+      "max_span": 0.05548966131987147,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "ring_proximal_inter_link_clean_visual",
+      "mesh": "ring_proximal_inter_link_clean_mesh",
+      "world_center": [
+        0.030297928258909847,
+        -0.11257079532798006,
+        0.42009614470488377
+      ],
+      "bbox_min": [
+        0.02209873077089523,
+        -0.12717009726965608,
+        0.39779737321827247
+      ],
+      "bbox_max": [
+        0.03916147570399711,
+        -0.10105031988193801,
+        0.4440790509033146
+      ],
+      "bbox_span": [
+        0.01706274493310188,
+        0.026119777387718077,
+        0.046281677685042155
+      ],
+      "max_span": 0.046281677685042155,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "ring_distal_link_clean_visual",
+      "mesh": "ring_distal_link_clean_mesh",
+      "world_center": [
+        -0.0073250648678967745,
+        0.18131396208366343,
+        0.34403181470244604
+      ],
+      "bbox_min": [
+        -0.018564190301163602,
+        0.1641356020767616,
+        0.333596925990343
+      ],
+      "bbox_max": [
+        0.004175424108689901,
+        0.19646353430022798,
+        0.35434939256711834
+      ],
+      "bbox_span": [
+        0.022739614409853504,
+        0.03232793222346639,
+        0.02075246657677532
+      ],
+      "max_span": 0.03232793222346639,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "little_mcp_flex_link_clean_visual",
+      "mesh": "little_mcp_flex_link_clean_mesh",
+      "world_center": [
+        -0.027615503114345526,
+        -0.035904428707848705,
+        0.3074981646080817
+      ],
+      "bbox_min": [
+        -0.038137750815318186,
+        -0.04445818823466661,
+        0.2974355832262057
+      ],
+      "bbox_max": [
+        -0.017889609517499003,
+        -0.02791229505080125,
+        0.3190068457691026
+      ],
+      "bbox_span": [
+        0.020248141297819183,
+        0.01654589318386536,
+        0.021571262542896874
+      ],
+      "max_span": 0.021571262542896874,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "little_proximal_phalanx_link_clean_visual",
+      "mesh": "little_proximal_phalanx_link_clean_mesh",
+      "world_center": [
+        0.027851001038021156,
+        0.13133270759485963,
+        0.2715353436850234
+      ],
+      "bbox_min": [
+        0.018608403409383224,
+        0.10692938782835942,
+        0.257219496784713
+      ],
+      "bbox_max": [
+        0.03723551970355697,
+        0.1576700642503764,
+        0.2889064654722463
+      ],
+      "bbox_span": [
+        0.018627116294173747,
+        0.05074067642201699,
+        0.03168696868753329
+      ],
+      "max_span": 0.05074067642201699,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "little_proximal_inter_link_clean_visual",
+      "mesh": "little_proximal_inter_link_clean_mesh",
+      "world_center": [
+        0.07563694306580715,
+        -0.12649748517390236,
+        0.38429303053347247
+      ],
+      "bbox_min": [
+        0.06628432752932019,
+        -0.14163180434791198,
+        0.3645385279027741
+      ],
+      "bbox_max": [
+        0.0852283522904501,
+        -0.11430654708475817,
+        0.4059106323718133
+      ],
+      "bbox_span": [
+        0.018944024761129913,
+        0.02732525726315381,
+        0.04137210446903922
+      ],
+      "max_span": 0.04137210446903922,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "little_distal_link_clean_visual",
+      "mesh": "little_distal_link_clean_mesh",
+      "world_center": [
+        0.03416822869004953,
+        0.16845428733416412,
+        0.3489964649486923
+      ],
+      "bbox_min": [
+        0.02377073081572677,
+        0.1511830218856015,
+        0.33684336344963656
+      ],
+      "bbox_max": [
+        0.04558372980754595,
+        0.18352836722291455,
+        0.3607619063956078
+      ],
+      "bbox_span": [
+        0.02181299899181918,
+        0.032345345337313036,
+        0.023918542945971233
+      ],
+      "max_span": 0.032345345337313036,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "thumb_root_connector_link_clean_visual_part_1",
+      "mesh": "thumb_root_connector_link_clean_mesh_part_1",
+      "world_center": [
+        -0.07917541517665022,
+        -0.029060067183626484,
+        0.07331786912035376
+      ],
+      "bbox_min": [
+        -0.08517431018036656,
+        -0.03763240389170627,
+        0.06420129241789613
+      ],
+      "bbox_max": [
+        -0.07317652156276588,
+        -0.020487730670275206,
+        0.08243444654990874
+      ],
+      "bbox_span": [
+        0.011997788617600674,
+        0.017144673221431067,
+        0.01823315413201261
+      ],
+      "max_span": 0.01823315413201261,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "thumb_root_connector_link_clean_visual_part_2",
+      "mesh": "thumb_root_connector_link_clean_mesh_part_2",
+      "world_center": [
+        -0.08902547506938994,
+        -0.023415683560917507,
+        0.07467786105055692
+      ],
+      "bbox_min": [
+        -0.09546643674325775,
+        -0.03187580173353332,
+        0.06642563440181073
+      ],
+      "bbox_max": [
+        -0.08263096223446492,
+        -0.01495759730254568,
+        0.08295059329363698
+      ],
+      "bbox_span": [
+        0.012835474508792827,
+        0.01691820443098764,
+        0.016524958891826244
+      ],
+      "max_span": 0.01691820443098764,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "thumb_root_connector_link_clean_visual_part_3",
+      "mesh": "thumb_root_connector_link_clean_mesh_part_3",
+      "world_center": [
+        -0.0830443770776232,
+        -0.026840796826566204,
+        0.07384949613399987
+      ],
+      "bbox_min": [
+        -0.09259171291046359,
+        -0.035166140030175826,
+        0.06545978140474848
+      ],
+      "bbox_max": [
+        -0.07454200996991886,
+        -0.018028017216408246,
+        0.08239889064415745
+      ],
+      "bbox_span": [
+        0.018049702940544726,
+        0.01713812281376758,
+        0.016939109239408973
+      ],
+      "max_span": 0.018049702940544726,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "thumb_metacarpal_link_clean_visual",
+      "mesh": "thumb_metacarpal_link_clean_mesh",
+      "world_center": [
+        0.0042406966805997315,
+        0.04154332940463551,
+        0.21367213233583168
+      ],
+      "bbox_min": [
+        -0.015656503308357324,
+        0.015162547947534796,
+        0.19844506116471317
+      ],
+      "bbox_max": [
+        0.02363880606170763,
+        0.07018398212014332,
+        0.2289960829818474
+      ],
+      "bbox_span": [
+        0.03929530937006495,
+        0.05502143417260852,
+        0.030551021817134233
+      ],
+      "max_span": 0.05502143417260852,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "thumb_proximal_link_clean_visual",
+      "mesh": "thumb_proximal_link_clean_mesh",
+      "world_center": [
+        -0.026996938333339996,
+        0.08589293877243266,
+        0.27696509074439335
+      ],
+      "bbox_min": [
+        -0.040356326609979,
+        0.06328722390900124,
+        0.2657403854732906
+      ],
+      "bbox_max": [
+        -0.014135261100308601,
+        0.10906753810383502,
+        0.2922330729590268
+      ],
+      "bbox_span": [
+        0.0262210655096704,
+        0.04578031419483378,
+        0.026492687485736188
+      ],
+      "max_span": 0.04578031419483378,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    },
+    {
+      "geom": "thumb_distal_link_clean_visual",
+      "mesh": "thumb_distal_link_clean_mesh",
+      "world_center": [
+        -0.04061170059711371,
+        -0.05790587236857828,
+        0.07415869071516502
+      ],
+      "bbox_min": [
+        -0.04877501428132541,
+        -0.0684755601620815,
+        0.05213965294889088
+      ],
+      "bbox_max": [
+        -0.031339085583131795,
+        -0.04626851962832633,
+        0.09348334569271087
+      ],
+      "bbox_span": [
+        0.017435928698193617,
+        0.022207040533755176,
+        0.04134369274381999
+      ],
+      "max_span": 0.04134369274381999,
+      "bbox_over_1m": false,
+      "center_far_from_palm": false
+    }
+  ],
+  "issues": [],
+  "overall_status": "ok",
+  "notes": [
+    "This numerical alignment check catches scale/path/outlier problems only.",
+    "Visual screenshots remain required for palm, finger root, thumb root, and tip-site alignment."
+  ]
+}

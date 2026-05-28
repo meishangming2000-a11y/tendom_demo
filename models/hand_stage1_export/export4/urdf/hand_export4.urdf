@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.1-13-g25da24a-dirty  Build Version: 1.6.9598.34259
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="hand_export4">
+  <link
+    name="hand_base_link">
+    <inertial>
+      <origin
+        xyz="-0.000431113750548884 -6.22717667953746E-05 0.00833734392528563"
+        rpy="0 0 0" />
+      <mass
+        value="0.0125765233454055" />
+      <inertia
+        ixx="1.62444888378369E-06"
+        ixy="-5.43591400498577E-08"
+        ixz="5.04145308373679E-11"
+        iyy="2.34178617829279E-06"
+        iyz="3.31012279433782E-09"
+        izz="3.4900420195727E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/hand_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/hand_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wrist_middle_link">
+    <inertial>
+      <origin
+        xyz="5.49796848325901E-09 0.0119158907427827 -0.000700000041961338"
+        rpy="0 0 0" />
+      <mass
+        value="0.0100624928004409" />
+      <inertia
+        ixx="9.15626271398201E-07"
+        ixy="-2.34720798788396E-12"
+        ixz="2.03260706069829E-11"
+        iyy="3.09342304316827E-06"
+        iyz="-2.61671780956122E-12"
+        izz="2.4816512954662E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/wrist_middle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/wrist_middle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_1_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0149999999999995"
+      rpy="1.5707963267949 0.0138164162631697 -3.06629219511699" />
+    <parent
+      link="hand_base_link" />
+    <child
+      link="wrist_middle_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.8"
+      upper="0.8"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="palm_link">
+    <inertial>
+      <origin
+        xyz="-0.000207868250421524 0.0473735507926797 0.00393768478490306"
+        rpy="0 0 0" />
+      <mass
+        value="0.141370954426337" />
+      <inertia
+        ixx="0.000148459381690503"
+        ixy="1.16389923489556E-07"
+        ixz="-2.68746617256422E-07"
+        iyy="6.5813754018779E-05"
+        iyz="8.55438776131167E-06"
+        izz="9.79943669831464E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/palm_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/palm_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.000799999999999593 0.0202639370517931 -0.000699999999999947"
+      rpy="-1.5707963267949 -1.38967224096842 1.5707963267949" />
+    <parent
+      link="wrist_middle_link" />
+    <child
+      link="palm_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.8"
+      upper="0.8"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="index_mcp_flex_link">
+    <inertial>
+      <origin
+        xyz="-0.000298721330807411 0.00563135177096225 -0.000771160596528597"
+        rpy="0 0 0" />
+      <mass
+        value="0.00175480523531261" />
+      <inertia
+        ixx="6.98330879704469E-08"
+        ixy="-1.3106585121844E-09"
+        ixz="7.41436428459385E-11"
+        iyy="9.44691216865603E-08"
+        iyz="-1.40181413499964E-09"
+        izz="1.09859285814902E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/index_mcp_flex_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/index_mcp_flex_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="index_mcp_flex_joint"
+    type="revolute">
+    <origin
+      xyz="-0.00143326292141997 0.100337103658253 -0.0248026451367664"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="palm_link" />
+    <child
+      link="index_mcp_flex_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="index_proximal_phalanx_link">
+    <inertial>
+      <origin
+        xyz="-0.000154518432922527 0.0153833252047104 4.77058346580045E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00703106958675966" />
+      <inertia
+        ixx="9.98138426469312E-07"
+        ixy="1.16054142584208E-08"
+        ixz="-3.33589718655981E-10"
+        iyy="2.64619859536663E-07"
+        iyz="-1.39865393105914E-10"
+        izz="9.66787085547516E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/index_proximal_phalanx_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/index_proximal_phalanx_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="index_mcp_abd_joint"
+    type="revolute">
+    <origin
+      xyz="-0.000516762538859808 0.00974169756613247 -0.000266737078580086"
+      rpy="-0.0529967843349534 1.5707963267949 0" />
+    <parent
+      link="index_mcp_flex_link" />
+    <child
+      link="index_proximal_phalanx_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0.2"
+      upper="1.2"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="index_proximal_inter_link">
+    <inertial>
+      <origin
+        xyz="0.00380560557177807 0.011457082027939 -9.12940029351855E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00597048730592662" />
+      <inertia
+        ixx="6.40946611890695E-07"
+        ixy="-1.31319883419885E-07"
+        ixz="5.29513349882298E-09"
+        iyy="2.70636517103693E-07"
+        iyz="5.21517188255348E-09"
+        izz="6.58181517368347E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/index_proximal_inter_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/index_proximal_inter_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="index_pip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.000210964493187544 0.0349993641939764 0.000250000000000181"
+      rpy="0.0487064874837041 0.109995223922661 0.424720349209613" />
+    <parent
+      link="index_proximal_phalanx_link" />
+    <child
+      link="index_proximal_inter_link" />
+    <axis
+      xyz="0.109773553624728 -0.0483929965230635 -0.992777862772996" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="index_distal_link">
+    <inertial>
+      <origin
+        xyz="0.00392909240180345 0.00910690176561982 -2.37548306925989E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.005352841515409" />
+      <inertia
+        ixx="3.89646649209412E-07"
+        ixy="-1.11282784045566E-07"
+        ixz="2.11881573212912E-09"
+        iyy="1.96867035428633E-07"
+        iyz="-1.20788779112346E-09"
+        izz="4.2093755534367E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/index_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/index_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="index_dip_joint"
+    type="revolute">
+    <origin
+      xyz="0.00972663315965028 0.0272521070336601 -0.000454365524354738"
+      rpy="0 0 0" />
+    <parent
+      link="index_proximal_inter_link" />
+    <child
+      link="index_distal_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.2"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="middle_mcp_flex_link">
+    <inertial>
+      <origin
+        xyz="-0.000371431404252262 0.00562702377273563 -0.000771160690628065"
+        rpy="0 0 0" />
+      <mass
+        value="0.00175480527430813" />
+      <inertia
+        ixx="6.98710535311158E-08"
+        ixy="-1.62839627370204E-09"
+        ixz="9.22432289888671E-11"
+        iyy="9.44311585921861E-08"
+        iyz="-1.4007391580412E-09"
+        izz="1.09859287155119E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/middle_mcp_flex_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/middle_mcp_flex_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_mcp_flex_joint"
+    type="revolute">
+    <origin
+      xyz="-0.00143326292142025 0.097567248067727 -0.00480264513676616"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="palm_link" />
+    <child
+      link="middle_mcp_flex_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="middle_proximal_phalanx_link">
+    <inertial>
+      <origin
+        xyz="0.0203923127294504 -0.00106212956121088 -0.000118910334106818"
+        rpy="0 0 0" />
+      <mass
+        value="0.00905325785763738" />
+      <inertia
+        ixx="3.50227925903646E-07"
+        ixy="8.8821003182709E-08"
+        ixz="-6.4628202226532E-10"
+        iyy="1.83846255943487E-06"
+        iyz="2.61309520940756E-10"
+        izz="1.80744456216822E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/middle_proximal_phalanx_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/middle_proximal_phalanx_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_mcp_abd_joint"
+    type="revolute">
+    <origin
+      xyz="-0.000642543972981538 0.0097342104063117 -0.000266737078580076"
+      rpy="1.57079632679486 0 1.63670954979573" />
+    <parent
+      link="middle_mcp_flex_link" />
+    <child
+      link="middle_proximal_phalanx_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0.2"
+      upper="1.2"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="middle_proximal_inter_link">
+    <inertial>
+      <origin
+        xyz="0.0150383539556829 -0.00042401599840825 4.13956527898704E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00732491272908859" />
+      <inertia
+        ixx="2.81467624422952E-07"
+        ixy="2.07304662892703E-08"
+        ixz="8.13234893480446E-10"
+        iyy="1.05788550343509E-06"
+        iyz="-3.56646986986187E-10"
+        izz="1.03008836376808E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/middle_proximal_inter_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/middle_proximal_inter_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_pip_joint"
+    type="revolute">
+    <origin
+      xyz="0.044915415545163 -0.00275779738293055 -0.000299999999999724"
+      rpy="0 0 0" />
+    <parent
+      link="middle_proximal_phalanx_link" />
+    <child
+      link="middle_proximal_inter_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="middle_distal_link">
+    <inertial>
+      <origin
+        xyz="0.00969001947904991 -0.00220590188632802 -1.43901576245969E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00535303762739943" />
+      <inertia
+        ixx="1.54805523807482E-07"
+        ixy="5.0104409354878E-08"
+        ixz="2.05494222983137E-10"
+        iyy="4.32005686961113E-07"
+        iyz="-7.3603424716728E-11"
+        izz="4.20646711478583E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/middle_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/middle_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_dip_joint"
+    type="revolute">
+    <origin
+      xyz="0.034980489550223 -0.00116848227490686 -0.00019999999999893"
+      rpy="0 0 0" />
+    <parent
+      link="middle_proximal_inter_link" />
+    <child
+      link="middle_distal_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.2"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="ring_mcp_flex_link">
+    <inertial>
+      <origin
+        xyz="-0.000503960756800682 0.00561670566229 -0.000771160870073475"
+        rpy="0 0 0" />
+      <mass
+        value="0.00175480534631931" />
+      <inertia
+        ixx="6.9961444468672E-08"
+        ixy="-2.20532442624181E-09"
+        ixz="1.25233515879452E-10"
+        iyy="9.43407723451755E-08"
+        iyz="-1.39817507780127E-09"
+        izz="1.09859289587608E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/ring_mcp_flex_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/ring_mcp_flex_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ring_mcp_flex_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0014333 0.090989 0.015197"
+      rpy="0 1.5708 0" />
+    <parent
+      link="palm_link" />
+    <child
+      link="ring_mcp_flex_link" />
+    <axis
+      xyz="-0.996 -0.089367 0" />
+    <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="ring_proximal_phalanx_link">
+    <inertial>
+      <origin
+        xyz="0.0178538736492858 -0.000890527671610228 -0.00013231144577152"
+        rpy="0 0 0" />
+      <mass
+        value="0.00792174275404424" />
+      <inertia
+        ixx="3.03496546387024E-07"
+        ixy="5.68858762362899E-08"
+        ixz="-4.81366514022454E-10"
+        iyy="1.34142673295215E-06"
+        iyz="1.80009392858157E-10"
+        izz="1.31264637791399E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/ring_proximal_phalanx_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/ring_proximal_phalanx_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ring_mcp_abd_joint"
+    type="revolute">
+    <origin
+      xyz="-0.000871806988063654 0.00971636081910909 -0.00026673707857942"
+      rpy="1.57079632679488 0 1.6602823689138" />
+    <parent
+      link="ring_mcp_flex_link" />
+    <child
+      link="ring_proximal_phalanx_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.2"
+      upper="1.2"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="ring_proximal_inter_link">
+    <inertial>
+      <origin
+        xyz="0.00171914222568875 0.0124714959137608 4.41995972102066E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00620897634823359" />
+      <inertia
+        ixx="7.29637814983052E-07"
+        ixy="-6.01992567495179E-08"
+        ixz="6.27365453826143E-10"
+        iyy="2.45440640657678E-07"
+        iyz="1.09958107852288E-09"
+        izz="7.11743007975892E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/ring_proximal_inter_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/ring_proximal_inter_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ring_pip_joint"
+    type="revolute">
+    <origin
+      xyz="0.039933 -0.0023102 -0.0003"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="ring_proximal_phalanx_link" />
+    <child
+      link="ring_proximal_inter_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="ring_distal_link">
+    <inertial>
+      <origin
+        xyz="0.00948707637677615 -0.00295495943099907 -1.59032604986828E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00535190625277498" />
+      <inertia
+        ixx="1.6422516149545E-07"
+        ixy="7.09906453490955E-08"
+        ixz="1.92370687068012E-10"
+        iyy="4.22636255021261E-07"
+        iyz="-7.95038295681726E-11"
+        izz="4.20799743060254E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/ring_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/ring_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ring_dip_joint"
+    type="revolute">
+    <origin
+      xyz="0.0039742641378305 0.0297355885188577 -0.000199999999999749"
+      rpy="0 0 1.57079632679482" />
+    <parent
+      link="ring_proximal_inter_link" />
+    <child
+      link="ring_distal_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.2"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="little_mcp_flex_link">
+    <inertial>
+      <origin
+        xyz="-0.00104561357020145 0.00554148524537515 -0.00077116132195167"
+        rpy="0 0 0" />
+      <mass
+        value="0.00175480563893916" />
+      <inertia
+        ixx="7.06153643167311E-08"
+        ixy="-4.5141828962132E-09"
+        ixz="2.60069876194847E-10"
+        iyy="9.36868656905346E-08"
+        iyz="-1.37946596239675E-09"
+        izz="1.09859302328907E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/little_mcp_flex_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/little_mcp_flex_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="little_mcp_flex_joint"
+    type="revolute">
+    <origin
+      xyz="-0.00143326292142082 0.08234821361797 0.0351973548632338"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="palm_link" />
+    <child
+      link="little_mcp_flex_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="little_proximal_phalanx_link">
+    <inertial>
+      <origin
+        xyz="0.0153708507150669 -0.000431406830916414 -0.000102284890852466"
+        rpy="0 0 0" />
+      <mass
+        value="0.00705324548878646" />
+      <inertia
+        ixx="2.65507582398759E-07"
+        ixy="1.5202735063685E-08"
+        ixz="-1.27667979586541E-10"
+        iyy="1.00030013753137E-06"
+        iyz="3.3837257100614E-10"
+        izz="9.69826522514469E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/little_proximal_phalanx_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/little_proximal_phalanx_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="little_mcp_abd_joint"
+    type="revolute">
+    <origin
+      xyz="-0.00180881450793354 0.00958623518736365 -0.000266737078579635"
+      rpy="1.57079632679486 0 1.75729238358518" />
+    <parent
+      link="little_mcp_flex_link" />
+    <child
+      link="little_proximal_phalanx_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.2"
+      upper="1.2"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="little_proximal_inter_link">
+    <inertial>
+      <origin
+        xyz="0.000380928716927166 0.00994790135237095 4.42807179815465E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508794579945083" />
+      <inertia
+        ixx="4.95646137709918E-07"
+        ixy="-6.70138982533522E-09"
+        ixz="3.29374915112423E-10"
+        iyy="1.92746385587838E-07"
+        iyz="7.55181277658618E-10"
+        izz="4.73040630002351E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/little_proximal_inter_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/little_proximal_inter_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="little_pip_joint"
+    type="revolute">
+    <origin
+      xyz="0.034983 -0.0010805 -0.0003"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="little_proximal_phalanx_link" />
+    <child
+      link="little_proximal_inter_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="little_distal_link">
+    <inertial>
+      <origin
+        xyz="0.00956827975442195 -0.00268159145506164 -1.63941566939281E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00535223171703271" />
+      <inertia
+        ixx="1.60366691281459E-07"
+        ixy="6.34636928078893E-08"
+        ixz="1.76202238566736E-10"
+        iyy="4.26456836891665E-07"
+        iyz="-8.27725420969604E-11"
+        izz="4.20773913954807E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/little_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/little_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="little_dip_joint"
+    type="revolute">
+    <origin
+      xyz="0.00077177 0.024988 -0.0002"
+      rpy="0 0 1.5708" />
+    <parent
+      link="little_proximal_inter_link" />
+    <child
+      link="little_distal_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.2"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="thumb_root_connector_link">
+    <inertial>
+      <origin
+        xyz="1.1034E-05 3.6321E-05 -0.0029439"
+        rpy="0 0 0" />
+      <mass
+        value="0.0018183" />
+      <inertia
+        ixx="4.9578E-08"
+        ixy="-5.7065E-10"
+        ixz="7.8126E-11"
+        iyy="4.7873E-08"
+        iyz="2.5714E-10"
+        izz="7.2339E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/thumb_root_connector_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/thumb_root_connector_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_root_connector_fixed_joint"
+    type="fixed">
+    <origin
+      xyz="0.00646877694946816 0.0193318572130217 -0.0164182261940455"
+      rpy="-1.25378447702592 0.117658476534027 2.43554294725702" />
+    <parent
+      link="palm_link" />
+    <child
+      link="thumb_root_connector_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="thumb_trapezium1_link">
+    <inertial>
+      <origin
+        xyz="-8.65755410441454E-05 5.68482719876529E-05 -3.13389195315261E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.000671043091782567" />
+      <inertia
+        ixx="1.64215203438346E-08"
+        ixy="2.14171915987002E-09"
+        ixz="4.27283804171428E-12"
+        iyy="1.65363912346544E-08"
+        iyz="-6.61601139050328E-12"
+        izz="8.54965622340431E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/thumb_trapezium1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/thumb_trapezium1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_cmc_abd_joint"
+    type="revolute">
+    <origin
+      xyz="-6.3364E-05 0.00012377 -0.011586"
+      rpy="-1.5708 0.79055 2.8466" />
+    <parent
+      link="thumb_root_connector_link" />
+    <child
+      link="thumb_trapezium1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.2"
+      upper="1.2"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="thumb_metacarpal_link">
+    <inertial>
+      <origin
+        xyz="-0.0082556 0.024886 6.6144E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.012375" />
+      <inertia
+        ixx="1.9857E-06"
+        ixy="4.444E-07"
+        ixz="-1.5213E-09"
+        iyy="7.9651E-07"
+        iyz="1.4096E-09"
+        izz="2.1075E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/thumb_metacarpal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/thumb_metacarpal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_cmc_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 -1.2546 -2.343" />
+    <parent
+      link="thumb_trapezium1_link" />
+    <child
+      link="thumb_metacarpal_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.2"
+      upper="1.2"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="thumb_proximal_link">
+    <inertial>
+      <origin
+        xyz="-0.0015094 0.01438 -4.9187E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0062816" />
+      <inertia
+        ixx="9.631E-07"
+        ixy="7.5506E-08"
+        ixz="1.1157E-09"
+        iyy="2.2111E-07"
+        iyz="-3.0754E-09"
+        izz="9.151E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/thumb_proximal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/thumb_proximal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_mcp_joint"
+    type="revolute">
+    <origin
+      xyz="-0.016224 0.049404 -0.000175"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_metacarpal_link" />
+    <child
+      link="thumb_proximal_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.2"
+      upper="1.4"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="thumb_distal_link">
+    <inertial>
+      <origin
+        xyz="0.00022649 -0.012179 -5.3426E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0073168" />
+      <inertia
+        ixx="5.4042E-07"
+        ixy="-1.0439E-08"
+        ixz="2.0957E-10"
+        iyy="2.2321E-07"
+        iyz="3.3753E-10"
+        izz="5.1052E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/thumb_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_export4/meshes/thumb_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_ip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0033345 0.031826 -0.000105"
+      rpy="0 0 3.1416" />
+    <parent
+      link="thumb_proximal_link" />
+    <child
+      link="thumb_distal_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.2"
+      upper="1.2"
+      effort="1"
+      velocity="1" />
+  </joint>
+</robot>

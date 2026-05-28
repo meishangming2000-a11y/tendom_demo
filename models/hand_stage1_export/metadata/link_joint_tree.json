@@ -1,0 +1,598 @@
+{
+  "root_links": [
+    "hand_base_link"
+  ],
+  "trees": [
+    {
+      "link": "hand_base_link",
+      "children": [
+        {
+          "joint": "wrist_1_joint",
+          "joint_type": "revolute",
+          "child_link": "wrist_middle_link",
+          "subtree": {
+            "link": "wrist_middle_link",
+            "children": [
+              {
+                "joint": "wrist_2_joint",
+                "joint_type": "revolute",
+                "child_link": "palm_link",
+                "subtree": {
+                  "link": "palm_link",
+                  "children": [
+                    {
+                      "joint": "index_mcp_flex_joint",
+                      "joint_type": "revolute",
+                      "child_link": "index_mcp_flex_link",
+                      "subtree": {
+                        "link": "index_mcp_flex_link",
+                        "children": [
+                          {
+                            "joint": "index_mcp_abd_joint",
+                            "joint_type": "revolute",
+                            "child_link": "index_proximal_phalanx_link",
+                            "subtree": {
+                              "link": "index_proximal_phalanx_link",
+                              "children": [
+                                {
+                                  "joint": "index_pip_joint",
+                                  "joint_type": "revolute",
+                                  "child_link": "index_proximal_inter_link",
+                                  "subtree": {
+                                    "link": "index_proximal_inter_link",
+                                    "children": [
+                                      {
+                                        "joint": "index_dip_joint",
+                                        "joint_type": "revolute",
+                                        "child_link": "index_distal_link",
+                                        "subtree": {
+                                          "link": "index_distal_link",
+                                          "children": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "joint": "middle_mcp_flex_joint",
+                      "joint_type": "revolute",
+                      "child_link": "middle_mcp_flex_link",
+                      "subtree": {
+                        "link": "middle_mcp_flex_link",
+                        "children": [
+                          {
+                            "joint": "middle_mcp_abd_joint",
+                            "joint_type": "revolute",
+                            "child_link": "middle_proximal_phalanx_link",
+                            "subtree": {
+                              "link": "middle_proximal_phalanx_link",
+                              "children": [
+                                {
+                                  "joint": "middle_pip_joint",
+                                  "joint_type": "revolute",
+                                  "child_link": "middle_proximal_inter_link",
+                                  "subtree": {
+                                    "link": "middle_proximal_inter_link",
+                                    "children": [
+                                      {
+                                        "joint": "middle_dip_joint",
+                                        "joint_type": "revolute",
+                                        "child_link": "middle_distal_link",
+                                        "subtree": {
+                                          "link": "middle_distal_link",
+                                          "children": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "joint": "ring_mcp_flex_joint",
+                      "joint_type": "revolute",
+                      "child_link": "ring_mcp_flex_link",
+                      "subtree": {
+                        "link": "ring_mcp_flex_link",
+                        "children": [
+                          {
+                            "joint": "ring_mcp_abd_joint",
+                            "joint_type": "revolute",
+                            "child_link": "ring_proximal_phalanx_link",
+                            "subtree": {
+                              "link": "ring_proximal_phalanx_link",
+                              "children": [
+                                {
+                                  "joint": "ring_pip_joint",
+                                  "joint_type": "revolute",
+                                  "child_link": "ring_proximal_inter_link",
+                                  "subtree": {
+                                    "link": "ring_proximal_inter_link",
+                                    "children": [
+                                      {
+                                        "joint": "ring_dip_joint",
+                                        "joint_type": "revolute",
+                                        "child_link": "ring_distal_link",
+                                        "subtree": {
+                                          "link": "ring_distal_link",
+                                          "children": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "joint": "little_mcp_flex_joint",
+                      "joint_type": "revolute",
+                      "child_link": "little_mcp_flex_link",
+                      "subtree": {
+                        "link": "little_mcp_flex_link",
+                        "children": [
+                          {
+                            "joint": "little_mcp_abd_joint",
+                            "joint_type": "revolute",
+                            "child_link": "little_proximal_phalanx_link",
+                            "subtree": {
+                              "link": "little_proximal_phalanx_link",
+                              "children": [
+                                {
+                                  "joint": "little_pip_joint",
+                                  "joint_type": "revolute",
+                                  "child_link": "little_proximal_inter_link",
+                                  "subtree": {
+                                    "link": "little_proximal_inter_link",
+                                    "children": [
+                                      {
+                                        "joint": "little_dip_joint",
+                                        "joint_type": "revolute",
+                                        "child_link": "little_distal_link",
+                                        "subtree": {
+                                          "link": "little_distal_link",
+                                          "children": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "joint": "thumb_root_connector_fixed_joint",
+                      "joint_type": "fixed",
+                      "child_link": "thumb_root_connector_link",
+                      "subtree": {
+                        "link": "thumb_root_connector_link",
+                        "children": [
+                          {
+                            "joint": "thumb_cmc_joint",
+                            "joint_type": "revolute",
+                            "child_link": "thumb_metacarpal_link",
+                            "subtree": {
+                              "link": "thumb_metacarpal_link",
+                              "children": [
+                                {
+                                  "joint": "thumb_mcp_joint",
+                                  "joint_type": "revolute",
+                                  "child_link": "thumb_proximal_link",
+                                  "subtree": {
+                                    "link": "thumb_proximal_link",
+                                    "children": [
+                                      {
+                                        "joint": "thumb_ip_joint",
+                                        "joint_type": "revolute",
+                                        "child_link": "thumb_distal_link",
+                                        "subtree": {
+                                          "link": "thumb_distal_link",
+                                          "children": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "wrist_1_joint",
+      "type": "revolute",
+      "parent": "hand_base_link",
+      "child": "wrist_middle_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "0 0 0.015",
+        "rpy": "1.5708 0.013816 -3.0663"
+      },
+      "limit": {
+        "lower": "-0.8",
+        "upper": "0.8",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "wrist_2_joint",
+      "type": "revolute",
+      "parent": "wrist_middle_link",
+      "child": "palm_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "-0.0008 0.020264 -0.0007",
+        "rpy": "-1.5708 -1.3897 1.5708"
+      },
+      "limit": {
+        "lower": "-0.8",
+        "upper": "0.8",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "index_mcp_flex_joint",
+      "type": "revolute",
+      "parent": "palm_link",
+      "child": "index_mcp_flex_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "-0.0014333 0.10034 -0.024803",
+        "rpy": "0 1.5708 0"
+      },
+      "limit": {
+        "lower": "-0.5",
+        "upper": "0.5",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "index_mcp_abd_joint",
+      "type": "revolute",
+      "parent": "index_mcp_flex_link",
+      "child": "index_proximal_phalanx_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "-0.00051676 0.0097417 -0.00026674",
+        "rpy": "-0.052997 1.5708 0"
+      },
+      "limit": {
+        "lower": "-0.2",
+        "upper": "1.2",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "index_pip_joint",
+      "type": "revolute",
+      "parent": "index_proximal_phalanx_link",
+      "child": "index_proximal_inter_link",
+      "axis": "0.10977 -0.048393 -0.99278",
+      "origin": {
+        "xyz": "-0.00021096 0.034999 0.00025",
+        "rpy": "0.048706 0.11 0.42472"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "1.57",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "index_dip_joint",
+      "type": "revolute",
+      "parent": "index_proximal_inter_link",
+      "child": "index_distal_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "0.0097266 0.027252 -0.00045437",
+        "rpy": "0 0 0"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "1.2",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "middle_mcp_flex_joint",
+      "type": "revolute",
+      "parent": "palm_link",
+      "child": "middle_mcp_flex_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "-0.0014333 0.097567 -0.0048026",
+        "rpy": "0 1.5708 0"
+      },
+      "limit": {
+        "lower": "-0.5",
+        "upper": "0.5",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "middle_mcp_abd_joint",
+      "type": "revolute",
+      "parent": "middle_mcp_flex_link",
+      "child": "middle_proximal_phalanx_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "-0.00064254 0.0097342 -0.00026674",
+        "rpy": "1.5708 0 1.6367"
+      },
+      "limit": {
+        "lower": "-0.2",
+        "upper": "1.2",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "middle_pip_joint",
+      "type": "revolute",
+      "parent": "middle_proximal_phalanx_link",
+      "child": "middle_proximal_inter_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "0.044915 -0.0027578 -0.0003",
+        "rpy": "0 0 0"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "1.57",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "middle_dip_joint",
+      "type": "revolute",
+      "parent": "middle_proximal_inter_link",
+      "child": "middle_distal_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "0.03498 -0.0011685 -0.0002",
+        "rpy": "0 0 0"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "1.2",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "ring_mcp_flex_joint",
+      "type": "revolute",
+      "parent": "palm_link",
+      "child": "ring_mcp_flex_link",
+      "axis": "-0.996 -0.089367 0",
+      "origin": {
+        "xyz": "-0.0014333 0.090989 0.015197",
+        "rpy": "0 1.5708 0"
+      },
+      "limit": {
+        "lower": "-0.5",
+        "upper": "0.5",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "ring_mcp_abd_joint",
+      "type": "revolute",
+      "parent": "ring_mcp_flex_link",
+      "child": "ring_proximal_phalanx_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "-0.00087181 0.0097164 -0.00026674",
+        "rpy": "1.5708 0 1.6603"
+      },
+      "limit": {
+        "lower": "-0.2",
+        "upper": "1.2",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "ring_pip_joint",
+      "type": "revolute",
+      "parent": "ring_proximal_phalanx_link",
+      "child": "ring_proximal_inter_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "0.039933 -0.0023102 -0.0003",
+        "rpy": "0 0 -1.5708"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "1.57",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "ring_dip_joint",
+      "type": "revolute",
+      "parent": "ring_proximal_inter_link",
+      "child": "ring_distal_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "0.0039743 0.029736 -0.0002",
+        "rpy": "0 0 1.5708"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "1.2",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "little_mcp_flex_joint",
+      "type": "revolute",
+      "parent": "palm_link",
+      "child": "little_mcp_flex_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "-0.0014333 0.082348 0.035197",
+        "rpy": "0 1.5708 0"
+      },
+      "limit": {
+        "lower": "-0.5",
+        "upper": "0.5",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "little_mcp_abd_joint",
+      "type": "revolute",
+      "parent": "little_mcp_flex_link",
+      "child": "little_proximal_phalanx_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "-0.0018088 0.0095862 -0.00026674",
+        "rpy": "1.5708 0 1.7573"
+      },
+      "limit": {
+        "lower": "-0.2",
+        "upper": "1.2",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "little_pip_joint",
+      "type": "revolute",
+      "parent": "little_proximal_phalanx_link",
+      "child": "little_proximal_inter_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "0.034983 -0.0010805 -0.0003",
+        "rpy": "0 0 -1.5708"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "1.57",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "little_dip_joint",
+      "type": "revolute",
+      "parent": "little_proximal_inter_link",
+      "child": "little_distal_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "0.00077177 0.024988 -0.0002",
+        "rpy": "0 0 1.5708"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "1.2",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "thumb_root_connector_fixed_joint",
+      "type": "fixed",
+      "parent": "palm_link",
+      "child": "thumb_root_connector_link",
+      "axis": "0 0 0",
+      "origin": {
+        "xyz": "0.0064688 0.019332 -0.016418",
+        "rpy": "-1.2538 0.11766 2.4355"
+      },
+      "limit": null
+    },
+    {
+      "name": "thumb_cmc_joint",
+      "type": "revolute",
+      "parent": "thumb_root_connector_link",
+      "child": "thumb_metacarpal_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "-6.3364E-05 0.00012377 -0.011586",
+        "rpy": "-1.5515 -0.31614 -1.8718"
+      },
+      "limit": {
+        "lower": "-0.8",
+        "upper": "0.8",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "thumb_mcp_joint",
+      "type": "revolute",
+      "parent": "thumb_metacarpal_link",
+      "child": "thumb_proximal_link",
+      "axis": "0 0 -1",
+      "origin": {
+        "xyz": "-0.016224 0.049404 -0.000175",
+        "rpy": "0 0 0"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "1.2",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "thumb_ip_joint",
+      "type": "revolute",
+      "parent": "thumb_proximal_link",
+      "child": "thumb_distal_link",
+      "axis": "0 0 1",
+      "origin": {
+        "xyz": "-0.0033345 0.031826 -0.000105",
+        "rpy": "0 0 3.1416"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "1.2",
+        "effort": "1",
+        "velocity": "1"
+      }
+    }
+  ]
+}

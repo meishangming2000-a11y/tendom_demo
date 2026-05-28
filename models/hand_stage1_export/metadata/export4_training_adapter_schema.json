@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-05-25 01:50:00",
+  "schema": "export4_training_adapter_schema_v0",
+  "baseline": "hand_stage1_export4_current_baseline",
+  "action_space": {
+    "name": "export4_position_control_v1",
+    "type": "position_actuator_targets",
+    "dimension": 22,
+    "actuator_order": [
+      "wrist_1_joint_pos",
+      "wrist_2_joint_pos",
+      "index_mcp_flex_joint_pos",
+      "index_mcp_abd_joint_pos",
+      "index_pip_joint_pos",
+      "index_dip_joint_pos",
+      "middle_mcp_flex_joint_pos",
+      "middle_mcp_abd_joint_pos",
+      "middle_pip_joint_pos",
+      "middle_dip_joint_pos",
+      "ring_mcp_flex_joint_pos",
+      "ring_mcp_abd_joint_pos",
+      "ring_pip_joint_pos",
+      "ring_dip_joint_pos",
+      "little_mcp_flex_joint_pos",
+      "little_mcp_abd_joint_pos",
+      "little_pip_joint_pos",
+      "little_dip_joint_pos",
+      "thumb_cmc_abd_joint_pos",
+      "thumb_cmc_joint_pos",
+      "thumb_mcp_joint_pos",
+      "thumb_ip_joint_pos"
+    ]
+  },
+  "scripted_close_targets": {
+    "index_mcp_flex_joint_pos": -0.06,
+    "middle_mcp_flex_joint_pos": -0.06,
+    "ring_mcp_flex_joint_pos": -0.05,
+    "little_mcp_flex_joint_pos": -0.04,
+    "index_mcp_abd_joint_pos": -0.58,
+    "middle_mcp_abd_joint_pos": -0.64,
+    "ring_mcp_abd_joint_pos": -0.62,
+    "little_mcp_abd_joint_pos": -0.54,
+    "index_pip_joint_pos": -0.82,
+    "middle_pip_joint_pos": -0.88,
+    "ring_pip_joint_pos": -0.84,
+    "little_pip_joint_pos": -0.76,
+    "index_dip_joint_pos": -0.42,
+    "middle_dip_joint_pos": -0.46,
+    "ring_dip_joint_pos": -0.44,
+    "little_dip_joint_pos": -0.4,
+    "thumb_cmc_abd_joint_pos": -0.3,
+    "thumb_cmc_joint_pos": 0.0,
+    "thumb_mcp_joint_pos": 0.25,
+    "thumb_ip_joint_pos": -0.25
+  },
+  "observation_space_v0": [
+    "qpos",
+    "qvel",
+    "actuator_ctrl",
+    "tip_positions_world",
+    "palm_pose_world",
+    "contact_summary",
+    "task_phase",
+    "source"
+  ],
+  "source_adapters": {
+    "video": "hand_open_close_feature_v1_to_export4_position_control_v1",
+    "scripted": "scripted_phase_targets_to_export4_position_control_v1"
+  },
+  "training_ready": false,
+  "training_gates": [
+    "joint_direction_audit_current_baseline",
+    "thumb_audit_current_baseline",
+    "collision_proxy_audit_current_baseline",
+    "scripted_grasp_metrics",
+    "reset_distribution",
+    "adapter_unit_tests"
+  ]
+}

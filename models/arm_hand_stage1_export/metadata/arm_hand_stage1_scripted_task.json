@@ -1,0 +1,270 @@
+{
+  "generated_at": "2026-05-27T09:17:50",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_joint_limit_collision_proxy_ball.xml",
+  "episodes": 3,
+  "success_count": 3,
+  "status": "PASS",
+  "rollout_path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\arm_hand_stage1_scripted_task_rollout_v0.npz",
+  "task_success_criteria": [
+    "open penetration <= 5mm",
+    "hold ball-hand contacts >= 1",
+    "hold penetration <= 10mm",
+    "four-finger avg tip-ball distance <= 75mm",
+    "thumb distance is recorded but not required"
+  ],
+  "episode_results": [
+    {
+      "episode": 0,
+      "ball_position": [
+        0.022835450499256005,
+        0.1503370706116349,
+        0.5204691661414712
+      ],
+      "success": true,
+      "failure_reasons": [],
+      "phase_results": [
+        {
+          "phase": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.09774921695356455,
+            "thumb_ball_distance": 0.058951690520722404,
+            "thumb_index_distance": 0.13067355436581923,
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "phase": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.08009139945181866,
+            "thumb_ball_distance": 0.056826109001587875,
+            "thumb_index_distance": 0.09082826678461851,
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "metrics": {
+            "contact_count": 5,
+            "ball_hand_contact_count": 5,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.006300341257135763,
+            "four_finger_avg_tip_ball_distance": 0.05370087237382004,
+            "thumb_ball_distance": 0.05578948500253542,
+            "thumb_index_distance": 0.048005137879231045,
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "phase": "close_thumb_smoke",
+          "metrics": {
+            "contact_count": 7,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.005045140836523987,
+            "four_finger_avg_tip_ball_distance": 0.0506705151185776,
+            "thumb_ball_distance": 0.04244675526262956,
+            "thumb_index_distance": 0.02482760293850236,
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "phase": "hold",
+          "metrics": {
+            "contact_count": 7,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.004443385664663386,
+            "four_finger_avg_tip_ball_distance": 0.05115397030910525,
+            "thumb_ball_distance": 0.04271017805904577,
+            "thumb_index_distance": 0.03822213414875301,
+            "ball_velocity_norm": 0.0
+          }
+        }
+      ],
+      "screenshots": {
+        "open_hand": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_0_00_open_hand.png",
+        "preshape": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_0_01_preshape.png",
+        "close_four_fingers": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_0_02_close_four_fingers.png",
+        "close_thumb_smoke": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_0_03_close_thumb_smoke.png",
+        "hold": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_0_04_hold.png"
+      }
+    },
+    {
+      "episode": 1,
+      "ball_position": [
+        0.0180367911798871,
+        0.1431725004189347,
+        0.5210563726723776
+      ],
+      "success": true,
+      "failure_reasons": [],
+      "phase_results": [
+        {
+          "phase": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.09758684686142152,
+            "thumb_ball_distance": 0.06483638701443456,
+            "thumb_index_distance": 0.13067355436581923,
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "phase": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.08200126416578857,
+            "thumb_ball_distance": 0.06256124005986805,
+            "thumb_index_distance": 0.09082826678461851,
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "metrics": {
+            "contact_count": 4,
+            "ball_hand_contact_count": 4,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.004093563040883446,
+            "four_finger_avg_tip_ball_distance": 0.057296402194316406,
+            "thumb_ball_distance": 0.05967761827101319,
+            "thumb_index_distance": 0.04578869238530347,
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "phase": "close_thumb_smoke",
+          "metrics": {
+            "contact_count": 7,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.004079439069673638,
+            "four_finger_avg_tip_ball_distance": 0.05303125239259898,
+            "thumb_ball_distance": 0.04282173790084491,
+            "thumb_index_distance": 0.022899443206876,
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "phase": "hold",
+          "metrics": {
+            "contact_count": 6,
+            "ball_hand_contact_count": 6,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0037442040981508556,
+            "four_finger_avg_tip_ball_distance": 0.05324463115109841,
+            "thumb_ball_distance": 0.04246191494719473,
+            "thumb_index_distance": 0.029132462590440063,
+            "ball_velocity_norm": 0.0
+          }
+        }
+      ],
+      "screenshots": {
+        "open_hand": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_1_00_open_hand.png",
+        "preshape": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_1_01_preshape.png",
+        "close_four_fingers": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_1_02_close_four_fingers.png",
+        "close_thumb_smoke": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_1_03_close_thumb_smoke.png",
+        "hold": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_1_04_hold.png"
+      }
+    },
+    {
+      "episode": 2,
+      "ball_position": [
+        0.015397488554786898,
+        0.14942524602059318,
+        0.5205974685725123
+      ],
+      "success": true,
+      "failure_reasons": [],
+      "phase_results": [
+        {
+          "phase": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.09383761396627743,
+            "thumb_ball_distance": 0.0654824804750195,
+            "thumb_index_distance": 0.13067355436581923,
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "phase": "preshape",
+          "metrics": {
+            "contact_count": 2,
+            "ball_hand_contact_count": 2,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0012831463776682107,
+            "four_finger_avg_tip_ball_distance": 0.07907540920527567,
+            "thumb_ball_distance": 0.06283448831177313,
+            "thumb_index_distance": 0.09096729969879723,
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "metrics": {
+            "contact_count": 6,
+            "ball_hand_contact_count": 6,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.007531903109146644,
+            "four_finger_avg_tip_ball_distance": 0.05645101740443721,
+            "thumb_ball_distance": 0.0589244611739995,
+            "thumb_index_distance": 0.0465047526533033,
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "phase": "close_thumb_smoke",
+          "metrics": {
+            "contact_count": 8,
+            "ball_hand_contact_count": 8,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.005441741033506256,
+            "four_finger_avg_tip_ball_distance": 0.053809759542469644,
+            "thumb_ball_distance": 0.04278251436228344,
+            "thumb_index_distance": 0.025480487764377807,
+            "ball_velocity_norm": 0.0
+          }
+        },
+        {
+          "phase": "hold",
+          "metrics": {
+            "contact_count": 8,
+            "ball_hand_contact_count": 8,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.00487716006960544,
+            "four_finger_avg_tip_ball_distance": 0.05527332762020962,
+            "thumb_ball_distance": 0.04291356988399561,
+            "thumb_index_distance": 0.03711401206226834,
+            "ball_velocity_norm": 0.0
+          }
+        }
+      ],
+      "screenshots": {
+        "open_hand": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_2_00_open_hand.png",
+        "preshape": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_2_01_preshape.png",
+        "close_four_fingers": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_2_02_close_four_fingers.png",
+        "close_thumb_smoke": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_2_03_close_thumb_smoke.png",
+        "hold": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_scripted_task\\episode_2_04_hold.png"
+      }
+    }
+  ],
+  "training_ready": false
+}

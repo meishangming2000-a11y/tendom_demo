@@ -1,0 +1,712 @@
+{
+  "urdf": {
+    "exists": true,
+    "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\robot.urdf",
+    "joints": {
+      "wrist_1_joint": {
+        "type": "revolute",
+        "parent": "hand_base_link",
+        "child": "wrist_middle_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "0 0 0.015",
+        "origin_rpy": "1.5708 0.013816 -3.0663"
+      },
+      "wrist_2_joint": {
+        "type": "revolute",
+        "parent": "wrist_middle_link",
+        "child": "palm_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "-0.0008 0.020264 -0.0007",
+        "origin_rpy": "-1.5708 -1.3897 1.5708"
+      },
+      "index_mcp_flex_joint": {
+        "type": "revolute",
+        "parent": "palm_link",
+        "child": "index_mcp_flex_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "-0.0014333 0.10034 -0.024803",
+        "origin_rpy": "0 1.5708 0"
+      },
+      "index_mcp_abd_joint": {
+        "type": "revolute",
+        "parent": "index_mcp_flex_link",
+        "child": "index_proximal_phalanx_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "-0.00051676 0.0097417 -0.00026674",
+        "origin_rpy": "-0.052997 1.5708 0"
+      },
+      "index_pip_joint": {
+        "type": "revolute",
+        "parent": "index_proximal_phalanx_link",
+        "child": "index_proximal_inter_link",
+        "axis": "0.10977 -0.048393 -0.99278",
+        "origin_xyz": "-0.00021096 0.034999 0.00025",
+        "origin_rpy": "0.048706 0.11 0.42472"
+      },
+      "index_dip_joint": {
+        "type": "revolute",
+        "parent": "index_proximal_inter_link",
+        "child": "index_distal_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "0.0097266 0.027252 -0.00045437",
+        "origin_rpy": "0 0 0"
+      },
+      "middle_mcp_flex_joint": {
+        "type": "revolute",
+        "parent": "palm_link",
+        "child": "middle_mcp_flex_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "-0.0014333 0.097567 -0.0048026",
+        "origin_rpy": "0 1.5708 0"
+      },
+      "middle_mcp_abd_joint": {
+        "type": "revolute",
+        "parent": "middle_mcp_flex_link",
+        "child": "middle_proximal_phalanx_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "-0.00064254 0.0097342 -0.00026674",
+        "origin_rpy": "1.5708 0 1.6367"
+      },
+      "middle_pip_joint": {
+        "type": "revolute",
+        "parent": "middle_proximal_phalanx_link",
+        "child": "middle_proximal_inter_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "0.044915 -0.0027578 -0.0003",
+        "origin_rpy": "0 0 0"
+      },
+      "middle_dip_joint": {
+        "type": "revolute",
+        "parent": "middle_proximal_inter_link",
+        "child": "middle_distal_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "0.03498 -0.0011685 -0.0002",
+        "origin_rpy": "0 0 0"
+      },
+      "ring_mcp_flex_joint": {
+        "type": "revolute",
+        "parent": "palm_link",
+        "child": "ring_mcp_flex_link",
+        "axis": "-0.996 -0.089367 0",
+        "origin_xyz": "-0.0014333 0.090989 0.015197",
+        "origin_rpy": "0 1.5708 0"
+      },
+      "ring_mcp_abd_joint": {
+        "type": "revolute",
+        "parent": "ring_mcp_flex_link",
+        "child": "ring_proximal_phalanx_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "-0.00087181 0.0097164 -0.00026674",
+        "origin_rpy": "1.5708 0 1.6603"
+      },
+      "ring_pip_joint": {
+        "type": "revolute",
+        "parent": "ring_proximal_phalanx_link",
+        "child": "ring_proximal_inter_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "0.039933 -0.0023102 -0.0003",
+        "origin_rpy": "0 0 -1.5708"
+      },
+      "ring_dip_joint": {
+        "type": "revolute",
+        "parent": "ring_proximal_inter_link",
+        "child": "ring_distal_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "0.0039743 0.029736 -0.0002",
+        "origin_rpy": "0 0 1.5708"
+      },
+      "little_mcp_flex_joint": {
+        "type": "revolute",
+        "parent": "palm_link",
+        "child": "little_mcp_flex_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "-0.0014333 0.082348 0.035197",
+        "origin_rpy": "0 1.5708 0"
+      },
+      "little_mcp_abd_joint": {
+        "type": "revolute",
+        "parent": "little_mcp_flex_link",
+        "child": "little_proximal_phalanx_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "-0.0018088 0.0095862 -0.00026674",
+        "origin_rpy": "1.5708 0 1.7573"
+      },
+      "little_pip_joint": {
+        "type": "revolute",
+        "parent": "little_proximal_phalanx_link",
+        "child": "little_proximal_inter_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "0.034983 -0.0010805 -0.0003",
+        "origin_rpy": "0 0 -1.5708"
+      },
+      "little_dip_joint": {
+        "type": "revolute",
+        "parent": "little_proximal_inter_link",
+        "child": "little_distal_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "0.00077177 0.024988 -0.0002",
+        "origin_rpy": "0 0 1.5708"
+      },
+      "thumb_root_connector_fixed_joint": {
+        "type": "fixed",
+        "parent": "palm_link",
+        "child": "thumb_root_connector_link",
+        "axis": "0 0 0",
+        "origin_xyz": "0.0064688 0.019332 -0.016418",
+        "origin_rpy": "-1.2538 0.11766 2.4355"
+      },
+      "thumb_cmc_joint": {
+        "type": "revolute",
+        "parent": "thumb_root_connector_link",
+        "child": "thumb_metacarpal_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "-6.3364E-05 0.00012377 -0.011586",
+        "origin_rpy": "-1.5515 -0.31614 -1.8718"
+      },
+      "thumb_mcp_joint": {
+        "type": "revolute",
+        "parent": "thumb_metacarpal_link",
+        "child": "thumb_proximal_link",
+        "axis": "0 0 -1",
+        "origin_xyz": "-0.016224 0.049404 -0.000175",
+        "origin_rpy": "0 0 0"
+      },
+      "thumb_ip_joint": {
+        "type": "revolute",
+        "parent": "thumb_proximal_link",
+        "child": "thumb_distal_link",
+        "axis": "0 0 1",
+        "origin_xyz": "-0.0033345 0.031826 -0.000105",
+        "origin_rpy": "0 0 3.1416"
+      }
+    }
+  },
+  "mjcf": {
+    "path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_visual_clean_collision_proxy.xml",
+    "body_parent": {
+      "hand_base_link": null,
+      "wrist_middle_link": "hand_base_link",
+      "palm_link": "wrist_middle_link",
+      "index_mcp_flex_link": "palm_link",
+      "index_proximal_phalanx_link": "index_mcp_flex_link",
+      "index_proximal_inter_link": "index_proximal_phalanx_link",
+      "index_distal_link": "index_proximal_inter_link",
+      "middle_mcp_flex_link": "palm_link",
+      "middle_proximal_phalanx_link": "middle_mcp_flex_link",
+      "middle_proximal_inter_link": "middle_proximal_phalanx_link",
+      "middle_distal_link": "middle_proximal_inter_link",
+      "ring_mcp_flex_link": "palm_link",
+      "ring_proximal_phalanx_link": "ring_mcp_flex_link",
+      "ring_proximal_inter_link": "ring_proximal_phalanx_link",
+      "ring_distal_link": "ring_proximal_inter_link",
+      "little_mcp_flex_link": "palm_link",
+      "little_proximal_phalanx_link": "little_mcp_flex_link",
+      "little_proximal_inter_link": "little_proximal_phalanx_link",
+      "little_distal_link": "little_proximal_inter_link",
+      "thumb_root_connector_link": "palm_link",
+      "thumb_metacarpal_link": "thumb_root_connector_link",
+      "thumb_proximal_link": "thumb_metacarpal_link",
+      "thumb_distal_link": "thumb_proximal_link"
+    },
+    "body_pos_quat": {
+      "hand_base_link": {
+        "pos": "0 0 0.05",
+        "quat": "1 0 0 0"
+      },
+      "wrist_middle_link": {
+        "pos": "0 0 0.015",
+        "quat": "0.021731799 0.031494284 -0.70640636 -0.70677146"
+      },
+      "palm_link": {
+        "pos": "-0.0008 0.020264 -0.0007",
+        "quat": "0.70420975 -0.063939763 -0.70421022 0.063939763"
+      },
+      "index_mcp_flex_link": {
+        "pos": "-0.0014333 0.10034 -0.024803",
+        "quat": "0.70710548 0 0.70710808 0"
+      },
+      "index_proximal_phalanx_link": {
+        "pos": "-0.00051676 0.0097417 -0.00026674",
+        "quat": "0.70685724 -0.018735042 0.70685984 0.018735111"
+      },
+      "index_proximal_inter_link": {
+        "pos": "-0.00021096 0.034999 0.00025",
+        "quat": "0.97605079 0.012184661 0.058846008 0.20907783"
+      },
+      "index_distal_link": {
+        "pos": "0.0097266 0.027252 -0.00045437",
+        "quat": "1 0 0 0"
+      },
+      "middle_mcp_flex_link": {
+        "pos": "-0.0014333 0.097567 -0.0048026",
+        "quat": "0.70710548 0 0.70710808 0"
+      },
+      "middle_proximal_phalanx_link": {
+        "pos": "-0.00064254 0.0097342 -0.00026674",
+        "quat": "0.48325474 0.48325652 0.51620245 0.51620056"
+      },
+      "middle_proximal_inter_link": {
+        "pos": "0.044915 -0.0027578 -0.0003",
+        "quat": "1 0 0 0"
+      },
+      "middle_distal_link": {
+        "pos": "0.03498 -0.0011685 -0.0002",
+        "quat": "1 0 0 0"
+      },
+      "ring_mcp_flex_link": {
+        "pos": "-0.0014333 0.090989 0.015197",
+        "quat": "0.70710548 0 0.70710808 0"
+      },
+      "ring_proximal_phalanx_link": {
+        "pos": "-0.00087181 0.0097164 -0.00026674",
+        "quat": "0.47713008 0.47713183 0.52186881 0.52186689"
+      },
+      "ring_proximal_inter_link": {
+        "pos": "0.039933 -0.0023102 -0.0003",
+        "quat": "0.70710548 0 0 -0.70710808"
+      },
+      "ring_distal_link": {
+        "pos": "0.0039743 0.029736 -0.0002",
+        "quat": "0.70710548 0 0 0.70710808"
+      },
+      "little_mcp_flex_link": {
+        "pos": "-0.0014333 0.082348 0.035197",
+        "quat": "0.70710548 0 0.70710808 0"
+      },
+      "little_proximal_phalanx_link": {
+        "pos": "-0.0018088 0.0095862 -0.00026674",
+        "quat": "0.4512684 0.45127006 0.54438697 0.54438497"
+      },
+      "little_proximal_inter_link": {
+        "pos": "0.034983 -0.0010805 -0.0003",
+        "quat": "0.70710548 0 0 -0.70710808"
+      },
+      "little_distal_link": {
+        "pos": "0.00077177 0.024988 -0.0002",
+        "quat": "0.70710548 0 0 0.70710808"
+      },
+      "thumb_root_connector_link": {
+        "pos": "0.0064688 0.019332 -0.016418",
+        "quat": "0.24716295 -0.24716268 -0.5330396 0.77051273"
+      },
+      "thumb_metacarpal_link": {
+        "pos": "-6.3364e-05 0.00012377 -0.011586",
+        "quat": "0.32938029 -0.50061516 0.49011734 -0.63299138"
+      },
+      "thumb_proximal_link": {
+        "pos": "-0.016224 0.049404 -0.000175",
+        "quat": "1 0 0 0"
+      },
+      "thumb_distal_link": {
+        "pos": "-0.0033345 0.031826 -0.000105",
+        "quat": "-3.6732051e-06 -0 0 1"
+      }
+    },
+    "joints": {
+      "wrist_1_joint": {
+        "type": "hinge",
+        "parent_body": "hand_base_link",
+        "child_body": "wrist_middle_link",
+        "axis_local": "0 0 -1",
+        "range": "-0.8 0.8"
+      },
+      "wrist_2_joint": {
+        "type": "hinge",
+        "parent_body": "wrist_middle_link",
+        "child_body": "palm_link",
+        "axis_local": "0 0 -1",
+        "range": "-0.8 0.8"
+      },
+      "index_mcp_flex_joint": {
+        "type": "hinge",
+        "parent_body": "palm_link",
+        "child_body": "index_mcp_flex_link",
+        "axis_local": "0 0 -1",
+        "range": "-0.5 0.5"
+      },
+      "index_mcp_abd_joint": {
+        "type": "hinge",
+        "parent_body": "index_mcp_flex_link",
+        "child_body": "index_proximal_phalanx_link",
+        "axis_local": "0 0 -1",
+        "range": "-0.2 1.2"
+      },
+      "index_pip_joint": {
+        "type": "hinge",
+        "parent_body": "index_proximal_phalanx_link",
+        "child_body": "index_proximal_inter_link",
+        "axis_local": "0.10977 -0.048393 -0.99278",
+        "range": "0 1.57"
+      },
+      "index_dip_joint": {
+        "type": "hinge",
+        "parent_body": "index_proximal_inter_link",
+        "child_body": "index_distal_link",
+        "axis_local": "0 0 -1",
+        "range": "0 1.2"
+      },
+      "middle_mcp_flex_joint": {
+        "type": "hinge",
+        "parent_body": "palm_link",
+        "child_body": "middle_mcp_flex_link",
+        "axis_local": "0 0 -1",
+        "range": "-0.5 0.5"
+      },
+      "middle_mcp_abd_joint": {
+        "type": "hinge",
+        "parent_body": "middle_mcp_flex_link",
+        "child_body": "middle_proximal_phalanx_link",
+        "axis_local": "0 0 -1",
+        "range": "-0.2 1.2"
+      },
+      "middle_pip_joint": {
+        "type": "hinge",
+        "parent_body": "middle_proximal_phalanx_link",
+        "child_body": "middle_proximal_inter_link",
+        "axis_local": "0 0 -1",
+        "range": "0 1.57"
+      },
+      "middle_dip_joint": {
+        "type": "hinge",
+        "parent_body": "middle_proximal_inter_link",
+        "child_body": "middle_distal_link",
+        "axis_local": "0 0 -1",
+        "range": "0 1.2"
+      },
+      "ring_mcp_flex_joint": {
+        "type": "hinge",
+        "parent_body": "palm_link",
+        "child_body": "ring_mcp_flex_link",
+        "axis_local": "-0.996 -0.089367 0",
+        "range": "-0.5 0.5"
+      },
+      "ring_mcp_abd_joint": {
+        "type": "hinge",
+        "parent_body": "ring_mcp_flex_link",
+        "child_body": "ring_proximal_phalanx_link",
+        "axis_local": "0 0 -1",
+        "range": "-0.2 1.2"
+      },
+      "ring_pip_joint": {
+        "type": "hinge",
+        "parent_body": "ring_proximal_phalanx_link",
+        "child_body": "ring_proximal_inter_link",
+        "axis_local": "0 0 -1",
+        "range": "0 1.57"
+      },
+      "ring_dip_joint": {
+        "type": "hinge",
+        "parent_body": "ring_proximal_inter_link",
+        "child_body": "ring_distal_link",
+        "axis_local": "0 0 -1",
+        "range": "0 1.2"
+      },
+      "little_mcp_flex_joint": {
+        "type": "hinge",
+        "parent_body": "palm_link",
+        "child_body": "little_mcp_flex_link",
+        "axis_local": "0 0 -1",
+        "range": "-0.5 0.5"
+      },
+      "little_mcp_abd_joint": {
+        "type": "hinge",
+        "parent_body": "little_mcp_flex_link",
+        "child_body": "little_proximal_phalanx_link",
+        "axis_local": "0 0 -1",
+        "range": "-0.2 1.2"
+      },
+      "little_pip_joint": {
+        "type": "hinge",
+        "parent_body": "little_proximal_phalanx_link",
+        "child_body": "little_proximal_inter_link",
+        "axis_local": "0 0 -1",
+        "range": "0 1.57"
+      },
+      "little_dip_joint": {
+        "type": "hinge",
+        "parent_body": "little_proximal_inter_link",
+        "child_body": "little_distal_link",
+        "axis_local": "0 0 -1",
+        "range": "0 1.2"
+      },
+      "thumb_cmc_joint": {
+        "type": "hinge",
+        "parent_body": "thumb_root_connector_link",
+        "child_body": "thumb_metacarpal_link",
+        "axis_local": "0 0 -1",
+        "range": "-0.8 0.8"
+      },
+      "thumb_mcp_joint": {
+        "type": "hinge",
+        "parent_body": "thumb_metacarpal_link",
+        "child_body": "thumb_proximal_link",
+        "axis_local": "0 0 -1",
+        "range": "0 1.2"
+      },
+      "thumb_ip_joint": {
+        "type": "hinge",
+        "parent_body": "thumb_proximal_link",
+        "child_body": "thumb_distal_link",
+        "axis_local": "0 0 1",
+        "range": "0 1.2"
+      },
+      "thumb_root_connector_fixed_joint": {
+        "type": "fixed_implicit_body_parent",
+        "parent_body": "palm_link",
+        "child_body": "thumb_root_connector_link",
+        "axis_local": null,
+        "range": null
+      }
+    }
+  },
+  "kinematic_audit": {
+    "model": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_visual_clean_collision_proxy.xml",
+    "ball_position": [
+      0.0,
+      -0.1,
+      0.195
+    ],
+    "baseline": {
+      "thumb_tip": [
+        -0.04604600714085804,
+        0.06389932064373272,
+        0.20605905535726554
+      ],
+      "index_tip": [
+        -0.018900001259906003,
+        -0.03733305824665836,
+        0.28370645965982216
+      ],
+      "palm_pos": [
+        0.0005711414461814196,
+        -0.0006588301028311388,
+        0.08527312103115989
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "thumb_to_ball": 0.17060341375977248,
+      "thumb_to_index": 0.13043779960586988,
+      "thumb_to_palm": 0.14467257964532357
+    },
+    "joint_motion": [
+      {
+        "joint": "thumb_cmc_joint",
+        "range": [
+          -0.8,
+          0.8
+        ],
+        "axis_local": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "axis_world_at_zero": [
+          -0.220760124602412,
+          0.7996951023075736,
+          -0.5583481984665188
+        ],
+        "positive_test_angle": 0.2,
+        "positive_thumb_tip": [
+          -0.02462158508934852,
+          0.06960881798340518,
+          0.20576568820232238
+        ],
+        "positive_delta": [
+          0.02142442205150952,
+          0.005709497339672465,
+          -0.00029336715494315824
+        ],
+        "positive_delta_norm": 0.022174090384963572,
+        "positive_thumb_to_ball": 0.17172441187119997,
+        "positive_thumb_to_index": 0.13245401190040934,
+        "positive_thumb_to_palm": 0.14174157675630059,
+        "positive_distance_changes": {
+          "ball": 0.0011209981114274903,
+          "index": 0.0020162122945394656,
+          "palm": -0.0029310028890229822
+        },
+        "positive_alignment": {
+          "toward_ball": {
+            "dot": 5.397071918956755e-05,
+            "cosine": 0.014266737638512215,
+            "projected_delta": 0.00031635192989493165
+          },
+          "toward_index": {
+            "dot": -1.917770904608904e-05,
+            "cosine": -0.006630517842394689,
+            "projected_delta": -0.00014702570193637316
+          },
+          "toward_palm": {
+            "dot": 0.0006655855021353847,
+            "cosine": 0.2074778861815571,
+            "projected_delta": 0.004600633401071031
+          }
+        },
+        "negative_test_angle": -0.2,
+        "negative_thumb_tip": [
+          -0.06645664033086338,
+          0.05591422690647281,
+          0.20269236333233076
+        ],
+        "negative_delta": [
+          -0.020410633190005335,
+          -0.007985093737259905,
+          -0.003366692024934781
+        ],
+        "negative_distance_changes": {
+          "ball": -0.0009422701542155243,
+          "index": 0.0019252387088904976,
+          "palm": 0.0018897373802685413
+        }
+      },
+      {
+        "joint": "thumb_mcp_joint",
+        "range": [
+          0.0,
+          1.2
+        ],
+        "axis_local": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "axis_world_at_zero": [
+          -0.220760124602412,
+          0.7996951023075736,
+          -0.5583481984665188
+        ],
+        "positive_test_angle": 0.2,
+        "positive_thumb_tip": [
+          -0.03437445488189649,
+          0.0661992504757242,
+          0.20473842656196822
+        ],
+        "positive_delta": [
+          0.011671552258961548,
+          0.002299929831991482,
+          -0.0013206287952973184
+        ],
+        "positive_delta_norm": 0.011969079738255704,
+        "positive_thumb_to_ball": 0.16999597336120317,
+        "positive_thumb_to_index": 0.13112722034585197,
+        "positive_thumb_to_palm": 0.14129103604596774,
+        "positive_distance_changes": {
+          "ball": -0.0006074403985693033,
+          "index": 0.0006894207399820995,
+          "palm": -0.0033815435993558296
+        },
+        "positive_alignment": {
+          "toward_ball": {
+            "dot": 0.000175076348622975,
+            "cosine": 0.08573911631095055,
+            "projected_delta": 0.0010262183198133472
+          },
+          "toward_index": {
+            "dot": -1.85347399139151e-05,
+            "cosine": -0.011871955826769642,
+            "projected_delta": -0.0001420963859396552
+          },
+          "toward_palm": {
+            "dot": 0.0005551286520351272,
+            "cosine": 0.32058755374928294,
+            "projected_delta": 0.003837137993917504
+          }
+        },
+        "negative_test_angle": 0.0,
+        "negative_thumb_tip": [
+          -0.04604600714085804,
+          0.06389932064373272,
+          0.20605905535726554
+        ],
+        "negative_delta": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "negative_distance_changes": {
+          "ball": 0.0,
+          "index": 0.0,
+          "palm": 0.0
+        }
+      },
+      {
+        "joint": "thumb_ip_joint",
+        "range": [
+          0.0,
+          1.2
+        ],
+        "axis_local": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "axis_world_at_zero": [
+          0.22076012460241204,
+          -0.7996951023075736,
+          0.5583481984665188
+        ],
+        "positive_test_angle": 0.2,
+        "positive_thumb_tip": [
+          -0.0514166168842449,
+          0.06234922333223405,
+          0.20596236165947462
+        ],
+        "positive_delta": [
+          -0.005370609743386857,
+          -0.0015500973114986674,
+          -9.669369779091719e-05
+        ],
+        "positive_delta_norm": 0.005590670832920654,
+        "positive_thumb_to_ball": 0.1706490907727139,
+        "positive_thumb_to_index": 0.1305298139365955,
+        "positive_thumb_to_palm": 0.14573480921639173,
+        "positive_distance_changes": {
+          "ball": 4.567701294141968e-05,
+          "index": 9.201433072561493e-05,
+          "palm": 0.0010622295710681628
+        },
+        "positive_alignment": {
+          "toward_ball": {
+            "dot": 7.834102648123588e-06,
+            "cosine": 0.008213676953655276,
+            "projected_delta": 4.591996417583318e-05
+          },
+          "toward_index": {
+            "dot": 3.621420030451161e-06,
+            "cosine": 0.004966054858704917,
+            "projected_delta": 2.7763578053245405e-05
+          },
+          "toward_palm": {
+            "dot": -0.00013861185787177063,
+            "cosine": -0.1713760925617462,
+            "projected_delta": -0.000958107322144865
+          }
+        },
+        "negative_test_angle": 0.0,
+        "negative_thumb_tip": [
+          -0.04604600714085804,
+          0.06389932064373272,
+          0.20605905535726554
+        ],
+        "negative_delta": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "negative_distance_changes": {
+          "ball": 0.0,
+          "index": 0.0,
+          "palm": 0.0
+        }
+      }
+    ]
+  },
+  "interpretation": [
+    "Positive motion of each individual thumb joint does not move thumb_tip_site meaningfully toward the ball.",
+    "Most likely issue to inspect first: thumb_cmc_joint axis/body frame, because CMC should provide the main opposition sweep.",
+    "Do not automatically flip axes from this report; confirm axis/csys in SolidWorks/URDF first."
+  ]
+}

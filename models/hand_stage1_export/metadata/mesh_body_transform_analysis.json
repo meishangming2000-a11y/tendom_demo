@@ -1,0 +1,2498 @@
+{
+  "primitive_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_primitive.xml",
+  "source_clean_draft_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_clean_mesh_draft.xml",
+  "aligned_draft_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_clean_mesh_aligned_draft.xml",
+  "method": "center-align each clean visual mesh group to the matching primitive body's main local geometry center",
+  "scale_preserved": "0.001 0.001 0.001",
+  "joint_tree_changed": false,
+  "joint_names_changed": false,
+  "stl_files_modified": false,
+  "sample_links": [
+    "hand_base_link",
+    "index_distal_link",
+    "index_mcp_flex_link",
+    "index_proximal_phalanx_link",
+    "palm_link",
+    "thumb_distal_link",
+    "thumb_metacarpal_link",
+    "wrist_middle_link"
+  ],
+  "links_aligned": [
+    "hand_base_link",
+    "index_distal_link",
+    "index_mcp_flex_link",
+    "index_proximal_inter_link",
+    "index_proximal_phalanx_link",
+    "little_distal_link",
+    "little_mcp_flex_link",
+    "little_proximal_inter_link",
+    "little_proximal_phalanx_link",
+    "middle_distal_link",
+    "middle_mcp_flex_link",
+    "middle_proximal_inter_link",
+    "middle_proximal_phalanx_link",
+    "palm_link",
+    "ring_distal_link",
+    "ring_mcp_flex_link",
+    "ring_proximal_inter_link",
+    "ring_proximal_phalanx_link",
+    "thumb_distal_link",
+    "thumb_metacarpal_link",
+    "thumb_proximal_link",
+    "thumb_root_connector_link",
+    "wrist_middle_link"
+  ],
+  "analysis": [
+    {
+      "body": "hand_base_link",
+      "sample_link": true,
+      "target_primitive_geom": {
+        "geom_name": "hand_base_link_primitive",
+        "local_center": [
+          0.0,
+          0.0,
+          -0.006
+        ],
+        "local_extent": [
+          0.052,
+          0.04,
+          0.028
+        ],
+        "source": "primitive_box"
+      },
+      "target_world_center": [
+        0.0,
+        0.0,
+        0.044000000000000004
+      ],
+      "current_world_bbox": {
+        "min": [
+          0.0008426791492107399,
+          0.0155586344209197,
+          0.05405402286264683
+        ],
+        "max": [
+          0.0497852830468653,
+          0.04033301515154186,
+          0.09340011198846457
+        ],
+        "center": [
+          0.02531398109803802,
+          0.027945824786230783,
+          0.0737270674255557
+        ],
+        "extent": [
+          0.04894260389765456,
+          0.024774380730622162,
+          0.03934608912581774
+        ],
+        "centroid": [
+          0.02567757563119599,
+          0.027477577291807557,
+          0.07050478255146111
+        ]
+      },
+      "translation_delta_world": [
+        -0.02531398109803802,
+        -0.027945824786230783,
+        -0.02972706742555569
+      ],
+      "translation_delta_local_applied": [
+        -0.02531398109803802,
+        -0.027945824786230783,
+        -0.02972706742555569
+      ],
+      "current_center_error_before_m": 0.04801526111288026,
+      "raw_meshes": [
+        {
+          "geom": "hand_base_link_clean_visual",
+          "mesh": "hand_base_link_clean_mesh",
+          "file": "hand_base_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.0008426797986030579,
+              0.015558634757995606,
+              0.004054023265838623
+            ],
+            "max": [
+              0.04978528213500977,
+              0.040333015441894535,
+              0.04340011215209961
+            ],
+            "center": [
+              0.025313980966806413,
+              0.02794582509994507,
+              0.023727067708969117
+            ],
+            "extent": [
+              0.04894260233640671,
+              0.02477438068389893,
+              0.03934608888626098
+            ],
+            "centroid": [
+              0.025680374299417434,
+              0.02750678986939992,
+              0.02051786858721825
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": false,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "index_distal_link",
+      "sample_link": true,
+      "target_primitive_geom": {
+        "geom_name": "index_distal_link_primitive",
+        "local_center": [
+          0.0055460135,
+          0.012854595,
+          -3.3530719e-05
+        ],
+        "local_axis": [
+          0.39614381873507254,
+          0.9181853508998434,
+          -0.002395051340858195
+        ],
+        "local_extent": [
+          0.023492027,
+          0.03810919,
+          0.012467061437999999
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        -0.01964326525561487,
+        -0.03507104001451251,
+        0.26991041548710926
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.041476048231483265,
+          0.0002525839858563486,
+          0.4722597091819224
+        ],
+        "max": [
+          -0.02526093253828068,
+          0.019466840324906594,
+          0.5071612767902323
+        ],
+        "center": [
+          -0.033368490384881974,
+          0.009859712155381471,
+          0.48971049298607733
+        ],
+        "extent": [
+          0.016215115693202584,
+          0.019214256339050245,
+          0.03490156760830987
+        ],
+        "centroid": [
+          -0.034453479045319,
+          0.010617487105254574,
+          0.49284698182697234
+        ]
+      },
+      "translation_delta_world": [
+        0.013725225129267105,
+        -0.04493075216989398,
+        -0.21980007749896807
+      ],
+      "translation_delta_local_applied": [
+        -0.00623218317891381,
+        -0.22453027025134797,
+        -0.008157573023575119
+      ],
+      "current_center_error_before_m": 0.22476482901903017,
+      "raw_meshes": [
+        {
+          "geom": "index_distal_link_clean_visual",
+          "mesh": "index_distal_link_clean_mesh",
+          "file": "index_distal_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.0021913127899169924,
+              0.22055628967285157,
+              0.0009281489849090577
+            ],
+            "max": [
+              0.020163103103637697,
+              0.2549551239013672,
+              0.0156886510848999
+            ],
+            "center": [
+              0.011177207946777346,
+              0.2377557067871094,
+              0.008308400034904479
+            ],
+            "extent": [
+              0.017971790313720704,
+              0.03439883422851564,
+              0.014760502099990844
+            ],
+            "centroid": [
+              0.011574842073248425,
+              0.24060482828775998,
+              0.009095553614794149
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "index_mcp_flex_link",
+      "sample_link": true,
+      "target_primitive_geom": {
+        "geom_name": "index_mcp_flex_link_primitive",
+        "local_center": [
+          -0.00025838,
+          0.00487085,
+          -0.00013337
+        ],
+        "local_axis": [
+          -0.052951916272609846,
+          0.9982229327983655,
+          -0.02733259955599495
+        ],
+        "local_extent": [
+          0.012116759999999999,
+          0.021341699999999998,
+          0.011866739999999999
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        -0.02378216294387375,
+        -0.023044122353611765,
+        0.18813239874901266
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.04451966851125563,
+          -0.05168058642536082,
+          0.3330640281120148
+        ],
+        "max": [
+          -0.025416508928706373,
+          -0.034957929602557614,
+          0.353573441265578
+        ],
+        "center": [
+          -0.034968088719981,
+          -0.043319258013959215,
+          0.34331873468879637
+        ],
+        "extent": [
+          0.01910315958254926,
+          0.016722656822803203,
+          0.020509413153563194
+        ],
+        "centroid": [
+          -0.035010294285054026,
+          -0.04437515367335873,
+          0.3457347004966325
+        ]
+      },
+      "translation_delta_world": [
+        0.01118592577610725,
+        0.02027513566034745,
+        -0.1551863359397837
+      ],
+      "translation_delta_local_applied": [
+        -0.010534128611618485,
+        -0.1562961422939936,
+        -0.008919246736079234
+      ],
+      "current_center_error_before_m": 0.15690444520130548,
+      "raw_meshes": [
+        {
+          "geom": "index_mcp_flex_link_clean_visual",
+          "mesh": "index_mcp_flex_link_clean_mesh",
+          "file": "index_mcp_flex_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.0010690407752990724,
+              0.1516769256591797,
+              0.0008904012441635132
+            ],
+            "max": [
+              0.019662164688110353,
+              0.17144496154785158,
+              0.01542387580871582
+            ],
+            "center": [
+              0.010365602731704712,
+              0.16156094360351564,
+              0.008157138526439667
+            ],
+            "extent": [
+              0.01859312391281128,
+              0.019768035888671875,
+              0.014533474564552307
+            ],
+            "centroid": [
+              0.010364168575018023,
+              0.16368078645334533,
+              0.008198076040185503
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "index_proximal_inter_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "index_proximal_inter_link_primitive",
+        "local_center": [
+          0.0048633,
+          0.013626,
+          -0.000227185
+        ],
+        "local_axis": [
+          0.3361031744873708,
+          0.9416942930859529,
+          -0.015700779243705578
+        ],
+        "local_extent": [
+          0.024126599999999998,
+          0.041651999999999995,
+          0.01485437
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        -0.021158757667962484,
+        -0.031415803771470865,
+        0.24173265435289007
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.04655132126809799,
+          -0.003097257922788258,
+          0.41540369317243525
+        ],
+        "max": [
+          -0.027849519398076582,
+          0.020401693138757192,
+          0.460112895263656
+        ],
+        "center": [
+          -0.037200420333087285,
+          0.008652217607984467,
+          0.43775829421804563
+        ],
+        "extent": [
+          0.018701801870021406,
+          0.02349895106154545,
+          0.04470920209122076
+        ],
+        "centroid": [
+          -0.0369833972384976,
+          0.00815407581520118,
+          0.4366360670142182
+        ]
+      },
+      "translation_delta_world": [
+        0.0160416626651248,
+        -0.04006802137945533,
+        -0.19602563986515556
+      ],
+      "translation_delta_local_applied": [
+        -0.00479983801888377,
+        -0.20036176985830265,
+        -0.010997976955370121
+      ],
+      "current_center_error_before_m": 0.20072078308652996,
+      "raw_meshes": [
+        {
+          "geom": "index_proximal_inter_link_clean_visual",
+          "mesh": "index_proximal_inter_link_clean_mesh",
+          "file": "index_proximal_inter_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.001829909920692444,
+              0.1917568359375,
+              0.0018980199098587037
+            ],
+            "max": [
+              0.020739145278930664,
+              0.23527803039550782,
+              0.020227783203125002
+            ],
+            "center": [
+              0.011284527599811554,
+              0.2135174331665039,
+              0.011062901556491853
+            ],
+            "extent": [
+              0.01890923535823822,
+              0.04352119445800781,
+              0.0183297632932663
+            ],
+            "centroid": [
+              0.00992631450946433,
+              0.21275562994000433,
+              0.01066857873953981
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "index_proximal_phalanx_link",
+      "sample_link": true,
+      "target_primitive_geom": {
+        "geom_name": "index_proximal_phalanx_link_primitive",
+        "local_center": [
+          -0.00010548,
+          0.0174995,
+          0.000125
+        ],
+        "local_axis": [
+          -0.0060273375344187825,
+          0.9999563252138937,
+          0.007142749258649487
+        ],
+        "local_extent": [
+          0.01461096,
+          0.049399,
+          0.01465
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        -0.022722671511439294,
+        -0.027028910739188505,
+        0.2101268149077373
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.03116065265828767,
+          -0.08193254476417583,
+          0.3445308943126264
+        ],
+        "max": [
+          -0.01332157845350148,
+          -0.056231296304703124,
+          0.3955967260226625
+        ],
+        "center": [
+          -0.022241115555894576,
+          -0.06908192053443948,
+          0.37006381016764445
+        ],
+        "extent": [
+          0.01783907420478619,
+          0.025701248459472706,
+          0.05106583171003609
+        ],
+        "centroid": [
+          -0.02116891299679527,
+          -0.06708712193364896,
+          0.36807011345606
+        ]
+      },
+      "translation_delta_world": [
+        -0.00048155595554471783,
+        0.04205300979525098,
+        -0.15993699525990715
+      ],
+      "translation_delta_local_applied": [
+        -0.012474475925798468,
+        -0.16464547599699278,
+        -0.009207858917561332
+      ],
+      "current_center_error_before_m": 0.16537390961619478,
+      "raw_meshes": [
+        {
+          "geom": "index_proximal_phalanx_link_clean_visual",
+          "mesh": "index_proximal_phalanx_link_clean_mesh",
+          "file": "index_proximal_phalanx_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.001882838487625122,
+              0.15675756835937502,
+              0.0005055965781211853
+            ],
+            "max": [
+              0.021271881103515626,
+              0.2064761199951172,
+              0.017098543167114257
+            ],
+            "center": [
+              0.011577359795570374,
+              0.1816168441772461,
+              0.008802069872617722
+            ],
+            "extent": [
+              0.019389042615890504,
+              0.04971855163574218,
+              0.01659294658899307
+            ],
+            "centroid": [
+              0.010849805164347064,
+              0.179897840630635,
+              0.008041069227690356
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "little_distal_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "little_distal_link_primitive",
+        "local_center": [
+          0.013480572,
+          -0.0037780485,
+          -2.30971535e-05
+        ],
+        "local_axis": [
+          0.9628979867502387,
+          -0.2698606034294954,
+          -0.0016497966558697383
+        ],
+        "local_extent": [
+          0.039361144,
+          0.019956097,
+          0.012446194306999999
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        0.052120968308031486,
+        -0.03362496165210849,
+        0.24597708793517054
+      ],
+      "current_world_bbox": {
+        "min": [
+          0.02377073081572677,
+          0.1511830218856015,
+          0.33684336344963656
+        ],
+        "max": [
+          0.04558372980754595,
+          0.18352836722291455,
+          0.3607619063956078
+        ],
+        "center": [
+          0.03467723031163636,
+          0.16735569455425803,
+          0.3488026349226222
+        ],
+        "extent": [
+          0.02181299899181918,
+          0.032345345337313036,
+          0.023918542945971233
+        ],
+        "centroid": [
+          0.03335774713518051,
+          0.17094268532768775,
+          0.35008374897642575
+        ]
+      },
+      "translation_delta_world": [
+        0.017443737996395127,
+        -0.20098065620636651,
+        -0.10282554698745167
+      ],
+      "translation_delta_local_applied": [
+        -0.06355127312817282,
+        -0.21694799455703337,
+        -0.012860972714652384
+      ],
+      "current_center_error_before_m": 0.22643012449251798,
+      "raw_meshes": [
+        {
+          "geom": "little_distal_link_clean_visual",
+          "mesh": "little_distal_link_clean_mesh",
+          "file": "little_distal_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.06744819641113281,
+              0.19687528991699219,
+              0.003187565565109253
+            ],
+            "max": [
+              0.08629575347900391,
+              0.23038356018066405,
+              0.023087717056274413
+            ],
+            "center": [
+              0.07687197494506837,
+              0.21362942504882812,
+              0.013137641310691834
+            ],
+            "extent": [
+              0.0188475570678711,
+              0.03350827026367187,
+              0.01990015149116516
+            ],
+            "centroid": [
+              0.07743435899643744,
+              0.21697849993933127,
+              0.013960572259072762
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "little_mcp_flex_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "little_mcp_flex_link_primitive",
+        "local_center": [
+          -0.0009044,
+          0.0047931,
+          -0.00013337
+        ],
+        "local_axis": [
+          -0.18534680373962206,
+          0.9822929732467741,
+          -0.02733271032148761
+        ],
+        "local_extent": [
+          0.013408799999999998,
+          0.0211862,
+          0.011866739999999999
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        0.03668633147375149,
+        -0.015219014720192646,
+        0.17119768646053823
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.038137750815318186,
+          -0.04445818823466661,
+          0.2974355832262057
+        ],
+        "max": [
+          -0.017889609517499003,
+          -0.02791229505080125,
+          0.3190068457691026
+        ],
+        "center": [
+          -0.028013680166408594,
+          -0.03618524164273393,
+          0.30822121449765416
+        ],
+        "extent": [
+          0.020248141297819183,
+          0.01654589318386536,
+          0.021571262542896874
+        ],
+        "centroid": [
+          -0.028113225763222432,
+          -0.03732925205617798,
+          0.3102935999414476
+        ]
+      },
+      "translation_delta_world": [
+        0.0647000116401601,
+        0.020966226922541284,
+        -0.13702352803711593
+      ],
+      "translation_delta_local_applied": [
+        -0.06419441797988361,
+        -0.1385570549078685,
+        -0.009063147843026767
+      ],
+      "current_center_error_before_m": 0.15297425081804664,
+      "raw_meshes": [
+        {
+          "geom": "little_mcp_flex_link_clean_visual",
+          "mesh": "little_mcp_flex_link_clean_mesh",
+          "file": "little_mcp_flex_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.053520172119140626,
+              0.1336918182373047,
+              0.0008904012441635132
+            ],
+            "max": [
+              0.07339434051513671,
+              0.15420147705078124,
+              0.01542387580871582
+            ],
+            "center": [
+              0.06345725631713867,
+              0.14394664764404297,
+              0.008157138526439667
+            ],
+            "extent": [
+              0.019874168395996088,
+              0.02050965881347655,
+              0.014533474564552307
+            ],
+            "centroid": [
+              0.06343990769830961,
+              0.14554236801091097,
+              0.008198076040185503
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "little_proximal_inter_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "little_proximal_inter_link_primitive",
+        "local_center": [
+          0.000385885,
+          0.012494,
+          -0.0001
+        ],
+        "local_axis": [
+          0.03086991656667784,
+          0.9994913966183525,
+          -0.007999771063057088
+        ],
+        "local_extent": [
+          0.01517177,
+          0.039388,
+          0.0146
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        0.04687977778331479,
+        -0.025306873620497442,
+        0.22157685170811728
+      ],
+      "current_world_bbox": {
+        "min": [
+          0.06628432752932019,
+          -0.14163180434791198,
+          0.3645385279027741
+        ],
+        "max": [
+          0.0852283522904501,
+          -0.11430654708475817,
+          0.4059106323718133
+        ],
+        "center": [
+          0.07575633990988515,
+          -0.12796917571633507,
+          0.38522458013729366
+        ],
+        "extent": [
+          0.018944024761129913,
+          0.02732525726315381,
+          0.04137210446903922
+        ],
+        "centroid": [
+          0.07616941161255149,
+          -0.12577325837628647,
+          0.384416232486168
+        ]
+      },
+      "translation_delta_world": [
+        -0.028876562126570353,
+        0.10266230209583763,
+        -0.16364772842917638
+      ],
+      "translation_delta_local_applied": [
+        -0.07341495976150794,
+        -0.18071234950817913,
+        -0.010357294547614856
+      ],
+      "current_center_error_before_m": 0.19533044599318397,
+      "raw_meshes": [
+        {
+          "geom": "little_proximal_inter_link_clean_visual",
+          "mesh": "little_proximal_inter_link_clean_mesh",
+          "file": "little_proximal_inter_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.0631955795288086,
+              0.1722649383544922,
+              0.0012626110315322877
+            ],
+            "max": [
+              0.08487261962890626,
+              0.21329681396484376,
+              0.017897478103637697
+            ],
+            "center": [
+              0.07403409957885743,
+              0.192780876159668,
+              0.009580044567584992
+            ],
+            "extent": [
+              0.02167704010009766,
+              0.04103187561035157,
+              0.01663486707210541
+            ],
+            "centroid": [
+              0.07182413349409522,
+              0.19211112176912168,
+              0.0094959009484886
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "little_proximal_phalanx_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "little_proximal_phalanx_link_primitive",
+        "local_center": [
+          0.0174915,
+          -0.00054025,
+          -0.00015
+        ],
+        "local_axis": [
+          0.9994866393783008,
+          -0.03087057467479216,
+          -0.008571191487679451
+        ],
+        "local_extent": [
+          0.049382999999999996,
+          0.0154805,
+          0.0147
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        0.041020342773261824,
+        -0.019521701195170688,
+        0.19272812144734552
+      ],
+      "current_world_bbox": {
+        "min": [
+          0.018608403409383224,
+          0.10692938782835942,
+          0.257219496784713
+        ],
+        "max": [
+          0.03723551970355697,
+          0.1576700642503764,
+          0.2889064654722463
+        ],
+        "center": [
+          0.027921961556470098,
+          0.1322997260393679,
+          0.27306298112847965
+        ],
+        "extent": [
+          0.018627116294173747,
+          0.05074067642201699,
+          0.03168696868753329
+        ],
+        "centroid": [
+          0.02917316343727217,
+          0.13043792385969627,
+          0.2708521547782126
+        ]
+      },
+      "translation_delta_world": [
+        0.013098381216791726,
+        -0.1518214272345386,
+        -0.08033485968113413
+      ],
+      "translation_delta_local_applied": [
+        -0.050599187277474096,
+        -0.16435624279241653,
+        -0.010087157183247953
+      ],
+      "current_center_error_before_m": 0.17226434058742457,
+      "raw_meshes": [
+        {
+          "geom": "little_proximal_phalanx_link_clean_visual",
+          "mesh": "little_proximal_phalanx_link_clean_mesh",
+          "file": "little_proximal_phalanx_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.05648748779296875,
+              0.13792530822753907,
+              0.0007912147641181945
+            ],
+            "max": [
+              0.08021588897705079,
+              0.18881175231933595,
+              0.018132482528686523
+            ],
+            "center": [
+              0.06835168838500977,
+              0.1633685302734375,
+              0.009461848646402359
+            ],
+            "extent": [
+              0.023728401184082037,
+              0.05088644409179688,
+              0.01734126776456833
+            ],
+            "centroid": [
+              0.0664815868842293,
+              0.16151170913670684,
+              0.008559470386035588
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "middle_distal_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "middle_distal_link_primitive",
+        "local_center": [
+          0.0136507415,
+          -0.0031075475,
+          -2.0272025e-05
+        ],
+        "local_axis": [
+          0.9750529495614793,
+          -0.22196767521950372,
+          -0.0014480017638480698
+        ],
+        "local_extent": [
+          0.039701483,
+          0.018615094999999998,
+          0.01244054405
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        0.0037506454137131605,
+        -0.04526777203902511,
+        0.28104537274169816
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.03963315796692802,
+          0.1823928289738197,
+          0.332381344467011
+        ],
+        "max": [
+          -0.018788703832060036,
+          0.21551763529699336,
+          0.35245638619209824
+        ],
+        "center": [
+          -0.029210930899494027,
+          0.19895523213540653,
+          0.3424188653295546
+        ],
+        "extent": [
+          0.020844454134867983,
+          0.03312480632317366,
+          0.020075041725087228
+        ],
+        "centroid": [
+          -0.03029137018109578,
+          0.20229961000205182,
+          0.3431155930094958
+        ]
+      },
+      "translation_delta_world": [
+        0.03296157631320719,
+        -0.24422300417443163,
+        -0.06137349258785646
+      ],
+      "translation_delta_local_applied": [
+        -0.015319505097449268,
+        -0.25307636689245977,
+        -0.014687142593093136
+      ],
+      "current_center_error_before_m": 0.2539646567407904,
+      "raw_meshes": [
+        {
+          "geom": "middle_distal_link_clean_visual",
+          "mesh": "middle_distal_link_clean_mesh",
+          "file": "middle_distal_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.019578704833984377,
+              0.23367056274414064,
+              0.005260056495666504
+            ],
+            "max": [
+              0.03754288864135742,
+              0.267270751953125,
+              0.023918130874633788
+            ],
+            "center": [
+              0.0285607967376709,
+              0.25047065734863283,
+              0.014589093685150146
+            ],
+            "extent": [
+              0.017964183807373045,
+              0.03360018920898436,
+              0.018658074378967285
+            ],
+            "centroid": [
+              0.028993999599419087,
+              0.2534159679259255,
+              0.015486809929133365
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "middle_mcp_flex_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "middle_mcp_flex_link_primitive",
+        "local_center": [
+          -0.00032127,
+          0.0048671,
+          -0.00013337
+        ],
+        "local_axis": [
+          -0.06584056309213476,
+          0.9974557369991879,
+          -0.027332635787960326
+        ],
+        "local_extent": [
+          0.01224254,
+          0.021334199999999998,
+          0.011866739999999999
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        -0.0037776140993579206,
+        -0.021033561227085922,
+        0.18567850069276284
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.03653905078482316,
+          -0.05005659236689811,
+          0.3276893344226501
+        ],
+        "max": [
+          -0.017326558891581887,
+          -0.03335309592687129,
+          0.3483140510911493
+        ],
+        "center": [
+          -0.026932804838202526,
+          -0.041704844146884704,
+          0.33800169275689973
+        ],
+        "extent": [
+          0.019212491893241274,
+          0.016703496440026826,
+          0.020624716668499243
+        ],
+        "centroid": [
+          -0.026988690921788596,
+          -0.042767659776383124,
+          0.3403870572833936
+        ]
+      },
+      "translation_delta_world": [
+        0.023155190738844606,
+        0.02067128291979878,
+        -0.1523231920641369
+      ],
+      "translation_delta_local_applied": [
+        -0.02253769574031222,
+        -0.15355167898466657,
+        -0.008930497635495572
+      ],
+      "current_center_error_before_m": 0.1554535931920217,
+      "raw_meshes": [
+        {
+          "geom": "middle_mcp_flex_link_clean_visual",
+          "mesh": "middle_mcp_flex_link_clean_mesh",
+          "file": "middle_mcp_flex_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.012955754280090333,
+              0.1489091033935547,
+              0.0008904012441635132
+            ],
+            "max": [
+              0.03168558120727539,
+              0.1687589569091797,
+              0.01542387580871582
+            ],
+            "center": [
+              0.02232066774368286,
+              0.1588340301513672,
+              0.008157138526439667
+            ],
+            "extent": [
+              0.018729826927185056,
+              0.019849853515624988,
+              0.014533474564552307
+            ],
+            "centroid": [
+              0.02231874292753186,
+              0.1609037256214426,
+              0.008198076040185503
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "middle_proximal_inter_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "middle_proximal_inter_link_primitive",
+        "local_center": [
+          0.01749,
+          -0.00058425,
+          -0.0001
+        ],
+        "local_axis": [
+          0.9994262086042393,
+          -0.033385635356033554,
+          -0.0057142722047126325
+        ],
+        "local_extent": [
+          0.04937999999999999,
+          0.015568499999999999,
+          0.0146
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        0.001303949277548077,
+        -0.036199720317386934,
+        0.2511259186808067
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.03656934477806765,
+          0.155863790003249,
+          0.2894320641885243
+        ],
+        "max": [
+          -0.01759583591212012,
+          0.20668625799577092,
+          0.3157756828581816
+        ],
+        "center": [
+          -0.027082590345093884,
+          0.18127502399950995,
+          0.30260387352335294
+        ],
+        "extent": [
+          0.01897350886594753,
+          0.050822467992521936,
+          0.026343618669657287
+        ],
+        "centroid": [
+          -0.02642494152217034,
+          0.17958536079301843,
+          0.2999834663897736
+        ]
+      },
+      "translation_delta_world": [
+        0.02838653962264196,
+        -0.2174747443168969,
+        -0.05147795484254625
+      ],
+      "translation_delta_local_applied": [
+        -0.01058742318710651,
+        -0.22471311442901304,
+        -0.011956695032038013
+      ],
+      "current_center_error_before_m": 0.2252799145113002,
+      "raw_meshes": [
+        {
+          "geom": "middle_proximal_inter_link_clean_visual",
+          "mesh": "middle_proximal_inter_link_clean_mesh",
+          "file": "middle_proximal_inter_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.017526615142822267,
+              0.19870877075195312,
+              0.002933383941650391
+            ],
+            "max": [
+              0.03717983245849609,
+              0.24854554748535157,
+              0.02001601791381836
+            ],
+            "center": [
+              0.02735322380065918,
+              0.22362715911865233,
+              0.011474700927734375
+            ],
+            "extent": [
+              0.019653217315673824,
+              0.04983677673339845,
+              0.017082633972167968
+            ],
+            "centroid": [
+              0.02586834398936147,
+              0.22197920740591515,
+              0.011249041596165306
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "middle_proximal_phalanx_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "middle_proximal_phalanx_link_primitive",
+        "local_center": [
+          0.0224575,
+          -0.0013789,
+          -0.00015
+        ],
+        "local_axis": [
+          0.9980981270873598,
+          -0.0612836472198936,
+          -0.006666579942696381
+        ],
+        "local_extent": [
+          0.05931499999999999,
+          0.0171578,
+          0.0147
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        -0.0017178570790569005,
+        -0.02729461868427998,
+        0.21225064292075946
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.03746019179481082,
+          0.12317503964962068,
+          0.23458022589062796
+        ],
+        "max": [
+          -0.016235158411911053,
+          0.18344870455397957,
+          0.2634496697146707
+        ],
+        "center": [
+          -0.026847675103360936,
+          0.15331187210180014,
+          0.24901494780264932
+        ],
+        "extent": [
+          0.021225033382899765,
+          0.0602736649043589,
+          0.028869443824042745
+        ],
+        "centroid": [
+          -0.0251395887712528,
+          0.15041084823163822,
+          0.24681853897054112
+        ]
+      },
+      "translation_delta_world": [
+        0.025129818024304036,
+        -0.18060649078608013,
+        -0.036764304881889864
+      ],
+      "translation_delta_local_applied": [
+        -0.0028095527614526994,
+        -0.18565860038478013,
+        -0.011172148311348561
+      ],
+      "current_center_error_before_m": 0.18601566165633912,
+      "raw_meshes": [
+        {
+          "geom": "middle_proximal_phalanx_link_clean_visual",
+          "mesh": "middle_proximal_phalanx_link_clean_mesh",
+          "file": "middle_proximal_phalanx_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.014333442687988281,
+              0.1539132995605469,
+              0.001269820213317871
+            ],
+            "max": [
+              0.03469778442382813,
+              0.21365628051757812,
+              0.020008100509643554
+            ],
+            "center": [
+              0.024515613555908203,
+              0.1837847900390625,
+              0.010638960361480713
+            ],
+            "extent": [
+              0.02036434173583985,
+              0.05974298095703123,
+              0.018738280296325682
+            ],
+            "centroid": [
+              0.023742243352980384,
+              0.18094429358183906,
+              0.00947536877141373
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "palm_link",
+      "sample_link": true,
+      "target_primitive_geom": {
+        "geom_name": "palm_link_ellipsoid",
+        "local_center": [
+          0.0,
+          0.048,
+          0.002
+        ],
+        "local_extent": [
+          0.06,
+          0.128,
+          0.048
+        ],
+        "source": "primitive_ellipsoid"
+      },
+      "target_world_center": [
+        0.0025651186015805145,
+        -0.009177992128462922,
+        0.13251132520410427
+      ],
+      "current_world_bbox": {
+        "min": [
+          0.031533795794722895,
+          -0.004705375356130845,
+          0.1409264605866889
+        ],
+        "max": [
+          0.06680293620520397,
+          0.08357989672196955,
+          0.24656460212035544
+        ],
+        "center": [
+          0.04916836599996344,
+          0.039437260682919355,
+          0.19374553135352218
+        ],
+        "extent": [
+          0.03526914041048108,
+          0.0882852720781004,
+          0.10563814153366655
+        ],
+        "centroid": [
+          0.04869847414868197,
+          0.042894533413935516,
+          0.18613811952903744
+        ]
+      },
+      "translation_delta_world": [
+        -0.046603247398382924,
+        -0.04861525281138228,
+        -0.06123420614941791
+      ],
+      "translation_delta_local_applied": [
+        -0.05513935068745787,
+        -0.051446248721915264,
+        -0.050969294432503955
+      ],
+      "current_center_error_before_m": 0.09102160994367715,
+      "raw_meshes": [
+        {
+          "geom": "palm_link_clean_visual",
+          "mesh": "palm_link_clean_mesh",
+          "file": "palm_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.018387523651123047,
+              0.05097870254516602,
+              0.03421451568603516
+            ],
+            "max": [
+              0.10062866973876954,
+              0.15681581115722656,
+              0.06957150268554688
+            ],
+            "center": [
+              0.05950809669494629,
+              0.10389725685119629,
+              0.05189300918579102
+            ],
+            "extent": [
+              0.08224114608764649,
+              0.10583710861206055,
+              0.035356986999511716
+            ],
+            "centroid": [
+              0.05717604128178274,
+              0.09132694064605605,
+              0.05266482036164316
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "ring_distal_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "ring_distal_link_primitive",
+        "local_center": [
+          0.013366595,
+          -0.004163368,
+          -2.24061055e-05
+        ],
+        "local_axis": [
+          0.9547567929455634,
+          -0.297383430823795,
+          -0.001600436119264476
+        ],
+        "local_extent": [
+          0.03913319,
+          0.020726736,
+          0.012444812211
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        0.025440447666446566,
+        -0.043884235938560126,
+        0.263763418364275
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.018564190301163602,
+          0.1641356020767616,
+          0.333596925990343
+        ],
+        "max": [
+          0.004175424108689901,
+          0.19646353430022798,
+          0.35434939256711834
+        ],
+        "center": [
+          -0.0071943830962368505,
+          0.1802995681884948,
+          0.3439731592787307
+        ],
+        "extent": [
+          0.022739614409853504,
+          0.03232793222346639,
+          0.02075246657677532
+        ],
+        "centroid": [
+          -0.008332449159819129,
+          0.18363830514192037,
+          0.3448199470355229
+        ]
+      },
+      "translation_delta_world": [
+        0.03263483076268342,
+        -0.2241838041270549,
+        -0.08020974091445565
+      ],
+      "translation_delta_local_applied": [
+        -0.03694350562958062,
+        -0.23679165137982558,
+        -0.017941682695977595
+      ],
+      "current_center_error_before_m": 0.24032688727928636,
+      "raw_meshes": [
+        {
+          "geom": "ring_distal_link_clean_visual",
+          "mesh": "ring_distal_link_clean_mesh",
+          "file": "ring_distal_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.040930381774902345,
+              0.21664836120605468,
+              0.0076205387115478515
+            ],
+            "max": [
+              0.05887339782714844,
+              0.24968507385253907,
+              0.028229692459106445
+            ],
+            "center": [
+              0.04990188980102539,
+              0.23316671752929688,
+              0.017925115585327146
+            ],
+            "extent": [
+              0.017943016052246095,
+              0.03303671264648439,
+              0.020609153747558593
+            ],
+            "centroid": [
+              0.0504571383755904,
+              0.23610228339439362,
+              0.01880523210172599
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "ring_mcp_flex_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "ring_mcp_flex_link_primitive",
+        "local_center": [
+          -0.000435905,
+          0.0048582,
+          -0.00013337
+        ],
+        "local_axis": [
+          -0.08933322079911851,
+          0.9956266922523888,
+          -0.02733249597499096
+        ],
+        "local_extent": [
+          0.01247181,
+          0.0213164,
+          0.011866739999999999
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        0.0162777437505475,
+        -0.018330992399864292,
+        0.1794778197227757
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.036842868387994096,
+          -0.047663548073119164,
+          0.3146848626518331
+        ],
+        "max": [
+          -0.017427194278919568,
+          -0.030996350320000088,
+          0.33551179443573825
+        ],
+        "center": [
+          -0.027135031333456832,
+          -0.039329949196559626,
+          0.3250983285437857
+        ],
+        "extent": [
+          0.019415674109074528,
+          0.016667197753119076,
+          0.020826931783905156
+        ],
+        "centroid": [
+          -0.027210038844521337,
+          -0.040405064261638396,
+          0.32742703014389757
+        ]
+      },
+      "translation_delta_world": [
+        0.04341277508400433,
+        0.020998956796695334,
+        -0.14562050882100996
+      ],
+      "translation_delta_local_applied": [
+        -0.04285320678769819,
+        -0.1470184841751481,
+        -0.008951301312444586
+      ],
+      "current_center_error_before_m": 0.15339803719843897,
+      "raw_meshes": [
+        {
+          "geom": "ring_mcp_flex_link_clean_visual",
+          "mesh": "ring_mcp_flex_link_clean_mesh",
+          "file": "ring_mcp_flex_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.03305633544921875,
+              0.1423355407714844,
+              0.0008904012441635132
+            ],
+            "max": [
+              0.05202758407592774,
+              0.16232614135742188,
+              0.01542387580871582
+            ],
+            "center": [
+              0.042541959762573245,
+              0.15233084106445313,
+              0.008157138526439667
+            ],
+            "extent": [
+              0.018971248626708986,
+              0.01999060058593749,
+              0.014533474564552307
+            ],
+            "centroid": [
+              0.04253913976170886,
+              0.15430814530292428,
+              0.008198076040185503
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "ring_proximal_inter_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "ring_proximal_inter_link_primitive",
+        "local_center": [
+          0.00198715,
+          0.014868,
+          -0.0001
+        ],
+        "local_axis": [
+          0.1324719009660956,
+          0.9911643426836974,
+          -0.006666426840756642
+        ],
+        "local_extent": [
+          0.0183743,
+          0.044135999999999995,
+          0.0146
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        0.02233225892470602,
+        -0.03297429214212013,
+        0.23718619580957293
+      ],
+      "current_world_bbox": {
+        "min": [
+          0.02209873077089523,
+          -0.12717009726965608,
+          0.39779737321827247
+        ],
+        "max": [
+          0.03916147570399711,
+          -0.10105031988193801,
+          0.4440790509033146
+        ],
+        "center": [
+          0.030630103237446173,
+          -0.11411020857579704,
+          0.4209382120607935
+        ],
+        "extent": [
+          0.01706274493310188,
+          0.026119777387718077,
+          0.046281677685042155
+        ],
+        "centroid": [
+          0.03098262084720041,
+          -0.1118304275304924,
+          0.42037591367892724
+        ]
+      },
+      "translation_delta_world": [
+        -0.008297844312740152,
+        0.0811359164336769,
+        -0.1837520162512206
+      ],
+      "translation_delta_local_applied": [
+        -0.04711024876826106,
+        -0.19502345537076443,
+        -0.012773838436427744
+      ],
+      "current_center_error_before_m": 0.20103903758265435,
+      "raw_meshes": [
+        {
+          "geom": "ring_proximal_inter_link_clean_visual",
+          "mesh": "ring_proximal_inter_link_clean_mesh",
+          "file": "ring_proximal_inter_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.03854440307617188,
+              0.1869356689453125,
+              0.003397818088531494
+            ],
+            "max": [
+              0.05854715347290039,
+              0.23180146789550782,
+              0.02235363006591797
+            ],
+            "center": [
+              0.048545778274536135,
+              0.20936856842041016,
+              0.012875724077224732
+            ],
+            "extent": [
+              0.02000275039672851,
+              0.044865798950195324,
+              0.018955811977386473
+            ],
+            "centroid": [
+              0.046995215176869415,
+              0.2089638200246188,
+              0.012107272757362562
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "ring_proximal_phalanx_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "ring_proximal_phalanx_link_primitive",
+        "local_center": [
+          0.0199665,
+          -0.0011551,
+          -0.00015
+        ],
+        "local_axis": [
+          0.998302690355462,
+          -0.05775370934463197,
+          -0.007499832396930823
+        ],
+        "local_extent": [
+          0.054333000000000006,
+          0.0167102,
+          0.0147
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        0.018739252598652115,
+        -0.02388318740031905,
+        0.20360315574554164
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.013355721838307895,
+          0.11583644564573549,
+          0.24704194300285798
+        ],
+        "max": [
+          0.006903256952076884,
+          0.17132610696560696,
+          0.27584283444966917
+        ],
+        "center": [
+          -0.003226232443115505,
+          0.14358127630567122,
+          0.2614423887262636
+        ],
+        "extent": [
+          0.02025897879038478,
+          0.05548966131987147,
+          0.028800891446811194
+        ],
+        "centroid": [
+          -0.0016369263535286186,
+          0.1410013070087462,
+          0.2592937600371165
+        ]
+      },
+      "translation_delta_world": [
+        0.02196548504176762,
+        -0.16746446370599027,
+        -0.05783923298072194
+      ],
+      "translation_delta_local_applied": [
+        -0.025774300425390837,
+        -0.176323895931732,
+        -0.010852426930910975
+      ],
+      "current_center_error_before_m": 0.17852788580289994,
+      "raw_meshes": [
+        {
+          "geom": "ring_proximal_phalanx_link_clean_visual",
+          "mesh": "ring_proximal_phalanx_link_clean_mesh",
+          "file": "ring_proximal_phalanx_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.03477324676513672,
+              0.14718734741210937,
+              0.0012042467594146728
+            ],
+            "max": [
+              0.0556280517578125,
+              0.2022015838623047,
+              0.01940773391723633
+            ],
+            "center": [
+              0.04520064926147461,
+              0.17469446563720703,
+              0.0103059903383255
+            ],
+            "extent": [
+              0.02085480499267578,
+              0.05501423645019532,
+              0.018203487157821656
+            ],
+            "centroid": [
+              0.044237926101570534,
+              0.17213376631989982,
+              0.009216028385632936
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "thumb_distal_link",
+      "sample_link": true,
+      "target_primitive_geom": {
+        "geom_name": "thumb_distal_link_primitive",
+        "local_center": [
+          0.000260309675,
+          -0.0139975785,
+          -6.1403615e-06
+        ],
+        "local_axis": [
+          0.018593548086474034,
+          -0.9998270288414947,
+          -0.0004385972469850913
+        ],
+        "local_extent": [
+          0.014120619349999999,
+          0.041595157,
+          0.013612280723
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        -0.04503811730725399,
+        0.056088403084697494,
+        0.19448435330218553
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.04877501428132541,
+          -0.0684755601620815,
+          0.05213965294889088
+        ],
+        "max": [
+          -0.031339085583131795,
+          -0.04626851962832633,
+          0.09348334569271087
+        ],
+        "center": [
+          -0.040057049932228604,
+          -0.05737203989520392,
+          0.07281149932080087
+        ],
+        "extent": [
+          0.017435928698193617,
+          0.022207040533755176,
+          0.04134369274381999
+        ],
+        "centroid": [
+          -0.041025366775078106,
+          -0.05815260879958438,
+          0.07119314072497852
+        ]
+      },
+      "translation_delta_world": [
+        -0.0049810673750253845,
+        0.1134604429799014,
+        0.12167285398138465
+      ],
+      "translation_delta_local_applied": [
+        -0.00938697199694731,
+        -0.1644480398146339,
+        -0.023897562788252544
+      ],
+      "current_center_error_before_m": 0.1664402792276117,
+      "raw_meshes": [
+        {
+          "geom": "thumb_distal_link_clean_visual",
+          "mesh": "thumb_distal_link_clean_mesh",
+          "file": "thumb_distal_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.0023506131172180175,
+              0.13266702270507813,
+              0.0071289558410644535
+            ],
+            "max": [
+              0.018611785888671874,
+              0.16786526489257814,
+              0.04171785736083984
+            ],
+            "center": [
+              0.010481199502944946,
+              0.15026614379882813,
+              0.024423406600952147
+            ],
+            "extent": [
+              0.016261172771453856,
+              0.035198242187500006,
+              0.03458890151977539
+            ],
+            "centroid": [
+              0.010627933995081076,
+              0.15211246752023705,
+              0.023445877419714947
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "thumb_metacarpal_link",
+      "sample_link": true,
+      "target_primitive_geom": {
+        "geom_name": "thumb_metacarpal_link_primitive",
+        "local_center": [
+          -0.008112,
+          0.024702,
+          -8.75e-05
+        ],
+        "local_axis": [
+          -0.31199976825025816,
+          0.9500762173715334,
+          -0.003365382115618539
+        ],
+        "local_extent": [
+          0.029823999999999996,
+          0.063004,
+          0.013774999999999999
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        -0.029799973602356936,
+        0.01880652261645677,
+        0.1354182159933381
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.015656503308357324,
+          0.015162547947534796,
+          0.19844506116471317
+        ],
+        "max": [
+          0.02363880606170763,
+          0.07018398212014332,
+          0.2289960829818474
+        ],
+        "center": [
+          0.003991151376675153,
+          0.04267326503383906,
+          0.21372057207328027
+        ],
+        "extent": [
+          0.03929530937006495,
+          0.05502143417260852,
+          0.030551021817134233
+        ],
+        "centroid": [
+          0.004319703520294013,
+          0.04194200456396178,
+          0.2131576931231704
+        ]
+      },
+      "translation_delta_world": [
+        -0.03379112497903209,
+        -0.02386674241738229,
+        -0.07830235607994218
+      ],
+      "translation_delta_local_applied": [
+        -0.03163435166626727,
+        -0.07623640480730631,
+        -0.03209359539452938
+      ],
+      "current_center_error_before_m": 0.08855913554589553,
+      "raw_meshes": [
+        {
+          "geom": "thumb_metacarpal_link_clean_visual",
+          "mesh": "thumb_metacarpal_link_clean_mesh",
+          "file": "thumb_metacarpal_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.00814512062072754,
+              0.07398660278320313,
+              0.007413809299468994
+            ],
+            "max": [
+              0.039143524169921874,
+              0.12804971313476562,
+              0.05708975982666016
+            ],
+            "center": [
+              0.023644322395324706,
+              0.10101815795898438,
+              0.03225178456306458
+            ],
+            "extent": [
+              0.030998403549194337,
+              0.0540631103515625,
+              0.04967595052719117
+            ],
+            "centroid": [
+              0.02376415753643775,
+              0.10001468497513114,
+              0.03238693545355637
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "thumb_proximal_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "thumb_proximal_link_primitive",
+        "local_center": [
+          -0.00166725,
+          0.015913,
+          -5.25e-05
+        ],
+        "local_axis": [
+          -0.10420189416055446,
+          0.994550752302836,
+          -0.003281211242122723
+        ],
+        "local_extent": [
+          0.016934499999999998,
+          0.045426,
+          0.013704999999999998
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        -0.041539032321224426,
+        0.039652434209632104,
+        0.16966546443473846
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.040356326609979,
+          0.06328722390900124,
+          0.2657403854732906
+        ],
+        "max": [
+          -0.014135261100308601,
+          0.10906753810383502,
+          0.2922330729590268
+        ],
+        "center": [
+          -0.0272457938551438,
+          0.08617738100641813,
+          0.2789867292161587
+        ],
+        "extent": [
+          0.0262210655096704,
+          0.04578031419483378,
+          0.026492687485736188
+        ],
+        "centroid": [
+          -0.026559490450965083,
+          0.0858705017396416,
+          0.27610309194969684
+        ]
+      },
+      "translation_delta_world": [
+        -0.014293238466080625,
+        -0.046524946796786024,
+        -0.10932126478142024
+      ],
+      "translation_delta_local_applied": [
+        -0.01494536130912928,
+        -0.1156211043388686,
+        -0.026988936261021043
+      ],
+      "current_center_error_before_m": 0.11966622862654863,
+      "raw_meshes": [
+        {
+          "geom": "thumb_proximal_link_clean_visual",
+          "mesh": "thumb_proximal_link_clean_mesh",
+          "file": "thumb_proximal_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.004133835792541504,
+              0.10910935211181641,
+              0.003018197298049927
+            ],
+            "max": [
+              0.023022911071777345,
+              0.15349179077148437,
+              0.04616484832763672
+            ],
+            "center": [
+              0.013578373432159424,
+              0.1313005714416504,
+              0.02459152281284332
+            ],
+            "extent": [
+              0.01888907527923584,
+              0.044382438659667955,
+              0.04314665102958679
+            ],
+            "centroid": [
+              0.014102654071476034,
+              0.12895609793302204,
+              0.025717450894096317
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "thumb_root_connector_link",
+      "sample_link": false,
+      "target_primitive_geom": {
+        "geom_name": "thumb_root_connector_link_primitive",
+        "local_center": [
+          -3.1682e-05,
+          6.1885e-05,
+          -0.005793
+        ],
+        "local_axis": [
+          -0.005468620517372194,
+          0.01068195128835232,
+          -0.9999279924606124
+        ],
+        "local_extent": [
+          0.013663363999999999,
+          0.01372377,
+          0.025186
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        -0.018422820666609267,
+        0.0037720388338237177,
+        0.10982022976715668
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.09546643674325775,
+          -0.03763240389170627,
+          0.06420129241789613
+        ],
+        "max": [
+          -0.07317652156276588,
+          -0.01495759730254568,
+          0.08295059329363698
+        ],
+        "center": [
+          -0.08432147915301182,
+          -0.026295000597125976,
+          0.07357594285576655
+        ],
+        "extent": [
+          0.022289915180491865,
+          0.022674806589160594,
+          0.01874930087574085
+        ],
+        "centroid": [
+          -0.08398882213905039,
+          -0.02676533239057159,
+          0.07456199379259769
+        ]
+      },
+      "translation_delta_world": [
+        0.06589865848640256,
+        0.030067039430949693,
+        0.03624428691139013
+      ],
+      "translation_delta_local_applied": [
+        -0.01197092611135394,
+        -0.07759675941300681,
+        -0.01989342204854181
+      ],
+      "current_center_error_before_m": 0.0809957306539361,
+      "raw_meshes": [
+        {
+          "geom": "thumb_root_connector_link_clean_visual_part_1",
+          "mesh": "thumb_root_connector_link_clean_mesh_part_1",
+          "file": "thumb_root_connector_link_707ff91f.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.00488400936126709,
+              0.06582970428466797,
+              0.00963332748413086
+            ],
+            "max": [
+              0.022918994903564454,
+              0.08079141998291016,
+              0.02533150672912598
+            ],
+            "center": [
+              0.013901502132415772,
+              0.07331056213378906,
+              0.017482417106628418
+            ],
+            "extent": [
+              0.018034985542297363,
+              0.014961715698242187,
+              0.01569817924499512
+            ],
+            "centroid": [
+              0.013901331119048352,
+              0.07331075904919576,
+              0.017482713258419227
+            ]
+          }
+        },
+        {
+          "geom": "thumb_root_connector_link_clean_visual_part_2",
+          "mesh": "thumb_root_connector_link_clean_mesh_part_2",
+          "file": "thumb_root_connector_link_b6051f81.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.0017422229051589967,
+              0.0749057388305664,
+              0.0024906606674194335
+            ],
+            "max": [
+              0.01878867721557617,
+              0.08785006713867188,
+              0.017694421768188476
+            ],
+            "center": [
+              0.010265450060367585,
+              0.08137790298461914,
+              0.010092541217803955
+            ],
+            "extent": [
+              0.017046454310417174,
+              0.012944328308105477,
+              0.015203761100769042
+            ],
+            "centroid": [
+              0.010749388723530718,
+              0.08107926995555564,
+              0.009666146371410101
+            ]
+          }
+        },
+        {
+          "geom": "thumb_root_connector_link_clean_visual_part_3",
+          "mesh": "thumb_root_connector_link_clean_mesh_part_3",
+          "file": "thumb_root_connector_link_36a50eba.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.0037671070098876953,
+              0.06773348999023437,
+              0.006270061492919922
+            ],
+            "max": [
+              0.021002077102661134,
+              0.0843815689086914,
+              0.023244213104248047
+            ],
+            "center": [
+              0.012384592056274416,
+              0.0760575294494629,
+              0.014757137298583984
+            ],
+            "extent": [
+              0.017234970092773437,
+              0.01664807891845703,
+              0.016974151611328127
+            ],
+            "centroid": [
+              0.01376086992308281,
+              0.07684852360959615,
+              0.013837320857839468
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    },
+    {
+      "body": "wrist_middle_link",
+      "sample_link": true,
+      "target_primitive_geom": {
+        "geom_name": "wrist_middle_link_primitive",
+        "local_center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "local_extent": [
+          0.022,
+          0.057999999999999996,
+          0.022
+        ],
+        "source": "primitive_fromto"
+      },
+      "target_world_center": [
+        0.0,
+        0.0,
+        0.065
+      ],
+      "current_world_bbox": {
+        "min": [
+          -0.05848456066697173,
+          -0.0008542640771157413,
+          0.09446967902977477
+        ],
+        "max": [
+          -0.00257146350008413,
+          0.03222424193548927,
+          0.1228140436676647
+        ],
+        "center": [
+          -0.03052801208352793,
+          0.015684988929186766,
+          0.10864186134871973
+        ],
+        "extent": [
+          0.0559130971668876,
+          0.03307850601260501,
+          0.028344364637889932
+        ],
+        "centroid": [
+          -0.03052801464185889,
+          0.01488750690610093,
+          0.11136351794453196
+        ]
+      },
+      "translation_delta_world": [
+        0.03052801208352793,
+        -0.015684988929186766,
+        -0.043641861348719724
+      ],
+      "translation_delta_local_applied": [
+        -0.028655943144515198,
+        -0.04404202838294128,
+        -0.017936753325954
+      ],
+      "current_center_error_before_m": 0.05552108123462308,
+      "raw_meshes": [
+        {
+          "geom": "wrist_middle_link_clean_visual",
+          "mesh": "wrist_middle_link_clean_mesh",
+          "file": "wrist_middle_link.STL",
+          "raw_mesh_bbox": {
+            "min": [
+              0.0006783256530761719,
+              0.029868755340576172,
+              0.0023375706672668457
+            ],
+            "max": [
+              0.05667832565307617,
+              0.057913272857666016,
+              0.03449541091918945
+            ],
+            "center": [
+              0.02867832565307617,
+              0.04389101409912109,
+              0.018416490793228147
+            ],
+            "extent": [
+              0.056,
+              0.028044517517089845,
+              0.03215784025192261
+            ],
+            "centroid": [
+              0.028682185443937133,
+              0.04698906737114986,
+              0.017097713008492534
+            ]
+          }
+        }
+      ],
+      "assembly_coordinate_like": true,
+      "alignment_method": "translation_only_to_primitive_body_main_geom_center",
+      "rotation_method": "none; existing mesh/body orientation preserved",
+      "todo": "Verify visually. If orientation remains wrong, CAD body-local export or known per-link CAD-to-body rotation is required."
+    }
+  ],
+  "notes": [
+    "This is an MJCF-only translation attempt. It does not edit CAD or STL files.",
+    "The method can fix assembly/world translation offsets but cannot prove or repair unknown per-link rotations.",
+    "If screenshots still show detached/rotated clean parts, SolidWorks body-local STL export is recommended."
+  ]
+}

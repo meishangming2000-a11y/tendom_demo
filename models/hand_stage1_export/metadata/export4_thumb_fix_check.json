@@ -1,0 +1,341 @@
+{
+  "import": {
+    "source_dir": "D:\\tendon_project\\hardwares\\hand\\hand_export4",
+    "target_dir": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export4",
+    "urdfs": [
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export4\\urdf\\hand_export4.urdf"
+    ],
+    "selected_urdf": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export4\\urdf\\hand_export4.urdf",
+    "mesh_dirs": [
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export4\\meshes"
+    ],
+    "selected_mesh_dir": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export4\\meshes",
+    "package_files": [
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export4\\package.xml"
+    ],
+    "package_exists": true
+  },
+  "thumb_chain": [
+    {
+      "name": "thumb_root_connector_fixed_joint",
+      "type": "fixed",
+      "parent": "palm_link",
+      "child": "thumb_root_connector_link",
+      "xyz": [
+        0.00646877694946816,
+        0.0193318572130217,
+        -0.0164182261940455
+      ],
+      "origin_norm": 0.026174872108292554,
+      "rpy": [
+        -1.25378447702592,
+        0.117658476534027,
+        2.43554294725702
+      ],
+      "axis": "0 0 0",
+      "limit": null
+    },
+    {
+      "name": "thumb_cmc_abd_joint",
+      "type": "revolute",
+      "parent": "thumb_root_connector_link",
+      "child": "thumb_trapezium1_link",
+      "xyz": [
+        -6.3364e-05,
+        0.00012377,
+        -0.011586
+      ],
+      "origin_norm": 0.011586834339430075,
+      "rpy": [
+        -1.5708,
+        0.79055,
+        2.8466
+      ],
+      "axis": "0 0 -1",
+      "limit": {
+        "lower": "-1.2",
+        "upper": "1.2",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "thumb_cmc_joint",
+      "type": "revolute",
+      "parent": "thumb_trapezium1_link",
+      "child": "thumb_metacarpal_link",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_norm": 0.0,
+      "rpy": [
+        1.5708,
+        -1.2546,
+        -2.343
+      ],
+      "axis": "0 0 -1",
+      "limit": {
+        "lower": "-1.2",
+        "upper": "1.2",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "thumb_mcp_joint",
+      "type": "revolute",
+      "parent": "thumb_metacarpal_link",
+      "child": "thumb_proximal_link",
+      "xyz": [
+        -0.016224,
+        0.049404,
+        -0.000175
+      ],
+      "origin_norm": 0.05200003862498566,
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": "0 0 -1",
+      "limit": {
+        "lower": "-0.2",
+        "upper": "1.4",
+        "effort": "1",
+        "velocity": "1"
+      }
+    },
+    {
+      "name": "thumb_ip_joint",
+      "type": "revolute",
+      "parent": "thumb_proximal_link",
+      "child": "thumb_distal_link",
+      "xyz": [
+        -0.0033345,
+        0.031826,
+        -0.000105
+      ],
+      "origin_norm": 0.03200037798604886,
+      "rpy": [
+        0.0,
+        0.0,
+        3.1416
+      ],
+      "axis": "0 0 1",
+      "limit": {
+        "lower": "-0.2",
+        "upper": "1.2",
+        "effort": "1",
+        "velocity": "1"
+      }
+    }
+  ],
+  "mujoco": {
+    "load_success": true,
+    "nbody": 26,
+    "njnt": 23,
+    "nu": 22,
+    "ngeom": 50,
+    "nsite": 5,
+    "nmesh": 24,
+    "body_positions": {
+      "palm_link": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "thumb_root_connector_link": [
+        -0.01629372836873276,
+        0.0009575554889412472,
+        0.1052251744411096
+      ],
+      "thumb_trapezium1_link": [
+        -0.02055248065934455,
+        0.006584051112547681,
+        0.11441540327036856
+      ],
+      "thumb_metacarpal_link": [
+        -0.02055248065934455,
+        0.006584051112547681,
+        0.11441540327036856
+      ],
+      "thumb_proximal_link": [
+        -0.03904893502434953,
+        0.031021916552681612,
+        0.15642344923365037
+      ],
+      "thumb_distal_link": [
+        -0.04403180069763226,
+        0.048269649230440755,
+        0.18291327668511898
+      ]
+    },
+    "thumb_body_distances": [
+      {
+        "from": "palm_link",
+        "to": "thumb_root_connector_link",
+        "distance_m": 0.026174871817021352
+      },
+      {
+        "from": "thumb_root_connector_link",
+        "to": "thumb_trapezium1_link",
+        "distance_m": 0.011586834339430079
+      },
+      {
+        "from": "thumb_trapezium1_link",
+        "to": "thumb_metacarpal_link",
+        "distance_m": 0.0
+      },
+      {
+        "from": "thumb_metacarpal_link",
+        "to": "thumb_proximal_link",
+        "distance_m": 0.05200003862498567
+      },
+      {
+        "from": "thumb_proximal_link",
+        "to": "thumb_distal_link",
+        "distance_m": 0.03200037798604885
+      }
+    ],
+    "thumb_geom_positions": {
+      "thumb_root_connector_link_export4_visual": {
+        "body": "thumb_root_connector_link",
+        "xpos": [
+          -0.0173895228854142,
+          0.0023905532149169845,
+          0.10761297850105611
+        ],
+        "group": 2,
+        "type": 7
+      },
+      "thumb_root_connector_link_collision_proxy": {
+        "body": "thumb_root_connector_link",
+        "xpos": [
+          -0.018423104514038655,
+          0.0037708033007444637,
+          0.10982028885573908
+        ],
+        "group": 3,
+        "type": 3
+      },
+      "thumb_trapezium1_link_export4_visual": {
+        "body": "thumb_trapezium1_link",
+        "xpos": [
+          -0.02047523079743856,
+          0.006435980390916543,
+          0.11434859692075845
+        ],
+        "group": 2,
+        "type": 7
+      },
+      "thumb_trapezium1_link_collision_proxy": {
+        "body": "thumb_trapezium1_link",
+        "xpos": [
+          -0.01696316290437972,
+          -0.005806267372632619,
+          0.11985569781299135
+        ],
+        "group": 3,
+        "type": 3
+      },
+      "thumb_metacarpal_link_export4_visual": {
+        "body": "thumb_metacarpal_link",
+        "xpos": [
+          -0.029931644875025903,
+          0.01903380915505595,
+          0.13593603507175267
+        ],
+        "group": 2,
+        "type": 7
+      },
+      "thumb_metacarpal_link_collision_proxy": {
+        "body": "thumb_metacarpal_link",
+        "xpos": [
+          -0.02980070784184704,
+          0.018802983832614646,
+          0.13541942625200945
+        ],
+        "group": 3,
+        "type": 3
+      },
+      "thumb_proximal_link_export4_visual": {
+        "body": "thumb_proximal_link",
+        "xpos": [
+          -0.04139623478775546,
+          0.03959949126665464,
+          0.16964742802628535
+        ],
+        "group": 2,
+        "type": 7
+      },
+      "thumb_proximal_link_collision_proxy": {
+        "body": "thumb_proximal_link",
+        "xpos": [
+          -0.0415403678609909,
+          0.03964578289156118,
+          0.16966836295938467
+        ],
+        "group": 3,
+        "type": 3
+      },
+      "thumb_distal_link_export4_visual": {
+        "body": "thumb_distal_link",
+        "xpos": [
+          -0.044892799865533926,
+          0.054845203131038495,
+          0.19269743530898797
+        ],
+        "group": 2,
+        "type": 7
+      },
+      "thumb_distal_link_collision_proxy": {
+        "body": "thumb_distal_link",
+        "xpos": [
+          -0.045039900749318657,
+          0.05607954186329799,
+          0.19448865201569174
+        ],
+        "group": 3,
+        "type": 3
+      }
+    }
+  },
+  "renders": [
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb\\thumb_root_front.png",
+      "camera": "thumb_root_front",
+      "mean_pixel": 51.212536928104576,
+      "min_pixel": 0,
+      "max_pixel": 255
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb\\thumb_root_high.png",
+      "camera": "thumb_root_high",
+      "mean_pixel": 81.9988591503268,
+      "min_pixel": 5,
+      "max_pixel": 255
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb\\thumb_root_side.png",
+      "camera": "thumb_root_side",
+      "mean_pixel": 60.263922875816995,
+      "min_pixel": 0,
+      "max_pixel": 255
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb\\full_hand.png",
+      "camera": "full_hand",
+      "mean_pixel": 45.302893137254905,
+      "min_pixel": 0,
+      "max_pixel": 255
+    }
+  ],
+  "interpretation": [
+    "Export4 keeps a 2-DoF CMC chain, but the second CMC joint is named `thumb_cmc_joint`, not `thumb_cmc_flex_joint`.",
+    "The previous 0.13-0.15 m thumb body separation is fixed at the body/joint level.",
+    "`thumb_cmc_joint` now has zero translation from `thumb_trapezium1_link` to `thumb_metacarpal_link`; visually verify whether this is intended or whether the joint center is coincident by design.",
+    "Use the saved renders to decide whether thumb visual STL pieces are also attached; if visual meshes remain separated, the remaining issue is mesh-local coordinates rather than joint tree."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-05-26T16:44:55",
+  "debug_xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\arm_hand_export4_ee_mount_axis_debug.xml",
+  "debug_scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\scene_arm_hand_export4_ee_mount_axis_debug.xml",
+  "views": {
+    "axis_flange_closeup": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\axis_flange_closeup.png",
+    "axis_wrist_closeup": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\axis_wrist_closeup.png",
+    "axis_top": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\axis_top.png",
+    "axis_side": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks_mount_alignment\\axis_side.png"
+  },
+  "legend": {
+    "+X": "red",
+    "-X": "dark red",
+    "+Y": "green",
+    "-Y": "dark green",
+    "+Z": "blue",
+    "-Z": "yellow",
+    "ee_tool_frame": "orange",
+    "ee_mount_origin": "white"
+  },
+  "ee_mount_world": [
+    -0.06015505540529814,
+    -0.008484450491673033,
+    0.40930659668715164
+  ],
+  "ee_tool_frame_world": [
+    -0.001834985849268972,
+    0.006282641995320741,
+    0.38844054371922093
+  ],
+  "hand_base_world": [
+    -0.001834985849268972,
+    0.006282641995320741,
+    0.38844054371922093
+  ],
+  "ee_tool_frame_local_pos_in_ee_mount": [
+    0.02175,
+    0.01956,
+    0.05656
+  ]
+}

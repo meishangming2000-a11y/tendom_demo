@@ -1,0 +1,19 @@
+{
+  "urdf_path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\robot.urdf",
+  "mujoco_python_available": true,
+  "load_attempted": true,
+  "load_success": false,
+  "error_type": "ValueError",
+  "error": "Error: Error opening file 'hand_base_link.STL'",
+  "model_summary": null,
+  "notes": [
+    "Direct MuJoCo URDF load failed; no forced MJCF conversion or structural rewrite was attempted."
+  ],
+  "traceback_tail": [
+    "Traceback (most recent call last):",
+    "  File \"D:\\tendon_project\\simulations\\models\\hand_stage1_export\\scripts\\check_urdf_load.py\", line 46, in main",
+    "    model = mujoco.MjModel.from_xml_path(str(URDF_PATH))",
+    "            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+    "ValueError: Error: Error opening file 'hand_base_link.STL'"
+  ]
+}

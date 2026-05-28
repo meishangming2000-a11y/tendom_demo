@@ -1,0 +1,2955 @@
+{
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_visual_clean_collision_proxy.xml",
+  "load_success": true,
+  "body_count": 25,
+  "joint_count": 22,
+  "actuator_count": 21,
+  "geom_count": 101,
+  "site_count": 5,
+  "missing_actuators": [],
+  "sweep_grid": {
+    "x": [
+      -0.02,
+      0.0,
+      0.02
+    ],
+    "y": [
+      -0.08,
+      -0.1,
+      -0.12
+    ],
+    "z": [
+      0.18,
+      0.195,
+      0.21
+    ]
+  },
+  "thumb_policy": "thumb kept open at 0 rad for all thumb joints",
+  "gravity_enabled": false,
+  "ball_pinned": true,
+  "steps_per_stage": 180,
+  "results": [
+    {
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.0985748336642074,
+          "middle_tip_site": 0.09742786049981504,
+          "ring_tip_site": 0.08701613547758758,
+          "little_tip_site": 0.0949285645705662,
+          "thumb_tip_site": 0.17029020267111716
+        },
+        "mean_four_tip_distance": 0.09448684855304405,
+        "mean_all_tip_distance": 0.10964751937665866,
+        "min_four_tip_distance": 0.08701613547758758,
+        "max_four_tip_distance": 0.0985748336642074
+      },
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.006740899096839818,
+        "ball_contacts": [
+          {
+            "dist": -0.002783336670511875,
+            "other_geom": "index_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.006740899096839818,
+            "other_geom": "middle_distal_link_collision_proxy"
+          },
+          {
+            "dist": -1.5934698325963462e-05,
+            "other_geom": "ring_proximal_inter_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.028416663329488123,
+          "middle_tip_site": 0.02526838817028033,
+          "ring_tip_site": 0.040164568865023544,
+          "little_tip_site": 0.04900890883988443,
+          "thumb_tip_site": 0.17027353784920296
+        },
+        "mean_four_tip_distance": 0.03571463230116911,
+        "mean_all_tip_distance": 0.06262641341077588,
+        "min_four_tip_distance": 0.02526838817028033,
+        "max_four_tip_distance": 0.04900890883988443
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.034196430494848745
+    },
+    {
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.1102415149647392,
+          "middle_tip_site": 0.11060747973018369,
+          "ring_tip_site": 0.0988963437478933,
+          "little_tip_site": 0.10337853162577618,
+          "thumb_tip_site": 0.17060341375977248
+        },
+        "mean_four_tip_distance": 0.10578096751714808,
+        "mean_all_tip_distance": 0.11874545676567297,
+        "min_four_tip_distance": 0.0988963437478933,
+        "max_four_tip_distance": 0.11060747973018369
+      },
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.005000026850212241,
+        "ball_contacts": [
+          {
+            "dist": -0.004782797461822678,
+            "other_geom": "middle_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.005000026850212241,
+            "other_geom": "ring_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.03637577489280855,
+          "middle_tip_site": 0.026521557652472345,
+          "ring_tip_site": 0.02620319363099626,
+          "little_tip_site": 0.048328675396355505,
+          "thumb_tip_site": 0.17060258849513515
+        },
+        "mean_four_tip_distance": 0.034357300393158166,
+        "mean_all_tip_distance": 0.06160635801355356,
+        "min_four_tip_distance": 0.02620319363099626,
+        "max_four_tip_distance": 0.048328675396355505
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.03435735409358265
+    },
+    {
+      "ball_position": [
+        0.02,
+        -0.1,
+        0.21
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.02,
+          -0.1,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.10427366821169377,
+          "middle_tip_site": 0.09846825268433025,
+          "ring_tip_site": 0.08302357931677848,
+          "little_tip_site": 0.08493786164836688,
+          "thumb_tip_site": 0.1767500874438383
+        },
+        "mean_four_tip_distance": 0.09267584046529234,
+        "mean_all_tip_distance": 0.10949068986100152,
+        "min_four_tip_distance": 0.08302357931677848,
+        "max_four_tip_distance": 0.10427366821169377
+      },
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.011365410829475519,
+        "ball_contacts": [
+          {
+            "dist": -0.00022760367237473818,
+            "other_geom": "middle_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.011213456763934664,
+            "other_geom": "ring_proximal_inter_link_collision_proxy"
+          },
+          {
+            "dist": -0.011365410829475519,
+            "other_geom": "ring_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.0005642396971828985,
+            "other_geom": "little_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.02,
+          -0.1,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.0358581264274823,
+          "middle_tip_site": 0.031302908616858235,
+          "ring_tip_site": 0.028989998932853138,
+          "little_tip_site": 0.030635760302817092,
+          "thumb_tip_site": 0.1767079271930926
+        },
+        "mean_four_tip_distance": 0.03169669857000269,
+        "mean_all_tip_distance": 0.06069894429462068,
+        "min_four_tip_distance": 0.028989998932853138,
+        "max_four_tip_distance": 0.0358581264274823
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.034427520228953734
+    },
+    {
+      "ball_position": [
+        0.0,
+        -0.08,
+        0.21
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.0,
+          -0.08,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.08723714897790098,
+          "middle_tip_site": 0.08899680308586311,
+          "ring_tip_site": 0.07734985202707681,
+          "little_tip_site": 0.08362245977356973,
+          "thumb_tip_site": 0.1511382820466769
+        },
+        "mean_four_tip_distance": 0.08430156596610267,
+        "mean_all_tip_distance": 0.09766890918221752,
+        "min_four_tip_distance": 0.07734985202707681,
+        "max_four_tip_distance": 0.08899680308586311
+      },
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.0030346010980038165,
+        "ball_contacts": [
+          {
+            "dist": -0.0008104590604639415,
+            "other_geom": "index_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.0026104615823886717,
+            "other_geom": "middle_proximal_inter_link_collision_proxy"
+          },
+          {
+            "dist": -0.0030346010980038165,
+            "other_geom": "ring_proximal_inter_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.0,
+          -0.08,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.034588266004440094,
+          "middle_tip_site": 0.0381492160545386,
+          "ring_tip_site": 0.05507838246367742,
+          "little_tip_site": 0.048014498541918665,
+          "thumb_tip_site": 0.15113427092767479
+        },
+        "mean_four_tip_distance": 0.043957590766143695,
+        "mean_all_tip_distance": 0.06539292679844991,
+        "min_four_tip_distance": 0.034588266004440094,
+        "max_four_tip_distance": 0.05507838246367742
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.03502679296215133
+    },
+    {
+      "ball_position": [
+        0.0,
+        -0.08,
+        0.195
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.0,
+          -0.08,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.10023229994162138,
+          "middle_tip_site": 0.10325820805241329,
+          "ring_tip_site": 0.09050789237330785,
+          "little_tip_site": 0.09310426525275702,
+          "thumb_tip_site": 0.15149109531830185
+        },
+        "mean_four_tip_distance": 0.09677566640502488,
+        "mean_all_tip_distance": 0.10771875218768028,
+        "min_four_tip_distance": 0.09050789237330785,
+        "max_four_tip_distance": 0.10325820805241329
+      },
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.0023449903733054707,
+        "ball_contacts": [
+          {
+            "dist": -0.0015391279214036196,
+            "other_geom": "ring_proximal_inter_link_collision_proxy"
+          },
+          {
+            "dist": -0.0023449903733054707,
+            "other_geom": "ring_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.0,
+          -0.08,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.040781246401164074,
+          "middle_tip_site": 0.03986305526100121,
+          "ring_tip_site": 0.033816032078692146,
+          "little_tip_site": 0.047408355011495956,
+          "thumb_tip_site": 0.15149048034951063
+        },
+        "mean_four_tip_distance": 0.040467172188088346,
+        "mean_all_tip_distance": 0.06267183382037281,
+        "min_four_tip_distance": 0.033816032078692146,
+        "max_four_tip_distance": 0.047408355011495956
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.03515715293469929
+    },
+    {
+      "ball_position": [
+        0.02,
+        -0.12,
+        0.21
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.02,
+          -0.12,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.11738686277627518,
+          "middle_tip_site": 0.10985332871047941,
+          "ring_tip_site": 0.09634169890246176,
+          "little_tip_site": 0.10016564747578374,
+          "thumb_tip_site": 0.19543941832996173
+        },
+        "mean_four_tip_distance": 0.10593688446625002,
+        "mean_all_tip_distance": 0.12383739123899236,
+        "min_four_tip_distance": 0.09634169890246176,
+        "max_four_tip_distance": 0.11738686277627518
+      },
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.0055439889911518955,
+        "ball_contacts": [
+          {
+            "dist": -0.0055439889911518955,
+            "other_geom": "middle_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.00041985720053180475,
+            "other_geom": "ring_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.02,
+          -0.12,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.04222383797901125,
+          "middle_tip_site": 0.025656011008848116,
+          "ring_tip_site": 0.030853251624286204,
+          "little_tip_site": 0.04265428514006507,
+          "thumb_tip_site": 0.19572481395815686
+        },
+        "mean_four_tip_distance": 0.035346846438052665,
+        "mean_all_tip_distance": 0.0674224399420735,
+        "min_four_tip_distance": 0.025656011008848116,
+        "max_four_tip_distance": 0.04265428514006507
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.036434824420356456
+    },
+    {
+      "ball_position": [
+        0.02,
+        -0.08,
+        0.21
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.02,
+          -0.08,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.09362862923373774,
+          "middle_tip_site": 0.0901345646499587,
+          "ring_tip_site": 0.072829296973994,
+          "little_tip_site": 0.07208136894198974,
+          "thumb_tip_site": 0.15838125073901638
+        },
+        "mean_four_tip_distance": 0.08216846494992004,
+        "mean_all_tip_distance": 0.0974110221077393,
+        "min_four_tip_distance": 0.07208136894198974,
+        "max_four_tip_distance": 0.09362862923373774
+      },
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.010935679665507025,
+        "ball_contacts": [
+          {
+            "dist": -0.0010265501108458665,
+            "other_geom": "middle_proximal_inter_link_collision_proxy"
+          },
+          {
+            "dist": -0.006972331566197738,
+            "other_geom": "ring_proximal_inter_link_collision_proxy"
+          },
+          {
+            "dist": -0.010935679665507025,
+            "other_geom": "ring_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.00011611049731807387,
+            "other_geom": "little_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.02,
+          -0.08,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.04042098105203428,
+          "middle_tip_site": 0.040625508616057376,
+          "ring_tip_site": 0.02406152685352568,
+          "little_tip_site": 0.036671243771256044,
+          "thumb_tip_site": 0.15812237230176643
+        },
+        "mean_four_tip_distance": 0.035444815073218346,
+        "mean_all_tip_distance": 0.059980326518927964,
+        "min_four_tip_distance": 0.02406152685352568,
+        "max_four_tip_distance": 0.040625508616057376
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.03731617440423239
+    },
+    {
+      "ball_position": [
+        -0.02,
+        -0.12,
+        0.21
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.12,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.11075953887437226,
+          "middle_tip_site": 0.11162498044123122,
+          "ring_tip_site": 0.10695564112837404,
+          "little_tip_site": 0.12011303423985704,
+          "thumb_tip_site": 0.18577644001833263
+        },
+        "mean_four_tip_distance": 0.11236329867095864,
+        "mean_all_tip_distance": 0.12704592694043343,
+        "min_four_tip_distance": 0.10695564112837404,
+        "max_four_tip_distance": 0.12011303423985704
+      },
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.002626102970582778,
+        "ball_contacts": [
+          {
+            "dist": -9.450185618167708e-05,
+            "other_geom": "index_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.002626102970582778,
+            "other_geom": "middle_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          -0.02,
+          -0.12,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.031105498143818303,
+          "middle_tip_site": 0.02857389702941722,
+          "ring_tip_site": 0.050759470570076314,
+          "little_tip_site": 0.07440911513469521,
+          "thumb_tip_site": 0.185775869761295
+        },
+        "mean_four_tip_distance": 0.046211995219501756,
+        "mean_all_tip_distance": 0.07412477012786041,
+        "min_four_tip_distance": 0.02857389702941722,
+        "max_four_tip_distance": 0.07440911513469521
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.04146420116066731
+    },
+    {
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.18
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.12263517200018716,
+          "middle_tip_site": 0.12420080975160579,
+          "ring_tip_site": 0.11153100815445488,
+          "little_tip_site": 0.11319368017153192,
+          "thumb_tip_site": 0.17222745555574492
+        },
+        "mean_four_tip_distance": 0.11789016751944494,
+        "mean_all_tip_distance": 0.12875762512670494,
+        "min_four_tip_distance": 0.11153100815445488,
+        "max_four_tip_distance": 0.12420080975160579
+      },
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.050975714647643285,
+          "middle_tip_site": 0.0401177424527021,
+          "ring_tip_site": 0.03202143697995856,
+          "little_tip_site": 0.05224656351894649,
+          "thumb_tip_site": 0.172227247270439
+        },
+        "mean_four_tip_distance": 0.043840364399812606,
+        "mean_all_tip_distance": 0.06951774097393788,
+        "min_four_tip_distance": 0.03202143697995856,
+        "max_four_tip_distance": 0.05224656351894649
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PARTIAL",
+      "score": 0.043840364399812606
+    },
+    {
+      "ball_position": [
+        0.02,
+        -0.08,
+        0.18
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.02,
+          -0.08,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.11869586257228203,
+          "middle_tip_site": 0.11856598536688648,
+          "ring_tip_site": 0.10085367838716353,
+          "little_tip_site": 0.09485304743601096,
+          "thumb_tip_site": 0.1604623442029036
+        },
+        "mean_four_tip_distance": 0.10824214344058575,
+        "mean_all_tip_distance": 0.11868618359304932,
+        "min_four_tip_distance": 0.09485304743601096,
+        "max_four_tip_distance": 0.11869586257228203
+      },
+      "hold": {
+        "ball_contact_count": 1,
+        "max_penetration": 0.0035865440586567007,
+        "ball_contacts": [
+          {
+            "dist": -0.0035865440586567007,
+            "other_geom": "ring_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.02,
+          -0.08,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.06106482831388537,
+          "middle_tip_site": 0.05138401867181371,
+          "ring_tip_site": 0.029098956835855016,
+          "little_tip_site": 0.034419229866455486,
+          "thumb_tip_site": 0.16046193505196155
+        },
+        "mean_four_tip_distance": 0.0439917584220024,
+        "mean_all_tip_distance": 0.06728579374799423,
+        "min_four_tip_distance": 0.029098956835855016,
+        "max_four_tip_distance": 0.06106482831388537
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.0461648465393158
+    },
+    {
+      "ball_position": [
+        0.0,
+        -0.12,
+        0.195
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.0,
+          -0.12,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.12271865910225095,
+          "middle_tip_site": 0.12085434048610137,
+          "ring_tip_site": 0.11031452774473845,
+          "little_tip_site": 0.11621461781526227,
+          "thumb_tip_site": 0.18989865089630686
+        },
+        "mean_four_tip_distance": 0.11752553628708826,
+        "mean_all_tip_distance": 0.132000159208932,
+        "min_four_tip_distance": 0.11031452774473845,
+        "max_four_tip_distance": 0.12271865910225095
+      },
+      "hold": {
+        "ball_contact_count": 1,
+        "max_penetration": 0.006345718378808557,
+        "ball_contacts": [
+          {
+            "dist": -0.006345718378808557,
+            "other_geom": "middle_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.0,
+          -0.12,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.04222991320764521,
+          "middle_tip_site": 0.024854281621191444,
+          "ring_tip_site": 0.032089512654064185,
+          "little_tip_site": 0.056779016938451755,
+          "thumb_tip_site": 0.1898985116585135
+        },
+        "mean_four_tip_distance": 0.038988181105338145,
+        "mean_all_tip_distance": 0.06917024721597323,
+        "min_four_tip_distance": 0.024854281621191444,
+        "max_four_tip_distance": 0.056779016938451755
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.04667961786295526
+    },
+    {
+      "ball_position": [
+        -0.02,
+        -0.1,
+        0.195
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.1,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.10861487730198188,
+          "middle_tip_site": 0.113270498308824,
+          "ring_tip_site": 0.10611022532058795,
+          "little_tip_site": 0.11525672575226424,
+          "thumb_tip_site": 0.16632403464578954
+        },
+        "mean_four_tip_distance": 0.11081308167091453,
+        "mean_all_tip_distance": 0.12191527226588952,
+        "min_four_tip_distance": 0.10611022532058795,
+        "max_four_tip_distance": 0.11525672575226424
+      },
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.1,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.03650649088191209,
+          "middle_tip_site": 0.0368532809439507,
+          "ring_tip_site": 0.046066497864428124,
+          "little_tip_site": 0.06776814099619537,
+          "thumb_tip_site": 0.1663238303137846
+        },
+        "mean_four_tip_distance": 0.04679860267162157,
+        "mean_all_tip_distance": 0.07070364820005418,
+        "min_four_tip_distance": 0.03650649088191209,
+        "max_four_tip_distance": 0.06776814099619537
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PARTIAL",
+      "score": 0.04679860267162157
+    },
+    {
+      "ball_position": [
+        0.02,
+        -0.12,
+        0.18
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.02,
+          -0.12,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.13821021355907598,
+          "middle_tip_site": 0.1341693220157119,
+          "ring_tip_site": 0.11894990917990567,
+          "little_tip_site": 0.11762029499023494,
+          "thumb_tip_site": 0.19712967701132603
+        },
+        "mean_four_tip_distance": 0.12723743493623213,
+        "mean_all_tip_distance": 0.1412158833512509,
+        "min_four_tip_distance": 0.11762029499023494,
+        "max_four_tip_distance": 0.13821021355907598
+      },
+      "hold": {
+        "ball_contact_count": 1,
+        "max_penetration": 0.004126368391429362,
+        "ball_contacts": [
+          {
+            "dist": -0.004126368391429362,
+            "other_geom": "ring_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.02,
+          -0.12,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.06204186434209503,
+          "middle_tip_site": 0.04085337251805654,
+          "ring_tip_site": 0.02707363160857065,
+          "little_tip_site": 0.04648673681717477,
+          "thumb_tip_site": 0.19712970196990606
+        },
+        "mean_four_tip_distance": 0.04411390132147425,
+        "mean_all_tip_distance": 0.07471706145116061,
+        "min_four_tip_distance": 0.02707363160857065,
+        "max_four_tip_distance": 0.06204186434209503
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.047366638104332975
+    },
+    {
+      "ball_position": [
+        0.02,
+        -0.12,
+        0.195
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.02,
+          -0.12,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.1273415460179855,
+          "middle_tip_site": 0.12169461943514272,
+          "ring_tip_site": 0.10719329233053812,
+          "little_tip_site": 0.108207418248087,
+          "thumb_tip_site": 0.1957123856527015
+        },
+        "mean_four_tip_distance": 0.11610921900793833,
+        "mean_all_tip_distance": 0.13202985233689096,
+        "min_four_tip_distance": 0.10719329233053812,
+        "max_four_tip_distance": 0.1273415460179855
+      },
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.011344433274892068,
+        "ball_contacts": [
+          {
+            "dist": -0.0035782352388953912,
+            "other_geom": "middle_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.011344433274892068,
+            "other_geom": "ring_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.02,
+          -0.12,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.050732370224192296,
+          "middle_tip_site": 0.027621764761104634,
+          "ring_tip_site": 0.01985556672510794,
+          "little_tip_site": 0.04203701557205066,
+          "thumb_tip_site": 0.19571197982790978
+        },
+        "mean_four_tip_distance": 0.03506167932061388,
+        "mean_all_tip_distance": 0.06719173942207306,
+        "min_four_tip_distance": 0.01985556672510794,
+        "max_four_tip_distance": 0.050732370224192296
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.047750545870398016
+    },
+    {
+      "ball_position": [
+        0.0,
+        -0.12,
+        0.18
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.0,
+          -0.12,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.13396291681524836,
+          "middle_tip_site": 0.13340763915541756,
+          "ring_tip_site": 0.12177016878033911,
+          "little_tip_site": 0.1250261005695248,
+          "thumb_tip_site": 0.191359006249916
+        },
+        "mean_four_tip_distance": 0.12854170633013245,
+        "mean_all_tip_distance": 0.14110516631408915,
+        "min_four_tip_distance": 0.12177016878033911,
+        "max_four_tip_distance": 0.13396291681524836
+      },
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.0,
+          -0.12,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.055304948235633665,
+          "middle_tip_site": 0.03903535304791227,
+          "ring_tip_site": 0.03699300514677888,
+          "little_tip_site": 0.06014861734862517,
+          "thumb_tip_site": 0.19135879961849717
+        },
+        "mean_four_tip_distance": 0.0478704809447375,
+        "mean_all_tip_distance": 0.07656814467948943,
+        "min_four_tip_distance": 0.03699300514677888,
+        "max_four_tip_distance": 0.06014861734862517
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PARTIAL",
+      "score": 0.0478704809447375
+    },
+    {
+      "ball_position": [
+        0.0,
+        -0.08,
+        0.18
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.0,
+          -0.08,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.11372206356455998,
+          "middle_tip_site": 0.11770337336239368,
+          "ring_tip_site": 0.1041650495852898,
+          "little_tip_site": 0.10389462275752864,
+          "thumb_tip_site": 0.15331772115922146
+        },
+        "mean_four_tip_distance": 0.10987127731744302,
+        "mean_all_tip_distance": 0.11856056608579871,
+        "min_four_tip_distance": 0.10389462275752864,
+        "max_four_tip_distance": 0.11770337336239368
+      },
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.0,
+          -0.08,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.05420709979633468,
+          "middle_tip_site": 0.04995105335653613,
+          "ring_tip_site": 0.03850016133386074,
+          "little_tip_site": 0.051396017648523,
+          "thumb_tip_site": 0.1533175111110069
+        },
+        "mean_four_tip_distance": 0.04851358303381364,
+        "mean_all_tip_distance": 0.0694743686492523,
+        "min_four_tip_distance": 0.03850016133386074,
+        "max_four_tip_distance": 0.05420709979633468
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PARTIAL",
+      "score": 0.04851358303381364
+    },
+    {
+      "ball_position": [
+        -0.02,
+        -0.1,
+        0.21
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.1,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.09675224949079952,
+          "middle_tip_site": 0.10044092401226568,
+          "ring_tip_site": 0.09513517196252047,
+          "little_tip_site": 0.10774239834651539,
+          "thumb_tip_site": 0.16600274949571117
+        },
+        "mean_four_tip_distance": 0.10001768595302526,
+        "mean_all_tip_distance": 0.11321469866156245,
+        "min_four_tip_distance": 0.09513517196252047,
+        "max_four_tip_distance": 0.10774239834651539
+      },
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.00867351409393714,
+        "ball_contacts": [
+          {
+            "dist": -0.00867351409393714,
+            "other_geom": "index_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.0027389252831365616,
+            "other_geom": "middle_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          -0.02,
+          -0.1,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.022526485906062835,
+          "middle_tip_site": 0.030035288830672243,
+          "ring_tip_site": 0.047258535475443286,
+          "little_tip_site": 0.06817977315839281,
+          "thumb_tip_site": 0.1660020117566875
+        },
+        "mean_four_tip_distance": 0.042000020842642795,
+        "mean_all_tip_distance": 0.06680041902545172,
+        "min_four_tip_distance": 0.022526485906062835,
+        "max_four_tip_distance": 0.06817977315839281
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.04934704903051707
+    },
+    {
+      "ball_position": [
+        -0.02,
+        -0.12,
+        0.195
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.12,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.12125951196280745,
+          "middle_tip_site": 0.12329624012595367,
+          "ring_tip_site": 0.11682546016356682,
+          "little_tip_site": 0.12689692440708922,
+          "thumb_tip_site": 0.18606358409587598
+        },
+        "mean_four_tip_distance": 0.12206953416485429,
+        "mean_all_tip_distance": 0.1348683441510586,
+        "min_four_tip_distance": 0.11682546016356682,
+        "max_four_tip_distance": 0.12689692440708922
+      },
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.12,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.04234191412795713,
+          "middle_tip_site": 0.035671975616828076,
+          "ring_tip_site": 0.049651105013096254,
+          "little_tip_site": 0.07403157234242859,
+          "thumb_tip_site": 0.18606338172603393
+        },
+        "mean_four_tip_distance": 0.05042414177507751,
+        "mean_all_tip_distance": 0.0775519897652688,
+        "min_four_tip_distance": 0.035671975616828076,
+        "max_four_tip_distance": 0.07403157234242859
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PARTIAL",
+      "score": 0.05042414177507751
+    },
+    {
+      "ball_position": [
+        -0.02,
+        -0.08,
+        0.21
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.08,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.08517229661924264,
+          "middle_tip_site": 0.09228554694192476,
+          "ring_tip_site": 0.08638224771036666,
+          "little_tip_site": 0.0979270535072578,
+          "thumb_tip_site": 0.14629060125102547
+        },
+        "mean_four_tip_distance": 0.09044178619469798,
+        "mean_all_tip_distance": 0.10161154920596346,
+        "min_four_tip_distance": 0.08517229661924264,
+        "max_four_tip_distance": 0.0979270535072578
+      },
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.008906347728337764,
+        "ball_contacts": [
+          {
+            "dist": -0.008051143433658302,
+            "other_geom": "index_proximal_inter_link_collision_proxy"
+          },
+          {
+            "dist": -0.008906347728337764,
+            "other_geom": "index_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.0026876501112583964,
+            "other_geom": "middle_proximal_inter_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          -0.02,
+          -0.08,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.02910938128903383,
+          "middle_tip_site": 0.0422829625136892,
+          "ring_tip_site": 0.05186846816601725,
+          "little_tip_site": 0.067531129115769,
+          "thumb_tip_site": 0.14628995344931253
+        },
+        "mean_four_tip_distance": 0.04769798527112732,
+        "mean_all_tip_distance": 0.06741637890676436,
+        "min_four_tip_distance": 0.02910938128903383,
+        "max_four_tip_distance": 0.067531129115769
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.05051068072780285
+    },
+    {
+      "ball_position": [
+        -0.02,
+        -0.08,
+        0.195
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.08,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.09844040786786142,
+          "middle_tip_site": 0.10610583746930125,
+          "ring_tip_site": 0.09833906493730123,
+          "little_tip_site": 0.10613857092634506,
+          "thumb_tip_site": 0.1466550772223877
+        },
+        "mean_four_tip_distance": 0.10225597030020223,
+        "mean_all_tip_distance": 0.11113579168463932,
+        "min_four_tip_distance": 0.09833906493730123,
+        "max_four_tip_distance": 0.10613857092634506
+      },
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.08,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.040897555684942404,
+          "middle_tip_site": 0.04736917550749582,
+          "ring_tip_site": 0.050783976035411106,
+          "little_tip_site": 0.06711458980481214,
+          "thumb_tip_site": 0.14665487049931
+        },
+        "mean_four_tip_distance": 0.051541324258165364,
+        "mean_all_tip_distance": 0.07056403350639429,
+        "min_four_tip_distance": 0.040897555684942404,
+        "max_four_tip_distance": 0.06711458980481214
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PARTIAL",
+      "score": 0.051541324258165364
+    },
+    {
+      "ball_position": [
+        0.02,
+        -0.08,
+        0.195
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.02,
+          -0.08,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.10584192931907181,
+          "middle_tip_site": 0.10424042553313546,
+          "ring_tip_site": 0.08667632589683189,
+          "little_tip_site": 0.08289398155610993,
+          "thumb_tip_site": 0.15871796447275002
+        },
+        "mean_four_tip_distance": 0.09491316557628728,
+        "mean_all_tip_distance": 0.10767412535557983,
+        "min_four_tip_distance": 0.08289398155610993,
+        "max_four_tip_distance": 0.10584192931907181
+      },
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.01615029224127582,
+        "ball_contacts": [
+          {
+            "dist": -0.013427985744966566,
+            "other_geom": "ring_proximal_inter_link_collision_proxy"
+          },
+          {
+            "dist": -0.01615029224127582,
+            "other_geom": "ring_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.0039981030822242225,
+            "other_geom": "little_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.02,
+          -0.08,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.04953251975142624,
+          "middle_tip_site": 0.041644213921660476,
+          "ring_tip_site": 0.02254002000770242,
+          "little_tip_site": 0.02812027472056589,
+          "thumb_tip_site": 0.15871530427895184
+        },
+        "mean_four_tip_distance": 0.03545925710033875,
+        "mean_all_tip_distance": 0.06011046653606137,
+        "min_four_tip_distance": 0.02254002000770242,
+        "max_four_tip_distance": 0.04953251975142624
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PARTIAL",
+      "score": 0.05275984158289039
+    },
+    {
+      "ball_position": [
+        -0.02,
+        -0.1,
+        0.18
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.1,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.1211750195424752,
+          "middle_tip_site": 0.1265781669871265,
+          "ring_tip_site": 0.11797482312270507,
+          "little_tip_site": 0.12413622058370435,
+          "thumb_tip_site": 0.1679894525307222
+        },
+        "mean_four_tip_distance": 0.12246605755900278,
+        "mean_all_tip_distance": 0.13157073655334667,
+        "min_four_tip_distance": 0.11797482312270507,
+        "max_four_tip_distance": 0.1265781669871265
+      },
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.1,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.051068672763239904,
+          "middle_tip_site": 0.04758384237290081,
+          "ring_tip_site": 0.04960741856529904,
+          "little_tip_site": 0.07061564460065085,
+          "thumb_tip_site": 0.1679892656678787
+        },
+        "mean_four_tip_distance": 0.05471889457552265,
+        "mean_all_tip_distance": 0.07737296879399386,
+        "min_four_tip_distance": 0.04758384237290081,
+        "max_four_tip_distance": 0.07061564460065085
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PARTIAL",
+      "score": 0.05471889457552265
+    },
+    {
+      "ball_position": [
+        0.02,
+        -0.1,
+        0.18
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.02,
+          -0.1,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.12726109170485583,
+          "middle_tip_site": 0.12501859832876175,
+          "ring_tip_site": 0.10844479088026594,
+          "little_tip_site": 0.10495626327544257,
+          "thumb_tip_site": 0.17861729124818912
+        },
+        "mean_four_tip_distance": 0.11642018604733152,
+        "mean_all_tip_distance": 0.12885960708750305,
+        "min_four_tip_distance": 0.10495626327544257,
+        "max_four_tip_distance": 0.12726109170485583
+      },
+      "hold": {
+        "ball_contact_count": 1,
+        "max_penetration": 0.011454658781133751,
+        "ball_contacts": [
+          {
+            "dist": -0.011454658781133751,
+            "other_geom": "ring_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.02,
+          -0.1,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.0582156651710626,
+          "middle_tip_site": 0.041888658267754855,
+          "ring_tip_site": 0.019745341218866255,
+          "little_tip_site": 0.035677010666706,
+          "thumb_tip_site": 0.17861726996169158
+        },
+        "mean_four_tip_distance": 0.03888166883109743,
+        "mean_all_tip_distance": 0.06682878905721626,
+        "min_four_tip_distance": 0.019745341218866255,
+        "max_four_tip_distance": 0.0582156651710626
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PASS",
+      "score": 0.05679098639336493
+    },
+    {
+      "ball_position": [
+        -0.02,
+        -0.12,
+        0.18
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.12,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.13262753496635948,
+          "middle_tip_site": 0.13562370515469782,
+          "ring_tip_site": 0.12769834421666063,
+          "little_tip_site": 0.13501302845893048,
+          "thumb_tip_site": 0.18755380291351353
+        },
+        "mean_four_tip_distance": 0.1327406531991621,
+        "mean_all_tip_distance": 0.14370328314203237,
+        "min_four_tip_distance": 0.12769834421666063,
+        "max_four_tip_distance": 0.13562370515469782
+      },
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.12,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.05539064138739546,
+          "middle_tip_site": 0.046674913851477956,
+          "ring_tip_site": 0.052952865647110416,
+          "little_tip_site": 0.07664673529758102,
+          "thumb_tip_site": 0.1875536159841029
+        },
+        "mean_four_tip_distance": 0.05791628904589122,
+        "mean_all_tip_distance": 0.08384375443353356,
+        "min_four_tip_distance": 0.046674913851477956,
+        "max_four_tip_distance": 0.07664673529758102
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PARTIAL",
+      "score": 0.05791628904589122
+    },
+    {
+      "ball_position": [
+        -0.02,
+        -0.08,
+        0.18
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.08,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.11214592141930789,
+          "middle_tip_site": 0.12020929795882411,
+          "ring_tip_site": 0.11103715894235745,
+          "little_tip_site": 0.11571985425137829,
+          "thumb_tip_site": 0.14854118397206367
+        },
+        "mean_four_tip_distance": 0.11477805814296693,
+        "mean_all_tip_distance": 0.12153068330878627,
+        "min_four_tip_distance": 0.11103715894235745,
+        "max_four_tip_distance": 0.12020929795882411
+      },
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          -0.02,
+          -0.08,
+          0.18
+        ],
+        "distances": {
+          "index_tip_site": 0.05429452571199711,
+          "middle_tip_site": 0.0561239389823563,
+          "ring_tip_site": 0.05401653425743477,
+          "little_tip_site": 0.06998868832142383,
+          "thumb_tip_site": 0.14854099733929993
+        },
+        "mean_four_tip_distance": 0.058605921818303,
+        "mean_all_tip_distance": 0.07659293692250238,
+        "min_four_tip_distance": 0.05401653425743477,
+        "max_four_tip_distance": 0.06998868832142383
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "PARTIAL",
+      "score": 0.058605921818303
+    },
+    {
+      "ball_position": [
+        0.02,
+        -0.1,
+        0.195
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.02,
+          -0.1,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.11536547001645275,
+          "middle_tip_site": 0.11152498983365426,
+          "ring_tip_site": 0.09540227301179467,
+          "little_tip_site": 0.09428747939716366,
+          "thumb_tip_site": 0.17705187113420306
+        },
+        "mean_four_tip_distance": 0.10414505306476633,
+        "mean_all_tip_distance": 0.11872641667865369,
+        "min_four_tip_distance": 0.09428747939716366,
+        "max_four_tip_distance": 0.11536547001645275
+      },
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.02237295316203215,
+        "ball_contacts": [
+          {
+            "dist": -0.001413835912163491,
+            "other_geom": "ring_proximal_inter_link_collision_proxy"
+          },
+          {
+            "dist": -0.02237295316203215,
+            "other_geom": "ring_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.00159544263108725,
+            "other_geom": "little_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.02,
+          -0.1,
+          0.195
+        ],
+        "distances": {
+          "index_tip_site": 0.04577754773271427,
+          "middle_tip_site": 0.031301388879195535,
+          "ring_tip_site": 0.008827046837967853,
+          "little_tip_site": 0.029604557368912744,
+          "thumb_tip_site": 0.17679289361576048
+        },
+        "mean_four_tip_distance": 0.028877635204697605,
+        "mean_all_tip_distance": 0.058460686886910175,
+        "min_four_tip_distance": 0.008827046837967853,
+        "max_four_tip_distance": 0.04577754773271427
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "FAIL",
+      "score": 0.058623541528761904
+    },
+    {
+      "ball_position": [
+        0.0,
+        -0.12,
+        0.21
+      ],
+      "open": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": [],
+        "ball_center": [
+          0.0,
+          -0.12,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.11235513117815234,
+          "middle_tip_site": 0.10892173815928088,
+          "ring_tip_site": 0.0998028860218835,
+          "little_tip_site": 0.10876648824097442,
+          "thumb_tip_site": 0.18961731448240549
+        },
+        "mean_four_tip_distance": 0.10746156090007279,
+        "mean_all_tip_distance": 0.12389271161653932,
+        "min_four_tip_distance": 0.0998028860218835,
+        "max_four_tip_distance": 0.11235513117815234
+      },
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.018484999815184446,
+        "ball_contacts": [
+          {
+            "dist": -0.00024839580143469746,
+            "other_geom": "index_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.018484999815184446,
+            "other_geom": "middle_distal_link_collision_proxy"
+          }
+        ],
+        "ball_center": [
+          0.0,
+          -0.12,
+          0.21
+        ],
+        "distances": {
+          "index_tip_site": 0.030951604198565293,
+          "middle_tip_site": 0.012715000184815573,
+          "ring_tip_site": 0.03377962132028338,
+          "little_tip_site": 0.05727117259729904,
+          "thumb_tip_site": 0.18961629983566178
+        },
+        "mean_four_tip_distance": 0.033679349575240825,
+        "mean_all_tip_distance": 0.064866739627325,
+        "min_four_tip_distance": 0.012715000184815573,
+        "max_four_tip_distance": 0.05727117259729904
+      },
+      "target_angles": {
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0,
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "ctrl_applied": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "wrist_1_joint": 0.0,
+        "wrist_2_joint": 0.0
+      },
+      "classification": "FAIL",
+      "score": 0.060649349205609715
+    }
+  ],
+  "best_result": {
+    "ball_position": [
+      0.0,
+      -0.1,
+      0.21
+    ],
+    "open": {
+      "ball_contact_count": 0,
+      "max_penetration": 0.0,
+      "ball_contacts": [],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "distances": {
+        "index_tip_site": 0.0985748336642074,
+        "middle_tip_site": 0.09742786049981504,
+        "ring_tip_site": 0.08701613547758758,
+        "little_tip_site": 0.0949285645705662,
+        "thumb_tip_site": 0.17029020267111716
+      },
+      "mean_four_tip_distance": 0.09448684855304405,
+      "mean_all_tip_distance": 0.10964751937665866,
+      "min_four_tip_distance": 0.08701613547758758,
+      "max_four_tip_distance": 0.0985748336642074
+    },
+    "hold": {
+      "ball_contact_count": 3,
+      "max_penetration": 0.006740899096839818,
+      "ball_contacts": [
+        {
+          "dist": -0.002783336670511875,
+          "other_geom": "index_distal_link_collision_proxy"
+        },
+        {
+          "dist": -0.006740899096839818,
+          "other_geom": "middle_distal_link_collision_proxy"
+        },
+        {
+          "dist": -1.5934698325963462e-05,
+          "other_geom": "ring_proximal_inter_link_collision_proxy"
+        }
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "distances": {
+        "index_tip_site": 0.028416663329488123,
+        "middle_tip_site": 0.02526838817028033,
+        "ring_tip_site": 0.040164568865023544,
+        "little_tip_site": 0.04900890883988443,
+        "thumb_tip_site": 0.17027353784920296
+      },
+      "mean_four_tip_distance": 0.03571463230116911,
+      "mean_all_tip_distance": 0.06262641341077588,
+      "min_four_tip_distance": 0.02526838817028033,
+      "max_four_tip_distance": 0.04900890883988443
+    },
+    "target_angles": {
+      "wrist_1_joint": 0.0,
+      "wrist_2_joint": 0.0,
+      "index_mcp_flex_joint": -0.08,
+      "index_mcp_abd_joint": 0.45,
+      "index_pip_joint": 0.65,
+      "index_dip_joint": 0.35,
+      "middle_mcp_flex_joint": 0.0,
+      "middle_mcp_abd_joint": 0.5,
+      "middle_pip_joint": 0.7,
+      "middle_dip_joint": 0.38,
+      "ring_mcp_flex_joint": 0.04,
+      "ring_mcp_abd_joint": 0.5,
+      "ring_pip_joint": 0.7,
+      "ring_dip_joint": 0.38,
+      "little_mcp_flex_joint": 0.08,
+      "little_mcp_abd_joint": 0.45,
+      "little_pip_joint": 0.65,
+      "little_dip_joint": 0.35,
+      "thumb_cmc_joint": 0.0,
+      "thumb_mcp_joint": 0.0,
+      "thumb_ip_joint": 0.0
+    },
+    "ctrl_applied": {
+      "index_dip_joint": 0.35,
+      "index_mcp_abd_joint": 0.45,
+      "index_mcp_flex_joint": -0.08,
+      "index_pip_joint": 0.65,
+      "little_dip_joint": 0.35,
+      "little_mcp_abd_joint": 0.45,
+      "little_mcp_flex_joint": 0.08,
+      "little_pip_joint": 0.65,
+      "middle_dip_joint": 0.38,
+      "middle_mcp_abd_joint": 0.5,
+      "middle_mcp_flex_joint": 0.0,
+      "middle_pip_joint": 0.7,
+      "ring_dip_joint": 0.38,
+      "ring_mcp_abd_joint": 0.5,
+      "ring_mcp_flex_joint": 0.04,
+      "ring_pip_joint": 0.7,
+      "thumb_cmc_joint": 0.0,
+      "thumb_ip_joint": 0.0,
+      "thumb_mcp_joint": 0.0,
+      "wrist_1_joint": 0.0,
+      "wrist_2_joint": 0.0
+    },
+    "classification": "PASS",
+    "score": 0.034196430494848745
+  },
+  "counts": {
+    "PASS": 15,
+    "PARTIAL": 10,
+    "FAIL": 2
+  },
+  "notes": [
+    "This sweep only tests four long fingers through position actuators.",
+    "Thumb joints are held open at zero to isolate four-finger behavior.",
+    "The ball is pinned and gravity is disabled, so this is a smoke test, not a stable free-object grasp.",
+    "Collision uses simplified proxy geoms; clean STL remains visual-only."
+  ]
+}

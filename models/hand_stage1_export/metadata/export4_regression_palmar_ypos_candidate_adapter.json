@@ -1,0 +1,220 @@
+{
+  "generated_at": "2026-05-26T10:14:49",
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_palmar_ypos_collision_candidate.xml",
+  "status": "PASS",
+  "joint_names": [
+    "wrist_1_joint",
+    "wrist_2_joint",
+    "index_mcp_flex_joint",
+    "index_mcp_abd_joint",
+    "index_pip_joint",
+    "index_dip_joint",
+    "little_mcp_flex_joint",
+    "little_mcp_abd_joint",
+    "little_pip_joint",
+    "little_dip_joint",
+    "middle_mcp_flex_joint",
+    "middle_mcp_abd_joint",
+    "middle_pip_joint",
+    "middle_dip_joint",
+    "ring_mcp_flex_joint",
+    "ring_mcp_abd_joint",
+    "ring_pip_joint",
+    "ring_dip_joint",
+    "thumb_cmc_abd_joint",
+    "thumb_cmc_joint",
+    "thumb_mcp_joint",
+    "thumb_ip_joint",
+    "ball_freejoint"
+  ],
+  "actuator_names": [
+    "wrist_1_joint_pos",
+    "wrist_2_joint_pos",
+    "index_mcp_flex_joint_pos",
+    "index_mcp_abd_joint_pos",
+    "index_pip_joint_pos",
+    "index_dip_joint_pos",
+    "middle_mcp_flex_joint_pos",
+    "middle_mcp_abd_joint_pos",
+    "middle_pip_joint_pos",
+    "middle_dip_joint_pos",
+    "ring_mcp_flex_joint_pos",
+    "ring_mcp_abd_joint_pos",
+    "ring_pip_joint_pos",
+    "ring_dip_joint_pos",
+    "little_mcp_flex_joint_pos",
+    "little_mcp_abd_joint_pos",
+    "little_pip_joint_pos",
+    "little_dip_joint_pos",
+    "thumb_cmc_abd_joint_pos",
+    "thumb_cmc_joint_pos",
+    "thumb_mcp_joint_pos",
+    "thumb_ip_joint_pos"
+  ],
+  "action_dim": 22,
+  "obs_dim": 86,
+  "obs_fields": [
+    "qpos",
+    "qvel",
+    "fingertip_site_positions",
+    "ball_pose",
+    "contact_summary"
+  ],
+  "ball_position": [
+    0.0,
+    0.08,
+    0.21
+  ],
+  "tests": [
+    {
+      "name": "joint_name_list_nonempty",
+      "pass": true,
+      "detail": 23
+    },
+    {
+      "name": "actuator_name_list_nonempty",
+      "pass": true,
+      "detail": 22
+    },
+    {
+      "name": "action_dim_equals_actuator_count",
+      "pass": true,
+      "detail": {
+        "action_dim": 22,
+        "actuators": 22
+      }
+    },
+    {
+      "name": "wrist_2_joint_in_joint_list",
+      "pass": true,
+      "detail": [
+        "wrist_1_joint",
+        "wrist_2_joint",
+        "index_mcp_flex_joint",
+        "index_mcp_abd_joint",
+        "index_pip_joint",
+        "index_dip_joint",
+        "little_mcp_flex_joint",
+        "little_mcp_abd_joint",
+        "little_pip_joint",
+        "little_dip_joint",
+        "middle_mcp_flex_joint",
+        "middle_mcp_abd_joint",
+        "middle_pip_joint",
+        "middle_dip_joint",
+        "ring_mcp_flex_joint",
+        "ring_mcp_abd_joint",
+        "ring_pip_joint",
+        "ring_dip_joint",
+        "thumb_cmc_abd_joint",
+        "thumb_cmc_joint",
+        "thumb_mcp_joint",
+        "thumb_ip_joint",
+        "ball_freejoint"
+      ]
+    },
+    {
+      "name": "wrist_2_joint_in_action_mapping",
+      "pass": true,
+      "detail": [
+        "wrist_1_joint_pos",
+        "wrist_2_joint_pos",
+        "index_mcp_flex_joint_pos",
+        "index_mcp_abd_joint_pos",
+        "index_pip_joint_pos",
+        "index_dip_joint_pos",
+        "middle_mcp_flex_joint_pos",
+        "middle_mcp_abd_joint_pos",
+        "middle_pip_joint_pos",
+        "middle_dip_joint_pos",
+        "ring_mcp_flex_joint_pos",
+        "ring_mcp_abd_joint_pos",
+        "ring_pip_joint_pos",
+        "ring_dip_joint_pos",
+        "little_mcp_flex_joint_pos",
+        "little_mcp_abd_joint_pos",
+        "little_pip_joint_pos",
+        "little_dip_joint_pos",
+        "thumb_cmc_abd_joint_pos",
+        "thumb_cmc_joint_pos",
+        "thumb_mcp_joint_pos",
+        "thumb_ip_joint_pos"
+      ]
+    },
+    {
+      "name": "obs_contains_qpos",
+      "pass": true,
+      "detail": {
+        "obs_qpos": 29,
+        "model_nq": 29
+      }
+    },
+    {
+      "name": "obs_contains_qvel",
+      "pass": true,
+      "detail": {
+        "obs_qvel": 28,
+        "model_nv": 28
+      }
+    },
+    {
+      "name": "obs_contains_fingertips",
+      "pass": true,
+      "detail": {
+        "index_tip_site": 0,
+        "middle_tip_site": 2,
+        "ring_tip_site": 3,
+        "little_tip_site": 1,
+        "thumb_tip_site": 4
+      }
+    },
+    {
+      "name": "obs_contains_ball_pose",
+      "pass": true,
+      "detail": [
+        0.0,
+        0.08,
+        0.21,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "obs_contains_contact_summary",
+      "pass": true,
+      "detail": {
+        "contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_hand_contact_count": 0,
+        "ball_hand_max_penetration": 0.0,
+        "source_counts": {}
+      }
+    },
+    {
+      "name": "reset_qpos_consistent",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "scripted_target_writes_ctrl",
+      "pass": true,
+      "detail": {
+        "ctrl_norm": 2.262719602602143
+      }
+    },
+    {
+      "name": "obs_vector_stable_length",
+      "pass": true,
+      "detail": {
+        "obs0": 86,
+        "obs1": 86
+      }
+    }
+  ],
+  "notes": [
+    "This validates the adapter scaffold only. It does not imply training readiness or stable free-object grasp.",
+    "wrist_2_joint is included in both joint and action mappings."
+  ]
+}

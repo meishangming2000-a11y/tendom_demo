@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-05-28",
+  "stage": "stage1_arm_hand_virtual_prototype",
+  "status": "closed_as_virtual_prototype_baseline",
+  "training_allowed": false,
+  "cad_modified_by_this_closeout": false,
+  "stl_modified_by_this_closeout": false,
+  "current_model": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\arm_hand_export4_collision_proxy_v2.xml",
+  "current_scene_without_ball": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_collision_proxy_v2.xml",
+  "current_scene_with_ball": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_collision_proxy_v2_ball.xml",
+  "lift_ball_scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_lift_ball_demo.xml",
+  "frozen_mount_reference": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\scene_arm_hand_export4_cad_mount_candidate.xml",
+  "primary_scripts": {
+    "viewer": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\view_arm_hand_export4.py",
+    "collision_smoke": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\test_arm_hand_collision_proxy_v2.py",
+    "scripted_close": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\view_arm_hand_stage1_scripted_demo.py",
+    "lift_ball": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\demo_arm_hand_lift_ball_scripted.py",
+    "lift_ball_from_default": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\demo_arm_hand_lift_ball_from_default.py",
+    "render_lift_ball_video": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\render_arm_hand_lift_ball_video.py",
+    "shadow_video_comparison": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\run_arm_hand_stage1_v2_shadow_video_comparison.py"
+  },
+  "primary_reports": {
+    "closeout": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage1_virtual_prototype_closeout.md",
+    "active_index": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\arm_hand_stage1_active_file_index.md",
+    "default_lift_report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\arm_hand_lift_from_default_report.md",
+    "collision_v2_smoke_report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\arm_hand_collision_proxy_v2_smoke_report.md",
+    "shadow_v2_comparison_report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\arm_hand_stage1_v2_shadow_video_comparison_report.md"
+  },
+  "latest_default_lift_demo": {
+    "mode": "pure_physics",
+    "status": "PASS",
+    "ball_lift_height_m": 0.158396,
+    "ball_hand_contacts": 7,
+    "ball_floor_contacts": 0,
+    "max_penetration_m": 0.003416,
+    "video": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_lift_from_default\\arm_hand_lift_from_default_pure_physics.mp4"
+  },
+  "archived_during_closeout": {
+    "archive_dir": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\archive\\closeout_20260528_110637",
+    "items": [
+      "docs\\visual_checks_arm_hand_lift_ball_demo\\camera_test",
+      "__pycache__",
+      "__pycache__after_final_validation"
+    ]
+  },
+  "known_limits": [
+    "scripted_position_control_only",
+    "collision_proxy_v2_is_simplified",
+    "clean_stl_visual_only",
+    "raised_demo_floor_table_plane",
+    "arm_trajectory_not_natural",
+    "not_shadow_equivalent",
+    "not_training_ready"
+  ],
+  "recommended_next_stage": "stage2_task_api_dataset_v0_retargeting_scaffold"
+}

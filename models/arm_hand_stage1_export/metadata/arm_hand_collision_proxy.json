@@ -1,0 +1,397 @@
+{
+  "generated_at": "2026-05-27T02:26:19",
+  "model": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\arm_hand_export4_joint_limit_collision_proxy.xml",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_joint_limit_collision_proxy.xml",
+  "ball_scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_joint_limit_collision_proxy_ball.xml",
+  "status": "PASS_LOAD_AND_SMOKE",
+  "model_summary": {
+    "nbody": 31,
+    "njnt": 26,
+    "nu": 26,
+    "ngeom": 64,
+    "nsite": 14,
+    "nmesh": 29,
+    "nq": 26,
+    "nv": 26
+  },
+  "arm_collision_proxies": [
+    {
+      "body": "base_link",
+      "status": "ADDED",
+      "bbox_center": [
+        -0.0014612190425395966,
+        4.657730460166931e-05,
+        -0.00021811947226524353
+      ],
+      "bbox_extent": [
+        0.06540250033140182,
+        0.13200700283050537,
+        0.1316125988960266
+      ],
+      "proxy_size": [
+        0.026815025135874748,
+        0.05412286892533302,
+        0.05396116524934769
+      ],
+      "mesh_vertices": 47394,
+      "note": "Primitive box proxy; visual STL remains contype=0/conaffinity=0."
+    },
+    {
+      "body": "link_1",
+      "status": "ADDED",
+      "bbox_center": [
+        0.001785028725862503,
+        -3.3523887395858765e-05,
+        -0.0037866123020648956
+      ],
+      "bbox_extent": [
+        0.07178638875484467,
+        0.10696789622306824,
+        0.1262913942337036
+      ],
+      "proxy_size": [
+        0.029432419687509537,
+        0.04385683685541153,
+        0.05177947133779526
+      ],
+      "mesh_vertices": 47878,
+      "note": "Primitive box proxy; visual STL remains contype=0/conaffinity=0."
+    },
+    {
+      "body": "link_2",
+      "status": "ADDED",
+      "bbox_center": [
+        -0.000112852081656456,
+        -0.0023348014801740646,
+        0.027666030451655388
+      ],
+      "bbox_extent": [
+        0.0860069990158081,
+        0.09663227200508118,
+        0.16971248388290405
+      ],
+      "proxy_size": [
+        0.03526286780834198,
+        0.03961922973394394,
+        0.06958211958408356
+      ],
+      "mesh_vertices": 25503,
+      "note": "Primitive box proxy; visual STL remains contype=0/conaffinity=0."
+    },
+    {
+      "body": "link_3",
+      "status": "ADDED",
+      "bbox_center": [
+        -0.000189121812582016,
+        -0.008207293227314949,
+        -0.015305299311876297
+      ],
+      "bbox_extent": [
+        0.09031886607408524,
+        0.09003853797912598,
+        0.1668495535850525
+      ],
+      "proxy_size": [
+        0.03703073412179947,
+        0.03691580146551132,
+        0.06840831786394119
+      ],
+      "mesh_vertices": 20032,
+      "note": "Primitive box proxy; visual STL remains contype=0/conaffinity=0."
+    },
+    {
+      "body": "ee_mount",
+      "status": "ADDED",
+      "bbox_center": [
+        -0.0003361450508236885,
+        -0.0008753202855587006,
+        -0.001272406429052353
+      ],
+      "bbox_extent": [
+        0.05950529873371124,
+        0.06996315717697144,
+        0.1026172861456871
+      ],
+      "proxy_size": [
+        0.02142190746963024,
+        0.02518673799932003,
+        0.03694222494959831
+      ],
+      "mesh_vertices": 82210,
+      "note": "Primitive box proxy; visual STL remains contype=0/conaffinity=0."
+    }
+  ],
+  "default_ball_pos": [
+    0.02133430494916852,
+    0.145570505275819,
+    0.5188150524002144
+  ],
+  "default_ball_radius": 0.028,
+  "default_ball_local_offset_in_palm": [
+    0.04,
+    0.12,
+    -0.02
+  ],
+  "static_open_contact": {
+    "count": 0,
+    "max_penetration": 0.0,
+    "top_contacts": []
+  },
+  "pose_renders": {
+    "open_hand": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_collision_proxy\\open_hand.png",
+    "preshape": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_collision_proxy\\preshape.png",
+    "close_four_fingers": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_collision_proxy\\close_four_fingers.png",
+    "close_thumb_smoke": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_collision_proxy\\close_thumb_smoke.png"
+  },
+  "ball_smoke": {
+    "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_joint_limit_collision_proxy_ball.xml",
+    "finite": true,
+    "ball_displacement": 0.0,
+    "stages": [
+      {
+        "stage": "open_hand",
+        "contact": {
+          "count": 0,
+          "max_penetration": 0.0,
+          "top_contacts": []
+        },
+        "fingertip_ball_distances": {
+          "index_tip_site": 0.09064379062858838,
+          "middle_tip_site": 0.10839522484243846,
+          "ring_tip_site": 0.1018344502142549,
+          "little_tip_site": 0.10059692061727357,
+          "thumb_tip_site": 0.05864526744892561
+        },
+        "ball_position": [
+          0.0213343049,
+          0.145570505,
+          0.518815052
+        ]
+      },
+      {
+        "stage": "preshape",
+        "contact": {
+          "count": 0,
+          "max_penetration": 0.0,
+          "top_contacts": []
+        },
+        "fingertip_ball_distances": {
+          "index_tip_site": 0.06035836973579127,
+          "middle_tip_site": 0.07721018772325905,
+          "ring_tip_site": 0.0878296555410884,
+          "little_tip_site": 0.09229155035350382,
+          "thumb_tip_site": 0.058687873175952
+        },
+        "ball_position": [
+          0.0213343049,
+          0.145570505,
+          0.518815052
+        ]
+      },
+      {
+        "stage": "close_four_fingers",
+        "contact": {
+          "count": 5,
+          "max_penetration": 0.0054259505206467,
+          "top_contacts": [
+            {
+              "geom1": "ball_geom",
+              "geom2": "index_proximal_inter_link_collision_proxy",
+              "body1": "ball",
+              "body2": "index_proximal_inter_link",
+              "dist": -0.0054259505206467,
+              "penetration": 0.0054259505206467,
+              "pos": [
+                0.014594291662103617,
+                0.16963001035542183,
+                0.5227068438482915
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "index_distal_link_collision_proxy",
+              "body1": "ball",
+              "body2": "index_distal_link",
+              "dist": -0.0033131137038040328,
+              "penetration": 0.0033131137038040328,
+              "pos": [
+                0.022645967424270518,
+                0.17136996051788667,
+                0.5239768959825397
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_proximal_phalanx_link_collision_proxy",
+              "body1": "ball",
+              "body2": "middle_proximal_phalanx_link",
+              "dist": -0.0017680035740871942,
+              "penetration": 0.0017680035740871942,
+              "pos": [
+                -0.0024676376764661903,
+                0.1472475518664298,
+                0.5316965271670552
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_proximal_inter_link_collision_proxy",
+              "body1": "ball",
+              "body2": "middle_proximal_inter_link",
+              "dist": -0.001070359781124042,
+              "penetration": 0.001070359781124042,
+              "pos": [
+                0.014248630200032312,
+                0.1585036051366894,
+                0.5419849565864326
+              ]
+            },
+            {
+              "geom1": "index_tip_collision_proxy_sphere",
+              "geom2": "ball_geom",
+              "body1": "index_distal_link",
+              "body2": "ball",
+              "dist": -0.0009764330271113224,
+              "penetration": 0.0009764330271113224,
+              "pos": [
+                0.04053617340265353,
+                0.16516070871205601,
+                0.5209151460769261
+              ]
+            }
+          ]
+        },
+        "fingertip_ball_distances": {
+          "index_tip_site": 0.04202356697288868,
+          "middle_tip_site": 0.05433526368095711,
+          "ring_tip_site": 0.05372520308044681,
+          "little_tip_site": 0.06539817237708395,
+          "thumb_tip_site": 0.058752701993294104
+        },
+        "ball_position": [
+          0.0213343049,
+          0.145570505,
+          0.518815052
+        ]
+      },
+      {
+        "stage": "close_thumb_smoke",
+        "contact": {
+          "count": 7,
+          "max_penetration": 0.0038982630641574787,
+          "top_contacts": [
+            {
+              "geom1": "ball_geom",
+              "geom2": "index_proximal_inter_link_collision_proxy",
+              "body1": "ball",
+              "body2": "index_proximal_inter_link",
+              "dist": -0.0038982630641574787,
+              "penetration": 0.0038982630641574787,
+              "pos": [
+                0.014799631679613531,
+                0.17076039340911114,
+                0.5200047224468993
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_proximal_phalanx_link_collision_proxy",
+              "body1": "ball",
+              "body2": "middle_proximal_phalanx_link",
+              "dist": -0.0023082227980589258,
+              "penetration": 0.0023082227980589258,
+              "pos": [
+                -0.002523388393988177,
+                0.14777574352545006,
+                0.5309249293119954
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "index_distal_link_collision_proxy",
+              "body1": "ball",
+              "body2": "index_distal_link",
+              "dist": -0.0018425437801936175,
+              "penetration": 0.0018425437801936175,
+              "pos": [
+                0.02273328233662361,
+                0.17250878367526834,
+                0.5211877129946347
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_proximal_inter_link_collision_proxy",
+              "body1": "ball",
+              "body2": "middle_proximal_inter_link",
+              "dist": -0.0017296012250420535,
+              "penetration": 0.0017296012250420535,
+              "pos": [
+                0.014705259822733643,
+                0.15913805083532803,
+                0.5413604840687825
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "ring_proximal_inter_link_collision_proxy",
+              "body1": "ball",
+              "body2": "ring_proximal_inter_link",
+              "dist": -0.0005598623230121409,
+              "penetration": 0.0005598623230121409,
+              "pos": [
+                0.0165464535197253,
+                0.1436373141118998,
+                0.5460499830364725
+              ]
+            },
+            {
+              "geom1": "thumb_tip_collision_proxy_sphere",
+              "geom2": "ball_geom",
+              "body1": "thumb_distal_link",
+              "body2": "ball",
+              "dist": -0.00026537795354704755,
+              "penetration": 0.00026537795354704755,
+              "pos": [
+                0.048109710264142784,
+                0.1490498393388914,
+                0.5119187541664313
+              ]
+            },
+            {
+              "geom1": "index_tip_collision_proxy_sphere",
+              "geom2": "ball_geom",
+              "body1": "index_distal_link",
+              "body2": "ball",
+              "dist": -0.00020373024923495478,
+              "penetration": 0.00020373024923495478,
+              "pos": [
+                0.04052194441556043,
+                0.1658214053033275,
+                0.5186114439190515
+              ]
+            }
+          ]
+        },
+        "fingertip_ball_distances": {
+          "index_tip_site": 0.042796269750765045,
+          "middle_tip_site": 0.05329706506591239,
+          "ring_tip_site": 0.05147917847229899,
+          "little_tip_site": 0.0628102260320953,
+          "thumb_tip_site": 0.04273462204645295
+        },
+        "ball_position": [
+          0.0213343049,
+          0.145570505,
+          0.518815052
+        ]
+      }
+    ],
+    "status": "PASS"
+  },
+  "limitations": [
+    "Arm collision proxies are bbox-derived boxes for v0 external-object contact, not final robot self-collision geometry.",
+    "Visual STL remains disabled for collision.",
+    "Hand-hand and arm-arm self-collision are intentionally not fully enabled in v0 to avoid adjacent-link false positives."
+  ]
+}

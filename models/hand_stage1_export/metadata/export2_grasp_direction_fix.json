@@ -1,0 +1,227 @@
+{
+  "source_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_clean_mesh_export2_draft.xml",
+  "fixed_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_clean_mesh_export2_graspfix.xml",
+  "fixed_scene_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_clean_mesh_export2_graspfix.xml",
+  "joint_tree_changed": false,
+  "joint_names_changed": false,
+  "flipped_joint_count": 15,
+  "flipped_joints": [
+    {
+      "joint": "index_mcp_abd_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "range": "-0.2 1.2"
+    },
+    {
+      "joint": "middle_mcp_abd_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "range": "-0.2 1.2"
+    },
+    {
+      "joint": "ring_mcp_abd_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "range": "-0.2 1.2"
+    },
+    {
+      "joint": "little_mcp_abd_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "range": "-0.2 1.2"
+    },
+    {
+      "joint": "index_pip_joint",
+      "old_axis": [
+        0.10977,
+        -0.048393,
+        -0.99278
+      ],
+      "new_axis": [
+        -0.10977,
+        0.048393,
+        0.99278
+      ],
+      "range": "0 1.57"
+    },
+    {
+      "joint": "middle_pip_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "range": "0 1.57"
+    },
+    {
+      "joint": "ring_pip_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "range": "0 1.57"
+    },
+    {
+      "joint": "little_pip_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "range": "0 1.57"
+    },
+    {
+      "joint": "index_dip_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "range": "0 1.2"
+    },
+    {
+      "joint": "middle_dip_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "range": "0 1.2"
+    },
+    {
+      "joint": "ring_dip_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "range": "0 1.2"
+    },
+    {
+      "joint": "little_dip_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "range": "0 1.2"
+    },
+    {
+      "joint": "thumb_cmc_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "range": "-0.8 0.8"
+    },
+    {
+      "joint": "thumb_mcp_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "range": "0 1.2"
+    },
+    {
+      "joint": "thumb_ip_joint",
+      "old_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "new_axis": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "range": "0 1.2"
+    }
+  ],
+  "missing_requested_joints": [],
+  "notes": [
+    "This is a diagnostic MJCF-only fix for the observed reversed grasp direction.",
+    "The fix inverts flexion-like hinge axes while preserving positive scripted grasp targets.",
+    "The four long-finger *_mcp_abd_joint entries are treated as MCP curl joints for this draft because flex/abd naming semantics remain suspect.",
+    "Primitive collision geoms are retained; clean mesh geoms remain visual-only."
+  ]
+}

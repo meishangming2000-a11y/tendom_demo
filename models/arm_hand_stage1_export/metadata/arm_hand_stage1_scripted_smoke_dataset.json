@@ -1,0 +1,522 @@
+{
+  "generated_at": "2026-05-27T09:15:25",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_joint_limit_collision_proxy_ball.xml",
+  "dataset": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\arm_hand_stage1_scripted_smoke_dataset_v0.npz",
+  "episodes": 5,
+  "steps_per_phase": 48,
+  "total_steps": 1200,
+  "qpos_shape": [
+    1200,
+    33
+  ],
+  "qvel_shape": [
+    1200,
+    32
+  ],
+  "ctrl_shape": [
+    1200,
+    26
+  ],
+  "obs_shape": [
+    1200,
+    124
+  ],
+  "action_dim": 26,
+  "joint_names": [
+    "j1",
+    "j2",
+    "j3",
+    "j4",
+    "wrist_1_joint",
+    "wrist_2_joint",
+    "index_mcp_flex_joint",
+    "index_mcp_abd_joint",
+    "index_pip_joint",
+    "index_dip_joint",
+    "little_mcp_flex_joint",
+    "little_mcp_abd_joint",
+    "little_pip_joint",
+    "little_dip_joint",
+    "middle_mcp_flex_joint",
+    "middle_mcp_abd_joint",
+    "middle_pip_joint",
+    "middle_dip_joint",
+    "ring_mcp_flex_joint",
+    "ring_mcp_abd_joint",
+    "ring_pip_joint",
+    "ring_dip_joint",
+    "thumb_cmc_abd_joint",
+    "thumb_cmc_joint",
+    "thumb_mcp_joint",
+    "thumb_ip_joint",
+    "ball_freejoint"
+  ],
+  "actuator_names": [
+    "a_j1",
+    "a_j2",
+    "a_j3",
+    "a_j4",
+    "wrist_1_joint_pos",
+    "wrist_2_joint_pos",
+    "index_mcp_flex_joint_pos",
+    "index_mcp_abd_joint_pos",
+    "index_pip_joint_pos",
+    "index_dip_joint_pos",
+    "middle_mcp_flex_joint_pos",
+    "middle_mcp_abd_joint_pos",
+    "middle_pip_joint_pos",
+    "middle_dip_joint_pos",
+    "ring_mcp_flex_joint_pos",
+    "ring_mcp_abd_joint_pos",
+    "ring_pip_joint_pos",
+    "ring_dip_joint_pos",
+    "little_mcp_flex_joint_pos",
+    "little_mcp_abd_joint_pos",
+    "little_pip_joint_pos",
+    "little_dip_joint_pos",
+    "thumb_cmc_abd_joint_pos",
+    "thumb_cmc_joint_pos",
+    "thumb_mcp_joint_pos",
+    "thumb_ip_joint_pos"
+  ],
+  "labels": {
+    "contact_smoke_pass": 5
+  },
+  "episode_summaries": [
+    {
+      "episode": 0,
+      "ball_position": [
+        0.0213343049,
+        0.145570505,
+        0.518815052
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "steps": 240,
+      "label": "contact_smoke_pass",
+      "final_metrics": {
+        "contact_count": 7,
+        "ball_hand_contact_count": 7,
+        "ball_arm_contact_count": 0,
+        "max_penetration": 0.003999090799215765,
+        "four_finger_avg_tip_ball_distance": 0.05249900196062007,
+        "thumb_ball_distance": 0.042645666697796285,
+        "thumb_index_distance": 0.029875808885967015
+      },
+      "phase_summaries": [
+        {
+          "phase": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.10006285670834683,
+            "thumb_ball_distance": 0.058981158471179254,
+            "thumb_index_distance": 0.13066653627737093
+          }
+        },
+        {
+          "phase": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.08530143604599359,
+            "thumb_ball_distance": 0.05970891914916451,
+            "thumb_index_distance": 0.09608496157168524
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "metrics": {
+            "contact_count": 3,
+            "ball_hand_contact_count": 3,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.004292278442312775,
+            "four_finger_avg_tip_ball_distance": 0.05969594374716305,
+            "thumb_ball_distance": 0.057207685562159404,
+            "thumb_index_distance": 0.050584998131371774
+          }
+        },
+        {
+          "phase": "close_thumb_smoke",
+          "metrics": {
+            "contact_count": 6,
+            "ball_hand_contact_count": 6,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.004761649293473202,
+            "four_finger_avg_tip_ball_distance": 0.05344049973182806,
+            "thumb_ball_distance": 0.04174076800209782,
+            "thumb_index_distance": 0.023650623195558166
+          }
+        },
+        {
+          "phase": "hold",
+          "metrics": {
+            "contact_count": 7,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.003999090799215765,
+            "four_finger_avg_tip_ball_distance": 0.05249900196062007,
+            "thumb_ball_distance": 0.042645666697796285,
+            "thumb_index_distance": 0.029875808885967015
+          }
+        }
+      ]
+    },
+    {
+      "episode": 1,
+      "ball_position": [
+        0.027334304900000002,
+        0.145570505,
+        0.518815052
+      ],
+      "offset": [
+        0.006,
+        0.0,
+        0.0
+      ],
+      "steps": 240,
+      "label": "contact_smoke_pass",
+      "final_metrics": {
+        "contact_count": 6,
+        "ball_hand_contact_count": 6,
+        "ball_arm_contact_count": 0,
+        "max_penetration": 0.0032888082289127558,
+        "four_finger_avg_tip_ball_distance": 0.04985327877692982,
+        "thumb_ball_distance": 0.04136094268700469,
+        "thumb_index_distance": 0.02932971057141919
+      },
+      "phase_summaries": [
+        {
+          "phase": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.10361592060608568,
+            "thumb_ball_distance": 0.054026184598889325,
+            "thumb_index_distance": 0.13066653627737093
+          }
+        },
+        {
+          "phase": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.08697409319995815,
+            "thumb_ball_distance": 0.05476457506726576,
+            "thumb_index_distance": 0.09608496157168524
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "metrics": {
+            "contact_count": 3,
+            "ball_hand_contact_count": 3,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0030118486691351493,
+            "four_finger_avg_tip_ball_distance": 0.05766072988913909,
+            "thumb_ball_distance": 0.05295663861745562,
+            "thumb_index_distance": 0.050491902594633216
+          }
+        },
+        {
+          "phase": "close_thumb_smoke",
+          "metrics": {
+            "contact_count": 7,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0026593895668240736,
+            "four_finger_avg_tip_ball_distance": 0.05102740053632484,
+            "thumb_ball_distance": 0.04160121239502038,
+            "thumb_index_distance": 0.025045449428363228
+          }
+        },
+        {
+          "phase": "hold",
+          "metrics": {
+            "contact_count": 6,
+            "ball_hand_contact_count": 6,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0032888082289127558,
+            "four_finger_avg_tip_ball_distance": 0.04985327877692982,
+            "thumb_ball_distance": 0.04136094268700469,
+            "thumb_index_distance": 0.02932971057141919
+          }
+        }
+      ]
+    },
+    {
+      "episode": 2,
+      "ball_position": [
+        0.0153343049,
+        0.145570505,
+        0.518815052
+      ],
+      "offset": [
+        -0.006,
+        0.0,
+        0.0
+      ],
+      "steps": 240,
+      "label": "contact_smoke_pass",
+      "final_metrics": {
+        "contact_count": 7,
+        "ball_hand_contact_count": 7,
+        "ball_arm_contact_count": 0,
+        "max_penetration": 0.0048538809914616034,
+        "four_finger_avg_tip_ball_distance": 0.05504336597671785,
+        "thumb_ball_distance": 0.04272099649889279,
+        "thumb_index_distance": 0.028140070169177474
+      },
+      "phase_summaries": [
+        {
+          "phase": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.0967527541721983,
+            "thumb_ball_distance": 0.06411493965443199,
+            "thumb_index_distance": 0.13066653627737093
+          }
+        },
+        {
+          "phase": "preshape",
+          "metrics": {
+            "contact_count": 2,
+            "ball_hand_contact_count": 2,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.001268519511312005,
+            "four_finger_avg_tip_ball_distance": 0.08413174802889309,
+            "thumb_ball_distance": 0.06444703854208773,
+            "thumb_index_distance": 0.09609162716477936
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "metrics": {
+            "contact_count": 4,
+            "ball_hand_contact_count": 4,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.005244689205270691,
+            "four_finger_avg_tip_ball_distance": 0.061322269423720724,
+            "thumb_ball_distance": 0.059309089574417446,
+            "thumb_index_distance": 0.05048251231245671
+          }
+        },
+        {
+          "phase": "close_thumb_smoke",
+          "metrics": {
+            "contact_count": 6,
+            "ball_hand_contact_count": 6,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.005340547457495485,
+            "four_finger_avg_tip_ball_distance": 0.05534793091352676,
+            "thumb_ball_distance": 0.0423220045642045,
+            "thumb_index_distance": 0.02368286804073071
+          }
+        },
+        {
+          "phase": "hold",
+          "metrics": {
+            "contact_count": 7,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0048538809914616034,
+            "four_finger_avg_tip_ball_distance": 0.05504336597671785,
+            "thumb_ball_distance": 0.04272099649889279,
+            "thumb_index_distance": 0.028140070169177474
+          }
+        }
+      ]
+    },
+    {
+      "episode": 3,
+      "ball_position": [
+        0.0213343049,
+        0.151570505,
+        0.518815052
+      ],
+      "offset": [
+        0.0,
+        0.006,
+        0.0
+      ],
+      "steps": 240,
+      "label": "contact_smoke_pass",
+      "final_metrics": {
+        "contact_count": 7,
+        "ball_hand_contact_count": 7,
+        "ball_arm_contact_count": 0,
+        "max_penetration": 0.005652540693476172,
+        "four_finger_avg_tip_ball_distance": 0.05199868282679633,
+        "thumb_ball_distance": 0.0428360825751131,
+        "thumb_index_distance": 0.03426427368354209
+      },
+      "phase_summaries": [
+        {
+          "phase": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.09783892400321045,
+            "thumb_ball_distance": 0.057888502530228536,
+            "thumb_index_distance": 0.13066653627737093
+          }
+        },
+        {
+          "phase": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.08251783781350436,
+            "thumb_ball_distance": 0.058513706557124644,
+            "thumb_index_distance": 0.09608496157168524
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "metrics": {
+            "contact_count": 3,
+            "ball_hand_contact_count": 3,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0066336921406620845,
+            "four_finger_avg_tip_ball_distance": 0.057285825233447385,
+            "thumb_ball_distance": 0.05431125554884846,
+            "thumb_index_distance": 0.052037849932548834
+          }
+        },
+        {
+          "phase": "close_thumb_smoke",
+          "metrics": {
+            "contact_count": 8,
+            "ball_hand_contact_count": 8,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.006333205374059405,
+            "four_finger_avg_tip_ball_distance": 0.05282792475721318,
+            "thumb_ball_distance": 0.04236588927678414,
+            "thumb_index_distance": 0.024735369835886905
+          }
+        },
+        {
+          "phase": "hold",
+          "metrics": {
+            "contact_count": 7,
+            "ball_hand_contact_count": 7,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.005652540693476172,
+            "four_finger_avg_tip_ball_distance": 0.05199868282679633,
+            "thumb_ball_distance": 0.0428360825751131,
+            "thumb_index_distance": 0.03426427368354209
+          }
+        }
+      ]
+    },
+    {
+      "episode": 4,
+      "ball_position": [
+        0.0213343049,
+        0.13957050499999998,
+        0.518815052
+      ],
+      "offset": [
+        0.0,
+        -0.006,
+        0.0
+      ],
+      "steps": 240,
+      "label": "contact_smoke_pass",
+      "final_metrics": {
+        "contact_count": 3,
+        "ball_hand_contact_count": 3,
+        "ball_arm_contact_count": 0,
+        "max_penetration": 0.0021844278462985573,
+        "four_finger_avg_tip_ball_distance": 0.05385989772934495,
+        "thumb_ball_distance": 0.042532811973654744,
+        "thumb_index_distance": 0.025402769945558713
+      },
+      "phase_summaries": [
+        {
+          "phase": "open_hand",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.102563313526157,
+            "thumb_ball_distance": 0.06065043597545236,
+            "thumb_index_distance": 0.13066653627737093
+          }
+        },
+        {
+          "phase": "preshape",
+          "metrics": {
+            "contact_count": 0,
+            "ball_hand_contact_count": 0,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0,
+            "four_finger_avg_tip_ball_distance": 0.08835624051707222,
+            "thumb_ball_distance": 0.06146914833369369,
+            "thumb_index_distance": 0.09608496157168524
+          }
+        },
+        {
+          "phase": "close_four_fingers",
+          "metrics": {
+            "contact_count": 2,
+            "ball_hand_contact_count": 2,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0011689812120691768,
+            "four_finger_avg_tip_ball_distance": 0.06218397074808706,
+            "thumb_ball_distance": 0.05961463568594883,
+            "thumb_index_distance": 0.04968852875351943
+          }
+        },
+        {
+          "phase": "close_thumb_smoke",
+          "metrics": {
+            "contact_count": 4,
+            "ball_hand_contact_count": 4,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0021425769348158933,
+            "four_finger_avg_tip_ball_distance": 0.05388567500869207,
+            "thumb_ball_distance": 0.04148999558497729,
+            "thumb_index_distance": 0.022185758206077582
+          }
+        },
+        {
+          "phase": "hold",
+          "metrics": {
+            "contact_count": 3,
+            "ball_hand_contact_count": 3,
+            "ball_arm_contact_count": 0,
+            "max_penetration": 0.0021844278462985573,
+            "four_finger_avg_tip_ball_distance": 0.05385989772934495,
+            "thumb_ball_distance": 0.042532811973654744,
+            "thumb_index_distance": 0.025402769945558713
+          }
+        }
+      ]
+    }
+  ],
+  "training_ready": false,
+  "notes": [
+    "Ball is pinned during each rollout.",
+    "Dataset is for replay/adapter smoke only, not policy training."
+  ]
+}

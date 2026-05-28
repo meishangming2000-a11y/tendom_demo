@@ -1,0 +1,23 @@
+{
+  "current_ball_side_recommendation": "keep_current_ball_side_for_current_script",
+  "current_ball_on_inferred_palmar_side": true,
+  "mirrored_ball_on_inferred_palmar_side": false,
+  "close_signs": {
+    "index_mcp_flex_joint": "positive",
+    "index_mcp_abd_joint": "positive",
+    "index_pip_joint": "positive",
+    "index_dip_joint": "positive",
+    "middle_mcp_flex_joint": "positive",
+    "middle_mcp_abd_joint": "positive",
+    "middle_pip_joint": "positive",
+    "middle_dip_joint": "positive",
+    "ring_mcp_flex_joint": "positive",
+    "ring_mcp_abd_joint": "positive",
+    "ring_pip_joint": "positive",
+    "ring_dip_joint": "positive",
+    "little_mcp_flex_joint": "positive",
+    "little_mcp_abd_joint": "positive",
+    "little_pip_joint": "positive",
+    "little_dip_joint": "positive"
+  }
+}

@@ -1,0 +1,560 @@
+{
+  "generated_at": "2026-05-26 01:40:16",
+  "schema": "export4_wrist2_collision_tuned_build_v1",
+  "baseline": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_current_baseline.xml",
+  "output": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_wrist2_collision_tuned.xml",
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+  "ball_default": [
+    0.0,
+    -0.1,
+    0.21
+  ],
+  "changes": [
+    {
+      "kind": "wrist_2_joint",
+      "status": "verified_or_updated_as_hinge",
+      "old": {
+        "name": "wrist_2_joint",
+        "type": "hinge",
+        "axis": "0 0 -1",
+        "limited": "true",
+        "range": "-0.8 0.8",
+        "damping": "0.08",
+        "armature": "0.0001"
+      },
+      "new": {
+        "name": "wrist_2_joint",
+        "type": "hinge",
+        "axis": "0 0 -1",
+        "limited": "true",
+        "range": "-0.8 0.8",
+        "damping": "0.08",
+        "armature": "0.0001"
+      }
+    },
+    {
+      "kind": "wrist_2_actuator",
+      "status": "verified_or_updated",
+      "old": {
+        "name": "wrist_2_joint_pos",
+        "joint": "wrist_2_joint",
+        "kp": "5",
+        "ctrllimited": "true",
+        "ctrlrange": "-0.8 0.8"
+      },
+      "new": {
+        "name": "wrist_2_joint_pos",
+        "joint": "wrist_2_joint",
+        "kp": "5",
+        "ctrllimited": "true",
+        "ctrlrange": "-0.8 0.8"
+      }
+    },
+    {
+      "kind": "collision_proxy_tuning",
+      "count": 20,
+      "items": [
+        {
+          "geom": "palm_link_collision_proxy_ellipsoid",
+          "old": {
+            "name": "palm_link_collision_proxy_ellipsoid",
+            "type": "ellipsoid",
+            "pos": "0 0.048 0.002",
+            "size": "0.030 0.064 0.024",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "palm_link_collision_proxy_ellipsoid",
+            "type": "ellipsoid",
+            "pos": "0 0.048 0.002",
+            "size": "0.026 0.054 0.021",
+            "rgba": "0.16 0.90 0.58 0.30",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "index_mcp_flex_link_collision_proxy",
+          "old": {
+            "name": "index_mcp_flex_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.00051676254 0.0097416976 -0.00026673708",
+            "size": "0.0058",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "index_mcp_flex_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.00051676254 0.0097416976 -0.00026673708",
+            "size": "0.0048",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "index_proximal_phalanx_link_collision_proxy",
+          "old": {
+            "name": "index_proximal_phalanx_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.00021096449 0.034999364 0.00025",
+            "size": "0.0072",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "index_proximal_phalanx_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.00021096449 0.034999364 0.00025",
+            "size": "0.0056",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "index_proximal_inter_link_collision_proxy",
+          "old": {
+            "name": "index_proximal_inter_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.0097266332 0.027252107 -0.00045436552",
+            "size": "0.0072",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "index_proximal_inter_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.0097266332 0.027252107 -0.00045436552",
+            "size": "0.0054",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "index_distal_link_collision_proxy",
+          "old": {
+            "name": "index_distal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.011092007 0.025709199 -6.7060969e-05",
+            "size": "0.0062",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "index_distal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.011092007 0.025709199 -6.7060969e-05",
+            "size": "0.0048",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "little_mcp_flex_link_collision_proxy",
+          "old": {
+            "name": "little_mcp_flex_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.0018088145 0.0095862352 -0.00026673708",
+            "size": "0.0058",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "little_mcp_flex_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.0018088145 0.0095862352 -0.00026673708",
+            "size": "0.0048",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "little_proximal_phalanx_link_collision_proxy",
+          "old": {
+            "name": "little_proximal_phalanx_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.034983 -0.0010805 -0.0003",
+            "size": "0.0072",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "little_proximal_phalanx_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.034983 -0.0010805 -0.0003",
+            "size": "0.0056",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "little_proximal_inter_link_collision_proxy",
+          "old": {
+            "name": "little_proximal_inter_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.00077177 0.024988 -0.0002",
+            "size": "0.0072",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "little_proximal_inter_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.00077177 0.024988 -0.0002",
+            "size": "0.0054",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "little_distal_link_collision_proxy",
+          "old": {
+            "name": "little_distal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.026961146 -0.0075560895 -4.619485e-05",
+            "size": "0.0062",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "little_distal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.026961146 -0.0075560895 -4.619485e-05",
+            "size": "0.0048",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "middle_mcp_flex_link_collision_proxy",
+          "old": {
+            "name": "middle_mcp_flex_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.00064254397 0.0097342104 -0.00026673708",
+            "size": "0.0058",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "middle_mcp_flex_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.00064254397 0.0097342104 -0.00026673708",
+            "size": "0.0048",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "middle_proximal_phalanx_link_collision_proxy",
+          "old": {
+            "name": "middle_proximal_phalanx_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.044915416 -0.0027577974 -0.0003",
+            "size": "0.0072",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "middle_proximal_phalanx_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.044915416 -0.0027577974 -0.0003",
+            "size": "0.0056",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "middle_proximal_inter_link_collision_proxy",
+          "old": {
+            "name": "middle_proximal_inter_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.03498049 -0.0011684823 -0.0002",
+            "size": "0.0072",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "middle_proximal_inter_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.03498049 -0.0011684823 -0.0002",
+            "size": "0.0054",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "middle_distal_link_collision_proxy",
+          "old": {
+            "name": "middle_distal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.027301483 -0.006215095 -4.054405e-05",
+            "size": "0.0062",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "middle_distal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.027301483 -0.006215095 -4.054405e-05",
+            "size": "0.0048",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "ring_mcp_flex_link_collision_proxy",
+          "old": {
+            "name": "ring_mcp_flex_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.00087180699 0.0097163608 -0.00026673708",
+            "size": "0.0058",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "ring_mcp_flex_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.00087180699 0.0097163608 -0.00026673708",
+            "size": "0.0048",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "ring_proximal_phalanx_link_collision_proxy",
+          "old": {
+            "name": "ring_proximal_phalanx_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.039933 -0.0023102 -0.0003",
+            "size": "0.0072",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "ring_proximal_phalanx_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.039933 -0.0023102 -0.0003",
+            "size": "0.0056",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "ring_proximal_inter_link_collision_proxy",
+          "old": {
+            "name": "ring_proximal_inter_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.0039742641 0.029735589 -0.0002",
+            "size": "0.0072",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "ring_proximal_inter_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.0039742641 0.029735589 -0.0002",
+            "size": "0.0054",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "ring_distal_link_collision_proxy",
+          "old": {
+            "name": "ring_distal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.026733217 -0.0083266507 -4.4813101e-05",
+            "size": "0.0062",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "ring_distal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.026733217 -0.0083266507 -4.4813101e-05",
+            "size": "0.0048",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "thumb_metacarpal_link_collision_proxy",
+          "old": {
+            "name": "thumb_metacarpal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.016224 0.049404 -0.000175",
+            "size": "0.0068",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "thumb_metacarpal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.016224 0.049404 -0.000175",
+            "size": "0.0054",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "thumb_proximal_link_collision_proxy",
+          "old": {
+            "name": "thumb_proximal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.0033345 0.031826 -0.000105",
+            "size": "0.0068",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "thumb_proximal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 -0.0033345 0.031826 -0.000105",
+            "size": "0.0054",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        },
+        {
+          "geom": "thumb_distal_link_collision_proxy",
+          "old": {
+            "name": "thumb_distal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.00052061935 -0.027995157 -1.2280723e-05",
+            "size": "0.0062",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          },
+          "new": {
+            "name": "thumb_distal_link_collision_proxy",
+            "type": "capsule",
+            "fromto": "0 0 0 0.00052061935 -0.027995157 -1.2280723e-05",
+            "size": "0.0048",
+            "rgba": "0.16 0.90 0.58 0.34",
+            "contype": "1",
+            "conaffinity": "2",
+            "group": "3",
+            "friction": "0.9 0.04 0.001"
+          }
+        }
+      ]
+    }
+  ]
+}

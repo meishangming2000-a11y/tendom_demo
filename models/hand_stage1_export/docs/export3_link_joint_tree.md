@@ -1,0 +1,51 @@
+# Export3 Link-Joint Tree
+
+- Roots: `['hand_base_link']`
+
+- `hand_base_link`
+  -> `wrist_1_joint` (revolute, axis `0 0 -1`)
+  - `wrist_middle_link`
+    -> `wrist_2_joint` (fixed, axis `1 0 0`)
+    - `palm_link`
+      -> `index_mcp_flex_joint` (revolute, axis `0 0 -1`)
+      - `index_mcp_flex_link`
+        -> `index_mcp_abd_joint` (revolute, axis `0 0 -1`)
+        - `index_proximal_phalanx_link`
+          -> `index_pip_joint` (revolute, axis `0.109773553624728 -0.0483929965230635 -0.992777862772996`)
+          - `index_proximal_inter_link`
+            -> `index_dip_joint` (revolute, axis `0 0 -1`)
+            - `index_distal_link`
+      -> `middle_mcp_flex_joint` (revolute, axis `0 0 -1`)
+      - `middle_mcp_flex_link`
+        -> `middle_mcp_abd_joint` (revolute, axis `0 0 -1`)
+        - `middle_proximal_phalanx_link`
+          -> `middle_pip_joint` (revolute, axis `0 0 -1`)
+          - `middle_proximal_inter_link`
+            -> `middle_dip_joint` (revolute, axis `0 0 -1`)
+            - `middle_distal_link`
+      -> `ring_mcp_flex_joint` (revolute, axis `-0.995998795256862 -0.0893666595933805 0`)
+      - `ring_mcp_flex_link`
+        -> `ring_mcp_abd_joint` (revolute, axis `0 0 -1`)
+        - `ring_proximal_phalanx_link`
+          -> `ring_pip_joint` (revolute, axis `0 0 -1`)
+          - `ring_proximal_inter_link`
+            -> `ring_dip_joint` (revolute, axis `0 0 -1`)
+            - `ring_distal_link`
+      -> `little_mcp_flex_joint` (revolute, axis `0 0 -1`)
+      - `little_mcp_flex_link`
+        -> `little_mcp_abd_joint` (revolute, axis `0 0 -1`)
+        - `little_proximal_phalanx_link`
+          -> `little_pip_joint` (revolute, axis `0 0 -1`)
+          - `little_proximal_inter_link`
+            -> `little_dip_joint` (revolute, axis `0 0 -1`)
+            - `little_distal_link`
+      -> `thumb_root_connector_fixed_joint` (fixed, axis `0 0 0`)
+      - `thumb_root_connector_link`
+        -> `thumb_cmc_abd_joint` (revolute, axis `-0.95043 -0.31095 0`)
+        - `thumb_trapezium1_link`
+          -> `thumb_cmc_flex_joint` (revolute, axis `-0.70578 0.7006 0.105`)
+          - `thumb_metacarpal_link`
+            -> `thumb_mcp_joint` (revolute, axis `0 0 -1`)
+            - `thumb_proximal_link`
+              -> `thumb_ip_joint` (revolute, axis `0 0 1`)
+              - `thumb_distal_link`

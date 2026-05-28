@@ -1,0 +1,541 @@
+{
+  "generated_at": "2026-05-26T02:09:10",
+  "scene_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+  "hand_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_wrist2_collision_tuned.xml",
+  "ball_position": [
+    0.0,
+    -0.1,
+    0.21
+  ],
+  "model_summary": {
+    "nbody": 26,
+    "njnt": 23,
+    "nu": 22,
+    "ngeom": 50,
+    "nsite": 5
+  },
+  "xml_joint_info": {
+    "parent_body": "wrist_middle_link",
+    "child_body": "palm_link",
+    "type": "hinge",
+    "axis": "0 0 -1",
+    "range": "-0.8 0.8",
+    "limited": "true"
+  },
+  "poses": [
+    {
+      "requested_angle": 0.0,
+      "applied": {
+        "wrist_2_joint": 0.0
+      },
+      "wrist_middle_link_pos": [
+        0.0,
+        0.0,
+        0.065
+      ],
+      "palm_link_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "palm_minus_wrist_middle": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.02027305568729812
+      ],
+      "wrist_middle_link_xmat": [
+        [
+          -0.9970710851068401,
+          -0.013776825440522757,
+          -0.07522931825192965
+        ],
+        [
+          -0.07522213799596872,
+          -0.0010393651743048626,
+          0.9971662597959029
+        ],
+        [
+          -0.013815976229864867,
+          0.9999045548455193,
+          -1.3022670164453132e-09
+        ]
+      ],
+      "palm_link_xmat": [
+        [
+          -0.07648039777530402,
+          3.607102949665375e-10,
+          0.9970710851068401
+        ],
+        [
+          0.9806672150279276,
+          -0.18064728983487102,
+          0.07522213799596855
+        ],
+        [
+          0.1801181893243981,
+          0.9835479432520391,
+          0.013815976229864801
+        ]
+      ],
+      "relative_rotation_matrix": [
+        [
+          -1.4340761136806248e-16,
+          -3.188273499404394e-17,
+          -1.0000000000000002
+        ],
+        [
+          0.1801353836548828,
+          0.9836418268635737,
+          -6.735833054623725e-17
+        ],
+        [
+          0.9836418268635737,
+          -0.1801353836548828,
+          -1.5058312123174662e-16
+        ]
+      ],
+      "metrics": {
+        "contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_hand_contact_count": 0,
+        "ball_hand_max_penetration": 0.0,
+        "source_counts": {},
+        "ball_displacement": 0.0,
+        "four_finger_avg_tip_ball_distance": 0.09448206516761762,
+        "four_finger_tip_ball_distances": {
+          "index": 0.09856821577035274,
+          "middle": 0.09742410126439903,
+          "ring": 0.08701097548685363,
+          "little": 0.09492496814886507
+        },
+        "thumb_ball_distance": 0.17028111168878912,
+        "thumb_index_distance": 0.1304302904985086
+      }
+    },
+    {
+      "requested_angle": -0.3,
+      "applied": {
+        "wrist_2_joint": -0.3
+      },
+      "wrist_middle_link_pos": [
+        0.0,
+        0.0,
+        0.065
+      ],
+      "palm_link_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "palm_minus_wrist_middle": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.02027305568729812
+      ],
+      "wrist_middle_link_xmat": [
+        [
+          -0.9970710851068401,
+          -0.013776825440522757,
+          -0.07522931825192965
+        ],
+        [
+          -0.07522213799596872,
+          -0.0010393651743048626,
+          0.9971662597959029
+        ],
+        [
+          -0.013815976229864867,
+          0.9999045548455193,
+          -1.3022670164453132e-09
+        ]
+      ],
+      "palm_link_xmat": [
+        [
+          -0.07306451459099178,
+          0.022601503300698877,
+          0.99707108510684
+        ],
+        [
+          0.8834822497805541,
+          -0.462385925691955,
+          0.07522213799596872
+        ],
+        [
+          0.4627317700680097,
+          0.8863906744605012,
+          0.013815976229865023
+        ]
+      ],
+      "relative_rotation_matrix": [
+        [
+          6.22335256474282e-17,
+          1.4856435461958533e-16,
+          -1.0000000000000002
+        ],
+        [
+          0.46277594094361063,
+          0.8864752836282329,
+          1.546650812971754e-16
+        ],
+        [
+          0.886475283628233,
+          -0.46277594094361074,
+          1.5478419629882202e-17
+        ]
+      ],
+      "metrics": {
+        "contact_count": 2,
+        "max_penetration": 0.004360533072813972,
+        "ball_hand_contact_count": 2,
+        "ball_hand_max_penetration": 0.004360533072813972,
+        "source_counts": {
+          "ball-hand": 2
+        },
+        "ball_displacement": 0.0,
+        "four_finger_avg_tip_ball_distance": 0.05926271911242009,
+        "four_finger_tip_ball_distances": {
+          "index": 0.05659457834730424,
+          "middle": 0.06132433211152431,
+          "ring": 0.052899724802260926,
+          "little": 0.0662322411885909
+        },
+        "thumb_ball_distance": 0.13281193885775103,
+        "thumb_index_distance": 0.13043029049850866
+      }
+    },
+    {
+      "requested_angle": 0.3,
+      "applied": {
+        "wrist_2_joint": 0.3
+      },
+      "wrist_middle_link_pos": [
+        0.0,
+        0.0,
+        0.065
+      ],
+      "palm_link_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "palm_minus_wrist_middle": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.02027305568729812
+      ],
+      "wrist_middle_link_xmat": [
+        [
+          -0.9970710851068401,
+          -0.013776825440522757,
+          -0.07522931825192965
+        ],
+        [
+          -0.07522213799596872,
+          -0.0010393651743048626,
+          0.9971662597959029
+        ],
+        [
+          -0.013815976229864867,
+          0.9999045548455193,
+          -1.3022670164453132e-09
+        ]
+      ],
+      "palm_link_xmat": [
+        [
+          -0.07306451480418605,
+          -0.02260150261149957,
+          0.9970710851068398
+        ],
+        [
+          0.9902520986301779,
+          0.11722803041015198,
+          0.07522213799596872
+        ],
+        [
+          -0.1185848128343463,
+          0.992847803525726,
+          0.01381597622986483
+        ]
+      ],
+      "relative_rotation_matrix": [
+        [
+          -5.8212748102671085e-18,
+          -8.79460070259344e-17,
+          -1.0
+        ],
+        [
+          -0.11859613096731102,
+          0.9929425752376542,
+          -3.787068058983386e-17
+        ],
+        [
+          0.9929425752376542,
+          0.11859613096731098,
+          2.935620769071285e-17
+        ]
+      ],
+      "metrics": {
+        "contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_hand_contact_count": 0,
+        "ball_hand_max_penetration": 0.0,
+        "source_counts": {},
+        "ball_displacement": 0.0,
+        "four_finger_avg_tip_ball_distance": 0.13932839834656952,
+        "four_finger_tip_ball_distances": {
+          "index": 0.14588038155261432,
+          "middle": 0.1440926985080399,
+          "ring": 0.1322975274326738,
+          "little": 0.13504298589295
+        },
+        "thumb_ball_distance": 0.2045921532638535,
+        "thumb_index_distance": 0.13043029049850863
+      }
+    }
+  ],
+  "translation_motion_norms": [
+    0.0,
+    0.0
+  ],
+  "orientation_motion_norms": [
+    0.2999999999999979,
+    0.2999999999999979
+  ],
+  "screenshots": {
+    "zero": {
+      "front": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_wrist2\\wrist2_zero_front.png",
+        "shape": [
+          900,
+          1280,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 32.65107581018518,
+        "lookat": [
+          0.0,
+          0.045,
+          0.2
+        ],
+        "distance": 0.34,
+        "azimuth": 145,
+        "elevation": -25
+      },
+      "side": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_wrist2\\wrist2_zero_side.png",
+        "shape": [
+          900,
+          1280,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 33.79681018518519,
+        "lookat": [
+          0.0,
+          0.045,
+          0.2
+        ],
+        "distance": 0.34,
+        "azimuth": 90,
+        "elevation": -20
+      },
+      "top": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_wrist2\\wrist2_zero_top.png",
+        "shape": [
+          900,
+          1280,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 86.14264149305555,
+        "lookat": [
+          0.0,
+          0.045,
+          0.2
+        ],
+        "distance": 0.3,
+        "azimuth": 180,
+        "elevation": -78
+      },
+      "thumb": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_wrist2\\wrist2_zero_thumb.png",
+        "shape": [
+          900,
+          1280,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 46.616938078703704,
+        "lookat": [
+          -0.015,
+          0.035,
+          0.19
+        ],
+        "distance": 0.26,
+        "azimuth": 75,
+        "elevation": -18
+      }
+    },
+    "negative": {
+      "front": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_wrist2\\wrist2_negative_front.png",
+        "shape": [
+          900,
+          1280,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 33.113944733796295,
+        "lookat": [
+          0.0,
+          0.045,
+          0.2
+        ],
+        "distance": 0.34,
+        "azimuth": 145,
+        "elevation": -25
+      },
+      "side": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_wrist2\\wrist2_negative_side.png",
+        "shape": [
+          900,
+          1280,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 29.838747974537036,
+        "lookat": [
+          0.0,
+          0.045,
+          0.2
+        ],
+        "distance": 0.34,
+        "azimuth": 90,
+        "elevation": -20
+      },
+      "top": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_wrist2\\wrist2_negative_top.png",
+        "shape": [
+          900,
+          1280,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 89.30706712962963,
+        "lookat": [
+          0.0,
+          0.045,
+          0.2
+        ],
+        "distance": 0.3,
+        "azimuth": 180,
+        "elevation": -78
+      },
+      "thumb": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_wrist2\\wrist2_negative_thumb.png",
+        "shape": [
+          900,
+          1280,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 40.602815104166666,
+        "lookat": [
+          -0.015,
+          0.035,
+          0.19
+        ],
+        "distance": 0.26,
+        "azimuth": 75,
+        "elevation": -18
+      }
+    },
+    "positive": {
+      "front": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_wrist2\\wrist2_positive_front.png",
+        "shape": [
+          900,
+          1280,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 34.21515596064815,
+        "lookat": [
+          0.0,
+          0.045,
+          0.2
+        ],
+        "distance": 0.34,
+        "azimuth": 145,
+        "elevation": -25
+      },
+      "side": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_wrist2\\wrist2_positive_side.png",
+        "shape": [
+          900,
+          1280,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 35.57588975694444,
+        "lookat": [
+          0.0,
+          0.045,
+          0.2
+        ],
+        "distance": 0.34,
+        "azimuth": 90,
+        "elevation": -20
+      },
+      "top": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_wrist2\\wrist2_positive_top.png",
+        "shape": [
+          900,
+          1280,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 83.88386342592592,
+        "lookat": [
+          0.0,
+          0.045,
+          0.2
+        ],
+        "distance": 0.3,
+        "azimuth": 180,
+        "elevation": -78
+      },
+      "thumb": {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_wrist2\\wrist2_positive_thumb.png",
+        "shape": [
+          900,
+          1280,
+          3
+        ],
+        "min_pixel": 0,
+        "max_pixel": 255,
+        "mean_pixel": 48.92626215277778,
+        "lookat": [
+          -0.015,
+          0.035,
+          0.19
+        ],
+        "distance": 0.26,
+        "azimuth": 75,
+        "elevation": -18
+      }
+    }
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,1357 @@
+{
+  "created_at": "2026-05-24T00:59:00",
+  "status": "diagnostic_palm_side_orientation_no_model_edits",
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export3.xml",
+  "marker_scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export3_palm_orientation_debug.xml",
+  "orientation": {
+    "open_geometry": {
+      "palm_world_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "palm_world_xmat": [
+        [
+          -0.07648039777530402,
+          3.607102949665375e-10,
+          0.9970710851068401
+        ],
+        [
+          0.9806672150279276,
+          -0.18064728983487102,
+          0.07522213799596855
+        ],
+        [
+          0.1801181893243981,
+          0.9835479432520391,
+          0.013815976229864801
+        ]
+      ],
+      "palm_local_axes_world": {
+        "x": [
+          -0.07648039777530402,
+          0.9806672150279276,
+          0.1801181893243981
+        ],
+        "y": [
+          3.607102949665375e-10,
+          -0.18064728983487102,
+          0.9835479432520391
+        ],
+        "z": [
+          0.9970710851068401,
+          0.07522213799596855,
+          0.013815976229864801
+        ]
+      },
+      "mcp_base_positions": {
+        "index": [
+          -0.02404923894269346,
+          -0.02205578740816377,
+          0.1833585745520407
+        ],
+        "middle": [
+          -0.004107817341262879,
+          -0.020050978398722916,
+          0.1809106118375438
+        ],
+        "ring": [
+          0.015833604458208132,
+          -0.01735816423530059,
+          0.1747167526887979
+        ],
+        "little": [
+          0.03577502615722817,
+          -0.014292815625357206,
+          0.16649460129913718
+        ]
+      },
+      "proximal_base_positions": {
+        "index": [
+          -0.02351358979469934,
+          -0.02403830700428789,
+          0.19289909656939785
+        ],
+        "middle": [
+          -0.0034467551663750692,
+          -0.022022683904373796,
+          0.19044550762798731
+        ],
+        "ring": [
+          0.016723258161215775,
+          -0.01930939960455902,
+          0.18423726003430824
+        ],
+        "little": [
+          0.03759894295493783,
+          -0.01615006044941702,
+          0.17590006955188844
+        ]
+      },
+      "fingertip_positions": {
+        "index": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "middle": [
+          0.00490658083103945,
+          -0.05071274636339239,
+          0.29389366841833214
+        ],
+        "ring": [
+          0.026971659456861127,
+          -0.05028542813987437,
+          0.2761208255202925
+        ],
+        "little": [
+          0.05492513092003695,
+          -0.0395372170847805,
+          0.2583552629361778
+        ]
+      },
+      "thumb_base_positions": {
+        "thumb_root_connector_link": [
+          -0.01629372836873276,
+          0.0009575554889412472,
+          0.1052251744411096
+        ],
+        "thumb_trapezium1_link": [
+          -0.02055248065934455,
+          0.006584051112547681,
+          0.11441540327036856
+        ]
+      },
+      "thumb_tip_position": [
+        -0.046045050509296206,
+        0.0638954751485253,
+        0.20605900560985962
+      ]
+    },
+    "closed_four_finger_geometry": {
+      "palm_world_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "palm_world_xmat": [
+        [
+          -0.07648039777530402,
+          3.607102949665375e-10,
+          0.9970710851068401
+        ],
+        [
+          0.9806672150279276,
+          -0.18064728983487102,
+          0.07522213799596855
+        ],
+        [
+          0.1801181893243981,
+          0.9835479432520391,
+          0.013815976229864801
+        ]
+      ],
+      "palm_local_axes_world": {
+        "x": [
+          -0.07648039777530402,
+          0.9806672150279276,
+          0.1801181893243981
+        ],
+        "y": [
+          3.607102949665375e-10,
+          -0.18064728983487102,
+          0.9835479432520391
+        ],
+        "z": [
+          0.9970710851068401,
+          0.07522213799596855,
+          0.013815976229864801
+        ]
+      },
+      "mcp_base_positions": {
+        "index": [
+          -0.02404923894269346,
+          -0.02205578740816377,
+          0.1833585745520407
+        ],
+        "middle": [
+          -0.004107817341262879,
+          -0.020050978398722916,
+          0.1809106118375438
+        ],
+        "ring": [
+          0.015833604458208132,
+          -0.01735816423530059,
+          0.1747167526887979
+        ],
+        "little": [
+          0.03577502615722817,
+          -0.014292815625357206,
+          0.16649460129913718
+        ]
+      },
+      "proximal_base_positions": {
+        "index": [
+          -0.022739013104119053,
+          -0.023966781964118337,
+          0.19283856782110392
+        ],
+        "middle": [
+          -0.0034467551663750692,
+          -0.022022683904373796,
+          0.19044550762798731
+        ],
+        "ring": [
+          0.016751431982494278,
+          -0.019688561109953102,
+          0.18414891608516193
+        ],
+        "little": [
+          0.03682933751296701,
+          -0.01622869602088977,
+          0.17600142298329266
+        ]
+      },
+      "fingertip_positions": {
+        "index": [
+          -0.009762420805562054,
+          -0.09850151150291897,
+          0.23000384841549928
+        ],
+        "middle": [
+          0.0063705304378945254,
+          -0.11214654391485607,
+          0.21769891260688592
+        ],
+        "ring": [
+          0.025888180775352966,
+          -0.1014251444777191,
+          0.19878938433776533
+        ],
+        "little": [
+          0.046421993050160086,
+          -0.08779932143742007,
+          0.20063232518266255
+        ]
+      },
+      "thumb_base_positions": {
+        "thumb_root_connector_link": [
+          -0.01629372836873276,
+          0.0009575554889412472,
+          0.1052251744411096
+        ],
+        "thumb_trapezium1_link": [
+          -0.02055248065934455,
+          0.006584051112547681,
+          0.11441540327036856
+        ]
+      },
+      "thumb_tip_position": [
+        -0.046045050509296206,
+        0.0638954751485253,
+        0.20605900560985962
+      ]
+    },
+    "finger_forward_direction_world": [
+      0.1053236235551359,
+      -0.24668766701495662,
+      0.963354622796784
+    ],
+    "thumb_side_direction_world": [
+      -0.5753504804244425,
+      0.19727842694540818,
+      0.7937588090454861
+    ],
+    "scripted_four_finger_close_direction_world": [
+      0.0029334061036954,
+      -0.6422417282189723,
+      -0.7664965477175605
+    ],
+    "palm_normal_from_finger_thumb_cross_world": [
+      -0.5108856638152867,
+      -0.8445498643046677,
+      -0.160409990994892
+    ],
+    "palm_normal_close_alignment": 0.6638602336105919,
+    "inferred_palmar_side_world": [
+      -0.5108856638152867,
+      -0.8445498643046677,
+      -0.160409990994892
+    ],
+    "inferred_dorsal_side_world": [
+      0.5108856638152867,
+      0.8445498643046677,
+      0.160409990994892
+    ],
+    "ball_position": [
+      0.0,
+      -0.1,
+      0.21
+    ],
+    "ball_vector_from_palm": [
+      -0.0005711446680750725,
+      -0.09934109969812754,
+      0.12472694431270187
+    ],
+    "ball_side_score_dot_unit": 0.4025147394795704,
+    "ball_projection_on_palmar_axis_m": 0.06418285387879327,
+    "ball_is_on_inferred_palmar_side": true,
+    "notes": [
+      "Palmar side is inferred as the palm-plane normal from finger-forward cross thumb-side, with sign chosen to align with scripted four-finger closing motion.",
+      "If the scripted close direction is itself wrong, this palmar inference reveals the scripted bug rather than true CAD anatomy."
+    ]
+  },
+  "marker_renders": [
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_palm_orientation\\palm_side_debug_front.png",
+      "camera": "front",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 185,
+      "mean_pixel": 17.357120588235293
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_palm_orientation\\palm_side_debug_side.png",
+      "camera": "side",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 184,
+      "mean_pixel": 14.057523202614378
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_palm_orientation\\ball_current_side.png",
+      "camera": "top",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 1,
+      "max_pixel": 194,
+      "mean_pixel": 42.67283660130719
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_palm_orientation\\ball_mirrored_side.png",
+      "camera": "top",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 1,
+      "max_pixel": 194,
+      "mean_pixel": 42.5315
+    }
+  ],
+  "ball_side_mirror_test": {
+    "positions": [
+      {
+        "ball_position": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "open_contact_count": 0,
+        "open_max_penetration": 0.0,
+        "open_four_fingertip_ball_distances": {
+          "index_tip_site": 0.09856821577035274,
+          "middle_tip_site": 0.09742410126439903,
+          "ring_tip_site": 0.08701133625325752,
+          "little_tip_site": 0.09492496814886507
+        },
+        "open_mean_four_fingertip_distance": 0.0944821553592186,
+        "hold_contact_count": 5,
+        "hold_max_penetration": 0.010240111090188745,
+        "hold_four_fingertip_ball_distances": {
+          "index_tip_site": 0.029927677253310497,
+          "middle_tip_site": 0.02197851129438137,
+          "ring_tip_site": 0.03177254982577761,
+          "little_tip_site": 0.04861265824857492
+        },
+        "hold_mean_four_fingertip_distance": 0.0330728491555111,
+        "hold_contacts": [
+          {
+            "dist": -0.0012723227466895038,
+            "other_geom": "index_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.0022550416749000397,
+            "other_geom": "middle_proximal_inter_link_collision_proxy"
+          },
+          {
+            "dist": -0.010240111090188745,
+            "other_geom": "middle_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.0008205910840987669,
+            "other_geom": "ring_proximal_inter_link_collision_proxy"
+          },
+          {
+            "dist": -0.0029000962750263598,
+            "other_geom": "ring_distal_link_collision_proxy"
+          }
+        ],
+        "palmar_projection_m": 0.06418285387879327,
+        "ball_is_on_inferred_palmar_side": true
+      },
+      {
+        "ball_position": [
+          0.0,
+          0.1,
+          0.21
+        ],
+        "open_contact_count": 0,
+        "open_max_penetration": 0.0,
+        "open_four_fingertip_ball_distances": {
+          "index_tip_site": 0.15700731886389827,
+          "middle_tip_site": 0.17255884229019627,
+          "ring_tip_site": 0.1663885329357982,
+          "little_tip_site": 0.15756153214530266
+        },
+        "open_mean_four_fingertip_distance": 0.16337905655879886,
+        "hold_contact_count": 0,
+        "hold_max_penetration": 0.0,
+        "hold_four_fingertip_ball_distances": {
+          "index_tip_site": 0.19907051674666665,
+          "middle_tip_site": 0.21240989333483953,
+          "ring_tip_site": 0.20362184700300937,
+          "little_tip_site": 0.1933605643131118
+        },
+        "hold_mean_four_fingertip_distance": 0.20211570534940682,
+        "hold_contacts": [],
+        "palmar_projection_m": -0.10472711898214028,
+        "ball_is_on_inferred_palmar_side": false
+      },
+      {
+        "ball_position": [
+          0.0,
+          -0.08,
+          0.21
+        ],
+        "open_contact_count": 0,
+        "open_max_penetration": 0.0,
+        "open_four_fingertip_ball_distances": {
+          "index_tip_site": 0.08723103611570089,
+          "middle_tip_site": 0.08899418723552438,
+          "ring_tip_site": 0.07734590979600939,
+          "little_tip_site": 0.08361960452821017
+        },
+        "open_mean_four_fingertip_distance": 0.08429768441886121,
+        "hold_contact_count": 5,
+        "hold_max_penetration": 0.00983371307871807,
+        "hold_four_fingertip_ball_distances": {
+          "index_tip_site": 0.0349367341581497,
+          "middle_tip_site": 0.03559849064052511,
+          "ring_tip_site": 0.03972999093637991,
+          "little_tip_site": 0.048472163103961234
+        },
+        "hold_mean_four_fingertip_distance": 0.03968434470975399,
+        "hold_contacts": [
+          {
+            "dist": -0.0004951141722618095,
+            "other_geom": "index_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.00983371307871807,
+            "other_geom": "middle_proximal_inter_link_collision_proxy"
+          },
+          {
+            "dist": -0.006507289167377895,
+            "other_geom": "middle_distal_link_collision_proxy"
+          },
+          {
+            "dist": -0.007008592592249877,
+            "other_geom": "ring_proximal_inter_link_collision_proxy"
+          },
+          {
+            "dist": -0.005841283163117598,
+            "other_geom": "ring_distal_link_collision_proxy"
+          }
+        ],
+        "palmar_projection_m": 0.04729185659269991,
+        "ball_is_on_inferred_palmar_side": true
+      },
+      {
+        "ball_position": [
+          0.0,
+          0.08,
+          0.21
+        ],
+        "open_contact_count": 0,
+        "open_max_penetration": 0.0,
+        "open_four_fingertip_ball_distances": {
+          "index_tip_site": 0.13984898167366797,
+          "middle_tip_site": 0.155396409861995,
+          "ring_tip_site": 0.14857229474882663,
+          "little_tip_site": 0.14015758177345963
+        },
+        "open_mean_four_fingertip_distance": 0.1459938170144873,
+        "hold_contact_count": 0,
+        "hold_max_penetration": 0.0,
+        "hold_four_fingertip_ball_distances": {
+          "index_tip_site": 0.17925897951115422,
+          "middle_tip_site": 0.19245907069762475,
+          "ring_tip_site": 0.18381900689962294,
+          "little_tip_site": 0.17403498967256176
+        },
+        "hold_mean_four_fingertip_distance": 0.18239301169524091,
+        "hold_contacts": [],
+        "palmar_projection_m": -0.08783612169604693,
+        "ball_is_on_inferred_palmar_side": false
+      }
+    ]
+  },
+  "four_finger_direction_audit": {
+    "angle": 0.35,
+    "joints": {
+      "index_mcp_flex_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            -0.03501130409098789,
+            -0.00186296742037826,
+            -0.0047231620241782735
+          ],
+          "tip_delta_norm": 0.03537753978540136,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.02021778459141354,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            0.034361854124510635,
+            0.004036258289978688,
+            -0.007385250260491361
+          ],
+          "tip_delta_norm": 0.03537753978540139,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.01977913211764431,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "index_mcp_abd_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            0.002181748729796512,
+            -0.030255920876476272,
+            -0.010180205587592361
+          ],
+          "tip_delta_norm": 0.03199714614476123,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.02607101640917239,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            -0.00274248486199671,
+            0.03186858999491721,
+            -0.0008301264522900809
+          ],
+          "tip_delta_norm": 0.03199714614476125,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.02538035657982738,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "index_pip_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            0.0013711657471557198,
+            -0.018835753343945674,
+            -0.0060017392859160745
+          ],
+          "tip_delta_norm": 0.019816320899608032,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.016169962952576566,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            -0.0017097124777960375,
+            0.019724858018324198,
+            -0.000832726483584012
+          ],
+          "tip_delta_norm": 0.019816320899608032,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.01565158092091951,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "index_dip_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            0.0017970080908985588,
+            -0.008998641937456572,
+            -0.003295185845193338
+          ],
+          "tip_delta_norm": 0.009750027925686654,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.007210316887559048,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            -0.001969295952609213,
+            0.00954894534501817,
+            -5.060435319126366e-05
+          ],
+          "tip_delta_norm": 0.00975002792568663,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.007050357981550557,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "middle_mcp_flex_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            -0.04038465288995087,
+            -0.002279601153469535,
+            -0.004736357864208507
+          ],
+          "tip_delta_norm": 0.04072529749772943,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.023316936166810215,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            0.039388136522317166,
+            0.004759848189372681,
+            -0.009190669333187684
+          ],
+          "tip_delta_norm": 0.04072529749772942,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.022668488231122993,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "middle_mcp_abd_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            0.002109038540994446,
+            -0.03369527005828514,
+            -0.016310173191269484
+          ],
+          "tip_delta_norm": 0.037494546502089776,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.02999617293514254,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            -0.003056709183884839,
+            0.037179770843561916,
+            0.0037632680455620404
+          ],
+          "tip_delta_norm": 0.03749454650208975,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.03044220731360954,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "middle_pip_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            0.0011848566600221608,
+            -0.019398721972553976,
+            -0.009962329571814699
+          ],
+          "tip_delta_norm": 0.02183946679684971,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.017375918925225994,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            -0.0017492866148923923,
+            0.02160057063192457,
+            0.002705116390267881
+          ],
+          "tip_delta_norm": 0.021839466796849685,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.017783001238445797,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "middle_dip_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            0.00043850231898233394,
+            -0.008147362603828215,
+            -0.0053377512234749624
+          ],
+          "tip_delta_norm": 0.009750045630955776,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.007513058058876804,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            -0.000713543072081998,
+            0.009466721839033354,
+            0.002221581353984592
+          ],
+          "tip_delta_norm": 0.009750045630955748,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.007986943563511331,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "ring_mcp_flex_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            0.0016869316704789493,
+            -0.03281451444572707,
+            -0.017710672491407953
+          ],
+          "tip_delta_norm": 0.0373270145721247,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.029692633330938918,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            -0.002971867601246049,
+            0.036813111679182005,
+            0.005410067312367095
+          ],
+          "tip_delta_norm": 0.037327014572124645,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.03044005276991057,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "ring_mcp_abd_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            0.0014931838532286322,
+            -0.02966822115476192,
+            -0.016441244226138962
+          ],
+          "tip_delta_norm": 0.03395213478134995,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.026930785764619845,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            -0.0026702453460880314,
+            0.03343022216117042,
+            0.005295044122331338
+          ],
+          "tip_delta_norm": 0.0339521347813499,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.027718677503686236,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "ring_pip_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            0.0007429594215207017,
+            -0.016933809880140135,
+            -0.010848458301067287
+          ],
+          "tip_delta_norm": 0.020124486410061593,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.015662080617564633,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            -0.0014671435840699562,
+            0.019582448891589326,
+            0.004401151937932557
+          ],
+          "tip_delta_norm": 0.02012448641006158,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.016494800673015852,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "ring_dip_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            0.00026363913144510087,
+            -0.007719235300233995,
+            -0.00595039871805636
+          ],
+          "tip_delta_norm": 0.009750043287896444,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.007339093077451843,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            -0.0006296929711328315,
+            0.009270799556821405,
+            0.0029528133119450795
+          ],
+          "tip_delta_norm": 0.009750043287896424,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.007981612152930981,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "little_mcp_flex_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            -0.03356516461934543,
+            -0.00263653416374153,
+            0.0001026296914853897
+          ],
+          "tip_delta_norm": 0.03366871130848208,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.019358183149959213,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            0.03133285062750535,
+            0.004547052924889737,
+            -0.011452462723213819
+          ],
+          "tip_delta_norm": 0.03366871130848213,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.018010627680459995,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "little_mcp_abd_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            0.0006653688544521613,
+            -0.027283405687784354,
+            -0.013500042757274067
+          ],
+          "tip_delta_norm": 0.030447957174249418,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.024867810899623657,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            -0.002701358798076925,
+            0.030126319214055883,
+            0.003490794657636631
+          ],
+          "tip_delta_norm": 0.030447957174249387,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.024623051661067714,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "little_pip_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            0.0002135503636649036,
+            -0.015991477265915058,
+            -0.008936889186490216
+          ],
+          "tip_delta_norm": 0.01832050592193636,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.014830066449588043,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            -0.0014553135598353306,
+            0.018012079919764383,
+            0.003014627114965307
+          ],
+          "tip_delta_norm": 0.018320505921936323,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.01495217712637052,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      },
+      "little_dip_joint": {
+        "positive": {
+          "angle": 0.35,
+          "tip_delta": [
+            -0.00010917405085483084,
+            -0.00792577721220701,
+            -0.005677452427563623
+          ],
+          "tip_delta_norm": 0.009750042536223524,
+          "tip_delta_projection_on_inferred_palmar_axis_m": 0.007660209619300242,
+          "moves_toward_inferred_palmar_side": true,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        },
+        "negative": {
+          "angle": -0.35,
+          "tip_delta": [
+            -0.0005652804805959949,
+            0.009359003123275787,
+            0.0026744808795239328
+          ],
+          "tip_delta_norm": 0.009750042536223516,
+          "tip_delta_projection_on_inferred_palmar_axis_m": -0.008044364578018864,
+          "moves_toward_inferred_palmar_side": false,
+          "note": "Direct qpos test; negative values may be outside exported joint limits."
+        }
+      }
+    },
+    "renders": [
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\index_mcp_flex_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.0546022875817
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\index_mcp_flex_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 3,
+        "max_pixel": 255,
+        "mean_pixel": 92.6889862745098
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\index_mcp_abd_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 3,
+        "max_pixel": 255,
+        "mean_pixel": 93.04483823529412
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\index_mcp_abd_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 92.46520686274509
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\index_pip_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 3,
+        "max_pixel": 255,
+        "mean_pixel": 92.95867222222222
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\index_pip_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 92.74872549019608
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\index_dip_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 3,
+        "max_pixel": 255,
+        "mean_pixel": 92.91474444444444
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\index_dip_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 92.73043267973856
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\middle_mcp_flex_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.02747352941176
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\middle_mcp_flex_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.17349183006536
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\middle_mcp_abd_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.65863333333333
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\middle_mcp_abd_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 92.27819379084967
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\middle_pip_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.47781013071895
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\middle_pip_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 92.24124607843137
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\middle_dip_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.10360751633986
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\middle_dip_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 92.64544509803922
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\ring_mcp_flex_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.77215882352941
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\ring_mcp_flex_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 91.79308954248366
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\ring_mcp_abd_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.6989385620915
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\ring_mcp_abd_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 91.77834738562092
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\ring_pip_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.49356666666667
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\ring_pip_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 92.11888431372549
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\ring_dip_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.18793169934641
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\ring_dip_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 92.47384477124183
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\little_mcp_flex_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 92.57454934640523
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\little_mcp_flex_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.21505
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\little_mcp_abd_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.63520718954248
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\little_mcp_abd_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 92.19335882352941
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\little_pip_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.35809738562091
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\little_pip_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 92.41083366013072
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\little_dip_joint_positive_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 93.11112843137255
+      },
+      {
+        "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_finger_direction\\little_dip_joint_negative_0d35.png",
+        "camera": "top",
+        "shape": [
+          850,
+          1200,
+          3
+        ],
+        "min_pixel": 2,
+        "max_pixel": 255,
+        "mean_pixel": 92.53356732026144
+      }
+    ]
+  },
+  "interpretation": [
+    "The inferred palmar side is the finger-forward x thumb-side palm-plane normal, with sign chosen to align with the current scripted four-finger close motion.",
+    "Current ball `[0.0, -0.1, 0.21]` has palmar projection 0.0642 m.",
+    "Mirrored ball `[0.0, 0.1, 0.21]` has palmar projection -0.1047 m.",
+    "By the current scripted-close inference, the existing negative-Y ball position is on the palm-closing side."
+  ],
+  "ball_interpretation": [
+    "Current negative-Y ball is clearly closer to four fingertips after close; ball side may be consistent with scripted closure.",
+    "This test excludes thumb motion; it only checks palm side and long-finger closure."
+  ],
+  "finger_interpretation": [
+    "Joints whose negative test moves more toward inferred palmar side: `[]`.",
+    "Joints whose positive test moves more toward inferred palmar side: `['index_mcp_flex_joint', 'index_mcp_abd_joint', 'index_pip_joint', 'index_dip_joint', 'middle_mcp_flex_joint', 'middle_mcp_abd_joint', 'middle_pip_joint', 'middle_dip_joint', 'ring_mcp_flex_joint', 'ring_mcp_abd_joint', 'ring_pip_joint', 'ring_dip_joint', 'little_mcp_flex_joint', 'little_mcp_abd_joint', 'little_pip_joint', 'little_dip_joint']`.",
+    "If these signs disagree with SolidWorks intended flexion conventions, scripted target signs or joint axes need review."
+  ],
+  "status_notes": {
+    "current_ball_side_recommendation": "keep_current_ball_side_for_current_script",
+    "current_ball_on_inferred_palmar_side": true,
+    "mirrored_ball_on_inferred_palmar_side": false,
+    "close_signs": {
+      "index_mcp_flex_joint": "positive",
+      "index_mcp_abd_joint": "positive",
+      "index_pip_joint": "positive",
+      "index_dip_joint": "positive",
+      "middle_mcp_flex_joint": "positive",
+      "middle_mcp_abd_joint": "positive",
+      "middle_pip_joint": "positive",
+      "middle_dip_joint": "positive",
+      "ring_mcp_flex_joint": "positive",
+      "ring_mcp_abd_joint": "positive",
+      "ring_pip_joint": "positive",
+      "ring_dip_joint": "positive",
+      "little_mcp_flex_joint": "positive",
+      "little_mcp_abd_joint": "positive",
+      "little_pip_joint": "positive",
+      "little_dip_joint": "positive"
+    }
+  }
+}

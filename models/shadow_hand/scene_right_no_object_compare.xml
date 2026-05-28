@@ -1,0 +1,28 @@
+<mujoco model="right_shadow_hand_no_object_compare_scene">
+  <include file="right_hand.xml"/>
+  <statistic extent="0.3" center="0 0 0.18"/>
+  <visual>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <quality shadowsize="8192"/>
+    <global azimuth="220" elevation="-30" offwidth="1280" offheight="900"/>
+  </visual>
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0"
+      width="512" height="3072"/>
+    <texture type="2d" name="compare_groundplane" builtin="checker" mark="edge"
+      rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8"
+      width="300" height="300"/>
+    <material name="compare_groundplane" texture="compare_groundplane"
+      texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+  </asset>
+  <worldbody>
+    <light pos="0 0 1"/>
+    <light pos="0.3 0 1.5" dir="0 0 -1" directional="true"/>
+    <geom name="compare_floor" pos="0 0 -0.1" size="0 0 0.05" type="plane"
+      material="compare_groundplane" contype="0" conaffinity="0"/>
+    <camera name="shadow_compare_front" pos="-0.22 -0.40 0.33"
+      xyaxes="0.688749 -0.724999 0 0.236066 0.224262 0.945505" fovy="45"/>
+    <camera name="shadow_compare_side" pos="0.18 -0.52 0.20"
+      xyaxes="0.999201 -0.039968 0 0.00553714 0.138428 0.990357" fovy="45"/>
+  </worldbody>
+</mujoco>

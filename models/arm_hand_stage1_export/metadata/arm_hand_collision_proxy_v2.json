@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-05-27T23:35:40",
+  "source_model": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\arm_hand_export4_collision_proxy_v1.xml",
+  "model": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\arm_hand_export4_collision_proxy_v2.xml",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_collision_proxy_v2.xml",
+  "ball_scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_collision_proxy_v2_ball.xml",
+  "ball_radius": 0.028,
+  "ball_local_offset": [
+    0.04,
+    0.12,
+    -0.02
+  ],
+  "ball_world_position": [
+    0.02133430494916852,
+    0.145570505275819,
+    0.5188150524002144
+  ],
+  "backups": {
+    "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\arm_hand_export4_collision_proxy_v2.xml": null,
+    "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_collision_proxy_v2.xml": null,
+    "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_collision_proxy_v2_ball.xml": null,
+    "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\arm_hand_collision_proxy_v2_report.md": null,
+    "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\arm_hand_collision_proxy_v2.json": null
+  },
+  "removed_geoms": [
+    "palm_link_palmar_pad_collision_proxy_v1"
+  ],
+  "changed_tip_geoms": [
+    "index_tip_collision_proxy_sphere",
+    "little_tip_collision_proxy_sphere",
+    "middle_tip_collision_proxy_sphere",
+    "ring_tip_collision_proxy_sphere",
+    "thumb_tip_collision_proxy_sphere"
+  ],
+  "changes": [
+    "Replaced v1 palm pad with v2 palm pad using slightly wider local-Z coverage and higher friction.",
+    "Added one shallow negative-Z palm cup rail at measured free-ball slide side.",
+    "Kept fingertip spheres at v1 12 mm size and did not modify visual meshes.",
+    "Kept CAD/STL/joint tree/joint names/actuators unchanged."
+  ],
+  "design_note": "Free-ball analysis showed gravity and early ball motion in palm frame are mainly along local -Z and -Y. The v2 rail targets the local -Z slide path without enclosing the ball or forcing grasp contact."
+}

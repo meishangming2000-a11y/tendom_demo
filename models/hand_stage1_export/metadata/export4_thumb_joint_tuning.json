@@ -1,0 +1,1315 @@
+{
+  "generated_at": "2026-05-25 01:38:55",
+  "schema": "export4_thumb_joint_tuning_v1",
+  "input_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_long_finger_tuned.xml",
+  "thumb_tuned_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_thumb_tuned.xml",
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_export4_thumb_tuned.xml",
+  "ball_scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_thumb_tuned.xml",
+  "thumb_limits": {
+    "thumb_cmc_abd_joint": [
+      -1.05,
+      1.05
+    ],
+    "thumb_cmc_joint": [
+      -0.95,
+      0.95
+    ],
+    "thumb_mcp_joint": [
+      -0.1,
+      1.2
+    ],
+    "thumb_ip_joint": [
+      -0.85,
+      0.05
+    ]
+  },
+  "long_finger_targets": {
+    "index_mcp_flex_joint": -0.06,
+    "middle_mcp_flex_joint": -0.06,
+    "ring_mcp_flex_joint": -0.05,
+    "little_mcp_flex_joint": -0.04,
+    "index_mcp_abd_joint": -0.58,
+    "middle_mcp_abd_joint": -0.64,
+    "ring_mcp_abd_joint": -0.62,
+    "little_mcp_abd_joint": -0.54,
+    "index_pip_joint": -0.82,
+    "middle_pip_joint": -0.88,
+    "ring_pip_joint": -0.84,
+    "little_pip_joint": -0.76,
+    "index_dip_joint": -0.42,
+    "middle_dip_joint": -0.46,
+    "ring_dip_joint": -0.44,
+    "little_dip_joint": -0.4
+  },
+  "scan_grid": {
+    "thumb_cmc_abd_joint": [
+      -0.9,
+      -0.6,
+      -0.3,
+      0.0,
+      0.3,
+      0.6,
+      0.9
+    ],
+    "thumb_cmc_joint": [
+      -0.8,
+      -0.5,
+      -0.2,
+      0.0,
+      0.25,
+      0.5,
+      0.8
+    ],
+    "thumb_mcp_joint": [
+      0.0,
+      0.25,
+      0.5,
+      0.8,
+      1.05
+    ],
+    "thumb_ip_joint": [
+      -0.75,
+      -0.5,
+      -0.25,
+      0.0
+    ]
+  },
+  "score_best_thumb_target": {
+    "thumb_cmc_abd_joint": -0.3,
+    "thumb_cmc_joint": 0.25,
+    "thumb_mcp_joint": 0.0,
+    "thumb_ip_joint": 0.0
+  },
+  "visual_recommended_thumb_target": {
+    "thumb_cmc_abd_joint": -0.3,
+    "thumb_cmc_joint": 0.0,
+    "thumb_mcp_joint": 0.25,
+    "thumb_ip_joint": -0.25
+  },
+  "visual_recommended_metrics": {
+    "targets": {
+      "thumb_cmc_abd_joint": -0.3,
+      "thumb_cmc_joint": 0.0,
+      "thumb_mcp_joint": 0.25,
+      "thumb_ip_joint": -0.25
+    },
+    "score": 0.06434825301610912,
+    "thumb_index_distance": 0.019642240905234955,
+    "thumb_middle_distance": 0.03329337162605679,
+    "thumb_ring_distance": 0.039159018351458366,
+    "thumb_palm_distance": 0.09802537063493,
+    "palmar_advancement_y": 0.023160446238549955,
+    "thumb_tip": [
+      -0.016873015155206145,
+      0.04082450224503253,
+      0.21455197177519883
+    ],
+    "index_tip": [
+      -0.027288923523261576,
+      0.04542927543234724,
+      0.23055580083392554
+    ],
+    "middle_tip": [
+      -0.004546072359448141,
+      0.05738998724114902,
+      0.2406686289576231
+    ],
+    "palm_reference": [
+      0.002565286855602847,
+      -0.009179525937954337,
+      0.13251098891585572
+    ],
+    "awkward_penalty": 0.0,
+    "height_penalty": 0.0
+  },
+  "candidates": [
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.25,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "score": 0.060726825570352014,
+      "thumb_index_distance": 0.020411296721554742,
+      "thumb_middle_distance": 0.02660093270829428,
+      "thumb_ring_distance": 0.03131518688141808,
+      "thumb_palm_distance": 0.10206444703694476,
+      "palmar_advancement_y": 0.02202024276527001,
+      "thumb_tip": [
+        -0.010892433190786754,
+        0.04419020889641777,
+        0.21846279240955277
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": -0.25
+      },
+      "score": 0.06434825301610912,
+      "thumb_index_distance": 0.019642240905234955,
+      "thumb_middle_distance": 0.03329337162605679,
+      "thumb_ring_distance": 0.039159018351458366,
+      "thumb_palm_distance": 0.09802537063493,
+      "palmar_advancement_y": 0.023160446238549955,
+      "thumb_tip": [
+        -0.016873015155206145,
+        0.04082450224503253,
+        0.21455197177519883
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.25,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": -0.25
+      },
+      "score": 0.06709841139255836,
+      "thumb_index_distance": 0.02718892347384658,
+      "thumb_middle_distance": 0.02803424129773078,
+      "thumb_ring_distance": 0.028221178151443888,
+      "thumb_palm_distance": 0.09944319827702906,
+      "palmar_advancement_y": 0.02316044623854996,
+      "thumb_tip": [
+        -0.004742010062545496,
+        0.04533041236969772,
+        0.21536157564286992
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.5,
+        "thumb_ip_joint": 0.0
+      },
+      "score": 0.06920964556250891,
+      "thumb_index_distance": 0.026085174278114024,
+      "thumb_middle_distance": 0.03310110091054782,
+      "thumb_ring_distance": 0.03495566268970301,
+      "thumb_palm_distance": 0.09520328449217066,
+      "palmar_advancement_y": 0.024731636728469914,
+      "thumb_tip": [
+        -0.009628592267493682,
+        0.042395692734952486,
+        0.2115993667527436
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": -0.75
+      },
+      "score": 0.06935515874123677,
+      "thumb_index_distance": 0.02198908472492828,
+      "thumb_middle_distance": 0.037671288227919625,
+      "thumb_ring_distance": 0.043267214563975795,
+      "thumb_palm_distance": 0.09475872051552328,
+      "palmar_advancement_y": 0.02129603388771389,
+      "thumb_tip": [
+        -0.01908710034967135,
+        0.03896008989419646,
+        0.2112063930356953
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": -0.5
+      },
+      "score": 0.070760625350144,
+      "thumb_index_distance": 0.026175453029793076,
+      "thumb_middle_distance": 0.03528238890075952,
+      "thumb_ring_distance": 0.03761769550420533,
+      "thumb_palm_distance": 0.0935861466828785,
+      "palmar_advancement_y": 0.02357577805519068,
+      "thumb_tip": [
+        -0.011523101737753744,
+        0.04123983406167325,
+        0.2100852906853192
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": -0.2,
+        "thumb_mcp_joint": 0.5,
+        "thumb_ip_joint": 0.0
+      },
+      "score": 0.07133112445330536,
+      "thumb_index_distance": 0.019170068862343497,
+      "thumb_middle_distance": 0.042211851901354694,
+      "thumb_ring_distance": 0.05133803013487267,
+      "thumb_palm_distance": 0.09848725499602741,
+      "palmar_advancement_y": 0.022678221799183027,
+      "thumb_tip": [
+        -0.029359707639957957,
+        0.036233587186137325,
+        0.21386320633793582
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": -0.2,
+        "thumb_mcp_joint": 0.5,
+        "thumb_ip_joint": -0.25
+      },
+      "score": 0.07185505494498448,
+      "thumb_index_distance": 0.022049680786188783,
+      "thumb_middle_distance": 0.04088323169729614,
+      "thumb_ring_distance": 0.04757023599499798,
+      "thumb_palm_distance": 0.09435523607563491,
+      "palmar_advancement_y": 0.023677726418750263,
+      "thumb_tip": [
+        -0.023340059936032793,
+        0.03723309180570456,
+        0.2104705457172825
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": -0.2,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": -0.5
+      },
+      "score": 0.07543087245564427,
+      "thumb_index_distance": 0.02157348141824035,
+      "thumb_middle_distance": 0.04488458452463228,
+      "thumb_ring_distance": 0.0537909607451521,
+      "thumb_palm_distance": 0.09690755876495734,
+      "palmar_advancement_y": 0.021529652292571814,
+      "thumb_tip": [
+        -0.030877549577495382,
+        0.03508501767952611,
+        0.2119672776249873
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.25,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": 0.0
+      },
+      "score": 0.07552738668508523,
+      "thumb_index_distance": 0.03491416498036695,
+      "thumb_middle_distance": 0.03095635055474468,
+      "thumb_ring_distance": 0.025885269930044714,
+      "thumb_palm_distance": 0.09761549283190453,
+      "palmar_advancement_y": 0.024731636728469904,
+      "thumb_tip": [
+        0.0025024128251669563,
+        0.04690160285961766,
+        0.2124089706204147
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.25,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": -0.5
+      },
+      "score": 0.07569872789732361,
+      "thumb_index_distance": 0.03413040196262674,
+      "thumb_middle_distance": 0.03238251260142241,
+      "thumb_ring_distance": 0.028362074289109425,
+      "thumb_palm_distance": 0.09573219579288121,
+      "palmar_advancement_y": 0.023575778055190677,
+      "thumb_tip": [
+        0.0006079033549069024,
+        0.045745744186338436,
+        0.2108948945529903
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": -0.2,
+        "thumb_mcp_joint": 0.8,
+        "thumb_ip_joint": 0.0
+      },
+      "score": 0.0768972369980197,
+      "thumb_index_distance": 0.02922907293788976,
+      "thumb_middle_distance": 0.04079709917785163,
+      "thumb_ring_distance": 0.042949723094293804,
+      "thumb_palm_distance": 0.08891267989229742,
+      "palmar_advancement_y": 0.025393801889037806,
+      "thumb_tip": [
+        -0.013768417295466693,
+        0.038949167275992104,
+        0.20546510904524465
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": -0.2,
+        "thumb_mcp_joint": 0.5,
+        "thumb_ip_joint": -0.5
+      },
+      "score": 0.07694904436381447,
+      "thumb_index_distance": 0.027575215681217097,
+      "thumb_middle_distance": 0.042430755734152066,
+      "thumb_ring_distance": 0.04626674055643493,
+      "thumb_palm_distance": 0.08930511125606215,
+      "palmar_advancement_y": 0.023943496304126167,
+      "thumb_tip": [
+        -0.018192145230177658,
+        0.037498861691080465,
+        0.20576165470133115
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.5,
+        "thumb_ip_joint": -0.25
+      },
+      "score": 0.07711442161414145,
+      "thumb_index_distance": 0.03293886643333142,
+      "thumb_middle_distance": 0.03656880015890093,
+      "thumb_ring_distance": 0.03476717621739215,
+      "thumb_palm_distance": 0.09120446717233036,
+      "palmar_advancement_y": 0.025146968545110632,
+      "thumb_tip": [
+        -0.0042786788500412815,
+        0.042811024551593205,
+        0.20713268566286397
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": -0.2,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": -0.75
+      },
+      "score": 0.07800646747550213,
+      "thumb_index_distance": 0.02543180702111833,
+      "thumb_middle_distance": 0.04528480911816635,
+      "thumb_ring_distance": 0.05175238156593932,
+      "thumb_palm_distance": 0.09149166562106043,
+      "palmar_advancement_y": 0.021795422177947724,
+      "thumb_tip": [
+        -0.025729634871640247,
+        0.03535078756490202,
+        0.20725838660903595
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": -0.2,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": -0.25
+      },
+      "score": 0.078211911632589,
+      "thumb_index_distance": 0.021258271547211396,
+      "thumb_middle_distance": 0.047225243526461666,
+      "thumb_ring_distance": 0.058063149541283346,
+      "thumb_palm_distance": 0.10145491441426108,
+      "palmar_advancement_y": 0.020530147673004585,
+      "thumb_tip": [
+        -0.036897197281420546,
+        0.03408551305995888,
+        0.21535993824564062
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": -0.75
+      },
+      "score": 0.0794393446036849,
+      "thumb_index_distance": 0.03312212793124366,
+      "thumb_middle_distance": 0.039816196201805716,
+      "thumb_ring_distance": 0.03904426629074648,
+      "thumb_palm_distance": 0.0882763708677476,
+      "palmar_advancement_y": 0.0232404148944604,
+      "thumb_tip": [
+        -0.007306329735502843,
+        0.04090447090094297,
+        0.20453086186839325
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": -0.2,
+        "thumb_mcp_joint": 0.8,
+        "thumb_ip_joint": -0.25
+      },
+      "score": 0.08460133354552567,
+      "thumb_index_distance": 0.03581680689657281,
+      "thumb_middle_distance": 0.0443357903360801,
+      "thumb_ring_distance": 0.04357532375091141,
+      "thumb_palm_distance": 0.08416348881992289,
+      "palmar_advancement_y": 0.02550934555684575,
+      "thumb_tip": [
+        -0.008835368406991315,
+        0.03906471094380005,
+        0.2005257778784184
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": -0.2,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": -0.75
+      },
+      "score": 0.08477606988467,
+      "thumb_index_distance": 0.0255824943894148,
+      "thumb_middle_distance": 0.05116386224049093,
+      "thumb_ring_distance": 0.06126710208913931,
+      "thumb_palm_distance": 0.09822639277373524,
+      "palmar_advancement_y": 0.018783282435327415,
+      "thumb_tip": [
+        -0.038358569908487725,
+        0.03233864782228171,
+        0.2115673196712554
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": -0.2,
+        "thumb_mcp_joint": 0.5,
+        "thumb_ip_joint": -0.75
+      },
+      "score": 0.08500473557347711,
+      "thumb_index_distance": 0.03424989268295855,
+      "thumb_middle_distance": 0.04648241998560536,
+      "thumb_ring_distance": 0.04771006336486653,
+      "thumb_palm_distance": 0.08351577274080313,
+      "palmar_advancement_y": 0.0234590071710736,
+      "thumb_tip": [
+        -0.014236035925282949,
+        0.0370143725580279,
+        0.20002930932631063
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.25,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": -0.25
+      },
+      "score": 0.08520428178346183,
+      "thumb_index_distance": 0.041831107874376446,
+      "thumb_middle_distance": 0.03641702854665349,
+      "thumb_ring_distance": 0.027985986713609936,
+      "thumb_palm_distance": 0.09439112225116977,
+      "palmar_advancement_y": 0.02514696854511063,
+      "thumb_tip": [
+        0.007852326242619353,
+        0.04731693467625839,
+        0.20794228953053506
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.25,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": -0.75
+      },
+      "score": 0.08548541933674925,
+      "thumb_index_distance": 0.04083009569115054,
+      "thumb_middle_distance": 0.0384629821316132,
+      "thumb_ring_distance": 0.03168694260662963,
+      "thumb_palm_distance": 0.09104556811068111,
+      "palmar_advancement_y": 0.02324041489446041,
+      "thumb_tip": [
+        0.004824675357157804,
+        0.04541038102560817,
+        0.20534046573606435
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": -0.2,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": 0.0
+      },
+      "score": 0.08605990065748291,
+      "thumb_index_distance": 0.024639668435769365,
+      "thumb_middle_distance": 0.05180832182941622,
+      "thumb_ring_distance": 0.06389196734360598,
+      "thumb_palm_distance": 0.10497959558604757,
+      "palmar_advancement_y": 0.01885905267546877,
+      "thumb_tip": [
+        -0.043414305444875526,
+        0.03241441806242307,
+        0.21722542926568839
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.5,
+        "thumb_ip_joint": -0.5
+      },
+      "score": 0.08666807107930281,
+      "thumb_index_distance": 0.039871447534898866,
+      "thumb_middle_distance": 0.04207852240436277,
+      "thumb_ring_distance": 0.0375627827310942,
+      "thumb_palm_distance": 0.08628700959041358,
+      "palmar_advancement_y": 0.024811605384380358,
+      "thumb_tip": [
+        -6.19068477903835e-05,
+        0.04247566139086293,
+        0.201578256845938
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": 0.0,
+        "thumb_cmc_joint": 0.25,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "score": 0.08902324613684767,
+      "thumb_index_distance": 0.03671149824314311,
+      "thumb_middle_distance": 0.0406694468365508,
+      "thumb_ring_distance": 0.04762786979103433,
+      "thumb_palm_distance": 0.11008337644577114,
+      "palmar_advancement_y": 0.035526602527988414,
+      "thumb_tip": [
+        -0.01920880676372301,
+        0.07064225862095257,
+        0.20512449541836283
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": -0.2,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": -0.5
+      },
+      "score": 0.08982561704694779,
+      "thumb_index_distance": 0.02708884303717736,
+      "thumb_middle_distance": 0.05409418533248524,
+      "thumb_ring_distance": 0.06575988187644909,
+      "thumb_palm_distance": 0.10316632851661467,
+      "palmar_advancement_y": 0.017783777815760172,
+      "thumb_tip": [
+        -0.044378217612412896,
+        0.03133914320271447,
+        0.21495998029190871
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.5,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "score": 0.0907672466409584,
+      "thumb_index_distance": 0.04701869619774189,
+      "thumb_middle_distance": 0.0367895058889601,
+      "thumb_ring_distance": 0.024497440466190516,
+      "thumb_palm_distance": 0.09863878881915751,
+      "palmar_advancement_y": 0.024731636728469914,
+      "thumb_tip": [
+        0.014764751368151608,
+        0.05044827316364767,
+        0.21013385474556087
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": -0.5,
+        "thumb_mcp_joint": 1.05,
+        "thumb_ip_joint": 0.0
+      },
+      "score": 0.09090443159783364,
+      "thumb_index_distance": 0.033804675456453,
+      "thumb_middle_distance": 0.05372689903338351,
+      "thumb_ring_distance": 0.05898610630309231,
+      "thumb_palm_distance": 0.08440984035496928,
+      "palmar_advancement_y": 0.025093947968724935,
+      "thumb_tip": [
+        -0.028018922890951554,
+        0.03203130909764354,
+        0.1995281086584924
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": 0.0,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": -0.25
+      },
+      "score": 0.09092133071910373,
+      "thumb_index_distance": 0.0359532185528533,
+      "thumb_middle_distance": 0.04505735825294184,
+      "thumb_ring_distance": 0.052795403045072166,
+      "thumb_palm_distance": 0.10613570503280206,
+      "palmar_advancement_y": 0.0355479219653873,
+      "thumb_tip": [
+        -0.024966713952845616,
+        0.06656983851806891,
+        0.2015675642639145
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    },
+    {
+      "targets": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.8,
+        "thumb_ip_joint": 0.0
+      },
+      "score": 0.09102477288277479,
+      "thumb_index_distance": 0.043710477724213465,
+      "thumb_middle_distance": 0.04346507877266406,
+      "thumb_ring_distance": 0.03685786574410295,
+      "thumb_palm_distance": 0.08602475085590922,
+      "palmar_advancement_y": 0.02595603303125193,
+      "thumb_tip": [
+        0.004305195726293759,
+        0.043620089037734504,
+        0.20040378039891346
+      ],
+      "index_tip": [
+        -0.027288923523261576,
+        0.04542927543234724,
+        0.23055580083392554
+      ],
+      "middle_tip": [
+        -0.004546072359448141,
+        0.05738998724114902,
+        0.2406686289576231
+      ],
+      "palm_reference": [
+        0.002565286855602847,
+        -0.009179525937954337,
+        0.13251098891585572
+      ],
+      "awkward_penalty": 0.0,
+      "height_penalty": 0.0
+    }
+  ],
+  "changes": [
+    {
+      "kind": "joint_range",
+      "name": "thumb_cmc_abd_joint",
+      "old": "-1.2 1.2",
+      "new": "-1.05 1.05"
+    },
+    {
+      "kind": "joint_range",
+      "name": "thumb_cmc_joint",
+      "old": "-1.2 1.2",
+      "new": "-0.95 0.95"
+    },
+    {
+      "kind": "joint_range",
+      "name": "thumb_mcp_joint",
+      "old": "-0.2 1.4",
+      "new": "-0.1 1.2"
+    },
+    {
+      "kind": "joint_range",
+      "name": "thumb_ip_joint",
+      "old": "-1.2 0",
+      "new": "-0.85 0.05"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "thumb_cmc_abd_joint_pos",
+      "joint": "thumb_cmc_abd_joint",
+      "old": "-1.2 1.2",
+      "new": "-1.05 1.05"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "thumb_cmc_joint_pos",
+      "joint": "thumb_cmc_joint",
+      "old": "-1.2 1.2",
+      "new": "-0.95 0.95"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "thumb_mcp_joint_pos",
+      "joint": "thumb_mcp_joint",
+      "old": "-0.2 1.4",
+      "new": "-0.1 1.2"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "thumb_ip_joint_pos",
+      "joint": "thumb_ip_joint",
+      "old": "-1.2 0",
+      "new": "-0.85 0.05"
+    }
+  ],
+  "visual": {
+    "frames": [
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\open_thumb_neutral.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_01.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_01_side.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_01_top.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_02.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_02_side.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_02_top.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_03.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_03_side.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_03_top.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_04.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_04_side.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_04_top.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_05.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_05_side.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_05_top.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_06.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_06_side.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_06_top.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_07.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_07_side.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_07_top.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_08.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_08_side.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_08_top.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_09.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_09_side.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_09_top.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_10.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_10_side.png",
+      "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\candidate_10_top.png"
+    ],
+    "front_sheet": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\thumb_candidates_front_sheet.png",
+    "side_sheet": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\thumb_candidates_side_sheet.png",
+    "top_sheet": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\thumb_candidates_top_sheet.png"
+  },
+  "visual_focus": {
+    "preshape_top_colored_sheet": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\focus_pass_colored\\preshape_top_colored_sheet.png",
+    "preshape_front_colored_sheet": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\focus_pass_colored\\preshape_front_colored_sheet.png",
+    "preshape_thumbside_colored_sheet": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\focus_pass_colored\\preshape_thumbside_colored_sheet.png",
+    "fullclose_top_colored_sheet": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\focus_pass_colored\\fullclose_top_colored_sheet.png",
+    "fullclose_front_colored_sheet": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\focus_pass_colored\\fullclose_front_colored_sheet.png",
+    "fullclose_thumbside_colored_sheet": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\focus_pass_colored\\fullclose_thumbside_colored_sheet.png",
+    "fullclose_visual_recommended_top": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\focus_pass_colored\\fullclose_visual_recommended_top.png",
+    "summary_json": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_thumb_tuning\\focus_pass_colored\\colored_focus_summary.json"
+  },
+  "notes": [
+    "Long fingers held at natural close.",
+    "Visual recommended target uses mild thumb MCP/IP flexion instead of pure minimum-distance ranking.",
+    "No CAD/STL/joint tree changes.",
+    "Thumb CMC axes are still mechanical-semantics TODO if visuals look implausible."
+  ]
+}

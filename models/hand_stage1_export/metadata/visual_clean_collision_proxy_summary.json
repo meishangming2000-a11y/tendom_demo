@@ -1,0 +1,448 @@
+{
+  "hand": {
+    "source_hand": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_clean_mesh_export2_draft.xml",
+    "output_hand": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_visual_clean_collision_proxy.xml",
+    "geom_counts": {
+      "clean_visual": 23,
+      "collision_proxy": 28,
+      "debug_marker": 48
+    },
+    "collision_proxy_geoms": [
+      {
+        "source_name": "hand_base_link_primitive",
+        "proxy_name": "hand_base_link_collision_proxy",
+        "type": "box",
+        "fromto": null,
+        "pos": "0 0 -0.006",
+        "size": "0.026 0.020 0.014"
+      },
+      {
+        "source_name": "wrist_middle_link_primitive",
+        "proxy_name": "wrist_middle_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 -0.018 0 0 0.018 0",
+        "pos": null,
+        "size": "0.011"
+      },
+      {
+        "source_name": "palm_link_ellipsoid",
+        "proxy_name": "palm_link_collision_proxy_ellipsoid",
+        "type": "ellipsoid",
+        "fromto": null,
+        "pos": "0 0.048 0.002",
+        "size": "0.030 0.064 0.024"
+      },
+      {
+        "source_name": "palm_link_index_mcp_flex_joint_spoke",
+        "proxy_name": "palm_link_index_mcp_flex_joint_collision_proxy_spoke",
+        "type": "capsule",
+        "fromto": "0 0 0 -0.0014333 0.10034 -0.024803",
+        "pos": null,
+        "size": "0.0055"
+      },
+      {
+        "source_name": "palm_link_middle_mcp_flex_joint_spoke",
+        "proxy_name": "palm_link_middle_mcp_flex_joint_collision_proxy_spoke",
+        "type": "capsule",
+        "fromto": "0 0 0 -0.0014333 0.097567 -0.0048026",
+        "pos": null,
+        "size": "0.0055"
+      },
+      {
+        "source_name": "palm_link_ring_mcp_flex_joint_spoke",
+        "proxy_name": "palm_link_ring_mcp_flex_joint_collision_proxy_spoke",
+        "type": "capsule",
+        "fromto": "0 0 0 -0.0014333 0.090989 0.015197",
+        "pos": null,
+        "size": "0.0055"
+      },
+      {
+        "source_name": "palm_link_little_mcp_flex_joint_spoke",
+        "proxy_name": "palm_link_little_mcp_flex_joint_collision_proxy_spoke",
+        "type": "capsule",
+        "fromto": "0 0 0 -0.0014333 0.082348 0.035197",
+        "pos": null,
+        "size": "0.0055"
+      },
+      {
+        "source_name": "palm_link_thumb_root_connector_fixed_joint_spoke",
+        "proxy_name": "palm_link_thumb_root_connector_fixed_joint_collision_proxy_spoke",
+        "type": "capsule",
+        "fromto": "0 0 0 0.0064688 0.019332 -0.016418",
+        "pos": null,
+        "size": "0.0055"
+      },
+      {
+        "source_name": "index_mcp_flex_link_primitive",
+        "proxy_name": "index_mcp_flex_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 -0.00051676 0.0097417 -0.00026674",
+        "pos": null,
+        "size": "0.0058"
+      },
+      {
+        "source_name": "index_proximal_phalanx_link_primitive",
+        "proxy_name": "index_proximal_phalanx_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 -0.00021096 0.034999 0.00025",
+        "pos": null,
+        "size": "0.0072"
+      },
+      {
+        "source_name": "index_proximal_inter_link_primitive",
+        "proxy_name": "index_proximal_inter_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 0.0097266 0.027252 -0.00045437",
+        "pos": null,
+        "size": "0.0072"
+      },
+      {
+        "source_name": "index_distal_link_primitive",
+        "proxy_name": "index_distal_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 0.011092027 0.02570919 -6.7061438e-05",
+        "pos": null,
+        "size": "0.0062"
+      },
+      {
+        "source_name": "middle_mcp_flex_link_primitive",
+        "proxy_name": "middle_mcp_flex_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 -0.00064254 0.0097342 -0.00026674",
+        "pos": null,
+        "size": "0.0058"
+      },
+      {
+        "source_name": "middle_proximal_phalanx_link_primitive",
+        "proxy_name": "middle_proximal_phalanx_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 0.044915 -0.0027578 -0.0003",
+        "pos": null,
+        "size": "0.0072"
+      },
+      {
+        "source_name": "middle_proximal_inter_link_primitive",
+        "proxy_name": "middle_proximal_inter_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 0.03498 -0.0011685 -0.0002",
+        "pos": null,
+        "size": "0.0072"
+      },
+      {
+        "source_name": "middle_distal_link_primitive",
+        "proxy_name": "middle_distal_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 0.027301483 -0.006215095 -4.054405e-05",
+        "pos": null,
+        "size": "0.0062"
+      },
+      {
+        "source_name": "ring_mcp_flex_link_primitive",
+        "proxy_name": "ring_mcp_flex_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 -0.00087181 0.0097164 -0.00026674",
+        "pos": null,
+        "size": "0.0058"
+      },
+      {
+        "source_name": "ring_proximal_phalanx_link_primitive",
+        "proxy_name": "ring_proximal_phalanx_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 0.039933 -0.0023102 -0.0003",
+        "pos": null,
+        "size": "0.0072"
+      },
+      {
+        "source_name": "ring_proximal_inter_link_primitive",
+        "proxy_name": "ring_proximal_inter_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 0.0039743 0.029736 -0.0002",
+        "pos": null,
+        "size": "0.0072"
+      },
+      {
+        "source_name": "ring_distal_link_primitive",
+        "proxy_name": "ring_distal_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 0.02673319 -0.008326736 -4.4812211e-05",
+        "pos": null,
+        "size": "0.0062"
+      },
+      {
+        "source_name": "little_mcp_flex_link_primitive",
+        "proxy_name": "little_mcp_flex_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 -0.0018088 0.0095862 -0.00026674",
+        "pos": null,
+        "size": "0.0058"
+      },
+      {
+        "source_name": "little_proximal_phalanx_link_primitive",
+        "proxy_name": "little_proximal_phalanx_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 0.034983 -0.0010805 -0.0003",
+        "pos": null,
+        "size": "0.0072"
+      },
+      {
+        "source_name": "little_proximal_inter_link_primitive",
+        "proxy_name": "little_proximal_inter_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 0.00077177 0.024988 -0.0002",
+        "pos": null,
+        "size": "0.0072"
+      },
+      {
+        "source_name": "little_distal_link_primitive",
+        "proxy_name": "little_distal_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 0.026961144 -0.007556097 -4.6194307e-05",
+        "pos": null,
+        "size": "0.0062"
+      },
+      {
+        "source_name": "thumb_root_connector_link_primitive",
+        "proxy_name": "thumb_root_connector_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 -6.3364e-05 0.00012377 -0.011586",
+        "pos": null,
+        "size": "0.0068"
+      },
+      {
+        "source_name": "thumb_metacarpal_link_primitive",
+        "proxy_name": "thumb_metacarpal_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 -0.016224 0.049404 -0.000175",
+        "pos": null,
+        "size": "0.0068"
+      },
+      {
+        "source_name": "thumb_proximal_link_primitive",
+        "proxy_name": "thumb_proximal_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 -0.0033345 0.031826 -0.000105",
+        "pos": null,
+        "size": "0.0068"
+      },
+      {
+        "source_name": "thumb_distal_link_primitive",
+        "proxy_name": "thumb_distal_link_collision_proxy",
+        "type": "capsule",
+        "fromto": "0 0 0 0.00052061935 -0.027995157 -1.2280723e-05",
+        "pos": null,
+        "size": "0.0068"
+      }
+    ],
+    "actuators": [
+      {
+        "joint": "wrist_1_joint",
+        "actuator": "wrist_1_joint_pos",
+        "kp": 5.0,
+        "ctrlrange": [
+          -0.8,
+          0.8
+        ]
+      },
+      {
+        "joint": "wrist_2_joint",
+        "actuator": "wrist_2_joint_pos",
+        "kp": 5.0,
+        "ctrlrange": [
+          -0.8,
+          0.8
+        ]
+      },
+      {
+        "joint": "index_mcp_flex_joint",
+        "actuator": "index_mcp_flex_joint_pos",
+        "kp": 3.0,
+        "ctrlrange": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "joint": "index_mcp_abd_joint",
+        "actuator": "index_mcp_abd_joint_pos",
+        "kp": 3.0,
+        "ctrlrange": [
+          -0.2,
+          1.2
+        ]
+      },
+      {
+        "joint": "index_pip_joint",
+        "actuator": "index_pip_joint_pos",
+        "kp": 2.0,
+        "ctrlrange": [
+          0.0,
+          1.57
+        ]
+      },
+      {
+        "joint": "index_dip_joint",
+        "actuator": "index_dip_joint_pos",
+        "kp": 2.0,
+        "ctrlrange": [
+          0.0,
+          1.2
+        ]
+      },
+      {
+        "joint": "middle_mcp_flex_joint",
+        "actuator": "middle_mcp_flex_joint_pos",
+        "kp": 3.0,
+        "ctrlrange": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "joint": "middle_mcp_abd_joint",
+        "actuator": "middle_mcp_abd_joint_pos",
+        "kp": 3.0,
+        "ctrlrange": [
+          -0.2,
+          1.2
+        ]
+      },
+      {
+        "joint": "middle_pip_joint",
+        "actuator": "middle_pip_joint_pos",
+        "kp": 2.0,
+        "ctrlrange": [
+          0.0,
+          1.57
+        ]
+      },
+      {
+        "joint": "middle_dip_joint",
+        "actuator": "middle_dip_joint_pos",
+        "kp": 2.0,
+        "ctrlrange": [
+          0.0,
+          1.2
+        ]
+      },
+      {
+        "joint": "ring_mcp_flex_joint",
+        "actuator": "ring_mcp_flex_joint_pos",
+        "kp": 3.0,
+        "ctrlrange": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "joint": "ring_mcp_abd_joint",
+        "actuator": "ring_mcp_abd_joint_pos",
+        "kp": 3.0,
+        "ctrlrange": [
+          -0.2,
+          1.2
+        ]
+      },
+      {
+        "joint": "ring_pip_joint",
+        "actuator": "ring_pip_joint_pos",
+        "kp": 2.0,
+        "ctrlrange": [
+          0.0,
+          1.57
+        ]
+      },
+      {
+        "joint": "ring_dip_joint",
+        "actuator": "ring_dip_joint_pos",
+        "kp": 2.0,
+        "ctrlrange": [
+          0.0,
+          1.2
+        ]
+      },
+      {
+        "joint": "little_mcp_flex_joint",
+        "actuator": "little_mcp_flex_joint_pos",
+        "kp": 3.0,
+        "ctrlrange": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "joint": "little_mcp_abd_joint",
+        "actuator": "little_mcp_abd_joint_pos",
+        "kp": 3.0,
+        "ctrlrange": [
+          -0.2,
+          1.2
+        ]
+      },
+      {
+        "joint": "little_pip_joint",
+        "actuator": "little_pip_joint_pos",
+        "kp": 2.0,
+        "ctrlrange": [
+          0.0,
+          1.57
+        ]
+      },
+      {
+        "joint": "little_dip_joint",
+        "actuator": "little_dip_joint_pos",
+        "kp": 2.0,
+        "ctrlrange": [
+          0.0,
+          1.2
+        ]
+      },
+      {
+        "joint": "thumb_cmc_joint",
+        "actuator": "thumb_cmc_joint_pos",
+        "kp": 2.0,
+        "ctrlrange": [
+          -0.8,
+          0.8
+        ]
+      },
+      {
+        "joint": "thumb_mcp_joint",
+        "actuator": "thumb_mcp_joint_pos",
+        "kp": 2.0,
+        "ctrlrange": [
+          0.0,
+          1.2
+        ]
+      },
+      {
+        "joint": "thumb_ip_joint",
+        "actuator": "thumb_ip_joint_pos",
+        "kp": 2.0,
+        "ctrlrange": [
+          0.0,
+          1.2
+        ]
+      }
+    ],
+    "missing_controlled_joints": []
+  },
+  "scene": {
+    "source_scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_clean_mesh_export2_retry.xml",
+    "output_scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_visual_clean_collision_proxy.xml",
+    "ball_position": [
+      0.0,
+      -0.1,
+      0.195
+    ]
+  },
+  "load": {
+    "load_success": true,
+    "nbody": 25,
+    "njnt": 22,
+    "nu": 21,
+    "ngeom": 101,
+    "nmesh": 23,
+    "nsite": 5,
+    "collision_geom_count": 30
+  }
+}

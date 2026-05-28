@@ -1,0 +1,2133 @@
+{
+  "created_at": "2026-05-23T10:39:01",
+  "status": "diagnostic_training_asset_not_promoted_baseline",
+  "scene_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export3.xml",
+  "dataset_path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\data\\export3_scripted_pinned_wrap_v0.npz",
+  "report_path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\export3_scripted_dataset_v0_report.md",
+  "metadata_path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\metadata\\export3_scripted_dataset_v0.json",
+  "modes": [
+    "pinned"
+  ],
+  "thumb_candidates": 5,
+  "max_episodes": 0,
+  "speed": 4.0,
+  "step_stride": 3,
+  "release_steps": 180,
+  "feature_names": [
+    "qpos:wrist_1_joint",
+    "qpos:index_mcp_flex_joint",
+    "qpos:index_mcp_abd_joint",
+    "qpos:index_pip_joint",
+    "qpos:index_dip_joint",
+    "qpos:middle_mcp_flex_joint",
+    "qpos:middle_mcp_abd_joint",
+    "qpos:middle_pip_joint",
+    "qpos:middle_dip_joint",
+    "qpos:ring_mcp_flex_joint",
+    "qpos:ring_mcp_abd_joint",
+    "qpos:ring_pip_joint",
+    "qpos:ring_dip_joint",
+    "qpos:little_mcp_flex_joint",
+    "qpos:little_mcp_abd_joint",
+    "qpos:little_pip_joint",
+    "qpos:little_dip_joint",
+    "qpos:thumb_cmc_abd_joint",
+    "qpos:thumb_cmc_flex_joint",
+    "qpos:thumb_mcp_joint",
+    "qpos:thumb_ip_joint",
+    "qvel:wrist_1_joint",
+    "qvel:index_mcp_flex_joint",
+    "qvel:index_mcp_abd_joint",
+    "qvel:index_pip_joint",
+    "qvel:index_dip_joint",
+    "qvel:middle_mcp_flex_joint",
+    "qvel:middle_mcp_abd_joint",
+    "qvel:middle_pip_joint",
+    "qvel:middle_dip_joint",
+    "qvel:ring_mcp_flex_joint",
+    "qvel:ring_mcp_abd_joint",
+    "qvel:ring_pip_joint",
+    "qvel:ring_dip_joint",
+    "qvel:little_mcp_flex_joint",
+    "qvel:little_mcp_abd_joint",
+    "qvel:little_pip_joint",
+    "qvel:little_dip_joint",
+    "qvel:thumb_cmc_abd_joint",
+    "qvel:thumb_cmc_flex_joint",
+    "qvel:thumb_mcp_joint",
+    "qvel:thumb_ip_joint",
+    "ball_pos:x",
+    "ball_pos:y",
+    "ball_pos:z",
+    "ball_vel:x",
+    "ball_vel:y",
+    "ball_vel:z",
+    "index_tip_site:x",
+    "index_tip_site:y",
+    "index_tip_site:z",
+    "middle_tip_site:x",
+    "middle_tip_site:y",
+    "middle_tip_site:z",
+    "ring_tip_site:x",
+    "ring_tip_site:y",
+    "ring_tip_site:z",
+    "little_tip_site:x",
+    "little_tip_site:y",
+    "little_tip_site:z",
+    "thumb_tip_site:x",
+    "thumb_tip_site:y",
+    "thumb_tip_site:z",
+    "tip_ball_dist:index_tip_site",
+    "tip_ball_dist:middle_tip_site",
+    "tip_ball_dist:ring_tip_site",
+    "tip_ball_dist:little_tip_site",
+    "tip_ball_dist:thumb_tip_site",
+    "mean_four_tip_distance",
+    "thumb_to_ball",
+    "thumb_to_index",
+    "ball_contact_count",
+    "max_penetration",
+    "prev_ctrl:wrist_1_joint",
+    "prev_ctrl:index_mcp_flex_joint",
+    "prev_ctrl:index_mcp_abd_joint",
+    "prev_ctrl:index_pip_joint",
+    "prev_ctrl:index_dip_joint",
+    "prev_ctrl:middle_mcp_flex_joint",
+    "prev_ctrl:middle_mcp_abd_joint",
+    "prev_ctrl:middle_pip_joint",
+    "prev_ctrl:middle_dip_joint",
+    "prev_ctrl:ring_mcp_flex_joint",
+    "prev_ctrl:ring_mcp_abd_joint",
+    "prev_ctrl:ring_pip_joint",
+    "prev_ctrl:ring_dip_joint",
+    "prev_ctrl:little_mcp_flex_joint",
+    "prev_ctrl:little_mcp_abd_joint",
+    "prev_ctrl:little_pip_joint",
+    "prev_ctrl:little_dip_joint",
+    "prev_ctrl:thumb_cmc_abd_joint",
+    "prev_ctrl:thumb_cmc_flex_joint",
+    "prev_ctrl:thumb_mcp_joint",
+    "prev_ctrl:thumb_ip_joint",
+    "stage_fraction",
+    "finger_scale",
+    "thumb_rank",
+    "stage_onehot:open_hand",
+    "stage_onehot:preshape",
+    "stage_onehot:close_four_fingers",
+    "stage_onehot:close_thumb",
+    "stage_onehot:hold",
+    "thumb_target:thumb_cmc_abd_joint",
+    "thumb_target:thumb_cmc_flex_joint",
+    "thumb_target:thumb_mcp_joint",
+    "thumb_target:thumb_ip_joint",
+    "ball_target:x",
+    "ball_target:y",
+    "ball_target:z"
+  ],
+  "action_names": [
+    "wrist_1_joint",
+    "index_mcp_flex_joint",
+    "index_mcp_abd_joint",
+    "index_pip_joint",
+    "index_dip_joint",
+    "middle_mcp_flex_joint",
+    "middle_mcp_abd_joint",
+    "middle_pip_joint",
+    "middle_dip_joint",
+    "ring_mcp_flex_joint",
+    "ring_mcp_abd_joint",
+    "ring_pip_joint",
+    "ring_dip_joint",
+    "little_mcp_flex_joint",
+    "little_mcp_abd_joint",
+    "little_pip_joint",
+    "little_dip_joint",
+    "thumb_cmc_abd_joint",
+    "thumb_cmc_flex_joint",
+    "thumb_mcp_joint",
+    "thumb_ip_joint"
+  ],
+  "stage_names": [
+    "open_hand",
+    "preshape",
+    "close_four_fingers",
+    "close_thumb",
+    "hold"
+  ],
+  "mode_names": [
+    "pinned",
+    "free_zero_g",
+    "free_gravity"
+  ],
+  "episodes": [
+    {
+      "episode_id": 0,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.0065502389075644115,
+        "mean_four_tip_distance": 0.03410594091213752,
+        "thumb_to_ball": 0.08644141635779344,
+        "thumb_to_index": 0.07467269092310712
+      }
+    },
+    {
+      "episode_id": 1,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.00654941823226832,
+        "mean_four_tip_distance": 0.03410704897375842,
+        "thumb_to_ball": 0.08791350596839315,
+        "thumb_to_index": 0.07523178467014602
+      }
+    },
+    {
+      "episode_id": 2,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.006543561030124974,
+        "mean_four_tip_distance": 0.03409791171784302,
+        "thumb_to_ball": 0.08664662921411773,
+        "thumb_to_index": 0.07970398975415446
+      }
+    },
+    {
+      "episode_id": 3,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.00654867902284668,
+        "mean_four_tip_distance": 0.03410808797215961,
+        "thumb_to_ball": 0.09029100025831646,
+        "thumb_to_index": 0.07855101533725417
+      }
+    },
+    {
+      "episode_id": 4,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.006552818659591594,
+        "mean_four_tip_distance": 0.03412609299456718,
+        "thumb_to_ball": 0.09271446203146655,
+        "thumb_to_index": 0.07646867009017341
+      }
+    },
+    {
+      "episode_id": 5,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.010827157231797703,
+        "mean_four_tip_distance": 0.03409816923086856,
+        "thumb_to_ball": 0.08623863788865016,
+        "thumb_to_index": 0.07632712578068111
+      }
+    },
+    {
+      "episode_id": 6,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.01083878995302225,
+        "mean_four_tip_distance": 0.034097264958478785,
+        "thumb_to_ball": 0.08777583205475827,
+        "thumb_to_index": 0.07788699289109757
+      }
+    },
+    {
+      "episode_id": 7,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.010559914083115431,
+        "mean_four_tip_distance": 0.034205472012250625,
+        "thumb_to_ball": 0.086492620136021,
+        "thumb_to_index": 0.08070135570714576
+      }
+    },
+    {
+      "episode_id": 8,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 5,
+        "max_penetration": 0.010938970018904256,
+        "mean_four_tip_distance": 0.03398911161401714,
+        "thumb_to_ball": 0.09022160312729909,
+        "thumb_to_index": 0.08182067625946964
+      }
+    },
+    {
+      "episode_id": 9,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 5,
+        "max_penetration": 0.011195528226791086,
+        "mean_four_tip_distance": 0.03389139760752283,
+        "thumb_to_ball": 0.09262587107788985,
+        "thumb_to_index": 0.080749872451938
+      }
+    },
+    {
+      "episode_id": 10,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 5,
+        "max_penetration": 0.02205099275763926,
+        "mean_four_tip_distance": 0.03509894651435616,
+        "thumb_to_ball": 0.08661404270396114,
+        "thumb_to_index": 0.07539055193175256
+      }
+    },
+    {
+      "episode_id": 11,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 5,
+        "max_penetration": 0.022052203294004258,
+        "mean_four_tip_distance": 0.03509735174660015,
+        "thumb_to_ball": 0.088029611495587,
+        "thumb_to_index": 0.07699407049952661
+      }
+    },
+    {
+      "episode_id": 12,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 5,
+        "max_penetration": 0.022071083223453934,
+        "mean_four_tip_distance": 0.0350897629312635,
+        "thumb_to_ball": 0.086790302780754,
+        "thumb_to_index": 0.08013545749645377
+      }
+    },
+    {
+      "episode_id": 13,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 5,
+        "max_penetration": 0.02205099204109973,
+        "mean_four_tip_distance": 0.0350977835499309,
+        "thumb_to_ball": 0.09034594413076402,
+        "thumb_to_index": 0.08107245795286427
+      }
+    },
+    {
+      "episode_id": 14,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 5,
+        "max_penetration": 0.0220591026929309,
+        "mean_four_tip_distance": 0.03508905079879749,
+        "thumb_to_ball": 0.0927727614229385,
+        "thumb_to_index": 0.07975144904800273
+      }
+    },
+    {
+      "episode_id": 15,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "mean_four_tip_distance": 0.043099382838182876,
+        "thumb_to_ball": 0.09168520376852432,
+        "thumb_to_index": 0.07466542595356042
+      }
+    },
+    {
+      "episode_id": 16,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "mean_four_tip_distance": 0.043099579385355316,
+        "thumb_to_ball": 0.09387168084757562,
+        "thumb_to_index": 0.07522453898750436
+      }
+    },
+    {
+      "episode_id": 17,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "mean_four_tip_distance": 0.04309016219226066,
+        "thumb_to_ball": 0.09004849720788012,
+        "thumb_to_index": 0.07969855439453795
+      }
+    },
+    {
+      "episode_id": 18,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "mean_four_tip_distance": 0.04309978098172459,
+        "thumb_to_ball": 0.09624003448261174,
+        "thumb_to_index": 0.07854425193783965
+      }
+    },
+    {
+      "episode_id": 19,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "mean_four_tip_distance": 0.043116655505984335,
+        "thumb_to_ball": 0.1004088077227928,
+        "thumb_to_index": 0.07645997669947797
+      }
+    },
+    {
+      "episode_id": 20,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.004910730419037795,
+        "mean_four_tip_distance": 0.03442759284132452,
+        "thumb_to_ball": 0.09167651715564383,
+        "thumb_to_index": 0.07858754717329364
+      }
+    },
+    {
+      "episode_id": 21,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.0049093637676190125,
+        "mean_four_tip_distance": 0.03442839386217216,
+        "thumb_to_ball": 0.09386858119778395,
+        "thumb_to_index": 0.08001948558068138
+      }
+    },
+    {
+      "episode_id": 22,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.0049291689049556385,
+        "mean_four_tip_distance": 0.03442012135360962,
+        "thumb_to_ball": 0.09004046943715312,
+        "thumb_to_index": 0.08204877654054449
+      }
+    },
+    {
+      "episode_id": 23,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.0049080181807326885,
+        "mean_four_tip_distance": 0.03442918143988471,
+        "thumb_to_ball": 0.09624269054971482,
+        "thumb_to_index": 0.08349794931096378
+      }
+    },
+    {
+      "episode_id": 24,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 2,
+        "max_penetration": 0.004874222451329703,
+        "mean_four_tip_distance": 0.03444109492106097,
+        "thumb_to_ball": 0.1004128285158671,
+        "thumb_to_index": 0.08317667006400363
+      }
+    },
+    {
+      "episode_id": 25,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.0023839135168493694,
+        "mean_four_tip_distance": 0.03645820021772206,
+        "thumb_to_ball": 0.09162341467339118,
+        "thumb_to_index": 0.08018273126150312
+      }
+    },
+    {
+      "episode_id": 26,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.0023904756655685573,
+        "mean_four_tip_distance": 0.036455229175465835,
+        "thumb_to_ball": 0.09382906738408178,
+        "thumb_to_index": 0.08229785362145468
+      }
+    },
+    {
+      "episode_id": 27,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.002348542491627039,
+        "mean_four_tip_distance": 0.036464685579746414,
+        "thumb_to_ball": 0.09000202333563541,
+        "thumb_to_index": 0.0828995843149279
+      }
+    },
+    {
+      "episode_id": 28,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.002396996534992645,
+        "mean_four_tip_distance": 0.03645251524530948,
+        "thumb_to_ball": 0.09621739331337498,
+        "thumb_to_index": 0.08608782494260102
+      }
+    },
+    {
+      "episode_id": 29,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.1,
+        0.195
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.0024695483449479637,
+        "mean_four_tip_distance": 0.03643375592560479,
+        "thumb_to_ball": 0.10038340522106334,
+        "thumb_to_index": 0.0866920280577634
+      }
+    },
+    {
+      "episode_id": 30,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.013864502657845123,
+        "mean_four_tip_distance": 0.0322256970569006,
+        "thumb_to_ball": 0.0904390104294781,
+        "thumb_to_index": 0.07464225294257562
+      }
+    },
+    {
+      "episode_id": 31,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.01386267766643308,
+        "mean_four_tip_distance": 0.032225423219297694,
+        "thumb_to_ball": 0.09086153276765066,
+        "thumb_to_index": 0.0752008801179959
+      }
+    },
+    {
+      "episode_id": 32,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.01389448893597063,
+        "mean_four_tip_distance": 0.03221734853300899,
+        "thumb_to_ball": 0.09014659675857341,
+        "thumb_to_index": 0.07967910239927148
+      }
+    },
+    {
+      "episode_id": 33,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.013861185887129986,
+        "mean_four_tip_distance": 0.03222586037725827,
+        "thumb_to_ball": 0.09211440785360399,
+        "thumb_to_index": 0.07852272223707883
+      }
+    },
+    {
+      "episode_id": 34,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.013809495139229678,
+        "mean_four_tip_distance": 0.032206165473558285,
+        "thumb_to_ball": 0.09449089475350313,
+        "thumb_to_index": 0.07643624924344787
+      }
+    },
+    {
+      "episode_id": 35,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.005044847435430136,
+        "mean_four_tip_distance": 0.03567400505527254,
+        "thumb_to_ball": 0.09055634769263843,
+        "thumb_to_index": 0.07740096755520812
+      }
+    },
+    {
+      "episode_id": 36,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.005043460226426816,
+        "mean_four_tip_distance": 0.035674416441107054,
+        "thumb_to_ball": 0.09095090318038085,
+        "thumb_to_index": 0.07874634708723614
+      }
+    },
+    {
+      "episode_id": 37,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.005085720845589248,
+        "mean_four_tip_distance": 0.03564999613201045,
+        "thumb_to_ball": 0.09024624562367266,
+        "thumb_to_index": 0.08136723219808135
+      }
+    },
+    {
+      "episode_id": 38,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.005037978680730989,
+        "mean_four_tip_distance": 0.035696005485492364,
+        "thumb_to_ball": 0.09217106266686895,
+        "thumb_to_index": 0.08230404416113389
+      }
+    },
+    {
+      "episode_id": 39,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.004963141336153281,
+        "mean_four_tip_distance": 0.03573887766617739,
+        "thumb_to_ball": 0.09454624502828841,
+        "thumb_to_index": 0.0814730052534119
+      }
+    },
+    {
+      "episode_id": 40,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.004129019932797392,
+        "mean_four_tip_distance": 0.03682115650999349,
+        "thumb_to_ball": 0.09058270759855791,
+        "thumb_to_index": 0.0836992612111234
+      }
+    },
+    {
+      "episode_id": 41,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.004126584138108773,
+        "mean_four_tip_distance": 0.036821796382005605,
+        "thumb_to_ball": 0.09097314252497313,
+        "thumb_to_index": 0.08704104693700299
+      }
+    },
+    {
+      "episode_id": 42,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.004119972179544073,
+        "mean_four_tip_distance": 0.036826579123082806,
+        "thumb_to_ball": 0.09027284502868012,
+        "thumb_to_index": 0.08518411131928758
+      }
+    },
+    {
+      "episode_id": 43,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.004124160277627141,
+        "mean_four_tip_distance": 0.03682241832465267,
+        "thumb_to_ball": 0.09218825638676713,
+        "thumb_to_index": 0.09142847961548566
+      }
+    },
+    {
+      "episode_id": 44,
+      "mode": "pinned",
+      "ball_position": [
+        0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.004141321327842513,
+        "mean_four_tip_distance": 0.03681767636102861,
+        "thumb_to_ball": 0.09456423310822466,
+        "thumb_to_index": 0.09352665565691298
+      }
+    },
+    {
+      "episode_id": 45,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 1,
+        "max_penetration": 0.0022765175323299384,
+        "mean_four_tip_distance": 0.039739322052046284,
+        "thumb_to_ball": 0.08328264531194288,
+        "thumb_to_index": 0.07466668765912057
+      }
+    },
+    {
+      "episode_id": 46,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 1,
+        "max_penetration": 0.0022756291443355265,
+        "mean_four_tip_distance": 0.03974008758913229,
+        "thumb_to_ball": 0.08589877334173224,
+        "thumb_to_index": 0.07522577004132436
+      }
+    },
+    {
+      "episode_id": 47,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 1,
+        "max_penetration": 0.0022918312673380825,
+        "mean_four_tip_distance": 0.039723369715564893,
+        "thumb_to_ball": 0.08405163711875645,
+        "thumb_to_index": 0.07969913980424169
+      }
+    },
+    {
+      "episode_id": 48,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 1,
+        "max_penetration": 0.002274771727539755,
+        "mean_four_tip_distance": 0.03974083467344608,
+        "thumb_to_ball": 0.08946293998499089,
+        "thumb_to_index": 0.07854537639906325
+      }
+    },
+    {
+      "episode_id": 49,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_PARTIAL",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 1,
+        "max_penetration": 0.0022502794960945404,
+        "mean_four_tip_distance": 0.03976839435166637,
+        "thumb_to_ball": 0.09189710773751837,
+        "thumb_to_index": 0.07646199205452434
+      }
+    },
+    {
+      "episode_id": 50,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.011220379653341064,
+        "mean_four_tip_distance": 0.034601280052249876,
+        "thumb_to_ball": 0.08327376939036621,
+        "thumb_to_index": 0.0785644490632954
+      }
+    },
+    {
+      "episode_id": 51,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.01121909750293362,
+        "mean_four_tip_distance": 0.03460239437115291,
+        "thumb_to_ball": 0.08589523987574002,
+        "thumb_to_index": 0.07999401077292675
+      }
+    },
+    {
+      "episode_id": 52,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.011242989933020961,
+        "mean_four_tip_distance": 0.0345847474714053,
+        "thumb_to_ball": 0.08404604490434976,
+        "thumb_to_index": 0.08203255518516325
+      }
+    },
+    {
+      "episode_id": 53,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.011217824220607586,
+        "mean_four_tip_distance": 0.034603488235854206,
+        "thumb_to_ball": 0.08946463172386862,
+        "thumb_to_index": 0.0834732832570961
+      }
+    },
+    {
+      "episode_id": 54,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.011174850475074504,
+        "mean_four_tip_distance": 0.03463477627075469,
+        "thumb_to_ball": 0.09189910201714381,
+        "thumb_to_index": 0.08315274194753858
+      }
+    },
+    {
+      "episode_id": 55,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.013772104393858219,
+        "mean_four_tip_distance": 0.04065447600760709,
+        "thumb_to_ball": 0.08357950572949586,
+        "thumb_to_index": 0.0743016340209774
+      }
+    },
+    {
+      "episode_id": 56,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.013774532948717161,
+        "mean_four_tip_distance": 0.04065367643874795,
+        "thumb_to_ball": 0.08611880256766467,
+        "thumb_to_index": 0.07576509742154276
+      }
+    },
+    {
+      "episode_id": 57,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.013725553032442486,
+        "mean_four_tip_distance": 0.04044910560914957,
+        "thumb_to_ball": 0.08427838233301213,
+        "thumb_to_index": 0.07969257970406876
+      }
+    },
+    {
+      "episode_id": 58,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.013776584192639512,
+        "mean_four_tip_distance": 0.04065300063260521,
+        "thumb_to_ball": 0.08959976373073003,
+        "thumb_to_index": 0.07989318671640872
+      }
+    },
+    {
+      "episode_id": 59,
+      "mode": "pinned",
+      "ball_position": [
+        -0.01,
+        -0.1,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 3,
+        "max_penetration": 0.01355338169992835,
+        "mean_four_tip_distance": 0.04050318254077265,
+        "thumb_to_ball": 0.09207618072429564,
+        "thumb_to_index": 0.07857063799365212
+      }
+    },
+    {
+      "episode_id": 60,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.005041688026159274,
+        "mean_four_tip_distance": 0.03543049682654458,
+        "thumb_to_ball": 0.0776723399821468,
+        "thumb_to_index": 0.0746686456996736
+      }
+    },
+    {
+      "episode_id": 61,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.00504119133226374,
+        "mean_four_tip_distance": 0.035431325529437424,
+        "thumb_to_ball": 0.07890859375556335,
+        "thumb_to_index": 0.07522766659612827
+      }
+    },
+    {
+      "episode_id": 62,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.005037755090361677,
+        "mean_four_tip_distance": 0.03542193232569554,
+        "thumb_to_ball": 0.07732491647358512,
+        "thumb_to_index": 0.07970103628013683
+      }
+    },
+    {
+      "episode_id": 63,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.005040684665601629,
+        "mean_four_tip_distance": 0.03543216486507472,
+        "thumb_to_ball": 0.08101289980244358,
+        "thumb_to_index": 0.07854707025138036
+      }
+    },
+    {
+      "episode_id": 64,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 0.85,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.005040947576626978,
+        "mean_four_tip_distance": 0.03545043764403848,
+        "thumb_to_ball": 0.08403302657199398,
+        "thumb_to_index": 0.0764635469897388
+      }
+    },
+    {
+      "episode_id": 65,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 5,
+        "max_penetration": 0.0028192776463555674,
+        "mean_four_tip_distance": 0.039764080199133384,
+        "thumb_to_ball": 0.07752352169560744,
+        "thumb_to_index": 0.07555148956407054
+      }
+    },
+    {
+      "episode_id": 66,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 5,
+        "max_penetration": 0.0028250906711659264,
+        "mean_four_tip_distance": 0.039761395249880434,
+        "thumb_to_ball": 0.07880002918511525,
+        "thumb_to_index": 0.07700871990802113
+      }
+    },
+    {
+      "episode_id": 67,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 5,
+        "max_penetration": 0.002782054574028826,
+        "mean_four_tip_distance": 0.0397741857887487,
+        "thumb_to_ball": 0.0772103413121133,
+        "thumb_to_index": 0.08023583103057826
+      }
+    },
+    {
+      "episode_id": 68,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 5,
+        "max_penetration": 0.00283094197638025,
+        "mean_four_tip_distance": 0.03975872074759282,
+        "thumb_to_ball": 0.08094801470621055,
+        "thumb_to_index": 0.08094410982216067
+      }
+    },
+    {
+      "episode_id": 69,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 1.0,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 5,
+        "max_penetration": 0.002909135699234711,
+        "mean_four_tip_distance": 0.03973166696457636,
+        "thumb_to_ball": 0.08396007441769142,
+        "thumb_to_index": 0.07959672322075287
+      }
+    },
+    {
+      "episode_id": 70,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 1,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.005639626536365404,
+        "mean_four_tip_distance": 0.039599275819112316,
+        "thumb_to_ball": 0.07765019247187151,
+        "thumb_to_index": 0.07866285029205057
+      }
+    },
+    {
+      "episode_id": 71,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 2,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.8,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.00564304507104538,
+        "mean_four_tip_distance": 0.03959830873888934,
+        "thumb_to_ball": 0.07888629142796653,
+        "thumb_to_index": 0.08188144335649161
+      }
+    },
+    {
+      "episode_id": 72,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 3,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.005621360922462875,
+        "mean_four_tip_distance": 0.03960942201721228,
+        "thumb_to_ball": 0.0773143151559874,
+        "thumb_to_index": 0.08231694059094172
+      }
+    },
+    {
+      "episode_id": 73,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 4,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_ip_joint": 0.4,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.0056465114077961535,
+        "mean_four_tip_distance": 0.03959732807177496,
+        "thumb_to_ball": 0.08099160469350455,
+        "thumb_to_index": 0.08688409639981412
+      }
+    },
+    {
+      "episode_id": 74,
+      "mode": "pinned",
+      "ball_position": [
+        0.0,
+        -0.09,
+        0.21
+      ],
+      "finger_scale": 1.15,
+      "thumb_rank": 5,
+      "thumb_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_ip_joint": 1.2,
+        "thumb_mcp_joint": 0.0
+      },
+      "classification": "PINNED_WRAP_PASS",
+      "sample_count": 80,
+      "hold": {
+        "ball_contact_count": 4,
+        "max_penetration": 0.00560915116203053,
+        "mean_four_tip_distance": 0.03959660367735079,
+        "thumb_to_ball": 0.08400026137891128,
+        "thumb_to_index": 0.08711629561384049
+      }
+    }
+  ],
+  "dataset_shape": {
+    "observations": [
+      6000,
+      109
+    ],
+    "actions": [
+      6000,
+      21
+    ],
+    "episodes": 75
+  },
+  "class_names": [
+    "PINNED_PARTIAL",
+    "PINNED_WRAP_PASS"
+  ],
+  "class_to_id": {
+    "PINNED_PARTIAL": 0,
+    "PINNED_WRAP_PASS": 1
+  }
+}

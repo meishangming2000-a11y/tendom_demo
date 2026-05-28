@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="arm_hand_export4_mount_tool_x_plus_15mm">
+  <compiler angle="radian" autolimits="true" />
+  <option timestep="0.002" gravity="0 0 -9.81" />
+  <visual>
+    <global azimuth="205" elevation="-22" offwidth="1280" offheight="900" />
+  </visual>
+  <default>
+    <joint damping="0.08" armature="0.0001" />
+    <geom solref="0.01 1" solimp="0.9 0.95 0.001" />
+  </default>
+  <asset>
+    <mesh name="base_link" content_type="model/stl" file="../../arm_stage1_export/meshes/base_link.STL" />
+    <mesh name="link_1" content_type="model/stl" file="../../arm_stage1_export/meshes/link_1.STL" />
+    <mesh name="link_2" content_type="model/stl" file="../../arm_stage1_export/meshes/link_2.STL" />
+    <mesh name="link_3" content_type="model/stl" file="../../arm_stage1_export/meshes/link_3.STL" />
+    <mesh name="ee_mount" content_type="model/stl" file="../../arm_stage1_export/meshes/ee_mount.STL" />
+    <mesh name="hand_base_link_mesh" file="../../hand_stage1_export/meshes_export4/hand_base_link.STL" scale="1 1 1" />
+    <mesh name="wrist_middle_link_mesh" file="../../hand_stage1_export/meshes_export4/wrist_middle_link.STL" scale="1 1 1" />
+    <mesh name="palm_link_mesh" file="../../hand_stage1_export/meshes_export4/palm_link.STL" scale="1 1 1" />
+    <mesh name="index_mcp_flex_link_mesh" file="../../hand_stage1_export/meshes_export4/index_mcp_flex_link.STL" scale="1 1 1" />
+    <mesh name="index_proximal_phalanx_link_mesh" file="../../hand_stage1_export/meshes_export4/index_proximal_phalanx_link.STL" scale="1 1 1" />
+    <mesh name="index_proximal_inter_link_mesh" file="../../hand_stage1_export/meshes_export4/index_proximal_inter_link.STL" scale="1 1 1" />
+    <mesh name="index_distal_link_mesh" file="../../hand_stage1_export/meshes_export4/index_distal_link.STL" scale="1 1 1" />
+    <mesh name="middle_mcp_flex_link_mesh" file="../../hand_stage1_export/meshes_export4/middle_mcp_flex_link.STL" scale="1 1 1" />
+    <mesh name="middle_proximal_phalanx_link_mesh" file="../../hand_stage1_export/meshes_export4/middle_proximal_phalanx_link.STL" scale="1 1 1" />
+    <mesh name="middle_proximal_inter_link_mesh" file="../../hand_stage1_export/meshes_export4/middle_proximal_inter_link.STL" scale="1 1 1" />
+    <mesh name="middle_distal_link_mesh" file="../../hand_stage1_export/meshes_export4/middle_distal_link.STL" scale="1 1 1" />
+    <mesh name="ring_mcp_flex_link_mesh" file="../../hand_stage1_export/meshes_export4/ring_mcp_flex_link.STL" scale="1 1 1" />
+    <mesh name="ring_proximal_phalanx_link_mesh" file="../../hand_stage1_export/meshes_export4/ring_proximal_phalanx_link.STL" scale="1 1 1" />
+    <mesh name="ring_proximal_inter_link_mesh" file="../../hand_stage1_export/meshes_export4/ring_proximal_inter_link.STL" scale="1 1 1" />
+    <mesh name="ring_distal_link_mesh" file="../../hand_stage1_export/meshes_export4/ring_distal_link.STL" scale="1 1 1" />
+    <mesh name="little_mcp_flex_link_mesh" file="../../hand_stage1_export/meshes_export4/little_mcp_flex_link.STL" scale="1 1 1" />
+    <mesh name="little_proximal_phalanx_link_mesh" file="../../hand_stage1_export/meshes_export4/little_proximal_phalanx_link.STL" scale="1 1 1" />
+    <mesh name="little_proximal_inter_link_mesh" file="../../hand_stage1_export/meshes_export4/little_proximal_inter_link.STL" scale="1 1 1" />
+    <mesh name="little_distal_link_mesh" file="../../hand_stage1_export/meshes_export4/little_distal_link.STL" scale="1 1 1" />
+    <mesh name="thumb_root_connector_link_mesh" file="../../hand_stage1_export/meshes_export4/thumb_root_connector_link.STL" scale="1 1 1" />
+    <mesh name="thumb_trapezium1_link_mesh" file="../../hand_stage1_export/meshes_export4/thumb_trapezium1_link.STL" scale="1 1 1" />
+    <mesh name="thumb_metacarpal_link_mesh" file="../../hand_stage1_export/meshes_export4/thumb_metacarpal_link.STL" scale="1 1 1" />
+    <mesh name="thumb_proximal_link_mesh" file="../../hand_stage1_export/meshes_export4/thumb_proximal_link.STL" scale="1 1 1" />
+    <mesh name="thumb_distal_link_mesh" file="../../hand_stage1_export/meshes_export4/thumb_distal_link.STL" scale="1 1 1" />
+  </asset>
+  <worldbody>
+    <body name="base_link">
+      <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="base_link" contype="0" conaffinity="0" group="2" />
+      <body name="link_1">
+        <inertial pos="-0.00080533 0.00036071 0.12429" quat="0.980381 0.00856504 0.0465314 -0.191348" mass="0.21219" diaginertia="0.000359117 0.00030086 0.000220613" />
+        <joint name="j1" pos="0 0 0" axis="0 0 1" range="-3.1416 3.1416" actuatorfrcrange="-40 40" damping="0.35" armature="0.01" frictionloss="0.02" />
+        <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="link_1" contype="0" conaffinity="0" group="2" />
+        <body name="link_2" pos="-0.036371 0.014755 0.133" quat="0.694019 0.135411 0.694021 -0.135411">
+          <inertial pos="-0.087672 -0.00423 0.039635" quat="-0.0143222 0.888828 0.0183859 0.457648" mass="0.22311" diaginertia="0.000321943 0.000302617 0.00022746" />
+          <joint name="j2" pos="0 0 0" axis="0 0 -1" range="-1.5708 1.5708" actuatorfrcrange="-40 40" damping="0.35" armature="0.01" frictionloss="0.02" />
+          <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="link_2" contype="0" conaffinity="0" group="2" />
+          <body name="link_3" pos="-0.13083 -0.0066553 0.039258" quat="0.697216 -0.153172 0.690318 -0.117851">
+            <inertial pos="0.0048491 0.00031295 -0.064941" quat="0.999326 0.00100038 0.00348265 0.0365284" mass="0.16921" diaginertia="0.000277833 0.000267455 0.000120912" />
+            <joint name="j3" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-40 40" damping="0.35" armature="0.01" frictionloss="0.02" />
+            <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="link_3" contype="0" conaffinity="0" group="2" />
+            <body name="ee_mount" pos="0.054866 0.0045957 -0.1465" quat="0.70699 0.0462811 -0.705591 0.0128699">
+              <inertial pos="-0.007089 0.0080757 0.041502" quat="0.413358 0.160944 -0.0901551 0.891686" mass="0.10378" diaginertia="5.41847e-05 4.45169e-05 3.71264e-05" />
+              <joint name="j4" pos="0 0 0" axis="0 0 1" range="-3.1416 3.1416" actuatorfrcrange="-40 40" damping="0.35" armature="0.01" frictionloss="0.02" />
+              <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="ee_mount" contype="0" conaffinity="0" group="2" />
+              <body name="ee_tool_frame" pos="0.02175 0.01956 0.05656" euler="-1.5708 0 -0.7854">
+                <site name="ee_tool_frame_site" pos="0 0 0" size="0.004" rgba="1 0.5 0.2 1" />
+                <body name="hand_base_link" pos="0.015 0 0" quat="1 0 0 0">
+                  <inertial pos="0 0 0" mass="0.012576523" diaginertia="1e-5 1e-5 1e-5" />
+                  <geom name="hand_base_link_export4_visual" type="mesh" mesh="hand_base_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                  <geom name="hand_base_link_collision_proxy" type="box" pos="0 0 -0.006" size="0.026 0.020 0.014" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" />
+                  <body name="wrist_middle_link" pos="0 0 0.015" quat="0.021734468 0.031497148 -0.70640493 -0.70677267">
+                    <joint name="wrist_1_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.8 0.8" damping="0.08" armature="0.0001" />
+                    <inertial pos="0 0 0" mass="0.010062493" diaginertia="1e-5 1e-5 1e-5" />
+                    <geom name="wrist_middle_link_export4_visual" type="mesh" mesh="wrist_middle_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                    <geom name="wrist_middle_link_collision_proxy" type="capsule" fromto="0 -0.018 0 0 0.018 0" size="0.011" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" />
+                    <body name="palm_link" pos="-0.0008 0.020263937 -0.0007" quat="0.7042091 -0.063949537 -0.7042091 0.063949537">
+                      <joint name="wrist_2_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.8 0.8" damping="0.08" armature="0.0001" />
+                      <inertial pos="0 0 0" mass="0.14137095" diaginertia="1e-5 1e-5 1e-5" />
+                      <geom name="palm_link_export4_visual" type="mesh" mesh="palm_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                      <geom name="palm_link_collision_proxy_ellipsoid" type="ellipsoid" pos="0 0.048 0.002" size="0.026 0.054 0.021" rgba="0.16 0.90 0.58 0.30" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                      <body name="index_mcp_flex_link" pos="-0.0014332629 0.1003371 -0.024802645" quat="0.70710678 0 0.70710678 0">
+                        <joint name="index_mcp_flex_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.3 0.18" damping="0.08" armature="0.0001" />
+                        <inertial pos="0 0 0" mass="0.0017548052" diaginertia="1e-5 1e-5 1e-5" />
+                        <geom name="index_mcp_flex_link_export4_visual" type="mesh" mesh="index_mcp_flex_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                        <geom name="index_mcp_flex_link_collision_proxy" type="capsule" fromto="0 0 0 -0.00051676254 0.0097416976 -0.00026673708" size="0.0048" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                        <body name="index_proximal_phalanx_link" pos="-0.00051676254 0.0097416976 -0.00026673708" quat="0.70685854 -0.018735 0.70685854 0.018735">
+                          <joint name="index_mcp_abd_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.78 0.08" damping="0.08" armature="0.0001" />
+                          <inertial pos="0 0 0" mass="0.0070310696" diaginertia="1e-5 1e-5 1e-5" />
+                          <geom name="index_proximal_phalanx_link_export4_visual" type="mesh" mesh="index_proximal_phalanx_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                          <geom name="index_proximal_phalanx_link_collision_proxy" type="capsule" fromto="0 0 0 -0.00021096449 0.034999364 0.00025" size="0.0056" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                          <body name="index_proximal_inter_link" pos="-0.00021096449 0.034999364 0.00025" quat="0.97605087 0.012185394 0.058843732 0.20907807">
+                            <joint name="index_pip_joint" type="hinge" axis="0.109773553624728 -0.0483929965230635 -0.992777862772996" limited="true" range="-1.1 0.04" damping="0.08" armature="0.0001" />
+                            <inertial pos="0 0 0" mass="0.0059704873" diaginertia="1e-5 1e-5 1e-5" />
+                            <geom name="index_proximal_inter_link_export4_visual" type="mesh" mesh="index_proximal_inter_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                            <geom name="index_proximal_inter_link_collision_proxy" type="capsule" fromto="0 0 0 0.0097266332 0.027252107 -0.00045436552" size="0.0054" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                            <body name="index_distal_link" pos="0.0097266332 0.027252107 -0.00045436552" quat="1 0 0 0">
+                              <joint name="index_dip_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.66 0.04" damping="0.08" armature="0.0001" />
+                              <inertial pos="0 0 0" mass="0.0053528415" diaginertia="1e-5 1e-5 1e-5" />
+                              <geom name="index_distal_link_export4_visual" type="mesh" mesh="index_distal_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                              <geom name="index_distal_link_collision_proxy" type="capsule" fromto="0 0 0 0.011092007 0.025709199 -6.7060969e-05" size="0.0048" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                              <geom name="index_tip_collision_proxy_sphere" type="sphere" pos="0.011092007 0.025709199 -6.7060969e-05" size="0.015000" rgba="1.0 0.78 0.10 0.42" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                              <site name="index_tip_site" pos="0.011092007 0.025709199 -6.7060969e-05" size="0.008" rgba="0.10 0.55 1.0 1" type="sphere" />
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                      <body name="little_mcp_flex_link" pos="-0.0014332629 0.082348214 0.035197355" quat="0.70710678 0 0.70710678 0">
+                        <joint name="little_mcp_flex_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.28 0.16" damping="0.08" armature="0.0001" />
+                        <inertial pos="0 0 0" mass="0.0017548056" diaginertia="1e-5 1e-5 1e-5" />
+                        <geom name="little_mcp_flex_link_export4_visual" type="mesh" mesh="little_mcp_flex_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                        <geom name="little_mcp_flex_link_collision_proxy" type="capsule" fromto="0 0 0 -0.0018088145 0.0095862352 -0.00026673708" size="0.0048" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                        <body name="little_proximal_phalanx_link" pos="-0.0018088145 0.0095862352 -0.00026673708" quat="0.4512713 0.4512713 0.54438425 0.54438425">
+                          <joint name="little_mcp_abd_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.76 0.08" damping="0.08" armature="0.0001" />
+                          <inertial pos="0 0 0" mass="0.0070532455" diaginertia="1e-5 1e-5 1e-5" />
+                          <geom name="little_proximal_phalanx_link_export4_visual" type="mesh" mesh="little_proximal_phalanx_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                          <geom name="little_proximal_phalanx_link_collision_proxy" type="capsule" fromto="0 0 0 0.034983 -0.0010805 -0.0003" size="0.0056" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                          <body name="little_proximal_inter_link" pos="0.034983 -0.0010805 -0.0003" quat="0.70710548 0 0 -0.70710808">
+                            <joint name="little_pip_joint" type="hinge" axis="0 0 -1" limited="true" range="-1 0.04" damping="0.08" armature="0.0001" />
+                            <inertial pos="0 0 0" mass="0.0050879458" diaginertia="1e-5 1e-5 1e-5" />
+                            <geom name="little_proximal_inter_link_export4_visual" type="mesh" mesh="little_proximal_inter_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                            <geom name="little_proximal_inter_link_collision_proxy" type="capsule" fromto="0 0 0 0.00077177 0.024988 -0.0002" size="0.0054" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                            <body name="little_distal_link" pos="0.00077177 0.024988 -0.0002" quat="0.70710548 0 0 0.70710808">
+                              <joint name="little_dip_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.62 0.04" damping="0.08" armature="0.0001" />
+                              <inertial pos="0 0 0" mass="0.0053522317" diaginertia="1e-5 1e-5 1e-5" />
+                              <geom name="little_distal_link_export4_visual" type="mesh" mesh="little_distal_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                              <geom name="little_distal_link_collision_proxy" type="capsule" fromto="0 0 0 0.026961146 -0.0075560895 -4.619485e-05" size="0.0048" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                              <geom name="little_tip_collision_proxy_sphere" type="sphere" pos="0.026961146 -0.0075560895 -4.619485e-05" size="0.015000" rgba="1.0 0.78 0.10 0.42" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                              <site name="little_tip_site" pos="0.026961146 -0.0075560895 -4.619485e-05" size="0.008" rgba="0.10 0.55 1.0 1" type="sphere" />
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                      <body name="middle_mcp_flex_link" pos="-0.0014332629 0.097567248 -0.0048026451" quat="0.70710678 0 0.70710678 0">
+                        <joint name="middle_mcp_flex_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.3 0.18" damping="0.08" armature="0.0001" />
+                        <inertial pos="0 0 0" mass="0.0017548053" diaginertia="1e-5 1e-5 1e-5" />
+                        <geom name="middle_mcp_flex_link_export4_visual" type="mesh" mesh="middle_mcp_flex_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                        <geom name="middle_mcp_flex_link_collision_proxy" type="capsule" fromto="0 0 0 -0.00064254397 0.0097342104 -0.00026673708" size="0.0048" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                        <body name="middle_proximal_phalanx_link" pos="-0.00064254397 0.0097342104 -0.00026673708" quat="0.48325317 0.48325317 0.51620381 0.51620381">
+                          <joint name="middle_mcp_abd_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.86 0.08" damping="0.08" armature="0.0001" />
+                          <inertial pos="0 0 0" mass="0.0090532579" diaginertia="1e-5 1e-5 1e-5" />
+                          <geom name="middle_proximal_phalanx_link_export4_visual" type="mesh" mesh="middle_proximal_phalanx_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                          <geom name="middle_proximal_phalanx_link_collision_proxy" type="capsule" fromto="0 0 0 0.044915416 -0.0027577974 -0.0003" size="0.0056" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                          <body name="middle_proximal_inter_link" pos="0.044915416 -0.0027577974 -0.0003" quat="1 0 0 0">
+                            <joint name="middle_pip_joint" type="hinge" axis="0 0 -1" limited="true" range="-1.16 0.04" damping="0.08" armature="0.0001" />
+                            <inertial pos="0 0 0" mass="0.0073249127" diaginertia="1e-5 1e-5 1e-5" />
+                            <geom name="middle_proximal_inter_link_export4_visual" type="mesh" mesh="middle_proximal_inter_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                            <geom name="middle_proximal_inter_link_collision_proxy" type="capsule" fromto="0 0 0 0.03498049 -0.0011684823 -0.0002" size="0.0054" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                            <body name="middle_distal_link" pos="0.03498049 -0.0011684823 -0.0002" quat="1 0 0 0">
+                              <joint name="middle_dip_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.7 0.04" damping="0.08" armature="0.0001" />
+                              <inertial pos="0 0 0" mass="0.0053530376" diaginertia="1e-5 1e-5 1e-5" />
+                              <geom name="middle_distal_link_export4_visual" type="mesh" mesh="middle_distal_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                              <geom name="middle_distal_link_collision_proxy" type="capsule" fromto="0 0 0 0.027301483 -0.006215095 -4.054405e-05" size="0.0048" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                              <geom name="middle_tip_collision_proxy_sphere" type="sphere" pos="0.027301483 -0.006215095 -4.054405e-05" size="0.015000" rgba="1.0 0.78 0.10 0.42" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                              <site name="middle_tip_site" pos="0.027301483 -0.006215095 -4.054405e-05" size="0.008" rgba="0.10 0.55 1.0 1" type="sphere" />
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                      <body name="ring_mcp_flex_link" pos="-0.0014333 0.090989 0.015197" quat="0.70710548 0 0.70710808 0">
+                        <joint name="ring_mcp_flex_joint" type="hinge" axis="-0.996 -0.089367 0" limited="true" range="-0.3 0.18" damping="0.08" armature="0.0001" />
+                        <inertial pos="0 0 0" mass="0.0017548053" diaginertia="1e-5 1e-5 1e-5" />
+                        <geom name="ring_mcp_flex_link_export4_visual" type="mesh" mesh="ring_mcp_flex_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                        <geom name="ring_mcp_flex_link_collision_proxy" type="capsule" fromto="0 0 0 -0.00087180699 0.0097163608 -0.00026673708" size="0.0048" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                        <body name="ring_proximal_phalanx_link" pos="-0.00087180699 0.0097163608 -0.00026673708" quat="0.47713555 0.47713555 0.52186365 0.52186365">
+                          <joint name="ring_mcp_abd_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.84 0.08" damping="0.08" armature="0.0001" />
+                          <inertial pos="0 0 0" mass="0.0079217428" diaginertia="1e-5 1e-5 1e-5" />
+                          <geom name="ring_proximal_phalanx_link_export4_visual" type="mesh" mesh="ring_proximal_phalanx_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                          <geom name="ring_proximal_phalanx_link_collision_proxy" type="capsule" fromto="0 0 0 0.039933 -0.0023102 -0.0003" size="0.0056" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                          <body name="ring_proximal_inter_link" pos="0.039933 -0.0023102 -0.0003" quat="0.70710548 0 0 -0.70710808">
+                            <joint name="ring_pip_joint" type="hinge" axis="0 0 -1" limited="true" range="-1.1 0.04" damping="0.08" armature="0.0001" />
+                            <inertial pos="0 0 0" mass="0.0062089763" diaginertia="1e-5 1e-5 1e-5" />
+                            <geom name="ring_proximal_inter_link_export4_visual" type="mesh" mesh="ring_proximal_inter_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                            <geom name="ring_proximal_inter_link_collision_proxy" type="capsule" fromto="0 0 0 0.0039742641 0.029735589 -0.0002" size="0.0054" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                            <body name="ring_distal_link" pos="0.0039742641 0.029735589 -0.0002" quat="0.70710678 0 0 0.70710678">
+                              <joint name="ring_dip_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.68 0.04" damping="0.08" armature="0.0001" />
+                              <inertial pos="0 0 0" mass="0.0053519063" diaginertia="1e-5 1e-5 1e-5" />
+                              <geom name="ring_distal_link_export4_visual" type="mesh" mesh="ring_distal_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                              <geom name="ring_distal_link_collision_proxy" type="capsule" fromto="0 0 0 0.026733217 -0.0083266507 -4.4813101e-05" size="0.0048" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                              <geom name="ring_tip_collision_proxy_sphere" type="sphere" pos="0.026733217 -0.0083266507 -4.4813101e-05" size="0.015000" rgba="1.0 0.78 0.10 0.42" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                              <site name="ring_tip_site" pos="0.026733217 -0.0083266507 -4.4813101e-05" size="0.008" rgba="0.10 0.55 1.0 1" type="sphere" />
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                      <body name="thumb_root_connector_link" pos="0.0064687769 0.019331857 -0.016418226" quat="0.24714875 -0.24714875 -0.53303917 0.77052205">
+                        <inertial pos="0 0 0" mass="0.0018183" diaginertia="1e-5 1e-5 1e-5" />
+                        <geom name="thumb_root_connector_link_export4_visual" type="mesh" mesh="thumb_root_connector_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.79216 0.81961 0.93333 1" contype="0" conaffinity="0" group="2" />
+                        <geom name="thumb_root_connector_link_collision_proxy" type="capsule" fromto="0 0 0 -6.3364e-05 0.00012377 -0.011586" size="0.0058" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                        <body name="thumb_trapezium1_link" pos="-6.3364e-05 0.00012377 -0.011586" quat="-0.17341937 -0.36522812 -0.60548304 0.68551034">
+                          <joint name="thumb_cmc_abd_joint" type="hinge" axis="0 0 -1" limited="true" range="-1.05 1.05" damping="0.08" armature="0.0001" />
+                          <inertial pos="0 0 0" mass="0.001" diaginertia="1e-5 1e-5 1e-5" />
+                          <geom name="thumb_trapezium1_link_export4_visual" type="mesh" mesh="thumb_trapezium1_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" contype="0" conaffinity="0" group="2" />
+                          <geom name="thumb_trapezium1_link_collision_proxy" type="capsule" fromto="0 0 0 -0.023394532 0.015361599 -0.00084684352" size="0.0058" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                          <body name="thumb_metacarpal_link" pos="0 0 0" quat="0.60495967 -0.15982858 -0.68880723 -0.36609183">
+                            <joint name="thumb_cmc_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.95 0.95" damping="0.08" armature="0.0001" />
+                            <inertial pos="0 0 0" mass="0.012375" diaginertia="1e-5 1e-5 1e-5" />
+                            <geom name="thumb_metacarpal_link_export4_visual" type="mesh" mesh="thumb_metacarpal_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.79216 0.81961 0.93333 1" contype="0" conaffinity="0" group="2" />
+                            <geom name="thumb_metacarpal_link_collision_proxy" type="capsule" fromto="0 0 0 -0.016224 0.049404 -0.000175" size="0.0054" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                            <body name="thumb_proximal_link" pos="-0.016224 0.049404 -0.000175" quat="1 0 0 0">
+                              <joint name="thumb_mcp_joint" type="hinge" axis="0 0 -1" limited="true" range="-0.1 1.2" damping="0.08" armature="0.0001" />
+                              <inertial pos="0 0 0" mass="0.0062816" diaginertia="1e-5 1e-5 1e-5" />
+                              <geom name="thumb_proximal_link_export4_visual" type="mesh" mesh="thumb_proximal_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.79216 0.81961 0.93333 1" contype="0" conaffinity="0" group="2" />
+                              <geom name="thumb_proximal_link_collision_proxy" type="capsule" fromto="0 0 0 -0.0033345 0.031826 -0.000105" size="0.0054" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                              <body name="thumb_distal_link" pos="-0.0033345 0.031826 -0.000105" quat="-3.6732051e-06 -0 0 1">
+                                <joint name="thumb_ip_joint" type="hinge" axis="0 0 1" limited="true" range="-0.85 0.05" damping="0.08" armature="0.0001" />
+                                <inertial pos="0 0 0" mass="0.0073168" diaginertia="1e-5 1e-5 1e-5" />
+                                <geom name="thumb_distal_link_export4_visual" type="mesh" mesh="thumb_distal_link_mesh" pos="0 0 0" quat="1 0 0 0" rgba="0.79216 0.81961 0.93333 1" contype="0" conaffinity="0" group="2" />
+                                <geom name="thumb_distal_link_collision_proxy" type="capsule" fromto="0 0 0 0.00052061935 -0.027995157 -1.2280723e-05" size="0.0048" rgba="0.16 0.90 0.58 0.34" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                                <geom name="thumb_tip_collision_proxy_sphere" type="sphere" pos="0.00052061935 -0.027995157 -1.2280723e-05" size="0.015000" rgba="1.0 0.78 0.10 0.42" contype="1" conaffinity="2" group="3" friction="0.9 0.04 0.001" />
+                                <site name="thumb_tip_site" pos="0.00052061935 -0.027995157 -1.2280723e-05" size="0.008" rgba="0.10 0.55 1.0 1" type="sphere" />
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                  <site name="mount_debug_hand_base_origin" type="sphere" pos="0 0 0" size="0.005" rgba="0.05 0.65 1 1" />
+                  <site name="mount_debug_hand_base_plus_z" type="sphere" pos="0 0 0.025" size="0.004" rgba="0.05 1 0.15 1" />
+                </body>
+                <site name="mount_debug_ee_tool_frame_origin" type="sphere" pos="0 0 0" size="0.005" rgba="1 0.45 0.05 1" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position name="a_j1" joint="j1" ctrlrange="-3.1416 3.1416" kp="40" forcerange="-40 40" />
+    <position name="a_j2" joint="j2" ctrlrange="-1.5708 1.5708" kp="30" forcerange="-40 40" />
+    <position name="a_j3" joint="j3" ctrlrange="-1.5708 1.5708" kp="25" forcerange="-40 40" />
+    <position name="a_j4" joint="j4" ctrlrange="-3.1416 3.1416" kp="20" forcerange="-40 40" />
+    <position name="wrist_1_joint_pos" joint="wrist_1_joint" kp="5" ctrllimited="true" ctrlrange="-0.8 0.8" />
+    <position name="wrist_2_joint_pos" joint="wrist_2_joint" kp="5" ctrllimited="true" ctrlrange="-0.8 0.8" />
+    <position name="index_mcp_flex_joint_pos" joint="index_mcp_flex_joint" kp="3" ctrllimited="true" ctrlrange="-0.3 0.18" />
+    <position name="index_mcp_abd_joint_pos" joint="index_mcp_abd_joint" kp="3" ctrllimited="true" ctrlrange="-0.78 0.08" />
+    <position name="index_pip_joint_pos" joint="index_pip_joint" kp="2" ctrllimited="true" ctrlrange="-1.1 0.04" />
+    <position name="index_dip_joint_pos" joint="index_dip_joint" kp="2" ctrllimited="true" ctrlrange="-0.66 0.04" />
+    <position name="middle_mcp_flex_joint_pos" joint="middle_mcp_flex_joint" kp="3" ctrllimited="true" ctrlrange="-0.3 0.18" />
+    <position name="middle_mcp_abd_joint_pos" joint="middle_mcp_abd_joint" kp="3" ctrllimited="true" ctrlrange="-0.86 0.08" />
+    <position name="middle_pip_joint_pos" joint="middle_pip_joint" kp="2" ctrllimited="true" ctrlrange="-1.16 0.04" />
+    <position name="middle_dip_joint_pos" joint="middle_dip_joint" kp="2" ctrllimited="true" ctrlrange="-0.7 0.04" />
+    <position name="ring_mcp_flex_joint_pos" joint="ring_mcp_flex_joint" kp="3" ctrllimited="true" ctrlrange="-0.3 0.18" />
+    <position name="ring_mcp_abd_joint_pos" joint="ring_mcp_abd_joint" kp="3" ctrllimited="true" ctrlrange="-0.84 0.08" />
+    <position name="ring_pip_joint_pos" joint="ring_pip_joint" kp="2" ctrllimited="true" ctrlrange="-1.1 0.04" />
+    <position name="ring_dip_joint_pos" joint="ring_dip_joint" kp="2" ctrllimited="true" ctrlrange="-0.68 0.04" />
+    <position name="little_mcp_flex_joint_pos" joint="little_mcp_flex_joint" kp="3" ctrllimited="true" ctrlrange="-0.28 0.16" />
+    <position name="little_mcp_abd_joint_pos" joint="little_mcp_abd_joint" kp="3" ctrllimited="true" ctrlrange="-0.76 0.08" />
+    <position name="little_pip_joint_pos" joint="little_pip_joint" kp="2" ctrllimited="true" ctrlrange="-1 0.04" />
+    <position name="little_dip_joint_pos" joint="little_dip_joint" kp="2" ctrllimited="true" ctrlrange="-0.62 0.04" />
+    <position name="thumb_cmc_abd_joint_pos" joint="thumb_cmc_abd_joint" kp="2" ctrllimited="true" ctrlrange="-1.05 1.05" />
+    <position name="thumb_cmc_joint_pos" joint="thumb_cmc_joint" kp="2" ctrllimited="true" ctrlrange="-0.95 0.95" />
+    <position name="thumb_mcp_joint_pos" joint="thumb_mcp_joint" kp="3" ctrllimited="true" ctrlrange="-0.1 1.2" />
+    <position name="thumb_ip_joint_pos" joint="thumb_ip_joint" kp="2" ctrllimited="true" ctrlrange="-0.85 0.05" />
+  </actuator>
+</mujoco>

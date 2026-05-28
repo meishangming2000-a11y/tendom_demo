@@ -1,0 +1,2910 @@
+{
+  "load_success": true,
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export3.xml",
+  "ball_position": [
+    0.0,
+    -0.1,
+    0.21
+  ],
+  "candidate_count": 400,
+  "baseline": {
+    "requested_pose": {
+      "thumb_cmc_abd_joint": 0.0,
+      "thumb_cmc_flex_joint": 0.0,
+      "thumb_mcp_joint": 0.0,
+      "thumb_ip_joint": 0.0
+    },
+    "applied_pose": {
+      "thumb_cmc_abd_joint": 0.0,
+      "thumb_cmc_flex_joint": 0.0,
+      "thumb_mcp_joint": 0.0,
+      "thumb_ip_joint": 0.0
+    },
+    "thumb_tip": [
+      -0.046045050509296206,
+      0.0638954751485253,
+      0.20605900560985962
+    ],
+    "index_tip": [
+      -0.01889905274706996,
+      -0.037339012541697525,
+      0.2837029145703529
+    ],
+    "palm_pos": [
+      0.0005711446680750725,
+      -0.0006589003018724648,
+      0.08527305568729812
+    ],
+    "ball_center": [
+      0.0,
+      -0.1,
+      0.21
+    ],
+    "thumb_to_ball": 0.17028624397568828,
+    "thumb_to_index": 0.1304373538947875,
+    "thumb_to_palm": 0.14467060081889901,
+    "score": 0.1963737147546458,
+    "thumb_ball_improvement_vs_old_reference": -0.015386243975688274,
+    "contact": {
+      "ball_contact_count": 0,
+      "max_penetration": 0.0,
+      "ball_contacts": []
+    },
+    "looks_finite": true
+  },
+  "single_axis": {
+    "thumb_cmc_abd_joint": [
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": -0.8,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": -0.8,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.01685742706985899,
+          -0.014823510240498187,
+          0.2233240034277092
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.08784495615860786,
+        "thumb_to_index": 0.06447269957162043,
+        "thumb_to_palm": 0.13986584808152216,
+        "score": 0.10073949607293195,
+        "thumb_ball_improvement_vs_old_reference": 0.06705504384139215,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": -0.4,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": -0.4,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.033544593528142486,
+          0.025594394817798516,
+          0.22305624332491583
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.13065089840631317,
+        "thumb_to_index": 0.088617855761683,
+        "thumb_to_palm": 0.1443513972668653,
+        "score": 0.14837446955864977,
+        "thumb_ball_improvement_vs_old_reference": 0.024249101593686845,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.046045050509296206,
+          0.0638954751485253,
+          0.20605900560985962
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.17028624397568828,
+        "thumb_to_index": 0.1304373538947875,
+        "thumb_to_palm": 0.14467060081889901,
+        "score": 0.1963737147546458,
+        "thumb_ball_improvement_vs_old_reference": -0.015386243975688274,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.4,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.4,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.05238525071611625,
+          0.09403283233183582,
+          0.17501578038238713
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.20400208365984412,
+        "thumb_to_index": 0.1737606981393973,
+        "thumb_to_palm": 0.14080007342668197,
+        "score": 0.23875422328772358,
+        "thumb_ball_improvement_vs_old_reference": -0.049102083659844115,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.8,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.8,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.05156421594430445,
+          0.11124844032886894,
+          0.13482761032730056
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.23007750884524703,
+        "thumb_to_index": 0.212859343818227,
+        "thumb_to_palm": 0.13303008155600232,
+        "score": 0.2726493776088924,
+        "thumb_ball_improvement_vs_old_reference": -0.07517750884524702,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      }
+    ],
+    "thumb_cmc_flex_joint": [
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": -0.8,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.046045050509296206,
+          0.0638954751485253,
+          0.20605900560985962
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.17028624397568828,
+        "thumb_to_index": 0.1304373538947875,
+        "thumb_to_palm": 0.14467060081889901,
+        "score": 0.1963737147546458,
+        "thumb_ball_improvement_vs_old_reference": -0.015386243975688274,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": -0.4,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.046045050509296206,
+          0.0638954751485253,
+          0.20605900560985962
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.17028624397568828,
+        "thumb_to_index": 0.1304373538947875,
+        "thumb_to_palm": 0.14467060081889901,
+        "score": 0.1963737147546458,
+        "thumb_ball_improvement_vs_old_reference": -0.015386243975688274,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.046045050509296206,
+          0.0638954751485253,
+          0.20605900560985962
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.17028624397568828,
+        "thumb_to_index": 0.1304373538947875,
+        "thumb_to_palm": 0.14467060081889901,
+        "score": 0.1963737147546458,
+        "thumb_ball_improvement_vs_old_reference": -0.015386243975688274,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.4,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.4,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.03472488802232967,
+          0.07489531140130634,
+          0.21734012244191447
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.17846026223163955,
+        "thumb_to_index": 0.13134314109303583,
+        "thumb_to_palm": 0.156192057899687,
+        "score": 0.20472889045024673,
+        "thumb_ball_improvement_vs_old_reference": -0.02356026223163954,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.8,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.8,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.018393552200444495,
+          0.08353547231140157,
+          0.2232596801127429
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.18493082889505472,
+        "thumb_to_index": 0.13514540765783475,
+        "thumb_to_palm": 0.1627533736282797,
+        "score": 0.21195991042662166,
+        "thumb_ball_improvement_vs_old_reference": -0.030030828895054706,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      }
+    ],
+    "thumb_mcp_joint": [
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.046045050509296206,
+          0.0638954751485253,
+          0.20605900560985962
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.17028624397568828,
+        "thumb_to_index": 0.1304373538947875,
+        "thumb_to_palm": 0.14467060081889901,
+        "score": 0.1963737147546458,
+        "thumb_ball_improvement_vs_old_reference": -0.015386243975688274,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.4,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.4,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.0228890799157232,
+          0.06709651215655682,
+          0.20148969625208615
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.1688714884880111,
+        "thumb_to_index": 0.1329726001928716,
+        "thumb_to_palm": 0.13655579665140277,
+        "score": 0.1954660085265854,
+        "thumb_ball_improvement_vs_old_reference": -0.01397148848801108,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.8,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.8,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.0022881657604908907,
+          0.06461793201064943,
+          0.18979426225016455
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.16586913841949444,
+        "thumb_to_index": 0.1396065008856152,
+        "thumb_to_palm": 0.1232636325695515,
+        "score": 0.1937904385966175,
+        "thumb_ball_improvement_vs_old_reference": -0.010969138419494429,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 1.2,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 1.2,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          0.012505260584308849,
+          0.05685104801680737,
+          0.17281915547372786
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.1616819346925905,
+        "thumb_to_index": 0.14883953250137752,
+        "thumb_to_palm": 0.10542360677824889,
+        "score": 0.191449841192866,
+        "thumb_ball_improvement_vs_old_reference": -0.006781934692590502,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      }
+    ],
+    "thumb_ip_joint": [
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.0
+        },
+        "thumb_tip": [
+          -0.046045050509296206,
+          0.0638954751485253,
+          0.20605900560985962
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.17028624397568828,
+        "thumb_to_index": 0.1304373538947875,
+        "thumb_to_palm": 0.14467060081889901,
+        "score": 0.1963737147546458,
+        "thumb_ball_improvement_vs_old_reference": -0.015386243975688274,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.4
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.4
+        },
+        "thumb_tip": [
+          -0.05649200861186009,
+          0.060235144093005524,
+          0.20494573014445755
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.16997703987092305,
+        "thumb_to_index": 0.13090699168615905,
+        "thumb_to_palm": 0.14589666588631833,
+        "score": 0.19615843820815487,
+        "thumb_ball_improvement_vs_old_reference": -0.015077039870923042,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.8
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 0.8
+        },
+        "thumb_tip": [
+          -0.06497180778508435,
+          0.05468824035827497,
+          0.20035212543420972
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.1680561483422687,
+        "thumb_to_index": 0.13243514670481618,
+        "thumb_to_palm": 0.14353528099162868,
+        "score": 0.19454317768323193,
+        "thumb_ball_improvement_vs_old_reference": -0.013156148342268692,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      },
+      {
+        "requested_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 1.2
+        },
+        "applied_pose": {
+          "thumb_cmc_abd_joint": 0.0,
+          "thumb_cmc_flex_joint": 0.0,
+          "thumb_mcp_joint": 0.0,
+          "thumb_ip_joint": 1.2
+        },
+        "thumb_tip": [
+          -0.07014567419339005,
+          0.04813049807869628,
+          0.1930034206586574
+        ],
+        "index_tip": [
+          -0.01889905274706996,
+          -0.037339012541697525,
+          0.2837029145703529
+        ],
+        "palm_pos": [
+          0.0005711446680750725,
+          -0.0006589003018724648,
+          0.08527305568729812
+        ],
+        "ball_center": [
+          0.0,
+          -0.1,
+          0.21
+        ],
+        "thumb_to_ball": 0.16477846879490785,
+        "thumb_to_index": 0.13475033080178223,
+        "thumb_to_palm": 0.13779370595598836,
+        "score": 0.1917285349552643,
+        "thumb_ball_improvement_vs_old_reference": -0.009878468794907835,
+        "contact": {
+          "ball_contact_count": 0,
+          "max_penetration": 0.0,
+          "ball_contacts": []
+        },
+        "looks_finite": true
+      }
+    ]
+  },
+  "best_by_score": [
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        -0.03168012065535472,
+        -0.02378327352338136,
+        0.2335102754380104
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08582163183440787,
+      "thumb_to_index": 0.053538909031455306,
+      "thumb_to_palm": 0.15345733632274106,
+      "score": 0.09652941364069893,
+      "thumb_ball_improvement_vs_old_reference": 0.06907836816559214,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.8
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.8
+      },
+      "thumb_tip": [
+        -0.022319800633529594,
+        -0.02060719207502798,
+        0.2386164731444294
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08729429526468416,
+      "thumb_to_index": 0.0482124727916419,
+      "thumb_to_palm": 0.1563206109215929,
+      "score": 0.09693678982301254,
+      "thumb_ball_improvement_vs_old_reference": 0.06760570473531585,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.4
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.4
+      },
+      "thumb_tip": [
+        -0.027016418287208195,
+        -0.0192595399428711,
+        0.2223790816213777
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08603575076150005,
+      "thumb_to_index": 0.06444665577295501,
+      "thumb_to_palm": 0.14108550518144133,
+      "score": 0.09892508191609106,
+      "thumb_ball_improvement_vs_old_reference": 0.06886424923849996,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.4
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.4
+      },
+      "thumb_tip": [
+        -0.012160796291413208,
+        -0.016171191113354258,
+        0.2395613887700193
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08971638574868723,
+      "thumb_to_index": 0.04941614173593427,
+      "thumb_to_palm": 0.15558799186396294,
+      "score": 0.09959961409587409,
+      "thumb_ball_improvement_vs_old_reference": 0.06518361425131278,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        -0.01224851849317481,
+        -0.0189192981786114,
+        0.25215336929107857
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.092200937932955,
+      "thumb_to_index": 0.037133398584143835,
+      "thumb_to_palm": 0.16836515364730562,
+      "score": 0.09962761764978377,
+      "thumb_ball_improvement_vs_old_reference": 0.06269906206704501,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.8
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.8
+      },
+      "thumb_tip": [
+        -0.03637674797134902,
+        -0.022435600235432424,
+        0.2172728884682742
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08597906030238207,
+      "thumb_to_index": 0.07028890308324764,
+      "thumb_to_palm": 0.1387923891454296,
+      "score": 0.1000368409190316,
+      "thumb_ball_improvement_vs_old_reference": 0.06892093969761794,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        -0.013553142690571375,
+        -0.01502758071805374,
+        0.23128961784629787
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08864111655128937,
+      "thumb_to_index": 0.05721479194960964,
+      "thumb_to_palm": 0.1474001047999119,
+      "score": 0.1000840749412113,
+      "thumb_ball_improvement_vs_old_reference": 0.06625888344871064,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "thumb_tip": [
+        -0.01685742706985899,
+        -0.014823510240498187,
+        0.2233240034277092
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08784495615860786,
+      "thumb_to_index": 0.06447269957162043,
+      "thumb_to_palm": 0.13986584808152216,
+      "score": 0.10073949607293195,
+      "thumb_ball_improvement_vs_old_reference": 0.06705504384139215,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        -0.025337804060083048,
+        -0.016788807975889563,
+        0.2144578187631056
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08709752545730125,
+      "thumb_to_index": 0.07251656169125947,
+      "thumb_to_palm": 0.13274091515701988,
+      "score": 0.10160083779555315,
+      "thumb_ball_improvement_vs_old_reference": 0.06780247454269876,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.8
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.8
+      },
+      "thumb_tip": [
+        -0.01597747437594223,
+        -0.013612747683328236,
+        0.2195640119162091
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08837141717881179,
+      "thumb_to_index": 0.0684490328491635,
+      "thumb_to_palm": 0.13592542028304105,
+      "score": 0.10206122374864449,
+      "thumb_ball_improvement_vs_old_reference": 0.06652858282118822,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        -0.04346062588013872,
+        -0.02385026103321876,
+        0.20881157959226918
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08768706341113161,
+      "thumb_to_index": 0.07996204941613316,
+      "thumb_to_palm": 0.13318559576320962,
+      "score": 0.10367947329435824,
+      "thumb_ball_improvement_vs_old_reference": 0.0672129365888684,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "thumb_tip": [
+        -0.002806991038379657,
+        -0.011175617651393736,
+        0.23619584091430973
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09264918876875697,
+      "thumb_to_index": 0.05657207552832919,
+      "thumb_to_palm": 0.1513264690836987,
+      "score": 0.1039636038744228,
+      "thumb_ball_improvement_vs_old_reference": 0.06225081123124304,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.8
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.8
+      },
+      "thumb_tip": [
+        -0.002089523812585194,
+        -0.014483276060775787,
+        0.25309828946993973
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09578590051931214,
+      "thumb_to_index": 0.041732337948184234,
+      "thumb_to_palm": 0.16841467161766413,
+      "score": 0.10413236810894899,
+      "thumb_ball_improvement_vs_old_reference": 0.05911409948068787,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.8
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.8
+      },
+      "thumb_tip": [
+        -0.0033941383484549902,
+        -0.010591579756380014,
+        0.23223453347188777
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09219414441438624,
+      "thumb_to_index": 0.06004016808779185,
+      "thumb_to_palm": 0.14735011891131142,
+      "score": 0.1042021780319446,
+      "thumb_ball_improvement_vs_old_reference": 0.06270585558561377,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.4
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.4
+      },
+      "thumb_tip": [
+        -0.005818483158593029,
+        -0.00917671798095532,
+        0.2205089337225406
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09161419644881741,
+      "thumb_to_index": 0.07041090363770845,
+      "thumb_to_palm": 0.13565442591283342,
+      "score": 0.1056963771763591,
+      "thumb_ball_improvement_vs_old_reference": 0.0632858035511826,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        0.0030208047873216464,
+        -0.009851785492723357,
+        0.2424163889057853
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09584700365741325,
+      "thumb_to_index": 0.05422734556126532,
+      "thumb_to_palm": 0.15743105522052656,
+      "score": 0.10669247276966631,
+      "thumb_ball_improvement_vs_old_reference": 0.05905299634258676,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.8,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.8,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        -0.007210869580197225,
+        -0.008033019949645549,
+        0.21223718165226416
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09227636231142912,
+      "thumb_to_index": 0.07812045704594518,
+      "thumb_to_palm": 0.12741595923740381,
+      "score": 0.10790045372061816,
+      "thumb_ball_improvement_vs_old_reference": 0.06262363768857089,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.8,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.8,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        0.0017161371037277195,
+        -0.005959972811668595,
+        0.22155265794106516
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09476252289615424,
+      "thumb_to_index": 0.07261049914474829,
+      "thumb_to_palm": 0.13638747144762514,
+      "score": 0.10928462272510389,
+      "thumb_ball_improvement_vs_old_reference": 0.060137477103845774,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.4
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.4
+      },
+      "thumb_tip": [
+        0.007264294565985227,
+        -0.009487731339225789,
+        0.24973273543378074
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09911574556402424,
+      "thumb_to_index": 0.05112912748926496,
+      "thumb_to_palm": 0.16483243848028717,
+      "score": 0.10934157106187722,
+      "thumb_ball_improvement_vs_old_reference": 0.055784254435975775,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.4
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.4
+      },
+      "thumb_tip": [
+        0.005959666904578562,
+        -0.005596006294419504,
+        0.2288689856161782
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09645553522406246,
+      "thumb_to_index": 0.06806125294824852,
+      "thumb_to_palm": 0.14378178702330408,
+      "score": 0.11006778581371217,
+      "thumb_ball_improvement_vs_old_reference": 0.05844446477593755,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    }
+  ],
+  "best_by_ball": [
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        -0.03168012065535472,
+        -0.02378327352338136,
+        0.2335102754380104
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08582163183440787,
+      "thumb_to_index": 0.053538909031455306,
+      "thumb_to_palm": 0.15345733632274106,
+      "score": 0.09652941364069893,
+      "thumb_ball_improvement_vs_old_reference": 0.06907836816559214,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.8
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.8
+      },
+      "thumb_tip": [
+        -0.03637674797134902,
+        -0.022435600235432424,
+        0.2172728884682742
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08597906030238207,
+      "thumb_to_index": 0.07028890308324764,
+      "thumb_to_palm": 0.1387923891454296,
+      "score": 0.1000368409190316,
+      "thumb_ball_improvement_vs_old_reference": 0.06892093969761794,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.4
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.4
+      },
+      "thumb_tip": [
+        -0.027016418287208195,
+        -0.0192595399428711,
+        0.2223790816213777
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08603575076150005,
+      "thumb_to_index": 0.06444665577295501,
+      "thumb_to_palm": 0.14108550518144133,
+      "score": 0.09892508191609106,
+      "thumb_ball_improvement_vs_old_reference": 0.06886424923849996,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        -0.025337804060083048,
+        -0.016788807975889563,
+        0.2144578187631056
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08709752545730125,
+      "thumb_to_index": 0.07251656169125947,
+      "thumb_to_palm": 0.13274091515701988,
+      "score": 0.10160083779555315,
+      "thumb_ball_improvement_vs_old_reference": 0.06780247454269876,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.8
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.8
+      },
+      "thumb_tip": [
+        -0.022319800633529594,
+        -0.02060719207502798,
+        0.2386164731444294
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08729429526468416,
+      "thumb_to_index": 0.0482124727916419,
+      "thumb_to_palm": 0.1563206109215929,
+      "score": 0.09693678982301254,
+      "thumb_ball_improvement_vs_old_reference": 0.06760570473531585,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        -0.04346062588013872,
+        -0.02385026103321876,
+        0.20881157959226918
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08768706341113161,
+      "thumb_to_index": 0.07996204941613316,
+      "thumb_to_palm": 0.13318559576320962,
+      "score": 0.10367947329435824,
+      "thumb_ball_improvement_vs_old_reference": 0.0672129365888684,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "thumb_tip": [
+        -0.01685742706985899,
+        -0.014823510240498187,
+        0.2233240034277092
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08784495615860786,
+      "thumb_to_index": 0.06447269957162043,
+      "thumb_to_palm": 0.13986584808152216,
+      "score": 0.10073949607293195,
+      "thumb_ball_improvement_vs_old_reference": 0.06705504384139215,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.8
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.8
+      },
+      "thumb_tip": [
+        -0.01597747437594223,
+        -0.013612747683328236,
+        0.2195640119162091
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08837141717881179,
+      "thumb_to_index": 0.0684490328491635,
+      "thumb_to_palm": 0.13592542028304105,
+      "score": 0.10206122374864449,
+      "thumb_ball_improvement_vs_old_reference": 0.06652858282118822,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        -0.013553142690571375,
+        -0.01502758071805374,
+        0.23128961784629787
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08864111655128937,
+      "thumb_to_index": 0.05721479194960964,
+      "thumb_to_palm": 0.1474001047999119,
+      "score": 0.1000840749412113,
+      "thumb_ball_improvement_vs_old_reference": 0.06625888344871064,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.4
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.4
+      },
+      "thumb_tip": [
+        -0.012160796291413208,
+        -0.016171191113354258,
+        0.2395613887700193
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.08971638574868723,
+      "thumb_to_index": 0.04941614173593427,
+      "thumb_to_palm": 0.15558799186396294,
+      "score": 0.09959961409587409,
+      "thumb_ball_improvement_vs_old_reference": 0.06518361425131278,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.4
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.4
+      },
+      "thumb_tip": [
+        -0.005818483158593029,
+        -0.00917671798095532,
+        0.2205089337225406
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09161419644881741,
+      "thumb_to_index": 0.07041090363770845,
+      "thumb_to_palm": 0.13565442591283342,
+      "score": 0.1056963771763591,
+      "thumb_ball_improvement_vs_old_reference": 0.0632858035511826,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.8
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.8
+      },
+      "thumb_tip": [
+        -0.0033941383484549902,
+        -0.010591579756380014,
+        0.23223453347188777
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09219414441438624,
+      "thumb_to_index": 0.06004016808779185,
+      "thumb_to_palm": 0.14735011891131142,
+      "score": 0.1042021780319446,
+      "thumb_ball_improvement_vs_old_reference": 0.06270585558561377,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        -0.01224851849317481,
+        -0.0189192981786114,
+        0.25215336929107857
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.092200937932955,
+      "thumb_to_index": 0.037133398584143835,
+      "thumb_to_palm": 0.16836515364730562,
+      "score": 0.09962761764978377,
+      "thumb_ball_improvement_vs_old_reference": 0.06269906206704501,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.8,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.8,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        -0.007210869580197225,
+        -0.008033019949645549,
+        0.21223718165226416
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09227636231142912,
+      "thumb_to_index": 0.07812045704594518,
+      "thumb_to_palm": 0.12741595923740381,
+      "score": 0.10790045372061816,
+      "thumb_ball_improvement_vs_old_reference": 0.06262363768857089,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.0
+      },
+      "thumb_tip": [
+        -0.002806991038379657,
+        -0.011175617651393736,
+        0.23619584091430973
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09264918876875697,
+      "thumb_to_index": 0.05657207552832919,
+      "thumb_to_palm": 0.1513264690836987,
+      "score": 0.1039636038744228,
+      "thumb_ball_improvement_vs_old_reference": 0.06225081123124304,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.8,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.8,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        0.0017161371037277195,
+        -0.005959972811668595,
+        0.22155265794106516
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09476252289615424,
+      "thumb_to_index": 0.07261049914474829,
+      "thumb_to_palm": 0.13638747144762514,
+      "score": 0.10928462272510389,
+      "thumb_ball_improvement_vs_old_reference": 0.060137477103845774,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.8
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.0,
+        "thumb_ip_joint": 0.8
+      },
+      "thumb_tip": [
+        -0.002089523812585194,
+        -0.014483276060775787,
+        0.25309828946993973
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09578590051931214,
+      "thumb_to_index": 0.041732337948184234,
+      "thumb_to_palm": 0.16841467161766413,
+      "score": 0.10413236810894899,
+      "thumb_ball_improvement_vs_old_reference": 0.05911409948068787,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 1.2
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.8,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 1.2
+      },
+      "thumb_tip": [
+        0.0030208047873216464,
+        -0.009851785492723357,
+        0.2424163889057853
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09584700365741325,
+      "thumb_to_index": 0.05422734556126532,
+      "thumb_to_palm": 0.15743105522052656,
+      "score": 0.10669247276966631,
+      "thumb_ball_improvement_vs_old_reference": 0.05905299634258676,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": -0.8,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.0
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.0,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.0
+      },
+      "thumb_tip": [
+        0.0035352882547026246,
+        -0.0041810704193288055,
+        0.21714340180582642
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09614985032951924,
+      "thumb_to_index": 0.07767185797588039,
+      "thumb_to_palm": 0.13195067265822824,
+      "score": 0.11168422192469532,
+      "thumb_ball_improvement_vs_old_reference": 0.05875014967048077,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    },
+    {
+      "requested_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.4
+      },
+      "applied_pose": {
+        "thumb_cmc_abd_joint": -0.8,
+        "thumb_cmc_flex_joint": 0.4,
+        "thumb_mcp_joint": 0.4,
+        "thumb_ip_joint": 0.4
+      },
+      "thumb_tip": [
+        0.005959666904578562,
+        -0.005596006294419504,
+        0.2288689856161782
+      ],
+      "index_tip": [
+        -0.01889905274706996,
+        -0.037339012541697525,
+        0.2837029145703529
+      ],
+      "palm_pos": [
+        0.0005711446680750725,
+        -0.0006589003018724648,
+        0.08527305568729812
+      ],
+      "ball_center": [
+        0.0,
+        -0.1,
+        0.21
+      ],
+      "thumb_to_ball": 0.09645553522406246,
+      "thumb_to_index": 0.06806125294824852,
+      "thumb_to_palm": 0.14378178702330408,
+      "score": 0.11006778581371217,
+      "thumb_ball_improvement_vs_old_reference": 0.05844446477593755,
+      "contact": {
+        "ball_contact_count": 0,
+        "max_penetration": 0.0,
+        "ball_contacts": []
+      },
+      "looks_finite": true
+    }
+  ],
+  "renders": [
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\baseline_full.png",
+      "camera": "full_hand_with_ball",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 35.4662091503268
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\baseline_thumb.png",
+      "camera": "thumb_root_closeup",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 250,
+      "mean_pixel": 66.05401339869282
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\baseline_palm.png",
+      "camera": "palm",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 56.0840908496732
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_01_abd_m0d80_cmcflex_p0d40_mcp_p0d00_ip_p1d20_full.png",
+      "camera": "full_hand_with_ball",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 35.43953202614379
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_01_abd_m0d80_cmcflex_p0d40_mcp_p0d00_ip_p1d20_thumb.png",
+      "camera": "thumb_root_closeup",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 248,
+      "mean_pixel": 64.0893702614379
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_01_abd_m0d80_cmcflex_p0d40_mcp_p0d00_ip_p1d20_palm.png",
+      "camera": "palm",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 57.34245392156863
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_02_abd_m0d80_cmcflex_p0d40_mcp_p0d00_ip_p0d80_full.png",
+      "camera": "full_hand_with_ball",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 35.428240196078434
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_02_abd_m0d80_cmcflex_p0d40_mcp_p0d00_ip_p0d80_thumb.png",
+      "camera": "thumb_root_closeup",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 248,
+      "mean_pixel": 64.0893702614379
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_02_abd_m0d80_cmcflex_p0d40_mcp_p0d00_ip_p0d80_palm.png",
+      "camera": "palm",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 57.34245392156863
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_03_abd_m0d80_cmcflex_p0d00_mcp_p0d00_ip_p0d40_full.png",
+      "camera": "full_hand_with_ball",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 35.42867156862745
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_03_abd_m0d80_cmcflex_p0d00_mcp_p0d00_ip_p0d40_thumb.png",
+      "camera": "thumb_root_closeup",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 248,
+      "mean_pixel": 59.94544019607843
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_03_abd_m0d80_cmcflex_p0d00_mcp_p0d00_ip_p0d40_palm.png",
+      "camera": "palm",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 56.0840908496732
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_04_abd_m0d80_cmcflex_p0d40_mcp_p0d00_ip_p0d40_full.png",
+      "camera": "full_hand_with_ball",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 35.428240196078434
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_04_abd_m0d80_cmcflex_p0d40_mcp_p0d00_ip_p0d40_thumb.png",
+      "camera": "thumb_root_closeup",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 248,
+      "mean_pixel": 64.0893702614379
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_04_abd_m0d80_cmcflex_p0d40_mcp_p0d00_ip_p0d40_palm.png",
+      "camera": "palm",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 57.34245392156863
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_05_abd_m0d80_cmcflex_p0d80_mcp_p0d00_ip_p1d20_full.png",
+      "camera": "full_hand_with_ball",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 35.44619117647059
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_05_abd_m0d80_cmcflex_p0d80_mcp_p0d00_ip_p1d20_thumb.png",
+      "camera": "thumb_root_closeup",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 248,
+      "mean_pixel": 63.15840294117647
+    },
+    {
+      "file": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export3_thumb\\candidate_05_abd_m0d80_cmcflex_p0d80_mcp_p0d00_ip_p1d20_palm.png",
+      "camera": "palm",
+      "shape": [
+        850,
+        1200,
+        3
+      ],
+      "min_pixel": 0,
+      "max_pixel": 255,
+      "mean_pixel": 57.52019477124183
+    }
+  ],
+  "interpretation": [
+    "Best export3 candidate thumb-ball distance is 0.0858 m, compared with old reference 0.1549 m.",
+    "Thumb-to-ball distance improves strongly against the old model reference.",
+    "Metric-wise this is a partial opposition candidate.",
+    "Do not edit axes automatically; use this report to decide what to inspect in SolidWorks."
+  ],
+  "visual_judgment": [
+    "Metric candidates visibly move the thumb from the palm side toward the ball compared with baseline.",
+    "The best views are a partial improvement: the thumb is closer to the ball/index side, but it does not yet form a clean Shadow-like opposition clamp around the ball.",
+    "No obvious fly-away or severe visual break is visible in the rendered best candidates.",
+    "Treat export3 thumb as improved enough for scripted smoke tests, not as final opposition kinematics.",
+    "Requested negative `thumb_cmc_flex_joint` values are clamped by the exported joint range; this is recorded in requested/applied pose fields."
+  ]
+}

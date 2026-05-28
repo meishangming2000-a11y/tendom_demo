@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="arm_hand_export4_mount_tool_z_plus_25mm_scene">
+  <include file="arm_hand_export4_mount_tool_z_plus_25mm.xml"/>
+  <statistic extent="0.9" center="0 0 0.12"/>
+  <visual>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <quality shadowsize="8192"/>
+    <global azimuth="205" elevation="-22" offwidth="1280" offheight="900"/>
+  </visual>
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.30 0.50 0.70" rgb2="0.00 0.00 0.00" width="512" height="3072"/>
+    <texture type="2d" name="ground_checker" builtin="checker" mark="edge" rgb1="0.20 0.30 0.40" rgb2="0.10 0.20 0.30" markrgb="0.80 0.80 0.80" width="300" height="300"/>
+    <material name="ground" texture="ground_checker" texrepeat="5 5" texuniform="true" reflectance="0.20"/>
+  </asset>
+  <worldbody>
+    <light name="fill_light" pos="0 0 1"/>
+    <light name="key_light" pos="0.3 0 1.5" dir="0 0 -1" directional="true"/>
+    <geom name="floor" type="plane" pos="0 0 -0.12" size="0 0 0.05" material="ground" contype="0" conaffinity="4"/>
+  </worldbody>
+</mujoco>

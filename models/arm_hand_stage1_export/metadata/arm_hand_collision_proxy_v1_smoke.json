@@ -1,0 +1,417 @@
+{
+  "generated_at": "2026-05-27T10:51:50",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_collision_proxy_v1_ball.xml",
+  "model_summary": {
+    "nbody": 32,
+    "njnt": 27,
+    "nu": 26,
+    "ngeom": 66,
+    "nsite": 14,
+    "nmesh": 29
+  },
+  "free_ball_open": {
+    "finite": true,
+    "steps": 300,
+    "start_ball": [
+      0.0213343049,
+      0.145570505,
+      0.518815052
+    ],
+    "end_ball": [
+      -0.012575185544121726,
+      0.37470945533558375,
+      -0.875832197030301
+    ],
+    "ball_displacement": 1.4137522630683423,
+    "vertical_drop": 1.394647249030301,
+    "start_contact": {
+      "contact_count": 1,
+      "max_penetration": 0.0005000004593253109,
+      "ball_hand_contact_count": 1,
+      "top_contacts": [
+        {
+          "geom1": "ball_geom",
+          "geom2": "palm_link_palmar_pad_collision_proxy_v1",
+          "body1": "ball",
+          "body2": "palm_link",
+          "dist": -0.0005000004593253109,
+          "penetration": 0.0005000004593253109,
+          "pos": [
+            0.02487815396502469,
+            0.12461292144779748,
+            0.5009745555744378
+          ]
+        }
+      ]
+    },
+    "end_contact": {
+      "contact_count": 0,
+      "max_penetration": 0.0,
+      "ball_hand_contact_count": 0,
+      "top_contacts": []
+    },
+    "screenshots": {
+      "start": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_collision_proxy_v1\\v1_free_ball_start.png",
+      "end": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_collision_proxy_v1\\v1_free_ball_after_open.png"
+    }
+  },
+  "scripted_pinned": {
+    "finite": true,
+    "ball_start": [
+      0.0213343049,
+      0.145570505,
+      0.518815052
+    ],
+    "stages": [
+      {
+        "phase": "open_hand",
+        "contact": {
+          "contact_count": 1,
+          "max_penetration": 0.0008005039074201713,
+          "ball_hand_contact_count": 1,
+          "top_contacts": [
+            {
+              "geom1": "ball_geom",
+              "geom2": "palm_link_palmar_pad_collision_proxy_v1",
+              "body1": "ball",
+              "body2": "palm_link",
+              "dist": -0.0008005039074201713,
+              "penetration": 0.0008005039074201713,
+              "pos": [
+                0.02473355746123331,
+                0.12381719126864635,
+                0.5021722002026386
+              ]
+            }
+          ]
+        },
+        "tip_distances": {
+          "index_tip_site": 0.0905488186991123,
+          "middle_tip_site": 0.10787304367834331,
+          "ring_tip_site": 0.10087242501432704,
+          "little_tip_site": 0.09916503072351175,
+          "thumb_tip_site": 0.06008641285104142
+        }
+      },
+      {
+        "phase": "preshape",
+        "contact": {
+          "contact_count": 1,
+          "max_penetration": 0.00030958624580410335,
+          "ball_hand_contact_count": 1,
+          "top_contacts": [
+            {
+              "geom1": "ball_geom",
+              "geom2": "palm_link_palmar_pad_collision_proxy_v1",
+              "body1": "ball",
+              "body2": "palm_link",
+              "dist": -0.00030958624580410335,
+              "penetration": 0.00030958624580410335,
+              "pos": [
+                0.024813963704195845,
+                0.12377389215494691,
+                0.5018399175640778
+              ]
+            }
+          ]
+        },
+        "tip_distances": {
+          "index_tip_site": 0.06585636017173618,
+          "middle_tip_site": 0.08313733007403334,
+          "ring_tip_site": 0.09018737373227692,
+          "little_tip_site": 0.09381357764770468,
+          "thumb_tip_site": 0.05855958112027717
+        }
+      },
+      {
+        "phase": "close_four_fingers",
+        "contact": {
+          "contact_count": 5,
+          "max_penetration": 0.003411810556654819,
+          "ball_hand_contact_count": 5,
+          "top_contacts": [
+            {
+              "geom1": "ball_geom",
+              "geom2": "index_proximal_inter_link_collision_proxy",
+              "body1": "ball",
+              "body2": "index_proximal_inter_link",
+              "dist": -0.003411810556654819,
+              "penetration": 0.003411810556654819,
+              "pos": [
+                0.010297979281705153,
+                0.1683379362358499,
+                0.5259720771501658
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_proximal_phalanx_link_collision_proxy",
+              "body1": "ball",
+              "body2": "middle_proximal_phalanx_link",
+              "dist": -0.0017119708139898366,
+              "penetration": 0.0017119708139898366,
+              "pos": [
+                -0.002217689954563541,
+                0.1460452396206285,
+                0.5323011816759249
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "palm_link_palmar_pad_collision_proxy_v1",
+              "body1": "ball",
+              "body2": "palm_link",
+              "dist": -0.000924012719438632,
+              "penetration": 0.000924012719438632,
+              "pos": [
+                0.024979043020204046,
+                0.12397506810213199,
+                0.5021209188102392
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "index_distal_link_collision_proxy",
+              "body1": "ball",
+              "body2": "index_distal_link",
+              "dist": -0.0006638525171911687,
+              "penetration": 0.0006638525171911687,
+              "pos": [
+                0.019417810413529125,
+                0.17140418032989518,
+                0.5285346493369623
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_proximal_inter_link_collision_proxy",
+              "body1": "ball",
+              "body2": "middle_proximal_inter_link",
+              "dist": -0.00023386599947587162,
+              "penetration": 0.00023386599947587162,
+              "pos": [
+                0.011877934876975492,
+                0.15719706689594318,
+                0.5423281451569743
+              ]
+            }
+          ]
+        },
+        "tip_distances": {
+          "index_tip_site": 0.04495460059379288,
+          "middle_tip_site": 0.0578385070287917,
+          "ring_tip_site": 0.0592843450871416,
+          "little_tip_site": 0.0708310452436667,
+          "thumb_tip_site": 0.05831070976980252
+        }
+      },
+      {
+        "phase": "close_thumb_smoke",
+        "contact": {
+          "contact_count": 6,
+          "max_penetration": 0.004106953380084067,
+          "ball_hand_contact_count": 6,
+          "top_contacts": [
+            {
+              "geom1": "ball_geom",
+              "geom2": "index_proximal_inter_link_collision_proxy",
+              "body1": "ball",
+              "body2": "index_proximal_inter_link",
+              "dist": -0.004106953380084067,
+              "penetration": 0.004106953380084067,
+              "pos": [
+                0.012497395959625898,
+                0.1694755128067696,
+                0.5236814381347012
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_proximal_phalanx_link_collision_proxy",
+              "body1": "ball",
+              "body2": "middle_proximal_phalanx_link",
+              "dist": -0.002197495723630874,
+              "penetration": 0.002197495723630874,
+              "pos": [
+                -0.0017902205904804964,
+                0.1457868647398275,
+                0.5325586641854947
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "index_distal_link_collision_proxy",
+              "body1": "ball",
+              "body2": "index_distal_link",
+              "dist": -0.0017379994055217183,
+              "penetration": 0.0017379994055217183,
+              "pos": [
+                0.02101466270682607,
+                0.17185989139493316,
+                0.5255126014753706
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_proximal_inter_link_collision_proxy",
+              "body1": "ball",
+              "body2": "middle_proximal_inter_link",
+              "dist": -0.0016093738298778252,
+              "penetration": 0.0016093738298778252,
+              "pos": [
+                0.014850172654041524,
+                0.156614846937269,
+                0.5428059584852518
+              ]
+            },
+            {
+              "geom1": "thumb_tip_collision_proxy_sphere",
+              "geom2": "ball_geom",
+              "body1": "thumb_distal_link",
+              "body2": "ball",
+              "dist": -0.0014932380773730047,
+              "penetration": 0.0014932380773730047,
+              "pos": [
+                0.047036888570285,
+                0.15151384025322187,
+                0.5119739459079785
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "palm_link_palmar_pad_collision_proxy_v1",
+              "body1": "ball",
+              "body2": "palm_link",
+              "dist": -0.001160598498958141,
+              "penetration": 0.001160598498958141,
+              "pos": [
+                0.024944142816299752,
+                0.12399758092742012,
+                0.5022796957466601
+              ]
+            }
+          ]
+        },
+        "tip_distances": {
+          "index_tip_site": 0.042846152011566475,
+          "middle_tip_site": 0.053971560466620105,
+          "ring_tip_site": 0.05302748209167496,
+          "little_tip_site": 0.06541349979347677,
+          "thumb_tip_site": 0.038506761922626996
+        }
+      },
+      {
+        "phase": "hold",
+        "contact": {
+          "contact_count": 6,
+          "max_penetration": 0.004003698624352075,
+          "ball_hand_contact_count": 6,
+          "top_contacts": [
+            {
+              "geom1": "ball_geom",
+              "geom2": "index_proximal_inter_link_collision_proxy",
+              "body1": "ball",
+              "body2": "index_proximal_inter_link",
+              "dist": -0.004003698624352075,
+              "penetration": 0.004003698624352075,
+              "pos": [
+                0.012524599964404033,
+                0.1695905272527925,
+                0.5234336523410006
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_proximal_phalanx_link_collision_proxy",
+              "body1": "ball",
+              "body2": "middle_proximal_phalanx_link",
+              "dist": -0.0023019119819490284,
+              "penetration": 0.0023019119819490284,
+              "pos": [
+                -0.0018629807309841033,
+                0.145803780427013,
+                0.5323318077545544
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "index_distal_link_collision_proxy",
+              "body1": "ball",
+              "body2": "index_distal_link",
+              "dist": -0.0015685794303400983,
+              "penetration": 0.0015685794303400983,
+              "pos": [
+                0.021205399280293774,
+                0.17200409931121066,
+                0.5252914214643942
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_proximal_inter_link_collision_proxy",
+              "body1": "ball",
+              "body2": "middle_proximal_inter_link",
+              "dist": -0.0014885507085269731,
+              "penetration": 0.0014885507085269731,
+              "pos": [
+                0.01471211119361929,
+                0.1568105144849348,
+                0.5427458535590359
+              ]
+            },
+            {
+              "geom1": "thumb_tip_collision_proxy_sphere",
+              "geom2": "ball_geom",
+              "body1": "thumb_distal_link",
+              "body2": "ball",
+              "dist": -0.0011505973916095397,
+              "penetration": 0.0011505973916095397,
+              "pos": [
+                0.04821538845555593,
+                0.14769356072203169,
+                0.5138136299117638
+              ]
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "palm_link_palmar_pad_collision_proxy_v1",
+              "body1": "ball",
+              "body2": "palm_link",
+              "dist": -0.0010940840361640218,
+              "penetration": 0.0010940840361640218,
+              "pos": [
+                0.024889351638022396,
+                0.12394110792029346,
+                0.502286418462535
+              ]
+            }
+          ]
+        },
+        "tip_distances": {
+          "index_tip_site": 0.043086384329584865,
+          "middle_tip_site": 0.054130643549313996,
+          "ring_tip_site": 0.05297912097957637,
+          "little_tip_site": 0.06522066161955208,
+          "thumb_tip_site": 0.03884940260839046
+        }
+      }
+    ],
+    "screenshots": {
+      "open_hand": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_collision_proxy_v1\\v1_scripted_open_hand.png",
+      "preshape": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_collision_proxy_v1\\v1_scripted_preshape.png",
+      "close_four_fingers": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_collision_proxy_v1\\v1_scripted_close_four_fingers.png",
+      "close_thumb_smoke": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_collision_proxy_v1\\v1_scripted_close_thumb_smoke.png",
+      "hold": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_collision_proxy_v1\\v1_scripted_hold.png"
+    }
+  },
+  "hold_metrics": {
+    "contact_count": 6,
+    "ball_hand_contact_count": 6,
+    "max_penetration": 0.004003698624352075,
+    "four_finger_avg_tip_ball_distance": 0.053854202619506825,
+    "thumb_ball_distance": 0.03884940260839046
+  },
+  "status": "PASS",
+  "issues": [],
+  "training_ready": false
+}

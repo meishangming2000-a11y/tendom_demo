@@ -1,0 +1,176 @@
+{
+  "created_at": "2026-05-23T13:28:01",
+  "status": "diagnostic_offline_bc_not_promoted_baseline",
+  "dataset": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\data\\export3_dagger_failonly_pinned_wrap_v1.npz",
+  "checkpoint": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\checkpoints\\bc_hand_stage1_export3_dagger_failonly_ft_v1.pth",
+  "report": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\export3_bc_dagger_failonly_ft_v1_report.md",
+  "metadata": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\metadata\\export3_bc_dagger_failonly_ft_v1.json",
+  "init_checkpoint": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\checkpoints\\bc_hand_stage1_export3_pinned_wrap_v0.pth",
+  "normalization_source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\checkpoints\\bc_hand_stage1_export3_pinned_wrap_v0.pth",
+  "class_filter": "PINNED_WRAP_PASS,DAGGER_CORRECTION",
+  "train_samples": 4930,
+  "val_samples": 1210,
+  "obs_dim": 109,
+  "act_dim": 21,
+  "hidden_dim": 192,
+  "depth": 3,
+  "epochs": 30,
+  "batch_size": 256,
+  "lr": 0.0001,
+  "device": "cpu",
+  "final_train_loss": 0.0018403089008318604,
+  "final_val_loss": 0.005548637360334396,
+  "val_action_rmse_raw": 0.016685307025909424,
+  "loss_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.0549649943520162,
+      "val_loss": 0.03350285813212395
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.04506306301870404,
+      "val_loss": 0.02985035441815853
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.03899490369774749,
+      "val_loss": 0.0275993961840868
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.034115867996040515,
+      "val_loss": 0.023806458339095116
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.030199546933657742,
+      "val_loss": 0.022273272275924683
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.026774753427650577,
+      "val_loss": 0.020380018278956413
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.023647456873835463,
+      "val_loss": 0.018681654706597328
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.020352213102077375,
+      "val_loss": 0.016440344974398613
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.01739264568106156,
+      "val_loss": 0.01547915581613779
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.014876655777104002,
+      "val_loss": 0.014159774407744408
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.01270655478836315,
+      "val_loss": 0.013125354424118996
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.010891733826355325,
+      "val_loss": 0.012728721834719181
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.009556243653290171,
+      "val_loss": 0.012046587653458118
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.00808329550307584,
+      "val_loss": 0.010862414725124836
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.006901182950253298,
+      "val_loss": 0.00990995205938816
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.005951583832332347,
+      "val_loss": 0.009248725138604641
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.005127142566212776,
+      "val_loss": 0.008788904175162315
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.004492353438069141,
+      "val_loss": 0.00836965162307024
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.004058140517697947,
+      "val_loss": 0.00792030617594719
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.003678847784384269,
+      "val_loss": 0.007452997844666243
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.00334493889214573,
+      "val_loss": 0.007324778009206057
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.003076800462009638,
+      "val_loss": 0.007178710773587227
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.0028018950798282395,
+      "val_loss": 0.007003151811659336
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.002629026107803652,
+      "val_loss": 0.006516021676361561
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.0024359596613133384,
+      "val_loss": 0.006396024953573942
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.0022994550191523396,
+      "val_loss": 0.006191934924572706
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.0021530764072596967,
+      "val_loss": 0.005955532193183899
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.0020403079272948705,
+      "val_loss": 0.005852004047483206
+    },
+    {
+      "epoch": 29,
+      "train_loss": 0.001928637089098201,
+      "val_loss": 0.005730311386287212
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.0018403089008318604,
+      "val_loss": 0.005548637360334396
+    }
+  ]
+}

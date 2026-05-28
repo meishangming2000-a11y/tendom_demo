@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-05-26T02:10:29",
+  "source_hand": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_wrist2_collision_tuned.xml",
+  "output_hand": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_palmar_ypos_collision_candidate.xml",
+  "output_scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_palmar_ypos_collision_candidate.xml",
+  "tip_radius": 0.015,
+  "ball_position": [
+    0.0,
+    0.08,
+    0.21
+  ],
+  "changes": [
+    {
+      "finger": "index",
+      "site": "index_tip_site",
+      "body": "index_distal_link",
+      "geom": "index_tip_collision_proxy_sphere",
+      "pos": "0.011092007 0.025709199 -6.7060969e-05",
+      "radius": 0.015
+    },
+    {
+      "finger": "little",
+      "site": "little_tip_site",
+      "body": "little_distal_link",
+      "geom": "little_tip_collision_proxy_sphere",
+      "pos": "0.026961146 -0.0075560895 -4.619485e-05",
+      "radius": 0.015
+    },
+    {
+      "finger": "middle",
+      "site": "middle_tip_site",
+      "body": "middle_distal_link",
+      "geom": "middle_tip_collision_proxy_sphere",
+      "pos": "0.027301483 -0.006215095 -4.054405e-05",
+      "radius": 0.015
+    },
+    {
+      "finger": "ring",
+      "site": "ring_tip_site",
+      "body": "ring_distal_link",
+      "geom": "ring_tip_collision_proxy_sphere",
+      "pos": "0.026733217 -0.0083266507 -4.4813101e-05",
+      "radius": 0.015
+    },
+    {
+      "finger": "thumb",
+      "site": "thumb_tip_site",
+      "body": "thumb_distal_link",
+      "geom": "thumb_tip_collision_proxy_sphere",
+      "pos": "0.00052061935 -0.027995157 -1.2280723e-05",
+      "radius": 0.015
+    }
+  ],
+  "scope": "experimental candidate only; no CAD/STL/URDF/current-baseline changes"
+}

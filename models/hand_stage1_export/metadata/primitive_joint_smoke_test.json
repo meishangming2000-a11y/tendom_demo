@@ -1,0 +1,261 @@
+{
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_primitive.xml",
+  "load_success": true,
+  "model_summary": {
+    "nbody": 25,
+    "njnt": 22,
+    "nq": 28,
+    "nv": 27,
+    "ngeom": 78,
+    "nsite": 5,
+    "nmesh": 0,
+    "nu": 0
+  },
+  "site_names": [
+    "index_tip_site",
+    "middle_tip_site",
+    "ring_tip_site",
+    "little_tip_site",
+    "thumb_tip_site"
+  ],
+  "hinge_joint_count": 21,
+  "joint_results": [
+    {
+      "name": "wrist_1_joint",
+      "range": [
+        -0.8,
+        0.8
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.2671407709388915,
+      "status": "ok"
+    },
+    {
+      "name": "wrist_2_joint",
+      "range": [
+        -0.8,
+        0.8
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.2711970777022474,
+      "status": "ok"
+    },
+    {
+      "name": "index_mcp_flex_joint",
+      "range": [
+        -0.5,
+        0.5
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "index_mcp_abd_joint",
+      "range": [
+        -0.2,
+        1.2
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "index_pip_joint",
+      "range": [
+        0.0,
+        1.57
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "index_dip_joint",
+      "range": [
+        0.0,
+        1.2
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "middle_mcp_flex_joint",
+      "range": [
+        -0.5,
+        0.5
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.268262071362793,
+      "status": "ok"
+    },
+    {
+      "name": "middle_mcp_abd_joint",
+      "range": [
+        -0.2,
+        1.2
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.2659865095181949,
+      "status": "ok"
+    },
+    {
+      "name": "middle_pip_joint",
+      "range": [
+        0.0,
+        1.57
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.2672824213935921,
+      "status": "ok"
+    },
+    {
+      "name": "middle_dip_joint",
+      "range": [
+        0.0,
+        1.2
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "ring_mcp_flex_joint",
+      "range": [
+        -0.5,
+        0.5
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "ring_mcp_abd_joint",
+      "range": [
+        -0.2,
+        1.2
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "ring_pip_joint",
+      "range": [
+        0.0,
+        1.57
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "ring_dip_joint",
+      "range": [
+        0.0,
+        1.2
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "little_mcp_flex_joint",
+      "range": [
+        -0.5,
+        0.5
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "little_mcp_abd_joint",
+      "range": [
+        -0.2,
+        1.2
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "little_pip_joint",
+      "range": [
+        0.0,
+        1.57
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "little_dip_joint",
+      "range": [
+        0.0,
+        1.2
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "thumb_cmc_joint",
+      "range": [
+        -0.8,
+        0.8
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "thumb_mcp_joint",
+      "range": [
+        0.0,
+        1.2
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    },
+    {
+      "name": "thumb_ip_joint",
+      "range": [
+        0.0,
+        1.2
+      ],
+      "target": 0.1,
+      "finite_pose": true,
+      "max_abs_body_pos": 0.26819652646034375,
+      "status": "ok"
+    }
+  ],
+  "overall_status": "ok",
+  "notes": [
+    "Primitive smoke test does not use suspicious STL meshes.",
+    "This test sets qpos directly and validates kinematic/numeric sanity only.",
+    "Axis signs and mechanical semantics still need viewer/manual confirmation."
+  ]
+}

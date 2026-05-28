@@ -1,0 +1,69 @@
+{
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball.xml",
+  "load_success": true,
+  "viewer_requested": true,
+  "ball_position_configured": [
+    0.01,
+    -0.045,
+    0.215
+  ],
+  "ball_radius": 0.025,
+  "ball_xpos_after_forward": [
+    0.01,
+    -0.045,
+    0.215
+  ],
+  "target_angles_requested": {
+    "index_mcp_flex_joint": -0.08,
+    "index_mcp_abd_joint": 0.45,
+    "index_pip_joint": 0.65,
+    "index_dip_joint": 0.35,
+    "middle_mcp_flex_joint": 0.0,
+    "middle_mcp_abd_joint": 0.5,
+    "middle_pip_joint": 0.7,
+    "middle_dip_joint": 0.38,
+    "ring_mcp_flex_joint": 0.04,
+    "ring_mcp_abd_joint": 0.5,
+    "ring_pip_joint": 0.7,
+    "ring_dip_joint": 0.38,
+    "little_mcp_flex_joint": 0.08,
+    "little_mcp_abd_joint": 0.45,
+    "little_pip_joint": 0.65,
+    "little_dip_joint": 0.35,
+    "thumb_cmc_joint": 0.25,
+    "thumb_mcp_joint": 0.45,
+    "thumb_ip_joint": 0.35
+  },
+  "target_angles_applied": {
+    "index_mcp_flex_joint": -0.08,
+    "index_mcp_abd_joint": 0.45,
+    "index_pip_joint": 0.65,
+    "index_dip_joint": 0.35,
+    "middle_mcp_flex_joint": 0.0,
+    "middle_mcp_abd_joint": 0.5,
+    "middle_pip_joint": 0.7,
+    "middle_dip_joint": 0.38,
+    "ring_mcp_flex_joint": 0.04,
+    "ring_mcp_abd_joint": 0.5,
+    "ring_pip_joint": 0.7,
+    "ring_dip_joint": 0.38,
+    "little_mcp_flex_joint": 0.08,
+    "little_mcp_abd_joint": 0.45,
+    "little_pip_joint": 0.65,
+    "little_dip_joint": 0.35,
+    "thumb_cmc_joint": 0.25,
+    "thumb_mcp_joint": 0.45,
+    "thumb_ip_joint": 0.35
+  },
+  "missing_target_joints": [],
+  "visual_grasp_status": "approximate_wrap_visible_in_primitive_skeleton_renders",
+  "notes": [
+    "No RL, tendon routing, or actuator controller is used; the demo directly interpolates qpos.",
+    "The pose uses small MCP side-motion values and moderate PIP/DIP closure to avoid explosive motion.",
+    "Default scene uses primitive skeleton geoms because the exported STL meshes appear unsuitable as clean per-link visuals.",
+    "See docs/renders/scripted_close_front.png, scripted_close_side.png, and scripted_close_top.png for fixed-camera checks.",
+    "CAD/URDF current names mcp_flex and mcp_abd may need later review against actual motion-axis semantics.",
+    "TODO: confirm whether any target signs should be flipped after visual inspection.",
+    "TODO: tune ball position after viewing real palm/finger alignment."
+  ]
+}

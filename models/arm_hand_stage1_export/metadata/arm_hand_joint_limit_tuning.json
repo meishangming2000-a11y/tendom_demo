@@ -1,0 +1,486 @@
+{
+  "generated_at": "2026-05-27T02:26:16",
+  "model": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\arm_hand_export4_joint_limit_tuned.xml",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_joint_limit_tuned.xml",
+  "status": "PASS_LOAD_AND_RENDER",
+  "model_summary": {
+    "nbody": 31,
+    "njnt": 26,
+    "nu": 26,
+    "ngeom": 59,
+    "nsite": 14,
+    "nmesh": 29,
+    "nq": 26,
+    "nv": 26
+  },
+  "scripted_poses": {
+    "open_hand": {
+      "targets": {},
+      "render": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_joint_limit_tuning\\open_hand.png"
+    },
+    "preshape": {
+      "targets": {
+        "index_mcp_flex_joint": -0.035,
+        "index_mcp_abd_joint": -0.34,
+        "index_pip_joint": -0.48,
+        "index_dip_joint": -0.22,
+        "little_mcp_flex_joint": -0.015,
+        "little_mcp_abd_joint": -0.15,
+        "little_pip_joint": -0.16,
+        "little_dip_joint": -0.08,
+        "middle_mcp_flex_joint": -0.035,
+        "middle_mcp_abd_joint": -0.38,
+        "middle_pip_joint": -0.52,
+        "middle_dip_joint": -0.24,
+        "ring_mcp_flex_joint": -0.02,
+        "ring_mcp_abd_joint": -0.2,
+        "ring_pip_joint": -0.2,
+        "ring_dip_joint": -0.1
+      },
+      "render": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_joint_limit_tuning\\preshape.png"
+    },
+    "close_four_fingers": {
+      "targets": {
+        "index_mcp_flex_joint": -0.06,
+        "index_mcp_abd_joint": -0.58,
+        "index_pip_joint": -0.82,
+        "index_dip_joint": -0.42,
+        "little_mcp_flex_joint": -0.04,
+        "little_mcp_abd_joint": -0.54,
+        "little_pip_joint": -0.76,
+        "little_dip_joint": -0.4,
+        "middle_mcp_flex_joint": -0.06,
+        "middle_mcp_abd_joint": -0.64,
+        "middle_pip_joint": -0.88,
+        "middle_dip_joint": -0.46,
+        "ring_mcp_flex_joint": -0.05,
+        "ring_mcp_abd_joint": -0.62,
+        "ring_pip_joint": -0.84,
+        "ring_dip_joint": -0.44
+      },
+      "render": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_joint_limit_tuning\\close_four_fingers.png"
+    },
+    "close_thumb_smoke": {
+      "targets": {
+        "index_mcp_flex_joint": -0.06,
+        "index_mcp_abd_joint": -0.58,
+        "index_pip_joint": -0.82,
+        "index_dip_joint": -0.42,
+        "little_mcp_flex_joint": -0.04,
+        "little_mcp_abd_joint": -0.54,
+        "little_pip_joint": -0.76,
+        "little_dip_joint": -0.4,
+        "middle_mcp_flex_joint": -0.06,
+        "middle_mcp_abd_joint": -0.64,
+        "middle_pip_joint": -0.88,
+        "middle_dip_joint": -0.46,
+        "ring_mcp_flex_joint": -0.05,
+        "ring_mcp_abd_joint": -0.62,
+        "ring_pip_joint": -0.84,
+        "ring_dip_joint": -0.44,
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": -0.25
+      },
+      "render": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_joint_limit_tuning\\close_thumb_smoke.png"
+    }
+  },
+  "joint_table": [
+    {
+      "joint": "j1",
+      "body": "link_1",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "range": [
+        -3.1416,
+        3.1416
+      ],
+      "semantic_note": ""
+    },
+    {
+      "joint": "j2",
+      "body": "link_2",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -1.5708,
+        1.5708
+      ],
+      "semantic_note": ""
+    },
+    {
+      "joint": "j3",
+      "body": "link_3",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "range": [
+        -1.5708,
+        1.5708
+      ],
+      "semantic_note": ""
+    },
+    {
+      "joint": "j4",
+      "body": "ee_mount",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "range": [
+        -3.1416,
+        3.1416
+      ],
+      "semantic_note": ""
+    },
+    {
+      "joint": "wrist_1_joint",
+      "body": "wrist_middle_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.8,
+        0.8
+      ],
+      "semantic_note": ""
+    },
+    {
+      "joint": "wrist_2_joint",
+      "body": "palm_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.8,
+        0.8
+      ],
+      "semantic_note": ""
+    },
+    {
+      "joint": "index_mcp_flex_joint",
+      "body": "index_mcp_flex_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.3,
+        0.18
+      ],
+      "semantic_note": "User-confirmed spread / abduction-adduction semantic; name kept for compatibility."
+    },
+    {
+      "joint": "index_mcp_abd_joint",
+      "body": "index_proximal_phalanx_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.78,
+        0.08
+      ],
+      "semantic_note": "Used as long-finger flexion/closure target in scripted smoke."
+    },
+    {
+      "joint": "index_pip_joint",
+      "body": "index_proximal_inter_link",
+      "type": 3,
+      "axis": [
+        0.109773553624728,
+        -0.0483929965230635,
+        -0.992777862772996
+      ],
+      "range": [
+        -1.1,
+        0.04
+      ],
+      "semantic_note": "Used as long-finger flexion/closure target in scripted smoke."
+    },
+    {
+      "joint": "index_dip_joint",
+      "body": "index_distal_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.66,
+        0.04
+      ],
+      "semantic_note": "Used as long-finger flexion/closure target in scripted smoke."
+    },
+    {
+      "joint": "little_mcp_flex_joint",
+      "body": "little_mcp_flex_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.28,
+        0.16
+      ],
+      "semantic_note": "User-confirmed spread / abduction-adduction semantic; name kept for compatibility."
+    },
+    {
+      "joint": "little_mcp_abd_joint",
+      "body": "little_proximal_phalanx_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.76,
+        0.08
+      ],
+      "semantic_note": "Used as long-finger flexion/closure target in scripted smoke."
+    },
+    {
+      "joint": "little_pip_joint",
+      "body": "little_proximal_inter_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -1.0,
+        0.04
+      ],
+      "semantic_note": "Used as long-finger flexion/closure target in scripted smoke."
+    },
+    {
+      "joint": "little_dip_joint",
+      "body": "little_distal_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.62,
+        0.04
+      ],
+      "semantic_note": "Used as long-finger flexion/closure target in scripted smoke."
+    },
+    {
+      "joint": "middle_mcp_flex_joint",
+      "body": "middle_mcp_flex_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.3,
+        0.18
+      ],
+      "semantic_note": "User-confirmed spread / abduction-adduction semantic; name kept for compatibility."
+    },
+    {
+      "joint": "middle_mcp_abd_joint",
+      "body": "middle_proximal_phalanx_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.86,
+        0.08
+      ],
+      "semantic_note": "Used as long-finger flexion/closure target in scripted smoke."
+    },
+    {
+      "joint": "middle_pip_joint",
+      "body": "middle_proximal_inter_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -1.16,
+        0.04
+      ],
+      "semantic_note": "Used as long-finger flexion/closure target in scripted smoke."
+    },
+    {
+      "joint": "middle_dip_joint",
+      "body": "middle_distal_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.7,
+        0.04
+      ],
+      "semantic_note": "Used as long-finger flexion/closure target in scripted smoke."
+    },
+    {
+      "joint": "ring_mcp_flex_joint",
+      "body": "ring_mcp_flex_link",
+      "type": 3,
+      "axis": [
+        -0.9959987745791395,
+        -0.08936689004800599,
+        0.0
+      ],
+      "range": [
+        -0.3,
+        0.18
+      ],
+      "semantic_note": "User-confirmed spread / abduction-adduction semantic; name kept for compatibility."
+    },
+    {
+      "joint": "ring_mcp_abd_joint",
+      "body": "ring_proximal_phalanx_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.84,
+        0.08
+      ],
+      "semantic_note": "Used as long-finger flexion/closure target in scripted smoke."
+    },
+    {
+      "joint": "ring_pip_joint",
+      "body": "ring_proximal_inter_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -1.1,
+        0.04
+      ],
+      "semantic_note": "Used as long-finger flexion/closure target in scripted smoke."
+    },
+    {
+      "joint": "ring_dip_joint",
+      "body": "ring_distal_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.68,
+        0.04
+      ],
+      "semantic_note": "Used as long-finger flexion/closure target in scripted smoke."
+    },
+    {
+      "joint": "thumb_cmc_abd_joint",
+      "body": "thumb_trapezium1_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -1.05,
+        1.05
+      ],
+      "semantic_note": "Thumb scripted-smoke target only; not Shadow-equivalent opposition."
+    },
+    {
+      "joint": "thumb_cmc_joint",
+      "body": "thumb_metacarpal_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.95,
+        0.95
+      ],
+      "semantic_note": "Thumb scripted-smoke target only; not Shadow-equivalent opposition."
+    },
+    {
+      "joint": "thumb_mcp_joint",
+      "body": "thumb_proximal_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        -0.1,
+        1.2
+      ],
+      "semantic_note": "Thumb scripted-smoke target only; not Shadow-equivalent opposition."
+    },
+    {
+      "joint": "thumb_ip_joint",
+      "body": "thumb_distal_link",
+      "type": 3,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "range": [
+        -0.85,
+        0.05
+      ],
+      "semantic_note": "Thumb scripted-smoke target only; not Shadow-equivalent opposition."
+    }
+  ],
+  "notes": [
+    "No CAD/STL/joint-name changes were made.",
+    "No broad new limits were introduced here; this experiment preserves the export4 tuned ranges already present in the CAD-mount candidate.",
+    "The value of this phase is to make the semantic target table and visual pose set reproducible at arm+hand assembly scale."
+  ]
+}

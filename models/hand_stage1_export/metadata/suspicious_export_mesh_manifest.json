@@ -1,0 +1,154 @@
+{
+  "classification": "suspicious_export_mesh",
+  "reason": "All 23 exported STL files have identical byte size and triangle count; not trusted as clean per-link local meshes.",
+  "do_not_use_as_real_cad_visual": true,
+  "keep_files_do_not_delete": true,
+  "mesh_dir": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\meshes",
+  "stl_count": 23,
+  "unique_byte_sizes": [
+    3955184
+  ],
+  "unique_triangle_counts": [
+    79102
+  ],
+  "files": [
+    {
+      "name": "hand_base_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "index_distal_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "index_mcp_flex_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "index_proximal_inter_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "index_proximal_phalanx_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "little_distal_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "little_mcp_flex_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "little_proximal_inter_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "little_proximal_phalanx_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "middle_distal_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "middle_mcp_flex_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "middle_proximal_inter_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "middle_proximal_phalanx_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "palm_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "ring_distal_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "ring_mcp_flex_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "ring_proximal_inter_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "ring_proximal_phalanx_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "thumb_distal_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "thumb_metacarpal_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "thumb_proximal_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "thumb_root_connector_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    },
+    {
+      "name": "wrist_middle_link.STL",
+      "bytes": 3955184,
+      "triangles": 79102,
+      "tag": "suspicious_export_mesh"
+    }
+  ]
+}

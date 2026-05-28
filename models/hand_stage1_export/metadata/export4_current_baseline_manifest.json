@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-05-25 01:45:00",
+  "schema": "export4_current_baseline_manifest_v1",
+  "baseline_name": "hand_stage1_export4_current_baseline",
+  "files": {
+    "hand_mjcf": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_current_baseline.xml",
+    "scene_no_ball": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_export4_current_baseline.xml",
+    "scene_ball": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+    "thumb_tuning_report": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\export4_thumb_joint_tuning_report.md",
+    "thumb_close_demo_report": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\export4_thumb_tuned_close_demo_report.md"
+  },
+  "load_check": {
+    "hand": {
+      "bodies": 25,
+      "joints": 22,
+      "actuators": 22,
+      "geoms": 48,
+      "sites": 5
+    },
+    "scene_no_ball": {
+      "bodies": 25,
+      "joints": 22,
+      "actuators": 22,
+      "geoms": 49,
+      "sites": 5
+    },
+    "scene_ball": {
+      "bodies": 26,
+      "joints": 23,
+      "actuators": 22,
+      "geoms": 50,
+      "sites": 5
+    }
+  },
+  "thumb_visual_recommended_target": {
+    "thumb_cmc_abd_joint": -0.3,
+    "thumb_cmc_joint": 0.0,
+    "thumb_mcp_joint": 0.25,
+    "thumb_ip_joint": -0.25
+  },
+  "thumb_hold_metrics": {
+    "thumb_index_distance_m": 0.0195,
+    "thumb_middle_distance_m": 0.0332,
+    "thumb_long_tip_centroid_distance_m": 0.0314,
+    "contact_count": 0,
+    "max_penetration_m": 0.0
+  },
+  "status": "diagnostic_current_baseline",
+  "training_ready": false,
+  "notes": [
+    "CAD/STL/joint tree/joint names unchanged.",
+    "Long fingers use negative closing directions in the current export4 coordinate convention.",
+    "Thumb target is visually selected and remains experimental.",
+    "Collision proxy remains simplified."
+  ]
+}

@@ -1,0 +1,1406 @@
+{
+  "generated_at": "2026-05-25 01:17:13",
+  "schema": "export4_long_finger_joint_tuning_v1",
+  "input_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_flexion_sign_fixed.xml",
+  "tuned_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_long_finger_tuned.xml",
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_export4_long_finger_tuned.xml",
+  "ball_scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_long_finger_tuned.xml",
+  "tuned_limits": {
+    "index_mcp_flex_joint": [
+      -0.3,
+      0.18
+    ],
+    "middle_mcp_flex_joint": [
+      -0.3,
+      0.18
+    ],
+    "ring_mcp_flex_joint": [
+      -0.3,
+      0.18
+    ],
+    "little_mcp_flex_joint": [
+      -0.28,
+      0.16
+    ],
+    "index_mcp_abd_joint": [
+      -0.78,
+      0.08
+    ],
+    "middle_mcp_abd_joint": [
+      -0.86,
+      0.08
+    ],
+    "ring_mcp_abd_joint": [
+      -0.84,
+      0.08
+    ],
+    "little_mcp_abd_joint": [
+      -0.76,
+      0.08
+    ],
+    "index_pip_joint": [
+      -1.1,
+      0.04
+    ],
+    "middle_pip_joint": [
+      -1.16,
+      0.04
+    ],
+    "ring_pip_joint": [
+      -1.1,
+      0.04
+    ],
+    "little_pip_joint": [
+      -1.0,
+      0.04
+    ],
+    "index_dip_joint": [
+      -0.66,
+      0.04
+    ],
+    "middle_dip_joint": [
+      -0.7,
+      0.04
+    ],
+    "ring_dip_joint": [
+      -0.68,
+      0.04
+    ],
+    "little_dip_joint": [
+      -0.62,
+      0.04
+    ]
+  },
+  "natural_close_targets": {
+    "index_mcp_flex_joint": -0.06,
+    "middle_mcp_flex_joint": -0.06,
+    "ring_mcp_flex_joint": -0.05,
+    "little_mcp_flex_joint": -0.04,
+    "index_mcp_abd_joint": -0.58,
+    "middle_mcp_abd_joint": -0.64,
+    "ring_mcp_abd_joint": -0.62,
+    "little_mcp_abd_joint": -0.54,
+    "index_pip_joint": -0.82,
+    "middle_pip_joint": -0.88,
+    "ring_pip_joint": -0.84,
+    "little_pip_joint": -0.76,
+    "index_dip_joint": -0.42,
+    "middle_dip_joint": -0.46,
+    "ring_dip_joint": -0.44,
+    "little_dip_joint": -0.4,
+    "thumb_cmc_abd_joint": 0.0,
+    "thumb_cmc_joint": 0.0,
+    "thumb_mcp_joint": 0.0,
+    "thumb_ip_joint": 0.0
+  },
+  "hook_targets": {
+    "index_mcp_flex_joint": 0.0,
+    "middle_mcp_flex_joint": 0.0,
+    "ring_mcp_flex_joint": 0.0,
+    "little_mcp_flex_joint": 0.0,
+    "index_mcp_abd_joint": -0.2,
+    "middle_mcp_abd_joint": -0.22,
+    "ring_mcp_abd_joint": -0.2,
+    "little_mcp_abd_joint": -0.18,
+    "index_pip_joint": -0.92,
+    "middle_pip_joint": -0.98,
+    "ring_pip_joint": -0.92,
+    "little_pip_joint": -0.84,
+    "index_dip_joint": -0.48,
+    "middle_dip_joint": -0.52,
+    "ring_dip_joint": -0.5,
+    "little_dip_joint": -0.46
+  },
+  "full_but_safe_targets": {
+    "index_mcp_flex_joint": -0.1,
+    "middle_mcp_flex_joint": -0.1,
+    "ring_mcp_flex_joint": -0.08,
+    "little_mcp_flex_joint": -0.06,
+    "index_mcp_abd_joint": -0.7,
+    "middle_mcp_abd_joint": -0.78,
+    "ring_mcp_abd_joint": -0.76,
+    "little_mcp_abd_joint": -0.68,
+    "index_pip_joint": -1.02,
+    "middle_pip_joint": -1.08,
+    "ring_pip_joint": -1.02,
+    "little_pip_joint": -0.92,
+    "index_dip_joint": -0.6,
+    "middle_dip_joint": -0.64,
+    "ring_dip_joint": -0.62,
+    "little_dip_joint": -0.56
+  },
+  "changes": [
+    {
+      "kind": "joint_range",
+      "name": "index_mcp_flex_joint",
+      "old": "-0.5 0.5",
+      "new": "-0.3 0.18"
+    },
+    {
+      "kind": "joint_range",
+      "name": "index_mcp_abd_joint",
+      "old": "-1.2 0",
+      "new": "-0.78 0.08"
+    },
+    {
+      "kind": "joint_range",
+      "name": "index_pip_joint",
+      "old": "-1.57 0",
+      "new": "-1.1 0.04"
+    },
+    {
+      "kind": "joint_range",
+      "name": "index_dip_joint",
+      "old": "-1.2 0",
+      "new": "-0.66 0.04"
+    },
+    {
+      "kind": "joint_range",
+      "name": "little_mcp_flex_joint",
+      "old": "-0.5 0.5",
+      "new": "-0.28 0.16"
+    },
+    {
+      "kind": "joint_range",
+      "name": "little_mcp_abd_joint",
+      "old": "-1.2 0",
+      "new": "-0.76 0.08"
+    },
+    {
+      "kind": "joint_range",
+      "name": "little_pip_joint",
+      "old": "-1.57 0",
+      "new": "-1 0.04"
+    },
+    {
+      "kind": "joint_range",
+      "name": "little_dip_joint",
+      "old": "-1.2 0",
+      "new": "-0.62 0.04"
+    },
+    {
+      "kind": "joint_range",
+      "name": "middle_mcp_flex_joint",
+      "old": "-0.5 0.5",
+      "new": "-0.3 0.18"
+    },
+    {
+      "kind": "joint_range",
+      "name": "middle_mcp_abd_joint",
+      "old": "-1.2 0",
+      "new": "-0.86 0.08"
+    },
+    {
+      "kind": "joint_range",
+      "name": "middle_pip_joint",
+      "old": "-1.57 0",
+      "new": "-1.16 0.04"
+    },
+    {
+      "kind": "joint_range",
+      "name": "middle_dip_joint",
+      "old": "-1.2 0",
+      "new": "-0.7 0.04"
+    },
+    {
+      "kind": "joint_range",
+      "name": "ring_mcp_flex_joint",
+      "old": "-0.5 0.5",
+      "new": "-0.3 0.18"
+    },
+    {
+      "kind": "joint_range",
+      "name": "ring_mcp_abd_joint",
+      "old": "-1.2 0",
+      "new": "-0.84 0.08"
+    },
+    {
+      "kind": "joint_range",
+      "name": "ring_pip_joint",
+      "old": "-1.57 0",
+      "new": "-1.1 0.04"
+    },
+    {
+      "kind": "joint_range",
+      "name": "ring_dip_joint",
+      "old": "-1.2 0",
+      "new": "-0.68 0.04"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "index_mcp_flex_joint_pos",
+      "joint": "index_mcp_flex_joint",
+      "old": "-0.5 0.5",
+      "new": "-0.3 0.18"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "index_mcp_abd_joint_pos",
+      "joint": "index_mcp_abd_joint",
+      "old": "-1.2 0",
+      "new": "-0.78 0.08"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "index_pip_joint_pos",
+      "joint": "index_pip_joint",
+      "old": "-1.57 0",
+      "new": "-1.1 0.04"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "index_dip_joint_pos",
+      "joint": "index_dip_joint",
+      "old": "-1.2 0",
+      "new": "-0.66 0.04"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "middle_mcp_flex_joint_pos",
+      "joint": "middle_mcp_flex_joint",
+      "old": "-0.5 0.5",
+      "new": "-0.3 0.18"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "middle_mcp_abd_joint_pos",
+      "joint": "middle_mcp_abd_joint",
+      "old": "-1.2 0",
+      "new": "-0.86 0.08"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "middle_pip_joint_pos",
+      "joint": "middle_pip_joint",
+      "old": "-1.57 0",
+      "new": "-1.16 0.04"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "middle_dip_joint_pos",
+      "joint": "middle_dip_joint",
+      "old": "-1.2 0",
+      "new": "-0.7 0.04"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "ring_mcp_flex_joint_pos",
+      "joint": "ring_mcp_flex_joint",
+      "old": "-0.5 0.5",
+      "new": "-0.3 0.18"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "ring_mcp_abd_joint_pos",
+      "joint": "ring_mcp_abd_joint",
+      "old": "-1.2 0",
+      "new": "-0.84 0.08"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "ring_pip_joint_pos",
+      "joint": "ring_pip_joint",
+      "old": "-1.57 0",
+      "new": "-1.1 0.04"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "ring_dip_joint_pos",
+      "joint": "ring_dip_joint",
+      "old": "-1.2 0",
+      "new": "-0.68 0.04"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "little_mcp_flex_joint_pos",
+      "joint": "little_mcp_flex_joint",
+      "old": "-0.5 0.5",
+      "new": "-0.28 0.16"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "little_mcp_abd_joint_pos",
+      "joint": "little_mcp_abd_joint",
+      "old": "-1.2 0",
+      "new": "-0.76 0.08"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "little_pip_joint_pos",
+      "joint": "little_pip_joint",
+      "old": "-1.57 0",
+      "new": "-1 0.04"
+    },
+    {
+      "kind": "actuator_ctrlrange",
+      "name": "little_dip_joint_pos",
+      "joint": "little_dip_joint",
+      "old": "-1.2 0",
+      "new": "-0.62 0.04"
+    }
+  ],
+  "visual": {
+    "sheets": {
+      "full_hand": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_hand_tuning_sheet.png",
+      "full_hand_side": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_hand_tuning_side_sheet.png",
+      "full_hand_top": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_hand_tuning_top_sheet.png",
+      "index": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\index_joint_tuning_sheet.png",
+      "middle": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\middle_joint_tuning_sheet.png",
+      "ring": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\ring_joint_tuning_sheet.png",
+      "little": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\little_joint_tuning_sheet.png"
+    },
+    "frames": {
+      "full_open": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_open.png",
+      "full_open_side": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_open_side.png",
+      "full_open_top": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_open_top.png",
+      "full_hook": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_hook.png",
+      "full_hook_side": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_hook_side.png",
+      "full_hook_top": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_hook_top.png",
+      "full_natural_close": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_natural_close.png",
+      "full_natural_close_side": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_natural_close_side.png",
+      "full_natural_close_top": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_natural_close_top.png",
+      "full_full_but_safe": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_full_but_safe.png",
+      "full_full_but_safe_side": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_full_but_safe_side.png",
+      "full_full_but_safe_top": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\full_full_but_safe_top.png",
+      "index_open": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\index_open.png",
+      "index_mcp_flex_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\index_mcp_flex_only.png",
+      "index_mcp_abd_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\index_mcp_abd_only.png",
+      "index_pip_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\index_pip_only.png",
+      "index_dip_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\index_dip_only.png",
+      "index_finger_natural_combo": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\index_finger_natural_combo.png",
+      "middle_open": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\middle_open.png",
+      "middle_mcp_flex_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\middle_mcp_flex_only.png",
+      "middle_mcp_abd_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\middle_mcp_abd_only.png",
+      "middle_pip_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\middle_pip_only.png",
+      "middle_dip_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\middle_dip_only.png",
+      "middle_finger_natural_combo": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\middle_finger_natural_combo.png",
+      "ring_open": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\ring_open.png",
+      "ring_mcp_flex_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\ring_mcp_flex_only.png",
+      "ring_mcp_abd_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\ring_mcp_abd_only.png",
+      "ring_pip_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\ring_pip_only.png",
+      "ring_dip_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\ring_dip_only.png",
+      "ring_finger_natural_combo": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\ring_finger_natural_combo.png",
+      "little_open": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\little_open.png",
+      "little_mcp_flex_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\little_mcp_flex_only.png",
+      "little_mcp_abd_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\little_mcp_abd_only.png",
+      "little_pip_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\little_pip_only.png",
+      "little_dip_only": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\little_dip_only.png",
+      "little_finger_natural_combo": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_long_finger_tuning\\little_finger_natural_combo.png"
+    },
+    "metrics": {
+      "full_open": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15323503771511332
+      },
+      "full_hook": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.027510620009644476,
+            0.029015715119979375,
+            0.2469733255705944
+          ],
+          "middle": [
+            -0.004090199170543906,
+            0.033368961532229166,
+            0.26174522504016917
+          ],
+          "ring": [
+            0.018467396573151326,
+            0.02650124841171864,
+            0.25653149020128047
+          ],
+          "little": [
+            0.04491890530105716,
+            0.025613162842307916,
+            0.24173145950397235
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.12435860696270053,
+          "middle": 0.13622098614706693,
+          "ring": 0.13002722595960153,
+          "little": 0.12220258337479188
+        },
+        "mean_tip_to_palm": 0.1282023506110402
+      },
+      "full_natural_close": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.027288923523261576,
+            0.04542927543234724,
+            0.23055580083392554
+          ],
+          "middle": [
+            -0.004546072359448141,
+            0.05738998724114902,
+            0.2406686289576231
+          ],
+          "ring": [
+            0.014320567896616185,
+            0.05371228858195101,
+            0.234408810848245
+          ],
+          "little": [
+            0.042666669173235965,
+            0.044583257844337254,
+            0.228468719780397
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.11613001424479476,
+          "middle": 0.12720120523875875,
+          "ring": 0.12031929637645118,
+          "little": 0.11707452283258794
+        },
+        "mean_tip_to_palm": 0.12018125967314816
+      },
+      "full_full_but_safe": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.02974185224123856,
+            0.04547672037743403,
+            0.20664213184285013
+          ],
+          "middle": [
+            -0.007305625691061158,
+            0.06015689550613123,
+            0.21221443173623594
+          ],
+          "ring": [
+            0.011710197273842874,
+            0.059428620665237894,
+            0.20646344107101647
+          ],
+          "little": [
+            0.03780822269047601,
+            0.052328684027759476,
+            0.2071678106199242
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.09760370305256628,
+          "middle": 0.10610189937318444,
+          "ring": 0.10129004070807797,
+          "little": 0.10295127705084767
+        },
+        "mean_tip_to_palm": 0.1019867300461691
+      },
+      "index_open": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15323503771511332
+      },
+      "index_mcp_flex_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.012842900335488343,
+            -0.03679094873095143,
+            0.283290456140724
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15405924392189024,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15292920909540006
+      },
+      "index_mcp_abd_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.023590312136892118,
+            0.014480130522345366,
+            0.27632487296792146
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.14807541304557154,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15143325137632038
+      },
+      "index_pip_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.023070911703941783,
+            0.0061016579985356326,
+            0.27130226822706355
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.1419638984810115,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.14990537273518037
+      },
+      "index_dip_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.02126191227872376,
+            -0.025916547155393738,
+            0.2832339322956087
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.1535098334272958,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15279185647175145
+      },
+      "index_finger_natural_combo": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.027288923523261576,
+            0.04542927543234724,
+            0.23055580083392554
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.11613001424479476,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.14344690167612617
+      },
+      "middle_open": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15323503771511332
+      },
+      "middle_mcp_flex_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.011866896654579798,
+            -0.05006042932415466,
+            0.2932975142388948
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.1661627964737611,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15311125908287665
+      },
+      "middle_mcp_abd_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            -0.001138516696542963,
+            0.016692904106366473,
+            0.2908954710786632
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.1605264619529498,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15170217545267384
+      },
+      "middle_pip_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            -8.001931311477621e-05,
+            0.0019536886420168775,
+            0.28641323188292755
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.15432707637321957,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15015232905774129
+      },
+      "middle_dip_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00392502381212807,
+            -0.03817926939121728,
+            0.2961157952975168
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.166160665249411,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15311072627678912
+      },
+      "middle_finger_natural_combo": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            -0.004546072359448141,
+            0.05738998724114902,
+            0.2406686289576231
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.12720120523875875,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.14337086127412607
+      },
+      "ring_open": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15323503771511332
+      },
+      "ring_mcp_flex_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.02661857098114101,
+            -0.04517017988992367,
+            0.27767887506833894
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.15148466199287175,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15326681491491997
+      },
+      "ring_mcp_abd_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.021636982906267994,
+            0.008948380201711448,
+            0.27742770418353435
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.14728613286807055,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15221718263371967
+      },
+      "ring_pip_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.02258539337899875,
+            -0.0033721813102102344,
+            0.2749974430689105
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.14400319279079923,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15139644761440182
+      },
+      "ring_dip_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026128931769048035,
+            -0.03851458923896742,
+            0.2792957065462909
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.15153067224271116,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15327831747737983
+      },
+      "ring_finger_natural_combo": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.014320567896616185,
+            0.05371228858195101,
+            0.234408810848245
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.12031929637645118,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.14547547351081483
+      },
+      "little_open": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05492513092003695,
+            -0.0395372170847805,
+            0.2583552629361778
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.139642128263357
+        },
+        "mean_tip_to_palm": 0.15323503771511332
+      },
+      "little_mcp_flex_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.0586946640494551,
+            -0.03910573259330042,
+            0.25760660283733794
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.14033886650297828
+        },
+        "mean_tip_to_palm": 0.15340922227501863
+      },
+      "little_mcp_abd_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05001190097234326,
+            0.0068385740665056665,
+            0.2593473939983977
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.13636434421489524
+        },
+        "mean_tip_to_palm": 0.1524155917029979
+      },
+      "little_pip_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.050430717082557364,
+            -0.0007933029888038956,
+            0.25692181642345535
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.13356452428429497
+        },
+        "mean_tip_to_palm": 0.15171563672034782
+      },
+      "little_dip_only": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.05422705542705143,
+            -0.028789267198383987,
+            0.26114278708666516
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.13999864208229582
+        },
+        "mean_tip_to_palm": 0.15332416616984804
+      },
+      "little_finger_natural_combo": {
+        "palm": [
+          0.002565286855602847,
+          -0.009179525937954337,
+          0.13251098891585572
+        ],
+        "tips": {
+          "index": [
+            -0.01889905274706996,
+            -0.037339012541697525,
+            0.2837029145703529
+          ],
+          "middle": [
+            0.00490658083103945,
+            -0.05071274636339239,
+            0.29389366841833214
+          ],
+          "ring": [
+            0.026971354025759207,
+            -0.05028567297465281,
+            0.2761206594462566
+          ],
+          "little": [
+            0.042666669173235965,
+            0.044583257844337254,
+            0.228468719780397
+          ]
+        },
+        "tip_to_palm": {
+          "index": 0.15528255840074334,
+          "middle": 0.16665791100270777,
+          "ring": 0.15135755319364522,
+          "little": 0.11707452283258794
+        },
+        "mean_tip_to_palm": 0.14759313635742105
+      }
+    }
+  },
+  "notes": [
+    "Thumb intentionally left neutral.",
+    "Use visual sheets for per-joint judgement before promoting these ranges.",
+    "CAD/STL/joint tree unchanged."
+  ]
+}

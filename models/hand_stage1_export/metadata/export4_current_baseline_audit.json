@@ -1,0 +1,1675 @@
+{
+  "generated_at": "2026-05-25 14:57:12",
+  "schema": "export4_current_baseline_audit_v1",
+  "model_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_current_baseline.xml",
+  "ball_scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+  "joint_direction": {
+    "model_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_current_baseline.xml",
+    "status_counts": {
+      "AUDIT_ONLY": 10,
+      "PASS": 12
+    },
+    "joints": [
+      {
+        "joint": "wrist_1_joint",
+        "range": [
+          -0.8,
+          0.8
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "middle_tip_site",
+        "positive_test_angle": 0.2,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          -0.04536670919946306,
+          -0.003422605384553093,
+          -0.004348549734563889
+        ],
+        "negative_tip_delta": [
+          0.04532387076495885,
+          0.0034193735081487486,
+          -0.004776718506890432
+        ],
+        "positive_palmar_y_delta": -0.003422605384553093,
+        "negative_palmar_y_delta": 0.0034193735081487486,
+        "expectation": "not signed",
+        "status": "AUDIT_ONLY"
+      },
+      {
+        "joint": "wrist_2_joint",
+        "range": [
+          -0.8,
+          0.8
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "middle_tip_site",
+        "positive_test_angle": 0.2,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          -0.003273136362645712,
+          0.04231612656374159,
+          0.005822253283793988
+        ],
+        "negative_tip_delta": [
+          0.003237031627921959,
+          -0.04031032193045474,
+          -0.014137404090237171
+        ],
+        "positive_palmar_y_delta": 0.04231612656374159,
+        "negative_palmar_y_delta": -0.04031032193045474,
+        "expectation": "not signed",
+        "status": "AUDIT_ONLY"
+      },
+      {
+        "joint": "index_mcp_flex_joint",
+        "range": [
+          -0.3,
+          0.18
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "index_tip_site",
+        "positive_test_angle": 0.18,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          -0.018196663384778454,
+          -0.0012504399711232433,
+          -0.0009184112411444456
+        ],
+        "negative_tip_delta": [
+          0.019990066372498373,
+          0.002066231155937265,
+          -0.002761725106383617
+        ],
+        "positive_palmar_y_delta": -0.0012504399711232433,
+        "negative_palmar_y_delta": 0.002066231155937265,
+        "expectation": "not signed",
+        "status": "AUDIT_ONLY"
+      },
+      {
+        "joint": "index_mcp_abd_joint",
+        "range": [
+          -0.78,
+          0.08
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "index_tip_site",
+        "positive_test_angle": 0.08,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          0.0005590229041627405,
+          -0.007196735545346347,
+          -0.0013799662051866557
+        ],
+        "negative_tip_delta": [
+          -0.001518691021712426,
+          0.018262069944937703,
+          0.0008986175398031926
+        ],
+        "positive_palmar_y_delta": -0.007196735545346347,
+        "negative_palmar_y_delta": 0.018262069944937703,
+        "expectation": "negative should move fingertip toward palmar +Y",
+        "status": "PASS"
+      },
+      {
+        "joint": "index_pip_joint",
+        "range": [
+          -1.1,
+          0.04
+        ],
+        "axis": [
+          0.109773553624728,
+          -0.0483929965230635,
+          -0.992777862772996
+        ],
+        "relevant_site": "index_tip_site",
+        "positive_test_angle": 0.04,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          0.00017741533995206324,
+          -0.002242637274320655,
+          -0.0003464952670143018
+        ],
+        "negative_tip_delta": [
+          -0.0009481597654217438,
+          0.011316853652149746,
+          0.000373880958765227
+        ],
+        "positive_palmar_y_delta": -0.002242637274320655,
+        "negative_palmar_y_delta": 0.011316853652149746,
+        "expectation": "negative should move fingertip toward palmar +Y",
+        "status": "PASS"
+      },
+      {
+        "joint": "index_dip_joint",
+        "range": [
+          -0.66,
+          0.04
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "index_tip_site",
+        "positive_test_angle": 0.04,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          0.00021847988909564492,
+          -0.0010778955752806518,
+          -0.0002112658879379059
+        ],
+        "negative_tip_delta": [
+          -0.0011193901490750904,
+          0.005463549104228117,
+          0.00038990347527634306
+        ],
+        "positive_palmar_y_delta": -0.0010778955752806518,
+        "negative_palmar_y_delta": 0.005463549104228117,
+        "expectation": "negative should move fingertip toward palmar +Y",
+        "status": "PASS"
+      },
+      {
+        "joint": "little_mcp_flex_joint",
+        "range": [
+          -0.28,
+          0.16
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "little_tip_site",
+        "positive_test_angle": 0.16,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          -0.015311702671687251,
+          -0.001467579616368106,
+          0.0014888119033033553
+        ],
+        "negative_tip_delta": [
+          0.018433442368367678,
+          0.0023951021130741434,
+          -0.005213249798685593
+        ],
+        "positive_palmar_y_delta": -0.001467579616368106,
+        "negative_palmar_y_delta": 0.0023951021130741434,
+        "expectation": "not signed",
+        "status": "AUDIT_ONLY"
+      },
+      {
+        "joint": "little_mcp_abd_joint",
+        "range": [
+          -0.76,
+          0.08
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "little_tip_site",
+        "positive_test_angle": 0.08,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          0.00033861686003171243,
+          -0.006614879116770188,
+          -0.002243926581256883
+        ],
+        "negative_tip_delta": [
+          -0.0013100160329466842,
+          0.0170984791145779,
+          0.0032766535140997255
+        ],
+        "positive_palmar_y_delta": -0.006614879116770188,
+        "negative_palmar_y_delta": 0.0170984791145779,
+        "expectation": "negative should move fingertip toward palmar +Y",
+        "status": "PASS"
+      },
+      {
+        "joint": "little_pip_joint",
+        "range": [
+          -1.0,
+          0.04
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "little_tip_site",
+        "positive_test_angle": 0.04,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          8.912122033989667e-05,
+          -0.0019694472355571008,
+          -0.0007359712656340722
+        ],
+        "negative_tip_delta": [
+          -0.0006875934789203897,
+          0.010182723183677512,
+          0.002488676301507675
+        ],
+        "positive_palmar_y_delta": -0.0019694472355571008,
+        "negative_palmar_y_delta": 0.010182723183677512,
+        "expectation": "negative should move fingertip toward palmar +Y",
+        "status": "PASS"
+      },
+      {
+        "joint": "little_dip_joint",
+        "range": [
+          -0.62,
+          0.04
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "little_tip_site",
+        "positive_test_angle": 0.04,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          2.214671144097624e-05,
+          -0.000998435740684929,
+          -0.0005068184708534318
+        ],
+        "negative_tip_delta": [
+          -0.00024300597818773667,
+          0.005242870768662526,
+          0.001925818192669515
+        ],
+        "positive_palmar_y_delta": -0.000998435740684929,
+        "negative_palmar_y_delta": 0.005242870768662526,
+        "expectation": "negative should move fingertip toward palmar +Y",
+        "status": "PASS"
+      },
+      {
+        "joint": "middle_mcp_flex_joint",
+        "range": [
+          -0.3,
+          0.18
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "middle_tip_site",
+        "positive_test_angle": 0.18,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          -0.02095777108548043,
+          -0.0015072000001463345,
+          -0.0006928619643345457
+        ],
+        "negative_tip_delta": [
+          0.022945698376559433,
+          0.00244700602666513,
+          -0.0035798852335425235
+        ],
+        "positive_palmar_y_delta": -0.0015072000001463345,
+        "negative_palmar_y_delta": 0.00244700602666513,
+        "expectation": "not signed",
+        "status": "AUDIT_ONLY"
+      },
+      {
+        "joint": "middle_mcp_abd_joint",
+        "range": [
+          -0.86,
+          0.08
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "middle_tip_site",
+        "positive_test_angle": 0.08,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          0.0005769601199528025,
+          -0.00816704845520188,
+          -0.0026700725796325875
+        ],
+        "negative_tip_delta": [
+          -0.0016522650586201248,
+          0.021104742605089842,
+          0.0037524849543518757
+        ],
+        "positive_palmar_y_delta": -0.00816704845520188,
+        "negative_palmar_y_delta": 0.021104742605089842,
+        "expectation": "negative should move fingertip toward palmar +Y",
+        "status": "PASS"
+      },
+      {
+        "joint": "middle_pip_joint",
+        "range": [
+          -1.16,
+          0.04
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "middle_tip_site",
+        "positive_test_angle": 0.04,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          0.00016736898975408619,
+          -0.0023761789601625394,
+          -0.0007865241603232098
+        ],
+        "negative_tip_delta": [
+          -0.0009427855173157456,
+          0.012239125612045182,
+          0.002476618390511054
+        ],
+        "positive_palmar_y_delta": -0.0023761789601625394,
+        "negative_palmar_y_delta": 0.012239125612045182,
+        "expectation": "negative should move fingertip toward palmar +Y",
+        "status": "PASS"
+      },
+      {
+        "joint": "middle_dip_joint",
+        "range": [
+          -0.7,
+          0.04
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "middle_tip_site",
+        "positive_test_angle": 0.04,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          6.536236955596766e-05,
+          -0.0010183889041743346,
+          -0.00046134798602154303
+        ],
+        "negative_tip_delta": [
+          -0.0003789528611369726,
+          0.005319548549099128,
+          0.0016775992721178024
+        ],
+        "positive_palmar_y_delta": -0.0010183889041743346,
+        "negative_palmar_y_delta": 0.005319548549099128,
+        "expectation": "negative should move fingertip toward palmar +Y",
+        "status": "PASS"
+      },
+      {
+        "joint": "ring_mcp_flex_joint",
+        "range": [
+          -0.3,
+          0.18
+        ],
+        "axis": [
+          -0.9959987745791395,
+          -0.08936689004800599,
+          0.0
+        ],
+        "relevant_site": "ring_tip_site",
+        "positive_test_angle": 0.18,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          0.0010450490993430955,
+          -0.017643710615403006,
+          -0.007674754004556583
+        ],
+        "negative_tip_delta": [
+          -0.0015609198925409448,
+          0.0208278261441946,
+          0.004675795557373741
+        ],
+        "positive_palmar_y_delta": -0.017643710615403006,
+        "negative_palmar_y_delta": 0.0208278261441946,
+        "expectation": "not signed",
+        "status": "AUDIT_ONLY"
+      },
+      {
+        "joint": "ring_mcp_abd_joint",
+        "range": [
+          -0.84,
+          0.08
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "ring_tip_site",
+        "positive_test_angle": 0.08,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          0.00045413560206810505,
+          -0.007253506570252477,
+          -0.0028269095835726787
+        ],
+        "negative_tip_delta": [
+          -0.0013996745202564352,
+          0.01889748149996255,
+          0.004464507807745988
+        ],
+        "positive_palmar_y_delta": -0.007253506570252477,
+        "negative_palmar_y_delta": 0.01889748149996255,
+        "expectation": "negative should move fingertip toward palmar +Y",
+        "status": "PASS"
+      },
+      {
+        "joint": "ring_pip_joint",
+        "range": [
+          -1.1,
+          0.04
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "ring_tip_site",
+        "positive_test_angle": 0.04,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          0.0001241030772260246,
+          -0.0021118181800925187,
+          -0.0009317572572662414
+        ],
+        "negative_tip_delta": [
+          -0.0007593374590585851,
+          0.011013862178377236,
+          0.0033578331800194205
+        ],
+        "positive_palmar_y_delta": -0.0021118181800925187,
+        "negative_palmar_y_delta": 0.011013862178377236,
+        "expectation": "negative should move fingertip toward palmar +Y",
+        "status": "PASS"
+      },
+      {
+        "joint": "ring_dip_joint",
+        "range": [
+          -0.68,
+          0.04
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "ring_tip_site",
+        "positive_test_angle": 0.04,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          4.967963448584273e-05,
+          -0.0009804660878935459,
+          -0.0005389320414476151
+        ],
+        "negative_tip_delta": [
+          -0.00031898568300910146,
+          0.005176930764569591,
+          0.002086423333286569
+        ],
+        "positive_palmar_y_delta": -0.0009804660878935459,
+        "negative_palmar_y_delta": 0.005176930764569591,
+        "expectation": "negative should move fingertip toward palmar +Y",
+        "status": "PASS"
+      },
+      {
+        "joint": "thumb_cmc_abd_joint",
+        "range": [
+          -1.05,
+          1.05
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "thumb_tip_site",
+        "positive_test_angle": 0.2,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          -0.004028481541933561,
+          0.01642804398185524,
+          -0.014027017415313842
+        ],
+        "negative_tip_delta": [
+          0.005584046998634538,
+          -0.01848933472274121,
+          0.010479953759462035
+        ],
+        "positive_palmar_y_delta": 0.01642804398185524,
+        "negative_palmar_y_delta": -0.01848933472274121,
+        "expectation": "not signed",
+        "status": "AUDIT_ONLY"
+      },
+      {
+        "joint": "thumb_cmc_joint",
+        "range": [
+          -0.95,
+          0.95
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "thumb_tip_site",
+        "positive_test_angle": 0.2,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          0.021424373409387118,
+          0.005709718761251703,
+          -0.0002926090960479466
+        ],
+        "negative_tip_delta": [
+          -0.020410519849605048,
+          -0.007984984716482062,
+          -0.0033676375913924417
+        ],
+        "positive_palmar_y_delta": 0.005709718761251703,
+        "negative_palmar_y_delta": -0.007984984716482062,
+        "expectation": "not signed",
+        "status": "AUDIT_ONLY"
+      },
+      {
+        "joint": "thumb_mcp_joint",
+        "range": [
+          -0.1,
+          1.2
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "relevant_site": "thumb_tip_site",
+        "positive_test_angle": 0.2,
+        "negative_test_angle": -0.1,
+        "positive_tip_delta": [
+          0.011671547090141399,
+          0.0023001523226277576,
+          -0.0013202869370122217
+        ],
+        "negative_tip_delta": [
+          -0.0057603890886282275,
+          -0.0016478690046225208,
+          -8.27585021759003e-05
+        ],
+        "positive_palmar_y_delta": 0.0023001523226277576,
+        "negative_palmar_y_delta": -0.0016478690046225208,
+        "expectation": "not signed",
+        "status": "AUDIT_ONLY"
+      },
+      {
+        "joint": "thumb_ip_joint",
+        "range": [
+          -0.85,
+          0.05
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "relevant_site": "thumb_tip_site",
+        "positive_test_angle": 0.05,
+        "negative_test_angle": -0.2,
+        "positive_tip_delta": [
+          -0.0013586590234707305,
+          -0.0003311975917985599,
+          6.281053892345789e-05
+        ],
+        "negative_tip_delta": [
+          0.005450865874381927,
+          0.0009278178793553915,
+          -0.0008263265482342796
+        ],
+        "positive_palmar_y_delta": -0.0003311975917985599,
+        "negative_palmar_y_delta": 0.0009278178793553915,
+        "expectation": "not signed",
+        "status": "AUDIT_ONLY"
+      }
+    ],
+    "visual_sheet": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_current_baseline_audit\\joint_direction\\joint_direction_positive_negative_sheet.png"
+  },
+  "thumb": {
+    "model_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_current_baseline.xml",
+    "thumb_chain_status": "PASS",
+    "actual_chain": [
+      {
+        "expected_parent": "palm_link",
+        "joint": "thumb_root_connector_fixed_joint",
+        "expected_child": "thumb_root_connector_link",
+        "actual_parent": "palm_link",
+        "actual_child": "thumb_root_connector_link",
+        "axis": "MJCF fixed body nesting",
+        "range": "fixed"
+      },
+      {
+        "expected_parent": "thumb_root_connector_link",
+        "joint": "thumb_cmc_abd_joint",
+        "expected_child": "thumb_trapezium1_link",
+        "actual_parent": "thumb_root_connector_link",
+        "actual_child": "thumb_trapezium1_link",
+        "axis": "0 0 -1",
+        "range": "-1.05 1.05"
+      },
+      {
+        "expected_parent": "thumb_trapezium1_link",
+        "joint": "thumb_cmc_joint",
+        "expected_child": "thumb_metacarpal_link",
+        "actual_parent": "thumb_trapezium1_link",
+        "actual_child": "thumb_metacarpal_link",
+        "axis": "0 0 -1",
+        "range": "-0.95 0.95"
+      },
+      {
+        "expected_parent": "thumb_metacarpal_link",
+        "joint": "thumb_mcp_joint",
+        "expected_child": "thumb_proximal_link",
+        "actual_parent": "thumb_metacarpal_link",
+        "actual_child": "thumb_proximal_link",
+        "axis": "0 0 -1",
+        "range": "-0.1 1.2"
+      },
+      {
+        "expected_parent": "thumb_proximal_link",
+        "joint": "thumb_ip_joint",
+        "expected_child": "thumb_distal_link",
+        "actual_parent": "thumb_proximal_link",
+        "actual_child": "thumb_distal_link",
+        "axis": "0 0 1",
+        "range": "-0.85 0.05"
+      }
+    ],
+    "individual_joint_rows": [
+      {
+        "joint": "thumb_cmc_abd_joint",
+        "range": [
+          -1.05,
+          1.05
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "positive_angle": 0.25,
+        "negative_angle": -0.25,
+        "positive_tip_delta": [
+          -0.004772259052337656,
+          0.020134033211683847,
+          -0.018025277866386885
+        ],
+        "negative_tip_delta": [
+          0.0071982731373381875,
+          -0.023348761559583715,
+          0.01249338182664081
+        ],
+        "positive_palmar_y_delta": 0.020134033211683847,
+        "negative_palmar_y_delta": -0.023348761559583715
+      },
+      {
+        "joint": "thumb_cmc_joint",
+        "range": [
+          -0.95,
+          0.95
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "positive_angle": 0.25,
+        "negative_angle": -0.25,
+        "positive_tip_delta": [
+          0.026839194037282042,
+          0.006752824124797344,
+          -0.0009395319279016656
+        ],
+        "negative_tip_delta": [
+          -0.025258017876829415,
+          -0.010301261916812465,
+          -0.004768881035406791
+        ],
+        "positive_palmar_y_delta": 0.006752824124797344,
+        "negative_palmar_y_delta": -0.010301261916812465
+      },
+      {
+        "joint": "thumb_mcp_joint",
+        "range": [
+          -0.1,
+          1.2
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "positive_angle": 0.25,
+        "negative_angle": -0.1,
+        "positive_tip_delta": [
+          0.014578321423625501,
+          0.0026590845845148037,
+          -0.001955538010698976
+        ],
+        "negative_tip_delta": [
+          -0.0057603890886282275,
+          -0.0016478690046225208,
+          -8.27585021759003e-05
+        ],
+        "positive_palmar_y_delta": 0.0026590845845148037,
+        "negative_palmar_y_delta": -0.0016478690046225208
+      },
+      {
+        "joint": "thumb_ip_joint",
+        "range": [
+          -0.85,
+          0.05
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "positive_angle": 0.05,
+        "negative_angle": -0.25,
+        "positive_tip_delta": [
+          -0.0013586590234707305,
+          -0.0003311975917985599,
+          6.281053892345789e-05
+        ],
+        "negative_tip_delta": [
+          0.006800605118648433,
+          0.0010576296748969066,
+          -0.0011740969047867311
+        ],
+        "positive_palmar_y_delta": -0.0003311975917985599,
+        "negative_palmar_y_delta": 0.0010576296748969066
+      }
+    ],
+    "metrics": {
+      "open_thumb_index_distance": 0.1304302904985086,
+      "close_thumb_index_distance": 0.019642240905234955,
+      "open_thumb_middle_distance": 0.1531145815979307,
+      "close_thumb_middle_distance": 0.03329337162605679,
+      "close_thumb_palm_distance": 0.09802537063493,
+      "thumb_visual_target": {
+        "thumb_cmc_abd_joint": -0.3,
+        "thumb_cmc_joint": 0.0,
+        "thumb_mcp_joint": 0.25,
+        "thumb_ip_joint": -0.25
+      }
+    },
+    "conclusion": "PASS_FOR_SCRIPTED_SMOKE",
+    "visual_sheet": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_current_baseline_audit\\thumb\\thumb_audit_sheet.png"
+  },
+  "collision": {
+    "model_xml": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_current_baseline.xml",
+    "ball_scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_current_baseline.xml",
+    "status": "PASS_FOR_SMOKE_NEEDS_TRAINING_PROXY_TUNING",
+    "proxy_count": 24,
+    "mesh_collision_count": 0,
+    "visual_collision_enabled": [],
+    "geom_rows": [
+      {
+        "name": "ground",
+        "type": "mjGEOM_PLANE",
+        "contype": 1,
+        "conaffinity": 3,
+        "size": [
+          0.4,
+          0.4,
+          0.02
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "hand_base_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.011942698820900384,
+          0.02004701999957602,
+          0.024777486754292064
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "hand_base_link_collision_proxy",
+        "type": "mjGEOM_BOX",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.026,
+          0.02,
+          0.014
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "wrist_middle_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.013561282749903251,
+          0.014999999741291058,
+          0.02800000086543485
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "wrist_middle_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.011,
+          0.018,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "palm_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.019537079898627647,
+          0.045880880683181975,
+          0.059818433765103325
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "palm_link_collision_proxy_ellipsoid",
+        "type": "mjGEOM_ELLIPSOID",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.03,
+          0.064,
+          0.024
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "index_mcp_flex_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.009307382459721266,
+          0.010433828274498399,
+          0.009044848843684682
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "index_mcp_flex_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0058,
+          0.004879520066626428,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "index_proximal_phalanx_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.008807929909820123,
+          0.00898423003534059,
+          0.0249963883371835
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "index_proximal_phalanx_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0072,
+          0.017500446325883642,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "index_proximal_inter_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.008670564148792205,
+          0.00888606425178815,
+          0.021962021069674098
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "index_proximal_inter_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0072,
+          0.014469719912394263,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "index_distal_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.008083802224658283,
+          0.009016172657709154,
+          0.017424678100263272
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "index_distal_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0062,
+          0.014000000265028687,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "little_mcp_flex_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.009290795460021335,
+          0.010433773788512865,
+          0.009000249068256704
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "little_mcp_flex_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0058,
+          0.004879520055163627,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "little_proximal_phalanx_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.008796618255345242,
+          0.008984138577066718,
+          0.024993904024541776
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "little_proximal_phalanx_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0072,
+          0.017500484059376757,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "little_proximal_inter_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.00871941775480267,
+          0.008806283650140087,
+          0.019973153423983526
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "little_proximal_inter_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0072,
+          0.012500357724210336,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "little_distal_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.008087156950924485,
+          0.00900872593392701,
+          0.017423958534927463
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "little_distal_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0062,
+          0.014000000144013328,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "middle_mcp_flex_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.009309399257696515,
+          0.01043384845541514,
+          0.009055543507413963
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "middle_mcp_flex_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0058,
+          0.004879520046446639,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "middle_proximal_phalanx_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.00872123691466196,
+          0.00885941896585553,
+          0.030197173862419283
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "middle_proximal_phalanx_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0072,
+          0.022500500221953414,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "middle_proximal_inter_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.008600389068692517,
+          0.00887401764520404,
+          0.025007861237541517
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "middle_proximal_inter_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0072,
+          0.017500285937131953,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "middle_distal_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.008087735013075274,
+          0.009009364401295156,
+          0.017425245995543494
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "middle_distal_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0062,
+          0.014000000211413432,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "ring_mcp_flex_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.009311021226728815,
+          0.010433950269639112,
+          0.009074703293342758
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "ring_mcp_flex_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0058,
+          0.004879520040266164,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "ring_proximal_phalanx_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.00867462686045854,
+          0.00881222756639959,
+          0.027637074019270798
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "ring_proximal_phalanx_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0072,
+          0.020000446951505862,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "ring_proximal_inter_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.008643843318348495,
+          0.00889159034713267,
+          0.022472460208038007
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "ring_proximal_inter_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0072,
+          0.015000333565570049,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "ring_distal_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.008086110765005245,
+          0.00901067595710459,
+          0.01742229381035212
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "ring_distal_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0062,
+          0.014000000100561792,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "thumb_root_connector_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.010407488752215355,
+          0.008998378292698988,
+          0.009025455661713276
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "thumb_root_connector_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0058,
+          0.0057934171697150375,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "thumb_trapezium1_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.0030023551616134357,
+          0.0054523766118115356,
+          0.008002222246378397
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "thumb_trapezium1_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0058,
+          0.013999999957885634,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "thumb_metacarpal_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.010415857968867204,
+          0.010282468615266542,
+          0.031938393768102945
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "thumb_metacarpal_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0068,
+          0.02600001931249283,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "thumb_proximal_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.007594402822052042,
+          0.01040986069866508,
+          0.023063681172324255
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "thumb_proximal_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0068,
+          0.01600018899302443,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "thumb_distal_link_export4_visual",
+        "type": "mjGEOM_MESH",
+        "contype": 0,
+        "conaffinity": 0,
+        "size": [
+          0.008155430737967097,
+          0.010018484742385737,
+          0.022278344634573555
+        ],
+        "is_proxy": false
+      },
+      {
+        "name": "thumb_distal_link_collision_proxy",
+        "type": "mjGEOM_CAPSULE",
+        "contype": 1,
+        "conaffinity": 2,
+        "size": [
+          0.0062,
+          0.014000000096235721,
+          0.0
+        ],
+        "is_proxy": true
+      },
+      {
+        "name": "ball_geom",
+        "type": "mjGEOM_SPHERE",
+        "contype": 2,
+        "conaffinity": 1,
+        "size": [
+          0.025,
+          0.0,
+          0.0
+        ],
+        "is_proxy": false
+      }
+    ],
+    "stage_rows": [
+      {
+        "stage": "open_ball",
+        "targets": {},
+        "contact_summary": {
+          "contact_count": 0,
+          "ball_contact_count": 0,
+          "ball_hand_contact_count": 0,
+          "ball_ground_contact_count": 0,
+          "max_penetration": 0.0,
+          "max_hand_ball_penetration": 0.0,
+          "contacts": []
+        },
+        "ball_position": [
+          0.0,
+          0.045,
+          0.22
+        ],
+        "tip_ball_distances": {
+          "thumb": 0.05168597921254433,
+          "index": 0.10580618368430096,
+          "middle": 0.12101767880848245,
+          "ring": 0.11382592775329366,
+          "little": 0.1078630486956763
+        }
+      },
+      {
+        "stage": "preshape_ball",
+        "targets": {
+          "index_mcp_flex_joint": -0.035,
+          "middle_mcp_flex_joint": -0.035,
+          "ring_mcp_flex_joint": -0.02,
+          "little_mcp_flex_joint": -0.015,
+          "index_mcp_abd_joint": -0.34,
+          "middle_mcp_abd_joint": -0.38,
+          "ring_mcp_abd_joint": -0.2,
+          "little_mcp_abd_joint": -0.15,
+          "index_pip_joint": -0.48,
+          "middle_pip_joint": -0.52,
+          "ring_pip_joint": -0.2,
+          "little_pip_joint": -0.16,
+          "index_dip_joint": -0.22,
+          "middle_dip_joint": -0.24,
+          "ring_dip_joint": -0.1,
+          "little_dip_joint": -0.08
+        },
+        "contact_summary": {
+          "contact_count": 0,
+          "ball_contact_count": 0,
+          "ball_hand_contact_count": 0,
+          "ball_ground_contact_count": 0,
+          "max_penetration": 0.0,
+          "max_hand_ball_penetration": 0.0,
+          "contacts": []
+        },
+        "ball_position": [
+          0.0,
+          0.045,
+          0.22
+        ],
+        "tip_ball_distances": {
+          "thumb": 0.05168597921254433,
+          "index": 0.05692052628839401,
+          "middle": 0.06544617993079271,
+          "ring": 0.08945204146413813,
+          "little": 0.09198896783516254
+        }
+      },
+      {
+        "stage": "four_fingers_closed_ball",
+        "targets": {
+          "index_mcp_flex_joint": -0.06,
+          "middle_mcp_flex_joint": -0.06,
+          "ring_mcp_flex_joint": -0.05,
+          "little_mcp_flex_joint": -0.04,
+          "index_mcp_abd_joint": -0.58,
+          "middle_mcp_abd_joint": -0.64,
+          "ring_mcp_abd_joint": -0.62,
+          "little_mcp_abd_joint": -0.54,
+          "index_pip_joint": -0.82,
+          "middle_pip_joint": -0.88,
+          "ring_pip_joint": -0.84,
+          "little_pip_joint": -0.76,
+          "index_dip_joint": -0.42,
+          "middle_dip_joint": -0.46,
+          "ring_dip_joint": -0.44,
+          "little_dip_joint": -0.4
+        },
+        "contact_summary": {
+          "contact_count": 5,
+          "ball_contact_count": 5,
+          "ball_hand_contact_count": 5,
+          "ball_ground_contact_count": 0,
+          "max_penetration": 0.010994739106361458,
+          "max_hand_ball_penetration": 0.010994739106361458,
+          "contacts": [
+            {
+              "geom1": "ball_geom",
+              "geom2": "index_distal_link_collision_proxy",
+              "dist": -0.0021757062344859223,
+              "penetration": 0.0021757062344859223
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_proximal_inter_link_collision_proxy",
+              "dist": -0.0062393377188467835,
+              "penetration": 0.0062393377188467835
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_distal_link_collision_proxy",
+              "dist": -0.01022422026654813,
+              "penetration": 0.01022422026654813
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "ring_proximal_inter_link_collision_proxy",
+              "dist": -0.004439563642466711,
+              "penetration": 0.004439563642466711
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "ring_distal_link_collision_proxy",
+              "dist": -0.010994739106361458,
+              "penetration": 0.010994739106361458
+            }
+          ]
+        },
+        "ball_position": [
+          0.0,
+          0.045,
+          0.22
+        ],
+        "tip_ball_distances": {
+          "thumb": 0.05168597921254433,
+          "index": 0.029262511096977632,
+          "middle": 0.02452286240880272,
+          "ring": 0.02210421831409767,
+          "little": 0.04350100627665478
+        }
+      },
+      {
+        "stage": "thumb_visual_close_ball",
+        "targets": {
+          "index_mcp_flex_joint": -0.06,
+          "middle_mcp_flex_joint": -0.06,
+          "ring_mcp_flex_joint": -0.05,
+          "little_mcp_flex_joint": -0.04,
+          "index_mcp_abd_joint": -0.58,
+          "middle_mcp_abd_joint": -0.64,
+          "ring_mcp_abd_joint": -0.62,
+          "little_mcp_abd_joint": -0.54,
+          "index_pip_joint": -0.82,
+          "middle_pip_joint": -0.88,
+          "ring_pip_joint": -0.84,
+          "little_pip_joint": -0.76,
+          "index_dip_joint": -0.42,
+          "middle_dip_joint": -0.46,
+          "ring_dip_joint": -0.44,
+          "little_dip_joint": -0.4,
+          "thumb_cmc_abd_joint": -0.3,
+          "thumb_cmc_joint": 0.0,
+          "thumb_mcp_joint": 0.25,
+          "thumb_ip_joint": -0.25
+        },
+        "contact_summary": {
+          "contact_count": 6,
+          "ball_contact_count": 6,
+          "ball_hand_contact_count": 6,
+          "ball_ground_contact_count": 0,
+          "max_penetration": 0.01298422569672689,
+          "max_hand_ball_penetration": 0.01298422569672689,
+          "contacts": [
+            {
+              "geom1": "ball_geom",
+              "geom2": "index_distal_link_collision_proxy",
+              "dist": -0.0021757062344859223,
+              "penetration": 0.0021757062344859223
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_proximal_inter_link_collision_proxy",
+              "dist": -0.0062393377188467835,
+              "penetration": 0.0062393377188467835
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "middle_distal_link_collision_proxy",
+              "dist": -0.01022422026654813,
+              "penetration": 0.01022422026654813
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "ring_proximal_inter_link_collision_proxy",
+              "dist": -0.004439563642466711,
+              "penetration": 0.004439563642466711
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "ring_distal_link_collision_proxy",
+              "dist": -0.010994739106361458,
+              "penetration": 0.010994739106361458
+            },
+            {
+              "geom1": "ball_geom",
+              "geom2": "thumb_distal_link_collision_proxy",
+              "dist": -0.01298422569672689,
+              "penetration": 0.01298422569672689
+            }
+          ]
+        },
+        "ball_position": [
+          0.0,
+          0.045,
+          0.22
+        ],
+        "tip_ball_distances": {
+          "thumb": 0.01821577430327311,
+          "index": 0.029262511096977632,
+          "middle": 0.02452286240880272,
+          "ring": 0.02210421831409767,
+          "little": 0.04350100627665478
+        }
+      }
+    ],
+    "issues": [
+      {
+        "severity": "MAJOR",
+        "item": "closed_ball_proxy_penetration",
+        "detail": "Closed static ball check has hand-ball penetration above 8 mm. Acceptable for visual smoke, too high for contact-rich training."
+      }
+    ],
+    "visual_sheet": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\visual_checks_export4_current_baseline_audit\\collision\\collision_audit_stage_sheet.png"
+  },
+  "reports": {
+    "joint": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\export4_current_baseline_joint_direction_audit.md",
+    "thumb": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\export4_current_baseline_thumb_audit.md",
+    "collision": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\export4_current_baseline_collision_audit.md",
+    "solidworks_checklist": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\solidworks_export4_followup_checklist.md"
+  }
+}

@@ -1,0 +1,1252 @@
+{
+  "parsed": {
+    "links": {
+      "hand_base_link": {
+        "name": "hand_base_link",
+        "mesh_uri": "package://hand_export3/meshes/hand_base_link.STL",
+        "mesh_file": "hand_base_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.0125765233454055,
+        "inertial_pos": "-0.000431113750548891 -6.22717667953746E-05 0.00833734392528563"
+      },
+      "wrist_middle_link": {
+        "name": "wrist_middle_link",
+        "mesh_uri": "package://hand_export3/meshes/wrist_middle_link.STL",
+        "mesh_file": "wrist_middle_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.0100624928004409,
+        "inertial_pos": "5.49796848325901E-09 0.0119158907427827 -0.000700000041961338"
+      },
+      "palm_link": {
+        "name": "palm_link",
+        "mesh_uri": "package://hand_export3/meshes/palm_link.STL",
+        "mesh_file": "palm_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.141370954426337,
+        "inertial_pos": "-0.000207868250421531 0.0473735507926797 0.00393768478490305"
+      },
+      "index_mcp_flex_link": {
+        "name": "index_mcp_flex_link",
+        "mesh_uri": "package://hand_export3/meshes/index_mcp_flex_link.STL",
+        "mesh_file": "index_mcp_flex_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00175480523531261,
+        "inertial_pos": "-0.000298721330807411 0.00563135177096225 -0.000771160596528597"
+      },
+      "index_proximal_phalanx_link": {
+        "name": "index_proximal_phalanx_link",
+        "mesh_uri": "package://hand_export3/meshes/index_proximal_phalanx_link.STL",
+        "mesh_file": "index_proximal_phalanx_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00703106958675966,
+        "inertial_pos": "-0.00015451843292253 0.0153833252047104 4.77058346580045E-05"
+      },
+      "index_proximal_inter_link": {
+        "name": "index_proximal_inter_link",
+        "mesh_uri": "package://hand_export3/meshes/index_proximal_inter_link.STL",
+        "mesh_file": "index_proximal_inter_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00597048730592662,
+        "inertial_pos": "0.00380560557177808 0.011457082027939 -9.12940029351855E-05"
+      },
+      "index_distal_link": {
+        "name": "index_distal_link",
+        "mesh_uri": "package://hand_export3/meshes/index_distal_link.STL",
+        "mesh_file": "index_distal_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.005352841515409,
+        "inertial_pos": "0.00392909240180345 0.00910690176561982 -2.37548306925989E-05"
+      },
+      "middle_mcp_flex_link": {
+        "name": "middle_mcp_flex_link",
+        "mesh_uri": "package://hand_export3/meshes/middle_mcp_flex_link.STL",
+        "mesh_file": "middle_mcp_flex_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00175480527430814,
+        "inertial_pos": "-0.000371431404252255 0.00562702377273563 -0.000771160690628065"
+      },
+      "middle_proximal_phalanx_link": {
+        "name": "middle_proximal_phalanx_link",
+        "mesh_uri": "package://hand_export3/meshes/middle_proximal_phalanx_link.STL",
+        "mesh_file": "middle_proximal_phalanx_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00905325785763738,
+        "inertial_pos": "0.0203923127294504 -0.00106212956121088 -0.000118910334106818"
+      },
+      "middle_proximal_inter_link": {
+        "name": "middle_proximal_inter_link",
+        "mesh_uri": "package://hand_export3/meshes/middle_proximal_inter_link.STL",
+        "mesh_file": "middle_proximal_inter_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00732491272908859,
+        "inertial_pos": "0.015038353955683 -0.000424015998408252 4.13956527898704E-05"
+      },
+      "middle_distal_link": {
+        "name": "middle_distal_link",
+        "mesh_uri": "package://hand_export3/meshes/middle_distal_link.STL",
+        "mesh_file": "middle_distal_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00535303762739943,
+        "inertial_pos": "0.00969001947904991 -0.00220590188632802 -1.43901576245969E-05"
+      },
+      "ring_mcp_flex_link": {
+        "name": "ring_mcp_flex_link",
+        "mesh_uri": "package://hand_export3/meshes/ring_mcp_flex_link.STL",
+        "mesh_file": "ring_mcp_flex_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00175480534631931,
+        "inertial_pos": "-0.000503960756800686 0.00561670566229 -0.000771160870073475"
+      },
+      "ring_proximal_phalanx_link": {
+        "name": "ring_proximal_phalanx_link",
+        "mesh_uri": "package://hand_export3/meshes/ring_proximal_phalanx_link.STL",
+        "mesh_file": "ring_proximal_phalanx_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00792174275404424,
+        "inertial_pos": "0.0178538736492858 -0.000890527671610228 -0.00013231144577152"
+      },
+      "ring_proximal_inter_link": {
+        "name": "ring_proximal_inter_link",
+        "mesh_uri": "package://hand_export3/meshes/ring_proximal_inter_link.STL",
+        "mesh_file": "ring_proximal_inter_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00620897634823359,
+        "inertial_pos": "0.00171914222568875 0.0124714959137608 4.41995972102066E-05"
+      },
+      "ring_distal_link": {
+        "name": "ring_distal_link",
+        "mesh_uri": "package://hand_export3/meshes/ring_distal_link.STL",
+        "mesh_file": "ring_distal_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00535190625277498,
+        "inertial_pos": "0.00948707637677615 -0.00295495943099907 -1.59032604986828E-05"
+      },
+      "little_mcp_flex_link": {
+        "name": "little_mcp_flex_link",
+        "mesh_uri": "package://hand_export3/meshes/little_mcp_flex_link.STL",
+        "mesh_file": "little_mcp_flex_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00175480563893916,
+        "inertial_pos": "-0.00104561357020145 0.00554148524537515 -0.00077116132195167"
+      },
+      "little_proximal_phalanx_link": {
+        "name": "little_proximal_phalanx_link",
+        "mesh_uri": "package://hand_export3/meshes/little_proximal_phalanx_link.STL",
+        "mesh_file": "little_proximal_phalanx_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00705324548878646,
+        "inertial_pos": "0.0153708507150669 -0.000431406830916414 -0.000102284890852466"
+      },
+      "little_proximal_inter_link": {
+        "name": "little_proximal_inter_link",
+        "mesh_uri": "package://hand_export3/meshes/little_proximal_inter_link.STL",
+        "mesh_file": "little_proximal_inter_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00508794579945083,
+        "inertial_pos": "0.000380928716927166 0.00994790135237095 4.42807179815465E-05"
+      },
+      "little_distal_link": {
+        "name": "little_distal_link",
+        "mesh_uri": "package://hand_export3/meshes/little_distal_link.STL",
+        "mesh_file": "little_distal_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00535223171703271,
+        "inertial_pos": "0.00956827975442195 -0.00268159145506164 -1.63941566939281E-05"
+      },
+      "thumb_root_connector_link": {
+        "name": "thumb_root_connector_link",
+        "mesh_uri": "package://hand_export3/meshes/thumb_root_connector_link.STL",
+        "mesh_file": "thumb_root_connector_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.00181832771929285,
+        "inertial_pos": "1.10337580691219E-05 3.63208447758841E-05 -0.00294386478903351"
+      },
+      "thumb_trapezium1_link": {
+        "name": "thumb_trapezium1_link",
+        "mesh_uri": "package://hand_export3/meshes/thumb_trapezium1_link.STL",
+        "mesh_file": "thumb_trapezium1_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.792156862745098 0.819607843137255 0.933333333333333 1",
+        "mass": 0.001,
+        "inertial_pos": "3.14152135080792E-06 -1.96804192927336E-05 0.000101684234539604"
+      },
+      "thumb_metacarpal_link": {
+        "name": "thumb_metacarpal_link",
+        "mesh_uri": "package://hand_export3/meshes/thumb_metacarpal_link.STL",
+        "mesh_file": "thumb_metacarpal_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.79216 0.81961 0.93333 1",
+        "mass": 0.012375,
+        "inertial_pos": "-0.1281 0.038472 0.039757"
+      },
+      "thumb_proximal_link": {
+        "name": "thumb_proximal_link",
+        "mesh_uri": "package://hand_export3/meshes/thumb_proximal_link.STL",
+        "mesh_file": "thumb_proximal_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.79216 0.81961 0.93333 1",
+        "mass": 0.0062816,
+        "inertial_pos": "-0.0015094 0.01438 -4.9187E-05"
+      },
+      "thumb_distal_link": {
+        "name": "thumb_distal_link",
+        "mesh_uri": "package://hand_export3/meshes/thumb_distal_link.STL",
+        "mesh_file": "thumb_distal_link.STL",
+        "mesh_exists": true,
+        "visual_origin": {
+          "xyz": "0 0 0",
+          "rpy": "0 0 0"
+        },
+        "rgba": "0.79216 0.81961 0.93333 1",
+        "mass": 0.0073168,
+        "inertial_pos": "0.00022649 -0.012179 -5.3426E-06"
+      }
+    },
+    "joints": [
+      {
+        "name": "wrist_1_joint",
+        "type": "revolute",
+        "parent": "hand_base_link",
+        "child": "wrist_middle_link",
+        "xyz": [
+          0.0,
+          0.0,
+          0.0149999999999995
+        ],
+        "rpy": [
+          1.5707963267949,
+          0.0138164162631697,
+          -3.06629219511699
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "-0.8",
+          "upper": "0.8",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "wrist_2_joint",
+        "type": "fixed",
+        "parent": "wrist_middle_link",
+        "child": "palm_link",
+        "xyz": [
+          -0.000799999999999593,
+          0.0202639370517931,
+          -0.000699999999999947
+        ],
+        "rpy": [
+          -1.5707963267949,
+          -1.38967224096842,
+          1.5707963267949
+        ],
+        "axis": "1 0 0",
+        "limit": {
+          "lower": "-0.8",
+          "upper": "0.8",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "index_mcp_flex_joint",
+        "type": "revolute",
+        "parent": "palm_link",
+        "child": "index_mcp_flex_link",
+        "xyz": [
+          -0.00143326292141997,
+          0.100337103658253,
+          -0.0248026451367664
+        ],
+        "rpy": [
+          0.0,
+          1.5707963267949,
+          0.0
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "-0.5",
+          "upper": "0.5",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "index_mcp_abd_joint",
+        "type": "revolute",
+        "parent": "index_mcp_flex_link",
+        "child": "index_proximal_phalanx_link",
+        "xyz": [
+          -0.000516762538859808,
+          0.00974169756613247,
+          -0.000266737078580086
+        ],
+        "rpy": [
+          -0.0529967843349534,
+          1.5707963267949,
+          0.0
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "0.2",
+          "upper": "1.2",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "index_pip_joint",
+        "type": "revolute",
+        "parent": "index_proximal_phalanx_link",
+        "child": "index_proximal_inter_link",
+        "xyz": [
+          -0.000210964493187544,
+          0.0349993641939764,
+          0.000250000000000181
+        ],
+        "rpy": [
+          0.0487064874837041,
+          0.109995223922661,
+          0.424720349209613
+        ],
+        "axis": "0.109773553624728 -0.0483929965230635 -0.992777862772996",
+        "limit": {
+          "lower": "0",
+          "upper": "1.57",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "index_dip_joint",
+        "type": "revolute",
+        "parent": "index_proximal_inter_link",
+        "child": "index_distal_link",
+        "xyz": [
+          0.00972663315965028,
+          0.0272521070336601,
+          -0.000454365524354738
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "0",
+          "upper": "1.2",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "middle_mcp_flex_joint",
+        "type": "revolute",
+        "parent": "palm_link",
+        "child": "middle_mcp_flex_link",
+        "xyz": [
+          -0.00143326292142025,
+          0.097567248067727,
+          -0.00480264513676616
+        ],
+        "rpy": [
+          0.0,
+          1.5707963267949,
+          0.0
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "-0.5",
+          "upper": "0.5",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "middle_mcp_abd_joint",
+        "type": "revolute",
+        "parent": "middle_mcp_flex_link",
+        "child": "middle_proximal_phalanx_link",
+        "xyz": [
+          -0.000642543972981538,
+          0.0097342104063117,
+          -0.000266737078580076
+        ],
+        "rpy": [
+          1.57079632679486,
+          0.0,
+          1.63670954979573
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "0.2",
+          "upper": "1.2",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "middle_pip_joint",
+        "type": "revolute",
+        "parent": "middle_proximal_phalanx_link",
+        "child": "middle_proximal_inter_link",
+        "xyz": [
+          0.044915415545163,
+          -0.00275779738293055,
+          -0.000299999999999724
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "0",
+          "upper": "1.57",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "middle_dip_joint",
+        "type": "revolute",
+        "parent": "middle_proximal_inter_link",
+        "child": "middle_distal_link",
+        "xyz": [
+          0.034980489550223,
+          -0.00116848227490686,
+          -0.00019999999999893
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "0",
+          "upper": "1.2",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "ring_mcp_flex_joint",
+        "type": "revolute",
+        "parent": "palm_link",
+        "child": "ring_mcp_flex_link",
+        "xyz": [
+          -0.00143326292142053,
+          0.0909888410402266,
+          0.0151973548632337
+        ],
+        "rpy": [
+          0.0,
+          1.5707963267949,
+          0.0
+        ],
+        "axis": "-0.995998795256862 -0.0893666595933805 0",
+        "limit": {
+          "lower": "-0.5",
+          "upper": "0.5",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "ring_mcp_abd_joint",
+        "type": "revolute",
+        "parent": "ring_mcp_flex_link",
+        "child": "ring_proximal_phalanx_link",
+        "xyz": [
+          -0.000871806988063654,
+          0.00971636081910909,
+          -0.00026673707857942
+        ],
+        "rpy": [
+          1.57079632679488,
+          0.0,
+          1.6602823689138
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "-0.2",
+          "upper": "1.2",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "ring_pip_joint",
+        "type": "revolute",
+        "parent": "ring_proximal_phalanx_link",
+        "child": "ring_proximal_inter_link",
+        "xyz": [
+          0.0399332337190107,
+          -0.00231016119414232,
+          -0.000300000000000307
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          -1.57079632679482
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "0",
+          "upper": "1.57",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "ring_dip_joint",
+        "type": "revolute",
+        "parent": "ring_proximal_inter_link",
+        "child": "ring_distal_link",
+        "xyz": [
+          0.0039742641378305,
+          0.0297355885188577,
+          -0.000199999999999749
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          1.57079632679482
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "0",
+          "upper": "1.2",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "little_mcp_flex_joint",
+        "type": "revolute",
+        "parent": "palm_link",
+        "child": "little_mcp_flex_link",
+        "xyz": [
+          -0.00143326292142082,
+          0.08234821361797,
+          0.0351973548632338
+        ],
+        "rpy": [
+          0.0,
+          1.5707963267949,
+          0.0
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "-0.5",
+          "upper": "0.5",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "little_mcp_abd_joint",
+        "type": "revolute",
+        "parent": "little_mcp_flex_link",
+        "child": "little_proximal_phalanx_link",
+        "xyz": [
+          -0.00180881450793354,
+          0.00958623518736365,
+          -0.000266737078579635
+        ],
+        "rpy": [
+          1.57079632679486,
+          0.0,
+          1.75729238358518
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "-0.2",
+          "upper": "1.2",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "little_pip_joint",
+        "type": "revolute",
+        "parent": "little_proximal_phalanx_link",
+        "child": "little_proximal_inter_link",
+        "xyz": [
+          0.034983,
+          -0.0010805,
+          -0.0003
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          -1.5708
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "0",
+          "upper": "1.57",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "little_dip_joint",
+        "type": "revolute",
+        "parent": "little_proximal_inter_link",
+        "child": "little_distal_link",
+        "xyz": [
+          0.00077177,
+          0.024988,
+          -0.0002
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          1.5708
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "0",
+          "upper": "1.2",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "thumb_root_connector_fixed_joint",
+        "type": "fixed",
+        "parent": "palm_link",
+        "child": "thumb_root_connector_link",
+        "xyz": [
+          0.00646877694946816,
+          0.0193318572130217,
+          -0.0164182261940455
+        ],
+        "rpy": [
+          -1.25378447702592,
+          0.117658476534027,
+          2.43554294725702
+        ],
+        "axis": "0 0 0",
+        "limit": null
+      },
+      {
+        "name": "thumb_cmc_abd_joint",
+        "type": "revolute",
+        "parent": "thumb_root_connector_link",
+        "child": "thumb_trapezium1_link",
+        "xyz": [
+          -6.3364e-05,
+          0.00012377,
+          -0.011586
+        ],
+        "rpy": [
+          -1.5515,
+          -0.31614,
+          -1.8718
+        ],
+        "axis": "-0.95043 -0.31095 0",
+        "limit": {
+          "lower": "-0.8",
+          "upper": "0.8",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "thumb_cmc_flex_joint",
+        "type": "revolute",
+        "parent": "thumb_trapezium1_link",
+        "child": "thumb_metacarpal_link",
+        "xyz": [
+          0.022854,
+          0.085965,
+          0.12154
+        ],
+        "rpy": [
+          -1.7196,
+          -0.78353,
+          1.6123
+        ],
+        "axis": "-0.70578 0.7006 0.105",
+        "limit": {
+          "lower": "0",
+          "upper": "1.2",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "thumb_mcp_joint",
+        "type": "revolute",
+        "parent": "thumb_metacarpal_link",
+        "child": "thumb_proximal_link",
+        "xyz": [
+          -0.11064,
+          0.054899,
+          0.049241
+        ],
+        "rpy": [
+          2.5976,
+          1.4478,
+          1.8125
+        ],
+        "axis": "0 0 -1",
+        "limit": {
+          "lower": "0",
+          "upper": "1.2",
+          "effort": "1",
+          "velocity": "1"
+        }
+      },
+      {
+        "name": "thumb_ip_joint",
+        "type": "revolute",
+        "parent": "thumb_proximal_link",
+        "child": "thumb_distal_link",
+        "xyz": [
+          -0.0033345,
+          0.031826,
+          -0.000105
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          3.1416
+        ],
+        "axis": "0 0 1",
+        "limit": {
+          "lower": "0",
+          "upper": "1.2",
+          "effort": "1",
+          "velocity": "1"
+        }
+      }
+    ],
+    "mesh_refs": [
+      {
+        "link": "hand_base_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/hand_base_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\hand_base_link.STL",
+        "exists": true
+      },
+      {
+        "link": "hand_base_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/hand_base_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\hand_base_link.STL",
+        "exists": true
+      },
+      {
+        "link": "wrist_middle_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/wrist_middle_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\wrist_middle_link.STL",
+        "exists": true
+      },
+      {
+        "link": "wrist_middle_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/wrist_middle_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\wrist_middle_link.STL",
+        "exists": true
+      },
+      {
+        "link": "palm_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/palm_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\palm_link.STL",
+        "exists": true
+      },
+      {
+        "link": "palm_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/palm_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\palm_link.STL",
+        "exists": true
+      },
+      {
+        "link": "index_mcp_flex_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/index_mcp_flex_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\index_mcp_flex_link.STL",
+        "exists": true
+      },
+      {
+        "link": "index_mcp_flex_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/index_mcp_flex_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\index_mcp_flex_link.STL",
+        "exists": true
+      },
+      {
+        "link": "index_proximal_phalanx_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/index_proximal_phalanx_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\index_proximal_phalanx_link.STL",
+        "exists": true
+      },
+      {
+        "link": "index_proximal_phalanx_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/index_proximal_phalanx_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\index_proximal_phalanx_link.STL",
+        "exists": true
+      },
+      {
+        "link": "index_proximal_inter_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/index_proximal_inter_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\index_proximal_inter_link.STL",
+        "exists": true
+      },
+      {
+        "link": "index_proximal_inter_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/index_proximal_inter_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\index_proximal_inter_link.STL",
+        "exists": true
+      },
+      {
+        "link": "index_distal_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/index_distal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\index_distal_link.STL",
+        "exists": true
+      },
+      {
+        "link": "index_distal_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/index_distal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\index_distal_link.STL",
+        "exists": true
+      },
+      {
+        "link": "middle_mcp_flex_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/middle_mcp_flex_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\middle_mcp_flex_link.STL",
+        "exists": true
+      },
+      {
+        "link": "middle_mcp_flex_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/middle_mcp_flex_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\middle_mcp_flex_link.STL",
+        "exists": true
+      },
+      {
+        "link": "middle_proximal_phalanx_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/middle_proximal_phalanx_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\middle_proximal_phalanx_link.STL",
+        "exists": true
+      },
+      {
+        "link": "middle_proximal_phalanx_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/middle_proximal_phalanx_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\middle_proximal_phalanx_link.STL",
+        "exists": true
+      },
+      {
+        "link": "middle_proximal_inter_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/middle_proximal_inter_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\middle_proximal_inter_link.STL",
+        "exists": true
+      },
+      {
+        "link": "middle_proximal_inter_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/middle_proximal_inter_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\middle_proximal_inter_link.STL",
+        "exists": true
+      },
+      {
+        "link": "middle_distal_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/middle_distal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\middle_distal_link.STL",
+        "exists": true
+      },
+      {
+        "link": "middle_distal_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/middle_distal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\middle_distal_link.STL",
+        "exists": true
+      },
+      {
+        "link": "ring_mcp_flex_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/ring_mcp_flex_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\ring_mcp_flex_link.STL",
+        "exists": true
+      },
+      {
+        "link": "ring_mcp_flex_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/ring_mcp_flex_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\ring_mcp_flex_link.STL",
+        "exists": true
+      },
+      {
+        "link": "ring_proximal_phalanx_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/ring_proximal_phalanx_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\ring_proximal_phalanx_link.STL",
+        "exists": true
+      },
+      {
+        "link": "ring_proximal_phalanx_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/ring_proximal_phalanx_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\ring_proximal_phalanx_link.STL",
+        "exists": true
+      },
+      {
+        "link": "ring_proximal_inter_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/ring_proximal_inter_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\ring_proximal_inter_link.STL",
+        "exists": true
+      },
+      {
+        "link": "ring_proximal_inter_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/ring_proximal_inter_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\ring_proximal_inter_link.STL",
+        "exists": true
+      },
+      {
+        "link": "ring_distal_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/ring_distal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\ring_distal_link.STL",
+        "exists": true
+      },
+      {
+        "link": "ring_distal_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/ring_distal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\ring_distal_link.STL",
+        "exists": true
+      },
+      {
+        "link": "little_mcp_flex_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/little_mcp_flex_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\little_mcp_flex_link.STL",
+        "exists": true
+      },
+      {
+        "link": "little_mcp_flex_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/little_mcp_flex_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\little_mcp_flex_link.STL",
+        "exists": true
+      },
+      {
+        "link": "little_proximal_phalanx_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/little_proximal_phalanx_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\little_proximal_phalanx_link.STL",
+        "exists": true
+      },
+      {
+        "link": "little_proximal_phalanx_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/little_proximal_phalanx_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\little_proximal_phalanx_link.STL",
+        "exists": true
+      },
+      {
+        "link": "little_proximal_inter_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/little_proximal_inter_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\little_proximal_inter_link.STL",
+        "exists": true
+      },
+      {
+        "link": "little_proximal_inter_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/little_proximal_inter_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\little_proximal_inter_link.STL",
+        "exists": true
+      },
+      {
+        "link": "little_distal_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/little_distal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\little_distal_link.STL",
+        "exists": true
+      },
+      {
+        "link": "little_distal_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/little_distal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\little_distal_link.STL",
+        "exists": true
+      },
+      {
+        "link": "thumb_root_connector_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/thumb_root_connector_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\thumb_root_connector_link.STL",
+        "exists": true
+      },
+      {
+        "link": "thumb_root_connector_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/thumb_root_connector_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\thumb_root_connector_link.STL",
+        "exists": true
+      },
+      {
+        "link": "thumb_trapezium1_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/thumb_trapezium1_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\thumb_trapezium1_link.STL",
+        "exists": true
+      },
+      {
+        "link": "thumb_trapezium1_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/thumb_trapezium1_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\thumb_trapezium1_link.STL",
+        "exists": true
+      },
+      {
+        "link": "thumb_metacarpal_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/thumb_metacarpal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\thumb_metacarpal_link.STL",
+        "exists": true
+      },
+      {
+        "link": "thumb_metacarpal_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/thumb_metacarpal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\thumb_metacarpal_link.STL",
+        "exists": true
+      },
+      {
+        "link": "thumb_proximal_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/thumb_proximal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\thumb_proximal_link.STL",
+        "exists": true
+      },
+      {
+        "link": "thumb_proximal_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/thumb_proximal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\thumb_proximal_link.STL",
+        "exists": true
+      },
+      {
+        "link": "thumb_distal_link",
+        "source": "visual",
+        "uri": "package://hand_export3/meshes/thumb_distal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\thumb_distal_link.STL",
+        "exists": true
+      },
+      {
+        "link": "thumb_distal_link",
+        "source": "collision",
+        "uri": "package://hand_export3/meshes/thumb_distal_link.STL",
+        "resolved": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\meshes\\thumb_distal_link.STL",
+        "exists": true
+      }
+    ],
+    "robot_name": "hand_export3",
+    "urdf_path": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\export3\\urdf\\hand_export3.urdf"
+  },
+  "integrity": {
+    "link_count": 24,
+    "joint_count": 23,
+    "revolute_count": 21,
+    "fixed_count": 2,
+    "duplicate_links": [],
+    "duplicate_joints": [],
+    "missing_parent_child": [],
+    "revolute_missing_limit": [],
+    "fixed_with_limit": [
+      "wrist_2_joint"
+    ],
+    "missing_mesh_refs": [],
+    "unresolved_package_refs": [],
+    "empty_link": false,
+    "obvious_name_issues": [],
+    "thumb_chain_checks": [
+      {
+        "joint": "thumb_root_connector_fixed_joint",
+        "expected_parent": "palm_link",
+        "expected_child": "thumb_root_connector_link",
+        "actual_parent": "palm_link",
+        "actual_child": "thumb_root_connector_link",
+        "actual_type": "fixed",
+        "ok": true
+      },
+      {
+        "joint": "thumb_cmc_abd_joint",
+        "expected_parent": "thumb_root_connector_link",
+        "expected_child": "thumb_trapezium1_link",
+        "actual_parent": "thumb_root_connector_link",
+        "actual_child": "thumb_trapezium1_link",
+        "actual_type": "revolute",
+        "ok": true
+      },
+      {
+        "joint": "thumb_cmc_flex_joint",
+        "expected_parent": "thumb_trapezium1_link",
+        "expected_child": "thumb_metacarpal_link",
+        "actual_parent": "thumb_trapezium1_link",
+        "actual_child": "thumb_metacarpal_link",
+        "actual_type": "revolute",
+        "ok": true
+      },
+      {
+        "joint": "thumb_mcp_joint",
+        "expected_parent": "thumb_metacarpal_link",
+        "expected_child": "thumb_proximal_link",
+        "actual_parent": "thumb_metacarpal_link",
+        "actual_child": "thumb_proximal_link",
+        "actual_type": "revolute",
+        "ok": true
+      },
+      {
+        "joint": "thumb_ip_joint",
+        "expected_parent": "thumb_proximal_link",
+        "expected_child": "thumb_distal_link",
+        "actual_parent": "thumb_proximal_link",
+        "actual_child": "thumb_distal_link",
+        "actual_type": "revolute",
+        "ok": true
+      }
+    ],
+    "thumb_chain_ok": true,
+    "old_thumb_cmc_joint_present": false,
+    "old_thumb_cmc_joint": null,
+    "passed": true
+  }
+}

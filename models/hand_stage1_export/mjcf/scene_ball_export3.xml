@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="hand_stage1_export3_ball_scene">
+  <include file="hand_stage1_export3.xml"/>
+  <visual>
+    <global azimuth="145" elevation="-25" offwidth="1280" offheight="900"/>
+  </visual>
+  <asset>
+    <texture type="2d" name="ground_checker" builtin="checker" rgb1="0.18 0.20 0.22" rgb2="0.28 0.30 0.32" width="300" height="300"/>
+    <material name="ground_mat" texture="ground_checker" texrepeat="4 4" reflectance="0.15"/>
+  </asset>
+  <worldbody>
+    <light pos="0 -0.3 0.8" dir="0 0 -1" directional="true"/>
+    <light pos="-0.25 0.25 0.5"/>
+    <geom name="ground" type="plane" pos="0 0 0" size="0.4 0.4 0.02" material="ground_mat" contype="1" conaffinity="3"/>
+    <body name="ball" pos="0 -0.1 0.21">
+      <freejoint name="ball_freejoint"/>
+      <geom name="ball_geom" type="sphere" size="0.025" rgba="0.95 0.23 0.18 1" mass="0.03" friction="0.8 0.05 0.001" condim="3" contype="2" conaffinity="1"/>
+    </body>
+    <camera name="full_hand_with_ball" pos="0.20 -0.34 0.29" xyaxes="0.834219 0.551433 0 -0.16379 0.247785 0.954869" fovy="45"/>
+    <camera name="front" pos="0.20 -0.34 0.29" xyaxes="0.834219 0.551433 0 -0.16379 0.247785 0.954869" fovy="45"/>
+    <camera name="side" pos="0.34 0.02 0.24" xyaxes="-0.190477 0.981692 0 -0.169999 -0.0329848 0.984892" fovy="45"/>
+    <camera name="top" pos="0.02 -0.06 0.48" xyaxes="0.707107 0.707107 0 -0.705346 0.705346 0.0705346" fovy="45"/>
+    <camera name="palm" pos="0.03 -0.23 0.21" xyaxes="0.995037 0.0995037 0 -0.030061 0.30061 0.953268" fovy="38"/>
+    <camera name="thumb_root_closeup" pos="-0.12 -0.22 0.20" xyaxes="0.85264 -0.522499 0 0.171595 0.280048 0.944552" fovy="28"/>
+    <camera name="index_finger_closeup" pos="0.10 -0.20 0.29" xyaxes="0.894427 0.447214 0 -0.19518 0.39036 0.8998" fovy="28"/>
+  </worldbody>
+</mujoco>

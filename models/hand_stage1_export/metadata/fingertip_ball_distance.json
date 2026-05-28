@@ -1,0 +1,245 @@
+{
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_primitive.xml",
+  "load_success": true,
+  "ball_position": [
+    0.01,
+    -0.045,
+    0.215
+  ],
+  "ball_radius": 0.025,
+  "tip_sites": [
+    "index_tip_site",
+    "middle_tip_site",
+    "ring_tip_site",
+    "little_tip_site",
+    "thumb_tip_site"
+  ],
+  "missing_sites": [],
+  "stages": [
+    {
+      "stage": "open_hand",
+      "applied_targets": {
+        "index_dip_joint": 0.0,
+        "index_mcp_abd_joint": 0.0,
+        "index_mcp_flex_joint": 0.0,
+        "index_pip_joint": 0.0,
+        "little_dip_joint": 0.0,
+        "little_mcp_abd_joint": 0.0,
+        "little_mcp_flex_joint": 0.0,
+        "little_pip_joint": 0.0,
+        "middle_dip_joint": 0.0,
+        "middle_mcp_abd_joint": 0.0,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.0,
+        "ring_dip_joint": 0.0,
+        "ring_mcp_abd_joint": 0.0,
+        "ring_mcp_flex_joint": 0.0,
+        "ring_pip_joint": 0.0,
+        "thumb_cmc_joint": 0.0,
+        "thumb_ip_joint": 0.0,
+        "thumb_mcp_joint": 0.0
+      },
+      "ball_center": [
+        0.01,
+        -0.045,
+        0.215
+      ],
+      "distances": {
+        "index_tip_site": 0.07493043218651867,
+        "middle_tip_site": 0.07926423114004222,
+        "ring_tip_site": 0.06365463325852237,
+        "little_tip_site": 0.0626729839420092,
+        "thumb_tip_site": 0.12280129251845871
+      },
+      "clearance_to_ball_surface": {
+        "index_tip_site": 0.049930432186518665,
+        "middle_tip_site": 0.05426423114004222,
+        "ring_tip_site": 0.03865463325852237,
+        "little_tip_site": 0.03767298394200919,
+        "thumb_tip_site": 0.0978012925184587
+      },
+      "min_distance": 0.0626729839420092
+    },
+    {
+      "stage": "approach_pre_shape",
+      "applied_targets": {
+        "index_dip_joint": 0.0,
+        "index_mcp_abd_joint": 0.16,
+        "index_mcp_flex_joint": -0.04,
+        "index_pip_joint": 0.0,
+        "little_dip_joint": 0.0,
+        "little_mcp_abd_joint": 0.16,
+        "little_mcp_flex_joint": 0.06,
+        "little_pip_joint": 0.0,
+        "middle_dip_joint": 0.0,
+        "middle_mcp_abd_joint": 0.18,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.0,
+        "ring_dip_joint": 0.0,
+        "ring_mcp_abd_joint": 0.18,
+        "ring_mcp_flex_joint": 0.03,
+        "ring_pip_joint": 0.0,
+        "thumb_cmc_joint": 0.12,
+        "thumb_ip_joint": 0.08,
+        "thumb_mcp_joint": 0.1
+      },
+      "ball_center": [
+        0.01,
+        -0.045,
+        0.215
+      ],
+      "distances": {
+        "index_tip_site": 0.06963396528362012,
+        "middle_tip_site": 0.07589664841056068,
+        "ring_tip_site": 0.0604463910110328,
+        "little_tip_site": 0.05653583896636602,
+        "thumb_tip_site": 0.1203317193124444
+      },
+      "clearance_to_ball_surface": {
+        "index_tip_site": 0.04463396528362012,
+        "middle_tip_site": 0.05089664841056068,
+        "ring_tip_site": 0.0354463910110328,
+        "little_tip_site": 0.03153583896636602,
+        "thumb_tip_site": 0.09533171931244439
+      },
+      "min_distance": 0.05653583896636602
+    },
+    {
+      "stage": "close_four_fingers",
+      "applied_targets": {
+        "index_dip_joint": 0.35,
+        "index_mcp_abd_joint": 0.45,
+        "index_mcp_flex_joint": -0.08,
+        "index_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "little_mcp_abd_joint": 0.45,
+        "little_mcp_flex_joint": 0.08,
+        "little_pip_joint": 0.65,
+        "middle_dip_joint": 0.38,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_pip_joint": 0.7,
+        "thumb_cmc_joint": 0.12,
+        "thumb_ip_joint": 0.08,
+        "thumb_mcp_joint": 0.1
+      },
+      "ball_center": [
+        0.01,
+        -0.045,
+        0.215
+      ],
+      "distances": {
+        "index_tip_site": 0.05897277589296785,
+        "middle_tip_site": 0.06729394417292174,
+        "ring_tip_site": 0.06081568998444674,
+        "little_tip_site": 0.05800318542365141,
+        "thumb_tip_site": 0.1203317193124444
+      },
+      "clearance_to_ball_surface": {
+        "index_tip_site": 0.03397277589296785,
+        "middle_tip_site": 0.04229394417292174,
+        "ring_tip_site": 0.03581568998444674,
+        "little_tip_site": 0.03300318542365141,
+        "thumb_tip_site": 0.09533171931244439
+      },
+      "min_distance": 0.05800318542365141
+    },
+    {
+      "stage": "close_thumb",
+      "applied_targets": {
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.25,
+        "thumb_mcp_joint": 0.45,
+        "thumb_ip_joint": 0.35
+      },
+      "ball_center": [
+        0.01,
+        -0.045,
+        0.215
+      ],
+      "distances": {
+        "index_tip_site": 0.05897277589296785,
+        "middle_tip_site": 0.06729394417292174,
+        "ring_tip_site": 0.06081568998444674,
+        "little_tip_site": 0.05800318542365141,
+        "thumb_tip_site": 0.11757593050371913
+      },
+      "clearance_to_ball_surface": {
+        "index_tip_site": 0.03397277589296785,
+        "middle_tip_site": 0.04229394417292174,
+        "ring_tip_site": 0.03581568998444674,
+        "little_tip_site": 0.03300318542365141,
+        "thumb_tip_site": 0.09257593050371912
+      },
+      "min_distance": 0.05800318542365141
+    },
+    {
+      "stage": "hold",
+      "applied_targets": {
+        "index_mcp_flex_joint": -0.08,
+        "index_mcp_abd_joint": 0.45,
+        "index_pip_joint": 0.65,
+        "index_dip_joint": 0.35,
+        "middle_mcp_flex_joint": 0.0,
+        "middle_mcp_abd_joint": 0.5,
+        "middle_pip_joint": 0.7,
+        "middle_dip_joint": 0.38,
+        "ring_mcp_flex_joint": 0.04,
+        "ring_mcp_abd_joint": 0.5,
+        "ring_pip_joint": 0.7,
+        "ring_dip_joint": 0.38,
+        "little_mcp_flex_joint": 0.08,
+        "little_mcp_abd_joint": 0.45,
+        "little_pip_joint": 0.65,
+        "little_dip_joint": 0.35,
+        "thumb_cmc_joint": 0.25,
+        "thumb_mcp_joint": 0.45,
+        "thumb_ip_joint": 0.35
+      },
+      "ball_center": [
+        0.01,
+        -0.045,
+        0.215
+      ],
+      "distances": {
+        "index_tip_site": 0.05897277589296785,
+        "middle_tip_site": 0.06729394417292174,
+        "ring_tip_site": 0.06081568998444674,
+        "little_tip_site": 0.05800318542365141,
+        "thumb_tip_site": 0.11757593050371913
+      },
+      "clearance_to_ball_surface": {
+        "index_tip_site": 0.03397277589296785,
+        "middle_tip_site": 0.04229394417292174,
+        "ring_tip_site": 0.03581568998444674,
+        "little_tip_site": 0.03300318542365141,
+        "thumb_tip_site": 0.09257593050371912
+      },
+      "min_distance": 0.05800318542365141
+    }
+  ],
+  "notes": [
+    "Distances are computed on primitive fingertip sites, not CAD fingertip geometry.",
+    "Negative clearance means the site is inside the ideal ball radius; this is allowed for this qpos-only scripted smoke test.",
+    "TODO: use these numbers to tune ball position and scripted target signs after visual inspection."
+  ]
+}

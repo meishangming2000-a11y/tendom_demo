@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-05-26T17:29:04",
+  "base_xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\arm_hand_export4_palmar_ypos_candidate.xml",
+  "out_xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\arm_hand_export4_flange_seated_candidate.xml",
+  "scene_xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\scene_arm_hand_export4_flange_seated_candidate.xml",
+  "attachment_parent": "ee_tool_frame",
+  "attached_body": "hand_base_link",
+  "hand_root_pos_in_ee_tool_frame": [
+    0.0,
+    0.0,
+    0.01455
+  ],
+  "hand_root_quat_in_ee_tool_frame": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "selection_reason": [
+    "Identity was kinematically valid but used the internal ee_tool_frame origin.",
+    "Axis debug shows the visible flange plate is on ee_mount local +Y.",
+    "The ee_tool_frame is about 14.5 mm inside that +Y mesh boundary.",
+    "The equivalent child offset is approximately ee_tool_frame local +Z = 14.55 mm."
+  ],
+  "limits": [
+    "This is MuJoCo fixed-transform calibration only.",
+    "It is not a CAD-certified flange adapter.",
+    "CAD/STL/joint tree/joint names were not modified."
+  ]
+}

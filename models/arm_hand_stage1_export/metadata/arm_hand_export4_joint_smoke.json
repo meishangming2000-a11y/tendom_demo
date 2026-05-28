@@ -1,0 +1,487 @@
+{
+  "generated_at": "2026-05-27T01:58:13",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\scene_arm_hand_export4_cad_mount_candidate.xml",
+  "model_summary": {
+    "nbody": 31,
+    "njnt": 26,
+    "nu": 26,
+    "ngeom": 59,
+    "nsite": 14,
+    "nmesh": 29
+  },
+  "ee_tool_frame_found": true,
+  "hand_root_child_under_arm": true,
+  "joint_kinematic_summary": {
+    "total": 26,
+    "pass": 26,
+    "fail": 0,
+    "skipped": 0
+  },
+  "joint_results": [
+    {
+      "joint": "j1",
+      "body": "link_1",
+      "target": 0.12,
+      "range": [
+        -3.1416,
+        3.1416
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.1696038224349174,
+      "status": "PASS"
+    },
+    {
+      "joint": "j2",
+      "body": "link_2",
+      "target": 0.12,
+      "range": [
+        -1.5708,
+        1.5708
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.1696038224349174,
+      "status": "PASS"
+    },
+    {
+      "joint": "j3",
+      "body": "link_3",
+      "target": 0.12,
+      "range": [
+        -1.5708,
+        1.5708
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.16960382243491737,
+      "status": "PASS"
+    },
+    {
+      "joint": "j4",
+      "body": "ee_mount",
+      "target": 0.12,
+      "range": [
+        -3.1416,
+        3.1416
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.16960382243491734,
+      "status": "PASS"
+    },
+    {
+      "joint": "wrist_1_joint",
+      "body": "wrist_middle_link",
+      "target": 0.12,
+      "range": [
+        -0.8,
+        0.8
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.16960382243491737,
+      "status": "PASS"
+    },
+    {
+      "joint": "wrist_2_joint",
+      "body": "palm_link",
+      "target": 0.12,
+      "range": [
+        -0.8,
+        0.8
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.1696038224349174,
+      "status": "PASS"
+    },
+    {
+      "joint": "index_mcp_flex_joint",
+      "body": "index_mcp_flex_link",
+      "target": 0.12,
+      "range": [
+        -0.3,
+        0.18
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.16960382243491734,
+      "status": "PASS"
+    },
+    {
+      "joint": "index_mcp_abd_joint",
+      "body": "index_proximal_phalanx_link",
+      "target": 0.08,
+      "range": [
+        -0.78,
+        0.08
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.11310691751401616,
+      "status": "PASS"
+    },
+    {
+      "joint": "index_pip_joint",
+      "body": "index_proximal_inter_link",
+      "target": 0.04,
+      "range": [
+        -1.1,
+        0.04
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.05656477133418153,
+      "status": "PASS"
+    },
+    {
+      "joint": "index_dip_joint",
+      "body": "index_distal_link",
+      "target": 0.04,
+      "range": [
+        -0.66,
+        0.04
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.05656477133418144,
+      "status": "PASS"
+    },
+    {
+      "joint": "little_mcp_flex_joint",
+      "body": "little_mcp_flex_link",
+      "target": 0.12,
+      "range": [
+        -0.28,
+        0.16
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.16960382243491734,
+      "status": "PASS"
+    },
+    {
+      "joint": "little_mcp_abd_joint",
+      "body": "little_proximal_phalanx_link",
+      "target": 0.08,
+      "range": [
+        -0.76,
+        0.08
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.11310691751401576,
+      "status": "PASS"
+    },
+    {
+      "joint": "little_pip_joint",
+      "body": "little_proximal_inter_link",
+      "target": 0.04,
+      "range": [
+        -1.0,
+        0.04
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.056564771334181474,
+      "status": "PASS"
+    },
+    {
+      "joint": "little_dip_joint",
+      "body": "little_distal_link",
+      "target": 0.04,
+      "range": [
+        -0.62,
+        0.04
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.05656477133418145,
+      "status": "PASS"
+    },
+    {
+      "joint": "middle_mcp_flex_joint",
+      "body": "middle_mcp_flex_link",
+      "target": 0.12,
+      "range": [
+        -0.3,
+        0.18
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.16960382243491734,
+      "status": "PASS"
+    },
+    {
+      "joint": "middle_mcp_abd_joint",
+      "body": "middle_proximal_phalanx_link",
+      "target": 0.08,
+      "range": [
+        -0.86,
+        0.08
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.11310691751401628,
+      "status": "PASS"
+    },
+    {
+      "joint": "middle_pip_joint",
+      "body": "middle_proximal_inter_link",
+      "target": 0.04,
+      "range": [
+        -1.16,
+        0.04
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.05656477133418155,
+      "status": "PASS"
+    },
+    {
+      "joint": "middle_dip_joint",
+      "body": "middle_distal_link",
+      "target": 0.04,
+      "range": [
+        -0.7,
+        0.04
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.05656477133418155,
+      "status": "PASS"
+    },
+    {
+      "joint": "ring_mcp_flex_joint",
+      "body": "ring_mcp_flex_link",
+      "target": 0.12,
+      "range": [
+        -0.3,
+        0.18
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.16960382243491742,
+      "status": "PASS"
+    },
+    {
+      "joint": "ring_mcp_abd_joint",
+      "body": "ring_proximal_phalanx_link",
+      "target": 0.08,
+      "range": [
+        -0.84,
+        0.08
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.11310691751401596,
+      "status": "PASS"
+    },
+    {
+      "joint": "ring_pip_joint",
+      "body": "ring_proximal_inter_link",
+      "target": 0.04,
+      "range": [
+        -1.1,
+        0.04
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.056564771334181495,
+      "status": "PASS"
+    },
+    {
+      "joint": "ring_dip_joint",
+      "body": "ring_distal_link",
+      "target": 0.04,
+      "range": [
+        -0.68,
+        0.04
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.05656477133418146,
+      "status": "PASS"
+    },
+    {
+      "joint": "thumb_cmc_abd_joint",
+      "body": "thumb_trapezium1_link",
+      "target": 0.12,
+      "range": [
+        -1.05,
+        1.05
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.16960382243491728,
+      "status": "PASS"
+    },
+    {
+      "joint": "thumb_cmc_joint",
+      "body": "thumb_metacarpal_link",
+      "target": 0.12,
+      "range": [
+        -0.95,
+        0.95
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.16960382243491753,
+      "status": "PASS"
+    },
+    {
+      "joint": "thumb_mcp_joint",
+      "body": "thumb_proximal_link",
+      "target": 0.12,
+      "range": [
+        -0.1,
+        1.2
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.16960382243491753,
+      "status": "PASS"
+    },
+    {
+      "joint": "thumb_ip_joint",
+      "body": "thumb_distal_link",
+      "target": 0.05,
+      "range": [
+        -0.85,
+        0.05
+      ],
+      "pos_delta": 0.0,
+      "rot_delta": 0.07070331265319202,
+      "status": "PASS"
+    }
+  ],
+  "actuator_smoke": {
+    "status": "PASS",
+    "steps": 250,
+    "max_abs_qpos": 0.16888292199727412,
+    "max_abs_qvel": 0.20502491896563138,
+    "actuators": [
+      {
+        "actuator": "a_j1",
+        "joint": "j1",
+        "target": 0.12
+      },
+      {
+        "actuator": "a_j2",
+        "joint": "j2",
+        "target": 0.12
+      },
+      {
+        "actuator": "a_j3",
+        "joint": "j3",
+        "target": 0.12
+      },
+      {
+        "actuator": "a_j4",
+        "joint": "j4",
+        "target": 0.12
+      },
+      {
+        "actuator": "wrist_1_joint_pos",
+        "joint": "wrist_1_joint",
+        "target": 0.12
+      },
+      {
+        "actuator": "wrist_2_joint_pos",
+        "joint": "wrist_2_joint",
+        "target": 0.12
+      },
+      {
+        "actuator": "index_mcp_flex_joint_pos",
+        "joint": "index_mcp_flex_joint",
+        "target": 0.12
+      },
+      {
+        "actuator": "index_mcp_abd_joint_pos",
+        "joint": "index_mcp_abd_joint",
+        "target": 0.08
+      },
+      {
+        "actuator": "index_pip_joint_pos",
+        "joint": "index_pip_joint",
+        "target": 0.04
+      },
+      {
+        "actuator": "index_dip_joint_pos",
+        "joint": "index_dip_joint",
+        "target": 0.04
+      },
+      {
+        "actuator": "middle_mcp_flex_joint_pos",
+        "joint": "middle_mcp_flex_joint",
+        "target": 0.12
+      },
+      {
+        "actuator": "middle_mcp_abd_joint_pos",
+        "joint": "middle_mcp_abd_joint",
+        "target": 0.08
+      },
+      {
+        "actuator": "middle_pip_joint_pos",
+        "joint": "middle_pip_joint",
+        "target": 0.04
+      },
+      {
+        "actuator": "middle_dip_joint_pos",
+        "joint": "middle_dip_joint",
+        "target": 0.04
+      },
+      {
+        "actuator": "ring_mcp_flex_joint_pos",
+        "joint": "ring_mcp_flex_joint",
+        "target": 0.12
+      },
+      {
+        "actuator": "ring_mcp_abd_joint_pos",
+        "joint": "ring_mcp_abd_joint",
+        "target": 0.08
+      },
+      {
+        "actuator": "ring_pip_joint_pos",
+        "joint": "ring_pip_joint",
+        "target": 0.04
+      },
+      {
+        "actuator": "ring_dip_joint_pos",
+        "joint": "ring_dip_joint",
+        "target": 0.04
+      },
+      {
+        "actuator": "little_mcp_flex_joint_pos",
+        "joint": "little_mcp_flex_joint",
+        "target": 0.12
+      },
+      {
+        "actuator": "little_mcp_abd_joint_pos",
+        "joint": "little_mcp_abd_joint",
+        "target": 0.08
+      },
+      {
+        "actuator": "little_pip_joint_pos",
+        "joint": "little_pip_joint",
+        "target": 0.04
+      },
+      {
+        "actuator": "little_dip_joint_pos",
+        "joint": "little_dip_joint",
+        "target": 0.04
+      },
+      {
+        "actuator": "thumb_cmc_abd_joint_pos",
+        "joint": "thumb_cmc_abd_joint",
+        "target": 0.12
+      },
+      {
+        "actuator": "thumb_cmc_joint_pos",
+        "joint": "thumb_cmc_joint",
+        "target": 0.12
+      },
+      {
+        "actuator": "thumb_mcp_joint_pos",
+        "joint": "thumb_mcp_joint",
+        "target": 0.12
+      },
+      {
+        "actuator": "thumb_ip_joint_pos",
+        "joint": "thumb_ip_joint",
+        "target": 0.05
+      }
+    ]
+  },
+  "renders": {
+    "open": {
+      "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks\\arm_hand_joint_smoke_open.png",
+      "mean_pixel": 68.81954803240741,
+      "min_pixel": 3,
+      "max_pixel": 255
+    },
+    "actuated": {
+      "file": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\visual_checks\\arm_hand_joint_smoke_actuated.png",
+      "mean_pixel": 68.71051938657408,
+      "min_pixel": 4,
+      "max_pixel": 255
+    }
+  },
+  "overall_status": "PASS"
+}

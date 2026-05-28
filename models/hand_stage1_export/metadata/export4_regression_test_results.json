@@ -1,0 +1,293 @@
+{
+  "generated_at": "2026-05-26T02:09:11",
+  "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+  "overall": "FAIL",
+  "pass_count": 6,
+  "fail_count": 1,
+  "skipped_count": 0,
+  "can_enter_dataset_collection_v0": false,
+  "results": [
+    {
+      "name": "model_load_test",
+      "result": "PASS",
+      "summary": {
+        "scene": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\scene_ball_export4_wrist2_collision_tuned.xml",
+        "nbody": 26,
+        "njnt": 23,
+        "nu": 22,
+        "ngeom": 50,
+        "nsite": 5
+      }
+    },
+    {
+      "name": "joint_smoke_test",
+      "result": "PASS",
+      "tested_joint_count": 22,
+      "rows": [
+        {
+          "joint": "wrist_1_joint",
+          "qposadr": 0,
+          "range": [
+            -0.8,
+            0.8
+          ]
+        },
+        {
+          "joint": "wrist_2_joint",
+          "qposadr": 1,
+          "range": [
+            -0.8,
+            0.8
+          ]
+        },
+        {
+          "joint": "index_mcp_flex_joint",
+          "qposadr": 2,
+          "range": [
+            -0.3,
+            0.18
+          ]
+        },
+        {
+          "joint": "index_mcp_abd_joint",
+          "qposadr": 3,
+          "range": [
+            -0.78,
+            0.08
+          ]
+        },
+        {
+          "joint": "index_pip_joint",
+          "qposadr": 4,
+          "range": [
+            -1.1,
+            0.04
+          ]
+        },
+        {
+          "joint": "index_dip_joint",
+          "qposadr": 5,
+          "range": [
+            -0.66,
+            0.04
+          ]
+        },
+        {
+          "joint": "little_mcp_flex_joint",
+          "qposadr": 6,
+          "range": [
+            -0.28,
+            0.16
+          ]
+        },
+        {
+          "joint": "little_mcp_abd_joint",
+          "qposadr": 7,
+          "range": [
+            -0.76,
+            0.08
+          ]
+        },
+        {
+          "joint": "little_pip_joint",
+          "qposadr": 8,
+          "range": [
+            -1.0,
+            0.04
+          ]
+        },
+        {
+          "joint": "little_dip_joint",
+          "qposadr": 9,
+          "range": [
+            -0.62,
+            0.04
+          ]
+        },
+        {
+          "joint": "middle_mcp_flex_joint",
+          "qposadr": 10,
+          "range": [
+            -0.3,
+            0.18
+          ]
+        },
+        {
+          "joint": "middle_mcp_abd_joint",
+          "qposadr": 11,
+          "range": [
+            -0.86,
+            0.08
+          ]
+        },
+        {
+          "joint": "middle_pip_joint",
+          "qposadr": 12,
+          "range": [
+            -1.16,
+            0.04
+          ]
+        },
+        {
+          "joint": "middle_dip_joint",
+          "qposadr": 13,
+          "range": [
+            -0.7,
+            0.04
+          ]
+        },
+        {
+          "joint": "ring_mcp_flex_joint",
+          "qposadr": 14,
+          "range": [
+            -0.3,
+            0.18
+          ]
+        },
+        {
+          "joint": "ring_mcp_abd_joint",
+          "qposadr": 15,
+          "range": [
+            -0.84,
+            0.08
+          ]
+        },
+        {
+          "joint": "ring_pip_joint",
+          "qposadr": 16,
+          "range": [
+            -1.1,
+            0.04
+          ]
+        },
+        {
+          "joint": "ring_dip_joint",
+          "qposadr": 17,
+          "range": [
+            -0.68,
+            0.04
+          ]
+        },
+        {
+          "joint": "thumb_cmc_abd_joint",
+          "qposadr": 18,
+          "range": [
+            -1.05,
+            1.05
+          ]
+        },
+        {
+          "joint": "thumb_cmc_joint",
+          "qposadr": 19,
+          "range": [
+            -0.95,
+            0.95
+          ]
+        },
+        {
+          "joint": "thumb_mcp_joint",
+          "qposadr": 20,
+          "range": [
+            -0.1,
+            1.2
+          ]
+        },
+        {
+          "joint": "thumb_ip_joint",
+          "qposadr": 21,
+          "range": [
+            -0.85,
+            0.05
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wrist_2_test",
+      "command": [
+        "D:\\py\\Python3\\python.exe",
+        "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\scripts\\test_wrist2_joint_export4.py"
+      ],
+      "returncode": 0,
+      "stdout_tail": "wrist_2_joint status: PASS\nSaved report: D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\export4_wrist2_joint_fix_report.md\nSaved metadata: D:\\tendon_project\\simulations\\models\\hand_stage1_export\\metadata\\export4_wrist2_joint_fix.json\n",
+      "stderr_tail": "",
+      "status_json": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\metadata\\export4_wrist2_joint_fix.json",
+      "reported_status": "PASS",
+      "result": "PASS",
+      "status_payload_excerpt": {
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "collision_penetration_diagnosis",
+      "command": [
+        "D:\\py\\Python3\\python.exe",
+        "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\scripts\\diagnose_collision_proxy_penetration.py",
+        "--no-render"
+      ],
+      "returncode": 0,
+      "stdout_tail": "Tuned open max penetration: 0.000000 m\nTuned close max penetration: 0.000000 m\nSaved report: D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\collision_proxy_penetration_diagnosis.md\nSaved metadata: D:\\tendon_project\\simulations\\models\\hand_stage1_export\\metadata\\collision_proxy_penetration_diagnosis.json\n",
+      "stderr_tail": "",
+      "status_json": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\metadata\\collision_proxy_penetration_diagnosis.json",
+      "reported_status": null,
+      "result": "PASS",
+      "status_payload_excerpt": {
+        "conclusion": "PARTIAL_DEFAULT_SIDE_FAILS_MIRROR_SIDE_BETTER",
+        "open_static_penetration_status": "PASS_UNDER_5MM",
+        "default_grasp_status": "FAIL_GRASP_SIDE_OR_TARGET_NEEDS_REVIEW",
+        "mirror_grasp_status": "PARTIAL_NO_CONTACT_BUT_VISUALLY_CLOSE"
+      }
+    },
+    {
+      "name": "adapter_unit_test",
+      "command": [
+        "D:\\py\\Python3\\python.exe",
+        "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\scripts\\test_export4_adapter_mapping.py"
+      ],
+      "returncode": 0,
+      "stdout_tail": "Adapter tests: PASS\nSaved report: D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\export4_adapter_unit_test_report.md\nSaved metadata: D:\\tendon_project\\simulations\\models\\hand_stage1_export\\metadata\\export4_adapter_unit_test.json\n",
+      "stderr_tail": "",
+      "status_json": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\metadata\\export4_adapter_unit_test.json",
+      "reported_status": "PASS",
+      "result": "PASS",
+      "status_payload_excerpt": {
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "scripted_grasp_task_smoke",
+      "command": [
+        "D:\\py\\Python3\\python.exe",
+        "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\scripts\\run_export4_scripted_grasp_task.py"
+      ],
+      "returncode": 0,
+      "stdout_tail": "episode 0: fail_far_or_wrong_side contacts=0 ballhand=0 four_tip=0.1546\nepisode 1: fail_far_or_wrong_side contacts=0 ballhand=0 four_tip=0.1546\nepisode 2: fail_far_or_wrong_side contacts=0 ballhand=0 four_tip=0.1546\nScripted task status: FAIL_EXPECTED_UNTIL_GRASP_SIDE_FIXED\nSaved report: D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\export4_scripted_grasp_task_report.md\nSaved metadata: D:\\tendon_project\\simulations\\models\\hand_stage1_export\\metadata\\export4_scripted_grasp_task_results.json\n",
+      "stderr_tail": "",
+      "status_json": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\metadata\\export4_scripted_grasp_task_results.json",
+      "reported_status": "FAIL_EXPECTED_UNTIL_GRASP_SIDE_FIXED",
+      "result": "FAIL",
+      "status_payload_excerpt": {
+        "status": "FAIL_EXPECTED_UNTIL_GRASP_SIDE_FIXED"
+      }
+    },
+    {
+      "name": "replay_smoke_dataset",
+      "command": [
+        "D:\\py\\Python3\\python.exe",
+        "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\scripts\\replay_export4_smoke_dataset.py",
+        "--max-frames",
+        "120"
+      ],
+      "returncode": 0,
+      "stdout_tail": "Replay status: PASS\nAction dim matches: True\nObs dim matches task API: False\nSaved report: D:\\tendon_project\\simulations\\models\\hand_stage1_export\\docs\\export4_replay_report.md\n",
+      "stderr_tail": "",
+      "status_json": null,
+      "reported_status": null,
+      "result": "PASS"
+    }
+  ],
+  "notes": [
+    "scripted_grasp_task_smoke currently fails at the default -Y ball side; this blocks dataset collection v0.",
+    "Model load, joint smoke, wrist2, collision open-static, adapter, and replay plumbing can still pass independently."
+  ]
+}

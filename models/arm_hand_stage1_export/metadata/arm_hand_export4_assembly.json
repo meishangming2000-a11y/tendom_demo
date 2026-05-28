@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-05-26T11:08:53",
+  "arm_source": "D:\\tendon_project\\simulations\\models\\arm_stage1_export\\robot.xml",
+  "hand_source": "D:\\tendon_project\\simulations\\models\\hand_stage1_export\\mjcf\\hand_stage1_export4_palmar_ypos_collision_candidate.xml",
+  "combined_xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\arm_hand_export4_palmar_ypos_candidate.xml",
+  "scene_xml": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\scene_arm_hand_export4_palmar_ypos_candidate.xml",
+  "attachment_parent": "ee_tool_frame",
+  "attached_body": "hand_base_link",
+  "hand_root_pos_in_ee_tool_frame": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "hand_root_quat_in_ee_tool_frame": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "notes": [
+    "Experimental combined model only.",
+    "The hand root is a child of ee_tool_frame, not a separate model placed at a coincident point.",
+    "TODO: visually confirm flange-to-wrist orientation and decide any final fixed transform."
+  ]
+}
