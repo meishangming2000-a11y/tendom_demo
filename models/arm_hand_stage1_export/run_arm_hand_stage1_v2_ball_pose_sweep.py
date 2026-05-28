@@ -122,8 +122,25 @@ def run_pose(api: ArmHandStage1TaskAPI, index: int, base_ball: np.ndarray, offse
     phase_rows = []
     for phase_name, start, end, steps in build_phases(default_targets, args):
         phase_rows.append(run_phase(api, phase_name, start, end, steps, initial_ball))
-    final = phase_rows[-1]["metrics"]
-    ok, failure_reasons, label = classify(final, args)
+    lifted_once = any(row["metrics"]["ball_lift_height"] >= args.success_lift_height for row in phase_rows)
+    thresholds = {
+        "success_lift_height_m": args.success_lift_height,
+        "success_min_ball_hand_contacts": args.min_ball_hand_contacts,
+        "success_max_ball_floor_contacts": args.max_ball_floor_contacts,
+        "success_max_penetration_m": args.max_penetration,
+    }
+    step_count = sum(steps for _, _, _, steps in build_phases(default_targets, args))
+    evaluation = api.evaluate_lift_task_state(
+        initial_ball,
+        step_count=step_count,
+        max_episode_steps=step_count,
+        lifted_once=lifted_once,
+        thresholds=thresholds,
+    )
+    final = evaluation["official_metrics"]
+    ok = evaluation["success"]
+    failure_reasons = evaluation["failure_reasons"]
+    label = "lift_success" if ok else evaluation["terminal_reason"]
     return {
         "index": int(index),
         "offset": offset,
@@ -132,6 +149,7 @@ def run_pose(api: ArmHandStage1TaskAPI, index: int, base_ball: np.ndarray, offse
         "label": label,
         "failure_reasons": failure_reasons,
         "final_metrics": final,
+        "contract_evaluation": evaluation,
         "phase_results": phase_rows,
     }
 
@@ -177,7 +195,7 @@ def write_outputs(payload: dict[str, Any]) -> None:
             "\n## Interpretation\n\n",
             "- This sweep checks whether the scripted pure-physics lift has a local success region around the validated demo ball pose.\n",
             "- It is a Stage2 task/API smoke artifact, not a training dataset and not a final collision-geometry validation.\n",
-            "- The next step is to freeze observation/action/reward/done contracts before collecting dataset v0.\n",
+            "- The next step is to collect dataset v0 against the frozen observation/action/reward/done contract.\n",
         ]
     )
     REPORT.write_text("".join(lines), encoding="utf-8")

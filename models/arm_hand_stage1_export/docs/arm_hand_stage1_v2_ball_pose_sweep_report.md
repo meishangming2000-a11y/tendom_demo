@@ -1,6 +1,6 @@
 # Arm-Hand Stage1 V2 Ball-Pose Sweep Report
 
-Generated: 2026-05-28T17:52:14
+Generated: 2026-05-28T19:48:04
 
 - Scene: `D:\tendon_project\simulations\models\arm_hand_stage1_export\mjcf\scene_arm_hand_export4_lift_ball_demo.xml`
 - Base ball: `[0.19022382, 0.187702, -0.06538044]`
@@ -36,4 +36,4 @@ Generated: 2026-05-28T17:52:14
 
 - This sweep checks whether the scripted pure-physics lift has a local success region around the validated demo ball pose.
 - It is a Stage2 task/API smoke artifact, not a training dataset and not a final collision-geometry validation.
-- The next step is to freeze observation/action/reward/done contracts before collecting dataset v0.
+- The next step is to collect dataset v0 against the frozen observation/action/reward/done contract.

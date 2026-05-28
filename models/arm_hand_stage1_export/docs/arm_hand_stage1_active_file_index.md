@@ -46,6 +46,8 @@ Stage1 is closed as a virtual prototype baseline. The next stage should start fr
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\arm_hand_stage1_task_api.py`
 - Stage2 ball-pose sweep:
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\run_arm_hand_stage1_v2_ball_pose_sweep.py`
+- Stage2 task contract:
+  `python D:\tendon_project\simulations\models\arm_hand_stage1_export\write_arm_hand_stage1_v2_task_contract.py`
 - Previous physics-v0 regression:
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\run_arm_hand_stage1_physics_regression.py`
 - Previous tiny dataset v0:
@@ -58,6 +60,7 @@ Stage1 is closed as a virtual prototype baseline. The next stage should start fr
 - Next-stage handoff prompt: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\next_stage_handoff_prompt.md`
 - Stage2 task API report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_task_api_report.md`
 - Stage2 ball-pose sweep report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_ball_pose_sweep_report.md`
+- Stage2 task contract: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_task_contract.md`
 - Collision v2 design: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_report.md`
 - Collision v2 smoke: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_smoke_report.md`
 - Collision v2 visual check: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_visual_check_report.md`
@@ -129,6 +132,9 @@ Stage1 is closed as a virtual prototype baseline. The next stage should start fr
 - Ball-pose sweep grid: x/y offsets `[-0.015, 0.0, 0.015]`, z offset `[0.0]`.
 - Ball-pose sweep result: `9 / 9` PASS.
 - Final lift range across sweep: about `0.1517 m` to `0.1588 m`.
+- Task contract version: `stage2_lift_ball_v0_1`.
+- Observation/action/reward/done status: frozen for dataset-v0 collection.
+- Max episode steps: `1230`.
 
 ## Current Limits
 

@@ -27,6 +27,9 @@ CURRENT_LIFT_SCENE = ROOT / "mjcf" / "scene_arm_hand_export4_lift_ball_demo.xml"
 DEFAULT_SCENE = CURRENT_SCENE_WITH_BALL
 DEFAULT_REPORT = DOCS / "arm_hand_stage1_v2_task_api_report.md"
 DEFAULT_META = META / "arm_hand_stage1_v2_task_api.json"
+TASK_CONTRACT_VERSION = "stage2_lift_ball_v0_1"
+TASK_NAME = "arm_hand_stage1_lift_ball"
+DEFAULT_MAX_EPISODE_STEPS = 1230
 
 SCENE_REGISTRY = {
     "model": CURRENT_MODEL,
@@ -54,6 +57,25 @@ OBSERVATION_SCALAR_NAMES = (
     "little_tip_ball_distance",
     "thumb_tip_ball_distance",
 )
+DEFAULT_TASK_THRESHOLDS = {
+    "success_lift_height_m": 0.08,
+    "success_min_ball_hand_contacts": 1,
+    "success_max_ball_floor_contacts": 0,
+    "success_max_penetration_m": 0.015,
+    "failure_max_penetration_m": 0.03,
+    "failure_ball_drop_below_start_m": 0.03,
+    "dropped_after_lift_height_m": 0.03,
+}
+DEFAULT_REWARD_WEIGHTS = {
+    "lift_height": 10.0,
+    "hand_contact_bonus": 1.0,
+    "floor_contact_after_lift_penalty": -2.0,
+    "penetration_penalty": -50.0,
+    "four_finger_distance_penalty": -0.5,
+    "thumb_distance_penalty": -0.25,
+    "success_bonus": 10.0,
+    "failure_penalty": -10.0,
+}
 
 
 def json_ready(value: Any) -> Any:
@@ -80,6 +102,39 @@ def actuator_to_joint_name(actuator_name: str) -> str:
     if actuator_name.endswith("_pos"):
         return actuator_name[:-4]
     return actuator_name
+
+
+def compute_lift_task_reward(
+    metrics: dict[str, Any],
+    thresholds: dict[str, float] | None = None,
+    weights: dict[str, float] | None = None,
+    *,
+    success: bool = False,
+    failure: bool = False,
+) -> dict[str, Any]:
+    thresholds = {**DEFAULT_TASK_THRESHOLDS, **(thresholds or {})}
+    weights = {**DEFAULT_REWARD_WEIGHTS, **(weights or {})}
+    contact = metrics["contact"]
+    lift_height = float(metrics["ball_lift_height"])
+    max_pen = float(contact["max_penetration"])
+    lifted_enough_for_floor_penalty = lift_height >= thresholds["dropped_after_lift_height_m"]
+    terms = {
+        "lift_height": weights["lift_height"] * max(0.0, lift_height),
+        "hand_contact_bonus": weights["hand_contact_bonus"] if contact["ball_hand_contact_count"] >= 1 else 0.0,
+        "floor_contact_after_lift_penalty": weights["floor_contact_after_lift_penalty"]
+        if lifted_enough_for_floor_penalty and contact.get("ball_floor_contact_count", 0) > 0
+        else 0.0,
+        "penetration_penalty": weights["penetration_penalty"] * max(0.0, max_pen - 0.005),
+        "four_finger_distance_penalty": weights["four_finger_distance_penalty"] * float(metrics["four_finger_avg_tip_ball_distance"]),
+        "thumb_distance_penalty": weights["thumb_distance_penalty"] * float(metrics["thumb_ball_distance"]),
+        "success_bonus": weights["success_bonus"] if success else 0.0,
+        "failure_penalty": weights["failure_penalty"] if failure else 0.0,
+    }
+    return {
+        "total": float(sum(terms.values())),
+        "terms": {key: float(value) for key, value in terms.items()},
+        "note": "Candidate Stage2 shaping reward for contract validation; not tuned for training.",
+    }
 
 
 class ArmHandStage1TaskAPI:
@@ -229,6 +284,80 @@ class ArmHandStage1TaskAPI:
             "slices": slices,
         }
 
+    def get_task_contract(self) -> dict[str, Any]:
+        return {
+            "task_name": TASK_NAME,
+            "contract_version": TASK_CONTRACT_VERSION,
+            "stage": "stage2_task_system_dataset_v0",
+            "baseline_version": CURRENT_BASELINE_VERSION,
+            "training_ready": False,
+            "scene_roles": {
+                "default_api_scene": "v2_ball",
+                "recommended_rollout_scene": "lift_demo",
+                "scene_registry": SCENE_REGISTRY,
+            },
+            "observation": self.get_observation_schema(),
+            "action": self.get_action_schema(),
+            "official_metrics": [
+                "ball_lift_height",
+                "ball_displacement",
+                "ball_velocity_norm",
+                "ball_hand_contact_count",
+                "ball_floor_contact_count",
+                "ball_arm_contact_count",
+                "max_penetration",
+                "four_finger_avg_tip_ball_distance",
+                "thumb_ball_distance",
+                "finite_state",
+            ],
+            "reward": {
+                "type": "candidate_shaping_reward_v0",
+                "weights": DEFAULT_REWARD_WEIGHTS,
+                "formula": [
+                    "+ lift_height_weight * max(0, ball_lift_height)",
+                    "+ hand_contact_bonus if ball_hand_contact_count >= 1",
+                    "+ floor_contact_after_lift_penalty if lifted enough and ball still touches floor",
+                    "+ penetration_penalty_weight * max(0, max_penetration - 0.005)",
+                    "+ distance penalties for four-finger average and thumb-ball distance",
+                    "+ success_bonus or failure_penalty at terminal states",
+                ],
+                "note": "This reward is for dataset-v0 labeling and later training discussion; it is not a tuned RL reward.",
+            },
+            "termination": {
+                "max_episode_steps": DEFAULT_MAX_EPISODE_STEPS,
+                "thresholds": DEFAULT_TASK_THRESHOLDS,
+                "success_when_all_true": [
+                    "ball_lift_height >= success_lift_height_m",
+                    "ball_hand_contact_count >= success_min_ball_hand_contacts",
+                    "ball_floor_contact_count <= success_max_ball_floor_contacts",
+                    "max_penetration <= success_max_penetration_m",
+                    "finite_state is true",
+                ],
+                "failure_when_any_true": [
+                    "finite_state is false",
+                    "max_penetration > failure_max_penetration_m",
+                    "ball_lift_height < -failure_ball_drop_below_start_m",
+                    "lifted_once and ball_floor_contact_count > 0",
+                    "step_count >= max_episode_steps without success",
+                ],
+                "note": "Initial floor/table contact is allowed; floor contact becomes failure only after the ball has been lifted.",
+            },
+            "episode_result_schema": {
+                "task_name": "string",
+                "contract_version": "string",
+                "episode_status": "success | failure | running",
+                "terminal_reason": "success_lift_ball | non_finite_state | excessive_penetration | ball_dropped | floor_contact_after_lift | timeout | running",
+                "success": "bool",
+                "failure": "bool",
+                "done": "bool",
+                "step_count": "int",
+                "initial_ball_position": "[3] float",
+                "official_metrics": "dict",
+                "reward": "dict with total and named terms",
+                "debug_metrics": "optional dict; keep out of official dataset rows unless requested",
+            },
+        }
+
     def get_model_summary(self) -> dict[str, int]:
         return {
             "nbody": int(self.model.nbody),
@@ -358,6 +487,86 @@ class ArmHandStage1TaskAPI:
         ball = self.get_ball_pose()["position"]
         return {name: float(np.linalg.norm(pos - ball)) for name, pos in self.get_fingertip_positions().items()}
 
+    def compute_task_metrics(self, initial_ball_position: Iterable[float] | None = None) -> dict[str, Any]:
+        obs = self.get_observation()
+        ball = obs["ball_position"].copy()
+        initial = np.asarray(list(initial_ball_position), dtype=np.float64) if initial_ball_position is not None else ball.copy()
+        distances = obs["fingertip_ball_distances"]
+        four = [distances[name] for name in ["index", "middle", "ring", "little"]]
+        contact = {key: value for key, value in obs["contact_summary"].items() if key != "top_contacts"}
+        return {
+            "ball_position": ball,
+            "initial_ball_position": initial,
+            "ball_lift_height": float(ball[2] - initial[2]),
+            "ball_displacement": float(np.linalg.norm(ball - initial)),
+            "ball_velocity_norm": float(np.linalg.norm(obs["ball_velocity"])),
+            "contact": contact,
+            "four_finger_avg_tip_ball_distance": float(np.mean(four)),
+            "thumb_ball_distance": float(distances["thumb"]),
+            "finite_state": bool(np.isfinite(self.data.qpos).all() and np.isfinite(self.data.qvel).all()),
+        }
+
+    def evaluate_lift_task_state(
+        self,
+        initial_ball_position: Iterable[float],
+        *,
+        step_count: int = 0,
+        max_episode_steps: int = DEFAULT_MAX_EPISODE_STEPS,
+        lifted_once: bool = False,
+        thresholds: dict[str, float] | None = None,
+        reward_weights: dict[str, float] | None = None,
+    ) -> dict[str, Any]:
+        thresholds = {**DEFAULT_TASK_THRESHOLDS, **(thresholds or {})}
+        metrics = self.compute_task_metrics(initial_ball_position)
+        contact = metrics["contact"]
+        lift_height = float(metrics["ball_lift_height"])
+        success_reasons = []
+        failure_reasons = []
+        success = (
+            metrics["finite_state"]
+            and lift_height >= thresholds["success_lift_height_m"]
+            and contact["ball_hand_contact_count"] >= thresholds["success_min_ball_hand_contacts"]
+            and contact.get("ball_floor_contact_count", 0) <= thresholds["success_max_ball_floor_contacts"]
+            and contact["max_penetration"] <= thresholds["success_max_penetration_m"]
+        )
+        if success:
+            success_reasons.append("success_lift_ball")
+        if not metrics["finite_state"]:
+            failure_reasons.append("non_finite_state")
+        if contact["max_penetration"] > thresholds["failure_max_penetration_m"]:
+            failure_reasons.append("excessive_penetration")
+        if lift_height < -thresholds["failure_ball_drop_below_start_m"]:
+            failure_reasons.append("ball_dropped")
+        if lifted_once and contact.get("ball_floor_contact_count", 0) > 0:
+            failure_reasons.append("floor_contact_after_lift")
+        if step_count >= max_episode_steps and not success:
+            failure_reasons.append("timeout")
+        failure = bool(failure_reasons and not success)
+        if success:
+            episode_status = "success"
+            terminal_reason = "success_lift_ball"
+        elif failure:
+            episode_status = "failure"
+            terminal_reason = failure_reasons[0]
+        else:
+            episode_status = "running"
+            terminal_reason = "running"
+        reward = compute_lift_task_reward(metrics, thresholds, reward_weights, success=success, failure=failure)
+        return {
+            "task_name": TASK_NAME,
+            "contract_version": TASK_CONTRACT_VERSION,
+            "episode_status": episode_status,
+            "terminal_reason": terminal_reason,
+            "success": bool(success),
+            "failure": bool(failure),
+            "done": bool(success or failure),
+            "step_count": int(step_count),
+            "success_reasons": success_reasons,
+            "failure_reasons": failure_reasons,
+            "official_metrics": metrics,
+            "reward": reward,
+        }
+
     def get_observation(self) -> dict[str, Any]:
         tips = self.get_fingertip_positions()
         ball = self.get_ball_pose()
@@ -425,6 +634,7 @@ def write_api_report(api: ArmHandStage1TaskAPI, report_path: Path = DEFAULT_REPO
         "action_dim": api.get_action_dim(),
         "action_schema": api.get_action_schema(),
         "observation_schema": api.get_observation_schema(),
+        "task_contract": api.get_task_contract(),
         "observation_dim": int(len(obs["vector"])),
         "ball_position": obs["ball_position"],
         "contact_summary": obs["contact_summary"],
@@ -445,6 +655,11 @@ def write_api_report(api: ArmHandStage1TaskAPI, report_path: Path = DEFAULT_REPO
         f"- Default ball position: `{json_ready(payload['ball_position'])}`\n",
         f"- Open contact count: `{payload['contact_summary']['contact_count']}`\n",
         f"- Open max penetration: `{payload['contact_summary']['max_penetration']:.6f} m`\n\n",
+        "## Task Contract\n\n",
+        f"- Task name: `{payload['task_contract']['task_name']}`\n",
+        f"- Contract version: `{payload['task_contract']['contract_version']}`\n",
+        f"- Max episode steps: `{payload['task_contract']['termination']['max_episode_steps']}`\n",
+        f"- Training ready: **No**\n\n",
         "## Schema\n\n",
         f"- Action schema: `{json.dumps(json_ready(payload['action_schema']), ensure_ascii=False)}`\n",
         f"- Observation schema: `{json.dumps(json_ready(payload['observation_schema']), ensure_ascii=False)}`\n\n",

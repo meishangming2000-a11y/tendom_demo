@@ -32,6 +32,12 @@ Stage2 kickoff status:
   `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_ball_pose_sweep_report.md`
 - Default sweep: x/y offsets `[-0.015, 0.0, 0.015]`, z offset `[0.0]`
 - Default sweep result: `9 / 9` PASS
+- Task contract script:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\write_arm_hand_stage1_v2_task_contract.py`
+- Task contract report:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_task_contract.md`
+- Task contract version: `stage2_lift_ball_v0_1`
+- Observation/action/reward/done status: frozen for dataset-v0 collection
 
 Guardrails:
 
@@ -43,9 +49,8 @@ Guardrails:
 
 Recommended Stage2 continuation:
 
-1. freeze observation/action/reward/done schema;
-2. define episode result and dataset-v0 metadata contract;
-3. collect tiny scripted dataset v0 from the current lift-scene task harness;
-4. replay dataset v0 and compare against the sweep/report metrics;
-5. keep Shadow/video comparison as regression;
-6. only then discuss BC/RL training.
+1. define dataset-v0 metadata and row layout against `stage2_lift_ball_v0_1`;
+2. collect tiny scripted dataset v0 from the current lift-scene task harness;
+3. replay dataset v0 and compare against the sweep/report metrics;
+4. keep Shadow/video comparison as regression;
+5. only then discuss BC/RL training.

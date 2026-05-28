@@ -1,6 +1,6 @@
 # Arm-Hand Stage1 Task API Report
 
-Generated: 2026-05-28T17:48:45
+Generated: 2026-05-28T19:47:19
 
 - Scene: `D:\tendon_project\simulations\models\arm_hand_stage1_export\mjcf\scene_arm_hand_export4_collision_proxy_v2_ball.xml`
 - Scene role: `v2_ball`
@@ -11,6 +11,13 @@ Generated: 2026-05-28T17:48:45
 - Default ball position: `[0.0213343049, 0.145570505, 0.518815052]`
 - Open contact count: `1`
 - Open max penetration: `0.000500 m`
+
+## Task Contract
+
+- Task name: `arm_hand_stage1_lift_ball`
+- Contract version: `stage2_lift_ball_v0_1`
+- Max episode steps: `1230`
+- Training ready: **No**
 
 ## Schema
 
