@@ -55,9 +55,10 @@ def load_optional_json(path: Path) -> dict[str, Any] | None:
 def build_payload(args) -> dict[str, Any]:
     data = load_dataset(args.dataset)
     require_fields(data, REQUIRED_FIELDS)
+    require_fields(data, [args.action_field])
 
     obs = data["obs"]
-    actions = data["actions"]
+    actions = data[args.action_field]
     next_obs = data["next_obs"]
     episode_ids = data["episode_ids"].astype(np.int32)
     phase_ids = data["phase_ids"].astype(np.int32)
@@ -73,6 +74,7 @@ def build_payload(args) -> dict[str, Any]:
     train_mask, val_mask, train_episodes, val_episodes = split_by_episode(episode_ids, args.val_fraction, args.seed)
 
     row_count = int(obs.shape[0])
+    terminal_success_only = bool(np.all(data["successes"][data["dones"].astype(bool)]))
     hard_checks = {
         "required_fields_present": True,
         "obs_is_2d": obs.ndim == 2,
@@ -89,7 +91,7 @@ def build_payload(args) -> dict[str, Any]:
         "actions_finite": bool(np.isfinite(actions).all()),
         "next_obs_finite": bool(np.isfinite(next_obs).all()),
         "contract_version_matches": str(data["contract_version"][0]) == args.contract_version,
-        "all_episodes_terminal_success": bool(np.all(data["successes"][data["dones"].astype(bool)])),
+        "all_episodes_terminal_success": terminal_success_only or bool(args.allow_terminal_failures),
         "episode_split_has_train": bool(np.any(train_mask)),
         "episode_split_has_val": bool(np.any(val_mask)),
     }
@@ -119,6 +121,7 @@ def build_payload(args) -> dict[str, Any]:
         "dataset": str(Path(args.dataset).resolve()),
         "contract_version": str(data["contract_version"][0]),
         "task_name": str(data["task_name"][0]) if "task_name" in data.files else "unknown",
+        "action_field": str(args.action_field),
         "status": "PASS" if bc_smoke_ready else "BLOCKED",
         "bc_smoke_ready": bc_smoke_ready,
         "training_ready": False,
@@ -150,7 +153,12 @@ def build_payload(args) -> dict[str, Any]:
             "Dataset v0 has only 9 scripted episodes and should be used only for first BC smoke training.",
             "Phase features are enabled by default because this dataset is a scripted multi-stage controller.",
             "Online rollout success is not guaranteed by low offline validation loss.",
-        ],
+        ]
+        + (
+            ["Terminal failures are present and allowed for this review because this dataset is intended to include boundary states."]
+            if args.allow_terminal_failures and not terminal_success_only
+            else []
+        ),
         "next_step": "Run train_arm_hand_stage1_v2_bc_smoke.py only if status is PASS.",
     }
     return payload
@@ -170,6 +178,7 @@ def write_report(payload: dict[str, Any], report_path: Path, meta_path: Path) ->
         f"- BC smoke ready: `{payload['bc_smoke_ready']}`\n",
         f"- Training ready: **No, experimental BC smoke only**\n",
         f"- Rows: `{payload['row_count']}`\n",
+        f"- Action field: `{payload['action_field']}`\n",
         f"- Episodes: `{payload['episode_count']}`\n",
         f"- Success terminals: `{payload['success_count']} / {payload['episode_count']}`\n",
         f"- Replay QA: `{payload['replay_status']}`\n",
@@ -206,6 +215,7 @@ def write_report(payload: dict[str, Any], report_path: Path, meta_path: Path) ->
             "## Interpretation\n\n",
             "- PASS means the dataset is acceptable for one experimental offline BC smoke run.\n",
             "- This does not promote the dataset to a maintained training baseline.\n",
+            "- If terminal failures were allowed, they are treated as boundary-state coverage, not task success evidence.\n",
             "- RL remains blocked until the reset distribution, reward design, and broader data quality are accepted.\n\n",
             "## Next Step\n\n",
             f"{payload['next_step']}\n",
@@ -220,6 +230,8 @@ def main() -> int:
     parser.add_argument("--report", type=Path, default=DEFAULT_READINESS_REPORT)
     parser.add_argument("--metadata", type=Path, default=DEFAULT_READINESS_META)
     parser.add_argument("--contract-version", default="stage2_lift_ball_v0_1")
+    parser.add_argument("--action-field", default="actions", help="Dataset action field to review for BC targets.")
+    parser.add_argument("--allow-terminal-failures", action="store_true")
     parser.add_argument("--val-fraction", type=float, default=0.22)
     parser.add_argument("--seed", type=int, default=13)
     parser.add_argument("--low-variance-warn", type=float, default=1e-8)

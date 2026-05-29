@@ -57,6 +57,7 @@ def write_report(path: Path, report: dict) -> None:
         f"- Feature dim: `{report['feature_dim']}`\n",
         f"- Feature mode: `{report['feature_config']['feature_mode']}`\n",
         f"- Base obs dim: `{report['base_obs_dim']}`\n",
+        f"- Action field: `{report['action_field']}`\n",
         f"- Action dim: `{report['act_dim']}`\n",
         f"- Phase features: `{report['feature_config']['include_phase_features']}`\n",
         f"- Hidden dim: `{report['hidden_dim']}`\n",
@@ -64,6 +65,8 @@ def write_report(path: Path, report: dict) -> None:
         f"- Epochs: `{report['epochs']}`\n",
         f"- Batch size: `{report['batch_size']}`\n",
         f"- Device: `{report['device']}`\n",
+        f"- Normalized obs noise std: `{report['normalized_obs_noise_std']}`\n",
+        f"- Obs dropout prob: `{report['obs_dropout_prob']}`\n",
         f"- Train episodes: `{report['train_episodes']}`\n",
         f"- Val episodes: `{report['val_episodes']}`\n",
         f"- Train samples: `{report['train_samples']}`\n",
@@ -105,6 +108,7 @@ def main() -> int:
     parser.add_argument("--output", type=Path, default=DEFAULT_CHECKPOINT)
     parser.add_argument("--report", type=Path, default=DEFAULT_TRAIN_REPORT)
     parser.add_argument("--metadata", type=Path, default=DEFAULT_TRAIN_META)
+    parser.add_argument("--action-field", default="actions", help="Dataset field to use as the BC target.")
     parser.add_argument("--epochs", type=int, default=100)
     parser.add_argument("--batch-size", type=int, default=256)
     parser.add_argument("--hidden-dim", type=int, default=256)
@@ -112,6 +116,8 @@ def main() -> int:
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--val-fraction", type=float, default=0.22)
     parser.add_argument("--seed", type=int, default=13)
+    parser.add_argument("--normalized-obs-noise-std", type=float, default=0.0)
+    parser.add_argument("--obs-dropout-prob", type=float, default=0.0)
     parser.add_argument(
         "--feature-mode",
         choices=["obs_phase", "obs_only", "phase_only"],
@@ -127,13 +133,14 @@ def main() -> int:
 
     data = load_dataset(args.data)
     require_fields(data, REQUIRED_FIELDS)
+    require_fields(data, [args.action_field])
     feature_config = feature_config_from_dataset(
         data,
         include_phase_features=not args.no_phase_features,
         feature_mode=args.feature_mode,
     )
     features = build_feature_matrix(data, feature_config)
-    actions = data["actions"].astype(np.float32)
+    actions = data[args.action_field].astype(np.float32)
     episode_ids = data["episode_ids"].astype(np.int32)
     train_mask, val_mask, train_episodes, val_episodes = split_by_episode(episode_ids, args.val_fraction, args.seed)
     if not np.any(train_mask):
@@ -164,6 +171,7 @@ def main() -> int:
         batch_size=args.batch_size,
         shuffle=True,
     )
+    obs_aug_dim = int(feature_config["base_obs_dim"]) if feature_config.get("use_observation", True) else 0
 
     history = []
     for epoch in range(1, args.epochs + 1):
@@ -173,6 +181,14 @@ def main() -> int:
         for batch_x, batch_y in loader:
             batch_x = batch_x.to(device)
             batch_y = batch_y.to(device)
+            if obs_aug_dim > 0 and (args.normalized_obs_noise_std > 0.0 or args.obs_dropout_prob > 0.0):
+                batch_x = batch_x.clone()
+                obs_view = batch_x[:, :obs_aug_dim]
+                if args.normalized_obs_noise_std > 0.0:
+                    obs_view.add_(torch.randn_like(obs_view) * float(args.normalized_obs_noise_std))
+                if args.obs_dropout_prob > 0.0:
+                    keep = torch.rand_like(obs_view) >= float(np.clip(args.obs_dropout_prob, 0.0, 1.0))
+                    obs_view.mul_(keep)
             optimizer.zero_grad()
             pred = model(batch_x)
             loss = loss_fn(pred, batch_y)
@@ -202,6 +218,7 @@ def main() -> int:
         "status": STATUS_EXPERIMENTAL,
         "created_at": datetime.now().isoformat(timespec="seconds"),
         "dataset": str(args.data.resolve()),
+        "action_field": str(args.action_field),
         "contract_version": str(data["contract_version"][0]),
         "feature_dim": int(features.shape[1]),
         "base_obs_dim": int(data["obs"].shape[1]),
@@ -224,6 +241,8 @@ def main() -> int:
         "train_action_rmse_raw": float(train_rmse_raw),
         "val_action_rmse_raw": float(val_rmse_raw),
         "seed": int(args.seed),
+        "normalized_obs_noise_std": float(args.normalized_obs_noise_std),
+        "obs_dropout_prob": float(args.obs_dropout_prob),
     }
     torch.save(checkpoint, args.output)
 
@@ -236,6 +255,8 @@ def main() -> int:
         "batch_size": int(args.batch_size),
         "lr": float(args.lr),
         "device": str(device),
+        "normalized_obs_noise_std": float(args.normalized_obs_noise_std),
+        "obs_dropout_prob": float(args.obs_dropout_prob),
         "train_samples": int(train_mask.sum()),
         "val_samples": int(val_mask.sum()),
         "val_action_rmse_by_dim": val_rmse_by_dim,

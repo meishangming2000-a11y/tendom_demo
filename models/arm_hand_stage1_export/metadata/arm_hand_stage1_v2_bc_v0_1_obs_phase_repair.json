@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-05-30",
+  "scope": "expand dataset v0.1 and retry observation+phase BC",
+  "status": "PARTIAL_improved_to_phase_only_reference_ceiling",
+  "training_ready": false,
+  "dataset": {
+    "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\arm_hand_stage1_v2_lift_ball_dataset_v0_1.npz",
+    "episodes": 75,
+    "rows": 77154,
+    "obs_dim": 124,
+    "action_dim": 26,
+    "success_count": 68,
+    "terminal_reason_counts": {
+      "success_lift_ball": 68,
+      "timeout": 7
+    },
+    "replay_status": "PASS",
+    "max_replay_errors": {
+      "obs": 0.0,
+      "next_obs": 0.0,
+      "reward": 0.0
+    },
+    "bc_target_field": "expert_actions"
+  },
+  "attempts": [
+    {
+      "name": "v0_1_raw_obs_phase",
+      "feature_mode": "obs_phase",
+      "action_field": "expert_actions",
+      "online_success_count": 18,
+      "online_episode_count": 75
+    },
+    {
+      "name": "v0_1_regularized_obs_phase",
+      "feature_mode": "obs_phase",
+      "action_field": "expert_actions",
+      "normalized_obs_noise_std": 0.15,
+      "obs_dropout_prob": 0.25,
+      "online_success_count": 51,
+      "online_episode_count": 75
+    },
+    {
+      "name": "v0_1_strongreg_obs_phase_smooth",
+      "feature_mode": "obs_phase",
+      "action_field": "expert_actions",
+      "normalized_obs_noise_std": 0.3,
+      "obs_dropout_prob": 0.6,
+      "action_smoothing": 0.2,
+      "online_success_count": 69,
+      "online_episode_count": 75
+    },
+    {
+      "name": "v0_phase_only_reference_on_v0_1",
+      "feature_mode": "phase_only",
+      "reference_only": true,
+      "online_success_count": 69,
+      "online_episode_count": 75
+    }
+  ],
+  "selected_checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_1_obs_phase_strongreg.pth",
+  "selected_eval": {
+    "success_count": 69,
+    "episode_count": 75,
+    "terminal_reason_counts": {
+      "success_lift_ball": 69,
+      "timeout": 6
+    },
+    "lift_min_m": -0.00018412351751811995,
+    "lift_max_m": 0.08052254587937549,
+    "lift_mean_m": 0.07385284364824539
+  },
+  "demo": {
+    "episode_id": 12,
+    "success": true,
+    "frames": 264,
+    "video": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_v2_bc_v0_1_obs_phase\\obs_phase_strongreg_policy_demo.mp4"
+  },
+  "next_step": "For v0.2, add recovery demonstrations for the 6 timeout offsets or narrow the accepted training reset region before promotion."
+}

@@ -106,10 +106,12 @@ def replay_episode(api: ArmHandStage1TaskAPI, data, episode_id: int, *, max_erro
     }
 
 
-def write_outputs(payload: dict[str, Any]) -> None:
+def write_outputs(payload: dict[str, Any], report_path: Path = REPORT, metadata_path: Path = META_OUT) -> None:
     DOCS.mkdir(parents=True, exist_ok=True)
     META.mkdir(parents=True, exist_ok=True)
-    META_OUT.write_text(json.dumps(json_ready(payload), indent=2, ensure_ascii=False), encoding="utf-8")
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    metadata_path.parent.mkdir(parents=True, exist_ok=True)
+    metadata_path.write_text(json.dumps(json_ready(payload), indent=2, ensure_ascii=False), encoding="utf-8")
 
     lines = [
         "# Arm-Hand Stage1 V2 Dataset V0 Replay Report\n\n",
@@ -148,13 +150,15 @@ def write_outputs(payload: dict[str, Any]) -> None:
             "- This is still dataset QA, not model training.\n",
         ]
     )
-    REPORT.write_text("".join(lines), encoding="utf-8")
+    report_path.write_text("".join(lines), encoding="utf-8")
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Replay Stage2 lift-ball dataset v0 and validate labels.")
     parser.add_argument("--dataset", default=str(DATASET))
     parser.add_argument("--scene", default=str(CURRENT_LIFT_SCENE))
+    parser.add_argument("--report", type=Path, default=REPORT)
+    parser.add_argument("--metadata", type=Path, default=META_OUT)
     parser.add_argument("--all-episodes", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--episode-id", type=int, default=0)
     parser.add_argument("--max-error-warn", type=float, default=1e-9)
@@ -205,10 +209,10 @@ def main() -> None:
         "episode_results": episode_results,
         "training_ready": False,
     }
-    write_outputs(payload)
+    write_outputs(payload, args.report, args.metadata)
     print(f"Replay status: {status}")
-    print(f"Saved report: {REPORT}")
-    print(f"Saved metadata: {META_OUT}")
+    print(f"Saved report: {args.report}")
+    print(f"Saved metadata: {args.metadata}")
 
 
 if __name__ == "__main__":

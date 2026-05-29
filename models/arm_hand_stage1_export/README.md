@@ -10,8 +10,8 @@ This workspace contains the current arm + export4 hand MuJoCo assembly.
 - Clean STL meshes remain visual-only.
 - The ball in the passive viewer can still slide/fall because gravity is active; use the scripted demo to see closure.
 - A new arm+hand lift-ball scripted smoke demo can now close around a ball and lift it in pure-physics mode using collision proxy v2.
-- Stage2 kickoff has started: the task API now defaults to collision proxy v2, a small lift-scene ball-pose sweep is available, the first observation/action/reward/done contract is frozen, dataset v0 replay QA passes, and one experimental BC smoke policy has been trained.
-- No promoted BC/RL training baseline exists yet. The BC smoke checkpoint is schedule-conditioned and experimental.
+- Stage2 kickoff has started: the task API now defaults to collision proxy v2, a small lift-scene ball-pose sweep is available, the first observation/action/reward/done contract is frozen, dataset v0 replay QA passes, dataset v0.1 expands the reset/behavior coverage, and experimental BC smoke policies have been trained.
+- No promoted BC/RL training baseline exists yet. The v0.1 obs+phase checkpoint is improved but still experimental.
 
 ## Current Files
 
@@ -110,6 +110,16 @@ python D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand
 python D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_arm_hand_stage1_v2_bc_smoke.py --episode-id 4 --render-video --device cpu
 ```
 
+Stage2 dataset v0.1 and obs+phase retry:
+
+```powershell
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\collect_arm_hand_stage1_v2_dataset_v0_1.py
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\replay_arm_hand_stage1_v2_dataset_v0.py --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_1.npz --report D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_1_replay_report.md --metadata D:\tendon_project\simulations\models\arm_hand_stage1_export\metadata\arm_hand_stage1_v2_dataset_v0_1_replay.json --all-episodes
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\review_arm_hand_stage1_v2_training_readiness.py --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_1.npz --action-field expert_actions --feature-mode obs_phase --allow-terminal-failures
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\train_arm_hand_stage1_v2_bc_smoke.py --data D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_1.npz --action-field expert_actions --feature-mode obs_phase --normalized-obs-noise-std 0.30 --obs-dropout-prob 0.60 --epochs 100 --batch-size 512 --hidden-dim 256 --depth 3 --no-cuda
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_1_obs_phase_strongreg.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_1.npz --all-episodes --max-steps 1300 --action-smoothing 0.2 --device cpu
+```
+
 Older physics-v0 regression and tiny dataset scaffold are still available:
 
 ```powershell
@@ -182,6 +192,12 @@ Stage2 kickoff:
 - Repaired BC smoke train result: final val MSE normalized about `5.43e-7`, raw val action RMSE about `0.00035`.
 - Repaired BC smoke online eval: `9 / 9` success, terminal reason `success_lift_ball`, lift range about `0.0801 m` to `0.0809 m`.
 - BC smoke demo episode 4: success, lift about `0.0806 m`, ball-hand contacts `7`, max penetration about `0.00345 m`.
+- Dataset v0.1: `75 episodes / 77154 rows`, behavior success `68 / 75`, replay QA `PASS`.
+- Dataset v0.1 action fields: `actions` are applied behavior actions for replay, `expert_actions` are BC targets.
+- Raw v0.1 obs+phase BC online eval: `18 / 75` success.
+- Regularized v0.1 obs+phase BC online eval: `51 / 75` success.
+- Strong-regularized v0.1 obs+phase BC with action smoothing: `69 / 75` success, matching the phase-only reference on the same v0.1 reset set.
+- v0.1 obs+phase demo episode 12: success, lift about `0.0805 m`, demo video rendered.
 
 ## Reports
 
@@ -201,6 +217,13 @@ Stage2 kickoff:
 - Stage2 BC smoke repair note: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_smoke_repair_report.md`
 - Stage2 BC smoke checkpoint: `D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_smoke.pth`
 - Stage2 BC smoke demo MP4: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_smoke\bc_smoke_policy_demo.mp4`
+- Stage2 dataset v0.1 report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_1_report.md`
+- Stage2 dataset v0.1 replay QA: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_1_replay_report.md`
+- Stage2 dataset v0.1 file: `D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_1.npz`
+- Stage2 v0.1 obs+phase repair report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_1_obs_phase_repair_report.md`
+- Stage2 v0.1 obs+phase checkpoint: `D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_1_obs_phase_strongreg.pth`
+- Stage2 v0.1 obs+phase eval: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_1_obs_phase_strongreg_smooth_eval_report.md`
+- Stage2 v0.1 obs+phase demo MP4: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_1_obs_phase\obs_phase_strongreg_policy_demo.mp4`
 - Collision v2 smoke: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_smoke_report.md`
 - Collision v2 visual check: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_visual_check_report.md`
 - Shadow comparison: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_shadow_video_comparison_report.md`
@@ -218,6 +241,6 @@ Stage2 kickoff:
 
 - Do not edit CAD/STL from this workspace.
 - Do not overwrite the frozen CAD mount candidate.
-- Do not promote BC/RL training yet; the current checkpoint is an experimental BC smoke artifact only.
+- Do not promote BC/RL training yet; the current checkpoints are experimental BC smoke artifacts only.
 - Keep RL blocked until a broader reset distribution and reward QA are accepted.
 - Collision proxy v2 is usable for smoke tests, not final contact-rich training.

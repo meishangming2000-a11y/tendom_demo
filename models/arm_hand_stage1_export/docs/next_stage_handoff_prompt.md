@@ -67,6 +67,25 @@ Stage2 kickoff status:
   `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_smoke\bc_smoke_policy_demo.mp4`
 - Latest BC smoke result: readiness `PASS`; phase-only schedule-conditioned BC train final val MSE about `5.43e-7`; online eval `9 / 9` success; demo episode 4 success.
 - Repair note: the first obs+phase BC attempt fit offline but failed online rollout (`0 / 9` success), so the retained smoke checkpoint uses `phase_only` features. This is a schedule-conditioned smoke artifact, not a robust closed-loop policy.
+- Dataset v0.1:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_1.npz`
+- Dataset v0.1 collection script:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\collect_arm_hand_stage1_v2_dataset_v0_1.py`
+- Dataset v0.1 report:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_1_report.md`
+- Dataset v0.1 replay QA:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_1_replay_report.md`
+- Dataset v0.1 result: `75 episodes / 77154 rows`, behavior success `68 / 75`, replay QA `PASS`.
+- Dataset v0.1 action semantics: `actions` are applied behavior actions for replay; `expert_actions` are BC labels.
+- V0.1 obs+phase selected checkpoint:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_1_obs_phase_strongreg.pth`
+- V0.1 obs+phase repair report:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_1_obs_phase_repair_report.md`
+- V0.1 obs+phase selected eval:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_1_obs_phase_strongreg_smooth_eval_report.md`
+- V0.1 obs+phase demo video:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_1_obs_phase\obs_phase_strongreg_policy_demo.mp4`
+- Latest v0.1 obs+phase result: raw obs+phase `18 / 75`, regularized `51 / 75`, strong regularization plus smoothing `69 / 75`, matching the phase-only reference on the same v0.1 resets.
 
 Guardrails:
 
@@ -75,13 +94,13 @@ Guardrails:
 - Do not promote BC/RL training yet.
 - Do not add tendon routing yet.
 - Treat collision proxy v2 as smoke-test geometry, not final physics.
-- Treat the current BC checkpoint as experimental smoke only; it is not a maintained baseline.
+- Treat the current BC checkpoints as experimental smoke only; they are not maintained baselines.
 - Keep RL blocked until broader reset coverage and reward QA are accepted.
 
 Recommended Stage2 continuation:
 
-1. inspect the BC smoke demo video and online eval report;
-2. decide whether to expand dataset v0.1 with more ball offsets and perturbed phase timings;
-3. replace the schedule-conditioned smoke policy with a real closed-loop obs+phase BC only after dataset coverage is broadened;
+1. inspect the v0.1 obs+phase demo video and repair report;
+2. identify the 6 timeout offsets shared by the obs+phase and phase-only reference evaluations;
+3. create v0.2 recovery demonstrations for those timeout offsets, or narrow the accepted reset region to the 69/75 success subset;
 4. keep Shadow/video comparison as regression;
-5. keep RL blocked until a broader reset distribution and reward QA are accepted.
+5. keep RL blocked until broader reset coverage and reward QA are accepted.
