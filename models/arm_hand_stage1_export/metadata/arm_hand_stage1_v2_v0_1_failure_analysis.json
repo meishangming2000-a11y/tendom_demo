@@ -1,0 +1,207 @@
+{
+  "generated_at": "2026-05-30T01:32:39",
+  "dataset": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\arm_hand_stage1_v2_lift_ball_dataset_v0_1.npz",
+  "eval_metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\arm_hand_stage1_v2_bc_v0_1_obs_phase_strongreg_smooth_eval.json",
+  "eval_summary": {
+    "status": "PARTIAL",
+    "episodes": 75,
+    "success_count": 69,
+    "terminal_reason_counts": {
+      "success_lift_ball": 69,
+      "timeout": 6
+    },
+    "lift_min": -0.00018412351751811995,
+    "lift_max": 0.08052254587937549,
+    "lift_mean": 0.07385284364824539,
+    "reward_mean": 10.012383487987682
+  },
+  "failed_episode_count": 6,
+  "failed_terminal_reasons": {
+    "timeout": 6
+  },
+  "failed_profile_counts": {
+    "clean_nominal": 2,
+    "mild_fast_jitter": 2,
+    "mild_slow_jitter": 2
+  },
+  "failed_offsets": [
+    {
+      "offset": [
+        0.02,
+        -0.01,
+        0.0
+      ],
+      "count": 3,
+      "profiles": [
+        "clean_nominal",
+        "mild_fast_jitter",
+        "mild_slow_jitter"
+      ],
+      "episode_ids": [
+        9,
+        34,
+        59
+      ],
+      "terminal_reasons": {
+        "timeout": 3
+      }
+    },
+    {
+      "offset": [
+        0.02,
+        0.02,
+        0.0
+      ],
+      "count": 3,
+      "profiles": [
+        "clean_nominal",
+        "mild_fast_jitter",
+        "mild_slow_jitter"
+      ],
+      "episode_ids": [
+        24,
+        49,
+        74
+      ],
+      "terminal_reasons": {
+        "timeout": 3
+      }
+    }
+  ],
+  "failed_episodes": [
+    {
+      "episode_id": 9,
+      "profile": "clean_nominal",
+      "offset": [
+        0.02,
+        -0.01,
+        0.0
+      ],
+      "eval_terminal_reason": "timeout",
+      "dataset_terminal_reason": "success_lift_ball",
+      "steps": 1300,
+      "lift_height_m": -0.00018412351751811995,
+      "ball_hand_contacts": 0,
+      "ball_floor_contacts": 1,
+      "max_penetration_m": 0.00018412351751812342
+    },
+    {
+      "episode_id": 24,
+      "profile": "clean_nominal",
+      "offset": [
+        0.02,
+        0.02,
+        0.0
+      ],
+      "eval_terminal_reason": "timeout",
+      "dataset_terminal_reason": "timeout",
+      "steps": 1300,
+      "lift_height_m": -0.00018412351751811995,
+      "ball_hand_contacts": 0,
+      "ball_floor_contacts": 1,
+      "max_penetration_m": 0.00018412351751812342
+    },
+    {
+      "episode_id": 34,
+      "profile": "mild_fast_jitter",
+      "offset": [
+        0.02,
+        -0.01,
+        0.0
+      ],
+      "eval_terminal_reason": "timeout",
+      "dataset_terminal_reason": "success_lift_ball",
+      "steps": 1300,
+      "lift_height_m": -0.00018412351751811995,
+      "ball_hand_contacts": 0,
+      "ball_floor_contacts": 1,
+      "max_penetration_m": 0.00018412351751812342
+    },
+    {
+      "episode_id": 49,
+      "profile": "mild_fast_jitter",
+      "offset": [
+        0.02,
+        0.02,
+        0.0
+      ],
+      "eval_terminal_reason": "timeout",
+      "dataset_terminal_reason": "timeout",
+      "steps": 1300,
+      "lift_height_m": -0.00018412351751811995,
+      "ball_hand_contacts": 0,
+      "ball_floor_contacts": 1,
+      "max_penetration_m": 0.00018412351751812342
+    },
+    {
+      "episode_id": 59,
+      "profile": "mild_slow_jitter",
+      "offset": [
+        0.02,
+        -0.01,
+        0.0
+      ],
+      "eval_terminal_reason": "timeout",
+      "dataset_terminal_reason": "timeout",
+      "steps": 1300,
+      "lift_height_m": -0.00018412351751811995,
+      "ball_hand_contacts": 0,
+      "ball_floor_contacts": 1,
+      "max_penetration_m": 0.00018412351751812342
+    },
+    {
+      "episode_id": 74,
+      "profile": "mild_slow_jitter",
+      "offset": [
+        0.02,
+        0.02,
+        0.0
+      ],
+      "eval_terminal_reason": "timeout",
+      "dataset_terminal_reason": "success_lift_ball",
+      "steps": 1300,
+      "lift_height_m": -0.00018412351751811995,
+      "ball_hand_contacts": 0,
+      "ball_floor_contacts": 1,
+      "max_penetration_m": 0.00018412351751812342
+    }
+  ],
+  "dataset_terminal_reason_counts": {
+    "success_lift_ball": 68,
+    "timeout": 7
+  },
+  "diagnosis": "The retained obs+phase v0.1 failures cluster on the right-edge ball offsets. Final states show near-zero lift and zero ball-hand contacts, so the main gap is approach/closure coverage at the right boundary rather than lift-after-contact stability.",
+  "recommended_recovery_offsets": [
+    [
+      0.02,
+      -0.01,
+      0.0
+    ],
+    [
+      0.02,
+      0.02,
+      0.0
+    ],
+    [
+      0.02,
+      -0.015,
+      0.0
+    ],
+    [
+      0.02,
+      -0.005,
+      0.0
+    ],
+    [
+      0.02,
+      0.015,
+      0.0
+    ],
+    [
+      0.02,
+      0.025,
+      0.0
+    ]
+  ],
+  "training_ready": false
+}

@@ -6,7 +6,7 @@ Generated: 2026-05-28 02:40
 
 Use collision proxy v2 for visual smoke, scripted close, Shadow/video comparison, and the new lift-ball integration demo. Keep the CAD mount candidate as the frozen alignment reference. Keep v1 and older physics-v0 files for regression history and comparison.
 
-Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path starts from task API / dataset v0.1 / experimental obs+phase BC smoke, not from CAD alignment.
+Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path starts from task API / dataset v0.2 / experimental obs+phase BC smoke, not from CAD alignment.
 
 ## Open/View
 
@@ -70,6 +70,18 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_1_obs_phase_strongreg.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_1.npz --all-episodes --max-steps 1300 --action-smoothing 0.2 --device cpu`
 - Stage2 v0.1 obs+phase demo:
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_1_obs_phase_strongreg.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_1.npz --episode-id 12 --max-steps 1300 --action-smoothing 0.2 --render-video --device cpu`
+- Stage2 v0.1 failure analysis:
+  `python D:\tendon_project\simulations\models\arm_hand_stage1_export\analyze_arm_hand_stage1_v2_v0_1_failures.py`
+- Stage2 dataset v0.2 collection:
+  `python D:\tendon_project\simulations\models\arm_hand_stage1_export\collect_arm_hand_stage1_v2_dataset_v0_2.py`
+- Stage2 dataset v0.2 replay QA:
+  `python D:\tendon_project\simulations\models\arm_hand_stage1_export\replay_arm_hand_stage1_v2_dataset_v0.py --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --report D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_2_replay_report.md --metadata D:\tendon_project\simulations\models\arm_hand_stage1_export\metadata\arm_hand_stage1_v2_dataset_v0_2_replay.json --all-episodes`
+- Stage2 v0.2 obs+phase training:
+  `python D:\tendon_project\simulations\models\arm_hand_stage1_export\train_arm_hand_stage1_v2_bc_smoke.py --data D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --output D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_moderatereg.pth --action-field expert_actions --feature-mode obs_phase --normalized-obs-noise-std 0.12 --obs-dropout-prob 0.20 --epochs 120 --batch-size 512 --hidden-dim 256 --depth 3 --no-cuda`
+- Stage2 v0.2 obs+phase eval:
+  `python D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_moderatereg.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --all-episodes --max-steps 1300 --action-smoothing 0.4 --device cpu`
+- Stage2 v0.2 recovered demo:
+  `python D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_moderatereg.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_1.npz --episode-id 9 --max-steps 1300 --action-smoothing 0.4 --render-video --device cpu`
 - Previous physics-v0 regression:
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\run_arm_hand_stage1_physics_regression.py`
 - Previous tiny dataset v0:
@@ -100,6 +112,15 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
 - Stage2 v0.1 obs+phase checkpoint: `D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_1_obs_phase_strongreg.pth`
 - Stage2 v0.1 obs+phase eval: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_1_obs_phase_strongreg_smooth_eval_report.md`
 - Stage2 v0.1 obs+phase demo MP4: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_1_obs_phase\obs_phase_strongreg_policy_demo.mp4`
+- Stage2 v0.1 failure analysis: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_v0_1_failure_analysis_report.md`
+- Stage2 dataset v0.2 report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_2_report.md`
+- Stage2 dataset v0.2 replay QA: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_2_replay_report.md`
+- Stage2 dataset v0.2 file: `D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz`
+- Stage2 v0.2 obs+phase repair report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_2_obs_phase_repair_report.md`
+- Stage2 v0.2 obs+phase checkpoint: `D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_moderatereg.pth`
+- Stage2 v0.2 obs+phase eval: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_2_obs_phase_moderatereg_smooth040_eval_report.md`
+- Stage2 v0.2 obs+phase eval on v0.1 resets: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_2_obs_phase_moderatereg_on_v0_1_smooth040_eval_report.md`
+- Stage2 v0.2 recovered demo MP4: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_2_obs_phase\obs_phase_moderatereg_recovered_ep09_demo.mp4`
 - Collision v2 design: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_report.md`
 - Collision v2 smoke: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_smoke_report.md`
 - Collision v2 visual check: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_visual_check_report.md`
@@ -186,6 +207,12 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
 - V0.1 obs+phase retry: raw obs+phase `18 / 75`, regularized `51 / 75`, strong regularization plus smoothing `69 / 75`.
 - V0.1 phase-only reference on the same reset set: `69 / 75`.
 - V0.1 obs+phase demo: episode 12 success, video at `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_1_obs_phase\obs_phase_strongreg_policy_demo.mp4`.
+- V0.1 failure analysis: six retained obs+phase timeout failures clustered on right-edge offsets with near-zero lift and zero ball-hand contacts.
+- Dataset v0.2: `87 episodes / 87773 rows`, behavior success `87 / 87`, replay QA `PASS`.
+- Dataset v0.2 recovery modes: `nominal=63`, `right_edge_mid_y=15`, `right_edge_high_y=6`, `right_edge_upper_y=3`.
+- V0.2 obs+phase selected policy: moderate regularization (`obs noise=0.12`, `obs dropout=0.20`) with action smoothing `0.4`.
+- V0.2 obs+phase selected eval: `81 / 87` on v0.2 recovery resets and `72 / 75` on the old v0.1 reset set.
+- V0.2 recovered demo: episode 9 from v0.1 succeeds, video at `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_2_obs_phase\obs_phase_moderatereg_recovered_ep09_demo.mp4`.
 
 ## Current Limits
 

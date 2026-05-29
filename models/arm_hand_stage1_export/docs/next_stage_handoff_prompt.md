@@ -86,6 +86,31 @@ Stage2 kickoff status:
 - V0.1 obs+phase demo video:
   `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_1_obs_phase\obs_phase_strongreg_policy_demo.mp4`
 - Latest v0.1 obs+phase result: raw obs+phase `18 / 75`, regularized `51 / 75`, strong regularization plus smoothing `69 / 75`, matching the phase-only reference on the same v0.1 resets.
+- V0.1 failure analysis:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_v0_1_failure_analysis_report.md`
+- V0.1 failure diagnosis: the retained obs+phase failures clustered on right-edge offsets and ended as timeout with near-zero lift and zero ball-hand contacts.
+- Dataset v0.2:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz`
+- Dataset v0.2 collection script:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\collect_arm_hand_stage1_v2_dataset_v0_2.py`
+- Dataset v0.2 report:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_2_report.md`
+- Dataset v0.2 replay QA:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_dataset_v0_2_replay_report.md`
+- Dataset v0.2 result: `87 episodes / 87773 rows`, behavior success `87 / 87`, replay QA `PASS`.
+- Dataset v0.2 recovery modes: `nominal=63`, `right_edge_mid_y=15`, `right_edge_high_y=6`, `right_edge_upper_y=3`.
+- V0.2 obs+phase selected checkpoint:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_moderatereg.pth`
+- V0.2 obs+phase repair report:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_2_obs_phase_repair_report.md`
+- V0.2 obs+phase selected eval:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_2_obs_phase_moderatereg_smooth040_eval_report.md`
+- V0.2 obs+phase selected eval on v0.1 resets:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_2_obs_phase_moderatereg_on_v0_1_smooth040_eval_report.md`
+- V0.2 obs+phase recovered demo video:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_2_obs_phase\obs_phase_moderatereg_recovered_ep09_demo.mp4`
+- Latest v0.2 obs+phase result: selected moderate-regularized obs+phase policy reaches `81 / 87` on v0.2 recovery resets and improves the old v0.1 reset score from `69 / 75` to `72 / 75`.
+- Remaining v0.2 blocker: the upper-right offset cluster `[0.02, 0.02, 0.0]` and `[0.02, 0.025, 0.0]` still times out with zero ball-hand contacts.
 
 Guardrails:
 
@@ -99,8 +124,8 @@ Guardrails:
 
 Recommended Stage2 continuation:
 
-1. inspect the v0.1 obs+phase demo video and repair report;
-2. identify the 6 timeout offsets shared by the obs+phase and phase-only reference evaluations;
-3. create v0.2 recovery demonstrations for those timeout offsets, or narrow the accepted reset region to the 69/75 success subset;
+1. inspect the v0.2 recovered demo video and repair report;
+2. add heavier v0.3 upper-right recovery coverage or explicit reset-offset features for `[0.02, 0.02..0.025, 0.0]`;
+3. rerun obs+phase training and require improvement beyond `72 / 75` on v0.1 resets and `81 / 87` on v0.2 resets before promotion;
 4. keep Shadow/video comparison as regression;
-5. keep RL blocked until broader reset coverage and reward QA are accepted.
+5. keep RL blocked until the upper-right timeout cluster is solved or explicitly excluded from the accepted reset region.
