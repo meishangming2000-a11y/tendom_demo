@@ -363,6 +363,18 @@ Some scripts still keep legacy generic defaults such as:
 
 These names remain for compatibility. They are not the recommended canonical naming scheme for new work. Prefer explicit task-qualified names with a version or comparison tag.
 
+## Latest Arm-Hand Stage2 Smoke
+
+The current experimental lift/hold candidate is the v0.4 obs+phase BC checkpoint:
+
+- checkpoint: `models/arm_hand_stage1_export/checkpoints/bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth`
+- accepted reset long-hold eval: `87 / 87` on v0.2 recovery resets and `75 / 75` on v0.1 resets
+- unseen midpoint holdout: original smoothing `0.5` reached `11 / 12`; selected smoothing `0.2` reached `12 / 12`
+- holdout report: `models/arm_hand_stage1_export/docs/arm_hand_stage1_v2_bc_v0_4_holdout_sweep_smooth020_report.md`
+- holdout demo video: `models/arm_hand_stage1_export/docs/visual_checks_arm_hand_stage1_v2_bc_v0_4_holdout/holdout_offset_0175_0075_smooth020_demo.mp4`
+
+This is still experimental smoke validation on collision proxy v2, not a promoted maintained baseline.
+
 ## Development Notes
 
 When adding a new task or experiment here:

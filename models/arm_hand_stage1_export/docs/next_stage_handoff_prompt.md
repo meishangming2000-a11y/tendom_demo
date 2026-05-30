@@ -144,7 +144,18 @@ Stage2 kickoff status:
 - V0.4 long-hold demo:
   `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_hold\obs_phase_weighted_transition_ep25_freeze_settle180_hold900_demo.mp4`
 - V0.4 long-hold demo result: episode `25`, terminal reason `success_lift_hold`, final lift `0.079840 m`, ball-floor contacts after lift `0`, frames `537`.
-- Remaining v0.4 blocker: none on the current accepted reset sets; next gate is unseen holdout sweep before promotion or RL warm-start.
+- V0.4 unseen holdout sweep script:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand_stage1_v2_bc_holdout_sweep.py`
+- V0.4 unseen holdout diagnostic with original smoothing `0.5`:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_holdout_sweep_report.md`
+- V0.4 unseen holdout diagnostic result: `11 / 12`; failure was `[0.0175, 0.0075, 0.0]` with no-lift timeout.
+- V0.4 unseen holdout selected report:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_holdout_sweep_smooth020_report.md`
+- V0.4 unseen holdout selected result: with action smoothing `0.2`, `12 / 12` pass, terminal reason `success_lift_hold`, final lift range `0.075788 m` to `0.092617 m`.
+- V0.4 unseen holdout demo:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_holdout\holdout_offset_0175_0075_smooth020_demo.mp4`
+- V0.4 unseen holdout demo result: offset `[0.0175, 0.0075, 0.0]`, terminal reason `success_lift_hold`, final lift `0.078270 m`, ball-floor contacts after lift `0`, frames `537`.
+- Remaining v0.4 blocker: none on the accepted reset sets or first unseen midpoint holdout; next gate is broader holdout plus reward/termination QA before promotion or RL warm-start.
 
 Guardrails:
 
@@ -158,8 +169,8 @@ Guardrails:
 
 Recommended Stage2 continuation:
 
-1. inspect the v0.4 long-hold demo video and hold-validation report;
-2. run an unseen holdout sweep around `x=0.01..0.02`, `y=0.005..0.02` using the same hold controller;
-3. require holdout success before promoting v0.4 or using it as an RL warm-start;
+1. inspect the v0.4 long-hold and holdout demo videos plus the updated hold-validation report;
+2. run a broader holdout around and slightly beyond the accepted reset region using smoothing `0.2`;
+3. perform reward/termination QA on that broader holdout before treating v0.4 as an RL warm-start candidate;
 4. keep Shadow/video comparison as regression;
-5. keep RL blocked until the upper-right timeout cluster is solved or explicitly excluded from the accepted reset region.
+5. keep RL blocked until broader holdout coverage and reward QA are accepted.

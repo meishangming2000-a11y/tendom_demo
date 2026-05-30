@@ -9,6 +9,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
+import numpy as np
 import torch
 
 from arm_hand_stage1_task_api import CURRENT_LIFT_SCENE, ArmHandStage1TaskAPI
@@ -26,6 +27,13 @@ from eval_arm_hand_stage1_v2_bc_smoke import episode_initial_ball, episode_offse
 from render_arm_hand_lift_ball_video import FrameWriter, setup_side_camera
 
 
+def parse_ball_offset(raw: str) -> np.ndarray:
+    parts = [float(item.strip()) for item in raw.split(",") if item.strip()]
+    if len(parts) != 3:
+        raise argparse.ArgumentTypeError("--ball-offset must contain exactly three comma-separated numbers")
+    return np.asarray(parts, dtype=np.float64)
+
+
 def write_report(path: Path, payload: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     result = payload["result"]
@@ -34,6 +42,7 @@ def write_report(path: Path, payload: dict) -> None:
     hold = result.get("hold_check", {})
     hold_min = hold.get("min_lift_height_after_success")
     hold_min_text = "n/a" if hold_min is None else f"{float(hold_min):.6f} m"
+    dataset_text = payload.get("dataset") or "explicit ball-offset override"
     lines = [
         "# Arm-Hand Stage1 V2 BC Smoke Demo Report\n\n",
         f"Generated: {payload['generated_at']}\n\n",
@@ -41,9 +50,10 @@ def write_report(path: Path, payload: dict) -> None:
         f"- Terminal reason: `{result['terminal_reason']}`\n",
         f"- Success: `{result['success']}`\n",
         f"- Checkpoint: `{payload['checkpoint']}`\n",
-        f"- Dataset: `{payload['dataset']}`\n",
+        f"- Dataset: `{dataset_text}`\n",
         f"- Scene: `{payload['scene']}`\n",
         f"- Episode: `{result['episode_id']}`\n",
+        f"- Ball offset: `{np.round(result['ball_offset'], 6).tolist()}`\n",
         f"- Video: `{payload['video']}`\n",
         f"- Frames: `{payload['frames']}`\n",
         f"- Steps: `{result['steps']}`\n",
@@ -74,6 +84,12 @@ def main() -> int:
     parser.add_argument("--dataset", type=Path, default=DEFAULT_DATASET)
     parser.add_argument("--scene", type=Path, default=CURRENT_LIFT_SCENE)
     parser.add_argument("--episode-id", type=int, default=4)
+    parser.add_argument(
+        "--ball-offset",
+        type=parse_ball_offset,
+        default=None,
+        help="Override dataset episode with explicit x,y,z world offset from the scene default ball.",
+    )
     parser.add_argument("--max-steps", type=int, default=1230)
     parser.add_argument("--output", type=Path, default=DEFAULT_DEMO_VIDEO)
     parser.add_argument("--report", type=Path, default=DEFAULT_DEMO_REPORT)
@@ -100,9 +116,17 @@ def main() -> int:
         print("CUDA unavailable; using CPU.")
         args.device = "cpu"
     device = torch.device(args.device)
-    data = load_dataset(args.dataset)
     model, checkpoint = load_policy(args.checkpoint, device)
     api = ArmHandStage1TaskAPI(args.scene)
+    if args.ball_offset is None:
+        data = load_dataset(args.dataset)
+        initial_ball = episode_initial_ball(data, args.episode_id)
+        ball_offset = episode_offset(data, args.episode_id)
+        dataset_path = str(args.dataset.resolve())
+    else:
+        initial_ball = api.get_ball_pose()["position"].copy() + args.ball_offset
+        ball_offset = args.ball_offset.copy()
+        dataset_path = None
 
     renderer = None
     writer_ctx = None
@@ -139,8 +163,8 @@ def main() -> int:
             checkpoint=checkpoint,
             device=device,
             episode_id=args.episode_id,
-            initial_ball=episode_initial_ball(data, args.episode_id),
-            ball_offset=episode_offset(data, args.episode_id),
+            initial_ball=initial_ball,
+            ball_offset=ball_offset,
             max_steps=args.max_steps,
             clip_to_train_range=not args.no_train_range_clip,
             action_smoothing=args.action_smoothing,
@@ -164,7 +188,7 @@ def main() -> int:
     payload = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "checkpoint": str(args.checkpoint.resolve()),
-        "dataset": str(args.dataset.resolve()),
+        "dataset": dataset_path,
         "scene": str(args.scene.resolve()),
         "video": str(args.output.resolve()) if args.render_video else None,
         "frames": int(frames["count"]),
