@@ -11,7 +11,7 @@ This workspace contains the current arm + export4 hand MuJoCo assembly.
 - The ball in the passive viewer can still slide/fall because gravity is active; use the scripted demo to see closure.
 - A new arm+hand lift-ball scripted smoke demo can now close around a ball and lift it in pure-physics mode using collision proxy v2.
 - Stage2 kickoff has started: the task API now defaults to collision proxy v2, a small lift-scene ball-pose sweep is available, the first observation/action/reward/done contract is frozen, dataset v0/v0.1/v0.2 replay QA passes, and experimental BC smoke policies have been trained.
-- No promoted BC/RL training baseline exists yet. The v0.3 weighted obs+phase checkpoint improves the v0.2 recovery-set score but still has a localized no-contact timeout cluster.
+- No promoted BC/RL training baseline exists yet. The v0.4 weighted obs+phase checkpoint passes the current v0.1/v0.2 reset sets, but still needs unseen holdout validation before promotion.
 
 ## Current Files
 
@@ -138,6 +138,13 @@ python D:\tendon_project\simulations\models\arm_hand_stage1_export\train_arm_han
 python D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --all-episodes --max-steps 1300 --action-smoothing 0.5 --device cpu
 ```
 
+Stage2 v0.4 weighted transition-band obs+phase training:
+
+```powershell
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\train_arm_hand_stage1_v2_bc_smoke.py --data D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --output D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth --action-field expert_actions --feature-mode obs_phase --normalized-obs-noise-std 0.12 --obs-dropout-prob 0.20 --upper-right-sample-weight 6.0 --upper-right-y-min 0.015 --extra-sample-region transition_band,0.008,0.012,0.008,0.012,6.0 --epochs 120 --batch-size 512 --hidden-dim 256 --depth 3 --no-cuda
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --all-episodes --max-steps 1300 --action-smoothing 0.5 --device cpu
+```
+
 Older physics-v0 regression and tiny dataset scaffold are still available:
 
 ```powershell
@@ -226,6 +233,9 @@ Stage2 kickoff:
 - Selected v0.3 weighted upper-right obs+phase online eval: `84 / 87` on the v0.2 recovery set and `72 / 75` on the old v0.1 reset set.
 - Selected v0.3 recovered demo episode 24 from the old v0.1 failure set: success, demo video rendered.
 - Remaining v0.3 failures are localized to `[0.01, 0.01, 0.0]` with action smoothing `0.5`; keep RL blocked.
+- Selected v0.4 weighted transition-band obs+phase online eval: `87 / 87` on the v0.2 recovery set and `75 / 75` on the old v0.1 reset set.
+- Selected v0.4 recovered demo episode 18 from the old v0.1 failure set: success, demo video rendered.
+- V0.4 is the strongest BC smoke result so far, but still requires unseen holdout sweep validation before promotion or RL warm-start.
 
 ## Reports
 
@@ -266,6 +276,11 @@ Stage2 kickoff:
 - Stage2 v0.3 obs+phase eval: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_3_obs_phase_weighted_upperright_on_v0_2_smooth050_eval_report.md`
 - Stage2 v0.3 obs+phase eval on v0.1 resets: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_3_obs_phase_weighted_upperright_on_v0_1_smooth050_eval_report.md`
 - Stage2 v0.3 recovered demo MP4: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_3_obs_phase\obs_phase_weighted_upperright_recovered_ep24_demo.mp4`
+- Stage2 v0.4 obs+phase training report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_obs_phase_training_report.md`
+- Stage2 v0.4 obs+phase checkpoint: `D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth`
+- Stage2 v0.4 obs+phase eval: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_obs_phase_weighted_upperright_transition_on_v0_2_smooth050_eval_report.md`
+- Stage2 v0.4 obs+phase eval on v0.1 resets: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_obs_phase_weighted_upperright_transition_on_v0_1_smooth050_eval_report.md`
+- Stage2 v0.4 recovered demo MP4: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_obs_phase\obs_phase_weighted_transition_recovered_ep18_demo.mp4`
 - Collision v2 smoke: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_smoke_report.md`
 - Collision v2 visual check: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_visual_check_report.md`
 - Shadow comparison: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_shadow_video_comparison_report.md`

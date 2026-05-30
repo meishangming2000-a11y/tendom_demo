@@ -69,6 +69,7 @@ def write_report(path: Path, report: dict) -> None:
         f"- Obs dropout prob: `{report['obs_dropout_prob']}`\n",
         f"- Upper-right sample weight: `{report['upper_right_sample_weight']}`\n",
         f"- Upper-right train samples: `{report['upper_right_train_samples']}`\n",
+        f"- Extra sample regions: `{report['extra_sample_regions']}`\n",
         f"- Train episodes: `{report['train_episodes']}`\n",
         f"- Val episodes: `{report['val_episodes']}`\n",
         f"- Train samples: `{report['train_samples']}`\n",
@@ -122,7 +123,16 @@ def main() -> int:
     parser.add_argument("--obs-dropout-prob", type=float, default=0.0)
     parser.add_argument("--upper-right-sample-weight", type=float, default=1.0)
     parser.add_argument("--upper-right-x-min", type=float, default=0.018)
+    parser.add_argument("--upper-right-x-max", type=float, default=float("inf"))
     parser.add_argument("--upper-right-y-min", type=float, default=0.015)
+    parser.add_argument("--upper-right-y-max", type=float, default=float("inf"))
+    parser.add_argument(
+        "--extra-sample-region",
+        action="append",
+        default=[],
+        metavar="NAME,XMIN,XMAX,YMIN,YMAX,WEIGHT",
+        help="Additional rectangular ball-offset sample weight region. Can be repeated.",
+    )
     parser.add_argument(
         "--feature-mode",
         choices=["obs_phase", "obs_only", "phase_only", "obs_phase_offset", "obs_only_offset", "phase_offset"],
@@ -173,14 +183,46 @@ def main() -> int:
     loss_fn = nn.MSELoss()
     train_offsets = data["ball_offsets"][train_mask].astype(np.float32) if "ball_offsets" in data.files else None
     upper_right_train_samples = 0
+    extra_region_reports = []
     sampler = None
     if train_offsets is not None and float(args.upper_right_sample_weight) != 1.0:
         sample_weights = np.ones(x_train.shape[0], dtype=np.float64)
-        upper_right_mask = (train_offsets[:, 0] >= float(args.upper_right_x_min)) & (
-            train_offsets[:, 1] >= float(args.upper_right_y_min)
+        upper_right_mask = (
+            (train_offsets[:, 0] >= float(args.upper_right_x_min))
+            & (train_offsets[:, 0] <= float(args.upper_right_x_max))
+            & (train_offsets[:, 1] >= float(args.upper_right_y_min))
+            & (train_offsets[:, 1] <= float(args.upper_right_y_max))
         )
         upper_right_train_samples = int(np.sum(upper_right_mask))
         sample_weights[upper_right_mask] = max(1e-6, float(args.upper_right_sample_weight))
+        for raw_region in args.extra_sample_region:
+            parts = [part.strip() for part in raw_region.split(",")]
+            if len(parts) != 6:
+                raise ValueError(f"Expected 6 comma-separated values for --extra-sample-region, got {raw_region!r}")
+            name, x_min, x_max, y_min, y_max, weight = parts
+            x_min_f = float(x_min)
+            x_max_f = float(x_max)
+            y_min_f = float(y_min)
+            y_max_f = float(y_max)
+            weight_f = max(1e-6, float(weight))
+            region_mask = (
+                (train_offsets[:, 0] >= x_min_f)
+                & (train_offsets[:, 0] <= x_max_f)
+                & (train_offsets[:, 1] >= y_min_f)
+                & (train_offsets[:, 1] <= y_max_f)
+            )
+            sample_weights[region_mask] = np.maximum(sample_weights[region_mask], weight_f)
+            extra_region_reports.append(
+                {
+                    "name": name,
+                    "x_min": x_min_f,
+                    "x_max": x_max_f,
+                    "y_min": y_min_f,
+                    "y_max": y_max_f,
+                    "weight": weight_f,
+                    "train_samples": int(np.sum(region_mask)),
+                }
+            )
         sampler = torch.utils.data.WeightedRandomSampler(
             torch.from_numpy(sample_weights),
             num_samples=len(sample_weights),
@@ -266,8 +308,11 @@ def main() -> int:
         "obs_dropout_prob": float(args.obs_dropout_prob),
         "upper_right_sample_weight": float(args.upper_right_sample_weight),
         "upper_right_x_min": float(args.upper_right_x_min),
+        "upper_right_x_max": float(args.upper_right_x_max),
         "upper_right_y_min": float(args.upper_right_y_min),
+        "upper_right_y_max": float(args.upper_right_y_max),
         "upper_right_train_samples": int(upper_right_train_samples),
+        "extra_sample_regions": extra_region_reports,
     }
     torch.save(checkpoint, args.output)
 
@@ -284,8 +329,11 @@ def main() -> int:
         "obs_dropout_prob": float(args.obs_dropout_prob),
         "upper_right_sample_weight": float(args.upper_right_sample_weight),
         "upper_right_x_min": float(args.upper_right_x_min),
+        "upper_right_x_max": float(args.upper_right_x_max),
         "upper_right_y_min": float(args.upper_right_y_min),
+        "upper_right_y_max": float(args.upper_right_y_max),
         "upper_right_train_samples": int(upper_right_train_samples),
+        "extra_sample_regions": extra_region_reports,
         "train_samples": int(train_mask.sum()),
         "val_samples": int(val_mask.sum()),
         "val_action_rmse_by_dim": val_rmse_by_dim,

@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-05-30",
+  "scope": "continue obs+phase BC training after v0.3 by targeting the transition-band timeout cluster",
+  "status": "PASS_on_v0_1_and_v0_2_reset_sets_experimental_smoke_only",
+  "training_ready": false,
+  "selected_checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth",
+  "training_dataset": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz",
+  "selected_train": {
+    "feature_mode": "obs_phase",
+    "action_field": "expert_actions",
+    "epochs": 120,
+    "hidden_dim": 256,
+    "depth": 3,
+    "normalized_obs_noise_std": 0.12,
+    "obs_dropout_prob": 0.2,
+    "upper_right_sample_weight": 6.0,
+    "upper_right_x_min": 0.018,
+    "upper_right_y_min": 0.015,
+    "upper_right_train_samples": 6007,
+    "extra_sample_regions": [
+      {
+        "name": "transition_band",
+        "x_min": 0.008,
+        "x_max": 0.012,
+        "y_min": 0.008,
+        "y_max": 0.012,
+        "weight": 6.0,
+        "train_samples": 3016
+      }
+    ],
+    "final_train_loss": 0.00009336686566852857,
+    "final_val_loss": 0.0000660652804072015,
+    "val_action_rmse_raw": 0.004001552239060402
+  },
+  "selected_eval_v0_2": {
+    "success_count": 87,
+    "episode_count": 87,
+    "terminal_reason_counts": {
+      "success_lift_ball": 87
+    },
+    "action_smoothing": 0.5,
+    "lift_min_m": 0.08006389260469507,
+    "lift_max_m": 0.08097675442415048,
+    "lift_mean_m": 0.08042100079204317
+  },
+  "selected_eval_v0_1": {
+    "success_count": 75,
+    "episode_count": 75,
+    "terminal_reason_counts": {
+      "success_lift_ball": 75
+    },
+    "action_smoothing": 0.5,
+    "lift_min_m": 0.08006389260469507,
+    "lift_max_m": 0.08097675442415048,
+    "lift_mean_m": 0.08043195137053294
+  },
+  "demo": {
+    "dataset": "v0.1",
+    "episode_id": 18,
+    "offset": [0.01, 0.01, 0.0],
+    "success": true,
+    "terminal_reason": "success_lift_ball",
+    "frames": 262,
+    "video": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_v2_bc_v0_4_obs_phase\\obs_phase_weighted_transition_recovered_ep18_demo.mp4"
+  },
+  "remaining_failure_offsets": {
+    "v0_1": [],
+    "v0_2": []
+  },
+  "next_step": "Run unseen holdout sweep before promotion or RL warm-start."
+}
