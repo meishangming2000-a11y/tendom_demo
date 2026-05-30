@@ -283,6 +283,8 @@ def predict_action(
     obs_vector: np.ndarray,
     *,
     step_id: int,
+    phase_id: int | None = None,
+    phase_step_id: int | None = None,
     ball_offset: np.ndarray | None = None,
     device: torch.device | str = "cpu",
     clip_to_train_range: bool = True,
@@ -290,8 +292,8 @@ def predict_action(
     feature = build_single_feature(
         obs_vector,
         step_id=step_id,
-        phase_id=None,
-        phase_step_id=None,
+        phase_id=phase_id,
+        phase_step_id=phase_step_id,
         ball_offset=ball_offset,
         feature_config=checkpoint["feature_config"],
     )

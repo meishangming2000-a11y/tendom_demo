@@ -90,6 +90,10 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\train_arm_hand_stage1_v2_bc_smoke.py --data D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --output D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth --action-field expert_actions --feature-mode obs_phase --normalized-obs-noise-std 0.12 --obs-dropout-prob 0.20 --upper-right-sample-weight 6.0 --upper-right-y-min 0.015 --extra-sample-region transition_band,0.008,0.012,0.008,0.012,6.0 --epochs 120 --batch-size 512 --hidden-dim 256 --depth 3 --no-cuda`
 - Stage2 v0.4 weighted transition-band eval:
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --all-episodes --max-steps 1300 --action-smoothing 0.5 --device cpu`
+- Stage2 v0.4 long-hold eval:
+  `python D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --all-episodes --max-steps 3000 --action-smoothing 0.5 --hold-after-success-steps 900 --hold-lift-height-min 0.070 --hold-settle-steps 180 --freeze-action-after-settle --device cpu`
+- Stage2 v0.4 long-hold demo:
+  `python D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --episode-id 25 --max-steps 3000 --action-smoothing 0.5 --hold-after-success-steps 900 --hold-lift-height-min 0.070 --hold-settle-steps 180 --freeze-action-after-settle --render-video --device cpu`
 - Previous physics-v0 regression:
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\run_arm_hand_stage1_physics_regression.py`
 - Previous tiny dataset v0:
@@ -139,6 +143,10 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
 - Stage2 v0.4 obs+phase eval: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_obs_phase_weighted_upperright_transition_on_v0_2_smooth050_eval_report.md`
 - Stage2 v0.4 obs+phase eval on v0.1 resets: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_obs_phase_weighted_upperright_transition_on_v0_1_smooth050_eval_report.md`
 - Stage2 v0.4 recovered demo MP4: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_obs_phase\obs_phase_weighted_transition_recovered_ep18_demo.mp4`
+- Stage2 v0.4 long-hold validation: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_hold_validation_report.md`
+- Stage2 v0.4 long-hold eval: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_freeze_settle180_hold900_min070_recover_on_v0_2_eval_report.md`
+- Stage2 v0.4 long-hold eval on v0.1 resets: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_freeze_settle180_hold900_min070_recover_on_v0_1_eval_report.md`
+- Stage2 v0.4 long-hold demo MP4: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_hold\obs_phase_weighted_transition_ep25_freeze_settle180_hold900_demo.mp4`
 - Collision v2 design: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_report.md`
 - Collision v2 smoke: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_smoke_report.md`
 - Collision v2 visual check: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_visual_check_report.md`
@@ -235,6 +243,8 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
 - V0.3 recovered demo: episode 24 from v0.1 succeeds, video at `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_3_obs_phase\obs_phase_weighted_upperright_recovered_ep24_demo.mp4`.
 - V0.4 obs+phase weighted upper-right plus transition-band selected eval: `87 / 87` on v0.2 recovery resets and `75 / 75` on the old v0.1 reset set.
 - V0.4 recovered demo: episode 18 from v0.1 succeeds, video at `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_obs_phase\obs_phase_weighted_transition_recovered_ep18_demo.mp4`.
+- V0.4 long-hold validation: `87 / 87` on v0.2 recovery resets and `75 / 75` on old v0.1 resets with `900` required hold steps.
+- V0.4 long-hold demo: episode 25 succeeds, final lift `0.079840 m`, ball-floor contacts after lift `0`, video at `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_hold\obs_phase_weighted_transition_ep25_freeze_settle180_hold900_demo.mp4`.
 
 ## Current Limits
 

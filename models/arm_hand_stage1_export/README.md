@@ -11,7 +11,7 @@ This workspace contains the current arm + export4 hand MuJoCo assembly.
 - The ball in the passive viewer can still slide/fall because gravity is active; use the scripted demo to see closure.
 - A new arm+hand lift-ball scripted smoke demo can now close around a ball and lift it in pure-physics mode using collision proxy v2.
 - Stage2 kickoff has started: the task API now defaults to collision proxy v2, a small lift-scene ball-pose sweep is available, the first observation/action/reward/done contract is frozen, dataset v0/v0.1/v0.2 replay QA passes, and experimental BC smoke policies have been trained.
-- No promoted BC/RL training baseline exists yet. The v0.4 weighted obs+phase checkpoint passes the current v0.1/v0.2 reset sets, but still needs unseen holdout validation before promotion.
+- No promoted BC/RL training baseline exists yet. The v0.4 weighted obs+phase checkpoint passes the current v0.1/v0.2 reset sets and now has a long-hold smoke validation pass with a post-success hold controller, but still needs unseen holdout validation before promotion.
 
 ## Current Files
 
@@ -145,6 +145,13 @@ python D:\tendon_project\simulations\models\arm_hand_stage1_export\train_arm_han
 python D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --all-episodes --max-steps 1300 --action-smoothing 0.5 --device cpu
 ```
 
+Stage2 v0.4 long-hold validation and demo:
+
+```powershell
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --all-episodes --max-steps 3000 --action-smoothing 0.5 --hold-after-success-steps 900 --hold-lift-height-min 0.070 --hold-settle-steps 180 --freeze-action-after-settle --device cpu
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --episode-id 25 --max-steps 3000 --action-smoothing 0.5 --hold-after-success-steps 900 --hold-lift-height-min 0.070 --hold-settle-steps 180 --freeze-action-after-settle --render-video --device cpu
+```
+
 Older physics-v0 regression and tiny dataset scaffold are still available:
 
 ```powershell
@@ -235,6 +242,8 @@ Stage2 kickoff:
 - Remaining v0.3 failures are localized to `[0.01, 0.01, 0.0]` with action smoothing `0.5`; keep RL blocked.
 - Selected v0.4 weighted transition-band obs+phase online eval: `87 / 87` on the v0.2 recovery set and `75 / 75` on the old v0.1 reset set.
 - Selected v0.4 recovered demo episode 18 from the old v0.1 failure set: success, demo video rendered.
+- V0.4 long-hold validation with post-success settle/freeze controller: `87 / 87` on the v0.2 recovery set and `75 / 75` on the old v0.1 reset set, terminal reason `success_lift_hold`.
+- V0.4 long-hold demo episode 25: success, `900` consecutive hold steps, final lift `0.079840 m`, ball-floor contacts after lift `0`, demo video rendered.
 - V0.4 is the strongest BC smoke result so far, but still requires unseen holdout sweep validation before promotion or RL warm-start.
 
 ## Reports
@@ -281,6 +290,10 @@ Stage2 kickoff:
 - Stage2 v0.4 obs+phase eval: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_obs_phase_weighted_upperright_transition_on_v0_2_smooth050_eval_report.md`
 - Stage2 v0.4 obs+phase eval on v0.1 resets: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_obs_phase_weighted_upperright_transition_on_v0_1_smooth050_eval_report.md`
 - Stage2 v0.4 recovered demo MP4: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_obs_phase\obs_phase_weighted_transition_recovered_ep18_demo.mp4`
+- Stage2 v0.4 long-hold validation: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_hold_validation_report.md`
+- Stage2 v0.4 long-hold eval: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_freeze_settle180_hold900_min070_recover_on_v0_2_eval_report.md`
+- Stage2 v0.4 long-hold eval on v0.1 resets: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_freeze_settle180_hold900_min070_recover_on_v0_1_eval_report.md`
+- Stage2 v0.4 long-hold demo MP4: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_hold\obs_phase_weighted_transition_ep25_freeze_settle180_hold900_demo.mp4`
 - Collision v2 smoke: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_smoke_report.md`
 - Collision v2 visual check: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_visual_check_report.md`
 - Shadow comparison: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_shadow_video_comparison_report.md`

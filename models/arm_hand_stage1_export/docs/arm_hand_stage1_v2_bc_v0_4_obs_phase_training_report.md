@@ -36,6 +36,21 @@ Compared with v0.3, the selected v0.4 policy improves:
 - v0.2 recovery set: `84 / 87` -> `87 / 87`
 - v0.1 reset set: `72 / 75` -> `75 / 75`
 
+## Long-Hold Validation
+
+The short online eval stops when the first lift success is reached. A separate hold validation now checks whether the ball remains held after lift:
+
+- Action smoothing: `0.5`
+- Post-success settle window: `180` steps
+- Hold controller: freeze the best action seen during the settle window
+- Required counted hold: `900` consecutive steps
+- Counted hold height floor: `0.070 m`
+
+| eval set | success | terminal reasons | final lift range m | report |
+|---|---:|---|---:|---|
+| v0.2 recovery set | `87 / 87` | `{'success_lift_hold': 87}` | `0.077342` to `0.093798` | `docs/arm_hand_stage1_v2_bc_v0_4_freeze_settle180_hold900_min070_recover_on_v0_2_eval_report.md` |
+| v0.1 reset set | `75 / 75` | `{'success_lift_hold': 75}` | `0.077501` to `0.093798` | `docs/arm_hand_stage1_v2_bc_v0_4_freeze_settle180_hold900_min070_recover_on_v0_1_eval_report.md` |
+
 ## Demo
 
 Recovered demo from the v0.3 transition-band failure:
@@ -47,10 +62,20 @@ Recovered demo from the v0.3 transition-band failure:
 - Frames: `262`
 - Video: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_obs_phase\obs_phase_weighted_transition_recovered_ep18_demo.mp4`
 
+Long-hold demo from a previously settling-sensitive right-edge sample:
+
+- Dataset: v0.2
+- Episode: `25`
+- Offset: `[0.02, -0.015, 0.0]`
+- Result: `success_lift_hold`
+- Frames: `537`
+- Final lift: `0.079840 m`
+- Video: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_hold\obs_phase_weighted_transition_ep25_freeze_settle180_hold900_demo.mp4`
+
 ## Interpretation
 
-This is the strongest BC smoke result so far on the current accepted reset sets. It should still not be promoted to a maintained baseline until it passes an unseen reset sweep and visual spot checks across boundary cases. RL remains blocked until that broader validation is accepted.
+This is the strongest BC smoke result so far on the current accepted reset sets. The long-hold validation answers the immediate "does it drop after lift?" concern for the accepted reset sets, but it should still not be promoted to a maintained baseline until it passes an unseen reset sweep and visual spot checks across boundary cases. RL remains blocked until that broader validation is accepted.
 
 ## Next Step
 
-Run a small unseen holdout sweep around the accepted region, especially between `x=0.01..0.02` and `y=0.005..0.02`. If the holdout passes, this checkpoint can become the candidate warm-start for later RL smoke work.
+Run a small unseen holdout sweep around the accepted region, especially between `x=0.01..0.02` and `y=0.005..0.02`, with the same long-hold controller. If the holdout passes, this checkpoint can become the candidate warm-start for later RL smoke work.

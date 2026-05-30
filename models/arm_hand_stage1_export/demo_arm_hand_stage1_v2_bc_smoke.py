@@ -31,6 +31,9 @@ def write_report(path: Path, payload: dict) -> None:
     result = payload["result"]
     metrics = result["final_metrics"]
     contact = metrics["contact"]
+    hold = result.get("hold_check", {})
+    hold_min = hold.get("min_lift_height_after_success")
+    hold_min_text = "n/a" if hold_min is None else f"{float(hold_min):.6f} m"
     lines = [
         "# Arm-Hand Stage1 V2 BC Smoke Demo Report\n\n",
         f"Generated: {payload['generated_at']}\n\n",
@@ -44,6 +47,13 @@ def write_report(path: Path, payload: dict) -> None:
         f"- Video: `{payload['video']}`\n",
         f"- Frames: `{payload['frames']}`\n",
         f"- Steps: `{result['steps']}`\n",
+        f"- Hold enabled: `{hold.get('enabled', False)}`\n",
+        f"- Hold status: `{hold.get('status', 'disabled')}`\n",
+        f"- Hold required post-success steps: `{hold.get('required_post_success_steps', 0)}`\n",
+        f"- Hold settle steps: `{hold.get('settle_steps', 0)}`\n",
+        f"- Hold consecutive steps: `{hold.get('consecutive_hold_steps', 0)}`\n",
+        f"- Hold min lift after success: `{hold_min_text}`\n",
+        f"- Hold failure reason: `{hold.get('failure_reason')}`\n",
         f"- Ball lift height: `{metrics['ball_lift_height']:.6f} m`\n",
         f"- Ball-hand contacts: `{contact['ball_hand_contact_count']}`\n",
         f"- Ball-floor contacts: `{contact.get('ball_floor_contact_count', 0)}`\n",
@@ -75,6 +85,12 @@ def main() -> int:
     parser.add_argument("--width", type=int, default=960)
     parser.add_argument("--height", type=int, default=676)
     parser.add_argument("--action-smoothing", type=float, default=0.0)
+    parser.add_argument("--hold-after-success-steps", type=int, default=0)
+    parser.add_argument("--hold-lift-height-min", type=float, default=0.075)
+    parser.add_argument("--hold-settle-steps", type=int, default=0)
+    parser.add_argument("--state-gated-hold-phase", action=argparse.BooleanOptionalAction, default=False)
+    parser.add_argument("--freeze-action-after-success", action=argparse.BooleanOptionalAction, default=False)
+    parser.add_argument("--freeze-action-after-settle", action=argparse.BooleanOptionalAction, default=False)
     parser.add_argument("--no-train-range-clip", action="store_true")
     parser.add_argument("--device", choices=["cpu", "cuda"], default="cpu")
     parser.add_argument("--viewer-step-sleep", type=float, default=0.01)
@@ -128,6 +144,12 @@ def main() -> int:
             max_steps=args.max_steps,
             clip_to_train_range=not args.no_train_range_clip,
             action_smoothing=args.action_smoothing,
+            hold_after_success_steps=args.hold_after_success_steps,
+            hold_lift_height_min=args.hold_lift_height_min,
+            hold_settle_steps=args.hold_settle_steps,
+            state_gated_hold_phase=args.state_gated_hold_phase,
+            freeze_action_after_success=args.freeze_action_after_success,
+            freeze_action_after_settle=args.freeze_action_after_settle,
             sample_every=50,
             frame_callback=capture,
         )
@@ -149,6 +171,12 @@ def main() -> int:
         "device": str(device),
         "clip_to_train_range": not args.no_train_range_clip,
         "action_smoothing": float(args.action_smoothing),
+        "hold_after_success_steps": int(args.hold_after_success_steps),
+        "hold_lift_height_min": float(args.hold_lift_height_min),
+        "hold_settle_steps": int(args.hold_settle_steps),
+        "state_gated_hold_phase": bool(args.state_gated_hold_phase),
+        "freeze_action_after_success": bool(args.freeze_action_after_success),
+        "freeze_action_after_settle": bool(args.freeze_action_after_settle),
         "checkpoint_status": checkpoint.get("status"),
         "result": result,
         "training_ready": False,

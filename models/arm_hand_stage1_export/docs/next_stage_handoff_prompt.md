@@ -134,6 +134,16 @@ Stage2 kickoff status:
 - V0.4 obs+phase recovered demo:
   `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_obs_phase\obs_phase_weighted_transition_recovered_ep18_demo.mp4`
 - Latest v0.4 obs+phase result: weighted upper-right plus transition-band sampling reaches `87 / 87` on v0.2 recovery resets and `75 / 75` on old v0.1 resets.
+- V0.4 long-hold validation:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_hold_validation_report.md`
+- V0.4 long-hold eval on v0.2:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_freeze_settle180_hold900_min070_recover_on_v0_2_eval_report.md`
+- V0.4 long-hold eval on v0.1:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_freeze_settle180_hold900_min070_recover_on_v0_1_eval_report.md`
+- V0.4 long-hold result: with action smoothing `0.5`, `180` post-success settle steps, freeze-best-settle action, and `900` required hold steps, v0.4 reaches `87 / 87` on v0.2 recovery resets and `75 / 75` on old v0.1 resets.
+- V0.4 long-hold demo:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_hold\obs_phase_weighted_transition_ep25_freeze_settle180_hold900_demo.mp4`
+- V0.4 long-hold demo result: episode `25`, terminal reason `success_lift_hold`, final lift `0.079840 m`, ball-floor contacts after lift `0`, frames `537`.
 - Remaining v0.4 blocker: none on the current accepted reset sets; next gate is unseen holdout sweep before promotion or RL warm-start.
 
 Guardrails:
@@ -148,8 +158,8 @@ Guardrails:
 
 Recommended Stage2 continuation:
 
-1. inspect the v0.4 recovered demo video and training report;
-2. run an unseen holdout sweep around `x=0.01..0.02`, `y=0.005..0.02`;
+1. inspect the v0.4 long-hold demo video and hold-validation report;
+2. run an unseen holdout sweep around `x=0.01..0.02`, `y=0.005..0.02` using the same hold controller;
 3. require holdout success before promoting v0.4 or using it as an RL warm-start;
 4. keep Shadow/video comparison as regression;
 5. keep RL blocked until the upper-right timeout cluster is solved or explicitly excluded from the accepted reset region.
