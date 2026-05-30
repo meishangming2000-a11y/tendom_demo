@@ -95,25 +95,34 @@ def feature_config_from_dataset(
     include_phase_features: bool = True,
     feature_mode: str = "obs_phase",
 ) -> dict[str, Any]:
-    if feature_mode not in {"obs_phase", "obs_only", "phase_only"}:
+    valid_modes = {"obs_phase", "obs_only", "phase_only", "obs_phase_offset", "obs_only_offset", "phase_offset"}
+    if feature_mode not in valid_modes:
         raise ValueError(f"Unknown feature_mode={feature_mode!r}")
     phase_names = string_list(data["phase_name_table"])
     phase_lengths = dataset_phase_lengths(data)
     max_episode_steps = max(episode_lengths(data).values())
-    use_obs = feature_mode in {"obs_phase", "obs_only"}
-    use_phase = include_phase_features and feature_mode in {"obs_phase", "phase_only"}
+    use_obs = feature_mode in {"obs_phase", "obs_only", "obs_phase_offset", "obs_only_offset"}
+    use_phase = include_phase_features and feature_mode in {"obs_phase", "phase_only", "obs_phase_offset", "phase_offset"}
+    use_offset = feature_mode in {"obs_phase_offset", "obs_only_offset", "phase_offset"}
     base_dim = int(data["obs"].shape[1]) if use_obs else 0
     phase_dim = len(phase_names) + 2 if use_phase else 0
+    offset_dim = 3 if use_offset else 0
+    extra_features = []
+    if use_phase:
+        extra_features.extend(["phase_one_hot", "phase_progress", "episode_progress"])
+    if use_offset:
+        extra_features.append("ball_offset_xyz")
     return {
         "base_obs_dim": int(data["obs"].shape[1]),
-        "feature_dim": int(base_dim + phase_dim),
+        "feature_dim": int(base_dim + phase_dim + offset_dim),
         "feature_mode": feature_mode,
         "use_observation": bool(use_obs),
         "include_phase_features": bool(use_phase),
+        "include_offset_features": bool(use_offset),
         "phase_names": phase_names,
         "phase_lengths": phase_lengths,
         "max_episode_steps": int(max_episode_steps),
-        "extra_features": ["phase_one_hot", "phase_progress", "episode_progress"] if use_phase else [],
+        "extra_features": extra_features,
     }
 
 
@@ -139,13 +148,21 @@ def build_single_feature(
     step_id: int,
     phase_id: int | None,
     phase_step_id: int | None,
+    ball_offset: np.ndarray | None = None,
     feature_config: dict[str, Any],
 ) -> np.ndarray:
     if feature_config.get("use_observation", True):
         base = np.asarray(obs_vector, dtype=np.float32)
     else:
         base = np.zeros(0, dtype=np.float32)
+    feature_parts = [base]
     if not feature_config.get("include_phase_features", False):
+        if feature_config.get("include_offset_features", False):
+            offset = np.zeros(3, dtype=np.float32) if ball_offset is None else np.asarray(ball_offset, dtype=np.float32)
+            feature_parts.append(offset.reshape(3))
+        return np.concatenate(feature_parts).astype(np.float32)
+
+    if not feature_config.get("include_phase_features", False) and not feature_config.get("include_offset_features", False):
         return base
 
     phase_names = list(feature_config.get("phase_names", []))
@@ -162,25 +179,39 @@ def build_single_feature(
     phase_progress = min(1.0, phase_step_id / denom)
     episode_denom = max(1, int(feature_config.get("max_episode_steps", 1)) - 1)
     episode_progress = min(1.0, max(0, int(step_id)) / episode_denom)
-    return np.concatenate([base, one_hot, np.array([phase_progress, episode_progress], dtype=np.float32)])
+    feature_parts.extend([one_hot, np.array([phase_progress, episode_progress], dtype=np.float32)])
+    if feature_config.get("include_offset_features", False):
+        offset = np.zeros(3, dtype=np.float32) if ball_offset is None else np.asarray(ball_offset, dtype=np.float32)
+        feature_parts.append(offset.reshape(3))
+    return np.concatenate(feature_parts).astype(np.float32)
 
 
 def build_feature_matrix(data, feature_config: dict[str, Any]) -> np.ndarray:
     obs = data["obs"].astype(np.float32)
-    if not feature_config.get("include_phase_features", False):
+    if not feature_config.get("include_phase_features", False) and not feature_config.get("include_offset_features", False):
         return obs
 
-    rows = [
-        build_single_feature(
-            obs[i],
-            step_id=int(data["step_ids"][i]),
-            phase_id=int(data["phase_ids"][i]),
-            phase_step_id=int(data["phase_step_ids"][i]),
-            feature_config=feature_config,
-        )
-        for i in range(obs.shape[0])
-    ]
-    return np.asarray(rows, dtype=np.float32)
+    parts = [obs] if feature_config.get("use_observation", True) else []
+    if feature_config.get("include_phase_features", False):
+        phase_names = list(feature_config.get("phase_names", []))
+        phase_lengths = [int(v) for v in feature_config.get("phase_lengths", [])]
+        phase_ids = data["phase_ids"].astype(np.int32)
+        phase_step_ids = data["phase_step_ids"].astype(np.float32)
+        clipped_phase_ids = np.clip(phase_ids, 0, max(0, len(phase_names) - 1))
+        one_hot = np.zeros((obs.shape[0], len(phase_names)), dtype=np.float32)
+        if one_hot.shape[1] > 0:
+            one_hot[np.arange(obs.shape[0]), clipped_phase_ids] = 1.0
+        denom_by_phase = np.asarray([max(1, length - 1) for length in phase_lengths], dtype=np.float32)
+        if denom_by_phase.size == 0:
+            phase_progress = np.zeros(obs.shape[0], dtype=np.float32)
+        else:
+            phase_progress = np.minimum(1.0, np.maximum(0.0, phase_step_ids / denom_by_phase[clipped_phase_ids]))
+        episode_denom = max(1, int(feature_config.get("max_episode_steps", 1)) - 1)
+        episode_progress = np.minimum(1.0, np.maximum(0.0, data["step_ids"].astype(np.float32) / float(episode_denom)))
+        parts.extend([one_hot, phase_progress[:, None], episode_progress[:, None]])
+    if feature_config.get("include_offset_features", False):
+        parts.append(data["ball_offsets"].astype(np.float32))
+    return np.concatenate(parts, axis=1).astype(np.float32)
 
 
 def split_by_episode(episode_ids: np.ndarray, val_fraction: float, seed: int) -> tuple[np.ndarray, np.ndarray, list[int], list[int]]:
@@ -252,6 +283,7 @@ def predict_action(
     obs_vector: np.ndarray,
     *,
     step_id: int,
+    ball_offset: np.ndarray | None = None,
     device: torch.device | str = "cpu",
     clip_to_train_range: bool = True,
 ) -> tuple[np.ndarray, np.ndarray]:
@@ -260,6 +292,7 @@ def predict_action(
         step_id=step_id,
         phase_id=None,
         phase_step_id=None,
+        ball_offset=ball_offset,
         feature_config=checkpoint["feature_config"],
     )
     feature_norm = (feature - checkpoint["feature_mean"]) / checkpoint["feature_std"]

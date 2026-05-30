@@ -237,7 +237,7 @@ def main() -> int:
     parser.add_argument("--low-variance-warn", type=float, default=1e-8)
     parser.add_argument(
         "--feature-mode",
-        choices=["obs_phase", "obs_only", "phase_only"],
+        choices=["obs_phase", "obs_only", "phase_only", "obs_phase_offset", "obs_only_offset", "phase_offset"],
         default="phase_only",
         help="Recommended mode for the current smoke path after the first online repair.",
     )

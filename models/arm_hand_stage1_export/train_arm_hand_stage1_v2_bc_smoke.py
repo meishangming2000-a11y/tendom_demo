@@ -67,6 +67,8 @@ def write_report(path: Path, report: dict) -> None:
         f"- Device: `{report['device']}`\n",
         f"- Normalized obs noise std: `{report['normalized_obs_noise_std']}`\n",
         f"- Obs dropout prob: `{report['obs_dropout_prob']}`\n",
+        f"- Upper-right sample weight: `{report['upper_right_sample_weight']}`\n",
+        f"- Upper-right train samples: `{report['upper_right_train_samples']}`\n",
         f"- Train episodes: `{report['train_episodes']}`\n",
         f"- Val episodes: `{report['val_episodes']}`\n",
         f"- Train samples: `{report['train_samples']}`\n",
@@ -118,11 +120,14 @@ def main() -> int:
     parser.add_argument("--seed", type=int, default=13)
     parser.add_argument("--normalized-obs-noise-std", type=float, default=0.0)
     parser.add_argument("--obs-dropout-prob", type=float, default=0.0)
+    parser.add_argument("--upper-right-sample-weight", type=float, default=1.0)
+    parser.add_argument("--upper-right-x-min", type=float, default=0.018)
+    parser.add_argument("--upper-right-y-min", type=float, default=0.015)
     parser.add_argument(
         "--feature-mode",
-        choices=["obs_phase", "obs_only", "phase_only"],
+        choices=["obs_phase", "obs_only", "phase_only", "obs_phase_offset", "obs_only_offset", "phase_offset"],
         default="obs_phase",
-        help="obs_phase is the first BC attempt; phase_only is the schedule-conditioned repair mode.",
+        help="obs_phase is the first BC attempt; *_offset appends explicit ball offset features.",
     )
     parser.add_argument("--no-phase-features", action="store_true")
     parser.add_argument("--no-cuda", action="store_true")
@@ -166,10 +171,26 @@ def main() -> int:
     ).to(device)
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
     loss_fn = nn.MSELoss()
+    train_offsets = data["ball_offsets"][train_mask].astype(np.float32) if "ball_offsets" in data.files else None
+    upper_right_train_samples = 0
+    sampler = None
+    if train_offsets is not None and float(args.upper_right_sample_weight) != 1.0:
+        sample_weights = np.ones(x_train.shape[0], dtype=np.float64)
+        upper_right_mask = (train_offsets[:, 0] >= float(args.upper_right_x_min)) & (
+            train_offsets[:, 1] >= float(args.upper_right_y_min)
+        )
+        upper_right_train_samples = int(np.sum(upper_right_mask))
+        sample_weights[upper_right_mask] = max(1e-6, float(args.upper_right_sample_weight))
+        sampler = torch.utils.data.WeightedRandomSampler(
+            torch.from_numpy(sample_weights),
+            num_samples=len(sample_weights),
+            replacement=True,
+        )
     loader = torch.utils.data.DataLoader(
         torch.utils.data.TensorDataset(x_train, y_train),
         batch_size=args.batch_size,
-        shuffle=True,
+        shuffle=sampler is None,
+        sampler=sampler,
     )
     obs_aug_dim = int(feature_config["base_obs_dim"]) if feature_config.get("use_observation", True) else 0
 
@@ -243,6 +264,10 @@ def main() -> int:
         "seed": int(args.seed),
         "normalized_obs_noise_std": float(args.normalized_obs_noise_std),
         "obs_dropout_prob": float(args.obs_dropout_prob),
+        "upper_right_sample_weight": float(args.upper_right_sample_weight),
+        "upper_right_x_min": float(args.upper_right_x_min),
+        "upper_right_y_min": float(args.upper_right_y_min),
+        "upper_right_train_samples": int(upper_right_train_samples),
     }
     torch.save(checkpoint, args.output)
 
@@ -257,6 +282,10 @@ def main() -> int:
         "device": str(device),
         "normalized_obs_noise_std": float(args.normalized_obs_noise_std),
         "obs_dropout_prob": float(args.obs_dropout_prob),
+        "upper_right_sample_weight": float(args.upper_right_sample_weight),
+        "upper_right_x_min": float(args.upper_right_x_min),
+        "upper_right_y_min": float(args.upper_right_y_min),
+        "upper_right_train_samples": int(upper_right_train_samples),
         "train_samples": int(train_mask.sum()),
         "val_samples": int(val_mask.sum()),
         "val_action_rmse_by_dim": val_rmse_by_dim,

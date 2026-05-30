@@ -1,0 +1,93 @@
+{
+  "generated_at": "2026-05-30",
+  "scope": "continue obs+phase BC training after dataset v0.2",
+  "status": "PARTIAL_improved_v0_2_recovery_set_not_promoted",
+  "training_ready": false,
+  "selected_checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright.pth",
+  "training_dataset": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz",
+  "selected_train": {
+    "feature_mode": "obs_phase",
+    "action_field": "expert_actions",
+    "epochs": 120,
+    "hidden_dim": 256,
+    "depth": 3,
+    "normalized_obs_noise_std": 0.12,
+    "obs_dropout_prob": 0.2,
+    "upper_right_sample_weight": 6.0,
+    "upper_right_x_min": 0.018,
+    "upper_right_y_min": 0.015,
+    "upper_right_train_samples": 8037,
+    "final_train_loss": 0.00006573865500846062,
+    "final_val_loss": 0.000042684408981585875,
+    "val_action_rmse_raw": 0.004039752297103405
+  },
+  "selected_eval_v0_2": {
+    "success_count": 84,
+    "episode_count": 87,
+    "terminal_reason_counts": {
+      "success_lift_ball": 84,
+      "timeout": 3
+    },
+    "action_smoothing": 0.5,
+    "lift_min_m": -0.00018412351751811995,
+    "lift_max_m": 0.08089810152023841,
+    "lift_mean_m": 0.07761364607096585
+  },
+  "selected_eval_v0_1": {
+    "success_count": 72,
+    "episode_count": 75,
+    "terminal_reason_counts": {
+      "success_lift_ball": 72,
+      "timeout": 3
+    },
+    "action_smoothing": 0.5,
+    "lift_min_m": -0.00018412351751811995,
+    "lift_max_m": 0.08089810152023841,
+    "lift_mean_m": 0.07717898064707872
+  },
+  "attempts": [
+    {
+      "name": "dense_upper_right_dataset_v0_3",
+      "result": "rejected",
+      "behavior_success_count": 129,
+      "episode_count": 141,
+      "reason": "expert behavior labels were not clean"
+    },
+    {
+      "name": "obs_phase_offset",
+      "result": "rejected",
+      "best_v0_2_success_count": 75,
+      "v0_1_success_count": 66
+    },
+    {
+      "name": "weighted_rightedge_y_ge_0_01",
+      "result": "rejected",
+      "v0_2_success_count": 66,
+      "v0_1_success_count": 54
+    },
+    {
+      "name": "weighted_upperright_y_ge_0_015",
+      "result": "selected",
+      "v0_2_success_count": 84,
+      "v0_1_success_count": 72
+    }
+  ],
+  "demo": {
+    "dataset": "v0.1",
+    "episode_id": 24,
+    "offset": [0.02, 0.02, 0.0],
+    "success": true,
+    "terminal_reason": "success_lift_ball",
+    "frames": 268,
+    "video": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_stage1_v2_bc_v0_3_obs_phase\\obs_phase_weighted_upperright_recovered_ep24_demo.mp4"
+  },
+  "remaining_failure_offsets": {
+    "selected_smoothing_0_5": [
+      [0.01, 0.01, 0.0]
+    ],
+    "checked_smoothing_0_4": [
+      [0.02, 0.01, 0.0]
+    ]
+  },
+  "next_step": "Add clean BC coverage around the transition band [0.01..0.02, 0.01, 0.0]; keep RL blocked."
+}

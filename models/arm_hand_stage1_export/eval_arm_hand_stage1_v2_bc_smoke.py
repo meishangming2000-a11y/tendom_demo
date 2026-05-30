@@ -81,6 +81,7 @@ def run_policy_episode(
             checkpoint,
             obs["vector"],
             step_id=step_id,
+            ball_offset=ball_offset,
             device=device,
             clip_to_train_range=clip_to_train_range,
         )

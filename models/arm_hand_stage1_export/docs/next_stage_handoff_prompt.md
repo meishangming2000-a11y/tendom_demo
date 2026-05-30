@@ -111,6 +111,18 @@ Stage2 kickoff status:
   `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_2_obs_phase\obs_phase_moderatereg_recovered_ep09_demo.mp4`
 - Latest v0.2 obs+phase result: selected moderate-regularized obs+phase policy reaches `81 / 87` on v0.2 recovery resets and improves the old v0.1 reset score from `69 / 75` to `72 / 75`.
 - Remaining v0.2 blocker: the upper-right offset cluster `[0.02, 0.02, 0.0]` and `[0.02, 0.025, 0.0]` still times out with zero ball-hand contacts.
+- V0.3 obs+phase training report:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_3_obs_phase_training_report.md`
+- V0.3 obs+phase selected checkpoint:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright.pth`
+- V0.3 obs+phase selected eval:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_3_obs_phase_weighted_upperright_on_v0_2_smooth050_eval_report.md`
+- V0.3 obs+phase selected eval on v0.1 resets:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_3_obs_phase_weighted_upperright_on_v0_1_smooth050_eval_report.md`
+- V0.3 obs+phase recovered demo:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_3_obs_phase\obs_phase_weighted_upperright_recovered_ep24_demo.mp4`
+- Latest v0.3 obs+phase result: weighted upper-right sampling improves the v0.2 recovery-set score from `81 / 87` to `84 / 87` while preserving the old v0.1 reset score at `72 / 75`.
+- Remaining v0.3 blocker: with selected smoothing `0.5`, `[0.01, 0.01, 0.0]` still times out with zero ball-hand contacts across profiles.
 
 Guardrails:
 
@@ -124,8 +136,8 @@ Guardrails:
 
 Recommended Stage2 continuation:
 
-1. inspect the v0.2 recovered demo video and repair report;
-2. add heavier v0.3 upper-right recovery coverage or explicit reset-offset features for `[0.02, 0.02..0.025, 0.0]`;
-3. rerun obs+phase training and require improvement beyond `72 / 75` on v0.1 resets and `81 / 87` on v0.2 resets before promotion;
+1. inspect the v0.3 recovered demo video and training report;
+2. add clean coverage or targeted sampling around the transition band `[0.01..0.02, 0.01, 0.0]`;
+3. rerun obs+phase training and require improvement beyond `72 / 75` on v0.1 resets and `84 / 87` on v0.2 resets before promotion;
 4. keep Shadow/video comparison as regression;
 5. keep RL blocked until the upper-right timeout cluster is solved or explicitly excluded from the accepted reset region.
