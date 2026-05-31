@@ -1,0 +1,403 @@
+{
+  "generated_at": "2026-05-31T21:22:39",
+  "task_name": "arm_hand_stage1_pick_place_ball",
+  "contract_version": "stage2_pick_place_v0_1",
+  "stage": "stage2_pick_place_task_system_v0",
+  "baseline_version": "collision_proxy_v2",
+  "training_ready": false,
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_pick_place_demo.xml",
+  "base_action": {
+    "type": "position_target_vector",
+    "dim": 26,
+    "entries": [
+      {
+        "index": 0,
+        "actuator": "a_j1",
+        "joint": "j1",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -3.1416,
+          3.1416
+        ]
+      },
+      {
+        "index": 1,
+        "actuator": "a_j2",
+        "joint": "j2",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.5708,
+          1.5708
+        ]
+      },
+      {
+        "index": 2,
+        "actuator": "a_j3",
+        "joint": "j3",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.5708,
+          1.5708
+        ]
+      },
+      {
+        "index": 3,
+        "actuator": "a_j4",
+        "joint": "j4",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -3.1416,
+          3.1416
+        ]
+      },
+      {
+        "index": 4,
+        "actuator": "wrist_1_joint_pos",
+        "joint": "wrist_1_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.8,
+          0.8
+        ]
+      },
+      {
+        "index": 5,
+        "actuator": "wrist_2_joint_pos",
+        "joint": "wrist_2_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.8,
+          0.8
+        ]
+      },
+      {
+        "index": 6,
+        "actuator": "index_mcp_flex_joint_pos",
+        "joint": "index_mcp_flex_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.3,
+          0.18
+        ]
+      },
+      {
+        "index": 7,
+        "actuator": "index_mcp_abd_joint_pos",
+        "joint": "index_mcp_abd_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.78,
+          0.08
+        ]
+      },
+      {
+        "index": 8,
+        "actuator": "index_pip_joint_pos",
+        "joint": "index_pip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.1,
+          0.04
+        ]
+      },
+      {
+        "index": 9,
+        "actuator": "index_dip_joint_pos",
+        "joint": "index_dip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.66,
+          0.04
+        ]
+      },
+      {
+        "index": 10,
+        "actuator": "middle_mcp_flex_joint_pos",
+        "joint": "middle_mcp_flex_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.3,
+          0.18
+        ]
+      },
+      {
+        "index": 11,
+        "actuator": "middle_mcp_abd_joint_pos",
+        "joint": "middle_mcp_abd_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.86,
+          0.08
+        ]
+      },
+      {
+        "index": 12,
+        "actuator": "middle_pip_joint_pos",
+        "joint": "middle_pip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.16,
+          0.04
+        ]
+      },
+      {
+        "index": 13,
+        "actuator": "middle_dip_joint_pos",
+        "joint": "middle_dip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.7,
+          0.04
+        ]
+      },
+      {
+        "index": 14,
+        "actuator": "ring_mcp_flex_joint_pos",
+        "joint": "ring_mcp_flex_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.3,
+          0.18
+        ]
+      },
+      {
+        "index": 15,
+        "actuator": "ring_mcp_abd_joint_pos",
+        "joint": "ring_mcp_abd_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.84,
+          0.08
+        ]
+      },
+      {
+        "index": 16,
+        "actuator": "ring_pip_joint_pos",
+        "joint": "ring_pip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.1,
+          0.04
+        ]
+      },
+      {
+        "index": 17,
+        "actuator": "ring_dip_joint_pos",
+        "joint": "ring_dip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.68,
+          0.04
+        ]
+      },
+      {
+        "index": 18,
+        "actuator": "little_mcp_flex_joint_pos",
+        "joint": "little_mcp_flex_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.28,
+          0.16
+        ]
+      },
+      {
+        "index": 19,
+        "actuator": "little_mcp_abd_joint_pos",
+        "joint": "little_mcp_abd_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.76,
+          0.08
+        ]
+      },
+      {
+        "index": 20,
+        "actuator": "little_pip_joint_pos",
+        "joint": "little_pip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.0,
+          0.04
+        ]
+      },
+      {
+        "index": 21,
+        "actuator": "little_dip_joint_pos",
+        "joint": "little_dip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.62,
+          0.04
+        ]
+      },
+      {
+        "index": 22,
+        "actuator": "thumb_cmc_abd_joint_pos",
+        "joint": "thumb_cmc_abd_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.05,
+          1.05
+        ]
+      },
+      {
+        "index": 23,
+        "actuator": "thumb_cmc_joint_pos",
+        "joint": "thumb_cmc_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.95,
+          0.95
+        ]
+      },
+      {
+        "index": 24,
+        "actuator": "thumb_mcp_joint_pos",
+        "joint": "thumb_mcp_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.1,
+          1.2
+        ]
+      },
+      {
+        "index": 25,
+        "actuator": "thumb_ip_joint_pos",
+        "joint": "thumb_ip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.85,
+          0.05
+        ]
+      }
+    ]
+  },
+  "base_observation": {
+    "type": "flat_vector",
+    "dim": 124,
+    "finger_order": [
+      "index",
+      "middle",
+      "ring",
+      "little",
+      "thumb"
+    ],
+    "scalar_names": [
+      "contact_count",
+      "max_penetration",
+      "ball_hand_contact_count",
+      "ball_arm_contact_count",
+      "index_tip_ball_distance",
+      "middle_tip_ball_distance",
+      "ring_tip_ball_distance",
+      "little_tip_ball_distance",
+      "thumb_tip_ball_distance"
+    ],
+    "slices": {
+      "qpos": {
+        "start": 0,
+        "stop": 33,
+        "length": 33
+      },
+      "qvel": {
+        "start": 33,
+        "stop": 65,
+        "length": 32
+      },
+      "ctrl": {
+        "start": 65,
+        "stop": 91,
+        "length": 26
+      },
+      "fingertip_positions_xyz": {
+        "start": 91,
+        "stop": 106,
+        "length": 15
+      },
+      "ball_position_xyz": {
+        "start": 106,
+        "stop": 109,
+        "length": 3
+      },
+      "ball_velocity_6d": {
+        "start": 109,
+        "stop": 115,
+        "length": 6
+      },
+      "contact_and_distance_scalars": {
+        "start": 115,
+        "stop": 124,
+        "length": 9
+      }
+    }
+  },
+  "recommended_feature_extension": {
+    "target_center_xyz": 3,
+    "ball_to_target_xyz": 3,
+    "phase_one_hot": [
+      "default_hold",
+      "move_to_pre_approach",
+      "approach_ball",
+      "preshape",
+      "close_four_fingers",
+      "close_thumb",
+      "lift",
+      "transport",
+      "descend_to_target",
+      "release",
+      "retreat",
+      "settle_on_target"
+    ]
+  },
+  "target": {
+    "default_center": [
+      0.165,
+      0.23,
+      -0.06538044
+    ],
+    "success_radius_m": 0.035,
+    "required_stable_steps": 240,
+    "velocity_norm_max": 0.05,
+    "velocity_note": "Velocity is diagnostic for v0.1; stable placement is gated by consecutive target occupancy because free-joint velocity can include residual ball spin."
+  },
+  "official_metrics": [
+    "ball_lift_height",
+    "ball_displacement",
+    "ball_velocity_norm",
+    "ball_hand_contact_count",
+    "ball_floor_contact_count",
+    "ball_arm_contact_count",
+    "max_penetration",
+    "target_distance_xy",
+    "target_distance_xyz",
+    "target_height_error",
+    "stable_target_steps",
+    "transport_floor_contacts",
+    "finite_state"
+  ],
+  "termination": {
+    "max_episode_steps": 4200,
+    "success_when_all_true": [
+      "ball was lifted at least once",
+      "release phase has started",
+      "ball center XY is within target radius",
+      "ball-floor contact is present after release",
+      "ball-hand contact count is zero after release",
+      "target stability count reaches required stable steps",
+      "max penetration is within lift-task success threshold",
+      "finite_state is true"
+    ],
+    "failure_when_any_true": [
+      "finite_state is false",
+      "max penetration exceeds lift-task failure threshold",
+      "ball touches floor during transport before release",
+      "timeout before stable target placement"
+    ]
+  },
+  "current_limits": [
+    "Same-platform target pad only; not yet a two-platform task.",
+    "Scripted expert is pure-physics but tuned for a small target displacement.",
+    "No dataset v0.5 or trained policy is promoted yet.",
+    "Collision proxy v2 remains smoke geometry."
+  ]
+}

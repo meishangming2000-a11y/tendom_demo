@@ -1,6 +1,6 @@
 # Arm-Hand Stage1 Active File Index
 
-Generated: 2026-05-31 01:45
+Generated: 2026-05-31 21:35
 
 ## Current Recommendation
 
@@ -15,6 +15,7 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
 - Current scene without ball: `D:\tendon_project\simulations\models\arm_hand_stage1_export\mjcf\scene_arm_hand_export4_collision_proxy_v2.xml`
 - Current scene with ball: `D:\tendon_project\simulations\models\arm_hand_stage1_export\mjcf\scene_arm_hand_export4_collision_proxy_v2_ball.xml`
 - Current lift-ball demo scene: `D:\tendon_project\simulations\models\arm_hand_stage1_export\mjcf\scene_arm_hand_export4_lift_ball_demo.xml`
+- Current pick-place demo scene: `D:\tendon_project\simulations\models\arm_hand_stage1_export\mjcf\scene_arm_hand_export4_pick_place_demo.xml`
 - Previous collision v1 scene with ball: `D:\tendon_project\simulations\models\arm_hand_stage1_export\mjcf\scene_arm_hand_export4_collision_proxy_v1_ball.xml`
 - Previous physics-v0 scene with ball: `D:\tendon_project\simulations\models\arm_hand_stage1_export\mjcf\scene_arm_hand_export4_joint_limit_collision_proxy_ball.xml`
 
@@ -98,6 +99,10 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand_stage1_v2_bc_holdout_sweep.py --action-smoothing 0.2 --report D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_holdout_sweep_smooth020_report.md --metadata D:\tendon_project\simulations\models\arm_hand_stage1_export\metadata\arm_hand_stage1_v2_bc_v0_4_holdout_sweep_smooth020.json`
 - Stage2 v0.4 unseen midpoint holdout demo:
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth --ball-offset 0.0175,0.0075,0.0 --episode-id 9001 --max-steps 3000 --action-smoothing 0.2 --hold-after-success-steps 900 --hold-lift-height-min 0.070 --hold-settle-steps 180 --freeze-action-after-settle --render-video --device cpu`
+- Stage2 v3 pick-place task contract:
+  `python D:\tendon_project\simulations\models\arm_hand_stage1_export\arm_hand_stage1_v3_pick_place_task_api.py`
+- Stage2 v3 same-platform pick-place scripted demo:
+  `python D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_arm_hand_stage1_v3_pick_place_scripted.py --render-video`
 - Previous physics-v0 regression:
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\run_arm_hand_stage1_physics_regression.py`
 - Previous tiny dataset v0:
@@ -157,6 +162,14 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
 - Stage2 v0.4 unseen holdout sweep diagnostic report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_holdout_sweep_report.md`
 - Stage2 v0.4 unseen holdout demo report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_holdout_offset_0175_0075_smooth020_demo_report.md`
 - Stage2 v0.4 unseen holdout demo MP4: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_holdout\holdout_offset_0175_0075_smooth020_demo.mp4`
+- Stage2 v3 pick-place task API/contract script: `D:\tendon_project\simulations\models\arm_hand_stage1_export\arm_hand_stage1_v3_pick_place_task_api.py`
+- Stage2 v3 pick-place task contract: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v3_pick_place_task_contract.md`
+- Stage2 v3 pick-place scene: `D:\tendon_project\simulations\models\arm_hand_stage1_export\mjcf\scene_arm_hand_export4_pick_place_demo.xml`
+- Stage2 v3 pick-place scripted demo script: `D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_arm_hand_stage1_v3_pick_place_scripted.py`
+- Stage2 v3 pick-place scripted demo report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v3_pick_place_scripted_demo_report.md`
+- Stage2 v3 pick-place scripted demo metadata: `D:\tendon_project\simulations\models\arm_hand_stage1_export\metadata\arm_hand_stage1_v3_pick_place_scripted_demo.json`
+- Stage2 v3 pick-place scripted demo MP4: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v3_pick_place\pick_place_same_platform_scripted_demo.mp4`
+- Stage2 v3 pick-place contact sheet: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v3_pick_place\pick_place_same_platform_contact_sheet.png`
 - Collision v2 design: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_report.md`
 - Collision v2 smoke: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_smoke_report.md`
 - Collision v2 visual check: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_visual_check_report.md`
@@ -258,6 +271,9 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
 - V0.4 unseen midpoint holdout: original smoothing `0.5` reached `11 / 12`; selected smoothing `0.2` reached `12 / 12` with terminal reason `success_lift_hold`.
 - V0.4 holdout final lift range with smoothing `0.2`: `0.075788 m` to `0.092617 m`; report at `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v2_bc_v0_4_holdout_sweep_smooth020_report.md`.
 - V0.4 holdout demo: offset `[0.0175, 0.0075, 0.0]` succeeds, final lift `0.078270 m`, ball-floor contacts after lift `0`, video at `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_holdout\holdout_offset_0175_0075_smooth020_demo.mp4`.
+- V3 pick-place task scaffold: same-platform target pad scene and contract are in place; target center `[0.165, 0.230, -0.06538044]`, target radius `0.035 m`, required stable target steps `240`.
+- V3 pick-place scripted demo: `PASS`, terminal reason `success_pick_place_ball`, final target XY distance `0.003190 m`, stable target steps `1169`, transport floor contacts before release `0`, final ball-hand contacts `0`.
+- V3 pick-place demo video: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v3_pick_place\pick_place_same_platform_scripted_demo.mp4`.
 
 ## Current Limits
 
@@ -265,4 +281,5 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
 - Lift-ball is a scripted integration smoke demo on a raised demo floor/table plane; it is not evidence of robust arbitrary object grasp.
 - Thumb is usable for smoke, not Shadow-equivalent.
 - Promoted training remains blocked. The current BC checkpoints are experimental smoke artifacts, not robust maintained baselines.
+- Pick-place has only one same-platform scripted smoke pass; no pick-place dataset or learned policy is promoted yet.
 - RL remains blocked until broader holdout coverage and reward QA are accepted.

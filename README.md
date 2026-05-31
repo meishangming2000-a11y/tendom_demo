@@ -372,6 +372,9 @@ The current experimental lift/hold candidate is the v0.4 obs+phase BC checkpoint
 - unseen midpoint holdout: original smoothing `0.5` reached `11 / 12`; selected smoothing `0.2` reached `12 / 12`
 - holdout report: `models/arm_hand_stage1_export/docs/arm_hand_stage1_v2_bc_v0_4_holdout_sweep_smooth020_report.md`
 - holdout demo video: `models/arm_hand_stage1_export/docs/visual_checks_arm_hand_stage1_v2_bc_v0_4_holdout/holdout_offset_0175_0075_smooth020_demo.mp4`
+- pick-place extension: same-platform v3 scripted pure-physics demo reaches `PASS`; it picks the ball, transports it to a nearby target pad, releases it, retreats, and keeps it inside a `0.035 m` target radius
+- pick-place report: `models/arm_hand_stage1_export/docs/arm_hand_stage1_v3_pick_place_scripted_demo_report.md`
+- pick-place demo video: `models/arm_hand_stage1_export/docs/visual_checks_arm_hand_stage1_v3_pick_place/pick_place_same_platform_scripted_demo.mp4`
 
 This is still experimental smoke validation on collision proxy v2, not a promoted maintained baseline.
 

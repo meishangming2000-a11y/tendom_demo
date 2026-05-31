@@ -156,6 +156,18 @@ Stage2 kickoff status:
   `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_bc_v0_4_holdout\holdout_offset_0175_0075_smooth020_demo.mp4`
 - V0.4 unseen holdout demo result: offset `[0.0175, 0.0075, 0.0]`, terminal reason `success_lift_hold`, final lift `0.078270 m`, ball-floor contacts after lift `0`, frames `537`.
 - Remaining v0.4 blocker: none on the accepted reset sets or first unseen midpoint holdout; next gate is broader holdout plus reward/termination QA before promotion or RL warm-start.
+- V3 pick-place scene:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\mjcf\scene_arm_hand_export4_pick_place_demo.xml`
+- V3 pick-place task contract script:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\arm_hand_stage1_v3_pick_place_task_api.py`
+- V3 pick-place task contract:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v3_pick_place_task_contract.md`
+- V3 same-platform scripted pick-place demo:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_arm_hand_stage1_v3_pick_place_scripted.py`
+- V3 same-platform scripted pick-place demo result: `PASS`, terminal reason `success_pick_place_ball`, final target XY distance `0.003190 m`, stable target steps `1169`, transport floor contacts before release `0`, final ball-hand contacts `0`.
+- V3 same-platform scripted pick-place video:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v3_pick_place\pick_place_same_platform_scripted_demo.mp4`
+- V3 pick-place status: task scaffold and one scripted pure-physics same-platform demo pass; no pick-place dataset/checkpoint is promoted yet.
 
 Guardrails:
 
@@ -165,12 +177,15 @@ Guardrails:
 - Do not add tendon routing yet.
 - Treat collision proxy v2 as smoke-test geometry, not final physics.
 - Treat the current BC checkpoints as experimental smoke only; they are not maintained baselines.
+- Treat v3 pick-place as a scripted smoke scaffold only until dataset v0.5 replay QA and online eval exist.
 - Keep RL blocked until broader reset coverage and reward QA are accepted.
 
 Recommended Stage2 continuation:
 
 1. inspect the v0.4 long-hold and holdout demo videos plus the updated hold-validation report;
-2. run a broader holdout around and slightly beyond the accepted reset region using smoothing `0.2`;
-3. perform reward/termination QA on that broader holdout before treating v0.4 as an RL warm-start candidate;
-4. keep Shadow/video comparison as regression;
-5. keep RL blocked until broader holdout coverage and reward QA are accepted.
+2. inspect the v3 pick-place contact sheet/video and task contract;
+3. run a small scripted pick-place sweep around the current target (`target radius 0.035 m`) before collecting dataset v0.5;
+4. collect pick-place dataset v0.5 only from scripted episodes that pass replay QA;
+5. train a first `obs_phase_target` BC policy after dataset v0.5 replay QA passes;
+6. keep Shadow/video comparison as regression;
+7. keep RL blocked until broader holdout coverage and reward QA are accepted.
