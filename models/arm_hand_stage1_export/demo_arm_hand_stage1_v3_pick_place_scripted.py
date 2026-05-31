@@ -247,6 +247,7 @@ def run_demo(args) -> dict[str, Any]:
         "step_count": 0,
     }
     phase_rows = []
+    render_snapshots = bool(getattr(args, "render_snapshots", True))
     snapshots: dict[str, str] = {}
 
     viewer_ctx = None
@@ -291,15 +292,16 @@ def run_demo(args) -> dict[str, Any]:
                 capture_every=args.capture_every,
             )
             phase_rows.append({"phase": phase, "steps": int(steps), "metrics": metrics})
-            if phase in {"close_thumb", "lift", "transport", "descend_to_target", "release", "settle_on_target"}:
+            if render_snapshots and phase in {"close_thumb", "lift", "transport", "descend_to_target", "release", "settle_on_target"}:
                 snapshots[phase] = render_snapshot(model, data, mujoco, target_center, VIS / f"{idx:02d}_{phase}.png")
-            print(
-                f"{phase}: lift={metrics['ball_lift_height']:.4f} "
-                f"target_xy={metrics['target_distance_xy']:.4f} "
-                f"hand={metrics['contact']['ball_hand_contact_count']} "
-                f"floor={metrics['contact']['ball_floor_contact_count']} "
-                f"stable={counters['stable_target_steps']}"
-            )
+            if not bool(getattr(args, "quiet", False)):
+                print(
+                    f"{phase}: lift={metrics['ball_lift_height']:.4f} "
+                    f"target_xy={metrics['target_distance_xy']:.4f} "
+                    f"hand={metrics['contact']['ball_hand_contact_count']} "
+                    f"floor={metrics['contact']['ball_floor_contact_count']} "
+                    f"stable={counters['stable_target_steps']}"
+                )
             if viewer is not None and not viewer.is_running():
                 break
     finally:
@@ -310,7 +312,7 @@ def run_demo(args) -> dict[str, Any]:
         if viewer_ctx is not None:
             viewer_ctx.__exit__(None, None, None)
 
-    contact_sheet = write_contact_sheet(snapshots)
+    contact_sheet = write_contact_sheet(snapshots) if snapshots else None
     final = pick_place_metrics(model, data, mujoco, initial_ball, target_center)
     success = bool(
         counters["lifted_once"]
@@ -441,7 +443,9 @@ def main() -> int:
     parser.add_argument("--report", type=Path, default=DEFAULT_REPORT)
     parser.add_argument("--metadata", type=Path, default=DEFAULT_META)
     parser.add_argument("--render-video", action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument("--render-snapshots", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--viewer", action="store_true")
+    parser.add_argument("--quiet", action="store_true")
     parser.add_argument("--speed", type=float, default=2.0)
     parser.add_argument("--fps", type=int, default=30)
     parser.add_argument("--capture-every", type=int, default=4)

@@ -167,7 +167,11 @@ Stage2 kickoff status:
 - V3 same-platform scripted pick-place demo result: `PASS`, terminal reason `success_pick_place_ball`, final target XY distance `0.003190 m`, stable target steps `1169`, transport floor contacts before release `0`, final ball-hand contacts `0`.
 - V3 same-platform scripted pick-place video:
   `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v3_pick_place\pick_place_same_platform_scripted_demo.mp4`
-- V3 pick-place status: task scaffold and one scripted pure-physics same-platform demo pass; no pick-place dataset/checkpoint is promoted yet.
+- V3 pick-place target sweep script:
+  `D:\tendon_project\simulations\models\arm_hand_stage1_export\run_arm_hand_stage1_v3_pick_place_sweep.py`
+- V3 pick-place target-neighborhood sweep result: `25 / 25` PASS for target offsets `[-0.02, -0.01, 0, 0.01, 0.02]` on x/y; max target XY miss `0.031068 m`, stable target steps minimum `545`, transport floor contacts total `0`.
+- V3 pick-place wider margin sweep result: `37 / 49` on target offsets `[-0.03..0.03]` x/y; outer-rim failures are `target_miss=9` and `placement_not_stable=3`.
+- V3 pick-place status: task scaffold, one scripted pure-physics same-platform demo, and target-label tolerance sweeps are in place; no pick-place dataset/checkpoint is promoted yet.
 
 Guardrails:
 
@@ -184,8 +188,8 @@ Recommended Stage2 continuation:
 
 1. inspect the v0.4 long-hold and holdout demo videos plus the updated hold-validation report;
 2. inspect the v3 pick-place contact sheet/video and task contract;
-3. run a small scripted pick-place sweep around the current target (`target radius 0.035 m`) before collecting dataset v0.5;
-4. collect pick-place dataset v0.5 only from scripted episodes that pass replay QA;
-5. train a first `obs_phase_target` BC policy after dataset v0.5 replay QA passes;
+3. collect pick-place dataset v0.5 as fixed-target or `+/-0.02 m` target-label tolerance only; do not use `+/-0.03 m` until the scripted arm path is target-conditioned;
+4. add replay QA for pick-place dataset v0.5 before training;
+5. train a first fixed-target or narrow-target `obs_phase_target` BC policy after dataset v0.5 replay QA passes;
 6. keep Shadow/video comparison as regression;
 7. keep RL blocked until broader holdout coverage and reward QA are accepted.

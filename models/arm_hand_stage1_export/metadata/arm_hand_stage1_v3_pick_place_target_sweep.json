@@ -1,0 +1,1625 @@
+{
+  "generated_at": "2026-05-31T21:41:50",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_pick_place_demo.xml",
+  "target_center": [
+    0.165,
+    0.23,
+    -0.06538044
+  ],
+  "target_radius": 0.035,
+  "required_stable_steps": 240,
+  "x_offsets": [
+    -0.02,
+    -0.01,
+    0.0,
+    0.01,
+    0.02
+  ],
+  "y_offsets": [
+    -0.02,
+    -0.01,
+    0.0,
+    0.01,
+    0.02
+  ],
+  "summary": {
+    "status": "PASS",
+    "episodes": 25,
+    "success_count": 25,
+    "terminal_reason_counts": {
+      "success_pick_place_ball": 25
+    },
+    "target_distance_xy_min": 0.003190269322905089,
+    "target_distance_xy_max": 0.031068344974437178,
+    "target_distance_xy_mean": 0.01901190854829425,
+    "stable_steps_min": 545,
+    "stable_steps_max": 1169,
+    "transport_floor_contacts_total": 0,
+    "final_ball_xy_mean": [
+      0.16190762133740272,
+      0.23078422736485207
+    ],
+    "final_ball_xy_std": [
+      5.551115123125783e-17,
+      1.1102230246251565e-16
+    ]
+  },
+  "results": [
+    {
+      "episode_id": 0,
+      "target_offset": [
+        -0.02,
+        -0.02,
+        0.0
+      ],
+      "target_center": [
+        0.14500000000000002,
+        0.21000000000000002,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.14500000000000002,
+          0.21000000000000002,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          0.016907621337402756,
+          0.020784227364851943,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.026792755857560777,
+        "target_distance_xyz": 0.026793388511208518,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 1,
+      "target_offset": [
+        -0.02,
+        -0.01,
+        0.0
+      ],
+      "target_center": [
+        0.14500000000000002,
+        0.22,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.14500000000000002,
+          0.22,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          0.016907621337402756,
+          0.010784227364851962,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.020054107288678267,
+        "target_distance_xyz": 0.02005495252089922,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 2,
+      "target_offset": [
+        -0.02,
+        0.0,
+        0.0
+      ],
+      "target_center": [
+        0.14500000000000002,
+        0.23,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1141,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.14500000000000002,
+          0.23,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          0.016907621337402756,
+          0.0007842273648519527,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.016925799001783627,
+        "target_distance_xyz": 0.016926800445402634,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 3,
+      "target_offset": [
+        -0.02,
+        0.01,
+        0.0
+      ],
+      "target_center": [
+        0.14500000000000002,
+        0.24000000000000002,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 898,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.14500000000000002,
+          0.24000000000000002,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          0.016907621337402756,
+          -0.009215772635148056,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.01925611914565707,
+        "target_distance_xyz": 0.019256999403371333,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 4,
+      "target_offset": [
+        -0.02,
+        0.02,
+        0.0
+      ],
+      "target_center": [
+        0.14500000000000002,
+        0.25,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 545,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.14500000000000002,
+          0.25,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          0.016907621337402756,
+          -0.019215772635148037,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.025595186603240484,
+        "target_distance_xyz": 0.025595848857273798,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 5,
+      "target_offset": [
+        -0.01,
+        -0.02,
+        0.0
+      ],
+      "target_center": [
+        0.155,
+        0.21000000000000002,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.155,
+          0.21000000000000002,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          0.006907621337402775,
+          0.020784227364851943,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.021902039624080733,
+        "target_distance_xyz": 0.021902813544485686,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 6,
+      "target_offset": [
+        -0.01,
+        -0.01,
+        0.0
+      ],
+      "target_center": [
+        0.155,
+        0.22,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.155,
+          0.22,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          0.006907621337402775,
+          0.010784227364851962,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.012806826007944512,
+        "target_distance_xyz": 0.01280814950988109,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 7,
+      "target_offset": [
+        -0.01,
+        0.0,
+        0.0
+      ],
+      "target_center": [
+        0.155,
+        0.23,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.155,
+          0.23,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          0.006907621337402775,
+          0.0007842273648519527,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.00695199576385981,
+        "target_distance_xyz": 0.00695443359091364,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 8,
+      "target_offset": [
+        -0.01,
+        0.01,
+        0.0
+      ],
+      "target_center": [
+        0.155,
+        0.24000000000000002,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.155,
+          0.24000000000000002,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          0.006907621337402775,
+          -0.009215772635148056,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.011517191402581006,
+        "target_distance_xyz": 0.011518663085331957,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 9,
+      "target_offset": [
+        -0.01,
+        0.02,
+        0.0
+      ],
+      "target_center": [
+        0.155,
+        0.25,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 923,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.155,
+          0.25,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          0.006907621337402775,
+          -0.019215772635148037,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.02041962660056854,
+        "target_distance_xyz": 0.020420456703422414,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 10,
+      "target_offset": [
+        0.0,
+        -0.02,
+        0.0
+      ],
+      "target_center": [
+        0.165,
+        0.21000000000000002,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.165,
+          0.21000000000000002,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.003092378662597234,
+          0.020784227364851943,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.02101301770205191,
+        "target_distance_xyz": 0.02101382436436667,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 11,
+      "target_offset": [
+        0.0,
+        -0.01,
+        0.0
+      ],
+      "target_center": [
+        0.165,
+        0.22,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.165,
+          0.22,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.003092378662597234,
+          0.010784227364851962,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.011218839763973303,
+        "target_distance_xyz": 0.011220350579166935,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 12,
+      "target_offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_center": [
+        0.165,
+        0.23,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.165,
+          0.23,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.003092378662597234,
+          0.0007842273648519527,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.003190269322905089,
+        "target_distance_xyz": 0.003195578167151062,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 13,
+      "target_offset": [
+        0.0,
+        0.01,
+        0.0
+      ],
+      "target_center": [
+        0.165,
+        0.24000000000000002,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.165,
+          0.24000000000000002,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.003092378662597234,
+          -0.009215772635148056,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.009720764941897855,
+        "target_distance_xyz": 0.009722508551054797,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 14,
+      "target_offset": [
+        0.0,
+        0.02,
+        0.0
+      ],
+      "target_center": [
+        0.165,
+        0.25,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.165,
+          0.25,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.003092378662597234,
+          -0.019215772635148037,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.019463009113664588,
+        "target_distance_xyz": 0.01946388001474254,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 15,
+      "target_offset": [
+        0.01,
+        -0.02,
+        0.0
+      ],
+      "target_center": [
+        0.17500000000000002,
+        0.21000000000000002,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.17500000000000002,
+          0.21000000000000002,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.013092378662597243,
+          0.020784227364851943,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.024564089362292506,
+        "target_distance_xyz": 0.024564779414201852,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 16,
+      "target_offset": [
+        0.01,
+        -0.01,
+        0.0
+      ],
+      "target_center": [
+        0.17500000000000002,
+        0.22,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.17500000000000002,
+          0.22,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.013092378662597243,
+          0.010784227364851962,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.01696201458853439,
+        "target_distance_xyz": 0.01696301389409785,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 17,
+      "target_offset": [
+        0.01,
+        0.0,
+        0.0
+      ],
+      "target_center": [
+        0.17500000000000002,
+        0.23,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.17500000000000002,
+          0.23,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.013092378662597243,
+          0.0007842273648519527,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.013115845058730077,
+        "target_distance_xyz": 0.013117137381087288,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 18,
+      "target_offset": [
+        0.01,
+        0.01,
+        0.0
+      ],
+      "target_center": [
+        0.17500000000000002,
+        0.24000000000000002,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.17500000000000002,
+          0.24000000000000002,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.013092378662597243,
+          -0.009215772635148056,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.016010647841595147,
+        "target_distance_xyz": 0.016011706522956214,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 19,
+      "target_offset": [
+        0.01,
+        0.02,
+        0.0
+      ],
+      "target_center": [
+        0.17500000000000002,
+        0.25,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.17500000000000002,
+          0.25,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.013092378662597243,
+          -0.019215772635148037,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.023252017052516876,
+        "target_distance_xyz": 0.023252746041709543,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 20,
+      "target_offset": [
+        0.02,
+        -0.02,
+        0.0
+      ],
+      "target_center": [
+        0.185,
+        0.21000000000000002,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.185,
+          0.21000000000000002,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.023092378662597224,
+          0.020784227364851943,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.031068344974437178,
+        "target_distance_xyz": 0.03106889056468446,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 21,
+      "target_offset": [
+        0.02,
+        -0.01,
+        0.0
+      ],
+      "target_center": [
+        0.185,
+        0.22,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.185,
+          0.22,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.023092378662597224,
+          0.010784227364851962,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.025486418189961443,
+        "target_distance_xyz": 0.025487083270223383,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 22,
+      "target_offset": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "target_center": [
+        0.185,
+        0.23,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.185,
+          0.23,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.023092378662597224,
+          0.0007842273648519527,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.02310569117894027,
+        "target_distance_xyz": 0.0231064247845975,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 23,
+      "target_offset": [
+        0.02,
+        0.01,
+        0.0
+      ],
+      "target_center": [
+        0.185,
+        0.24000000000000002,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.185,
+          0.24000000000000002,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.023092378662597224,
+          -0.009215772635148056,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.024863395133398806,
+        "target_distance_xyz": 0.0248640768786863,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    },
+    {
+      "episode_id": 24,
+      "target_offset": [
+        0.02,
+        0.02,
+        0.0
+      ],
+      "target_center": [
+        0.185,
+        0.25,
+        -0.06538044
+      ],
+      "status": "PASS",
+      "terminal_reason": "success_pick_place_ball",
+      "counters": {
+        "lifted_once": true,
+        "release_started": true,
+        "transport_floor_contacts": 0,
+        "stable_target_steps": 1169,
+        "step_count": 4310
+      },
+      "final_metrics": {
+        "ball_position": [
+          0.16190762133740277,
+          0.23078422736485196,
+          -0.06556456351751812
+        ],
+        "ball_lift_height": -0.00018412351751811995,
+        "ball_displacement": 0.05155501258739226,
+        "contact": {
+          "contact_count": 1,
+          "ball_hand_contact_count": 0,
+          "ball_floor_contact_count": 1,
+          "max_penetration": 0.00018412351751812342,
+          "top_contacts": [
+            {
+              "geom1": "floor",
+              "geom2": "ball_geom",
+              "body1": "world",
+              "body2": "ball",
+              "penetration": 0.00018412351751812342,
+              "dist": -0.00018412351751812342
+            }
+          ]
+        },
+        "four_finger_avg_tip_ball_distance": 0.15011931660011452,
+        "thumb_ball_distance": 0.2026194181874519,
+        "target_center": [
+          0.185,
+          0.25,
+          -0.06538044
+        ],
+        "target_delta_xyz": [
+          -0.023092378662597224,
+          -0.019215772635148037,
+          -0.00018412351751811995
+        ],
+        "target_distance_xy": 0.030041702186502012,
+        "target_distance_xyz": 0.030042266421363466,
+        "target_height_error": -0.00018412351751811995,
+        "ball_velocity_norm": 1.1496010760211843
+      }
+    }
+  ],
+  "training_ready": false
+}

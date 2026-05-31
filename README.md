@@ -375,6 +375,8 @@ The current experimental lift/hold candidate is the v0.4 obs+phase BC checkpoint
 - pick-place extension: same-platform v3 scripted pure-physics demo reaches `PASS`; it picks the ball, transports it to a nearby target pad, releases it, retreats, and keeps it inside a `0.035 m` target radius
 - pick-place report: `models/arm_hand_stage1_export/docs/arm_hand_stage1_v3_pick_place_scripted_demo_report.md`
 - pick-place demo video: `models/arm_hand_stage1_export/docs/visual_checks_arm_hand_stage1_v3_pick_place/pick_place_same_platform_scripted_demo.mp4`
+- pick-place target sweep: `25 / 25` PASS for target labels within `+/-0.02 m`; wider `+/-0.03 m` diagnostic reaches `37 / 49`, so dataset v0.5 should start fixed-target or within the `+/-0.02 m` envelope
+- pick-place sweep report: `models/arm_hand_stage1_export/docs/arm_hand_stage1_v3_pick_place_target_sweep_report.md`
 
 This is still experimental smoke validation on collision proxy v2, not a promoted maintained baseline.
 

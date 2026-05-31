@@ -1,6 +1,6 @@
 # Arm-Hand Stage1 Active File Index
 
-Generated: 2026-05-31 21:35
+Generated: 2026-05-31 21:50
 
 ## Current Recommendation
 
@@ -103,6 +103,10 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\arm_hand_stage1_v3_pick_place_task_api.py`
 - Stage2 v3 same-platform pick-place scripted demo:
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_arm_hand_stage1_v3_pick_place_scripted.py --render-video`
+- Stage2 v3 pick-place target-neighborhood sweep:
+  `python D:\tendon_project\simulations\models\arm_hand_stage1_export\run_arm_hand_stage1_v3_pick_place_sweep.py`
+- Stage2 v3 pick-place wider margin sweep:
+  `python D:\tendon_project\simulations\models\arm_hand_stage1_export\run_arm_hand_stage1_v3_pick_place_sweep.py --x-offsets=-0.03,-0.02,-0.01,0.0,0.01,0.02,0.03 --y-offsets=-0.03,-0.02,-0.01,0.0,0.01,0.02,0.03 --report D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v3_pick_place_target_sweep_wide_report.md --metadata D:\tendon_project\simulations\models\arm_hand_stage1_export\metadata\arm_hand_stage1_v3_pick_place_target_sweep_wide.json`
 - Previous physics-v0 regression:
   `python D:\tendon_project\simulations\models\arm_hand_stage1_export\run_arm_hand_stage1_physics_regression.py`
 - Previous tiny dataset v0:
@@ -170,6 +174,11 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
 - Stage2 v3 pick-place scripted demo metadata: `D:\tendon_project\simulations\models\arm_hand_stage1_export\metadata\arm_hand_stage1_v3_pick_place_scripted_demo.json`
 - Stage2 v3 pick-place scripted demo MP4: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v3_pick_place\pick_place_same_platform_scripted_demo.mp4`
 - Stage2 v3 pick-place contact sheet: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v3_pick_place\pick_place_same_platform_contact_sheet.png`
+- Stage2 v3 pick-place target sweep script: `D:\tendon_project\simulations\models\arm_hand_stage1_export\run_arm_hand_stage1_v3_pick_place_sweep.py`
+- Stage2 v3 pick-place target sweep report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v3_pick_place_target_sweep_report.md`
+- Stage2 v3 pick-place target sweep metadata: `D:\tendon_project\simulations\models\arm_hand_stage1_export\metadata\arm_hand_stage1_v3_pick_place_target_sweep.json`
+- Stage2 v3 pick-place wider target sweep report: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_v3_pick_place_target_sweep_wide_report.md`
+- Stage2 v3 pick-place wider target sweep metadata: `D:\tendon_project\simulations\models\arm_hand_stage1_export\metadata\arm_hand_stage1_v3_pick_place_target_sweep_wide.json`
 - Collision v2 design: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_report.md`
 - Collision v2 smoke: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_smoke_report.md`
 - Collision v2 visual check: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_collision_proxy_v2_visual_check_report.md`
@@ -274,6 +283,8 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
 - V3 pick-place task scaffold: same-platform target pad scene and contract are in place; target center `[0.165, 0.230, -0.06538044]`, target radius `0.035 m`, required stable target steps `240`.
 - V3 pick-place scripted demo: `PASS`, terminal reason `success_pick_place_ball`, final target XY distance `0.003190 m`, stable target steps `1169`, transport floor contacts before release `0`, final ball-hand contacts `0`.
 - V3 pick-place demo video: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v3_pick_place\pick_place_same_platform_scripted_demo.mp4`.
+- V3 pick-place target-neighborhood sweep: `25 / 25` PASS for target offsets `[-0.02, -0.01, 0, 0.01, 0.02]` on x/y, max target XY miss `0.031068 m`, stable steps minimum `545`, transport floor contacts total `0`.
+- V3 pick-place wider margin sweep: `37 / 49` on target offsets `[-0.03..0.03]` x/y, with failures at the outer rim (`target_miss=9`, `placement_not_stable=3`).
 
 ## Current Limits
 
@@ -281,5 +292,5 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
 - Lift-ball is a scripted integration smoke demo on a raised demo floor/table plane; it is not evidence of robust arbitrary object grasp.
 - Thumb is usable for smoke, not Shadow-equivalent.
 - Promoted training remains blocked. The current BC checkpoints are experimental smoke artifacts, not robust maintained baselines.
-- Pick-place has only one same-platform scripted smoke pass; no pick-place dataset or learned policy is promoted yet.
+- Pick-place has one same-platform scripted smoke pass plus target-label tolerance sweeps; no pick-place dataset or learned policy is promoted yet.
 - RL remains blocked until broader holdout coverage and reward QA are accepted.
