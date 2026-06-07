@@ -217,7 +217,7 @@ Stage1 is closed as a virtual prototype baseline. The current Stage2 smoke path 
 - Shadow mean closure score: `0.3136`
 - Arm+hand v2 mean closure score: `0.2202`
 - Score correlation: `0.8646`
-- Visual sheets: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v2_shadow_video_compare\`
+- Visual sheets: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\archive\visual_evidence_20260608\visual_checks_arm_hand_stage1_v2_shadow_video_compare\`
 
 ## Latest Lift-Ball Demo
 

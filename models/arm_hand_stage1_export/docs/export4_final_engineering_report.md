@@ -97,7 +97,7 @@ The previous hand-only comparison was extended to the assembled arm+hand model. 
 - Script: `run_arm_hand_stage1_v2_shadow_video_comparison.py`
 - Report: `docs\arm_hand_stage1_v2_shadow_video_comparison_report.md`
 - Metadata: `metadata\arm_hand_stage1_v2_shadow_video_comparison.json`
-- Visual sheets: `docs\visual_checks_arm_hand_stage1_v2_shadow_video_compare\`
+- Visual sheets: `docs\archive\visual_evidence_20260608\visual_checks_arm_hand_stage1_v2_shadow_video_compare\`
 
 Results:
 
