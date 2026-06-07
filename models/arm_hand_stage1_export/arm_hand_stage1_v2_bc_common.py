@@ -126,6 +126,12 @@ def feature_config_from_dataset(
     }
 
 
+def target_center_feature(target_center: np.ndarray | None) -> np.ndarray:
+    if target_center is None:
+        return np.zeros(3, dtype=np.float32)
+    return np.asarray(target_center, dtype=np.float32).reshape(3)
+
+
 def phase_for_step(step_id: int, feature_config: dict[str, Any]) -> tuple[int, int]:
     lengths = [int(v) for v in feature_config.get("phase_lengths", [])]
     if not lengths:
@@ -149,6 +155,7 @@ def build_single_feature(
     phase_id: int | None,
     phase_step_id: int | None,
     ball_offset: np.ndarray | None = None,
+    target_center: np.ndarray | None = None,
     feature_config: dict[str, Any],
 ) -> np.ndarray:
     if feature_config.get("use_observation", True):
@@ -183,6 +190,8 @@ def build_single_feature(
     if feature_config.get("include_offset_features", False):
         offset = np.zeros(3, dtype=np.float32) if ball_offset is None else np.asarray(ball_offset, dtype=np.float32)
         feature_parts.append(offset.reshape(3))
+    if feature_config.get("include_target_center_features", False):
+        feature_parts.append(target_center_feature(target_center))
     return np.concatenate(feature_parts).astype(np.float32)
 
 
@@ -211,6 +220,8 @@ def build_feature_matrix(data, feature_config: dict[str, Any]) -> np.ndarray:
         parts.extend([one_hot, phase_progress[:, None], episode_progress[:, None]])
     if feature_config.get("include_offset_features", False):
         parts.append(data["ball_offsets"].astype(np.float32))
+    if feature_config.get("include_target_center_features", False):
+        parts.append(data["target_centers"].astype(np.float32))
     return np.concatenate(parts, axis=1).astype(np.float32)
 
 
@@ -286,6 +297,7 @@ def predict_action(
     phase_id: int | None = None,
     phase_step_id: int | None = None,
     ball_offset: np.ndarray | None = None,
+    target_center: np.ndarray | None = None,
     device: torch.device | str = "cpu",
     clip_to_train_range: bool = True,
 ) -> tuple[np.ndarray, np.ndarray]:
@@ -295,6 +307,7 @@ def predict_action(
         phase_id=phase_id,
         phase_step_id=phase_step_id,
         ball_offset=ball_offset,
+        target_center=target_center,
         feature_config=checkpoint["feature_config"],
     )
     feature_norm = (feature - checkpoint["feature_mean"]) / checkpoint["feature_std"]

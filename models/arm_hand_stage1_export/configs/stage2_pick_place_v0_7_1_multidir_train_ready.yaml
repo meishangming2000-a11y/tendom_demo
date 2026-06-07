@@ -1,0 +1,44 @@
+task: stage2_pick_place_v0_7_1_multidir_train_ready
+seed: 64
+scene: "models/arm_hand_stage1_export/mjcf/scene_arm_hand_export4_pick_place_50cm_v0_7.xml"
+run_dir: "runs/stage2_pick_place_v0_7_1_multidir/20260602_000000_seed064"
+dataset:
+  version: v0.7.1
+  target_conditioned: true
+  target_distance_m: 0.5
+  target_centers:
+    - angle_deg: -180
+      xyz: [-0.30977618, 0.187702, -0.06538044]
+      pre_release_z_drop: 0.025
+    - angle_deg: -150
+      xyz: [-0.24278888189221937, -0.062297999999999965, -0.06538044]
+      pre_release_z_drop: 0.025
+    - angle_deg: -135
+      xyz: [-0.16332957059327374, -0.16585139059327378, -0.06538044]
+      pre_release_z_drop: 0.020
+    - angle_deg: -90
+      xyz: [0.19022382000000002, -0.31229799999999996, -0.06538044]
+      pre_release_z_drop: 0.025
+  profiles: clean_nominal,timing_fast_clean,timing_slow_clean
+  result:
+    episodes: 12
+    replay_qa: PASS
+    success_count: 12
+    total_rows: 74125
+training:
+  recommended_feature_mode: obs_phase_target
+  action_field: expert_actions
+  epochs: 320
+  batch_size: 512
+  hidden_dim: 512
+  depth: 4
+  lr: 0.0007
+  train_all: false
+eval:
+  fixed_targets: [-180, -150, -135, -90]
+  narrow_sweep:
+    center_angle_deg: -135
+    x_offsets: "-0.04,-0.02,0.0,0.02,0.04"
+    y_offsets: "-0.04,-0.02,0.0,0.02,0.04"
+  max_steps: 8200
+  action_smoothing: 0.2

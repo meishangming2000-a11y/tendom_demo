@@ -152,6 +152,16 @@ python D:\tendon_project\simulations\models\arm_hand_stage1_export\eval_arm_hand
 python D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_arm_hand_stage1_v2_bc_smoke.py --checkpoint D:\tendon_project\simulations\models\arm_hand_stage1_export\checkpoints\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_2_obs_phase_weighted_upperright_transition.pth --dataset D:\tendon_project\simulations\models\arm_hand_stage1_export\data\arm_hand_stage1_v2_lift_ball_dataset_v0_2.npz --episode-id 25 --max-steps 3000 --action-smoothing 0.5 --hold-after-success-steps 900 --hold-lift-height-min 0.070 --hold-settle-steps 180 --freeze-action-after-settle --render-video --device cpu
 ```
 
+Stage2 standardized run initialization:
+
+```powershell
+python D:\tendon_project\simulations\models\arm_hand_stage1_export\init_arm_hand_stage1_run.py --task stage2_pick_place_v0_5 --seed 0 --config D:\tendon_project\simulations\models\arm_hand_stage1_export\configs\stage2_pick_place_v0_5.yaml
+```
+
+Training run standard:
+
+- `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\arm_hand_stage1_training_run_standard.md`
+
 Older physics-v0 regression and tiny dataset scaffold are still available:
 
 ```powershell

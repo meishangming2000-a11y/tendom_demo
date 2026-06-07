@@ -1,12 +1,12 @@
 # Arm-Hand Lift From Default Demo Report
 
-Generated: 2026-05-28T11:14:31
+Generated: 2026-06-07T21:15:26
 
 - Scene: `D:\tendon_project\simulations\models\arm_hand_stage1_export\mjcf\scene_arm_hand_export4_lift_ball_demo.xml`
 - Mode: `pure_physics`
 - Status: **PASS**
 - Training used: **No**
-- Video: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_lift_from_default\arm_hand_lift_from_default_pure_physics.mp4`
+- Video: `None`
 - Contact sheet: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_lift_from_default\arm_hand_lift_from_default_contact_sheet.png`
 
 ## Final Metrics

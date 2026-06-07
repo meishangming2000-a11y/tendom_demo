@@ -1,0 +1,5703 @@
+{
+  "generated_at": "2026-06-04T18:33:42",
+  "status": "PASS",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_stage3_egg_gentle_grasp_hold_v0.xml",
+  "camera": "stage3_egg_closeup",
+  "trial_groups": 10,
+  "scenario_count": 8,
+  "thresholds": {
+    "min_accept_confidence": 0.55,
+    "bad_estimate_error_m": 0.015
+  },
+  "scenarios": [
+    {
+      "name": "clean_reference",
+      "mask_dropout": 0.0,
+      "occluder_fraction": 0.0,
+      "false_positive_blobs": 0,
+      "false_positive_radius_px": 0,
+      "depth_noise_std_m": 0.0,
+      "calibration_bias_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "mask_dropout_30",
+      "mask_dropout": 0.3,
+      "occluder_fraction": 0.0,
+      "false_positive_blobs": 0,
+      "false_positive_radius_px": 0,
+      "depth_noise_std_m": 0.0,
+      "calibration_bias_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "mask_dropout_55",
+      "mask_dropout": 0.55,
+      "occluder_fraction": 0.0,
+      "false_positive_blobs": 0,
+      "false_positive_radius_px": 0,
+      "depth_noise_std_m": 0.0,
+      "calibration_bias_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "synthetic_occluder_45",
+      "mask_dropout": 0.0,
+      "occluder_fraction": 0.45,
+      "false_positive_blobs": 0,
+      "false_positive_radius_px": 0,
+      "depth_noise_std_m": 0.0,
+      "calibration_bias_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "depth_noise_5mm",
+      "mask_dropout": 0.0,
+      "occluder_fraction": 0.0,
+      "false_positive_blobs": 0,
+      "false_positive_radius_px": 0,
+      "depth_noise_std_m": 0.005,
+      "calibration_bias_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "false_positive_blob",
+      "mask_dropout": 0.0,
+      "occluder_fraction": 0.0,
+      "false_positive_blobs": 1,
+      "false_positive_radius_px": 42,
+      "depth_noise_std_m": 0.0,
+      "calibration_bias_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "combined_hard",
+      "mask_dropout": 0.35,
+      "occluder_fraction": 0.35,
+      "false_positive_blobs": 1,
+      "false_positive_radius_px": 30,
+      "depth_noise_std_m": 0.004,
+      "calibration_bias_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "calibration_bias_12mm",
+      "mask_dropout": 0.0,
+      "occluder_fraction": 0.0,
+      "false_positive_blobs": 0,
+      "false_positive_radius_px": 0,
+      "depth_noise_std_m": 0.0,
+      "calibration_bias_m": [
+        0.012,
+        -0.006,
+        0.003
+      ]
+    }
+  ],
+  "results": [
+    {
+      "trial": "center_nominal",
+      "trial_config": {
+        "name": "center_nominal",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "clean_reference",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "clean_reference",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.19017349885995966,
+          0.1876832558978232,
+          -0.055360504014060535
+        ],
+        "surface_centroid_world": [
+          0.20456741404128645,
+          0.19321576396481202,
+          -0.04936196129317919
+        ],
+        "mask_pixels": 14809,
+        "clean_mask_pixels": 14809,
+        "retained_clean_pixels": 14809,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 14809,
+        "confidence": 0.8029100114306301,
+        "fit_residual_rms": 0.004390252735627861,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_clean_reference_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_clean_reference_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_clean_reference_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_clean_reference_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 5.728003174538307e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "center_nominal",
+      "trial_config": {
+        "name": "center_nominal",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "mask_dropout_30",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_30",
+          "mask_dropout": 0.3,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.1901764214857886,
+          0.18768377690761628,
+          -0.05536018808356864
+        ],
+        "surface_centroid_world": [
+          0.20458487311084136,
+          0.19321569606865813,
+          -0.04942490856310444
+        ],
+        "mask_pixels": 10334,
+        "clean_mask_pixels": 14809,
+        "retained_clean_pixels": 10334,
+        "mask_retention_ratio": 0.6978188939158619,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 10334,
+        "confidence": 0.8002005790132074,
+        "fit_residual_rms": 0.004395442574440207,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_mask_dropout_30_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_mask_dropout_30_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_mask_dropout_30_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_mask_dropout_30_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 5.467028776782487e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "center_nominal",
+      "trial_config": {
+        "name": "center_nominal",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "mask_dropout_55",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_55",
+          "mask_dropout": 0.55,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.19017533623265145,
+          0.18768406177131192,
+          -0.05536078822248179
+        ],
+        "surface_centroid_world": [
+          0.20455122580965382,
+          0.19310677788902,
+          -0.04927915590324815
+        ],
+        "mask_pixels": 6640,
+        "clean_mask_pixels": 14809,
+        "retained_clean_pixels": 6640,
+        "mask_retention_ratio": 0.44837598757512326,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 6640,
+        "confidence": 0.5136851610206467,
+        "fit_residual_rms": 0.004413930635345793,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_mask_dropout_55_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_mask_dropout_55_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_mask_dropout_55_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_mask_dropout_55_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 5.530504592167271e-05,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "center_nominal",
+      "trial_config": {
+        "name": "center_nominal",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "synthetic_occluder_45",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "synthetic_occluder_45",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.45,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.19015032358510553,
+          0.18757788949485532,
+          -0.05537965004267502
+        ],
+        "surface_centroid_world": [
+          0.20288078722369363,
+          0.2042095065891171,
+          -0.048803868172828155
+        ],
+        "mask_pixels": 8394,
+        "clean_mask_pixels": 14809,
+        "retained_clean_pixels": 8394,
+        "mask_retention_ratio": 0.5668174758592748,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 8394,
+        "confidence": 0.6576750547910964,
+        "fit_residual_rms": 0.004160026242661692,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_synthetic_occluder_45_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_synthetic_occluder_45_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_synthetic_occluder_45_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_synthetic_occluder_45_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.0001442420345190089,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "center_nominal",
+      "trial_config": {
+        "name": "center_nominal",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "depth_noise_5mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "depth_noise_5mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.005,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.19703932702081278,
+          0.19026091776749385,
+          -0.052575545407248375
+        ],
+        "surface_centroid_world": [
+          0.2046065101739744,
+          0.19322891554301094,
+          -0.04934807970846346
+        ],
+        "mask_pixels": 14809,
+        "clean_mask_pixels": 14809,
+        "retained_clean_pixels": 14809,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 14809,
+        "confidence": 6.90571784098453e-06,
+        "fit_residual_rms": 0.23766321633828372,
+        "depth_noise_std_m": 0.005,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_depth_noise_5mm_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_depth_noise_5mm_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_depth_noise_5mm_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_depth_noise_5mm_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.007801706849657418,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "center_nominal",
+      "trial_config": {
+        "name": "center_nominal",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "false_positive_blob",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "false_positive_blob",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 42,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          -0.23718074473300968,
+          0.4763771935314365,
+          1.173264556772763
+        ],
+        "surface_centroid_world": [
+          0.06368745835604134,
+          0.12781273554319228,
+          -0.0603460399008954
+        ],
+        "mask_pixels": 20334,
+        "clean_mask_pixels": 14809,
+        "retained_clean_pixels": 14809,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.27171240287203696,
+        "valid_depth_points": 20334,
+        "confidence": 6.610511138355983e-10,
+        "fit_residual_rms": 91.14088219842215,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_false_positive_blob_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_false_positive_blob_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_false_positive_blob_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_false_positive_blob_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 1.3325076200194013,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "center_nominal",
+      "trial_config": {
+        "name": "center_nominal",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "combined_hard",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "combined_hard",
+          "mask_dropout": 0.35,
+          "occluder_fraction": 0.35,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 30,
+          "depth_noise_std_m": 0.004,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.12262889280599094,
+          0.09735896173261191,
+          -0.03742864307279837
+        ],
+        "surface_centroid_world": [
+          0.1644408114643298,
+          0.20232257222232877,
+          -0.06122680122102691
+        ],
+        "mask_pixels": 9387,
+        "clean_mask_pixels": 14809,
+        "retained_clean_pixels": 6778,
+        "mask_retention_ratio": 0.45769464514822067,
+        "mask_contamination_ratio": 0.2779375732395867,
+        "valid_depth_points": 9387,
+        "confidence": 4.1125402551105926e-10,
+        "fit_residual_rms": 4.336200532225543,
+        "depth_noise_std_m": 0.004,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_combined_hard_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_combined_hard_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_combined_hard_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_combined_hard_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.11425062695084705,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "center_nominal",
+      "trial_config": {
+        "name": "center_nominal",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "calibration_bias_12mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "calibration_bias_12mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.012,
+            -0.006,
+            0.003
+          ]
+        },
+        "position_world_est": [
+          0.20217349885995986,
+          0.181683255897823,
+          -0.052360504014059846
+        ],
+        "surface_centroid_world": [
+          0.2165674140412864,
+          0.18721576396481118,
+          -0.046361961293179106
+        ],
+        "mask_pixels": 14809,
+        "clean_mask_pixels": 14809,
+        "retained_clean_pixels": 14809,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 14809,
+        "confidence": 0.8029100114306362,
+        "fit_residual_rms": 0.004390252735627708,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.012,
+          -0.006,
+          0.003
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_calibration_bias_12mm_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_calibration_bias_12mm_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_calibration_bias_12mm_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\center_nominal\\center_nominal_calibration_bias_12mm_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.013716417855360007,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_low_nominal",
+      "trial_config": {
+        "name": "left_low_nominal",
+        "offset_xyz": [
+          -0.02,
+          -0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "clean_reference",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "clean_reference",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.17017397476823953,
+          0.17268254949286538,
+          -0.05536212059152721
+        ],
+        "surface_centroid_world": [
+          0.1845374251499288,
+          0.17848920855530798,
+          -0.04975193200274399
+        ],
+        "mask_pixels": 12946,
+        "clean_mask_pixels": 12946,
+        "retained_clean_pixels": 12946,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 12946,
+        "confidence": 0.8024870247016378,
+        "fit_residual_rms": 0.004400791854095386,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17022382,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 5.655501820212175e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_low_nominal",
+      "trial_config": {
+        "name": "left_low_nominal",
+        "offset_xyz": [
+          -0.02,
+          -0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "mask_dropout_30",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_30",
+          "mask_dropout": 0.3,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.17017241070963873,
+          0.17268358493498276,
+          -0.05536247125040266
+        ],
+        "surface_centroid_world": [
+          0.18456062106748955,
+          0.1784853398964526,
+          -0.049788703899698625
+        ],
+        "mask_pixels": 9037,
+        "clean_mask_pixels": 12946,
+        "retained_clean_pixels": 9037,
+        "mask_retention_ratio": 0.6980534528039549,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 9037,
+        "confidence": 0.7996628344135842,
+        "fit_residual_rms": 0.00441560883740837,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17022382,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 5.748830939531006e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_low_nominal",
+      "trial_config": {
+        "name": "left_low_nominal",
+        "offset_xyz": [
+          -0.02,
+          -0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "mask_dropout_55",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_55",
+          "mask_dropout": 0.55,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.17017383716332607,
+          0.1726802379799961,
+          -0.05536215230197768
+        ],
+        "surface_centroid_world": [
+          0.18446691471129495,
+          0.17883501422670894,
+          -0.049644640271607546
+        ],
+        "mask_pixels": 5861,
+        "clean_mask_pixels": 12946,
+        "retained_clean_pixels": 5861,
+        "mask_retention_ratio": 0.45272671095319017,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 5861,
+        "confidence": 0.5197415390729183,
+        "fit_residual_rms": 0.004372639050524133,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17022382,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 5.750051630706968e-05,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_low_nominal",
+      "trial_config": {
+        "name": "left_low_nominal",
+        "offset_xyz": [
+          -0.02,
+          -0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "synthetic_occluder_45",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "synthetic_occluder_45",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.45,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.17015161534405945,
+          0.1725742584314301,
+          -0.055379869231542964
+        ],
+        "surface_centroid_world": [
+          0.18276496453987962,
+          0.18949044144680235,
+          -0.04930604027086476
+        ],
+        "mask_pixels": 7335,
+        "clean_mask_pixels": 12946,
+        "retained_clean_pixels": 7335,
+        "mask_retention_ratio": 0.566584273134559,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 7335,
+        "confidence": 0.6568716087668771,
+        "fit_residual_rms": 0.004176243909022048,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17022382,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 0.00014673699757330978,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_low_nominal",
+      "trial_config": {
+        "name": "left_low_nominal",
+        "offset_xyz": [
+          -0.02,
+          -0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "depth_noise_5mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "depth_noise_5mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.005,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.17690870442309078,
+          0.17520627247130155,
+          -0.05290957552527902
+        ],
+        "surface_centroid_world": [
+          0.1845101379939592,
+          0.17848017287598666,
+          -0.049761356923388705
+        ],
+        "mask_pixels": 12946,
+        "clean_mask_pixels": 12946,
+        "retained_clean_pixels": 12946,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 12946,
+        "confidence": 7.87717431429835e-06,
+        "fit_residual_rms": 0.23503082615918286,
+        "depth_noise_std_m": 0.005,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17022382,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 0.007554087080053995,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_low_nominal",
+      "trial_config": {
+        "name": "left_low_nominal",
+        "offset_xyz": [
+          -0.02,
+          -0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "false_positive_blob",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "false_positive_blob",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 42,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.16330018923796594,
+          0.181355443794075,
+          -0.07078978454188269
+        ],
+        "surface_centroid_world": [
+          0.18061328724226905,
+          0.18473854838810996,
+          -0.06108315686399804
+        ],
+        "mask_pixels": 17488,
+        "clean_mask_pixels": 12946,
+        "retained_clean_pixels": 12946,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.2597209515096066,
+        "valid_depth_points": 17488,
+        "confidence": 7.228416723705211e-10,
+        "fit_residual_rms": 0.899001901466753,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17022382,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 0.018980691547903328,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_low_nominal",
+      "trial_config": {
+        "name": "left_low_nominal",
+        "offset_xyz": [
+          -0.02,
+          -0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "combined_hard",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "combined_hard",
+          "mask_dropout": 0.35,
+          "occluder_fraction": 0.35,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 30,
+          "depth_noise_std_m": 0.004,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          -0.16148674739188978,
+          0.46858817679668807,
+          0.42439287439427353
+        ],
+        "surface_centroid_world": [
+          0.052657144256146475,
+          0.12683978860737938,
+          -0.06072824823747006
+        ],
+        "mask_pixels": 8547,
+        "clean_mask_pixels": 12946,
+        "retained_clean_pixels": 5878,
+        "mask_retention_ratio": 0.45403985787115714,
+        "mask_contamination_ratio": 0.3122733122733123,
+        "valid_depth_points": 8547,
+        "confidence": 2.932095029824211e-10,
+        "fit_residual_rms": 45.871170665310096,
+        "depth_noise_std_m": 0.004,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17022382,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 0.6540359037114681,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_low_nominal",
+      "trial_config": {
+        "name": "left_low_nominal",
+        "offset_xyz": [
+          -0.02,
+          -0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "calibration_bias_12mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "calibration_bias_12mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.012,
+            -0.006,
+            0.003
+          ]
+        },
+        "position_world_est": [
+          0.18217397476823968,
+          0.16668254949286512,
+          -0.05236212059152729
+        ],
+        "surface_centroid_world": [
+          0.1965374251499286,
+          0.172489208555308,
+          -0.04675193200274391
+        ],
+        "mask_pixels": 12946,
+        "clean_mask_pixels": 12946,
+        "retained_clean_pixels": 12946,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 12946,
+        "confidence": 0.8024870247016335,
+        "fit_residual_rms": 0.004400791854095494,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.012,
+          -0.006,
+          0.003
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17022382,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 0.013716786629684495,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_high_nominal",
+      "trial_config": {
+        "name": "right_high_nominal",
+        "offset_xyz": [
+          0.02,
+          0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "clean_reference",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "clean_reference",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.2101727039368098,
+          0.20268447010683388,
+          -0.05535949670549475
+        ],
+        "surface_centroid_world": [
+          0.22463564941306574,
+          0.20785587400052438,
+          -0.04897445629701388
+        ],
+        "mask_pixels": 17084,
+        "clean_mask_pixels": 17084,
+        "retained_clean_pixels": 17084,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 17084,
+        "confidence": 0.803359443825582,
+        "fit_residual_rms": 0.0043790607801260095,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_clean_reference_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_clean_reference_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_clean_reference_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_clean_reference_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.21022381999999998,
+        0.202702,
+        -0.05538044
+      ],
+      "position_error_m": 5.795490190838199e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_high_nominal",
+      "trial_config": {
+        "name": "right_high_nominal",
+        "offset_xyz": [
+          0.02,
+          0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "mask_dropout_30",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_30",
+          "mask_dropout": 0.3,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.2101728722986117,
+          0.2026844775852858,
+          -0.055359574685677156
+        ],
+        "surface_centroid_world": [
+          0.2245909065643227,
+          0.20778774566512345,
+          -0.04900082081108005
+        ],
+        "mask_pixels": 12027,
+        "clean_mask_pixels": 17084,
+        "retained_clean_pixels": 12027,
+        "mask_retention_ratio": 0.7039920393350504,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 12027,
+        "confidence": 0.8029827445663644,
+        "fit_residual_rms": 0.004388441079512905,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_mask_dropout_30_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_mask_dropout_30_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_mask_dropout_30_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_mask_dropout_30_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.21022381999999998,
+        0.202702,
+        -0.05538044
+      ],
+      "position_error_m": 5.7775986672289703e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_high_nominal",
+      "trial_config": {
+        "name": "right_high_nominal",
+        "offset_xyz": [
+          0.02,
+          0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "mask_dropout_55",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_55",
+          "mask_dropout": 0.55,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.21017103090644168,
+          0.202685674481085,
+          -0.055358637105306224
+        ],
+        "surface_centroid_world": [
+          0.22460895399683486,
+          0.20774103113727363,
+          -0.04888644475782545
+        ],
+        "mask_pixels": 7688,
+        "clean_mask_pixels": 17084,
+        "retained_clean_pixels": 7688,
+        "mask_retention_ratio": 0.4500117068602201,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 7688,
+        "confidence": 0.51610959249624,
+        "fit_residual_rms": 0.004392588202414605,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_mask_dropout_55_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_mask_dropout_55_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_mask_dropout_55_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_mask_dropout_55_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.21022381999999998,
+        0.202702,
+        -0.05538044
+      ],
+      "position_error_m": 5.940182811647219e-05,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_high_nominal",
+      "trial_config": {
+        "name": "right_high_nominal",
+        "offset_xyz": [
+          0.02,
+          0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "synthetic_occluder_45",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "synthetic_occluder_45",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.45,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.21014793886990277,
+          0.2025831827797555,
+          -0.0553794686590241
+        ],
+        "surface_centroid_world": [
+          0.2230779296443983,
+          0.21885122306999127,
+          -0.048284883292208085
+        ],
+        "mask_pixels": 9677,
+        "clean_mask_pixels": 17084,
+        "retained_clean_pixels": 9677,
+        "mask_retention_ratio": 0.5664364317490049,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 9677,
+        "confidence": 0.6575983468064552,
+        "fit_residual_rms": 0.0041489095216419225,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_synthetic_occluder_45_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_synthetic_occluder_45_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_synthetic_occluder_45_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_synthetic_occluder_45_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.21022381999999998,
+        0.202702,
+        -0.05538044
+      ],
+      "position_error_m": 0.00014098376230881044,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_high_nominal",
+      "trial_config": {
+        "name": "right_high_nominal",
+        "offset_xyz": [
+          0.02,
+          0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "depth_noise_5mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "depth_noise_5mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.005,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.21708664551075607,
+          0.20497092958829088,
+          -0.05247469653890919
+        ],
+        "surface_centroid_world": [
+          0.22467073290512105,
+          0.20786829429731868,
+          -0.04895874862582291
+        ],
+        "mask_pixels": 17084,
+        "clean_mask_pixels": 17084,
+        "retained_clean_pixels": 17084,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 17084,
+        "confidence": 8.47331435422029e-06,
+        "fit_residual_rms": 0.23357177641474874,
+        "depth_noise_std_m": 0.005,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_depth_noise_5mm_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_depth_noise_5mm_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_depth_noise_5mm_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_depth_noise_5mm_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.21022381999999998,
+        0.202702,
+        -0.05538044
+      ],
+      "position_error_m": 0.007790363311770416,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_high_nominal",
+      "trial_config": {
+        "name": "right_high_nominal",
+        "offset_xyz": [
+          0.02,
+          0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "false_positive_blob",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "false_positive_blob",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 42,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.18854039964224836,
+          0.2260842298663083,
+          -0.07447263204479504
+        ],
+        "surface_centroid_world": [
+          0.21672380541777178,
+          0.2264135910930694,
+          -0.059826015746026986
+        ],
+        "mask_pixels": 22609,
+        "clean_mask_pixels": 17084,
+        "retained_clean_pixels": 17084,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.24437171038082178,
+        "valid_depth_points": 22609,
+        "confidence": 8.019345322562154e-10,
+        "fit_residual_rms": 1.1247927974162097,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_false_positive_blob_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_false_positive_blob_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_false_positive_blob_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_false_positive_blob_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.21022381999999998,
+        0.202702,
+        -0.05538044
+      ],
+      "position_error_m": 0.03716734035422998,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_high_nominal",
+      "trial_config": {
+        "name": "right_high_nominal",
+        "offset_xyz": [
+          0.02,
+          0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "combined_hard",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "combined_hard",
+          "mask_dropout": 0.35,
+          "occluder_fraction": 0.35,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 30,
+          "depth_noise_std_m": 0.004,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          -5.786826578761678,
+          10.722348625409886,
+          10.856034653042636
+        ],
+        "surface_centroid_world": [
+          -0.12315574750780507,
+          -0.07896696759748752,
+          -0.04930147578433268
+        ],
+        "mask_pixels": 10399,
+        "clean_mask_pixels": 17084,
+        "retained_clean_pixels": 7578,
+        "mask_retention_ratio": 0.44357293373917117,
+        "mask_contamination_ratio": 0.2712760842388691,
+        "valid_depth_points": 9549,
+        "confidence": 4.203166666350704e-10,
+        "fit_residual_rms": 1590.4157408785507,
+        "depth_noise_std_m": 0.004,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_combined_hard_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_combined_hard_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_combined_hard_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_combined_hard_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.21022381999999998,
+        0.202702,
+        -0.05538044
+      ],
+      "position_error_m": 16.299894415040356,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_high_nominal",
+      "trial_config": {
+        "name": "right_high_nominal",
+        "offset_xyz": [
+          0.02,
+          0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "scenario": "calibration_bias_12mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "calibration_bias_12mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.012,
+            -0.006,
+            0.003
+          ]
+        },
+        "position_world_est": [
+          0.22217270393682317,
+          0.1966844701068276,
+          -0.05235949670548876
+        ],
+        "surface_centroid_world": [
+          0.23663564941306406,
+          0.20185587400052235,
+          -0.045974456297013994
+        ],
+        "mask_pixels": 17084,
+        "clean_mask_pixels": 17084,
+        "retained_clean_pixels": 17084,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 17084,
+        "confidence": 0.8033594438255899,
+        "fit_residual_rms": 0.0043790607801258135,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.012,
+          -0.006,
+          0.003
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_calibration_bias_12mm_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_calibration_bias_12mm_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_calibration_bias_12mm_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\right_high_nominal\\right_high_nominal_calibration_bias_12mm_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.21022381999999998,
+        0.202702,
+        -0.05538044
+      ],
+      "position_error_m": 0.013715414384536368,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_high_zplus",
+      "trial_config": {
+        "name": "left_high_zplus",
+        "offset_xyz": [
+          -0.018,
+          0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "clean_reference",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "clean_reference",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.1721715378727311,
+          0.20168589539083842,
+          -0.05536181858973439
+        ],
+        "surface_centroid_world": [
+          0.1867138231397824,
+          0.2063811959266462,
+          -0.04962656998791341
+        ],
+        "mask_pixels": 14235,
+        "clean_mask_pixels": 14235,
+        "retained_clean_pixels": 14235,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 14235,
+        "confidence": 0.8028767339214264,
+        "fit_residual_rms": 0.004391081675318755,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17222382,
+        0.20170200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 5.7788720251359906e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_high_zplus",
+      "trial_config": {
+        "name": "left_high_zplus",
+        "offset_xyz": [
+          -0.018,
+          0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "mask_dropout_30",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_30",
+          "mask_dropout": 0.3,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.17216959919046293,
+          0.20168448270748074,
+          -0.055363522031758094
+        ],
+        "surface_centroid_world": [
+          0.18672785867260483,
+          0.20641443412998123,
+          -0.04977735998249962
+        ],
+        "mask_pixels": 9938,
+        "clean_mask_pixels": 14235,
+        "retained_clean_pixels": 9938,
+        "mask_retention_ratio": 0.6981383912890762,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 9938,
+        "confidence": 0.8012942565023509,
+        "fit_residual_rms": 0.004377281086743397,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17222382,
+        0.20170200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 5.943878677677994e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_high_zplus",
+      "trial_config": {
+        "name": "left_high_zplus",
+        "offset_xyz": [
+          -0.018,
+          0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "mask_dropout_55",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_55",
+          "mask_dropout": 0.55,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.17217238280909683,
+          0.20168860700138494,
+          -0.05535744098617239
+        ],
+        "surface_centroid_world": [
+          0.18677891172658917,
+          0.20644666458896804,
+          -0.04952720677141172
+        ],
+        "mask_pixels": 6367,
+        "clean_mask_pixels": 14235,
+        "retained_clean_pixels": 6367,
+        "mask_retention_ratio": 0.4472778363189322,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 6367,
+        "confidence": 0.5137166143362778,
+        "fit_residual_rms": 0.004363662475743352,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17222382,
+        0.20170200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 5.791469292809478e-05,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_high_zplus",
+      "trial_config": {
+        "name": "left_high_zplus",
+        "offset_xyz": [
+          -0.018,
+          0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "synthetic_occluder_45",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "synthetic_occluder_45",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.45,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.17214321251849074,
+          0.20158903550459678,
+          -0.055379720627784845
+        ],
+        "surface_centroid_world": [
+          0.18532665785846603,
+          0.21737967988456633,
+          -0.048795219394710924
+        ],
+        "mask_pixels": 8116,
+        "clean_mask_pixels": 14235,
+        "retained_clean_pixels": 8116,
+        "mask_retention_ratio": 0.5701440112399017,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 8116,
+        "confidence": 0.6611227070372906,
+        "fit_residual_rms": 0.004172489260968,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17222382,
+        0.20170200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 0.00013877701824638702,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_high_zplus",
+      "trial_config": {
+        "name": "left_high_zplus",
+        "offset_xyz": [
+          -0.018,
+          0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "depth_noise_5mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "depth_noise_5mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.005,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.17894960884133435,
+          0.20375376800026315,
+          -0.05278427433825235
+        ],
+        "surface_centroid_world": [
+          0.18666928412189276,
+          0.20636898133490078,
+          -0.04964521302798882
+        ],
+        "mask_pixels": 14235,
+        "clean_mask_pixels": 14235,
+        "retained_clean_pixels": 14235,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 14235,
+        "confidence": 7.0555896755684495e-06,
+        "fit_residual_rms": 0.23723380787012402,
+        "depth_noise_std_m": 0.005,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17222382,
+        0.20170200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 0.007495736361983325,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_high_zplus",
+      "trial_config": {
+        "name": "left_high_zplus",
+        "offset_xyz": [
+          -0.018,
+          0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "false_positive_blob",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "false_positive_blob",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 42,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.17034350446650778,
+          0.23728656631537354,
+          -0.07333411334589499
+        ],
+        "surface_centroid_world": [
+          0.18304296770989362,
+          0.22618141642601697,
+          -0.061860381817286404
+        ],
+        "mask_pixels": 19760,
+        "clean_mask_pixels": 14235,
+        "retained_clean_pixels": 14235,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.27960526315789475,
+        "valid_depth_points": 19760,
+        "confidence": 6.203801199116054e-10,
+        "fit_residual_rms": 1.2508595519366863,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17222382,
+        0.20170200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 0.039901520434311874,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_high_zplus",
+      "trial_config": {
+        "name": "left_high_zplus",
+        "offset_xyz": [
+          -0.018,
+          0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "combined_hard",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "combined_hard",
+          "mask_dropout": 0.35,
+          "occluder_fraction": 0.35,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 30,
+          "depth_noise_std_m": 0.004,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.13466507731140887,
+          0.18649239263871054,
+          -0.059690790096993324
+        ],
+        "surface_centroid_world": [
+          0.16625786473785473,
+          0.22633751286093634,
+          -0.06258869371998468
+        ],
+        "mask_pixels": 9167,
+        "clean_mask_pixels": 14235,
+        "retained_clean_pixels": 6346,
+        "mask_retention_ratio": 0.44580259922725674,
+        "mask_contamination_ratio": 0.30773426420857425,
+        "valid_depth_points": 9167,
+        "confidence": 3.0278571110999854e-10,
+        "fit_residual_rms": 1.418496537692463,
+        "depth_noise_std_m": 0.004,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17222382,
+        0.20170200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 0.040750097256215714,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "left_high_zplus",
+      "trial_config": {
+        "name": "left_high_zplus",
+        "offset_xyz": [
+          -0.018,
+          0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "calibration_bias_12mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "calibration_bias_12mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.012,
+            -0.006,
+            0.003
+          ]
+        },
+        "position_world_est": [
+          0.18417153787273058,
+          0.19568589539083914,
+          -0.0523618185897336
+        ],
+        "surface_centroid_world": [
+          0.19871382313978195,
+          0.20038119592664472,
+          -0.04662656998791321
+        ],
+        "mask_pixels": 14235,
+        "clean_mask_pixels": 14235,
+        "retained_clean_pixels": 14235,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 14235,
+        "confidence": 0.8028767339214322,
+        "fit_residual_rms": 0.0043910816753186125,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.012,
+          -0.006,
+          0.003
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17222382,
+        0.20170200000000002,
+        -0.05538044
+      ],
+      "position_error_m": 0.013713261911494698,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_low_zminus",
+      "trial_config": {
+        "name": "right_low_zminus",
+        "offset_xyz": [
+          0.018,
+          -0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "clean_reference",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "clean_reference",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.20817355877746008,
+          0.17367984304134138,
+          -0.05536013546641862
+        ],
+        "surface_centroid_world": [
+          0.22240186062503753,
+          0.18007973913404396,
+          -0.049140837703933946
+        ],
+        "mask_pixels": 15436,
+        "clean_mask_pixels": 15436,
+        "retained_clean_pixels": 15436,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 15436,
+        "confidence": 0.803088777701273,
+        "fit_residual_rms": 0.00438580027221155,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20822381999999998,
+        0.173702,
+        -0.05538044
+      ],
+      "position_error_m": 5.856103988286664e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_low_zminus",
+      "trial_config": {
+        "name": "right_low_zminus",
+        "offset_xyz": [
+          0.018,
+          -0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "mask_dropout_30",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_30",
+          "mask_dropout": 0.3,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.20817483834002148,
+          0.17368034769939994,
+          -0.05535875560902062
+        ],
+        "surface_centroid_world": [
+          0.22240669009499334,
+          0.18008748186641807,
+          -0.04904139924542548
+        ],
+        "mask_pixels": 10807,
+        "clean_mask_pixels": 15436,
+        "retained_clean_pixels": 10807,
+        "mask_retention_ratio": 0.7001166105208603,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 10807,
+        "confidence": 0.8033173578199572,
+        "fit_residual_rms": 0.004380108557889189,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20822381999999998,
+        0.173702,
+        -0.05538044
+      ],
+      "position_error_m": 5.777748651222616e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_low_zminus",
+      "trial_config": {
+        "name": "right_low_zminus",
+        "offset_xyz": [
+          0.018,
+          -0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "mask_dropout_55",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_55",
+          "mask_dropout": 0.55,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.20817299917339657,
+          0.1736790116478564,
+          -0.0553600521278316
+        ],
+        "surface_centroid_world": [
+          0.22241042250973966,
+          0.17992104104600198,
+          -0.04906649085419753
+        ],
+        "mask_pixels": 6970,
+        "clean_mask_pixels": 15436,
+        "retained_clean_pixels": 6970,
+        "mask_retention_ratio": 0.45154185022026433,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 6970,
+        "confidence": 0.5179284910302645,
+        "fit_residual_rms": 0.00439011638984199,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20822381999999998,
+        0.173702,
+        -0.05538044
+      ],
+      "position_error_m": 5.938759199097292e-05,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_low_zminus",
+      "trial_config": {
+        "name": "right_low_zminus",
+        "offset_xyz": [
+          0.018,
+          -0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "synthetic_occluder_45",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "synthetic_occluder_45",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.45,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.2081520320809205,
+          0.1735701421821897,
+          -0.055377791638211535
+        ],
+        "surface_centroid_world": [
+          0.22037667612953873,
+          0.19110122754425263,
+          -0.048863299428220784
+        ],
+        "mask_pixels": 8645,
+        "clean_mask_pixels": 15436,
+        "retained_clean_pixels": 8645,
+        "mask_retention_ratio": 0.5600544182430681,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 8645,
+        "confidence": 0.6492199598732618,
+        "fit_residual_rms": 0.00417874635750403,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20822381999999998,
+        0.173702,
+        -0.05538044
+      ],
+      "position_error_m": 0.00015015659580457503,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_low_zminus",
+      "trial_config": {
+        "name": "right_low_zminus",
+        "offset_xyz": [
+          0.018,
+          -0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "depth_noise_5mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "depth_noise_5mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.005,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.21477748748739048,
+          0.1766023163120678,
+          -0.052622225888862964
+        ],
+        "surface_centroid_world": [
+          0.22237591564988712,
+          0.18006581405218147,
+          -0.04914905770492517
+        ],
+        "mask_pixels": 15436,
+        "clean_mask_pixels": 15436,
+        "retained_clean_pixels": 15436,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 15436,
+        "confidence": 8.763029446739368e-06,
+        "fit_residual_rms": 0.23289937771094166,
+        "depth_noise_std_m": 0.005,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20822381999999998,
+        0.173702,
+        -0.05538044
+      ],
+      "position_error_m": 0.007679201607472055,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_low_zminus",
+      "trial_config": {
+        "name": "right_low_zminus",
+        "offset_xyz": [
+          0.018,
+          -0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "false_positive_blob",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "false_positive_blob",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 42,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.23888162906843813,
+          0.21171454691242805,
+          -0.05947066546819502
+        ],
+        "surface_centroid_world": [
+          0.22641749338179445,
+          0.1978117069749889,
+          -0.06080170681853967
+        ],
+        "mask_pixels": 20961,
+        "clean_mask_pixels": 15436,
+        "retained_clean_pixels": 15436,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.2635847526358475,
+        "valid_depth_points": 20961,
+        "confidence": 7.029319531511871e-10,
+        "fit_residual_rms": 1.0641521873679505,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20822381999999998,
+        0.173702,
+        -0.05538044
+      ],
+      "position_error_m": 0.0490059682490513,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_low_zminus",
+      "trial_config": {
+        "name": "right_low_zminus",
+        "offset_xyz": [
+          0.018,
+          -0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "combined_hard",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "combined_hard",
+          "mask_dropout": 0.35,
+          "occluder_fraction": 0.35,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 30,
+          "depth_noise_std_m": 0.004,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.23588177071527883,
+          0.20259275724488796,
+          -0.05529607921626091
+        ],
+        "surface_centroid_world": [
+          0.2272615188412048,
+          0.19269768883945937,
+          -0.061611576984630684
+        ],
+        "mask_pixels": 9760,
+        "clean_mask_pixels": 15436,
+        "retained_clean_pixels": 6939,
+        "mask_retention_ratio": 0.4495335579165587,
+        "mask_contamination_ratio": 0.28903688524590165,
+        "valid_depth_points": 9760,
+        "confidence": 3.6719189555617785e-10,
+        "fit_residual_rms": 0.6581614444615227,
+        "depth_noise_std_m": 0.004,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20822381999999998,
+        0.173702,
+        -0.05538044
+      ],
+      "position_error_m": 0.039995564862790385,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "right_low_zminus",
+      "trial_config": {
+        "name": "right_low_zminus",
+        "offset_xyz": [
+          0.018,
+          -0.014,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.003,
+        "lift_delta_m": 0.115,
+        "pre_j2_delta": 0.44,
+        "close_hold_steps": 110
+      },
+      "scenario": "calibration_bias_12mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "calibration_bias_12mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.012,
+            -0.006,
+            0.003
+          ]
+        },
+        "position_world_est": [
+          0.22017355877745973,
+          0.16767984304134143,
+          -0.052360135466417566
+        ],
+        "surface_centroid_world": [
+          0.23440186062503632,
+          0.1740797391340426,
+          -0.04614083770393413
+        ],
+        "mask_pixels": 15436,
+        "clean_mask_pixels": 15436,
+        "retained_clean_pixels": 15436,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 15436,
+        "confidence": 0.8030887777012792,
+        "fit_residual_rms": 0.004385800272211395,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.012,
+          -0.006,
+          0.003
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20822381999999998,
+        0.173702,
+        -0.05538044
+      ],
+      "position_error_m": 0.013718049087236265,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "front_small_lift",
+      "trial_config": {
+        "name": "front_small_lift",
+        "offset_xyz": [
+          0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.095,
+        "pre_j2_delta": 0.4,
+        "close_hold_steps": 90
+      },
+      "scenario": "clean_reference",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "clean_reference",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.20017359362351186,
+          0.1876823857228383,
+          -0.05535995536198318
+        ],
+        "surface_centroid_world": [
+          0.21455376487398847,
+          0.1933555375090474,
+          -0.049209790815885925
+        ],
+        "mask_pixels": 15506,
+        "clean_mask_pixels": 15506,
+        "retained_clean_pixels": 15506,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 15506,
+        "confidence": 0.8030410210172932,
+        "fit_residual_rms": 0.004386989632723555,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 5.768040532437581e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "front_small_lift",
+      "trial_config": {
+        "name": "front_small_lift",
+        "offset_xyz": [
+          0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.095,
+        "pre_j2_delta": 0.4,
+        "close_hold_steps": 90
+      },
+      "scenario": "mask_dropout_30",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_30",
+          "mask_dropout": 0.3,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.20017368792296908,
+          0.18768302853393032,
+          -0.055359082319325785
+        ],
+        "surface_centroid_world": [
+          0.21458804127064368,
+          0.19335856724348216,
+          -0.04913344198560583
+        ],
+        "mask_pixels": 10924,
+        "clean_mask_pixels": 15506,
+        "retained_clean_pixels": 10924,
+        "mask_retention_ratio": 0.7045014832967883,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 10924,
+        "confidence": 0.8035299016217529,
+        "fit_residual_rms": 0.004374817605640022,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 5.770001902988514e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "front_small_lift",
+      "trial_config": {
+        "name": "front_small_lift",
+        "offset_xyz": [
+          0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.095,
+        "pre_j2_delta": 0.4,
+        "close_hold_steps": 90
+      },
+      "scenario": "mask_dropout_55",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_55",
+          "mask_dropout": 0.55,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.20017520791130852,
+          0.18768138248666935,
+          -0.05536003398563786
+        ],
+        "surface_centroid_world": [
+          0.21462713443763323,
+          0.19358964649641147,
+          -0.04951886705176433
+        ],
+        "mask_pixels": 6979,
+        "clean_mask_pixels": 15506,
+        "retained_clean_pixels": 6979,
+        "mask_retention_ratio": 0.4500838385141236,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 6979,
+        "confidence": 0.5158324617776666,
+        "fit_residual_rms": 0.0044065358175402235,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 5.660938477881189e-05,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "front_small_lift",
+      "trial_config": {
+        "name": "front_small_lift",
+        "offset_xyz": [
+          0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.095,
+        "pre_j2_delta": 0.4,
+        "close_hold_steps": 90
+      },
+      "scenario": "synthetic_occluder_45",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "synthetic_occluder_45",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.45,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.20015032651804418,
+          0.18757386714297336,
+          -0.05537947234812242
+        ],
+        "surface_centroid_world": [
+          0.21281246176247953,
+          0.20435839102399667,
+          -0.04868549551392641
+        ],
+        "mask_pixels": 8761,
+        "clean_mask_pixels": 15506,
+        "retained_clean_pixels": 8761,
+        "mask_retention_ratio": 0.5650070940281181,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 8761,
+        "confidence": 0.6559926555559625,
+        "fit_residual_rms": 0.004147272754515018,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.0001477168145133021,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "front_small_lift",
+      "trial_config": {
+        "name": "front_small_lift",
+        "offset_xyz": [
+          0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.095,
+        "pre_j2_delta": 0.4,
+        "close_hold_steps": 90
+      },
+      "scenario": "depth_noise_5mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "depth_noise_5mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.005,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.20691372480165574,
+          0.1902023573225639,
+          -0.052687116117454226
+        ],
+        "surface_centroid_world": [
+          0.21451026845806936,
+          0.1933398267393425,
+          -0.049224501368245514
+        ],
+        "mask_pixels": 15506,
+        "clean_mask_pixels": 15506,
+        "retained_clean_pixels": 15506,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 15506,
+        "confidence": 7.598672765843255e-06,
+        "fit_residual_rms": 0.235750739239918,
+        "depth_noise_std_m": 0.005,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.007632863586623757,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "front_small_lift",
+      "trial_config": {
+        "name": "front_small_lift",
+        "offset_xyz": [
+          0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.095,
+        "pre_j2_delta": 0.4,
+        "close_hold_steps": 90
+      },
+      "scenario": "false_positive_blob",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "false_positive_blob",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 42,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.2598942513427599,
+          0.161103011926646,
+          -0.05310108423980846
+        ],
+        "surface_centroid_world": [
+          0.23172537657363937,
+          0.16888008791094106,
+          -0.06081371105166466
+        ],
+        "mask_pixels": 21031,
+        "clean_mask_pixels": 15506,
+        "retained_clean_pixels": 15506,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.2627074318862631,
+        "valid_depth_points": 21031,
+        "confidence": 7.074526852538032e-10,
+        "fit_residual_rms": 1.7526444202206406,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.06537019202846944,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "front_small_lift",
+      "trial_config": {
+        "name": "front_small_lift",
+        "offset_xyz": [
+          0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.095,
+        "pre_j2_delta": 0.4,
+        "close_hold_steps": 90
+      },
+      "scenario": "combined_hard",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "combined_hard",
+          "mask_dropout": 0.35,
+          "occluder_fraction": 0.35,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 30,
+          "depth_noise_std_m": 0.004,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.23554310032865292,
+          0.22959720269902123,
+          -0.04662132148385112
+        ],
+        "surface_centroid_world": [
+          0.2227310004853029,
+          0.21517877764743548,
+          -0.061517063366724946
+        ],
+        "mask_pixels": 9749,
+        "clean_mask_pixels": 15506,
+        "retained_clean_pixels": 6928,
+        "mask_retention_ratio": 0.4467947891138914,
+        "mask_contamination_ratio": 0.2893630115909324,
+        "valid_depth_points": 9749,
+        "confidence": 3.6388216964999123e-10,
+        "fit_residual_rms": 0.8166812089744848,
+        "depth_noise_std_m": 0.004,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.05549217719017687,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "front_small_lift",
+      "trial_config": {
+        "name": "front_small_lift",
+        "offset_xyz": [
+          0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.095,
+        "pre_j2_delta": 0.4,
+        "close_hold_steps": 90
+      },
+      "scenario": "calibration_bias_12mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "calibration_bias_12mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.012,
+            -0.006,
+            0.003
+          ]
+        },
+        "position_world_est": [
+          0.21217359362351124,
+          0.18168238572283948,
+          -0.05235995536198359
+        ],
+        "surface_centroid_world": [
+          0.22655376487398812,
+          0.18735553750904804,
+          -0.0462097908158856
+        ],
+        "mask_pixels": 15506,
+        "clean_mask_pixels": 15506,
+        "retained_clean_pixels": 15506,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 15506,
+        "confidence": 0.8030410210172921,
+        "fit_residual_rms": 0.004386989632723583,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.012,
+          -0.006,
+          0.003
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.20022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.013717003067268481,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "back_large_lift",
+      "trial_config": {
+        "name": "back_large_lift",
+        "offset_xyz": [
+          -0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.13,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "clean_reference",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "clean_reference",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.1801734850536157,
+          0.1876832834054049,
+          -0.0553616086495338
+        ],
+        "surface_centroid_world": [
+          0.19459703452943525,
+          0.19304663515895218,
+          -0.04955833556589078
+        ],
+        "mask_pixels": 14155,
+        "clean_mask_pixels": 14155,
+        "retained_clean_pixels": 14155,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 14155,
+        "confidence": 0.8027805775376731,
+        "fit_residual_rms": 0.004393477115072484,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.18022381999999998,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 5.6908149689894457e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "back_large_lift",
+      "trial_config": {
+        "name": "back_large_lift",
+        "offset_xyz": [
+          -0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.13,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "mask_dropout_30",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_30",
+          "mask_dropout": 0.3,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.18017387773951593,
+          0.18768351891250284,
+          -0.05536283463472571
+        ],
+        "surface_centroid_world": [
+          0.19466740315752915,
+          0.19293574925642937,
+          -0.049701447144586915
+        ],
+        "mask_pixels": 9998,
+        "clean_mask_pixels": 14155,
+        "retained_clean_pixels": 9998,
+        "mask_retention_ratio": 0.7063228541151536,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 9998,
+        "confidence": 0.8026464256956333,
+        "fit_residual_rms": 0.004396819573921921,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.18022381999999998,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 5.60867975888768e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "back_large_lift",
+      "trial_config": {
+        "name": "back_large_lift",
+        "offset_xyz": [
+          -0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.13,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "mask_dropout_55",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_55",
+          "mask_dropout": 0.55,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.1801720384631156,
+          0.18768142892503942,
+          -0.05536366872360168
+        ],
+        "surface_centroid_world": [
+          0.1945885904085598,
+          0.1931367229377232,
+          -0.04957770180139861
+        ],
+        "mask_pixels": 6374,
+        "clean_mask_pixels": 14155,
+        "retained_clean_pixels": 6374,
+        "mask_retention_ratio": 0.45030024726245144,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 6374,
+        "confidence": 0.5158005271704283,
+        "fit_residual_rms": 0.004417388097223421,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.18022381999999998,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 5.818739037945023e-05,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "back_large_lift",
+      "trial_config": {
+        "name": "back_large_lift",
+        "offset_xyz": [
+          -0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.13,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "synthetic_occluder_45",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "synthetic_occluder_45",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.45,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.18015016626886549,
+          0.18757743001352226,
+          -0.0553799483270125
+        ],
+        "surface_centroid_world": [
+          0.19294870268397285,
+          0.2041202724521803,
+          -0.04894763976367034
+        ],
+        "mask_pixels": 7989,
+        "clean_mask_pixels": 14155,
+        "retained_clean_pixels": 7989,
+        "mask_retention_ratio": 0.564394206993995,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 7989,
+        "confidence": 0.6550810022761443,
+        "fit_residual_rms": 0.004153380085413991,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.18022381999999998,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.0001447162581862386,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "back_large_lift",
+      "trial_config": {
+        "name": "back_large_lift",
+        "offset_xyz": [
+          -0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.13,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "depth_noise_5mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "depth_noise_5mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.005,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.18694282561466746,
+          0.19009424074807735,
+          -0.05272662780411989
+        ],
+        "surface_centroid_world": [
+          0.19458003194545492,
+          0.1930366261545858,
+          -0.049564391185473726
+        ],
+        "mask_pixels": 14155,
+        "clean_mask_pixels": 14155,
+        "retained_clean_pixels": 14155,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 14155,
+        "confidence": 8.338864844176902e-06,
+        "fit_residual_rms": 0.23389166921336646,
+        "depth_noise_std_m": 0.005,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.18022381999999998,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.007609899566860054,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "back_large_lift",
+      "trial_config": {
+        "name": "back_large_lift",
+        "offset_xyz": [
+          -0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.13,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "false_positive_blob",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "false_positive_blob",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 42,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.19934819099064816,
+          0.17088194845155902,
+          -0.0704998242254551
+        ],
+        "surface_centroid_world": [
+          0.19804760992025858,
+          0.18185717357567296,
+          -0.061860997614654724
+        ],
+        "mask_pixels": 19680,
+        "clean_mask_pixels": 14155,
+        "retained_clean_pixels": 14155,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.2807418699186992,
+        "valid_depth_points": 19680,
+        "confidence": 6.145233170558047e-10,
+        "fit_residual_rms": 1.0513936611860293,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.18022381999999998,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.02961843141081408,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "back_large_lift",
+      "trial_config": {
+        "name": "back_large_lift",
+        "offset_xyz": [
+          -0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.13,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "combined_hard",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "combined_hard",
+          "mask_dropout": 0.35,
+          "occluder_fraction": 0.35,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 30,
+          "depth_noise_std_m": 0.004,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          -0.15235765749895808,
+          0.4328906841110117,
+          0.1119151624856913
+        ],
+        "surface_centroid_world": [
+          0.1024015347223562,
+          0.11224725908613918,
+          -0.06267687983313318
+        ],
+        "mask_pixels": 9240,
+        "clean_mask_pixels": 14155,
+        "retained_clean_pixels": 6419,
+        "mask_retention_ratio": 0.4534793359237019,
+        "mask_contamination_ratio": 0.3053030303030303,
+        "valid_depth_points": 9240,
+        "confidence": 3.1611558980660516e-10,
+        "fit_residual_rms": 22.934472482352668,
+        "depth_noise_std_m": 0.004,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.18022381999999998,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.4457754463881225,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "back_large_lift",
+      "trial_config": {
+        "name": "back_large_lift",
+        "offset_xyz": [
+          -0.01,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.13,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "calibration_bias_12mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "calibration_bias_12mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.012,
+            -0.006,
+            0.003
+          ]
+        },
+        "position_world_est": [
+          0.19217348505361537,
+          0.1816832834054051,
+          -0.052361608649533264
+        ],
+        "surface_centroid_world": [
+          0.20659703452943753,
+          0.18704663515895292,
+          -0.04655833556589073
+        ],
+        "mask_pixels": 14155,
+        "clean_mask_pixels": 14155,
+        "retained_clean_pixels": 14155,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 14155,
+        "confidence": 0.8027805775376716,
+        "fit_residual_rms": 0.00439347711507252,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.012,
+          -0.006,
+          0.003
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.18022381999999998,
+        0.187702,
+        -0.05538044
+      ],
+      "position_error_m": 0.013716150591992268,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_center",
+      "trial_config": {
+        "name": "lifted_center",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 100
+      },
+      "scenario": "clean_reference",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "clean_reference",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.19017579479375113,
+          0.1876839851537124,
+          -0.043364182061633325
+        ],
+        "surface_centroid_world": [
+          0.20480728678400748,
+          0.19329244237992835,
+          -0.03833066405922074
+        ],
+        "mask_pixels": 15013,
+        "clean_mask_pixels": 15013,
+        "retained_clean_pixels": 15013,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 15013,
+        "confidence": 0.8024598683082631,
+        "fit_residual_rms": 0.004401468671340754,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 5.380776600033018e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_center",
+      "trial_config": {
+        "name": "lifted_center",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 100
+      },
+      "scenario": "mask_dropout_30",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_30",
+          "mask_dropout": 0.3,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.19017388870963337,
+          0.18768338369881515,
+          -0.04336340059450118
+        ],
+        "surface_centroid_world": [
+          0.2048206381727692,
+          0.19323792658412647,
+          -0.03834294361547202
+        ],
+        "mask_pixels": 10535,
+        "clean_mask_pixels": 15013,
+        "retained_clean_pixels": 10535,
+        "mask_retention_ratio": 0.7017251715180177,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 10535,
+        "confidence": 0.8027389254763632,
+        "fit_residual_rms": 0.004394514836787879,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 5.594677620055139e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_center",
+      "trial_config": {
+        "name": "lifted_center",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 100
+      },
+      "scenario": "mask_dropout_55",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_55",
+          "mask_dropout": 0.55,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.19017759803433373,
+          0.18768329352414712,
+          -0.04336426177681227
+        ],
+        "surface_centroid_world": [
+          0.20480526558674572,
+          0.1933943973821044,
+          -0.038513554568839675
+        ],
+        "mask_pixels": 6848,
+        "clean_mask_pixels": 15013,
+        "retained_clean_pixels": 6848,
+        "mask_retention_ratio": 0.4561380137214414,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 6848,
+        "confidence": 0.5229270404700205,
+        "fit_residual_rms": 0.0044005683393178495,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 5.242267881746876e-05,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_center",
+      "trial_config": {
+        "name": "lifted_center",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 100
+      },
+      "scenario": "synthetic_occluder_45",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "synthetic_occluder_45",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.45,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.1901449849360342,
+          0.18756775995250158,
+          -0.04338000352024932
+        ],
+        "surface_centroid_world": [
+          0.2031360756975049,
+          0.20455481413137327,
+          -0.03789138878272118
+        ],
+        "mask_pixels": 8424,
+        "clean_mask_pixels": 15013,
+        "retained_clean_pixels": 8424,
+        "mask_retention_ratio": 0.5611137014587357,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 8424,
+        "confidence": 0.6510344547810691,
+        "fit_residual_rms": 0.004160718771667049,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 0.00015567770610283748,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_center",
+      "trial_config": {
+        "name": "lifted_center",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 100
+      },
+      "scenario": "depth_noise_5mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "depth_noise_5mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.005,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.1971912779852773,
+          0.1902453702313383,
+          -0.04107183346132114
+        ],
+        "surface_centroid_world": [
+          0.20477610056592477,
+          0.19327984880613566,
+          -0.03834444201862666
+        ],
+        "mask_pixels": 15013,
+        "clean_mask_pixels": 15013,
+        "retained_clean_pixels": 15013,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 15013,
+        "confidence": 8.003838812744525e-06,
+        "fit_residual_rms": 0.23471178559566663,
+        "depth_noise_std_m": 0.005,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 0.007768131503823377,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_center",
+      "trial_config": {
+        "name": "lifted_center",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 100
+      },
+      "scenario": "false_positive_blob",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "false_positive_blob",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 42,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          -1.7270772285034013,
+          1.9261270507444892,
+          3.592175149979944
+        ],
+        "surface_centroid_world": [
+          0.010904236700450244,
+          -0.060097713305736156,
+          -0.05313980029791218
+        ],
+        "mask_pixels": 20538,
+        "clean_mask_pixels": 15013,
+        "retained_clean_pixels": 15013,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.2690135358847015,
+        "valid_depth_points": 20538,
+        "confidence": 6.749580625041643e-10,
+        "fit_residual_rms": 260.93098229029744,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 4.462670659535906,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_center",
+      "trial_config": {
+        "name": "lifted_center",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 100
+      },
+      "scenario": "combined_hard",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "combined_hard",
+          "mask_dropout": 0.35,
+          "occluder_fraction": 0.35,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 30,
+          "depth_noise_std_m": 0.004,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.2433957402243692,
+          0.20818635598963342,
+          -0.042903075906420264
+        ],
+        "surface_centroid_world": [
+          0.22153910286865608,
+          0.19395770363748008,
+          -0.054432180805024745
+        ],
+        "mask_pixels": 9569,
+        "clean_mask_pixels": 15013,
+        "retained_clean_pixels": 6748,
+        "mask_retention_ratio": 0.44947711982948113,
+        "mask_contamination_ratio": 0.2948061448427213,
+        "valid_depth_points": 9569,
+        "confidence": 3.480569349456084e-10,
+        "fit_residual_rms": 1.1634621134359429,
+        "depth_noise_std_m": 0.004,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 0.056983241546392845,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_center",
+      "trial_config": {
+        "name": "lifted_center",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 100
+      },
+      "scenario": "calibration_bias_12mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "calibration_bias_12mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.012,
+            -0.006,
+            0.003
+          ]
+        },
+        "position_world_est": [
+          0.20217579479375103,
+          0.18168398515371248,
+          -0.04036418206163435
+        ],
+        "surface_centroid_world": [
+          0.21680728678400643,
+          0.18729244237993004,
+          -0.035330664059220696
+        ],
+        "mask_pixels": 15013,
+        "clean_mask_pixels": 15013,
+        "retained_clean_pixels": 15013,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 15013,
+        "confidence": 0.8024598683082742,
+        "fit_residual_rms": 0.004401468671340478,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.012,
+          -0.006,
+          0.003
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.19022382,
+        0.187702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 0.013717288949036219,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_diag",
+      "trial_config": {
+        "name": "lifted_diag",
+        "offset_xyz": [
+          0.014,
+          -0.01,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.12,
+        "pre_j2_delta": 0.43,
+        "close_hold_steps": 110
+      },
+      "scenario": "clean_reference",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "clean_reference",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.20417342835729535,
+          0.17768079296425948,
+          -0.04336169191429888
+        ],
+        "surface_centroid_world": [
+          0.21852259800825147,
+          0.1838775193431794,
+          -0.03768454926034397
+        ],
+        "mask_pixels": 15777,
+        "clean_mask_pixels": 15777,
+        "retained_clean_pixels": 15777,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 15777,
+        "confidence": 0.8028212288779396,
+        "fit_residual_rms": 0.004392464377291228,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_clean_reference_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_clean_reference_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_clean_reference_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_clean_reference_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.20422382,
+        0.177702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 5.779746306568697e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_diag",
+      "trial_config": {
+        "name": "lifted_diag",
+        "offset_xyz": [
+          0.014,
+          -0.01,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.12,
+        "pre_j2_delta": 0.43,
+        "close_hold_steps": 110
+      },
+      "scenario": "mask_dropout_30",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_30",
+          "mask_dropout": 0.3,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.2041713682512766,
+          0.1776803708137053,
+          -0.043361562276406064
+        ],
+        "surface_centroid_world": [
+          0.21854224282838308,
+          0.18380047023997903,
+          -0.03753471508536851
+        ],
+        "mask_pixels": 11105,
+        "clean_mask_pixels": 15777,
+        "retained_clean_pixels": 11105,
+        "mask_retention_ratio": 0.7038727261203017,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 11105,
+        "confidence": 0.8021299364296741,
+        "fit_residual_rms": 0.004409693374807383,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_mask_dropout_30_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_mask_dropout_30_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_mask_dropout_30_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_mask_dropout_30_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.20422382,
+        0.177702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 5.979444867211715e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_diag",
+      "trial_config": {
+        "name": "lifted_diag",
+        "offset_xyz": [
+          0.014,
+          -0.01,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.12,
+        "pre_j2_delta": 0.43,
+        "close_hold_steps": 110
+      },
+      "scenario": "mask_dropout_55",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_55",
+          "mask_dropout": 0.55,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.20417328690832234,
+          0.17768107032804908,
+          -0.04336124638566438
+        ],
+        "surface_centroid_world": [
+          0.21843357803516475,
+          0.18415587694435784,
+          -0.037323345845893544
+        ],
+        "mask_pixels": 7172,
+        "clean_mask_pixels": 15777,
+        "retained_clean_pixels": 7172,
+        "mask_retention_ratio": 0.4545857894403245,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 7172,
+        "confidence": 0.5218351399477913,
+        "fit_residual_rms": 0.004374197624869262,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_mask_dropout_55_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_mask_dropout_55_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_mask_dropout_55_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_mask_dropout_55_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.20422382,
+        0.177702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 5.796584644202202e-05,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_diag",
+      "trial_config": {
+        "name": "lifted_diag",
+        "offset_xyz": [
+          0.014,
+          -0.01,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.12,
+        "pre_j2_delta": 0.43,
+        "close_hold_steps": 110
+      },
+      "scenario": "synthetic_occluder_45",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "synthetic_occluder_45",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.45,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.20415215394441877,
+          0.1775706338574462,
+          -0.0433786265598133
+        ],
+        "surface_centroid_world": [
+          0.2166102859988609,
+          0.19484958468136274,
+          -0.03731445977150928
+        ],
+        "mask_pixels": 8892,
+        "clean_mask_pixels": 15777,
+        "retained_clean_pixels": 8892,
+        "mask_retention_ratio": 0.5636052481460354,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 8892,
+        "confidence": 0.6534358289477353,
+        "fit_residual_rms": 0.004175694069062829,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_synthetic_occluder_45_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_synthetic_occluder_45_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_synthetic_occluder_45_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_synthetic_occluder_45_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.20422382,
+        0.177702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 0.00014965418636759626,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_diag",
+      "trial_config": {
+        "name": "lifted_diag",
+        "offset_xyz": [
+          0.014,
+          -0.01,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.12,
+        "pre_j2_delta": 0.43,
+        "close_hold_steps": 110
+      },
+      "scenario": "depth_noise_5mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "depth_noise_5mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.005,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.2110089616401366,
+          0.180522189821424,
+          -0.040769233847945285
+        ],
+        "surface_centroid_world": [
+          0.21856286793014834,
+          0.18389268413879925,
+          -0.03766925059115916
+        ],
+        "mask_pixels": 15777,
+        "clean_mask_pixels": 15777,
+        "retained_clean_pixels": 15777,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 15777,
+        "confidence": 9.484018085886265e-06,
+        "fit_residual_rms": 0.2313180496554732,
+        "depth_noise_std_m": 0.005,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_depth_noise_5mm_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_depth_noise_5mm_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_depth_noise_5mm_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_depth_noise_5mm_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.20422382,
+        0.177702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 0.007798077665303654,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_diag",
+      "trial_config": {
+        "name": "lifted_diag",
+        "offset_xyz": [
+          0.014,
+          -0.01,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.12,
+        "pre_j2_delta": 0.43,
+        "close_hold_steps": 110
+      },
+      "scenario": "false_positive_blob",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "false_positive_blob",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 42,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.2708655343754836,
+          0.19964421409109312,
+          -0.026002628030016142
+        ],
+        "surface_centroid_world": [
+          0.24036981379102523,
+          0.18009179036659678,
+          -0.052130112164454505
+        ],
+        "mask_pixels": 21302,
+        "clean_mask_pixels": 15777,
+        "retained_clean_pixels": 15777,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.25936531781053423,
+        "valid_depth_points": 21302,
+        "confidence": 7.246742115882818e-10,
+        "fit_residual_rms": 1.3902979870710568,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_false_positive_blob_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_false_positive_blob_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_false_positive_blob_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_false_positive_blob_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.20422382,
+        0.177702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 0.07228116769247034,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_diag",
+      "trial_config": {
+        "name": "lifted_diag",
+        "offset_xyz": [
+          0.014,
+          -0.01,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.12,
+        "pre_j2_delta": 0.43,
+        "close_hold_steps": 110
+      },
+      "scenario": "combined_hard",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "combined_hard",
+          "mask_dropout": 0.35,
+          "occluder_fraction": 0.35,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 30,
+          "depth_noise_std_m": 0.004,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          -0.9171631239710304,
+          -8.109917792975661,
+          49.16658263195396
+        ],
+        "surface_centroid_world": [
+          -0.42999985895523196,
+          0.0646179416239939,
+          -0.053098981111746095
+        ],
+        "mask_pixels": 9856,
+        "clean_mask_pixels": 15777,
+        "retained_clean_pixels": 7035,
+        "mask_retention_ratio": 0.4459022627876022,
+        "mask_contamination_ratio": 0.2862215909090909,
+        "valid_depth_points": 9792,
+        "confidence": 3.7346668243850006e-10,
+        "fit_residual_rms": 2259.568192501189,
+        "depth_noise_std_m": 0.004,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_combined_hard_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_combined_hard_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_combined_hard_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_combined_hard_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.20422382,
+        0.177702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 49.91555485070864,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "lifted_diag",
+      "trial_config": {
+        "name": "lifted_diag",
+        "offset_xyz": [
+          0.014,
+          -0.01,
+          0.012
+        ],
+        "grasp_z_bias_m": 0.002,
+        "lift_delta_m": 0.12,
+        "pre_j2_delta": 0.43,
+        "close_hold_steps": 110
+      },
+      "scenario": "calibration_bias_12mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "calibration_bias_12mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.012,
+            -0.006,
+            0.003
+          ]
+        },
+        "position_world_est": [
+          0.2161734283572953,
+          0.17168079296425942,
+          -0.04036169191429976
+        ],
+        "surface_centroid_world": [
+          0.230522598008251,
+          0.17787751934317855,
+          -0.034684549260343873
+        ],
+        "mask_pixels": 15777,
+        "clean_mask_pixels": 15777,
+        "retained_clean_pixels": 15777,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 15777,
+        "confidence": 0.8028212288779399,
+        "fit_residual_rms": 0.0043924643772912195,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.012,
+          -0.006,
+          0.003
+        ],
+        "debug_images": {
+          "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_calibration_bias_12mm_rgb.png",
+          "clean_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_calibration_bias_12mm_clean_mask_overlay.png",
+          "noisy_mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_calibration_bias_12mm_noisy_mask_overlay.png",
+          "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0\\lifted_diag\\lifted_diag_calibration_bias_12mm_depth.png"
+        }
+      },
+      "truth_position_world": [
+        0.20422382,
+        0.177702,
+        -0.043380440000000006
+      ],
+      "position_error_m": 0.013717175877888003,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "wide_diag",
+      "trial_config": {
+        "name": "wide_diag",
+        "offset_xyz": [
+          -0.016,
+          0.012,
+          0.006
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.125,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "clean_reference",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "clean_reference",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.1741716252841483,
+          0.1996854465349706,
+          -0.04936262391974847
+        ],
+        "surface_centroid_world": [
+          0.18874591429129778,
+          0.20451982950994776,
+          -0.04390054188229822
+        ],
+        "mask_pixels": 14460,
+        "clean_mask_pixels": 14460,
+        "retained_clean_pixels": 14460,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 14460,
+        "confidence": 0.8026119810720105,
+        "fit_residual_rms": 0.004397677868723127,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17422381999999997,
+        0.19970200000000002,
+        -0.049380440000000005
+      ],
+      "position_error_m": 5.758227403328593e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "wide_diag",
+      "trial_config": {
+        "name": "wide_diag",
+        "offset_xyz": [
+          -0.016,
+          0.012,
+          0.006
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.125,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "mask_dropout_30",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_30",
+          "mask_dropout": 0.3,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.17417126863395224,
+          0.1996862012129629,
+          -0.04936271379039974
+        ],
+        "surface_centroid_world": [
+          0.18876345103525538,
+          0.2044562542927044,
+          -0.04399421903526194
+        ],
+        "mask_pixels": 10148,
+        "clean_mask_pixels": 14460,
+        "retained_clean_pixels": 10148,
+        "mask_retention_ratio": 0.7017980636237897,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 10148,
+        "confidence": 0.8023759500220697,
+        "fit_residual_rms": 0.004403560306766917,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17422381999999997,
+        0.19970200000000002,
+        -0.049380440000000005
+      ],
+      "position_error_m": 5.7666855750242023e-05,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "wide_diag",
+      "trial_config": {
+        "name": "wide_diag",
+        "offset_xyz": [
+          -0.016,
+          0.012,
+          0.006
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.125,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "mask_dropout_55",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "mask_dropout_55",
+          "mask_dropout": 0.55,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.17417111456843226,
+          0.19968772211598013,
+          -0.04936274729864265
+        ],
+        "surface_centroid_world": [
+          0.1888085633166517,
+          0.20426921815282345,
+          -0.04403431156307097
+        ],
+        "mask_pixels": 6500,
+        "clean_mask_pixels": 14460,
+        "retained_clean_pixels": 6500,
+        "mask_retention_ratio": 0.44951590594744123,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 6500,
+        "confidence": 0.5158393942567145,
+        "fit_residual_rms": 0.004381014349990766,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17422381999999997,
+        0.19970200000000002,
+        -0.049380440000000005
+      ],
+      "position_error_m": 5.7399931795645854e-05,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "wide_diag",
+      "trial_config": {
+        "name": "wide_diag",
+        "offset_xyz": [
+          -0.016,
+          0.012,
+          0.006
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.125,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "synthetic_occluder_45",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "synthetic_occluder_45",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.45,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.17414475832479,
+          0.19958620105257494,
+          -0.04937979351687619
+        ],
+        "surface_centroid_world": [
+          0.18728254680114653,
+          0.2156096115338328,
+          -0.04306504950288616
+        ],
+        "mask_pixels": 8181,
+        "clean_mask_pixels": 14460,
+        "retained_clean_pixels": 8181,
+        "mask_retention_ratio": 0.5657676348547718,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 8181,
+        "confidence": 0.656117355367397,
+        "fit_residual_rms": 0.004170374608009265,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17422381999999997,
+        0.19970200000000002,
+        -0.049380440000000005
+      ],
+      "position_error_m": 0.00014021612835972958,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "wide_diag",
+      "trial_config": {
+        "name": "wide_diag",
+        "offset_xyz": [
+          -0.016,
+          0.012,
+          0.006
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.125,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "depth_noise_5mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "depth_noise_5mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.005,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.18108164168158844,
+          0.20181304765857097,
+          -0.0469496969297644
+        ],
+        "surface_centroid_world": [
+          0.18868739881920307,
+          0.20450496202991564,
+          -0.043923920991295905
+        ],
+        "mask_pixels": 14460,
+        "clean_mask_pixels": 14460,
+        "retained_clean_pixels": 14460,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 14460,
+        "confidence": 6.540864326030635e-06,
+        "fit_residual_rms": 0.23874882482568002,
+        "depth_noise_std_m": 0.005,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17422381999999997,
+        0.19970200000000002,
+        -0.049380440000000005
+      ],
+      "position_error_m": 0.007575932438104312,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "wide_diag",
+      "trial_config": {
+        "name": "wide_diag",
+        "offset_xyz": [
+          -0.016,
+          0.012,
+          0.006
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.125,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "false_positive_blob",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "false_positive_blob",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 42,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.23395170854475114,
+          0.2222767530452155,
+          -0.03528516097444081
+        ],
+        "surface_centroid_world": [
+          0.20449605355989806,
+          0.22186804395868162,
+          -0.05757961262338302
+        ],
+        "mask_pixels": 19985,
+        "clean_mask_pixels": 14460,
+        "retained_clean_pixels": 14460,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.27645734300725544,
+        "valid_depth_points": 19985,
+        "confidence": 6.366009874656992e-10,
+        "fit_residual_rms": 1.2132804982542669,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17422381999999997,
+        0.19970200000000002,
+        -0.049380440000000005
+      ],
+      "position_error_m": 0.06538896723358653,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "wide_diag",
+      "trial_config": {
+        "name": "wide_diag",
+        "offset_xyz": [
+          -0.016,
+          0.012,
+          0.006
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.125,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "combined_hard",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "combined_hard",
+          "mask_dropout": 0.35,
+          "occluder_fraction": 0.35,
+          "false_positive_blobs": 1,
+          "false_positive_radius_px": 30,
+          "depth_noise_std_m": 0.004,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.08166411229402362,
+          0.11520761887793995,
+          -0.06473986809885866
+        ],
+        "surface_centroid_world": [
+          0.17043276092997284,
+          0.13448170479780297,
+          -0.05827601141254002
+        ],
+        "mask_pixels": 9330,
+        "clean_mask_pixels": 14460,
+        "retained_clean_pixels": 6509,
+        "mask_retention_ratio": 0.4501383125864454,
+        "mask_contamination_ratio": 0.30235798499464095,
+        "valid_depth_points": 9330,
+        "confidence": 3.2354526051783183e-10,
+        "fit_residual_rms": 3.6189165623134647,
+        "depth_noise_std_m": 0.004,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17422381999999997,
+        0.19970200000000002,
+        -0.049380440000000005
+      ],
+      "position_error_m": 0.12626366050190263,
+      "accepted_as_pose_update": false,
+      "freeze_last_good": true,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    },
+    {
+      "trial": "wide_diag",
+      "trial_config": {
+        "name": "wide_diag",
+        "offset_xyz": [
+          -0.016,
+          0.012,
+          0.006
+        ],
+        "grasp_z_bias_m": -0.002,
+        "lift_delta_m": 0.125,
+        "pre_j2_delta": 0.45,
+        "close_hold_steps": 120
+      },
+      "scenario": "calibration_bias_12mm",
+      "estimate": {
+        "status": "ok",
+        "scenario": {
+          "name": "calibration_bias_12mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.0,
+          "calibration_bias_m": [
+            0.012,
+            -0.006,
+            0.003
+          ]
+        },
+        "position_world_est": [
+          0.1861716252841488,
+          0.1936854465349695,
+          -0.04636262391974913
+        ],
+        "surface_centroid_world": [
+          0.20074591429129765,
+          0.19851982950994812,
+          -0.040900541882298136
+        ],
+        "mask_pixels": 14460,
+        "clean_mask_pixels": 14460,
+        "retained_clean_pixels": 14460,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "valid_depth_points": 14460,
+        "confidence": 0.8026119810720064,
+        "fit_residual_rms": 0.00439767786872323,
+        "depth_noise_std_m": 0.0,
+        "calibration_bias_m": [
+          0.012,
+          -0.006,
+          0.003
+        ],
+        "debug_images": {}
+      },
+      "truth_position_world": [
+        0.17422381999999997,
+        0.19970200000000002,
+        -0.049380440000000005
+      ],
+      "position_error_m": 0.013713357743445842,
+      "accepted_as_pose_update": true,
+      "freeze_last_good": false,
+      "freeze_decision_safe": true,
+      "false_confident_bad_estimate": false
+    }
+  ],
+  "summary": {
+    "samples": 80,
+    "sensor_ok_samples": 80,
+    "accepted_updates": 40,
+    "frozen_updates": 40,
+    "false_confident_bad_estimates": 0,
+    "unsafe_freeze_decisions": 0,
+    "max_accepted_error_m": 0.013718049087236265,
+    "mean_accepted_error_m": 0.0034941511281098557,
+    "max_sensor_ok_error_m": 49.91555485070864,
+    "scenario_summary": {
+      "clean_reference": {
+        "samples": 10,
+        "ok": 10,
+        "accepted": 10,
+        "frozen": 0,
+        "false_confident_bad": 0,
+        "max_error_m": 5.856103988286664e-05,
+        "max_accepted_error_m": 5.856103988286664e-05,
+        "min_confidence": 0.8024598683082631,
+        "mean_confidence": 0.8028436668393729
+      },
+      "mask_dropout_30": {
+        "samples": 10,
+        "ok": 10,
+        "accepted": 10,
+        "frozen": 0,
+        "false_confident_bad": 0,
+        "max_error_m": 5.979444867211715e-05,
+        "max_accepted_error_m": 5.979444867211715e-05,
+        "min_confidence": 0.7996628344135842,
+        "mean_confidence": 0.8020878911560958
+      },
+      "mask_dropout_55": {
+        "samples": 10,
+        "ok": 10,
+        "accepted": 0,
+        "frozen": 10,
+        "false_confident_bad": 0,
+        "max_error_m": 5.940182811647219e-05,
+        "max_accepted_error_m": 0.0,
+        "min_confidence": 0.5136851610206467,
+        "mean_confidence": 0.5173415961578968
+      },
+      "synthetic_occluder_45": {
+        "samples": 10,
+        "ok": 10,
+        "accepted": 10,
+        "frozen": 0,
+        "false_confident_bad": 0,
+        "max_error_m": 0.00015567770610283748,
+        "max_accepted_error_m": 0.00015567770610283748,
+        "min_confidence": 0.6492199598732618,
+        "mean_confidence": 0.6554148974203289
+      },
+      "depth_noise_5mm": {
+        "samples": 10,
+        "ok": 10,
+        "accepted": 0,
+        "frozen": 10,
+        "false_confident_bad": 0,
+        "max_error_m": 0.007801706849657418,
+        "max_accepted_error_m": 0.0,
+        "min_confidence": 6.540864326030635e-06,
+        "mean_confidence": 7.904108446649258e-06
+      },
+      "false_positive_blob": {
+        "samples": 10,
+        "ok": 10,
+        "accepted": 0,
+        "frozen": 10,
+        "false_confident_bad": 0,
+        "max_error_m": 4.462670659535906,
+        "max_accepted_error_m": 0.0,
+        "min_confidence": 6.145233170558047e-10,
+        "mean_confidence": 6.867348655392882e-10
+      },
+      "combined_hard": {
+        "samples": 10,
+        "ok": 10,
+        "accepted": 0,
+        "frozen": 10,
+        "false_confident_bad": 0,
+        "max_error_m": 49.91555485070864,
+        "max_accepted_error_m": 0.0,
+        "min_confidence": 2.932095029824211e-10,
+        "mean_confidence": 3.5198244391532633e-10
+      },
+      "calibration_bias_12mm": {
+        "samples": 10,
+        "ok": 10,
+        "accepted": 10,
+        "frozen": 0,
+        "false_confident_bad": 0,
+        "max_error_m": 0.013718049087236265,
+        "max_accepted_error_m": 0.013718049087236265,
+        "min_confidence": 0.8024598683082742,
+        "mean_confidence": 0.8028436668393756
+      }
+    }
+  },
+  "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\metadata\\stage3_noisy_virtual_camera_perception_v0.json",
+  "visual_dir": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_noisy_virtual_camera_perception_v0"
+}

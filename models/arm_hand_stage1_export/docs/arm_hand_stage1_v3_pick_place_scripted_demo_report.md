@@ -1,6 +1,6 @@
 # Arm-Hand Stage1 V3 Pick-Place Scripted Demo Report
 
-Generated: 2026-05-31T21:25:42
+Generated: 2026-06-01T00:14:46
 
 - Status: **PASS**
 - Terminal reason: `success_pick_place_ball`

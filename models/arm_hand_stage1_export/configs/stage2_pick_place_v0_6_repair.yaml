@@ -1,0 +1,30 @@
+task: stage2_pick_place_v0_6_repair
+seed: 61
+dataset:
+  version: v0.6
+  profiles: clean_nominal,timing_fast_clean,timing_slow_clean
+  target_center: "0.165,0.23,-0.06538044"
+  x_offsets: "0.0"
+  y_offsets: "0.0"
+  repair_focus: "close_hold transport_hold descend_pre_release release_retreat"
+  step_overrides:
+    close_hold_steps: 180
+    hold_steps: 220
+    transport_steps: 960
+    transport_hold_steps: 300
+    descend_steps: 620
+    pre_release_settle_steps: 300
+    release_steps: 760
+    retreat_steps: 380
+    settle_steps: 720
+training:
+  feature_mode: phase_only
+  epochs: 220
+  batch_size: 512
+  hidden_dim: 256
+  depth: 3
+eval:
+  action_smoothing: 0.25
+  fixed_target: true
+  narrow_sweep_offsets: "-0.02,-0.01,0.0,0.01,0.02"
+  render_fixed_demo: true

@@ -1,0 +1,31 @@
+task: stage2_pick_place_v0_7_2_phase_table
+seed: 67
+scene: "models/arm_hand_stage1_export/mjcf/scene_arm_hand_export4_pick_place_50cm_v0_7.xml"
+run_dir: "runs/stage2_pick_place_v0_7_1_multidir/20260602_000000_seed064"
+source_dataset: "runs/stage2_pick_place_v0_7_1_multidir/20260602_000000_seed064/datasets/arm_hand_stage1_v3_pick_place_dataset_v0_7_1.npz"
+policy:
+  mode: phase_table_nearest_target
+  artifact: "runs/stage2_pick_place_v0_7_1_multidir/20260602_000000_seed064/checkpoints/phase_table_policy_v0_7_2_clean_actions.npz"
+  action_field: actions
+  profile_id: 0
+  promoted_baseline: false
+eval:
+  fixed_targets:
+    result: PASS
+    success_count: 4
+    episodes: 4
+    report: "runs/stage2_pick_place_v0_7_1_multidir/20260602_000000_seed064/eval/v0_7_2_phase_table_fixed_4targets_eval_report.md"
+  narrow_sweep_m150:
+    result: PARTIAL
+    success_count: 24
+    episodes: 25
+    report: "runs/stage2_pick_place_v0_7_1_multidir/20260602_000000_seed064/eval/v0_7_2_phase_table_m150_narrow_sweep_eval_report.md"
+demo:
+  target_angle_deg: -135
+  status: PASS
+  video: "runs/stage2_pick_place_v0_7_1_multidir/20260602_000000_seed064/visuals/v0_7_2_phase_table_success_demo_m135_policy_demo.mp4"
+  contact_sheet: "runs/stage2_pick_place_v0_7_1_multidir/20260602_000000_seed064/visuals/v0_7_2_phase_table_success_demo_m135_policy_contact_sheet.png"
+next_step:
+  version: v0.7.3
+  direction: trainable_phase_specific_or_mixture_of_experts
+  fixed_target_gate: "7 / 7 PASS before claiming target generality"

@@ -1,0 +1,32 @@
+task: stage2_pick_place_v0_7_target_conditioned
+seed: 63
+scene: "models/arm_hand_stage1_export/mjcf/scene_arm_hand_export4_pick_place_50cm_v0_7.xml"
+dataset:
+  version: v0.7
+  target_conditioned: true
+  target_center: "-0.16332957059327374,-0.16585139059327378,-0.06538044"
+  target_distance_m: 0.5
+  profiles: clean_nominal,timing_fast_clean,timing_slow_clean
+  pre_release_z_drop: 0.02
+  step_overrides:
+    close_thumb_steps: 180
+    close_hold_steps: 180
+    lift_steps: 260
+    hold_steps: 220
+    transport_steps: 1600
+    transport_hold_steps: 300
+    descend_steps: 760
+    pre_release_settle_steps: 900
+    release_steps: 900
+    retreat_steps: 500
+    settle_steps: 1400
+training:
+  feature_mode: phase_only
+  epochs: 220
+  batch_size: 512
+  hidden_dim: 256
+  depth: 3
+eval:
+  action_smoothing: 0.2
+  max_steps: 8200
+  fixed_target: true

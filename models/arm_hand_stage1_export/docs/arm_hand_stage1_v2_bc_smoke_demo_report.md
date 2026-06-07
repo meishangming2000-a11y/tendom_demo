@@ -1,6 +1,6 @@
 # Arm-Hand Stage1 V2 BC Smoke Demo Report
 
-Generated: 2026-05-29T01:17:32
+Generated: 2026-05-29T08:54:55
 
 - Status: **success**
 - Terminal reason: `success_lift_ball`

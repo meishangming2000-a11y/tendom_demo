@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T01:17:32",
+  "generated_at": "2026-05-29T08:54:55",
   "checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\bc_arm_hand_stage1_v2_lift_ball_dataset_v0_smoke.pth",
   "dataset": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\arm_hand_stage1_v2_lift_ball_dataset_v0.npz",
   "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_lift_ball_demo.xml",

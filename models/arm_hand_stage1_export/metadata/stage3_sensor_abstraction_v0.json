@@ -1,0 +1,242 @@
+{
+  "generated_at": "2026-06-03T21:20:54",
+  "task_name": "stage3_sensor_aware_gentle_grasp_hold",
+  "contract_version": "stage3_sensor_aware_gentle_grasp_hold_v0",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_stage3_egg_gentle_grasp_hold_v0.xml",
+  "status": "PASS",
+  "seed": 80,
+  "max_reconstruction_error_threshold": 0.0,
+  "checks": {
+    "scene_exists": true,
+    "same_key_reconstructs_across_api_instances": true,
+    "same_key_reconstructs_after_other_keys": true,
+    "different_step_changes_vision_pose": true,
+    "different_episode_changes_vision_pose": true,
+    "sensor_field_ranges_pass": true,
+    "policy_vector_excludes_gt": true
+  },
+  "same_key_error": {
+    "vector": 0.0,
+    "vision_pose": 0.0,
+    "vision_axis": 0.0,
+    "vision_shape": 0.0,
+    "vision_goal": 0.0,
+    "vision_object_to_goal": 0.0,
+    "tactile_scalars": 0.0
+  },
+  "order_independence_error": {
+    "vector": 0.0,
+    "vision_pose": 0.0,
+    "vision_axis": 0.0,
+    "vision_shape": 0.0,
+    "vision_goal": 0.0,
+    "vision_object_to_goal": 0.0,
+    "tactile_scalars": 0.0
+  },
+  "next_step_delta": {
+    "vector": 0.02005108143146963,
+    "vision_pose": 0.0027244747439930384,
+    "vision_axis": 0.02005108143146963,
+    "vision_shape": 0.0020780756328154203,
+    "vision_goal": 0.0,
+    "vision_object_to_goal": 0.0027244747439930384,
+    "tactile_scalars": 0.0
+  },
+  "other_episode_delta": {
+    "vector": 0.01288229111989548,
+    "vision_pose": 0.003907712507328798,
+    "vision_axis": 0.01288229111989548,
+    "vision_shape": 0.0009016841929885416,
+    "vision_goal": 0.0,
+    "vision_object_to_goal": 0.003907712507328798,
+    "tactile_scalars": 0.0
+  },
+  "sensor_config": {
+    "base_seed": 80,
+    "vision": {
+      "pose_noise_std_m": 0.002,
+      "axis_noise_std": 0.01,
+      "shape_noise_std_m": 0.001,
+      "confidence_nominal": 0.95,
+      "occlusion": 0.0,
+      "latency_steps": 2
+    },
+    "tactile": {
+      "slip_tangential_scale_mps": 0.12,
+      "slip_downward_scale_mps": 0.08,
+      "grip_stable_min_persistence_steps": 30,
+      "release_max_hand_contacts": 0
+    },
+    "replay_key": "sha256(base_seed, episode_id, step_index, stream)"
+  },
+  "sample_replay_key": {
+    "base_seed": 80,
+    "episode_id": 3,
+    "step_index": 11
+  },
+  "validation_rows": [
+    {
+      "label": "same_key_api_a",
+      "validation": {
+        "status": "PASS",
+        "checks": {
+          "vision_pose_finite": true,
+          "vision_axis_finite": true,
+          "vision_axis_unit": true,
+          "vision_shape_positive": true,
+          "vision_confidence_range": true,
+          "vision_occlusion_range": true,
+          "vision_latency_nonnegative": true,
+          "vision_noise_nonnegative": true,
+          "tactile_contact_persistence_nonnegative": true,
+          "tactile_motion_nonnegative": true,
+          "tactile_slip_range": true,
+          "tactile_crush_range": true,
+          "tactile_regions_symbolic": true
+        },
+        "failures": [],
+        "warnings": []
+      }
+    },
+    {
+      "label": "same_key_api_b",
+      "validation": {
+        "status": "PASS",
+        "checks": {
+          "vision_pose_finite": true,
+          "vision_axis_finite": true,
+          "vision_axis_unit": true,
+          "vision_shape_positive": true,
+          "vision_confidence_range": true,
+          "vision_occlusion_range": true,
+          "vision_latency_nonnegative": true,
+          "vision_noise_nonnegative": true,
+          "tactile_contact_persistence_nonnegative": true,
+          "tactile_motion_nonnegative": true,
+          "tactile_slip_range": true,
+          "tactile_crush_range": true,
+          "tactile_regions_symbolic": true
+        },
+        "failures": [],
+        "warnings": []
+      }
+    },
+    {
+      "label": "other_key_throwaway",
+      "validation": {
+        "status": "PASS",
+        "checks": {
+          "vision_pose_finite": true,
+          "vision_axis_finite": true,
+          "vision_axis_unit": true,
+          "vision_shape_positive": true,
+          "vision_confidence_range": true,
+          "vision_occlusion_range": true,
+          "vision_latency_nonnegative": true,
+          "vision_noise_nonnegative": true,
+          "tactile_contact_persistence_nonnegative": true,
+          "tactile_motion_nonnegative": true,
+          "tactile_slip_range": true,
+          "tactile_crush_range": true,
+          "tactile_regions_symbolic": true
+        },
+        "failures": [],
+        "warnings": []
+      }
+    },
+    {
+      "label": "next_step",
+      "validation": {
+        "status": "PASS",
+        "checks": {
+          "vision_pose_finite": true,
+          "vision_axis_finite": true,
+          "vision_axis_unit": true,
+          "vision_shape_positive": true,
+          "vision_confidence_range": true,
+          "vision_occlusion_range": true,
+          "vision_latency_nonnegative": true,
+          "vision_noise_nonnegative": true,
+          "tactile_contact_persistence_nonnegative": true,
+          "tactile_motion_nonnegative": true,
+          "tactile_slip_range": true,
+          "tactile_crush_range": true,
+          "tactile_regions_symbolic": true
+        },
+        "failures": [],
+        "warnings": []
+      }
+    },
+    {
+      "label": "other_episode",
+      "validation": {
+        "status": "PASS",
+        "checks": {
+          "vision_pose_finite": true,
+          "vision_axis_finite": true,
+          "vision_axis_unit": true,
+          "vision_shape_positive": true,
+          "vision_confidence_range": true,
+          "vision_occlusion_range": true,
+          "vision_latency_nonnegative": true,
+          "vision_noise_nonnegative": true,
+          "tactile_contact_persistence_nonnegative": true,
+          "tactile_motion_nonnegative": true,
+          "tactile_slip_range": true,
+          "tactile_crush_range": true,
+          "tactile_regions_symbolic": true
+        },
+        "failures": [],
+        "warnings": []
+      }
+    }
+  ],
+  "sample_observation_summary": {
+    "vision": {
+      "object_pose_xyz_est": [
+        0.1887736180518006,
+        0.190943276449304,
+        -0.05727924657107632
+      ],
+      "object_axis_est": [
+        0.0018414248882204728,
+        -0.020192340765931717,
+        0.9997944181324346
+      ],
+      "object_shape_params_est": [
+        0.021548343381276445,
+        0.0318238071439707,
+        0.03687897518443727
+      ],
+      "goal_pose_xyz_est": [
+        0.19022382,
+        0.187702,
+        -0.00538044
+      ],
+      "object_to_goal_est": [
+        0.0014502019481993922,
+        -0.003241276449303998,
+        0.05189880657107632
+      ],
+      "confidence": 0.9339999999999999,
+      "occlusion": 0.0,
+      "latency_steps": 2,
+      "noise_std": 0.002,
+      "latency_source": "current"
+    },
+    "tactile": {
+      "contact_present": false,
+      "contact_regions": [
+        "support"
+      ],
+      "normal_contact_proxy": 1.3877787807814457e-17,
+      "contact_persistence": 0,
+      "relative_tangential_motion": 0.0,
+      "slip_score": 0.0,
+      "grip_stable": false,
+      "crush_risk": 6.938893903907228e-16,
+      "release_contact_clear": true
+    },
+    "observation_dim": 130
+  }
+}

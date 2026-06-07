@@ -1,0 +1,1304 @@
+{
+  "generated_at": "2026-06-04T00:57:46",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_stage3_egg_gentle_grasp_hold_v0.xml",
+  "cameras": [
+    "stage3_egg_closeup",
+    "stage3_egg_overview"
+  ],
+  "resolution": [
+    640,
+    480
+  ],
+  "thresholds": {
+    "max_error_m": 0.002
+  },
+  "pose_samples": [
+    {
+      "name": "floor_dx-0.020_dy-0.015",
+      "offset_xyz": [
+        -0.02,
+        -0.015,
+        0.0
+      ],
+      "position_world": [
+        0.17022382,
+        0.17270200000000002,
+        -0.05538044
+      ]
+    },
+    {
+      "name": "floor_dx-0.020_dy+0.000",
+      "offset_xyz": [
+        -0.02,
+        0.0,
+        0.0
+      ],
+      "position_world": [
+        0.17022382,
+        0.187702,
+        -0.05538044
+      ]
+    },
+    {
+      "name": "floor_dx-0.020_dy+0.015",
+      "offset_xyz": [
+        -0.02,
+        0.015,
+        0.0
+      ],
+      "position_world": [
+        0.17022382,
+        0.202702,
+        -0.05538044
+      ]
+    },
+    {
+      "name": "floor_dx+0.000_dy-0.015",
+      "offset_xyz": [
+        0.0,
+        -0.015,
+        0.0
+      ],
+      "position_world": [
+        0.19022382,
+        0.17270200000000002,
+        -0.05538044
+      ]
+    },
+    {
+      "name": "floor_dx+0.000_dy+0.000",
+      "offset_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position_world": [
+        0.19022382,
+        0.187702,
+        -0.05538044
+      ]
+    },
+    {
+      "name": "floor_dx+0.000_dy+0.015",
+      "offset_xyz": [
+        0.0,
+        0.015,
+        0.0
+      ],
+      "position_world": [
+        0.19022382,
+        0.202702,
+        -0.05538044
+      ]
+    },
+    {
+      "name": "floor_dx+0.020_dy-0.015",
+      "offset_xyz": [
+        0.02,
+        -0.015,
+        0.0
+      ],
+      "position_world": [
+        0.21022381999999998,
+        0.17270200000000002,
+        -0.05538044
+      ]
+    },
+    {
+      "name": "floor_dx+0.020_dy+0.000",
+      "offset_xyz": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "position_world": [
+        0.21022381999999998,
+        0.187702,
+        -0.05538044
+      ]
+    },
+    {
+      "name": "floor_dx+0.020_dy+0.015",
+      "offset_xyz": [
+        0.02,
+        0.015,
+        0.0
+      ],
+      "position_world": [
+        0.21022381999999998,
+        0.202702,
+        -0.05538044
+      ]
+    },
+    {
+      "name": "lifted_center_z+0.015",
+      "offset_xyz": [
+        0.0,
+        0.0,
+        0.015
+      ],
+      "position_world": [
+        0.19022382,
+        0.187702,
+        -0.040380440000000004
+      ]
+    },
+    {
+      "name": "lifted_diag_z+0.012",
+      "offset_xyz": [
+        0.014,
+        -0.01,
+        0.012
+      ],
+      "position_world": [
+        0.20422382,
+        0.177702,
+        -0.043380440000000006
+      ]
+    }
+  ],
+  "results": [
+    {
+      "camera": "stage3_egg_closeup",
+      "sample": "floor_dx-0.020_dy-0.015",
+      "status": "ok",
+      "gt_position_world": [
+        0.17022382,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "position_world_est": [
+        0.17017397476823953,
+        0.17268254949286538,
+        -0.05536212059152721
+      ],
+      "surface_centroid_world": [
+        0.1845374251499288,
+        0.17848920855530798,
+        -0.04975193200274399
+      ],
+      "mask_pixels": 12946,
+      "valid_depth_points": 12946,
+      "visibility_fraction": 0.042141927083333336,
+      "confidence": 0.9825508632019755,
+      "fit_residual_rms": 0.004400791854095386,
+      "depth_m": {
+        "min": 0.34076541662216187,
+        "mean": 0.3499552309513092,
+        "max": 0.37546417117118835
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 697.0106106421974,
+        "fy": 697.0106106421974,
+        "cx": 319.5,
+        "cy": 239.5,
+        "fovy_deg": 38.0
+      },
+      "camera_pose": {
+        "position_world": [
+          0.497656,
+          0.293545,
+          0.059685
+        ],
+        "xmat_world": [
+          [
+            -0.4226179651788168,
+            -0.28006470956070706,
+            0.8619500066516579
+          ],
+          [
+            0.906307925325668,
+            -0.1305962072773571,
+            0.40193354567223316
+          ],
+          [
+            5.551115123125783e-17,
+            0.951056459472016,
+            0.3090171692585278
+          ]
+        ]
+      },
+      "assumptions": {
+        "object_shape": "known upright ellipsoid",
+        "radii_m": [
+          0.022,
+          0.032,
+          0.038
+        ],
+        "mask_source": "MuJoCo segmentation for egg_geom"
+      },
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx-0_020_dy-0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx-0_020_dy-0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx-0_020_dy-0_015_depth.png"
+      },
+      "position_error_m": 5.655501820212175e-05,
+      "position_error_xyz_m": [
+        -4.9845231760464737e-05,
+        -1.9450507134644024e-05,
+        1.8319408472793064e-05
+      ]
+    },
+    {
+      "camera": "stage3_egg_closeup",
+      "sample": "floor_dx-0.020_dy+0.000",
+      "status": "ok",
+      "gt_position_world": [
+        0.17022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_world_est": [
+        0.17017378279080575,
+        0.18768398420789711,
+        -0.05536153666503403
+      ],
+      "surface_centroid_world": [
+        0.18462787481016596,
+        0.19290488883701296,
+        -0.04970701460724925
+      ],
+      "mask_pixels": 13533,
+      "valid_depth_points": 13533,
+      "visibility_fraction": 0.044052734375,
+      "confidence": 0.9825681398508146,
+      "fit_residual_rms": 0.004396396026460347,
+      "depth_m": {
+        "min": 0.33473899960517883,
+        "mean": 0.344069242477417,
+        "max": 0.3705383837223053
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 697.0106106421974,
+        "fy": 697.0106106421974,
+        "cx": 319.5,
+        "cy": 239.5,
+        "fovy_deg": 38.0
+      },
+      "camera_pose": {
+        "position_world": [
+          0.497656,
+          0.293545,
+          0.059685
+        ],
+        "xmat_world": [
+          [
+            -0.4226179651788168,
+            -0.28006470956070706,
+            0.8619500066516579
+          ],
+          [
+            0.906307925325668,
+            -0.1305962072773571,
+            0.40193354567223316
+          ],
+          [
+            5.551115123125783e-17,
+            0.951056459472016,
+            0.3090171692585278
+          ]
+        ]
+      },
+      "assumptions": {
+        "object_shape": "known upright ellipsoid",
+        "radii_m": [
+          0.022,
+          0.032,
+          0.038
+        ],
+        "mask_source": "MuJoCo segmentation for egg_geom"
+      },
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx-0_020_dy_0_000_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx-0_020_dy_0_000_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx-0_020_dy_0_000_depth.png"
+      },
+      "position_error_m": 5.644136020578674e-05,
+      "position_error_xyz_m": [
+        -5.0037209194248033e-05,
+        -1.801579210289339e-05,
+        1.8903334965972296e-05
+      ]
+    },
+    {
+      "camera": "stage3_egg_closeup",
+      "sample": "floor_dx-0.020_dy+0.015",
+      "status": "ok",
+      "gt_position_world": [
+        0.17022382,
+        0.202702,
+        -0.05538044
+      ],
+      "position_world_est": [
+        0.17017220573570138,
+        0.20268632819818444,
+        -0.055361638600153695
+      ],
+      "surface_centroid_world": [
+        0.1847317565149077,
+        0.20732427709821113,
+        -0.0496649975203696
+      ],
+      "mask_pixels": 14144,
+      "valid_depth_points": 14144,
+      "visibility_fraction": 0.04604166666666667,
+      "confidence": 0.9825729056583411,
+      "fit_residual_rms": 0.004395183439827604,
+      "depth_m": {
+        "min": 0.3287077248096466,
+        "mean": 0.3381710946559906,
+        "max": 0.36415377259254456
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 697.0106106421974,
+        "fy": 697.0106106421974,
+        "cx": 319.5,
+        "cy": 239.5,
+        "fovy_deg": 38.0
+      },
+      "camera_pose": {
+        "position_world": [
+          0.497656,
+          0.293545,
+          0.059685
+        ],
+        "xmat_world": [
+          [
+            -0.4226179651788168,
+            -0.28006470956070706,
+            0.8619500066516579
+          ],
+          [
+            0.906307925325668,
+            -0.1305962072773571,
+            0.40193354567223316
+          ],
+          [
+            5.551115123125783e-17,
+            0.951056459472016,
+            0.3090171692585278
+          ]
+        ]
+      },
+      "assumptions": {
+        "object_shape": "known upright ellipsoid",
+        "radii_m": [
+          0.022,
+          0.032,
+          0.038
+        ],
+        "mask_source": "MuJoCo segmentation for egg_geom"
+      },
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx-0_020_dy_0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx-0_020_dy_0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx-0_020_dy_0_015_depth.png"
+      },
+      "position_error_m": 5.712381541366192e-05,
+      "position_error_xyz_m": [
+        -5.161426429861615e-05,
+        -1.5671801815553277e-05,
+        1.8801399846307687e-05
+      ]
+    },
+    {
+      "camera": "stage3_egg_closeup",
+      "sample": "floor_dx+0.000_dy-0.015",
+      "status": "ok",
+      "gt_position_world": [
+        0.19022382,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "position_world_est": [
+        0.1901736437680366,
+        0.17268087359837603,
+        -0.05536098464206963
+      ],
+      "surface_centroid_world": [
+        0.20446675200295591,
+        0.17881149656658524,
+        -0.04943912642633616
+      ],
+      "mask_pixels": 14151,
+      "valid_depth_points": 14151,
+      "visibility_fraction": 0.046064453125,
+      "confidence": 0.9826052512537422,
+      "fit_residual_rms": 0.0043869537545722665,
+      "depth_m": {
+        "min": 0.32353267073631287,
+        "mean": 0.33255094289779663,
+        "max": 0.35879048705101013
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 697.0106106421974,
+        "fy": 697.0106106421974,
+        "cx": 319.5,
+        "cy": 239.5,
+        "fovy_deg": 38.0
+      },
+      "camera_pose": {
+        "position_world": [
+          0.497656,
+          0.293545,
+          0.059685
+        ],
+        "xmat_world": [
+          [
+            -0.4226179651788168,
+            -0.28006470956070706,
+            0.8619500066516579
+          ],
+          [
+            0.906307925325668,
+            -0.1305962072773571,
+            0.40193354567223316
+          ],
+          [
+            5.551115123125783e-17,
+            0.951056459472016,
+            0.3090171692585278
+          ]
+        ]
+      },
+      "assumptions": {
+        "object_shape": "known upright ellipsoid",
+        "radii_m": [
+          0.022,
+          0.032,
+          0.038
+        ],
+        "mask_source": "MuJoCo segmentation for egg_geom"
+      },
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_000_dy-0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_000_dy-0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_000_dy-0_015_depth.png"
+      },
+      "position_error_m": 5.781427204263677e-05,
+      "position_error_xyz_m": [
+        -5.017623196337806e-05,
+        -2.1126401623994262e-05,
+        1.9455357930374395e-05
+      ]
+    },
+    {
+      "camera": "stage3_egg_closeup",
+      "sample": "floor_dx+0.000_dy+0.000",
+      "status": "ok",
+      "gt_position_world": [
+        0.19022382,
+        0.187702,
+        -0.05538044
+      ],
+      "position_world_est": [
+        0.19017349885995966,
+        0.1876832558978232,
+        -0.055360504014060535
+      ],
+      "surface_centroid_world": [
+        0.20456741404128645,
+        0.19321576396481202,
+        -0.04936196129317919
+      ],
+      "mask_pixels": 14809,
+      "valid_depth_points": 14809,
+      "visibility_fraction": 0.04820638020833334,
+      "confidence": 0.9825922849548575,
+      "fit_residual_rms": 0.004390252735627861,
+      "depth_m": {
+        "min": 0.3174916207790375,
+        "mean": 0.32665079832077026,
+        "max": 0.3518751561641693
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 697.0106106421974,
+        "fy": 697.0106106421974,
+        "cx": 319.5,
+        "cy": 239.5,
+        "fovy_deg": 38.0
+      },
+      "camera_pose": {
+        "position_world": [
+          0.497656,
+          0.293545,
+          0.059685
+        ],
+        "xmat_world": [
+          [
+            -0.4226179651788168,
+            -0.28006470956070706,
+            0.8619500066516579
+          ],
+          [
+            0.906307925325668,
+            -0.1305962072773571,
+            0.40193354567223316
+          ],
+          [
+            5.551115123125783e-17,
+            0.951056459472016,
+            0.3090171692585278
+          ]
+        ]
+      },
+      "assumptions": {
+        "object_shape": "known upright ellipsoid",
+        "radii_m": [
+          0.022,
+          0.032,
+          0.038
+        ],
+        "mask_source": "MuJoCo segmentation for egg_geom"
+      },
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_000_dy_0_000_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_000_dy_0_000_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_000_dy_0_000_depth.png"
+      },
+      "position_error_m": 5.728003174538307e-05,
+      "position_error_xyz_m": [
+        -5.03211400403325e-05,
+        -1.8744102176809774e-05,
+        1.993598593946766e-05
+      ]
+    },
+    {
+      "camera": "stage3_egg_closeup",
+      "sample": "floor_dx+0.000_dy+0.015",
+      "status": "ok",
+      "gt_position_world": [
+        0.19022382,
+        0.202702,
+        -0.05538044
+      ],
+      "position_world_est": [
+        0.19017182007797234,
+        0.20268563704260262,
+        -0.055361177842581134
+      ],
+      "surface_centroid_world": [
+        0.20468302144134828,
+        0.2075807191413439,
+        -0.04934847391539631
+      ],
+      "mask_pixels": 15515,
+      "valid_depth_points": 15515,
+      "visibility_fraction": 0.05050455729166667,
+      "confidence": 0.9826096177969892,
+      "fit_residual_rms": 0.00438584279634684,
+      "depth_m": {
+        "min": 0.31146782636642456,
+        "mean": 0.3207732141017914,
+        "max": 0.34664955735206604
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 697.0106106421974,
+        "fy": 697.0106106421974,
+        "cx": 319.5,
+        "cy": 239.5,
+        "fovy_deg": 38.0
+      },
+      "camera_pose": {
+        "position_world": [
+          0.497656,
+          0.293545,
+          0.059685
+        ],
+        "xmat_world": [
+          [
+            -0.4226179651788168,
+            -0.28006470956070706,
+            0.8619500066516579
+          ],
+          [
+            0.906307925325668,
+            -0.1305962072773571,
+            0.40193354567223316
+          ],
+          [
+            5.551115123125783e-17,
+            0.951056459472016,
+            0.3090171692585278
+          ]
+        ]
+      },
+      "assumptions": {
+        "object_shape": "known upright ellipsoid",
+        "radii_m": [
+          0.022,
+          0.032,
+          0.038
+        ],
+        "mask_source": "MuJoCo segmentation for egg_geom"
+      },
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_000_dy_0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_000_dy_0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_000_dy_0_015_depth.png"
+      },
+      "position_error_m": 5.781668421916668e-05,
+      "position_error_xyz_m": [
+        -5.1999922027645695e-05,
+        -1.6362957397375588e-05,
+        1.9262157418868664e-05
+      ]
+    },
+    {
+      "camera": "stage3_egg_closeup",
+      "sample": "floor_dx+0.020_dy-0.015",
+      "status": "ok",
+      "gt_position_world": [
+        0.21022381999999998,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "position_world_est": [
+        0.2101739178554708,
+        0.17267915098437003,
+        -0.055359966185734556
+      ],
+      "surface_centroid_world": [
+        0.2243785318861406,
+        0.179161132241685,
+        -0.04910046581919193
+      ],
+      "mask_pixels": 15541,
+      "valid_depth_points": 15541,
+      "visibility_fraction": 0.050589192708333335,
+      "confidence": 0.9826188471804429,
+      "fit_residual_rms": 0.004383494625735086,
+      "depth_m": {
+        "min": 0.30628758668899536,
+        "mean": 0.31514281034469604,
+        "max": 0.34086352586746216
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 697.0106106421974,
+        "fy": 697.0106106421974,
+        "cx": 319.5,
+        "cy": 239.5,
+        "fovy_deg": 38.0
+      },
+      "camera_pose": {
+        "position_world": [
+          0.497656,
+          0.293545,
+          0.059685
+        ],
+        "xmat_world": [
+          [
+            -0.4226179651788168,
+            -0.28006470956070706,
+            0.8619500066516579
+          ],
+          [
+            0.906307925325668,
+            -0.1305962072773571,
+            0.40193354567223316
+          ],
+          [
+            5.551115123125783e-17,
+            0.951056459472016,
+            0.3090171692585278
+          ]
+        ]
+      },
+      "assumptions": {
+        "object_shape": "known upright ellipsoid",
+        "radii_m": [
+          0.022,
+          0.032,
+          0.038
+        ],
+        "mask_source": "MuJoCo segmentation for egg_geom"
+      },
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_020_dy-0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_020_dy-0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_020_dy-0_015_depth.png"
+      },
+      "position_error_m": 5.857882394216466e-05,
+      "position_error_xyz_m": [
+        -4.990214452918473e-05,
+        -2.2849015629988756e-05,
+        2.0473814265446755e-05
+      ]
+    },
+    {
+      "camera": "stage3_egg_closeup",
+      "sample": "floor_dx+0.020_dy+0.000",
+      "status": "ok",
+      "gt_position_world": [
+        0.21022381999999998,
+        0.187702,
+        -0.05538044
+      ],
+      "position_world_est": [
+        0.2101731592144518,
+        0.18768207732697034,
+        -0.055359617544905954
+      ],
+      "surface_centroid_world": [
+        0.22450602241372244,
+        0.19352738307251566,
+        -0.0490393535325661
+      ],
+      "mask_pixels": 16283,
+      "valid_depth_points": 16283,
+      "visibility_fraction": 0.053004557291666664,
+      "confidence": 0.9826154765837015,
+      "fit_residual_rms": 0.004384352181676524,
+      "depth_m": {
+        "min": 0.3002574145793915,
+        "mean": 0.3092397451400757,
+        "max": 0.33522191643714905
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 697.0106106421974,
+        "fy": 697.0106106421974,
+        "cx": 319.5,
+        "cy": 239.5,
+        "fovy_deg": 38.0
+      },
+      "camera_pose": {
+        "position_world": [
+          0.497656,
+          0.293545,
+          0.059685
+        ],
+        "xmat_world": [
+          [
+            -0.4226179651788168,
+            -0.28006470956070706,
+            0.8619500066516579
+          ],
+          [
+            0.906307925325668,
+            -0.1305962072773571,
+            0.40193354567223316
+          ],
+          [
+            5.551115123125783e-17,
+            0.951056459472016,
+            0.3090171692585278
+          ]
+        ]
+      },
+      "assumptions": {
+        "object_shape": "known upright ellipsoid",
+        "radii_m": [
+          0.022,
+          0.032,
+          0.038
+        ],
+        "mask_source": "MuJoCo segmentation for egg_geom"
+      },
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_020_dy_0_000_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_020_dy_0_000_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_020_dy_0_000_depth.png"
+      },
+      "position_error_m": 5.8283811896189104e-05,
+      "position_error_xyz_m": [
+        -5.066078554818998e-05,
+        -1.9922673029665328e-05,
+        2.0822455094049452e-05
+      ]
+    },
+    {
+      "camera": "stage3_egg_closeup",
+      "sample": "floor_dx+0.020_dy+0.015",
+      "status": "ok",
+      "gt_position_world": [
+        0.21022381999999998,
+        0.202702,
+        -0.05538044
+      ],
+      "position_world_est": [
+        0.2101727039368098,
+        0.20268447010683388,
+        -0.05535949670549475
+      ],
+      "surface_centroid_world": [
+        0.22463564941306574,
+        0.20785587400052438,
+        -0.04897445629701388
+      ],
+      "mask_pixels": 17084,
+      "valid_depth_points": 17084,
+      "visibility_fraction": 0.055611979166666665,
+      "confidence": 0.982636274456026,
+      "fit_residual_rms": 0.0043790607801260095,
+      "depth_m": {
+        "min": 0.2942339777946472,
+        "mean": 0.3033488690853119,
+        "max": 0.32943952083587646
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 697.0106106421974,
+        "fy": 697.0106106421974,
+        "cx": 319.5,
+        "cy": 239.5,
+        "fovy_deg": 38.0
+      },
+      "camera_pose": {
+        "position_world": [
+          0.497656,
+          0.293545,
+          0.059685
+        ],
+        "xmat_world": [
+          [
+            -0.4226179651788168,
+            -0.28006470956070706,
+            0.8619500066516579
+          ],
+          [
+            0.906307925325668,
+            -0.1305962072773571,
+            0.40193354567223316
+          ],
+          [
+            5.551115123125783e-17,
+            0.951056459472016,
+            0.3090171692585278
+          ]
+        ]
+      },
+      "assumptions": {
+        "object_shape": "known upright ellipsoid",
+        "radii_m": [
+          0.022,
+          0.032,
+          0.038
+        ],
+        "mask_source": "MuJoCo segmentation for egg_geom"
+      },
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_020_dy_0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_020_dy_0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_floor_dx_0_020_dy_0_015_depth.png"
+      },
+      "position_error_m": 5.795490190838199e-05,
+      "position_error_xyz_m": [
+        -5.111606319016526e-05,
+        -1.7529893166112753e-05,
+        2.094329450525595e-05
+      ]
+    },
+    {
+      "camera": "stage3_egg_closeup",
+      "sample": "lifted_center_z+0.015",
+      "status": "ok",
+      "gt_position_world": [
+        0.19022382,
+        0.187702,
+        -0.040380440000000004
+      ],
+      "position_world_est": [
+        0.19017561381721257,
+        0.187684053226156,
+        -0.040364577454799974
+      ],
+      "surface_centroid_world": [
+        0.2048115635135417,
+        0.19332531684554305,
+        -0.03547755254502391
+      ],
+      "mask_pixels": 15123,
+      "valid_depth_points": 15123,
+      "visibility_fraction": 0.049228515625,
+      "confidence": 0.9825468822512757,
+      "fit_residual_rms": 0.00440180476826441,
+      "depth_m": {
+        "min": 0.3128626048564911,
+        "mean": 0.3221057951450348,
+        "max": 0.34799349308013916
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 697.0106106421974,
+        "fy": 697.0106106421974,
+        "cx": 319.5,
+        "cy": 239.5,
+        "fovy_deg": 38.0
+      },
+      "camera_pose": {
+        "position_world": [
+          0.497656,
+          0.293545,
+          0.059685
+        ],
+        "xmat_world": [
+          [
+            -0.4226179651788168,
+            -0.28006470956070706,
+            0.8619500066516579
+          ],
+          [
+            0.906307925325668,
+            -0.1305962072773571,
+            0.40193354567223316
+          ],
+          [
+            5.551115123125783e-17,
+            0.951056459472016,
+            0.3090171692585278
+          ]
+        ]
+      },
+      "assumptions": {
+        "object_shape": "known upright ellipsoid",
+        "radii_m": [
+          0.022,
+          0.032,
+          0.038
+        ],
+        "mask_source": "MuJoCo segmentation for egg_geom"
+      },
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_lifted_center_z_0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_lifted_center_z_0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_lifted_center_z_0_015_depth.png"
+      },
+      "position_error_m": 5.382883140627333e-05,
+      "position_error_xyz_m": [
+        -4.820618278741917e-05,
+        -1.7946773844007557e-05,
+        1.5862545200029388e-05
+      ]
+    },
+    {
+      "camera": "stage3_egg_closeup",
+      "sample": "lifted_diag_z+0.012",
+      "status": "ok",
+      "gt_position_world": [
+        0.20422382,
+        0.177702,
+        -0.043380440000000006
+      ],
+      "position_world_est": [
+        0.20417342835729535,
+        0.17768079296425948,
+        -0.04336169191429888
+      ],
+      "surface_centroid_world": [
+        0.21852259800825147,
+        0.1838775193431794,
+        -0.03768454926034397
+      ],
+      "mask_pixels": 15777,
+      "valid_depth_points": 15777,
+      "visibility_fraction": 0.051357421875,
+      "confidence": 0.982583592425165,
+      "fit_residual_rms": 0.004392464377291228,
+      "depth_m": {
+        "min": 0.3057425618171692,
+        "mean": 0.31476694345474243,
+        "max": 0.3397315442562103
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 697.0106106421974,
+        "fy": 697.0106106421974,
+        "cx": 319.5,
+        "cy": 239.5,
+        "fovy_deg": 38.0
+      },
+      "camera_pose": {
+        "position_world": [
+          0.497656,
+          0.293545,
+          0.059685
+        ],
+        "xmat_world": [
+          [
+            -0.4226179651788168,
+            -0.28006470956070706,
+            0.8619500066516579
+          ],
+          [
+            0.906307925325668,
+            -0.1305962072773571,
+            0.40193354567223316
+          ],
+          [
+            5.551115123125783e-17,
+            0.951056459472016,
+            0.3090171692585278
+          ]
+        ]
+      },
+      "assumptions": {
+        "object_shape": "known upright ellipsoid",
+        "radii_m": [
+          0.022,
+          0.032,
+          0.038
+        ],
+        "mask_source": "MuJoCo segmentation for egg_geom"
+      },
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_lifted_diag_z_0_012_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_lifted_diag_z_0_012_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_closeup\\stage3_egg_closeup_lifted_diag_z_0_012_depth.png"
+      },
+      "position_error_m": 5.779746306568697e-05,
+      "position_error_xyz_m": [
+        -5.039164270465024e-05,
+        -2.1207035740516966e-05,
+        1.874808570112574e-05
+      ]
+    },
+    {
+      "camera": "stage3_egg_overview",
+      "sample": "floor_dx-0.020_dy-0.015",
+      "status": "failed",
+      "gt_position_world": [
+        0.17022382,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "reason": "too_few_mask_pixels",
+      "mask_pixels": 0,
+      "min_mask_pixels": 80,
+      "confidence": 0.0,
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx-0_020_dy-0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx-0_020_dy-0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx-0_020_dy-0_015_depth.png"
+      }
+    },
+    {
+      "camera": "stage3_egg_overview",
+      "sample": "floor_dx-0.020_dy+0.000",
+      "status": "failed",
+      "gt_position_world": [
+        0.17022382,
+        0.187702,
+        -0.05538044
+      ],
+      "reason": "too_few_mask_pixels",
+      "mask_pixels": 0,
+      "min_mask_pixels": 80,
+      "confidence": 0.0,
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx-0_020_dy_0_000_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx-0_020_dy_0_000_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx-0_020_dy_0_000_depth.png"
+      }
+    },
+    {
+      "camera": "stage3_egg_overview",
+      "sample": "floor_dx-0.020_dy+0.015",
+      "status": "failed",
+      "gt_position_world": [
+        0.17022382,
+        0.202702,
+        -0.05538044
+      ],
+      "reason": "too_few_mask_pixels",
+      "mask_pixels": 0,
+      "min_mask_pixels": 80,
+      "confidence": 0.0,
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx-0_020_dy_0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx-0_020_dy_0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx-0_020_dy_0_015_depth.png"
+      }
+    },
+    {
+      "camera": "stage3_egg_overview",
+      "sample": "floor_dx+0.000_dy-0.015",
+      "status": "failed",
+      "gt_position_world": [
+        0.19022382,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "reason": "too_few_mask_pixels",
+      "mask_pixels": 0,
+      "min_mask_pixels": 80,
+      "confidence": 0.0,
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_000_dy-0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_000_dy-0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_000_dy-0_015_depth.png"
+      }
+    },
+    {
+      "camera": "stage3_egg_overview",
+      "sample": "floor_dx+0.000_dy+0.000",
+      "status": "failed",
+      "gt_position_world": [
+        0.19022382,
+        0.187702,
+        -0.05538044
+      ],
+      "reason": "too_few_mask_pixels",
+      "mask_pixels": 0,
+      "min_mask_pixels": 80,
+      "confidence": 0.0,
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_000_dy_0_000_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_000_dy_0_000_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_000_dy_0_000_depth.png"
+      }
+    },
+    {
+      "camera": "stage3_egg_overview",
+      "sample": "floor_dx+0.000_dy+0.015",
+      "status": "failed",
+      "gt_position_world": [
+        0.19022382,
+        0.202702,
+        -0.05538044
+      ],
+      "reason": "too_few_mask_pixels",
+      "mask_pixels": 0,
+      "min_mask_pixels": 80,
+      "confidence": 0.0,
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_000_dy_0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_000_dy_0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_000_dy_0_015_depth.png"
+      }
+    },
+    {
+      "camera": "stage3_egg_overview",
+      "sample": "floor_dx+0.020_dy-0.015",
+      "status": "failed",
+      "gt_position_world": [
+        0.21022381999999998,
+        0.17270200000000002,
+        -0.05538044
+      ],
+      "reason": "too_few_mask_pixels",
+      "mask_pixels": 0,
+      "min_mask_pixels": 80,
+      "confidence": 0.0,
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_020_dy-0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_020_dy-0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_020_dy-0_015_depth.png"
+      }
+    },
+    {
+      "camera": "stage3_egg_overview",
+      "sample": "floor_dx+0.020_dy+0.000",
+      "status": "failed",
+      "gt_position_world": [
+        0.21022381999999998,
+        0.187702,
+        -0.05538044
+      ],
+      "reason": "too_few_mask_pixels",
+      "mask_pixels": 0,
+      "min_mask_pixels": 80,
+      "confidence": 0.0,
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_020_dy_0_000_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_020_dy_0_000_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_020_dy_0_000_depth.png"
+      }
+    },
+    {
+      "camera": "stage3_egg_overview",
+      "sample": "floor_dx+0.020_dy+0.015",
+      "status": "failed",
+      "gt_position_world": [
+        0.21022381999999998,
+        0.202702,
+        -0.05538044
+      ],
+      "reason": "too_few_mask_pixels",
+      "mask_pixels": 0,
+      "min_mask_pixels": 80,
+      "confidence": 0.0,
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_020_dy_0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_020_dy_0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_floor_dx_0_020_dy_0_015_depth.png"
+      }
+    },
+    {
+      "camera": "stage3_egg_overview",
+      "sample": "lifted_center_z+0.015",
+      "status": "failed",
+      "gt_position_world": [
+        0.19022382,
+        0.187702,
+        -0.040380440000000004
+      ],
+      "reason": "too_few_mask_pixels",
+      "mask_pixels": 0,
+      "min_mask_pixels": 80,
+      "confidence": 0.0,
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_lifted_center_z_0_015_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_lifted_center_z_0_015_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_lifted_center_z_0_015_depth.png"
+      }
+    },
+    {
+      "camera": "stage3_egg_overview",
+      "sample": "lifted_diag_z+0.012",
+      "status": "failed",
+      "gt_position_world": [
+        0.20422382,
+        0.177702,
+        -0.043380440000000006
+      ],
+      "reason": "too_few_mask_pixels",
+      "mask_pixels": 0,
+      "min_mask_pixels": 80,
+      "confidence": 0.0,
+      "debug_images": {
+        "rgb": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_lifted_diag_z_0_012_rgb.png",
+        "mask_overlay": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_lifted_diag_z_0_012_mask_overlay.png",
+        "depth": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0\\stage3_egg_overview\\stage3_egg_overview_lifted_diag_z_0_012_depth.png"
+      }
+    }
+  ],
+  "summary_by_camera": {
+    "stage3_egg_closeup": {
+      "samples": 11,
+      "status": "ok",
+      "mean_error_m": 5.722500127704118e-05,
+      "max_error_m": 5.857882394216466e-05,
+      "rms_error_m": 5.723859981929618e-05,
+      "min_mask_pixels": 12946,
+      "mean_mask_pixels": 14991.454545454546
+    },
+    "stage3_egg_overview": {
+      "samples": 0,
+      "status": "failed",
+      "reason": "no_ok_samples"
+    }
+  },
+  "overall_max_error_m": 5.857882394216466e-05,
+  "overall_status": "FAIL",
+  "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\metadata\\stage3_egg_pose_sensor_camera_probe_v0.json",
+  "visual_dir": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\external_sensors\\visual_checks\\stage3_egg_pose_sensor_camera_probe_v0"
+}

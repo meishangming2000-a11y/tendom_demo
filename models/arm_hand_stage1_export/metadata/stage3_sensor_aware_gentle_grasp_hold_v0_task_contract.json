@@ -1,0 +1,496 @@
+{
+  "generated_at": "2026-06-03T21:27:11",
+  "task_name": "stage3_sensor_aware_gentle_grasp_hold",
+  "contract_version": "stage3_sensor_aware_gentle_grasp_hold_v0",
+  "stage": "stage3_sensor_aware_mujoco_manipulation",
+  "training_ready": false,
+  "mujoco_only": true,
+  "hardware_integration": false,
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_stage3_egg_gentle_grasp_hold_v0.xml",
+  "object": {
+    "body_name": "egg",
+    "joint_name": "egg_freejoint",
+    "geom_name": "egg_geom",
+    "shape": "ellipsoid",
+    "shape_params_xyz_m": [
+      0.022,
+      0.032,
+      0.038
+    ],
+    "default_position_xyz": [
+      0.19022382,
+      0.187702,
+      -0.05538044
+    ],
+    "fragile_proxy": "crush_risk from MuJoCo penetration/contact proxy"
+  },
+  "phases": [
+    "default_hold",
+    "vision_acquire",
+    "approach",
+    "pre_contact_align",
+    "gentle_close",
+    "contact_settle",
+    "grasp_secure_check",
+    "lift",
+    "hold",
+    "slip_recover_or_abort",
+    "release_or_reset"
+  ],
+  "action": {
+    "type": "position_target_vector",
+    "dim": 26,
+    "entries": [
+      {
+        "index": 0,
+        "actuator": "a_j1",
+        "joint": "j1",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -3.1416,
+          3.1416
+        ]
+      },
+      {
+        "index": 1,
+        "actuator": "a_j2",
+        "joint": "j2",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.5708,
+          1.5708
+        ]
+      },
+      {
+        "index": 2,
+        "actuator": "a_j3",
+        "joint": "j3",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.5708,
+          1.5708
+        ]
+      },
+      {
+        "index": 3,
+        "actuator": "a_j4",
+        "joint": "j4",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -3.1416,
+          3.1416
+        ]
+      },
+      {
+        "index": 4,
+        "actuator": "wrist_1_joint_pos",
+        "joint": "wrist_1_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.8,
+          0.8
+        ]
+      },
+      {
+        "index": 5,
+        "actuator": "wrist_2_joint_pos",
+        "joint": "wrist_2_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.8,
+          0.8
+        ]
+      },
+      {
+        "index": 6,
+        "actuator": "index_mcp_flex_joint_pos",
+        "joint": "index_mcp_flex_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.3,
+          0.18
+        ]
+      },
+      {
+        "index": 7,
+        "actuator": "index_mcp_abd_joint_pos",
+        "joint": "index_mcp_abd_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.78,
+          0.08
+        ]
+      },
+      {
+        "index": 8,
+        "actuator": "index_pip_joint_pos",
+        "joint": "index_pip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.1,
+          0.04
+        ]
+      },
+      {
+        "index": 9,
+        "actuator": "index_dip_joint_pos",
+        "joint": "index_dip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.66,
+          0.04
+        ]
+      },
+      {
+        "index": 10,
+        "actuator": "middle_mcp_flex_joint_pos",
+        "joint": "middle_mcp_flex_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.3,
+          0.18
+        ]
+      },
+      {
+        "index": 11,
+        "actuator": "middle_mcp_abd_joint_pos",
+        "joint": "middle_mcp_abd_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.86,
+          0.08
+        ]
+      },
+      {
+        "index": 12,
+        "actuator": "middle_pip_joint_pos",
+        "joint": "middle_pip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.16,
+          0.04
+        ]
+      },
+      {
+        "index": 13,
+        "actuator": "middle_dip_joint_pos",
+        "joint": "middle_dip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.7,
+          0.04
+        ]
+      },
+      {
+        "index": 14,
+        "actuator": "ring_mcp_flex_joint_pos",
+        "joint": "ring_mcp_flex_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.3,
+          0.18
+        ]
+      },
+      {
+        "index": 15,
+        "actuator": "ring_mcp_abd_joint_pos",
+        "joint": "ring_mcp_abd_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.84,
+          0.08
+        ]
+      },
+      {
+        "index": 16,
+        "actuator": "ring_pip_joint_pos",
+        "joint": "ring_pip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.1,
+          0.04
+        ]
+      },
+      {
+        "index": 17,
+        "actuator": "ring_dip_joint_pos",
+        "joint": "ring_dip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.68,
+          0.04
+        ]
+      },
+      {
+        "index": 18,
+        "actuator": "little_mcp_flex_joint_pos",
+        "joint": "little_mcp_flex_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.28,
+          0.16
+        ]
+      },
+      {
+        "index": 19,
+        "actuator": "little_mcp_abd_joint_pos",
+        "joint": "little_mcp_abd_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.76,
+          0.08
+        ]
+      },
+      {
+        "index": 20,
+        "actuator": "little_pip_joint_pos",
+        "joint": "little_pip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.0,
+          0.04
+        ]
+      },
+      {
+        "index": 21,
+        "actuator": "little_dip_joint_pos",
+        "joint": "little_dip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.62,
+          0.04
+        ]
+      },
+      {
+        "index": 22,
+        "actuator": "thumb_cmc_abd_joint_pos",
+        "joint": "thumb_cmc_abd_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -1.05,
+          1.05
+        ]
+      },
+      {
+        "index": 23,
+        "actuator": "thumb_cmc_joint_pos",
+        "joint": "thumb_cmc_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.95,
+          0.95
+        ]
+      },
+      {
+        "index": 24,
+        "actuator": "thumb_mcp_joint_pos",
+        "joint": "thumb_mcp_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.1,
+          1.2
+        ]
+      },
+      {
+        "index": 25,
+        "actuator": "thumb_ip_joint_pos",
+        "joint": "thumb_ip_joint",
+        "ctrl_limited": true,
+        "ctrlrange": [
+          -0.85,
+          0.05
+        ]
+      }
+    ]
+  },
+  "observation": {
+    "type": "flat_sensor_abstraction_vector",
+    "dim": 130,
+    "phase_names": [
+      "default_hold",
+      "vision_acquire",
+      "approach",
+      "pre_contact_align",
+      "gentle_close",
+      "contact_settle",
+      "grasp_secure_check",
+      "lift",
+      "hold",
+      "slip_recover_or_abort",
+      "release_or_reset"
+    ],
+    "vision_fields": [
+      "object_pose_xyz_est",
+      "object_axis_est",
+      "object_shape_params_est",
+      "goal_pose_xyz_est",
+      "object_to_goal_est",
+      "confidence",
+      "occlusion",
+      "latency_steps",
+      "noise_std"
+    ],
+    "tactile_fields": [
+      "contact_present",
+      "contact_regions",
+      "normal_contact_proxy",
+      "contact_persistence",
+      "relative_tangential_motion",
+      "slip_score",
+      "grip_stable",
+      "crush_risk",
+      "release_contact_clear"
+    ],
+    "slices": {
+      "proprio.qpos": {
+        "start": 0,
+        "stop": 33,
+        "length": 33
+      },
+      "proprio.qvel": {
+        "start": 33,
+        "stop": 65,
+        "length": 32
+      },
+      "proprio.ctrl": {
+        "start": 65,
+        "stop": 91,
+        "length": 26
+      },
+      "phase.one_hot": {
+        "start": 91,
+        "stop": 102,
+        "length": 11
+      },
+      "phase.progress": {
+        "start": 102,
+        "stop": 103,
+        "length": 1
+      },
+      "vision.object_pose_xyz_est": {
+        "start": 103,
+        "stop": 106,
+        "length": 3
+      },
+      "vision.object_axis_est": {
+        "start": 106,
+        "stop": 109,
+        "length": 3
+      },
+      "vision.object_shape_params_est": {
+        "start": 109,
+        "stop": 112,
+        "length": 3
+      },
+      "vision.goal_pose_xyz_est": {
+        "start": 112,
+        "stop": 115,
+        "length": 3
+      },
+      "vision.object_to_goal_est": {
+        "start": 115,
+        "stop": 118,
+        "length": 3
+      },
+      "vision.scalars": {
+        "start": 118,
+        "stop": 122,
+        "length": 4
+      },
+      "tactile.scalars": {
+        "start": 122,
+        "stop": 130,
+        "length": 8
+      }
+    },
+    "ground_truth_policy_input": false
+  },
+  "thresholds": {
+    "success_lift_height_m": 0.05,
+    "success_hold_duration_s": 3.0,
+    "success_max_pose_drift_m": 0.025,
+    "success_max_slip_score": 0.35,
+    "success_max_crush_risk": 0.65,
+    "success_max_penetration_m": 0.012,
+    "failure_max_penetration_m": 0.02,
+    "premature_push_xy_m": 0.01,
+    "min_vision_confidence": 0.5,
+    "no_contact_timeout_steps": 900,
+    "max_episode_steps": 3000
+  },
+  "sensor_abstraction": {
+    "version": "stage3_sensor_abstraction_v0",
+    "requirements_doc": "docs/stage3_sensor_requirements_v0.md",
+    "replay_safe": true,
+    "sensor_config": {
+      "base_seed": 0,
+      "vision": {
+        "pose_noise_std_m": 0.002,
+        "axis_noise_std": 0.01,
+        "shape_noise_std_m": 0.001,
+        "confidence_nominal": 0.95,
+        "occlusion": 0.0,
+        "latency_steps": 2
+      },
+      "tactile": {
+        "slip_tangential_scale_mps": 0.12,
+        "slip_downward_scale_mps": 0.08,
+        "grip_stable_min_persistence_steps": 30,
+        "release_max_hand_contacts": 0
+      },
+      "replay_key": "sha256(base_seed, episode_id, step_index, stream)"
+    },
+    "policy_input_boundary": "sensor abstractions only; ground-truth fields are logging/eval/replay QA only"
+  },
+  "required_hold_steps": 1500,
+  "success_when_all_true": [
+    "object_lift_height >= 0.05 m",
+    "hold_duration_s >= 3.0 s",
+    "object_pose_drift_xy <= success_max_pose_drift_m",
+    "slip_score <= success_max_slip_score",
+    "crush_risk <= success_max_crush_risk",
+    "max_penetration <= success_max_penetration_m",
+    "finite_state is true"
+  ],
+  "failure_reasons": [
+    "running",
+    "success_gentle_grasp_hold",
+    "non_finite_state",
+    "premature_object_push",
+    "no_contact_timeout",
+    "grasp_not_secure",
+    "slip_detected",
+    "object_dropped",
+    "crush_risk_exceeded",
+    "excessive_penetration",
+    "bad_vision_confidence",
+    "unstable_hold",
+    "timeout"
+  ],
+  "dataset_fields": [
+    "obs",
+    "next_obs",
+    "proprio_obs",
+    "vision_obs",
+    "tactile_obs",
+    "gt_eval_state",
+    "actions",
+    "expert_actions",
+    "residual_actions_optional",
+    "phase_ids",
+    "phase_step_ids",
+    "episode_ids",
+    "rewards",
+    "dones",
+    "successes",
+    "failures",
+    "terminal_reason_ids",
+    "sensor_noise_params",
+    "object_params"
+  ],
+  "blocked_policy_forms": [
+    "unconstrained end-to-end policy over all phases",
+    "fully live-observation BC for approach, first close, or early lift",
+    "RL before task contract, replay QA, and termination QA pass"
+  ]
+}

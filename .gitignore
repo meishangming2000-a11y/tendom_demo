@@ -55,6 +55,8 @@ improved_logs/
 
 # MuJoCo and generated checkpoints
 models/checkpoints/
+models/arm_hand_stage1_export/runs/
+runs/
 models/best_model/
 models/eval_logs/
 models/archive/

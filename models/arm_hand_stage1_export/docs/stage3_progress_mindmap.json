@@ -1,0 +1,663 @@
+{
+  "version": "stage3_progress_mindmap_v1",
+  "updated_at": "2026-06-07",
+  "title": "Stage3 传感器感知 MuJoCo 操作图",
+  "subtitle": "虚拟视觉 + 合成触觉/滑移 + 阶段式学习控制，用于鸡蛋/易碎物体的温和抓取与保持。",
+  "legend": {
+    "done": "已经验证或阶段性关闭",
+    "current": "当前主线或已提升基线",
+    "watch": "已知风险或权衡",
+    "next": "推荐下一步",
+    "rejected": "测试过但不推荐继续"
+  },
+  "root": {
+    "id": "stage3",
+    "label": "Stage3 总目标",
+    "status": "current",
+    "summary": "Stage3 已完成 Stage3.10C-A 第一版 safety ACT/CVAE-style 离线策略训练；下一步是 closed-loop MuJoCo 对比，而不是继续小参数微调。",
+    "metrics": [
+      "Stage3.10A：100/100 safety layer candidate frozen。",
+      "Stage3.10B-full_success_v0：60/60 episode，231421 rows，safety_labels [231421,9]。",
+      "Stage3.10C-A：SafetyACTCVAEChunkPolicy 已训练，best epoch 8，best val prior action loss 0.0013452474。",
+      "Stage3.10C-A：val prior RMSE raw 0.0093151014，val hand RMSE raw 0.0072230357，val safety accuracy 0.9905235265。",
+      "当前仍不是 full_action ACT/DP 闭环成功；下一步是 Stage3.10C-B evaluator。"
+    ],
+    "sections": [
+      {
+        "title": "当前定位",
+        "items": [
+          "Stage3 不是只做一个 demo，而是在建立视觉、触觉、技能库、模型训练和失败验收的闭环。",
+          "当前可用的最稳候选是视觉脚本手臂/手腕 + ACT-lite 捏持手指控制 + Stage3.7D full-hand fallback + 触觉 repair + 视觉/触觉最终验收。",
+          "LLM/VLA 以后只能做任务调度或技能选择，不直接输出 actuator。"
+        ]
+      }
+    ],
+    "children": [
+      {
+        "id": "stage3_sensors",
+        "label": "传感器栈",
+        "status": "done",
+        "summary": "虚拟视觉和合成触觉/滑移都已经在 MuJoCo 仿真中实现并通过测试。",
+        "children": [
+          {
+            "id": "vision",
+            "label": "虚拟视觉",
+            "status": "done",
+            "summary": "MuJoCo RGB-D/segmentation camera（RGB-D/分割虚拟摄像机）用于估计鸡蛋位置，并把虚拟摄像机字段注入 observation（观测）。",
+            "metrics": [
+              "Stage3.2c noisy virtual-camera gate（带噪虚拟摄像机验收）已通过",
+              "80 个样本，40 个 accepted（接受），40 个 frozen unsafe（冻结不安全更新）",
+              "0 个 false confident bad estimates（错误但高置信估计）",
+              "max accepted pose error（最大接受位姿误差）0.013718 m"
+            ],
+            "links": [
+              "external_sensors/run_stage3_noisy_virtual_camera_perception_test.py",
+              "docs/stage3_perception_geometry_v0.md"
+            ]
+          },
+          {
+            "id": "tactile",
+            "label": "合成触觉/滑移",
+            "status": "done",
+            "summary": "MuJoCo contact（接触）被转换成 contact（接触）、region（区域）、slip（滑移）、crush（挤压风险）和 penetration（穿透）字段。",
+            "metrics": [
+              "Stage3.4 tactile/slip sensor（触觉/滑移传感器）已验证",
+              "用于 lift gates（抬升门控）、hold checks（保持检查）和 slip risk reporting（滑移风险报告）"
+            ],
+            "links": [
+              "external_sensors/mujoco_tactile_slip_sensor.py",
+              "docs/stage3_tactile_slip_sensor_v0_report.md"
+            ]
+          },
+          {
+            "id": "viewer",
+            "label": "可视化 demo",
+            "status": "done",
+            "summary": "MuJoCo viewer 现在有三个直接入口：通用 Stage3 sensor-fusion viewer、Stage3.7D recovery 专用 viewer、以及 Stage3.8B trained pinch 专用 viewer；跨阶段 demo/video/report 查找统一走项目根目录 Demo Gallery 和 open_demo.py。",
+            "metrics": [
+              "通用 viewer：绿色标记/射线表示虚拟摄像机估计位置，彩色点表示触觉区域，红色 halo 表示滑移风险。",
+              "Stage3.7D 专用 viewer：额外显示橙色 halo/bar，表示 recovery rollback 和 recovery budget。",
+              "Stage3.8B pinch viewer：亮色手指 halo 和黄色连线表示 thumb + active fingers 捏持区域。",
+              "Demo Gallery 已统一捏持鸡蛋、全手 recovery、sensor-fusion、Stage2 小球捞起/搬运和 Stage3.10C 报告入口。"
+            ],
+            "links": [
+              "demo_stage3_sensor_fusion_viewer.py",
+              "demo_stage3_7d_recovery_viewer.py",
+              "docs/stage3_7d_recovery_viewer_demo_v0.md",
+              "demo_stage3_pinch_grasp_viewer.py",
+              "docs/stage3_pinch_grasp_training_v0_closeout.md",
+              "docs/stage3_pinch_grasp_training_v0_report.md"
+            ],
+            "sections": [
+              {
+                "title": "怎么打开专用可视化",
+                "items": [
+                  "运行 python .\\simulations\\models\\arm_hand_stage1_export\\demo_stage3_7d_recovery_viewer.py --trial center_nominal --speed 0.4 --no-loop。",
+                  "如果需要调 MuJoCo 控制面板，再加 --show-ui。",
+                  "如果想从 approach 开始看完整过程，再加 --no-demo-focus。",
+                  "想快速找捏持鸡蛋、捞起小球或 Stage3.10C 报告时，从项目根目录运行 python .\\open_demo.py list，或查 docs/demo_gallery_index.md。"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "stage3_control_path",
+        "label": "控制和学习路线",
+        "status": "current",
+        "summary": "控制路线已从冻结 safety layer 和 safety-labeled 数据推进到第一版 safety ACT/CVAE-style 离线策略；下一步做 closed-loop eval。",
+        "children": [
+          {
+            "id": "stage3_5_expert",
+            "label": "Stage3.5 专家基线",
+            "status": "done",
+            "summary": "脚本式虚拟摄像机 + 触觉 expert（专家）证明任务在仿真中可行。",
+            "metrics": [
+              "固定 10/10 成功",
+              "mean final lift（最终抬升均值）0.103056 m",
+              "hold stable（保持稳定比例）1.000",
+              "max hold slip（保持阶段最大滑移）0.262"
+            ],
+            "links": [
+              "run_stage3_sensor_aware_gentle_grasp_expert.py",
+              "docs/stage3_sensor_aware_gentle_grasp_expert_v0_report.md"
+            ]
+          },
+          {
+            "id": "dataset",
+            "label": "传感器融合数据集",
+            "status": "done",
+            "summary": "已经采集 expert demonstrations（专家演示），用于从传感器抽象学习动作。",
+            "metrics": [
+              "10 个 episodes（回合）",
+              "31000 行数据",
+              "obs shape（观测维度）[31000, 130]",
+              "actions shape（动作维度）[31000, 26]",
+              "replay max error（回放最大误差）0"
+            ],
+            "links": [
+              "collect_stage3_sensor_fusion_expert_dataset_v0.py",
+              "data/stage3_sensor_fusion_expert_dataset_v0.npz"
+            ]
+          },
+          {
+            "id": "full_bc",
+            "label": "全动作 BC 被否",
+            "status": "rejected",
+            "summary": "Full-action BC（全动作行为克隆）离线误差看起来不高，但 closed-loop（闭环）失败。",
+            "metrics": [
+              "val raw action RMSE（验证动作误差）0.01273346",
+              "full-action closed-loop（全动作闭环）0/10",
+              "overfit sanity model（过拟合 sanity 模型）也 0/10",
+              "不推荐作为 Stage3 主线"
+            ],
+            "links": [
+              "docs/stage3_sensor_fusion_bc_baseline_v0_model_result.md"
+            ]
+          },
+          {
+            "id": "stage3_6_hand_policy",
+            "label": "Stage3.6 手指策略",
+            "status": "done",
+            "summary": "正式采用混合控制：手臂/腕部脚本控制，手/手指由 learned policy（学习策略）控制。",
+            "metrics": [
+              "固定 10/10 成功",
+              "mean final lift（最终抬升均值）0.103050 m",
+              "hold stable（保持稳定比例）1.000",
+              "max hold slip（保持阶段最大滑移）0.262"
+            ],
+            "links": [
+              "train_stage3_phase_hand_policy_v0.py",
+              "eval_stage3_phase_hand_policy_v0.py"
+            ]
+          },
+          {
+            "id": "stage3_8a_pinch_grasp",
+            "label": "Stage3.8A 捏持式抓取",
+            "status": "done",
+            "summary": "Stage3.8A 证明了 tripod_support 捏持/支撑混合抓法可行；它是 Stage3.8B 训练搜索的起点，但不再是最新 pinch demo baseline。",
+            "metrics": [
+              "多候选初筛：12 次里 7 次通过；thumb_index_light 因力量不足被淘汰。",
+              "tripod_support 固定 10 组：10/10 成功，mean vision lift 0.115901 m，mean true lift 0.104062 m。",
+              "tripod_support 随机扰动 10 组：10/10 成功，mean vision lift 0.117765 m，mean true lift 0.104330 m。",
+              "hold stable fraction 1.000，hold pinch fraction 1.000，随机组 max hold slip 0.208。"
+            ],
+            "sections": [
+              {
+                "title": "怎么判断成功",
+                "items": [
+                  "初始虚拟视觉定位鸡蛋。",
+                  "最终虚拟视觉再次估计鸡蛋位置，并计算视觉抬升高度。",
+                  "触觉接触区域必须包含 thumb 加 index/middle/ring 等少数主动手指。",
+                  "hold 阶段保持低滑移、低挤压、低穿透，且鸡蛋不能接触地面。"
+                ]
+              },
+              {
+                "title": "仍然要修什么",
+                "items": [
+                  "early_contact_in_approach 每组都有。",
+                  "transient_slip_high 每组都有，但 hold slip 已经低于阈值。",
+                  "tripod_support 不是纯二指捏持；更纯的 thumb+index/middle 还需要降低 hold slip。"
+                ]
+              },
+              {
+                "title": "如果成功/失败",
+                "items": [
+                  "如果后续更大随机集继续成功，就补专用 viewer 并和 Stage3.7D 做正式对比。",
+                  "如果失败来自视觉遮挡，优先改最终验收相机；如果失败来自真值抬升，优先改接近姿态和手指闭合。"
+                ]
+              }
+            ],
+            "links": [
+              "eval_stage3_pinch_grasp_v0.py",
+              "docs/stage3_pinch_grasp_v0_closeout.md",
+              "docs/stage3_pinch_grasp_v0_tripod10_final_report.md",
+              "docs/stage3_pinch_grasp_v0_tripod_random10_report.md"
+            ]
+          },
+          {
+            "id": "stage3_8b_pinch_training_demo",
+            "label": "Stage3.8B 捏持训练与成功 demo",
+            "status": "done",
+            "summary": "通过参数搜索得到当前捏持成功 demo：thumb_index_middle_strong__higher_approach，并作为 Stage3.9 SkillZoo 的捏持来源。",
+            "metrics": [
+              "训练覆盖 4 个方法族：thumb_index_light、thumb_index_middle、thumb_index_middle_strong、tripod_support。",
+              "总计 108 次 MuJoCo episode：56 train + 12 validation + 40 final。",
+              "最终 winner：thumb_index_middle_strong__higher_approach，success 10/10。",
+              "mean true lift 0.10347 m，mean vision lift 0.11433 m。",
+              "hold stable fraction 1.000，hold pinch fraction 1.000，max hold slip 0.276。",
+              "demo smoke：center_nominal PASS，vision_lift 0.1061 m，true_lift 0.1014 m。"
+            ],
+            "sections": [
+              {
+                "title": "怎么打开",
+                "items": [
+                  "运行 python .\\simulations\\models\\arm_hand_stage1_export\\demo_stage3_pinch_grasp_viewer.py --candidate-config .\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_pinch_grasp_training_v0_selected.json。",
+                  "无窗口快速检查运行 python .\\simulations\\models\\arm_hand_stage1_export\\demo_stage3_pinch_grasp_viewer.py --headless-smoke --trial center_nominal。"
+                ]
+              },
+              {
+                "title": "成功了怎么样",
+                "items": [
+                  "把 Stage3.8B 作为当前 pinch 成功 demo baseline。",
+                  "后续可比较 Stage3.7D 全手温和抓取和 Stage3.8B 二三指捏持。",
+                  "继续优化 early_contact_in_approach 和 transient_slip_high。"
+                ]
+              },
+              {
+                "title": "失败了怎么样",
+                "items": [
+                  "如果 hold_slip_score_high，先修 contact settle 或手指闭合强度。",
+                  "如果 vision_lift_too_small，先分辨最终视觉失败还是真实抬升失败。",
+                  "如果 true_lift_too_small，优先调 approach z、thumb 角度和 active finger 闭合。"
+                ]
+              }
+            ],
+            "links": [
+              "train_stage3_pinch_grasp_candidates_v0.py",
+              "demo_stage3_pinch_grasp_viewer.py",
+              "metadata/stage3_pinch_grasp_training_v0_selected.json",
+              "docs/stage3_pinch_grasp_training_v0_closeout.md",
+              "docs/stage3_pinch_grasp_training_v0_report.md",
+              "docs/visual_checks_stage3_pinch_viewer_v0/thumb_index_middle_strong__higher_approach/000_center_nominal/initial_mask_overlay.png",
+              "docs/visual_checks_stage3_pinch_viewer_v0/thumb_index_middle_strong__higher_approach/000_center_nominal/final_stage3_egg_closeup_mask_overlay.png"
+            ]
+          },
+          {
+            "id": "stage3_9_skillzoo_v0_plan",
+            "label": "Stage3.9 SkillZoo / ACT-lite / repair",
+            "status": "done",
+            "summary": "Stage3.9 已关闭：registry/router/dense dataset、ACT-lite 闭环、9G 最后一轮修补都已完成；9G 结果被 Stage3.10A 冻结为 safety layer v0。",
+            "metrics": [
+              "v1_pinch30 dataset：60/60 successful episodes，230450 rows，pinch=30。",
+              "v1_pinch30 val chunk RMSE raw=0.00332868。",
+              "Stage3.9F repair：100 组 97/100；no-repair：84/100。",
+              "Stage3.9G：100 组 100/100，full hand 50/50，pinch 50/50。",
+              "Stage3.9G pinch-only final vision 验证：50/50。",
+              "Stage3.10A 已冻结 safety layer v0，Stage3.9 不再继续小参数微调。"
+            ],
+            "sections": [
+              {
+                "title": "已经证明什么",
+                "items": [
+                  "tactile repair 在更大随机集中仍显著提升，repair 97/100 明显好于 no-repair 84/100。",
+                  "Stage3.9G 通过当前 100/100 gate，说明 full-hand fallback、pinch repair、final verification 的组合可作为 safety-layer 候选。",
+                  "阈值没有放宽，仍记录 slip/crush/penetration/floor/vision 等失败类型。"
+                ]
+              },
+              {
+                "title": "还没证明什么",
+                "items": [
+                  "full_action 26 actuator ACT/DP 仍未通过；当前只是 scripted_arm_predicted_hand mixed control。",
+                  "Stage3.9G 是当前 gate 的通过，不代表更大 benchmark、更多遮挡或硬件也通过。",
+                  "transient slip 和 early contact 仍是需要在 Stage3.10 benchmark 中继续记录的风险。"
+                ]
+              },
+              {
+                "title": "如果成功/失败",
+                "items": [
+                  "如果 Stage3.10 模型训练成功，就进入 Stage3.11 多技能泛化控制。",
+                  "如果 Stage3.10 模型训练失败，不回到 Stage3.9 小参数微调，而按数据、视觉、动作表示和 full_action 稳定性拆原因。"
+                ]
+              }
+            ],
+            "links": [
+              "train_stage3_act_dp_baseline_v0.py",
+              "eval_stage3_act_lite_chunk_policy_v0.py",
+              "checkpoints/stage3_act_lite_chunk_policy_v1_pinch30.pth",
+              "docs/stage3_act_lite_chunk_policy_v1_pinch30_closeout.md",
+              "docs/stage3_9d_pinch_hold_repair_closeout.md",
+              "docs/stage3_9e_random_pose_repair_closeout.md",
+              "docs/stage3_9f_random_pose_baseline_comparison_closeout.md",
+              "docs/stage3_9f_random_pose_repair_100_report.md",
+              "docs/stage3_9f_random_pose_no_repair_100_report.md",
+              "docs/stage3_9f_scripted_full_hand_recovery_50_report.md",
+              "docs/stage3_9f_scripted_pinch_selected_50_report.md",
+              "docs/stage3_9g_final_microtuning_closeout.md",
+              "docs/stage3_9g_full_fallback_pinch_verify_100_report.md",
+              "docs/stage3_9g_pinch_verify_preclose010_50_report.md",
+              "docs/stage3_10_model_training_after_microtuning_plan.md",
+              "configs/stage3_10a_skillzoo_safety_layer_v0.json",
+              "docs/stage3_10a_skillzoo_safety_layer_v0_closeout.md",
+              "run_stage3_10a_safety_layer_v0.py"
+            ]
+          },
+          {
+            "id": "stage3_10a_safety_layer_v0",
+            "label": "Stage3.10A safety layer v0",
+            "status": "current",
+            "summary": "把 Stage3.9G 的 100/100 mixed-control 候选冻结为可检查、可复现、可作为训练护栏的 SkillZoo safety layer。",
+            "metrics": [
+              "canonical gate：100/100；full hand 50/50；pinch 50/50。",
+              "pinch final vision check：50/50。",
+              "Stage3.10A smoke：4/4；full hand 2/2；pinch 2/2。",
+              "冻结参数：pinch preclose 0.10，close max 0.18，final verification 为 vision_tactile_corroborated。",
+              "检查命令：python .\\simulations\\models\\arm_hand_stage1_export\\run_stage3_10a_safety_layer_v0.py --check。",
+              "边界：不是 full_action ACT/DP，不是硬件集成。"
+            ],
+            "sections": [
+              {
+                "title": "如果成功",
+                "items": [
+                  "进入 Stage3.10B 扩展 ACT/DP 数据，把 safety layer 介入时刻写进数据。",
+                  "后续正式 ACT/CVAE 或 DP baseline 与该 safety layer 同场景对比。"
+                ]
+              },
+              {
+                "title": "如果失败",
+                "items": [
+                  "先修复复现入口、缺失文件或 evidence 解析问题。",
+                  "模型失败时按数据覆盖、视觉遮挡、动作表示和 full_action 稳定性拆解。"
+                ]
+              }
+            ],
+            "links": [
+              "configs/stage3_10a_skillzoo_safety_layer_v0.json",
+              "docs/stage3_10a_skillzoo_safety_layer_v0_closeout.md",
+              "run_stage3_10a_safety_layer_v0.py",
+              "docs/stage3_10a_safety_layer_v0_smoke_report.md",
+              "metadata/stage3_10a_safety_layer_v0_smoke.json",
+              "docs/stage3_9g_full_fallback_pinch_verify_100_report.md",
+              "metadata/stage3_9g_full_fallback_pinch_verify_100.json"
+            ]
+          },
+          {
+            "id": "stage3_10b_safety_labeled_dataset_v0",
+            "label": "Stage3.10B safety-labeled 数据",
+            "status": "current",
+            "summary": "把 Stage3.10A safety layer 跑成 dense ACT/DP 数据，并新增逐步 safety/risk 标签。",
+            "metrics": [
+              "10/10 episode；full hand 5/5；pinch 5/5。",
+              "38560 rows；obs [38560,130]；actions [38560,26]。",
+              "safety_labels [38560,9]。",
+              "safety intervention steps 9860；repair steps 9136；recovery steps 724；risk label steps 956。"
+            ],
+            "sections": [
+              {
+                "title": "如果成功",
+                "items": [
+                  "进入 Stage3.10B-full，扩大数据规模并覆盖更多失败/恢复场景。",
+                  "再进入 Stage3.10C 正式 ACT/CVAE 或 Diffusion Policy baseline。"
+                ]
+              },
+              {
+                "title": "如果失败",
+                "items": [
+                  "先修 sequence capture、safety 标签或 action range。",
+                  "不把失败数据喂给模型，也不回到 Stage3.9 微调。"
+                ]
+              }
+            ],
+            "links": [
+              "export_stage3_10b_safety_labeled_act_dp_dataset_v0.py",
+              "data/stage3_10b_safety_labeled_act_dp_dataset_v0.npz",
+              "data/stage3_10b_safety_labeled_act_dp_dataset_v0.jsonl",
+              "metadata/stage3_10b_safety_labeled_act_dp_dataset_v0.json",
+              "docs/stage3_10b_safety_labeled_act_dp_dataset_v0_report.md",
+              "docs/stage3_10b_safety_labeled_dataset_v0_closeout.md"
+            ]
+          },
+          {
+            "id": "stage3_10b_full_safety_labeled_dataset_v0",
+            "label": "Stage3.10B-full safety-labeled 训练候选",
+            "status": "current",
+            "summary": "把 Stage3.10A safety layer 扩大采集为 train-ready 数据集，同时保留失败诊断和 8mm stress 边界。",
+            "metrics": [
+              "主训练候选 full_success_v0：60/60，full hand 30/30，pinch 30/30。",
+              "231421 rows，obs [231421,130]，actions [231421,26]，safety_labels [231421,9]。",
+              "safety intervention steps 59221，recovery steps 4377，repair steps 54844，risk label steps 5408。",
+              "full_v0 诊断：59/60，left_low_nominal pinch 真抓取失败。",
+              "stress_pose008：19/20，back_large_lift final vision 低置信/遮挡。"
+            ],
+            "sections": [
+              {
+                "title": "如果成功",
+                "items": [
+                  "进入 Stage3.10C 正式 ACT/CVAE 或 Diffusion Policy baseline 训练。",
+                  "训练后用 MuJoCo closed-loop eval 与 Stage3.10A safety layer 对比。"
+                ]
+              },
+              {
+                "title": "如果失败",
+                "items": [
+                  "检查数据分层、动作表示、safety label 辅助头、final vision 低置信边界。",
+                  "不回到 Stage3.9 小参数微调。"
+                ]
+              }
+            ],
+            "links": [
+              "export_stage3_10b_safety_labeled_act_dp_dataset_v0.py",
+              "data/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.npz",
+              "metadata/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.json",
+              "docs/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0_report.md",
+              "docs/stage3_10b_full_safety_labeled_dataset_v0_closeout.md",
+              "docs/stage3_10b_safety_labeled_act_dp_dataset_full_v0_report.md",
+              "docs/stage3_10b_safety_labeled_act_dp_dataset_stress_pose008_v0_report.md"
+            ]
+          },
+          {
+            "id": "stage3_10c_safety_act_cvae_policy_v0",
+            "label": "Stage3.10C-A safety ACT/CVAE-style 离线策略",
+            "status": "current",
+            "summary": "已用 Stage3.10B-full_success_v0 训练第一版安全感知 ACT/CVAE-style action chunk policy；这是离线训练通过，不是闭环抓取通过。",
+            "metrics": [
+              "训练数据：60/60 episode，231421 rows，obs [231421,130]，actions [231421,26]，safety_labels [231421,9]。",
+              "训练窗口：24000 train windows，6000 val windows，horizon 16，stride 8。",
+              "best epoch 8；best val prior action loss 0.0013452474。",
+              "val prior RMSE raw 0.0093151014；val hand RMSE raw 0.0072230357。",
+              "val safety accuracy 0.9905235265，precision 0.9993049615，recall 0.9437992325。",
+              "边界：还没有 MuJoCo closed-loop eval，也没有 full-action ACT/DP promotion。"
+            ],
+            "sections": [
+              {
+                "title": "如果成功",
+                "items": [
+                  "进入 Stage3.10C-B，写 closed-loop evaluator。",
+                  "优先用 scripted_arm_predicted_hand，让模型控制手指 chunk，手臂/手腕继续由视觉脚本控制。",
+                  "与 Stage3.10A safety layer 同场景对比，报告成功率、slip、final vision 和 safety label 触发情况。"
+                ]
+              },
+              {
+                "title": "如果失败",
+                "items": [
+                  "先拆数据分布、动作 chunk prior、phase/skill 条件、safety label 辅助头和 final vision 遮挡。",
+                  "不回到 Stage3.9 小参数微调。",
+                  "full-action 失败时继续保留 scripted arm/wrist，只把手指或安全残差交给模型。"
+                ]
+              }
+            ],
+            "links": [
+              "train_stage3_10c_safety_act_cvae_policy_v0.py",
+              "checkpoints/stage3_10c_safety_act_cvae_policy_v0.pth",
+              "metadata/stage3_10c_safety_act_cvae_policy_v0_train.json",
+              "docs/stage3_10c_safety_act_cvae_policy_v0_train_report.md",
+              "docs/stage3_10c_safety_act_cvae_policy_v0_closeout.md",
+              "data/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.npz"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "stage3_7_repairs",
+        "label": "Stage3.7 滑移修复",
+        "status": "current",
+        "summary": "这一组工作从 contact timing、lift permission 推进到 recovery microphase，用来降低抓取接触转换阶段的滑移风险。",
+        "children": [
+          {
+            "id": "stage3_7a",
+            "label": "Stage3.7A 触觉教师",
+            "status": "done",
+            "summary": "测试了 hand residuals（手部残差）和接触稳定时间；手部残差不推荐，延长 contact-settle 有帮助。",
+            "metrics": [
+              "hand close residual mean max slip 0.821，不提升",
+              "mild relax 只有轻微帮助",
+              "strong relax 方向失败",
+              "推荐保留：更长 contact-settle timing（接触稳定时序）"
+            ],
+            "links": [
+              "docs/stage3_tactile_residual_teacher_v0_closeout.md"
+            ]
+          },
+          {
+            "id": "stage3_7b",
+            "label": "Stage3.7B 抬升许可门控",
+            "status": "done",
+            "summary": "加入保守 contact-settle（接触稳定）和 tactile lift-permission gate（触觉抬升许可门控）。",
+            "metrics": [
+              "固定 10/10，mean max slip 0.598，max slip 0.941",
+              "随机 30/30，mean max slip 0.625，max slip 1.000",
+              "max hold slip（保持阶段最大滑移）0.318",
+              "所有固定组通过 stable_window_met（稳定窗口满足）释放 gate"
+            ],
+            "links": [
+              "eval_stage3_tactile_phase_gate_v0.py",
+              "docs/stage3_tactile_phase_gate_v0_closeout.md"
+            ]
+          },
+          {
+            "id": "stage3_7c",
+            "label": "Stage3.7C 慢速抬升暂停",
+            "status": "done",
+            "summary": "在 Stage3.7B 的基础上加入 bounded slow_lift pause，说明单纯暂停有帮助但不是最终答案。",
+            "metrics": [
+              "固定 10/10，mean max slip 0.564，max slip 0.941",
+              "随机 30/30，mean max slip 0.602，max slip 1.000",
+              "固定 max hold slip 0.264",
+              "随机 max hold slip 0.315",
+              "transition_gate_budget_exhausted（转换门控预算耗尽）仍常见"
+            ],
+            "links": [
+              "eval_stage3_contact_transition_gate_v0.py",
+              "docs/stage3_contact_transition_gate_v0_closeout.md"
+            ]
+          },
+          {
+            "id": "stage3_7d",
+            "label": "Stage3.7D 接触转换恢复",
+            "status": "current",
+            "summary": "当前 Stage3 候选 baseline：在 slow_lift 高滑移时，不只是等待，而是让控制进度轻微回退一点，再尝试继续抬升。",
+            "metrics": [
+              "固定 10 组：成功 10/10，mean max slip 0.554890，max hold slip 0.253566，recovery_budget_exhausted 5/10。",
+              "随机 30 组：成功 30/30，mean max slip 0.569917，max hold slip 0.315078，recovery_budget_exhausted 15/30。",
+              "选定参数：transition_slip_threshold 0.29，max_transition_hold_steps_per_phase 200，recovery_progress_drop 0.01，recovery_stable_window_steps 0。",
+              "本轮新增：专用 recovery viewer，可以直接检查橙色 recovery 标记和预算条。"
+            ],
+            "sections": [
+              {
+                "title": "为什么这样做",
+                "items": [
+                  "Stage3.7C 的策略是滑了就等一下，但有时只是耗掉 pause budget。",
+                  "Stage3.7D 增加轻微回退动作，更接近真实抓取时的接触恢复。"
+                ]
+              },
+              {
+                "title": "怎么验收",
+                "items": [
+                  "先看固定 10 组和随机 30 组成功率。",
+                  "再看 mean max slip、max hold slip 和 recovery_budget_exhausted。",
+                  "最后用专用 viewer 检查视觉、触觉、滑移风险和 recovery 是否能被人直观看懂。"
+                ]
+              }
+            ],
+            "links": [
+              "eval_stage3_contact_transition_recovery_v0.py",
+              "docs/stage3_contact_transition_recovery_v0_closeout.md",
+              "docs/stage3_contact_transition_recovery_v0_eval_report.md",
+              "docs/stage3_contact_transition_recovery_v0_randomized30_report.md",
+              "demo_stage3_7d_recovery_viewer.py",
+              "docs/stage3_7d_recovery_viewer_demo_v0.md"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "known_risks",
+        "label": "已知风险",
+        "status": "watch",
+        "summary": "任务已经能完成，但 safety layer 仍要追踪提前接触、瞬时滑移、恢复预算和最终视觉遮挡。",
+        "children": [
+          {
+            "id": "transient_slip",
+            "label": "瞬时滑移",
+            "status": "watch",
+            "summary": "Stage3.7D 降低了 mean max slip，但部分 episode 仍会出现较高瞬时 slip；hold 阶段通常仍低于 0.35。",
+            "metrics": [
+              "Stage3.7D fixed max slip 仍可达到 0.941。",
+              "Stage3.7D randomized max slip 仍可达到 1.000。",
+              "风险多出现在 slow_lift、contact_settle、gentle_close_thumb 附近。"
+            ]
+          },
+          {
+            "id": "pause_budget_exhausted",
+            "label": "恢复预算仍会耗尽",
+            "status": "watch",
+            "summary": "Stage3.7D 已经比 Stage3.7C 更好，但 recovery_budget_exhausted 仍非零，说明 recovery 不是最终答案，还需要 Stage3.8 更大范围鲁棒性验证。",
+            "metrics": [
+              "Stage3.7C 固定组 pause budget exhausted 6/10；Stage3.7D 固定组 recovery budget exhausted 5/10。",
+              "Stage3.7C 随机组 pause budget exhausted 19/30；Stage3.7D 随机组 recovery budget exhausted 15/30。",
+              "这不是失败，但说明不能继续只微调一个阈值。"
+            ]
+          },
+          {
+            "id": "do_not_promote",
+            "label": "不要提升的方向",
+            "status": "rejected",
+            "summary": "这些方向已经试过，不应该作为默认路线继续推进。",
+            "metrics": [
+              "full-action BC（全动作行为克隆）",
+              "从 Stage3.7A 直接学习 hand residual labels（手部残差标签）",
+              "默认启用 approach-stop（接近停止）",
+              "默认启用 broad thumb-close pause（大范围拇指闭合暂停）"
+            ]
+          }
+        ],
+        "metrics": [
+          "early_contact_in_approach 在 9G 主验收中仍频繁出现。",
+          "full-hand 仍有 transient_or_hold_slip 和 recovery_budget_exhausted。",
+          "pinch 仍有 transient_slip_high，final vision 仍可能低置信，需要触觉佐证。"
+        ]
+      },
+      {
+        "id": "next_stage3_10",
+        "label": "Stage3.10C-B 闭环评估",
+        "status": "next",
+        "summary": "Stage3.10C-A 已训练出 checkpoint；下一步必须把它放进 MuJoCo closed-loop，并与 Stage3.10A safety layer 同场景对比。",
+        "metrics": [
+          "待评估 checkpoint：checkpoints/stage3_10c_safety_act_cvae_policy_v0.pth。",
+          "第一执行模式：scripted_arm_predicted_hand。",
+          "对照基线：Stage3.10A safety layer v0。",
+          "必须记录成功率、full hand/pinch 分支、hold slip、final vision、safety label 触发和失败原因。",
+          "若失败，优先分析数据分布、动作 chunk prior、phase/skill 条件和 final vision 遮挡。"
+        ],
+        "sections": [
+          {
+            "title": "如果成功",
+            "items": [
+              "进入 Stage3.10D 或 Stage3.11：扩大 benchmark、增加遮挡/多视角和 held-out 场景。"
+            ]
+          },
+          {
+            "title": "如果失败",
+            "items": [
+              "先修 dataloader/模型表示/安全标签设计；不要放宽成功阈值，也不要回到 Stage3.9 微调。"
+            ]
+          }
+        ],
+        "links": [
+          "train_stage3_10c_safety_act_cvae_policy_v0.py",
+          "checkpoints/stage3_10c_safety_act_cvae_policy_v0.pth",
+          "docs/stage3_10c_safety_act_cvae_policy_v0_closeout.md",
+          "configs/stage3_10a_skillzoo_safety_layer_v0.json",
+          "run_stage3_10a_safety_layer_v0.py"
+        ]
+      }
+    ],
+    "links": [
+      "docs/stage3_10a_safety_layer_v0_smoke_report.md",
+      "metadata/stage3_10a_safety_layer_v0_smoke.json",
+      "docs/stage3_10b_full_safety_labeled_dataset_v0_closeout.md",
+      "data/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.npz"
+    ]
+  }
+}

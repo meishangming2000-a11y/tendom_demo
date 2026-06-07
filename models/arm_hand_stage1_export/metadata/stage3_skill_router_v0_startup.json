@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-06-07T18:57:02",
+  "registry": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\configs\\stage3_skill_registry_v0.json",
+  "scene_cases": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_skill_router_v0_sample_scenes.json",
+  "summary": {
+    "status": "PASS",
+    "registry": {
+      "skill_count": 7,
+      "executable_skill_count": 2,
+      "status_counts": {
+        "registered_sensor_primitive": 1,
+        "registered_baseline": 2,
+        "embedded_subskill": 2,
+        "planned_promote_from_embedded": 1,
+        "planned_safety_skill": 1
+      },
+      "type_counts": {
+        "perception": 1,
+        "grasp_skill": 2,
+        "tactile_gate": 1,
+        "lift_hold_skill": 1,
+        "recovery_skill": 1,
+        "safety_skill": 1
+      }
+    },
+    "case_count": 5,
+    "expectation_checked_count": 5,
+    "expectation_pass_count": 5,
+    "smoke_count": 0
+  },
+  "decisions": [
+    {
+      "case_id": "high_clearance_prefers_pinch",
+      "selected_skill_id": "thumb_index_middle_pinch",
+      "selected_status": "registered_baseline",
+      "decision_reason": "pinch_clearance_and_vision_good",
+      "fallback_skill_id": "full_hand_gentle_grasp",
+      "confidence": 0.811,
+      "executable": true,
+      "expected_skill_id": "thumb_index_middle_pinch",
+      "matches_expectation": true
+    },
+    {
+      "case_id": "low_clearance_prefers_full_hand",
+      "selected_skill_id": "full_hand_gentle_grasp",
+      "selected_status": "registered_baseline",
+      "decision_reason": "default_gentle_or_low_clearance_route",
+      "fallback_skill_id": null,
+      "confidence": 0.726,
+      "executable": true,
+      "expected_skill_id": "full_hand_gentle_grasp",
+      "matches_expectation": true
+    },
+    {
+      "case_id": "contact_slip_requires_recovery",
+      "selected_skill_id": "slip_recovery",
+      "selected_status": "planned_promote_from_embedded",
+      "decision_reason": "contact_slip_high",
+      "fallback_skill_id": "full_hand_gentle_grasp",
+      "confidence": 0.97,
+      "executable": false,
+      "expected_skill_id": "slip_recovery",
+      "matches_expectation": true
+    },
+    {
+      "case_id": "weak_vision_reacquire_first",
+      "selected_skill_id": "acquire_vision_pose",
+      "selected_status": "registered_sensor_primitive",
+      "decision_reason": "vision_confidence_too_low_for_action",
+      "fallback_skill_id": "release_or_abort",
+      "confidence": 0.69,
+      "executable": false,
+      "expected_skill_id": "acquire_vision_pose",
+      "matches_expectation": true
+    },
+    {
+      "case_id": "unsafe_crush_abort",
+      "selected_skill_id": "release_or_abort",
+      "selected_status": "planned_safety_skill",
+      "decision_reason": "safety_metric_exceeded",
+      "fallback_skill_id": null,
+      "confidence": 0.95,
+      "executable": false,
+      "expected_skill_id": "release_or_abort",
+      "matches_expectation": true
+    }
+  ],
+  "smoke_results": []
+}

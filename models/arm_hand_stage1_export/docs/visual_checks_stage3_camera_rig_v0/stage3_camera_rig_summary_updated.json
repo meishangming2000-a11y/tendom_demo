@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-06-03T21:43:23",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_stage3_egg_gentle_grasp_hold_v0.xml",
+  "camera_names": [
+    "stage3_egg_overview",
+    "stage3_egg_closeup"
+  ],
+  "contact_sheet": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_camera_rig_v0\\stage3_camera_rig_contact_sheet_updated.png",
+  "outputs": {
+    "stage3_egg_overview": {
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_camera_rig_v0\\stage3_egg_overview_updated.png",
+      "mean_rgb": [
+        48.763506944444444,
+        76.44781163194445,
+        103.99592447916666
+      ],
+      "std_rgb": [
+        24.193357527779252,
+        23.916665149200895,
+        27.759965425745904
+      ],
+      "min_rgb": 6,
+      "max_rgb": 255
+    },
+    "stage3_egg_closeup": {
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_camera_rig_v0\\stage3_egg_closeup_updated.png",
+      "mean_rgb": [
+        54.575371527777776,
+        80.64155381944444,
+        105.73651996527778
+      ],
+      "std_rgb": [
+        34.56428902912141,
+        30.27657012646231,
+        30.45394996910491
+      ],
+      "min_rgb": 3,
+      "max_rgb": 255
+    }
+  },
+  "note": "Updated Stage3 default demo views: overview + closeup camera renders."
+}

@@ -1,0 +1,80 @@
+task: stage2_pick_place_v0_9_gate2_multiregion_hard_moe
+seed: 72
+scene: "models/arm_hand_stage1_export/mjcf/scene_arm_hand_export4_pick_place_50cm_v0_7.xml"
+run_dir: "models/arm_hand_stage1_export/runs/stage2_pick_place_v0_9_gate2_multiregion_hard_moe/20260603_020000_seed072"
+purpose: "Gate2: extend Gate1 hard-gated MoE from one local region around -165 deg to a multi-region expert library around -165, -135, and -105 deg."
+baseline:
+  gate1_run: "models/arm_hand_stage1_export/runs/stage2_pick_place_v0_8_gate1_target_generalization/20260603_000000_seed071"
+  gate1_policy: "checkpoints/phase_moe_policy_v0_8_gate1_top1_sigma0p0.npz"
+  gate1_result: "fixed 7 = 7/7 PASS; -165 exact 5x5 = 25/25 PASS; -165 midpoint 4x4 = 16/16 PASS"
+dataset:
+  version: v0.9_gate2_multiregion_hard_moe
+  target_conditioned: true
+  profiles: clean_nominal
+  action_field_for_policy: actions
+  target_distance_m: 0.5
+  total_clean_episodes: 79
+  layout:
+    fixed_targets: 7
+    local_regions:
+      - angle_deg: -165
+        center_xyz: [-0.292739093144534, 0.0582924774487395, -0.06538044]
+        pre_release_z_drop: 0.008
+        hover_z_lift: 0.0
+        repair_grid_offsets_m: [-0.02, -0.01, 0.0, 0.01, 0.02]
+        center_duplicate_policy: "center represented by fixed -165 target; collect remaining 24 grid cells"
+      - angle_deg: -135
+        center_xyz: [-0.163329570593274, -0.165851390593274, -0.06538044]
+        pre_release_z_drop: 0.020
+        hover_z_lift: 0.0
+        repair_grid_offsets_m: [-0.02, -0.01, 0.0, 0.01, 0.02]
+        center_duplicate_policy: "center represented by fixed -135 target; collect remaining 24 grid cells"
+      - angle_deg: -105
+        center_xyz: [0.0608142974487396, -0.295260913144534, -0.06538044]
+        pre_release_z_drop: 0.012
+        hover_z_lift: 0.012
+        repair_grid_offsets_m: [-0.02, -0.01, 0.0, 0.01, 0.02]
+        center_duplicate_policy: "center represented by fixed -105 target; collect remaining 24 grid cells"
+  repair_notes:
+    first_collection: "64 / 79 PASS; -135 timed out from residual hand contact, -105 had placement drift and one descend-phase floor contact."
+    final_fix: "Enable post_release_clear_steps=700 globally. Use drop=0.012 and hover_z_lift=0.012 for the -105 region so descend_to_target stays off the floor and release remains clean."
+  phase_steps:
+    default_hold_steps: 90
+    move_steps: 260
+    approach_steps: 180
+    hand_steps: 120
+    close_thumb_steps: 180
+    close_hold_steps: 180
+    lift_steps: 260
+    hold_steps: 220
+    transport_steps: 1600
+    transport_hold_steps: 300
+    descend_steps: 760
+    pre_release_settle_steps: 900
+    release_steps: 900
+    post_release_clear_steps: 700
+    retreat_steps: 500
+    settle_steps: 1400
+policy:
+  candidate: hard_gated_phase_moe
+  script: "models/arm_hand_stage1_export/eval_arm_hand_stage1_v3_pick_place_phase_moe_policy.py"
+  top_k: 1
+  rbf_sigma: 0.0
+  interpretation: "Nearest successful target-conditioned expert. Do not claim smooth continuous interpolation."
+eval:
+  fixed_targets: [-180, -165, -150, -135, -120, -105, -90]
+  exact_local_sweeps: [-165, -135, -105]
+  midpoint_local_sweeps: [-165, -135, -105]
+  exact_offsets_m: [-0.02, -0.01, 0.0, 0.01, 0.02]
+  midpoint_offsets_m: [-0.015, -0.005, 0.005, 0.015]
+  max_steps: 8200
+  target_radius_m: 0.035
+  required_stable_steps: 240
+gate:
+  dataset_collection: "79 / 79 PASS"
+  replay_qa: "79 / 79 PASS"
+  fixed_target_success: "7 / 7 PASS"
+  exact_local_success: "25 / 25 PASS for each of -165, -135, and -105"
+  midpoint_success: "16 / 16 PASS for each of -165, -135, and -105"
+  contact_requirements: "transport floor contacts total 0; final hand contacts max 0 for passing evals"
+  if_not_met: "repair the failing local region by target-specific release/drop/descend changes before broader expansion"

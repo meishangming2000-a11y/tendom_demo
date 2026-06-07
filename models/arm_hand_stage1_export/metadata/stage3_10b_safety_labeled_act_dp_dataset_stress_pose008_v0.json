@@ -1,0 +1,2448 @@
+{
+  "generated_at": "2026-06-07T19:40:46",
+  "stage": "Stage3.10B",
+  "experiment_name": "Stage3.10B-stress_pose008_safety_labeled_ACT_DP_dataset_v0",
+  "dataset_version": "stage3_10b_safety_labeled_act_dp_dataset_stress_pose008_v0",
+  "dataset": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\stage3_10b_safety_labeled_act_dp_dataset_stress_pose008_v0.npz",
+  "jsonl": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\stage3_10b_safety_labeled_act_dp_dataset_stress_pose008_v0.jsonl",
+  "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_10b_safety_labeled_act_dp_dataset_stress_pose008_v0.json",
+  "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_10b_safety_labeled_act_dp_dataset_stress_pose008_v0_report.md",
+  "safety_layer_config": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\configs\\stage3_10a_skillzoo_safety_layer_v0.json",
+  "eval_args": {
+    "checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\stage3_act_lite_chunk_policy_v1_pinch30.pth",
+    "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_stage3_egg_gentle_grasp_hold_v0.xml",
+    "selected_pinch_config": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_pinch_grasp_training_v0_selected.json",
+    "report": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_10b_safety_labeled_act_dp_dataset_stress_pose008_v0_report.md",
+    "metadata": "simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_10b_safety_labeled_act_dp_dataset_stress_pose008_v0.json",
+    "skills": "full_hand_gentle_grasp,thumb_index_middle_pinch",
+    "trials": "cycle",
+    "episodes_per_skill": 10,
+    "execution_mode": "scripted_arm_predicted_hand",
+    "replan_interval": 16,
+    "hand_start_index": 6,
+    "full_hand_control_mode": "stage3_7d_fallback",
+    "full_hand_fallback_checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\stage3_phase_hand_policy_v0.pth",
+    "full_hand_fallback_transition_slip_threshold": 0.29,
+    "full_hand_fallback_max_transition_hold_steps_per_phase": 200,
+    "full_hand_fallback_recovery_progress_drop": 0.01,
+    "full_hand_fallback_recovery_stable_window_steps": 0,
+    "pinch_repair_mode": "inactive_anchor_slip_close",
+    "pinch_repair_phases": "contact_settle,slow_lift,hold",
+    "pinch_repair_slip_threshold": 0.28,
+    "pinch_repair_inactive_alpha": 1.0,
+    "pinch_repair_expert_alpha": 0.2,
+    "pinch_repair_close_gain": 0.08,
+    "pinch_repair_close_max": 0.18,
+    "pinch_repair_preclose_delta": 0.1,
+    "pinch_repair_max_crush": 0.25,
+    "pinch_repair_max_penetration": 0.0035,
+    "pinch_final_verification_mode": "vision_tactile_corroborated",
+    "pinch_final_corroboration_min_confidence": 0.3,
+    "pinch_final_corroboration_min_mask_pixels": 500,
+    "seed": 6100,
+    "random_offset_std": 0.008,
+    "camera": "stage3_egg_closeup",
+    "width": 640,
+    "height": 480,
+    "sample_every": 240,
+    "device": "cpu",
+    "capture_sequence": true
+  },
+  "readiness_checks": {
+    "episode_count": 20,
+    "success_count": 19,
+    "total_rows": 76898,
+    "obs_shape": [
+      76898,
+      130
+    ],
+    "actions_shape": [
+      76898,
+      26
+    ],
+    "padded_obs_shape": [
+      20,
+      5220,
+      130
+    ],
+    "padded_actions_shape": [
+      20,
+      5220,
+      26
+    ],
+    "finite_obs_actions": true,
+    "one_done_per_episode": true,
+    "action_range_ok": true,
+    "per_skill_count": {
+      "full_hand_gentle_grasp": 10,
+      "thumb_index_middle_pinch": 10
+    },
+    "per_skill_success": {
+      "full_hand_gentle_grasp": 10,
+      "thumb_index_middle_pinch": 9
+    },
+    "horizon_windows": {
+      "8": 74073,
+      "16": 73921,
+      "32": 73617,
+      "64": 73009,
+      "128": 71793,
+      "256": 69361
+    },
+    "min_episode_length": 2520,
+    "max_episode_length": 5220,
+    "mean_episode_length": 3844.9,
+    "act_ready": false,
+    "dp_ready": false,
+    "act_dp_ready": false,
+    "blockers": [
+      "canonical_episode_count_below_40",
+      "canonical_episode_failure_present",
+      "full_hand_success_count_below_30",
+      "pinch_success_count_below_10"
+    ]
+  },
+  "safety_checks": {
+    "row_count": 76898,
+    "safety_intervention_steps": 19498,
+    "recovery_steps": 1158,
+    "repair_steps": 18340,
+    "final_vision_corroborated_episodes": 0,
+    "risk_label_steps": 1977,
+    "risk_slip_high_steps": 1833,
+    "episode_with_safety_intervention": 20,
+    "episode_with_risk_label": 18,
+    "safety_label_shape": [
+      76898,
+      9
+    ],
+    "safety_schema_ready": true
+  },
+  "stage3_10b_smoke_ready": false,
+  "stage3_10b_train_ready": false,
+  "blockers": [
+    "episode_failure_present"
+  ],
+  "train_readiness_blockers": [
+    "canonical_episode_count_below_40",
+    "canonical_episode_failure_present",
+    "full_hand_success_count_below_30",
+    "pinch_success_count_below_10"
+  ],
+  "episode_summaries": [
+    {
+      "episode_id": 0,
+      "source_episode_id": 0,
+      "skill_id": "full_hand_gentle_grasp",
+      "source_stage": "Stage3.10A-full_hand_fallback",
+      "trial": "center_nominal",
+      "candidate": null,
+      "row_start": 0,
+      "row_count": 5124,
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 1.50909986003251e-08,
+        "ik_approach_dz_m": 6.3525497986938184e-09,
+        "ik_lift_dxy_m": 9.153908293049894e-09,
+        "ik_lift_dz_m": 4.844224889277715e-09,
+        "approach_true_proxy_error_m": 0.010063924047598165,
+        "approach_est_proxy_error_m": 0.010073896990038488,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.10352424645142631,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.24261525564039146,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.4899851585854289,
+        "pre_lift_max_slip_score": 0.19317066129956717,
+        "post_lift_max_slip_score": 0.4899851585854289,
+        "max_crush_risk": 0.09598057680719907,
+        "max_penetration_m": 0.0019196115361439815,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4664,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 2000,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.03910222864737439,
+        "pre_lift_crush_risk": 0.03251786971676465,
+        "pre_lift_penetration_m": 0.0006503573943352931,
+        "recovery_steps": 104,
+        "recovery_events": 27,
+        "recovery_counts": {
+          "slow_lift": 104
+        },
+        "recovery_reason_counts": {
+          "slip_high": 104
+        },
+        "recovery_budget_exhausted_counts": {},
+        "recovery_control_progress_min": 0.020042918454935624,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5124,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.19317066129956717,
+            "max_crush_risk": 0.04213003472512727,
+            "max_penetration_m": 0.0008426006945025454
+          },
+          "preshape": {
+            "max_slip_score": 0.1607939065172586,
+            "max_crush_risk": 0.041265557561036295,
+            "max_penetration_m": 0.000825311151220726
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.14788710942367547,
+            "max_crush_risk": 0.09057506906463329,
+            "max_penetration_m": 0.001811501381292666
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.16052176378873553,
+            "max_crush_risk": 0.09598057680719907,
+            "max_penetration_m": 0.0019196115361439815
+          },
+          "contact_settle": {
+            "max_slip_score": 0.17110885792960817,
+            "max_crush_risk": 0.055681889513149466,
+            "max_penetration_m": 0.0011136377902629894
+          },
+          "slow_lift": {
+            "max_slip_score": 0.4899851585854289,
+            "max_crush_risk": 0.03257332994631783,
+            "max_penetration_m": 0.0006514665989263566
+          },
+          "hold": {
+            "max_slip_score": 0.24261525564039146,
+            "max_crush_risk": 0.028746875105128012,
+            "max_penetration_m": 0.0005749375021025602
+          }
+        },
+        "gate_block_reason_counts": {},
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "safety_intervention_steps": 104,
+      "repair_steps": 0,
+      "recovery_steps_from_rows": 104,
+      "risk_label_steps": 49,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 1,
+      "source_episode_id": 1,
+      "skill_id": "full_hand_gentle_grasp",
+      "source_stage": "Stage3.10A-full_hand_fallback",
+      "trial": "left_low_nominal",
+      "candidate": null,
+      "row_start": 5124,
+      "row_count": 5037,
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 1.7435249811802067e-09,
+        "ik_approach_dz_m": 2.9829909098388896e-09,
+        "ik_lift_dxy_m": 3.424474216644919e-09,
+        "ik_lift_dz_m": 1.1498191884729003e-08,
+        "approach_true_proxy_error_m": 0.010649540358397751,
+        "approach_est_proxy_error_m": 0.010644322488936452,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.10207838440416994,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.19967742353221524,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.3239164386746873,
+        "pre_lift_max_slip_score": 0.2977256818526169,
+        "post_lift_max_slip_score": 0.3239164386746873,
+        "max_crush_risk": 0.1093435158868992,
+        "max_penetration_m": 0.002186870317737984,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4577,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 2000,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.0010076870914222475,
+        "pre_lift_crush_risk": 0.03304461270958658,
+        "pre_lift_penetration_m": 0.0006608922541917316,
+        "recovery_steps": 17,
+        "recovery_events": 3,
+        "recovery_counts": {
+          "slow_lift": 17
+        },
+        "recovery_reason_counts": {
+          "slip_high": 17
+        },
+        "recovery_budget_exhausted_counts": {},
+        "recovery_control_progress_min": 0.030057224606580828,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5037,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.2977256818526169,
+            "max_crush_risk": 0.04090878019397587,
+            "max_penetration_m": 0.0008181756038795173
+          },
+          "preshape": {
+            "max_slip_score": 0.20946816547522715,
+            "max_crush_risk": 0.05520148038759677,
+            "max_penetration_m": 0.0011040296077519354
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.26433964739187704,
+            "max_crush_risk": 0.1093435158868992,
+            "max_penetration_m": 0.002186870317737984
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.06396336976634437,
+            "max_crush_risk": 0.1076825256018307,
+            "max_penetration_m": 0.002153650512036614
+          },
+          "contact_settle": {
+            "max_slip_score": 0.09342524592676643,
+            "max_crush_risk": 0.07818029314970219,
+            "max_penetration_m": 0.0015636058629940439
+          },
+          "slow_lift": {
+            "max_slip_score": 0.3239164386746873,
+            "max_crush_risk": 0.03316788836250674,
+            "max_penetration_m": 0.0006633577672501348
+          },
+          "hold": {
+            "max_slip_score": 0.19967742353221524,
+            "max_crush_risk": 0.03306163445807924,
+            "max_penetration_m": 0.0006612326891615849
+          }
+        },
+        "gate_block_reason_counts": {},
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "safety_intervention_steps": 17,
+      "repair_steps": 0,
+      "recovery_steps_from_rows": 17,
+      "risk_label_steps": 0,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 2,
+      "source_episode_id": 2,
+      "skill_id": "full_hand_gentle_grasp",
+      "source_stage": "Stage3.10A-full_hand_fallback",
+      "trial": "right_high_nominal",
+      "candidate": null,
+      "row_start": 10161,
+      "row_count": 5033,
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 1.1517247202111522e-08,
+        "ik_approach_dz_m": 1.9724117200636826e-09,
+        "ik_lift_dxy_m": 4.464863963371869e-09,
+        "ik_lift_dz_m": 1.384493839018397e-09,
+        "approach_true_proxy_error_m": 0.013487818981023776,
+        "approach_est_proxy_error_m": 0.013501705629783981,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.09260653980406623,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.20416446718369544,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.4458481140052208,
+        "pre_lift_max_slip_score": 0.4458481140052208,
+        "post_lift_max_slip_score": 0.3323974606262241,
+        "max_crush_risk": 0.07764115507811241,
+        "max_penetration_m": 0.0015528231015622482,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4573,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 1788,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.01845941403827596,
+        "pre_lift_crush_risk": 0.03233764074875387,
+        "pre_lift_penetration_m": 0.0006467528149750774,
+        "recovery_steps": 13,
+        "recovery_events": 1,
+        "recovery_counts": {
+          "slow_lift": 13
+        },
+        "recovery_reason_counts": {
+          "slip_high": 13
+        },
+        "recovery_budget_exhausted_counts": {},
+        "recovery_control_progress_min": 0.04007153075822604,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5033,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.1585904794263214,
+            "max_crush_risk": 0.03746414046264494,
+            "max_penetration_m": 0.0007492828092528989
+          },
+          "preshape": {
+            "max_slip_score": 0.14007666125367285,
+            "max_crush_risk": 0.039386910408526425,
+            "max_penetration_m": 0.0007877382081705285
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.12031603829090741,
+            "max_crush_risk": 0.07696787451429772,
+            "max_penetration_m": 0.0015393574902859545
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.27941848837330974,
+            "max_crush_risk": 0.07764115507811241,
+            "max_penetration_m": 0.0015528231015622482
+          },
+          "contact_settle": {
+            "max_slip_score": 0.4458481140052208,
+            "max_crush_risk": 0.044259399733080886,
+            "max_penetration_m": 0.0008851879946616178
+          },
+          "slow_lift": {
+            "max_slip_score": 0.3323974606262241,
+            "max_crush_risk": 0.03234985805503536,
+            "max_penetration_m": 0.0006469971611007073
+          },
+          "hold": {
+            "max_slip_score": 0.20416446718369544,
+            "max_crush_risk": 0.029932824219811895,
+            "max_penetration_m": 0.0005986564843962379
+          }
+        },
+        "gate_block_reason_counts": {
+          "slip_high": 159,
+          "grip_not_stable": 9
+        },
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "safety_intervention_steps": 13,
+      "repair_steps": 0,
+      "recovery_steps_from_rows": 13,
+      "risk_label_steps": 33,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 3,
+      "source_episode_id": 3,
+      "skill_id": "full_hand_gentle_grasp",
+      "source_stage": "Stage3.10A-full_hand_fallback",
+      "trial": "left_high_zplus",
+      "candidate": null,
+      "row_start": 15194,
+      "row_count": 5220,
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip",
+        "recovery_budget_exhausted"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 7.527890690558e-09,
+        "ik_approach_dz_m": 7.005140467697402e-09,
+        "ik_lift_dxy_m": 1.6873593310118764e-09,
+        "ik_lift_dz_m": 3.880297846925451e-09,
+        "approach_true_proxy_error_m": 0.00913404331866564,
+        "approach_est_proxy_error_m": 0.0074130192176794195,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.10682128438642874,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.15374538272877178,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.7709208129027161,
+        "pre_lift_max_slip_score": 0.7709208129027161,
+        "post_lift_max_slip_score": 0.49278000960190604,
+        "max_crush_risk": 0.08989297862866596,
+        "max_penetration_m": 0.0017978595725733192,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4760,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 1843,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.012693579105324062,
+        "pre_lift_crush_risk": 0.03096736673083942,
+        "pre_lift_penetration_m": 0.0006193473346167884,
+        "recovery_steps": 200,
+        "recovery_events": 48,
+        "recovery_counts": {
+          "slow_lift": 200
+        },
+        "recovery_reason_counts": {
+          "slip_high": 241
+        },
+        "recovery_budget_exhausted_counts": {
+          "slow_lift": 41
+        },
+        "recovery_control_progress_min": 0.08585121602288985,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5220,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.19682328538322902,
+            "max_crush_risk": 0.045638523752644336,
+            "max_penetration_m": 0.0009127704750528867
+          },
+          "preshape": {
+            "max_slip_score": 0.1741756141947569,
+            "max_crush_risk": 0.03723155252521931,
+            "max_penetration_m": 0.0007446310505043861
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.15106395451223706,
+            "max_crush_risk": 0.08988738120615644,
+            "max_penetration_m": 0.0017977476241231288
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.7709208129027161,
+            "max_crush_risk": 0.08989297862866596,
+            "max_penetration_m": 0.0017978595725733192
+          },
+          "contact_settle": {
+            "max_slip_score": 0.581468037489046,
+            "max_crush_risk": 0.045347385645824224,
+            "max_penetration_m": 0.0009069477129164845
+          },
+          "slow_lift": {
+            "max_slip_score": 0.49278000960190604,
+            "max_crush_risk": 0.03096949897174496,
+            "max_penetration_m": 0.0006193899794348992
+          },
+          "hold": {
+            "max_slip_score": 0.15374538272877178,
+            "max_crush_risk": 0.029181002378295042,
+            "max_penetration_m": 0.0005836200475659008
+          }
+        },
+        "gate_block_reason_counts": {
+          "slip_high": 109,
+          "grip_not_stable": 10
+        },
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "safety_intervention_steps": 200,
+      "repair_steps": 0,
+      "recovery_steps_from_rows": 200,
+      "risk_label_steps": 144,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 4,
+      "source_episode_id": 4,
+      "skill_id": "full_hand_gentle_grasp",
+      "source_stage": "Stage3.10A-full_hand_fallback",
+      "trial": "right_low_zminus",
+      "candidate": null,
+      "row_start": 20414,
+      "row_count": 5220,
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip",
+        "recovery_budget_exhausted"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 1.777590990317563e-08,
+        "ik_approach_dz_m": 2.208275785842151e-08,
+        "ik_lift_dxy_m": 1.269106489819393e-08,
+        "ik_lift_dz_m": 1.1182128918652001e-07,
+        "approach_true_proxy_error_m": 0.012719361325044152,
+        "approach_est_proxy_error_m": 0.014392061630572085,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.1001406161548318,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.2883078316606946,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.47282922696123786,
+        "pre_lift_max_slip_score": 0.21084555174313543,
+        "post_lift_max_slip_score": 0.47282922696123786,
+        "max_crush_risk": 0.09372103432971594,
+        "max_penetration_m": 0.0018744206865943188,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4760,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 1903,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.029902240906328346,
+        "pre_lift_crush_risk": 0.031150475575978352,
+        "pre_lift_penetration_m": 0.000623009511519567,
+        "recovery_steps": 200,
+        "recovery_events": 51,
+        "recovery_counts": {
+          "slow_lift": 200
+        },
+        "recovery_reason_counts": {
+          "slip_high": 239
+        },
+        "recovery_budget_exhausted_counts": {
+          "slow_lift": 39
+        },
+        "recovery_control_progress_min": 0.0357796852646638,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5220,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.18153938567678582,
+            "max_crush_risk": 0.04009801945027877,
+            "max_penetration_m": 0.0008019603890055755
+          },
+          "preshape": {
+            "max_slip_score": 0.1504365322528459,
+            "max_crush_risk": 0.04309550478597054,
+            "max_penetration_m": 0.0008619100957194108
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.17596810874256316,
+            "max_crush_risk": 0.09298872971329382,
+            "max_penetration_m": 0.0018597745942658763
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.19753575560199155,
+            "max_crush_risk": 0.09372103432971594,
+            "max_penetration_m": 0.0018744206865943188
+          },
+          "contact_settle": {
+            "max_slip_score": 0.21084555174313543,
+            "max_crush_risk": 0.04592040935038196,
+            "max_penetration_m": 0.0009184081870076393
+          },
+          "slow_lift": {
+            "max_slip_score": 0.47282922696123786,
+            "max_crush_risk": 0.031146019655494284,
+            "max_penetration_m": 0.0006229203931098857
+          },
+          "hold": {
+            "max_slip_score": 0.2883078316606946,
+            "max_crush_risk": 0.02716419190980715,
+            "max_penetration_m": 0.000543283838196143
+          }
+        },
+        "gate_block_reason_counts": {
+          "slip_high": 97
+        },
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "safety_intervention_steps": 200,
+      "repair_steps": 0,
+      "recovery_steps_from_rows": 200,
+      "risk_label_steps": 85,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 5,
+      "source_episode_id": 5,
+      "skill_id": "full_hand_gentle_grasp",
+      "source_stage": "Stage3.10A-full_hand_fallback",
+      "trial": "front_small_lift",
+      "candidate": null,
+      "row_start": 25634,
+      "row_count": 5033,
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 2.0618252012859774e-09,
+        "ik_approach_dz_m": 7.317000130790952e-10,
+        "ik_lift_dxy_m": 7.54021233697929e-09,
+        "ik_lift_dz_m": 1.6325144604201203e-08,
+        "approach_true_proxy_error_m": 0.01234030875189573,
+        "approach_est_proxy_error_m": 0.011109606249642313,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.08377024728928927,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.19213261154803907,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.3634083116865514,
+        "pre_lift_max_slip_score": 0.3634083116865514,
+        "post_lift_max_slip_score": 0.338525913882849,
+        "max_crush_risk": 0.10729490191782487,
+        "max_penetration_m": 0.0021458980383564975,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4573,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 1255,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.05921208026366532,
+        "pre_lift_crush_risk": 0.042637157768232736,
+        "pre_lift_penetration_m": 0.0008527431553646547,
+        "recovery_steps": 13,
+        "recovery_events": 2,
+        "recovery_counts": {
+          "slow_lift": 13
+        },
+        "recovery_reason_counts": {
+          "slip_high": 13
+        },
+        "recovery_budget_exhausted_counts": {},
+        "recovery_control_progress_min": 0.028626609442060087,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5033,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.3634083116865514,
+            "max_crush_risk": 0.03883485581963435,
+            "max_penetration_m": 0.000776697116392687
+          },
+          "preshape": {
+            "max_slip_score": 0.14508201158584497,
+            "max_crush_risk": 0.050644192564519755,
+            "max_penetration_m": 0.0010128838512903952
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.13356676494647013,
+            "max_crush_risk": 0.10722151722449226,
+            "max_penetration_m": 0.002144430344489845
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.16803071157674934,
+            "max_crush_risk": 0.10729490191782487,
+            "max_penetration_m": 0.0021458980383564975
+          },
+          "contact_settle": {
+            "max_slip_score": 0.26619189640103513,
+            "max_crush_risk": 0.07001859867626138,
+            "max_penetration_m": 0.0014003719735252277
+          },
+          "slow_lift": {
+            "max_slip_score": 0.338525913882849,
+            "max_crush_risk": 0.0426255047068255,
+            "max_penetration_m": 0.0008525100941365101
+          },
+          "hold": {
+            "max_slip_score": 0.19213261154803907,
+            "max_crush_risk": 0.03401483040283374,
+            "max_penetration_m": 0.0006802966080566748
+          }
+        },
+        "gate_block_reason_counts": {
+          "slip_high": 89
+        },
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "safety_intervention_steps": 13,
+      "repair_steps": 0,
+      "recovery_steps_from_rows": 13,
+      "risk_label_steps": 3,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 6,
+      "source_episode_id": 6,
+      "skill_id": "full_hand_gentle_grasp",
+      "source_stage": "Stage3.10A-full_hand_fallback",
+      "trial": "back_large_lift",
+      "candidate": null,
+      "row_start": 30667,
+      "row_count": 5220,
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip",
+        "recovery_budget_exhausted"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 7.203878125717169e-09,
+        "ik_approach_dz_m": 1.4998461257687e-08,
+        "ik_lift_dxy_m": 6.667939437104615e-09,
+        "ik_lift_dz_m": 6.340026864615211e-09,
+        "approach_true_proxy_error_m": 0.010507645602146239,
+        "approach_est_proxy_error_m": 0.011654668693126945,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.12007108623486246,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.18581720513047567,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.41887436807147727,
+        "pre_lift_max_slip_score": 0.21964844288223154,
+        "post_lift_max_slip_score": 0.41887436807147727,
+        "max_crush_risk": 0.10643258797265993,
+        "max_penetration_m": 0.0021286517594531987,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4760,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 2000,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.0020187031244867674,
+        "pre_lift_crush_risk": 0.033893068768230374,
+        "pre_lift_penetration_m": 0.0006778613753646075,
+        "recovery_steps": 200,
+        "recovery_events": 72,
+        "recovery_counts": {
+          "slow_lift": 200
+        },
+        "recovery_reason_counts": {
+          "slip_high": 265
+        },
+        "recovery_budget_exhausted_counts": {
+          "slow_lift": 65
+        },
+        "recovery_control_progress_min": 0.10015736766809728,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5220,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.21416593191916447,
+            "max_crush_risk": 0.04271820773524722,
+            "max_penetration_m": 0.0008543641547049444
+          },
+          "preshape": {
+            "max_slip_score": 0.21964844288223154,
+            "max_crush_risk": 0.04687596143298416,
+            "max_penetration_m": 0.0009375192286596832
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.17751433012012055,
+            "max_crush_risk": 0.1022825584143112,
+            "max_penetration_m": 0.0020456511682862243
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.1387207735307103,
+            "max_crush_risk": 0.10643258797265993,
+            "max_penetration_m": 0.0021286517594531987
+          },
+          "contact_settle": {
+            "max_slip_score": 0.08231664843504638,
+            "max_crush_risk": 0.06797252855429052,
+            "max_penetration_m": 0.0013594505710858105
+          },
+          "slow_lift": {
+            "max_slip_score": 0.41887436807147727,
+            "max_crush_risk": 0.03398883772443512,
+            "max_penetration_m": 0.0006797767544887024
+          },
+          "hold": {
+            "max_slip_score": 0.18581720513047567,
+            "max_crush_risk": 0.03307577593064719,
+            "max_penetration_m": 0.0006615155186129439
+          }
+        },
+        "gate_block_reason_counts": {},
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "safety_intervention_steps": 200,
+      "repair_steps": 0,
+      "recovery_steps_from_rows": 200,
+      "risk_label_steps": 131,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 7,
+      "source_episode_id": 7,
+      "skill_id": "full_hand_gentle_grasp",
+      "source_stage": "Stage3.10A-full_hand_fallback",
+      "trial": "lifted_center",
+      "candidate": null,
+      "row_start": 35887,
+      "row_count": 5212,
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 2.258335509117277e-09,
+        "ik_approach_dz_m": 6.351100936830001e-09,
+        "ik_lift_dxy_m": 1.5446512239006664e-08,
+        "ik_lift_dz_m": 3.41223323208073e-08,
+        "approach_true_proxy_error_m": 0.005550538337730807,
+        "approach_est_proxy_error_m": 0.00553708192994479,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.10036795463102807,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.18803340833252097,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.6964335286490065,
+        "pre_lift_max_slip_score": 0.6964335286490065,
+        "post_lift_max_slip_score": 0.3749510104078285,
+        "max_crush_risk": 0.10484482543090447,
+        "max_penetration_m": 0.0020968965086180895,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4752,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 1878,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.002344453187278875,
+        "pre_lift_crush_risk": 0.038656098192724454,
+        "pre_lift_penetration_m": 0.0007731219638544892,
+        "recovery_steps": 192,
+        "recovery_events": 11,
+        "recovery_counts": {
+          "slow_lift": 192
+        },
+        "recovery_reason_counts": {
+          "slip_high": 192
+        },
+        "recovery_budget_exhausted_counts": {},
+        "recovery_control_progress_min": 0.09443490701001431,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5212,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.24237554244168902,
+            "max_crush_risk": 0.06888071272394755,
+            "max_penetration_m": 0.001377614254478951
+          },
+          "preshape": {
+            "max_slip_score": 0.2411432134260342,
+            "max_crush_risk": 0.038269813145908015,
+            "max_penetration_m": 0.0007653962629181603
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.17036288449192574,
+            "max_crush_risk": 0.096817453198687,
+            "max_penetration_m": 0.00193634906397374
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.11207048146218479,
+            "max_crush_risk": 0.10484482543090447,
+            "max_penetration_m": 0.0020968965086180895
+          },
+          "contact_settle": {
+            "max_slip_score": 0.6964335286490065,
+            "max_crush_risk": 0.08873774635591641,
+            "max_penetration_m": 0.0017747549271183282
+          },
+          "slow_lift": {
+            "max_slip_score": 0.3749510104078285,
+            "max_crush_risk": 0.03867802132132593,
+            "max_penetration_m": 0.0007735604264265186
+          },
+          "hold": {
+            "max_slip_score": 0.18803340833252097,
+            "max_crush_risk": 0.03897261593259864,
+            "max_penetration_m": 0.0007794523186519728
+          }
+        },
+        "gate_block_reason_counts": {
+          "slip_high": 72,
+          "grip_not_stable": 16
+        },
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "safety_intervention_steps": 192,
+      "repair_steps": 0,
+      "recovery_steps_from_rows": 192,
+      "risk_label_steps": 40,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 8,
+      "source_episode_id": 8,
+      "skill_id": "full_hand_gentle_grasp",
+      "source_stage": "Stage3.10A-full_hand_fallback",
+      "trial": "lifted_diag",
+      "candidate": null,
+      "row_start": 41099,
+      "row_count": 5220,
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip",
+        "recovery_budget_exhausted"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 2.7023196160574254e-09,
+        "ik_approach_dz_m": 2.46827424471574e-09,
+        "ik_lift_dxy_m": 5.04901244143786e-09,
+        "ik_lift_dz_m": 2.6058377747273376e-08,
+        "approach_true_proxy_error_m": 0.005770331478457497,
+        "approach_est_proxy_error_m": 0.00701590261108659,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.11208387021136716,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.21227596391931652,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.6659882602824617,
+        "pre_lift_max_slip_score": 0.6659882602824617,
+        "post_lift_max_slip_score": 0.42371729723371215,
+        "max_crush_risk": 0.09557398650054941,
+        "max_penetration_m": 0.001911479730010988,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4760,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 1702,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.0055537538003951545,
+        "pre_lift_crush_risk": 0.03869642714164224,
+        "pre_lift_penetration_m": 0.0007739285428328448,
+        "recovery_steps": 200,
+        "recovery_events": 55,
+        "recovery_counts": {
+          "slow_lift": 200
+        },
+        "recovery_reason_counts": {
+          "slip_high": 248
+        },
+        "recovery_budget_exhausted_counts": {
+          "slow_lift": 48
+        },
+        "recovery_control_progress_min": 0.08442060085836911,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5220,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.34239725026016266,
+            "max_crush_risk": 0.06888071272394755,
+            "max_penetration_m": 0.001377614254478951
+          },
+          "preshape": {
+            "max_slip_score": 0.2629157258429008,
+            "max_crush_risk": 0.04023308683795231,
+            "max_penetration_m": 0.0008046617367590463
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.14205951413932738,
+            "max_crush_risk": 0.08586965443484529,
+            "max_penetration_m": 0.001717393088696906
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.0765454927701212,
+            "max_crush_risk": 0.09557398650054941,
+            "max_penetration_m": 0.001911479730010988
+          },
+          "contact_settle": {
+            "max_slip_score": 0.6659882602824617,
+            "max_crush_risk": 0.09018217459955047,
+            "max_penetration_m": 0.0018036434919910093
+          },
+          "slow_lift": {
+            "max_slip_score": 0.42371729723371215,
+            "max_crush_risk": 0.03877810829011775,
+            "max_penetration_m": 0.000775562165802355
+          },
+          "hold": {
+            "max_slip_score": 0.21227596391931652,
+            "max_crush_risk": 0.038384195697782966,
+            "max_penetration_m": 0.0007676839139556593
+          }
+        },
+        "gate_block_reason_counts": {
+          "slip_high": 63,
+          "grip_not_stable": 17
+        },
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "safety_intervention_steps": 200,
+      "repair_steps": 0,
+      "recovery_steps_from_rows": 200,
+      "risk_label_steps": 104,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 9,
+      "source_episode_id": 9,
+      "skill_id": "full_hand_gentle_grasp",
+      "source_stage": "Stage3.10A-full_hand_fallback",
+      "trial": "wide_diag",
+      "candidate": null,
+      "row_start": 46319,
+      "row_count": 5039,
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 2.8663159982573642e-08,
+        "ik_approach_dz_m": 5.2565755581657214e-08,
+        "ik_lift_dxy_m": 6.678633582499117e-10,
+        "ik_lift_dz_m": 2.3633948964540963e-10,
+        "approach_true_proxy_error_m": 0.006281387074623663,
+        "approach_est_proxy_error_m": 0.0067744050895901095,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.11453254012548766,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.1966671247372989,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.3109654607274974,
+        "pre_lift_max_slip_score": 0.28907480162787164,
+        "post_lift_max_slip_score": 0.3109654607274974,
+        "max_crush_risk": 0.09921953350639501,
+        "max_penetration_m": 0.0019843906701279,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4579,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 2000,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.003704067867151031,
+        "pre_lift_crush_risk": 0.03866231611882554,
+        "pre_lift_penetration_m": 0.0007732463223765109,
+        "recovery_steps": 19,
+        "recovery_events": 6,
+        "recovery_counts": {
+          "slow_lift": 19
+        },
+        "recovery_reason_counts": {
+          "slip_high": 19
+        },
+        "recovery_budget_exhausted_counts": {},
+        "recovery_control_progress_min": 0.032918454935622316,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5039,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.28907480162787164,
+            "max_crush_risk": 0.04716574133926495,
+            "max_penetration_m": 0.000943314826785299
+          },
+          "preshape": {
+            "max_slip_score": 0.21472371995046485,
+            "max_crush_risk": 0.04276806500746819,
+            "max_penetration_m": 0.0008553613001493638
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.19943287445396524,
+            "max_crush_risk": 0.09289901785167338,
+            "max_penetration_m": 0.0018579803570334676
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.10784835289152465,
+            "max_crush_risk": 0.09921953350639501,
+            "max_penetration_m": 0.0019843906701279
+          },
+          "contact_settle": {
+            "max_slip_score": 0.08547405825783827,
+            "max_crush_risk": 0.06833008091390955,
+            "max_penetration_m": 0.001366601618278191
+          },
+          "slow_lift": {
+            "max_slip_score": 0.3109654607274974,
+            "max_crush_risk": 0.038656302303570825,
+            "max_penetration_m": 0.0007731260460714165
+          },
+          "hold": {
+            "max_slip_score": 0.1966671247372989,
+            "max_crush_risk": 0.03398440040519911,
+            "max_penetration_m": 0.0006796880081039822
+          }
+        },
+        "gate_block_reason_counts": {},
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "safety_intervention_steps": 19,
+      "repair_steps": 0,
+      "recovery_steps_from_rows": 19,
+      "risk_label_steps": 0,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 10,
+      "source_episode_id": 10,
+      "skill_id": "thumb_index_middle_pinch",
+      "source_stage": "Stage3.10A-act_lite_pinch_repair",
+      "trial": "center_nominal",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "row_start": 51358,
+      "row_count": 2520,
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.9826017855111748,
+        "initial_vision_mask_pixels": 14574,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.6120933551751989,
+        "final_vision_mask_pixels": 9450,
+        "vision_lift_height_m": 0.10462954008463737,
+        "true_lift_height_m": 0.10353318586519308,
+        "vision_true_lift_error_m": 0.00109635421944429,
+        "approach_true_proxy_error_m": 0.011770933636306227,
+        "ik_approach_dxy_m": 3.1300403308823867e-08,
+        "ik_approach_dz_m": 3.848538387279943e-08,
+        "ik_lift_dxy_m": 2.9870936299102107e-08,
+        "ik_lift_dz_m": 6.5615755398540365e-09,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 400,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 279,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.8000000000000034,
+        "hold_max_slip_score": 0.15484259393266483,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 1.0,
+        "max_crush_risk": 0.17638671938362244,
+        "max_penetration_m": 0.003527734387672449,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 10,
+        "final_contact_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 1169,
+          "palm": 3451,
+          "index": 7007,
+          "middle": 2098,
+          "thumb": 4910
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1800,
+          "inactive_anchor_slip_close:contact_settle": 400,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 1.0,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.4424139860236256,
+            "max_crush_risk": 0.04097439313008176,
+            "max_penetration_m": 0.0008194878626016352
+          },
+          "preshape": {
+            "max_slip_score": 0.13623492510371465,
+            "max_crush_risk": 0.038995261186562075,
+            "max_penetration_m": 0.0007799052237312415
+          },
+          "pinch_close": {
+            "max_slip_score": 0.529643648709915,
+            "max_crush_risk": 0.10616631767525395,
+            "max_penetration_m": 0.002123326353505079
+          },
+          "contact_settle": {
+            "max_slip_score": 0.428784644637699,
+            "max_crush_risk": 0.17638671938362244,
+            "max_penetration_m": 0.003527734387672449
+          },
+          "slow_lift": {
+            "max_slip_score": 1.0,
+            "max_crush_risk": 0.12239245387808519,
+            "max_penetration_m": 0.002447849077561704
+          },
+          "hold": {
+            "max_slip_score": 0.15484259393266483,
+            "max_crush_risk": 0.11449083078047462,
+            "max_penetration_m": 0.0022898166156094923
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2520
+      },
+      "safety_intervention_steps": 1800,
+      "repair_steps": 1800,
+      "recovery_steps_from_rows": 0,
+      "risk_label_steps": 157,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 11,
+      "source_episode_id": 11,
+      "skill_id": "thumb_index_middle_pinch",
+      "source_stage": "Stage3.10A-act_lite_pinch_repair",
+      "trial": "left_low_nominal",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "row_start": 53878,
+      "row_count": 2520,
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.9825791703602417,
+        "initial_vision_mask_pixels": 12701,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.6131033435643101,
+        "final_vision_mask_pixels": 7938,
+        "vision_lift_height_m": 0.10494694018130862,
+        "true_lift_height_m": 0.10510037410399238,
+        "vision_true_lift_error_m": 0.00015343392268375722,
+        "approach_true_proxy_error_m": 0.008169380575785378,
+        "ik_approach_dxy_m": 3.6027828879221464e-09,
+        "ik_approach_dz_m": 4.534276440426588e-09,
+        "ik_lift_dxy_m": 1.234649216931777e-09,
+        "ik_lift_dz_m": 1.423229284425176e-09,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 400,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 171,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.8000000000000034,
+        "hold_max_slip_score": 0.10440885529294025,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 1.0,
+        "max_crush_risk": 0.13200392248668832,
+        "max_penetration_m": 0.0026400784497337664,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 10,
+        "final_contact_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 883,
+          "palm": 3555,
+          "index": 7121,
+          "thumb": 4600,
+          "middle": 1919
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1800,
+          "inactive_anchor_slip_close:contact_settle": 400,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 1.0,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.22129636802023783,
+            "max_crush_risk": 0.042435128114308836,
+            "max_penetration_m": 0.0008487025622861767
+          },
+          "preshape": {
+            "max_slip_score": 0.25021184299629395,
+            "max_crush_risk": 0.03891101518926654,
+            "max_penetration_m": 0.0007782203037853308
+          },
+          "pinch_close": {
+            "max_slip_score": 0.5589012623616619,
+            "max_crush_risk": 0.07447736684093065,
+            "max_penetration_m": 0.0014895473368186129
+          },
+          "contact_settle": {
+            "max_slip_score": 1.0,
+            "max_crush_risk": 0.13200392248668832,
+            "max_penetration_m": 0.0026400784497337664
+          },
+          "slow_lift": {
+            "max_slip_score": 0.4317529544887784,
+            "max_crush_risk": 0.11620100830044339,
+            "max_penetration_m": 0.0023240201660088677
+          },
+          "hold": {
+            "max_slip_score": 0.10440885529294025,
+            "max_crush_risk": 0.10977964469251694,
+            "max_penetration_m": 0.002195592893850339
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2520
+      },
+      "safety_intervention_steps": 1800,
+      "repair_steps": 1800,
+      "recovery_steps_from_rows": 0,
+      "risk_label_steps": 127,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 12,
+      "source_episode_id": 12,
+      "skill_id": "thumb_index_middle_pinch",
+      "source_stage": "Stage3.10A-act_lite_pinch_repair",
+      "trial": "right_high_nominal",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "row_start": 56398,
+      "row_count": 2520,
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.9826107050833184,
+        "initial_vision_mask_pixels": 17658,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.519717407892933,
+        "final_vision_mask_pixels": 8703,
+        "vision_lift_height_m": 0.07506536639296545,
+        "true_lift_height_m": 0.08654902289051566,
+        "vision_true_lift_error_m": 0.011483656497550218,
+        "approach_true_proxy_error_m": 0.013478256557613299,
+        "ik_approach_dxy_m": 1.090619792735746e-08,
+        "ik_approach_dz_m": 7.109934002658136e-09,
+        "ik_lift_dxy_m": 2.033808775803309e-08,
+        "ik_lift_dz_m": 5.838432848292996e-09,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 400,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 400,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.8761507936507935,
+        "hold_max_slip_score": 0.25548742598971363,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 1.0,
+        "max_crush_risk": 0.1421955253628618,
+        "max_penetration_m": 0.002843910507257236,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 8,
+        "final_contact_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 1249,
+          "palm": 2253,
+          "middle": 5471,
+          "index": 4697,
+          "thumb": 4139
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1800,
+          "inactive_anchor_slip_close:contact_settle": 400,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 1.0,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.4427584306544099,
+            "max_crush_risk": 0.03730449393585301,
+            "max_penetration_m": 0.0007460898787170602
+          },
+          "preshape": {
+            "max_slip_score": 0.12951817957155198,
+            "max_crush_risk": 0.038929903430535255,
+            "max_penetration_m": 0.0007785980686107051
+          },
+          "pinch_close": {
+            "max_slip_score": 0.3065025104800557,
+            "max_crush_risk": 0.09817950434430893,
+            "max_penetration_m": 0.0019635900868861787
+          },
+          "contact_settle": {
+            "max_slip_score": 0.1613404433212235,
+            "max_crush_risk": 0.14150248875498572,
+            "max_penetration_m": 0.0028300497750997147
+          },
+          "slow_lift": {
+            "max_slip_score": 1.0,
+            "max_crush_risk": 0.1421955253628618,
+            "max_penetration_m": 0.002843910507257236
+          },
+          "hold": {
+            "max_slip_score": 0.25548742598971363,
+            "max_crush_risk": 0.11299818472714492,
+            "max_penetration_m": 0.0022599636945428983
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2520
+      },
+      "safety_intervention_steps": 1800,
+      "repair_steps": 1800,
+      "recovery_steps_from_rows": 0,
+      "risk_label_steps": 341,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 13,
+      "source_episode_id": 13,
+      "skill_id": "thumb_index_middle_pinch",
+      "source_stage": "Stage3.10A-act_lite_pinch_repair",
+      "trial": "left_high_zplus",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "row_start": 58918,
+      "row_count": 2520,
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.9826071483870564,
+        "initial_vision_mask_pixels": 14985,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.5939017978891921,
+        "final_vision_mask_pixels": 6314,
+        "vision_lift_height_m": 0.12611347396385553,
+        "true_lift_height_m": 0.11059460039638659,
+        "vision_true_lift_error_m": 0.015518873567468935,
+        "approach_true_proxy_error_m": 0.009949400228424946,
+        "ik_approach_dxy_m": 6.494686747532619e-09,
+        "ik_approach_dz_m": 1.399579104000015e-08,
+        "ik_lift_dxy_m": 4.186534315761462e-10,
+        "ik_lift_dz_m": 4.967706010439166e-09,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 400,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 213,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.875,
+        "hold_max_slip_score": 0.158495740213251,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 1.0,
+        "max_crush_risk": 0.1628964961629841,
+        "max_penetration_m": 0.003257929923259682,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 8,
+        "final_contact_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 833,
+          "palm": 2239,
+          "middle": 3859,
+          "index": 3552,
+          "thumb": 5048
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1800,
+          "inactive_anchor_slip_close:contact_settle": 400,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 1.0,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.27137077250182023,
+            "max_crush_risk": 0.04577451169404861,
+            "max_penetration_m": 0.0009154902338809721
+          },
+          "preshape": {
+            "max_slip_score": 0.14786354146884603,
+            "max_crush_risk": 0.03701881831726177,
+            "max_penetration_m": 0.0007403763663452353
+          },
+          "pinch_close": {
+            "max_slip_score": 0.2939305003531253,
+            "max_crush_risk": 0.04780851962852504,
+            "max_penetration_m": 0.0009561703925705007
+          },
+          "contact_settle": {
+            "max_slip_score": 1.0,
+            "max_crush_risk": 0.1628964961629841,
+            "max_penetration_m": 0.003257929923259682
+          },
+          "slow_lift": {
+            "max_slip_score": 0.34463601687063483,
+            "max_crush_risk": 0.10647612964862045,
+            "max_penetration_m": 0.002129522592972409
+          },
+          "hold": {
+            "max_slip_score": 0.158495740213251,
+            "max_crush_risk": 0.11167798101854873,
+            "max_penetration_m": 0.0022335596203709746
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2520
+      },
+      "safety_intervention_steps": 1800,
+      "repair_steps": 1800,
+      "recovery_steps_from_rows": 0,
+      "risk_label_steps": 72,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 14,
+      "source_episode_id": 14,
+      "skill_id": "thumb_index_middle_pinch",
+      "source_stage": "Stage3.10A-act_lite_pinch_repair",
+      "trial": "right_low_zminus",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "row_start": 61438,
+      "row_count": 2687,
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.9826046561217083,
+        "initial_vision_mask_pixels": 15335,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.7062781182639074,
+        "final_vision_mask_pixels": 2958,
+        "vision_lift_height_m": 0.10020732594274798,
+        "true_lift_height_m": 0.10006732755376326,
+        "vision_true_lift_error_m": 0.00013999838898472172,
+        "approach_true_proxy_error_m": 0.011946731785713677,
+        "ik_approach_dxy_m": 3.814096353015125e-09,
+        "ik_approach_dz_m": 1.1054374061958416e-08,
+        "ik_lift_dxy_m": 4.8159402285216415e-09,
+        "ik_lift_dz_m": 2.757714827328339e-09,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 567,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 120,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.6210476190476217,
+        "hold_max_slip_score": 0.19522997512185608,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 1.0,
+        "max_crush_risk": 0.15692186450432546,
+        "max_penetration_m": 0.0031384372900865095,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 3,
+        "final_contact_regions": [
+          "little",
+          "middle",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 1053,
+          "palm": 1910,
+          "middle": 4561,
+          "index": 1476,
+          "thumb": 2354,
+          "ring": 756,
+          "little": 148
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1967,
+          "inactive_anchor_slip_close:contact_settle": 567,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 1.0,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.20981757672077542,
+            "max_crush_risk": 0.04111411206562495,
+            "max_penetration_m": 0.000822282241312499
+          },
+          "preshape": {
+            "max_slip_score": 0.1928131535439261,
+            "max_crush_risk": 0.040987999086012535,
+            "max_penetration_m": 0.0008197599817202506
+          },
+          "pinch_close": {
+            "max_slip_score": 0.3086303071888466,
+            "max_crush_risk": 0.05981017347698607,
+            "max_penetration_m": 0.0011962034695397214
+          },
+          "contact_settle": {
+            "max_slip_score": 1.0,
+            "max_crush_risk": 0.15692186450432546,
+            "max_penetration_m": 0.0031384372900865095
+          },
+          "slow_lift": {
+            "max_slip_score": 0.38612992200539675,
+            "max_crush_risk": 0.07662065721086479,
+            "max_penetration_m": 0.001532413144217296
+          },
+          "hold": {
+            "max_slip_score": 0.19522997512185608,
+            "max_crush_risk": 0.045725562883672154,
+            "max_penetration_m": 0.0009145112576734431
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2687
+      },
+      "safety_intervention_steps": 1967,
+      "repair_steps": 1967,
+      "recovery_steps_from_rows": 0,
+      "risk_label_steps": 117,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 15,
+      "source_episode_id": 15,
+      "skill_id": "thumb_index_middle_pinch",
+      "source_stage": "Stage3.10A-act_lite_pinch_repair",
+      "trial": "front_small_lift",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "row_start": 64125,
+      "row_count": 2520,
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.9825990418259023,
+        "initial_vision_mask_pixels": 14909,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.7180486722991488,
+        "final_vision_mask_pixels": 4592,
+        "vision_lift_height_m": 0.09525274397777442,
+        "true_lift_height_m": 0.08811347764860011,
+        "vision_true_lift_error_m": 0.007139266329174304,
+        "approach_true_proxy_error_m": 0.010125516132186574,
+        "ik_approach_dxy_m": 3.6725467330984203e-09,
+        "ik_approach_dz_m": 2.162311933673333e-09,
+        "ik_lift_dxy_m": 6.716593936265712e-09,
+        "ik_lift_dz_m": 4.0128342919387716e-08,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 400,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 212,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.8481961451247144,
+        "hold_max_slip_score": 0.2164565290547325,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 1.0,
+        "max_crush_risk": 0.1632246906776427,
+        "max_penetration_m": 0.003264493813552854,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 4,
+        "final_contact_regions": [
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 825,
+          "palm": 2246,
+          "index": 2763,
+          "middle": 4447,
+          "thumb": 3874
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1800,
+          "inactive_anchor_slip_close:contact_settle": 400,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 1.0,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.18824064703623206,
+            "max_crush_risk": 0.04181303118786247,
+            "max_penetration_m": 0.0008362606237572494
+          },
+          "preshape": {
+            "max_slip_score": 0.138759304528254,
+            "max_crush_risk": 0.03773331464423155,
+            "max_penetration_m": 0.000754666292884631
+          },
+          "pinch_close": {
+            "max_slip_score": 0.2982964885789632,
+            "max_crush_risk": 0.07329869531799794,
+            "max_penetration_m": 0.0014659739063599588
+          },
+          "contact_settle": {
+            "max_slip_score": 1.0,
+            "max_crush_risk": 0.1632246906776427,
+            "max_penetration_m": 0.003264493813552854
+          },
+          "slow_lift": {
+            "max_slip_score": 0.2409098643291193,
+            "max_crush_risk": 0.10439754061991922,
+            "max_penetration_m": 0.0020879508123983846
+          },
+          "hold": {
+            "max_slip_score": 0.2164565290547325,
+            "max_crush_risk": 0.08875720651621419,
+            "max_penetration_m": 0.0017751441303242837
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2520
+      },
+      "safety_intervention_steps": 1800,
+      "repair_steps": 1800,
+      "recovery_steps_from_rows": 0,
+      "risk_label_steps": 96,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 16,
+      "source_episode_id": 16,
+      "skill_id": "thumb_index_middle_pinch",
+      "source_stage": "Stage3.10A-act_lite_pinch_repair",
+      "trial": "back_large_lift",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "row_start": 66645,
+      "row_count": 2692,
+      "success": false,
+      "terminal_reason": "final_vision_failed_or_occluded",
+      "failure_reasons": [
+        "final_vision_failed_or_occluded"
+      ],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high",
+        "low_pinch_purity",
+        "final_vision_occluded_or_low_confidence"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.9825783926439338,
+        "initial_vision_mask_pixels": 13793,
+        "final_vision_accepted": false,
+        "final_vision_primary_accepted": false,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "none",
+        "final_vision_confidence": 0.2728231187047051,
+        "final_vision_mask_pixels": 574,
+        "vision_lift_height_m": NaN,
+        "true_lift_height_m": 0.12410922020010821,
+        "vision_true_lift_error_m": NaN,
+        "approach_true_proxy_error_m": 0.011771159462490107,
+        "ik_approach_dxy_m": 7.049724872910801e-10,
+        "ik_approach_dz_m": 4.005548948082804e-09,
+        "ik_lift_dxy_m": 4.795893747867314e-09,
+        "ik_lift_dz_m": 2.320035698277767e-08,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 572,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 120,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.5085238095238006,
+        "hold_max_slip_score": 0.2234032323037925,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 1.0,
+        "max_crush_risk": 0.1763606522409361,
+        "max_penetration_m": 0.003527213044818722,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 5,
+        "final_contact_regions": [
+          "little",
+          "middle",
+          "palm",
+          "ring",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 1105,
+          "palm": 2464,
+          "index": 3216,
+          "middle": 4238,
+          "thumb": 2221,
+          "ring": 1500,
+          "little": 232
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1972,
+          "inactive_anchor_slip_close:contact_settle": 572,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 1.0,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.4226110690857381,
+            "max_crush_risk": 0.04219452770740902,
+            "max_penetration_m": 0.0008438905541481805
+          },
+          "preshape": {
+            "max_slip_score": 0.18902652865509365,
+            "max_crush_risk": 0.04029803494678052,
+            "max_penetration_m": 0.0008059606989356103
+          },
+          "pinch_close": {
+            "max_slip_score": 0.544573039759052,
+            "max_crush_risk": 0.0911049096035495,
+            "max_penetration_m": 0.00182209819207099
+          },
+          "contact_settle": {
+            "max_slip_score": 1.0,
+            "max_crush_risk": 0.1763606522409361,
+            "max_penetration_m": 0.003527213044818722
+          },
+          "slow_lift": {
+            "max_slip_score": 0.5762039774011929,
+            "max_crush_risk": 0.04628597841638011,
+            "max_penetration_m": 0.0009257195683276022
+          },
+          "hold": {
+            "max_slip_score": 0.2234032323037925,
+            "max_crush_risk": 0.045420240937811114,
+            "max_penetration_m": 0.0009084048187562224
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2692
+      },
+      "safety_intervention_steps": 1972,
+      "repair_steps": 1972,
+      "recovery_steps_from_rows": 0,
+      "risk_label_steps": 282,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 17,
+      "source_episode_id": 17,
+      "skill_id": "thumb_index_middle_pinch",
+      "source_stage": "Stage3.10A-act_lite_pinch_repair",
+      "trial": "lifted_center",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "row_start": 69337,
+      "row_count": 2521,
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.9825830206237537,
+        "initial_vision_mask_pixels": 16365,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.4692319429970809,
+        "final_vision_mask_pixels": 10860,
+        "vision_lift_height_m": 0.12421954598594417,
+        "true_lift_height_m": 0.09961968847261682,
+        "vision_true_lift_error_m": 0.024599857513327356,
+        "approach_true_proxy_error_m": 0.005548577720653981,
+        "ik_approach_dxy_m": 1.9810629912752287e-08,
+        "ik_approach_dz_m": 7.199317017536622e-08,
+        "ik_lift_dxy_m": 4.15256909930117e-09,
+        "ik_lift_dz_m": 8.722618474732435e-09,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 401,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 120,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.7142857142857195,
+        "hold_max_slip_score": 0.210792891351842,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.6877468714176236,
+        "max_crush_risk": 0.14689945972797547,
+        "max_penetration_m": 0.0029379891945595094,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 7,
+        "final_contact_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 901,
+          "palm": 3829,
+          "index": 4028,
+          "middle": 2073,
+          "thumb": 3261
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1801,
+          "inactive_anchor_slip_close:contact_settle": 401,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 1.0,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.21993503743482512,
+            "max_crush_risk": 0.06888071272394755,
+            "max_penetration_m": 0.001377614254478951
+          },
+          "preshape": {
+            "max_slip_score": 0.24069067108294395,
+            "max_crush_risk": 0.029374536286782934,
+            "max_penetration_m": 0.0005874907257356587
+          },
+          "pinch_close": {
+            "max_slip_score": 0.16647841134386623,
+            "max_crush_risk": 0.02601768710709645,
+            "max_penetration_m": 0.0005203537421419291
+          },
+          "contact_settle": {
+            "max_slip_score": 0.6877468714176236,
+            "max_crush_risk": 0.14689945972797547,
+            "max_penetration_m": 0.0029379891945595094
+          },
+          "slow_lift": {
+            "max_slip_score": 0.3220004572140017,
+            "max_crush_risk": 0.13076135480067735,
+            "max_penetration_m": 0.0026152270960135473
+          },
+          "hold": {
+            "max_slip_score": 0.210792891351842,
+            "max_crush_risk": 0.09437640396706753,
+            "max_penetration_m": 0.0018875280793413506
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2521
+      },
+      "safety_intervention_steps": 1801,
+      "repair_steps": 1801,
+      "recovery_steps_from_rows": 0,
+      "risk_label_steps": 60,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 18,
+      "source_episode_id": 18,
+      "skill_id": "thumb_index_middle_pinch",
+      "source_stage": "Stage3.10A-act_lite_pinch_repair",
+      "trial": "lifted_diag",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "row_start": 71858,
+      "row_count": 2520,
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.982552672889906,
+        "initial_vision_mask_pixels": 15099,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.6762574400240068,
+        "final_vision_mask_pixels": 5591,
+        "vision_lift_height_m": 0.14457500409658888,
+        "true_lift_height_m": 0.11274359827947328,
+        "vision_true_lift_error_m": 0.031831405817115604,
+        "approach_true_proxy_error_m": 0.00565629371217274,
+        "ik_approach_dxy_m": 7.259748800946898e-09,
+        "ik_approach_dz_m": 8.42396156996994e-09,
+        "ik_lift_dxy_m": 5.472450352738737e-09,
+        "ik_lift_dz_m": 1.6369988170561456e-08,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 400,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 165,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.75,
+        "hold_max_slip_score": 0.19638624141349126,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.5531062965828153,
+        "max_crush_risk": 0.14603625273748866,
+        "max_penetration_m": 0.002920725054749773,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 8,
+        "final_contact_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 868,
+          "palm": 3901,
+          "index": 3877,
+          "middle": 3318,
+          "thumb": 3324
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1800,
+          "inactive_anchor_slip_close:contact_settle": 400,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 1.0,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.19131934283583957,
+            "max_crush_risk": 0.06888071272394755,
+            "max_penetration_m": 0.001377614254478951
+          },
+          "preshape": {
+            "max_slip_score": 0.2144434335861468,
+            "max_crush_risk": 0.027249129374783035,
+            "max_penetration_m": 0.0005449825874956607
+          },
+          "pinch_close": {
+            "max_slip_score": 0.16846045884606953,
+            "max_crush_risk": 0.024361929174219966,
+            "max_penetration_m": 0.00048723858348439933
+          },
+          "contact_settle": {
+            "max_slip_score": 0.5531062965828153,
+            "max_crush_risk": 0.14603625273748866,
+            "max_penetration_m": 0.002920725054749773
+          },
+          "slow_lift": {
+            "max_slip_score": 0.3655956953133257,
+            "max_crush_risk": 0.14098034238790208,
+            "max_penetration_m": 0.0028196068477580414
+          },
+          "hold": {
+            "max_slip_score": 0.19638624141349126,
+            "max_crush_risk": 0.09439645425332234,
+            "max_penetration_m": 0.001887929085066447
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2520
+      },
+      "safety_intervention_steps": 1800,
+      "repair_steps": 1800,
+      "recovery_steps_from_rows": 0,
+      "risk_label_steps": 61,
+      "final_vision_corroborated": false
+    },
+    {
+      "episode_id": 19,
+      "source_episode_id": 19,
+      "skill_id": "thumb_index_middle_pinch",
+      "source_stage": "Stage3.10A-act_lite_pinch_repair",
+      "trial": "wide_diag",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "row_start": 74378,
+      "row_count": 2520,
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.9825887701848992,
+        "initial_vision_mask_pixels": 14333,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.6351455147462366,
+        "final_vision_mask_pixels": 6175,
+        "vision_lift_height_m": 0.15381528458011576,
+        "true_lift_height_m": 0.11513533661344666,
+        "vision_true_lift_error_m": 0.0386799479666691,
+        "approach_true_proxy_error_m": 0.006503188180137568,
+        "ik_approach_dxy_m": 3.046380600566634e-08,
+        "ik_approach_dz_m": 1.8412419290625426e-08,
+        "ik_lift_dxy_m": 7.558021201233942e-09,
+        "ik_lift_dz_m": 5.419444337739776e-10,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 400,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 211,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.75,
+        "hold_max_slip_score": 0.20083980225907905,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 1.0,
+        "max_crush_risk": 0.17773975341589732,
+        "max_penetration_m": 0.0035547950683179463,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 8,
+        "final_contact_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 825,
+          "palm": 3213,
+          "index": 3803,
+          "middle": 3778,
+          "thumb": 3827
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1800,
+          "inactive_anchor_slip_close:contact_settle": 400,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 1.0,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.33825381890383627,
+            "max_crush_risk": 0.04819035016149538,
+            "max_penetration_m": 0.0009638070032299076
+          },
+          "preshape": {
+            "max_slip_score": 0.13676631806242506,
+            "max_crush_risk": 0.0370876623309831,
+            "max_penetration_m": 0.000741753246619662
+          },
+          "pinch_close": {
+            "max_slip_score": 0.3070168625849077,
+            "max_crush_risk": 0.08687997799442009,
+            "max_penetration_m": 0.0017375995598884017
+          },
+          "contact_settle": {
+            "max_slip_score": 1.0,
+            "max_crush_risk": 0.17773975341589732,
+            "max_penetration_m": 0.0035547950683179463
+          },
+          "slow_lift": {
+            "max_slip_score": 0.4387054534929246,
+            "max_crush_risk": 0.11033213182733487,
+            "max_penetration_m": 0.0022066426365466973
+          },
+          "hold": {
+            "max_slip_score": 0.20083980225907905,
+            "max_crush_risk": 0.09320109084378783,
+            "max_penetration_m": 0.0018640218168757567
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2520
+      },
+      "safety_intervention_steps": 1800,
+      "repair_steps": 1800,
+      "recovery_steps_from_rows": 0,
+      "risk_label_steps": 75,
+      "final_vision_corroborated": false
+    }
+  ],
+  "boundary": "MuJoCo-only safety-labeled data export; not full-action ACT/DP success and not hardware integration."
+}

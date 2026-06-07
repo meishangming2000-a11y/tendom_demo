@@ -1,0 +1,122 @@
+{
+  "generated_at": "2026-06-06T21:36:03",
+  "registry": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\configs\\stage3_skill_registry_v0.json",
+  "sources": {
+    "full_hand_metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_contact_transition_recovery_v0_randomized30.json",
+    "pinch_metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_pinch_grasp_training_v0.json"
+  },
+  "outputs": {
+    "jsonl": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\stage3_skill_trace_sequence_dataset_v0.jsonl",
+    "npz": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\stage3_skill_trace_sequence_dataset_v0.npz",
+    "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_skill_trace_sequence_dataset_v0.json",
+    "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_skill_trace_sequence_dataset_v0_report.md"
+  },
+  "summary": {
+    "status": "PASS",
+    "schema_version": "stage3_skill_trace_sequence_row_v0",
+    "sequence_count": 70,
+    "canonical_training_count": 40,
+    "success_count": 64,
+    "timestep_count": 1161,
+    "trace_length_min": 9,
+    "trace_length_max": 27,
+    "trace_length_mean": 16.585714285714285,
+    "dataset_split_counts": {
+      "canonical_training": 40,
+      "diagnostic_variant": 30
+    },
+    "source_stage_counts": {
+      "Stage3.7D": 30,
+      "Stage3.8B": 40
+    },
+    "by_skill": {
+      "full_hand_gentle_grasp": {
+        "sequences": 30,
+        "success": 30,
+        "canonical_training": 30,
+        "success_rate": 1.0
+      },
+      "thumb_index_middle_pinch": {
+        "sequences": 40,
+        "success": 34,
+        "canonical_training": 10,
+        "success_rate": 0.85
+      }
+    },
+    "failure_reason_counts": {
+      "egg_still_touching_floor": 2,
+      "final_vision_failed_or_occluded": 1,
+      "hold_slip_score_high": 5,
+      "hold_tactile_unstable": 1,
+      "pinch_not_maintained_in_hold": 1,
+      "true_lift_too_small": 2,
+      "vision_lift_too_small": 1
+    },
+    "risk_flag_counts": {
+      "early_contact_in_approach": 70,
+      "final_vision_occluded_or_low_confidence": 1,
+      "low_pinch_purity": 2,
+      "recovery_budget_exhausted": 15,
+      "transient_or_hold_slip": 28,
+      "transient_slip_high": 40
+    },
+    "source_summary": {
+      "full_hand_source_rows": 30,
+      "pinch_final_source_rows": 40,
+      "selected_pinch_candidate": "thumb_index_middle_strong__higher_approach",
+      "include_pinch_diagnostic": true
+    },
+    "npz": {
+      "sequence_shape": [
+        70,
+        27,
+        23
+      ],
+      "mask_shape": [
+        70,
+        27
+      ],
+      "feature_columns": [
+        "raw_step",
+        "step_norm",
+        "phase_code",
+        "progress",
+        "control_progress",
+        "lift_height_m",
+        "contact",
+        "stable",
+        "pinch_contact",
+        "learned_hand",
+        "recovery_active",
+        "slip",
+        "crush",
+        "penetration",
+        "gate_window",
+        "recovery_reason_count",
+        "recovery_reason_slip_high",
+        "region_thumb",
+        "region_index",
+        "region_middle",
+        "region_ring",
+        "region_palm",
+        "region_support"
+      ],
+      "phase_vocab": {
+        "approach": 0,
+        "contact_settle": 1,
+        "gentle_close_fingers": 2,
+        "gentle_close_thumb": 3,
+        "hold": 4,
+        "pinch_close": 5,
+        "preshape": 6,
+        "slow_lift": 7
+      },
+      "skill_codes": {
+        "full_hand_gentle_grasp": 0,
+        "thumb_index_middle_pinch": 1
+      }
+    },
+    "act_dp_ready": false,
+    "act_dp_blocker": "Current traces are sparse state samples and do not contain full low-level obs/action vectors."
+  }
+}

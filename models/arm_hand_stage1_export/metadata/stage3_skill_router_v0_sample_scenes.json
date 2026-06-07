@@ -1,0 +1,112 @@
+{
+  "version": "stage3_skill_router_v0_sample_scenes",
+  "updated_at": "2026-06-06",
+  "purpose_zh": "Stage3.9C 规则路由器的最小可检查样例。这里不运行 MuJoCo，只检查场景描述能否路由到合理技能。",
+  "cases": [
+    {
+      "case_id": "high_clearance_prefers_pinch",
+      "task_goal": "lift_and_hold_fragile_egg",
+      "desired_grasp_style": "pinch",
+      "vision": {
+        "confidence": 0.82,
+        "estimated_pose_error_m": 0.009,
+        "occlusion": "low"
+      },
+      "workspace": {
+        "clearance": "high",
+        "pinch_eligible": true
+      },
+      "tactile": {
+        "contact_present": false,
+        "slip_score": 0.0,
+        "crush_risk": 0.0,
+        "penetration_m": 0.0
+      },
+      "expected_skill_id": "thumb_index_middle_pinch"
+    },
+    {
+      "case_id": "low_clearance_prefers_full_hand",
+      "task_goal": "lift_and_hold_fragile_egg",
+      "desired_grasp_style": "gentle",
+      "vision": {
+        "confidence": 0.63,
+        "estimated_pose_error_m": 0.012,
+        "occlusion": "medium"
+      },
+      "workspace": {
+        "clearance": "low",
+        "pinch_eligible": false
+      },
+      "tactile": {
+        "contact_present": false,
+        "slip_score": 0.0,
+        "crush_risk": 0.0,
+        "penetration_m": 0.0
+      },
+      "expected_skill_id": "full_hand_gentle_grasp"
+    },
+    {
+      "case_id": "contact_slip_requires_recovery",
+      "task_goal": "continue_lift_hold",
+      "desired_grasp_style": "auto",
+      "vision": {
+        "confidence": 0.70,
+        "estimated_pose_error_m": 0.010,
+        "occlusion": "medium"
+      },
+      "workspace": {
+        "clearance": "medium",
+        "pinch_eligible": true
+      },
+      "tactile": {
+        "contact_present": true,
+        "slip_score": 0.42,
+        "crush_risk": 0.10,
+        "penetration_m": 0.0018
+      },
+      "expected_skill_id": "slip_recovery"
+    },
+    {
+      "case_id": "weak_vision_reacquire_first",
+      "task_goal": "lift_and_hold_fragile_egg",
+      "desired_grasp_style": "auto",
+      "vision": {
+        "confidence": 0.31,
+        "estimated_pose_error_m": 0.024,
+        "occlusion": "high"
+      },
+      "workspace": {
+        "clearance": "medium",
+        "pinch_eligible": true
+      },
+      "tactile": {
+        "contact_present": false,
+        "slip_score": 0.0,
+        "crush_risk": 0.0,
+        "penetration_m": 0.0
+      },
+      "expected_skill_id": "acquire_vision_pose"
+    },
+    {
+      "case_id": "unsafe_crush_abort",
+      "task_goal": "lift_and_hold_fragile_egg",
+      "desired_grasp_style": "auto",
+      "vision": {
+        "confidence": 0.72,
+        "estimated_pose_error_m": 0.010,
+        "occlusion": "low"
+      },
+      "workspace": {
+        "clearance": "high",
+        "pinch_eligible": true
+      },
+      "tactile": {
+        "contact_present": true,
+        "slip_score": 0.18,
+        "crush_risk": 0.46,
+        "penetration_m": 0.001
+      },
+      "expected_skill_id": "release_or_abort"
+    }
+  ]
+}

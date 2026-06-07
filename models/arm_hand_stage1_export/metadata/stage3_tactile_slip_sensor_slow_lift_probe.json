@@ -1,0 +1,845 @@
+{
+  "generated_at": "2026-06-04T16:19:15",
+  "status": "PASS",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_stage3_egg_gentle_grasp_hold_v0.xml",
+  "results": [
+    {
+      "trial": "center_nominal",
+      "trial_config": {
+        "name": "center_nominal",
+        "offset_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "status": "PASS",
+      "checks": {
+        "initial_no_contact": true,
+        "contact_acquired": true,
+        "grip_stable_seen": true,
+        "final_contact_present": true,
+        "final_grip_stable": true,
+        "max_crush_below_gate": true,
+        "final_lift_height_pass": true
+      },
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_above_hold_gate"
+      ],
+      "initial_tactile": {
+        "contact_present": false,
+        "contact_regions": [
+          "support"
+        ],
+        "normal_contact_proxy": 1.3877787807814457e-17,
+        "contact_persistence": 0,
+        "relative_tangential_motion": 0.0,
+        "slip_score": 0.0,
+        "grip_stable": false,
+        "crush_risk": 6.938893903907228e-16,
+        "release_contact_clear": true,
+        "egg_hand_contact_count": 0,
+        "egg_floor_contact_count": 1,
+        "egg_arm_contact_count": 0,
+        "egg_contact_region_counts": {
+          "support": 1
+        },
+        "object_velocity_world": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_penetration": 1.3877787807814457e-17,
+        "sensor_source": "mujoco_contact_derived_tactile_slip"
+      },
+      "final_tactile": {
+        "contact_present": true,
+        "contact_regions": [
+          "index",
+          "middle",
+          "palm",
+          "ring",
+          "thumb"
+        ],
+        "normal_contact_proxy": 0.000825831797761958,
+        "contact_persistence": 1560,
+        "relative_tangential_motion": 0.0,
+        "slip_score": 0.0,
+        "grip_stable": true,
+        "crush_risk": 0.0412915898880979,
+        "release_contact_clear": false,
+        "egg_hand_contact_count": 5,
+        "egg_floor_contact_count": 0,
+        "egg_arm_contact_count": 0,
+        "egg_contact_region_counts": {
+          "palm": 1,
+          "index": 1,
+          "middle": 1,
+          "ring": 1,
+          "thumb": 1
+        },
+        "object_velocity_world": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_penetration": 0.000825831797761958,
+        "sensor_source": "mujoco_contact_derived_tactile_slip"
+      },
+      "first_contact_phase": "approach",
+      "max_slip_score": 1.0,
+      "max_crush_risk": 0.11799380575346022,
+      "max_contact_persistence": 1559,
+      "final_lift_height_m": 0.10003930176482019,
+      "phase_rows": [
+        {
+          "phase": "approach",
+          "final_tactile": {
+            "step_in_phase": 199,
+            "contact_present": true,
+            "contact_regions": [
+              "palm",
+              "support"
+            ],
+            "contact_persistence": 29,
+            "slip_score": 0.3223358871798372,
+            "crush_risk": 0.037202662909234754,
+            "grip_stable": false,
+            "normal_contact_proxy": 0.0007440532581846951,
+            "egg_hand_contact_count": 1,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 30,
+          "egg_position": [
+            0.1876188079326768,
+            0.18814317167599903,
+            -0.056108481414067726
+          ]
+        },
+        {
+          "phase": "preshape",
+          "final_tactile": {
+            "step_in_phase": 119,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "palm",
+              "support"
+            ],
+            "contact_persistence": 149,
+            "slip_score": 0.22624822342680417,
+            "crush_risk": 0.047197494875203555,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0009439498975040711,
+            "egg_hand_contact_count": 2,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 120,
+          "egg_position": [
+            0.1886446639699974,
+            0.1852368280264589,
+            -0.05622493270973216
+          ]
+        },
+        {
+          "phase": "close_fingers",
+          "final_tactile": {
+            "step_in_phase": 159,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "ring",
+              "support"
+            ],
+            "contact_persistence": 309,
+            "slip_score": 0.13264971609403875,
+            "crush_risk": 0.11425409120014772,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0022850818240029544,
+            "egg_hand_contact_count": 5,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 160,
+          "egg_position": [
+            0.19295256198801503,
+            0.17955049429148537,
+            -0.056372752771511006
+          ]
+        },
+        {
+          "phase": "close_thumb",
+          "final_tactile": {
+            "step_in_phase": 159,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "ring",
+              "support",
+              "thumb"
+            ],
+            "contact_persistence": 469,
+            "slip_score": 0.06593297570625005,
+            "crush_risk": 0.06646874575498936,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.001329374915099787,
+            "egg_hand_contact_count": 6,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 160,
+          "egg_position": [
+            0.19930343950404344,
+            0.17617184124773488,
+            -0.0593420425793143
+          ]
+        },
+        {
+          "phase": "close_hold",
+          "final_tactile": {
+            "step_in_phase": 89,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "ring",
+              "support",
+              "thumb"
+            ],
+            "contact_persistence": 559,
+            "slip_score": 0.1703397866462384,
+            "crush_risk": 0.057847235171332514,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0011569447034266503,
+            "egg_hand_contact_count": 6,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 90,
+          "egg_position": [
+            0.19565317472076388,
+            0.17764970968118457,
+            -0.060757962365264255
+          ]
+        },
+        {
+          "phase": "lift",
+          "final_tactile": {
+            "step_in_phase": 699,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "thumb"
+            ],
+            "contact_persistence": 1259,
+            "slip_score": 0.1323720577854454,
+            "crush_risk": 0.040096083012326665,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0008019216602465334,
+            "egg_hand_contact_count": 4,
+            "egg_floor_contact_count": 0
+          },
+          "samples_logged": 700,
+          "egg_position": [
+            0.17904632683662558,
+            0.18065196120991175,
+            0.043650460730899
+          ]
+        },
+        {
+          "phase": "hold_lift",
+          "final_tactile": {
+            "step_in_phase": 299,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "ring",
+              "thumb"
+            ],
+            "contact_persistence": 1559,
+            "slip_score": 0.023702986926153722,
+            "crush_risk": 0.0412915898880979,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.000825831797761958,
+            "egg_hand_contact_count": 5,
+            "egg_floor_contact_count": 0
+          },
+          "samples_logged": 300,
+          "egg_position": [
+            0.17793120110306926,
+            0.17884358281416984,
+            0.04465886176482019
+          ]
+        }
+      ]
+    },
+    {
+      "trial": "left_low_nominal",
+      "trial_config": {
+        "name": "left_low_nominal",
+        "offset_xyz": [
+          -0.02,
+          -0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "status": "PASS",
+      "checks": {
+        "initial_no_contact": true,
+        "contact_acquired": true,
+        "grip_stable_seen": true,
+        "final_contact_present": true,
+        "final_grip_stable": true,
+        "max_crush_below_gate": true,
+        "final_lift_height_pass": true
+      },
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_above_hold_gate"
+      ],
+      "initial_tactile": {
+        "contact_present": false,
+        "contact_regions": [
+          "support"
+        ],
+        "normal_contact_proxy": 1.3877787807814457e-17,
+        "contact_persistence": 0,
+        "relative_tangential_motion": 0.0,
+        "slip_score": 0.0,
+        "grip_stable": false,
+        "crush_risk": 6.938893903907228e-16,
+        "release_contact_clear": true,
+        "egg_hand_contact_count": 0,
+        "egg_floor_contact_count": 1,
+        "egg_arm_contact_count": 0,
+        "egg_contact_region_counts": {
+          "support": 1
+        },
+        "object_velocity_world": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_penetration": 1.3877787807814457e-17,
+        "sensor_source": "mujoco_contact_derived_tactile_slip"
+      },
+      "final_tactile": {
+        "contact_present": true,
+        "contact_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "normal_contact_proxy": 0.000657981804962144,
+        "contact_persistence": 1561,
+        "relative_tangential_motion": 0.0,
+        "slip_score": 0.0,
+        "grip_stable": true,
+        "crush_risk": 0.0328990902481072,
+        "release_contact_clear": false,
+        "egg_hand_contact_count": 8,
+        "egg_floor_contact_count": 0,
+        "egg_arm_contact_count": 0,
+        "egg_contact_region_counts": {
+          "palm": 2,
+          "index": 4,
+          "middle": 1,
+          "thumb": 1
+        },
+        "object_velocity_world": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_penetration": 0.000657981804962144,
+        "sensor_source": "mujoco_contact_derived_tactile_slip"
+      },
+      "first_contact_phase": "approach",
+      "max_slip_score": 1.0,
+      "max_crush_risk": 0.09673345631064308,
+      "max_contact_persistence": 1560,
+      "final_lift_height_m": 0.10153736499425847,
+      "phase_rows": [
+        {
+          "phase": "approach",
+          "final_tactile": {
+            "step_in_phase": 199,
+            "contact_present": true,
+            "contact_regions": [
+              "palm",
+              "support"
+            ],
+            "contact_persistence": 30,
+            "slip_score": 0.3179293456296819,
+            "crush_risk": 0.03729986407072397,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0007459972814144794,
+            "egg_hand_contact_count": 1,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 31,
+          "egg_position": [
+            0.1670616345407956,
+            0.17156027783490446,
+            -0.0561473651965531
+          ]
+        },
+        {
+          "phase": "preshape",
+          "final_tactile": {
+            "step_in_phase": 119,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "palm",
+              "support"
+            ],
+            "contact_persistence": 150,
+            "slip_score": 0.23482727483495877,
+            "crush_risk": 0.04672728265275233,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0009345456530550466,
+            "egg_hand_contact_count": 2,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 120,
+          "egg_position": [
+            0.16437233173987575,
+            0.16741372324777534,
+            -0.05665409629864288
+          ]
+        },
+        {
+          "phase": "close_fingers",
+          "final_tactile": {
+            "step_in_phase": 159,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "support"
+            ],
+            "contact_persistence": 310,
+            "slip_score": 0.11280695302298523,
+            "crush_risk": 0.0946875817555913,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0018937516351118261,
+            "egg_hand_contact_count": 5,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 160,
+          "egg_position": [
+            0.16273528993673878,
+            0.15977374693794344,
+            -0.05690441690340007
+          ]
+        },
+        {
+          "phase": "close_thumb",
+          "final_tactile": {
+            "step_in_phase": 159,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "support",
+              "thumb"
+            ],
+            "contact_persistence": 470,
+            "slip_score": 0.0787147540419685,
+            "crush_risk": 0.05474456818712242,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0010948913637424485,
+            "egg_hand_contact_count": 6,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 160,
+          "egg_position": [
+            0.1621091753661351,
+            0.1544639406578053,
+            -0.05751094815002583
+          ]
+        },
+        {
+          "phase": "close_hold",
+          "final_tactile": {
+            "step_in_phase": 89,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "support",
+              "thumb"
+            ],
+            "contact_persistence": 560,
+            "slip_score": 0.0506983652063162,
+            "crush_risk": 0.04281114412003459,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0008562228824006918,
+            "egg_hand_contact_count": 6,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 90,
+          "egg_position": [
+            0.1632386758929398,
+            0.152856945117758,
+            -0.058092838553596676
+          ]
+        },
+        {
+          "phase": "lift",
+          "final_tactile": {
+            "step_in_phase": 699,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "thumb"
+            ],
+            "contact_persistence": 1260,
+            "slip_score": 0.26346511363628555,
+            "crush_risk": 0.03312113910683373,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0006624227821366746,
+            "egg_hand_contact_count": 8,
+            "egg_floor_contact_count": 0
+          },
+          "samples_logged": 700,
+          "egg_position": [
+            0.17009152300894706,
+            0.1685933152732453,
+            0.04468288020763817
+          ]
+        },
+        {
+          "phase": "hold_lift",
+          "final_tactile": {
+            "step_in_phase": 299,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "thumb"
+            ],
+            "contact_persistence": 1560,
+            "slip_score": 0.0022008082368903145,
+            "crush_risk": 0.0328990902481072,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.000657981804962144,
+            "egg_hand_contact_count": 8,
+            "egg_floor_contact_count": 0
+          },
+          "samples_logged": 300,
+          "egg_position": [
+            0.16953024804387068,
+            0.16825143236654264,
+            0.046156924994258476
+          ]
+        }
+      ]
+    },
+    {
+      "trial": "right_high_nominal",
+      "trial_config": {
+        "name": "right_high_nominal",
+        "offset_xyz": [
+          0.02,
+          0.015,
+          0.0
+        ],
+        "grasp_z_bias_m": 0.0,
+        "lift_delta_m": 0.11,
+        "pre_j2_delta": 0.42,
+        "close_hold_steps": 90
+      },
+      "status": "PASS",
+      "checks": {
+        "initial_no_contact": true,
+        "contact_acquired": true,
+        "grip_stable_seen": true,
+        "final_contact_present": true,
+        "final_grip_stable": true,
+        "max_crush_below_gate": true,
+        "final_lift_height_pass": true
+      },
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_above_hold_gate"
+      ],
+      "initial_tactile": {
+        "contact_present": false,
+        "contact_regions": [
+          "support"
+        ],
+        "normal_contact_proxy": 1.3877787807814457e-17,
+        "contact_persistence": 0,
+        "relative_tangential_motion": 0.0,
+        "slip_score": 0.0,
+        "grip_stable": false,
+        "crush_risk": 6.938893903907228e-16,
+        "release_contact_clear": true,
+        "egg_hand_contact_count": 0,
+        "egg_floor_contact_count": 1,
+        "egg_arm_contact_count": 0,
+        "egg_contact_region_counts": {
+          "support": 1
+        },
+        "object_velocity_world": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_penetration": 1.3877787807814457e-17,
+        "sensor_source": "mujoco_contact_derived_tactile_slip"
+      },
+      "final_tactile": {
+        "contact_present": true,
+        "contact_regions": [
+          "index",
+          "middle",
+          "palm",
+          "ring",
+          "thumb"
+        ],
+        "normal_contact_proxy": 0.000669132255704856,
+        "contact_persistence": 1559,
+        "relative_tangential_motion": 0.0,
+        "slip_score": 0.0,
+        "grip_stable": true,
+        "crush_risk": 0.0334566127852428,
+        "release_contact_clear": false,
+        "egg_hand_contact_count": 6,
+        "egg_floor_contact_count": 0,
+        "egg_arm_contact_count": 0,
+        "egg_contact_region_counts": {
+          "palm": 1,
+          "index": 2,
+          "middle": 1,
+          "ring": 1,
+          "thumb": 1
+        },
+        "object_velocity_world": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_penetration": 0.000669132255704856,
+        "sensor_source": "mujoco_contact_derived_tactile_slip"
+      },
+      "first_contact_phase": "approach",
+      "max_slip_score": 1.0,
+      "max_crush_risk": 0.09179737173061452,
+      "max_contact_persistence": 1558,
+      "final_lift_height_m": 0.09613691742969387,
+      "phase_rows": [
+        {
+          "phase": "approach",
+          "final_tactile": {
+            "step_in_phase": 199,
+            "contact_present": true,
+            "contact_regions": [
+              "palm",
+              "support"
+            ],
+            "contact_persistence": 28,
+            "slip_score": 0.34374007684432384,
+            "crush_risk": 0.034950723034675814,
+            "grip_stable": false,
+            "normal_contact_proxy": 0.0006990144606935163,
+            "egg_hand_contact_count": 1,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 29,
+          "egg_position": [
+            0.20904912337155093,
+            0.2040080487743461,
+            -0.05601559435305404
+          ]
+        },
+        {
+          "phase": "preshape",
+          "final_tactile": {
+            "step_in_phase": 119,
+            "contact_present": true,
+            "contact_regions": [
+              "middle",
+              "palm",
+              "support"
+            ],
+            "contact_persistence": 148,
+            "slip_score": 0.16018146517442794,
+            "crush_risk": 0.04099153017896155,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0008198306035792311,
+            "egg_hand_contact_count": 2,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 120,
+          "egg_position": [
+            0.21235688532237992,
+            0.2021304097183165,
+            -0.05614288877901975
+          ]
+        },
+        {
+          "phase": "close_fingers",
+          "final_tactile": {
+            "step_in_phase": 159,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "ring",
+              "support"
+            ],
+            "contact_persistence": 308,
+            "slip_score": 0.16458170000200012,
+            "crush_risk": 0.09102458523063851,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0018204917046127703,
+            "egg_hand_contact_count": 4,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 160,
+          "egg_position": [
+            0.21873462318728343,
+            0.1970049521450109,
+            -0.05712083294890306
+          ]
+        },
+        {
+          "phase": "close_thumb",
+          "final_tactile": {
+            "step_in_phase": 159,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "ring",
+              "support",
+              "thumb"
+            ],
+            "contact_persistence": 468,
+            "slip_score": 0.2704623425123328,
+            "crush_risk": 0.044654330763201945,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0008930866152640389,
+            "egg_hand_contact_count": 6,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 160,
+          "egg_position": [
+            0.21381641314379765,
+            0.19615349734981624,
+            -0.06136764378392962
+          ]
+        },
+        {
+          "phase": "close_hold",
+          "final_tactile": {
+            "step_in_phase": 89,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "ring",
+              "support",
+              "thumb"
+            ],
+            "contact_persistence": 558,
+            "slip_score": 0.2077241074874107,
+            "crush_risk": 0.04400756381334617,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0008801512762669234,
+            "egg_hand_contact_count": 5,
+            "egg_floor_contact_count": 1
+          },
+          "samples_logged": 90,
+          "egg_position": [
+            0.20668948816028454,
+            0.1969825945667285,
+            -0.06334264346272833
+          ]
+        },
+        {
+          "phase": "lift",
+          "final_tactile": {
+            "step_in_phase": 699,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "ring",
+              "thumb"
+            ],
+            "contact_persistence": 1258,
+            "slip_score": 0.0702085590866367,
+            "crush_risk": 0.03723245066226417,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.0007446490132452833,
+            "egg_hand_contact_count": 5,
+            "egg_floor_contact_count": 0
+          },
+          "samples_logged": 700,
+          "egg_position": [
+            0.19139905102795,
+            0.1920272694772438,
+            0.04045570012198802
+          ]
+        },
+        {
+          "phase": "hold_lift",
+          "final_tactile": {
+            "step_in_phase": 299,
+            "contact_present": true,
+            "contact_regions": [
+              "index",
+              "middle",
+              "palm",
+              "ring",
+              "thumb"
+            ],
+            "contact_persistence": 1558,
+            "slip_score": 0.04691892774731021,
+            "crush_risk": 0.0334566127852428,
+            "grip_stable": true,
+            "normal_contact_proxy": 0.000669132255704856,
+            "egg_hand_contact_count": 6,
+            "egg_floor_contact_count": 0
+          },
+          "samples_logged": 300,
+          "egg_position": [
+            0.18945689944869903,
+            0.1891870854493809,
+            0.04075647742969386
+          ]
+        }
+      ]
+    }
+  ]
+}

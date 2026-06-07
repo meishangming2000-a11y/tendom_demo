@@ -1,0 +1,226 @@
+{
+  "generated_at": "2026-06-03T21:20:54",
+  "task_name": "stage3_sensor_aware_gentle_grasp_hold",
+  "contract_version": "stage3_sensor_aware_gentle_grasp_hold_v0",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_stage3_egg_gentle_grasp_hold_v0.xml",
+  "status": "PASS",
+  "checks": {
+    "scene_exists": true,
+    "scene_loads": true,
+    "action_dim_positive": true,
+    "observation_dim_positive": true,
+    "vision_fields_present": true,
+    "tactile_fields_present": true,
+    "sensor_validation_pass": true,
+    "contract_mujoco_only": true,
+    "hardware_integration_false": true,
+    "initial_eval_running": true
+  },
+  "action_dim": 26,
+  "observation_dim": 130,
+  "contract_summary": {
+    "training_ready": false,
+    "mujoco_only": true,
+    "hardware_integration": false,
+    "required_hold_steps": 1500
+  },
+  "sample_sensor_observation": {
+    "phase": {
+      "id": 1,
+      "name": "vision_acquire",
+      "progress": 0.0,
+      "one_hot": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "vision": {
+      "object_pose_xyz_est": [
+        0.1887684313972068,
+        0.18813977989762837,
+        -0.05517822476652252
+      ],
+      "object_axis_est": [
+        0.005539571149666749,
+        0.0051602088875812285,
+        0.999971342287225
+      ],
+      "object_shape_params_est": [
+        0.023737430930270878,
+        0.032770766434628916,
+        0.038658587270185146
+      ],
+      "goal_pose_xyz_est": [
+        0.19022382,
+        0.187702,
+        -0.00538044
+      ],
+      "object_to_goal_est": [
+        0.0014553886027931784,
+        -0.0004377798976283598,
+        0.04979778476652252
+      ],
+      "confidence": 0.9339999999999999,
+      "occlusion": 0.0,
+      "latency_steps": 2,
+      "noise_std": 0.002,
+      "latency_source": "current"
+    },
+    "tactile": {
+      "contact_present": false,
+      "contact_regions": [
+        "support"
+      ],
+      "normal_contact_proxy": 1.3877787807814457e-17,
+      "contact_persistence": 0,
+      "relative_tangential_motion": 0.0,
+      "slip_score": 0.0,
+      "grip_stable": false,
+      "crush_risk": 6.938893903907228e-16,
+      "release_contact_clear": true
+    },
+    "sensor_validation": {
+      "status": "PASS",
+      "checks": {
+        "vision_pose_finite": true,
+        "vision_axis_finite": true,
+        "vision_axis_unit": true,
+        "vision_shape_positive": true,
+        "vision_confidence_range": true,
+        "vision_occlusion_range": true,
+        "vision_latency_nonnegative": true,
+        "vision_noise_nonnegative": true,
+        "tactile_contact_persistence_nonnegative": true,
+        "tactile_motion_nonnegative": true,
+        "tactile_slip_range": true,
+        "tactile_crush_range": true,
+        "tactile_regions_symbolic": true
+      },
+      "failures": [],
+      "warnings": []
+    },
+    "sensor_replay_key": {
+      "base_seed": 80,
+      "episode_id": 0,
+      "step_index": 0
+    }
+  },
+  "initial_evaluation": {
+    "task_name": "stage3_sensor_aware_gentle_grasp_hold",
+    "contract_version": "stage3_sensor_aware_gentle_grasp_hold_v0",
+    "episode_status": "running",
+    "terminal_reason": "running",
+    "success": false,
+    "failure": false,
+    "done": false,
+    "step_count": 0,
+    "phase": "vision_acquire",
+    "success_reasons": [],
+    "failure_reasons": [],
+    "official_metrics": {
+      "object_pose": {
+        "position": [
+          0.19022382,
+          0.187702,
+          -0.05538044
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "velocity": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "object_lift_height": 0.0,
+      "object_displacement": 0.0,
+      "object_pose_drift_xy": 0.0,
+      "object_velocity_norm": 0.0,
+      "contact_summary": {
+        "contact_count": 1,
+        "max_penetration": 1.3877787807814457e-17,
+        "egg_hand_contact_count": 0,
+        "egg_arm_contact_count": 0,
+        "egg_floor_contact_count": 1,
+        "egg_contact_regions": [
+          "support"
+        ]
+      },
+      "finite_state": true,
+      "hold_steps": 0,
+      "hold_duration_s": 0.0,
+      "slip_score": 0.0,
+      "crush_risk": 6.938893903907228e-16,
+      "vision_confidence": 0.9339999999999999,
+      "contact_persistence": 0
+    },
+    "sensor_inputs": {
+      "vision": {
+        "object_pose_xyz_est": [
+          0.1887684313972068,
+          0.18813977989762837,
+          -0.05517822476652252
+        ],
+        "object_axis_est": [
+          0.005539571149666749,
+          0.0051602088875812285,
+          0.999971342287225
+        ],
+        "object_shape_params_est": [
+          0.023737430930270878,
+          0.032770766434628916,
+          0.038658587270185146
+        ],
+        "goal_pose_xyz_est": [
+          0.19022382,
+          0.187702,
+          -0.00538044
+        ],
+        "object_to_goal_est": [
+          0.0014553886027931784,
+          -0.0004377798976283598,
+          0.04979778476652252
+        ],
+        "confidence": 0.9339999999999999,
+        "occlusion": 0.0,
+        "latency_steps": 2,
+        "noise_std": 0.002,
+        "latency_source": "current"
+      },
+      "tactile": {
+        "contact_present": false,
+        "contact_regions": [
+          "support"
+        ],
+        "normal_contact_proxy": 1.3877787807814457e-17,
+        "contact_persistence": 0,
+        "relative_tangential_motion": 0.0,
+        "slip_score": 0.0,
+        "grip_stable": false,
+        "crush_risk": 6.938893903907228e-16,
+        "release_contact_clear": true
+      }
+    }
+  }
+}

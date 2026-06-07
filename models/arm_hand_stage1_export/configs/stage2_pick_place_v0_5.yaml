@@ -1,0 +1,57 @@
+# Stage2 pick-place dataset/training v0.5 starting config.
+# This is a human-readable config lock source. The run initializer copies the
+# relevant fields into each run's config.lock.yaml.
+
+task:
+  name: arm_hand_stage1_pick_place_ball
+  stage: stage2
+  version: stage2_pick_place_v0_5
+  contract_version: stage2_pick_place_v0_1
+  status: experimental_smoke
+
+scene:
+  path: mjcf/scene_arm_hand_export4_pick_place_demo.xml
+  geometry_note: collision_proxy_v2_smoke_geometry
+
+dataset:
+  version: dataset_v0_5
+  scope: fixed_target_plus_narrow_target_diagnostic
+  output: data/arm_hand_stage1_v3_pick_place_dataset_v0_5.npz
+  action_field: expert_actions
+  replay_qa_required: true
+
+policy:
+  family: behavior_cloning
+  feature_mode: obs_phase_target
+  action_dim: 26
+  checkpoint: checkpoints/bc_arm_hand_stage1_v3_pick_place_dataset_v0_5_obs_phase_target.pth
+
+target:
+  default_center_xyz: [0.165, 0.23, -0.06538044]
+  radius_m: 0.035
+  narrow_offsets_xy: [-0.02, -0.01, 0.0, 0.01, 0.02]
+  wide_offsets_xy_diagnostic_only: [-0.03, -0.02, -0.01, 0.0, 0.01, 0.02, 0.03]
+  use_wide_offsets_for_training: false
+
+success:
+  required_stable_steps: 240
+  max_transport_floor_contacts: 0
+  max_release_hand_contacts: 0
+  max_target_xy_distance_m: 0.035
+  max_penetration_m: 0.015
+
+visuals:
+  default_outputs:
+    - contact_sheet.png
+    - trajectory_topdown.png
+    - target_sweep_heatmap.png
+  selected_mp4_only: true
+  selected_mp4_outputs:
+    - demo_best.mp4
+    - demo_worst.mp4
+    - failure_epXXX.mp4
+
+guards:
+  training_ready: false
+  rl_blocked: true
+  reason: dataset_v0_5_and_replay_qa_not_created_yet

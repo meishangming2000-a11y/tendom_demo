@@ -1,0 +1,186 @@
+{
+  "version": "stage3_10a_skillzoo_safety_layer_v0",
+  "updated_at": "2026-06-07",
+  "status": "frozen_candidate",
+  "stage": "Stage3.10A",
+  "purpose": "Freeze the Stage3.9G mixed-control safety layer as the reproducible baseline and guardrail before larger ACT/CVAE or Diffusion Policy training.",
+  "boundary": {
+    "mujoco_only": true,
+    "hardware_integration": false,
+    "real_camera_integration": false,
+    "real_tactile_or_ultrasound_integration": false,
+    "full_action_act_dp_promoted": false,
+    "formal_act_cvae_or_dp_trained": false
+  },
+  "control_stack": {
+    "vision": {
+      "source": "MuJoCo virtual RGB-D/segmentation camera",
+      "camera": "stage3_egg_closeup",
+      "role": "egg pose estimate and final lift corroboration"
+    },
+    "arm_wrist": {
+      "mode": "scripted_visual_guided",
+      "role": "approach, wrist alignment, and lift path remain scripted for this safety layer"
+    },
+    "full_hand_gentle_grasp": {
+      "mode": "stage3_7d_fallback",
+      "checkpoint": "checkpoints/stage3_phase_hand_policy_v0.pth",
+      "transition_slip_threshold": 0.29,
+      "max_transition_hold_steps_per_phase": 200,
+      "recovery_progress_drop": 0.01,
+      "recovery_stable_window_steps": 0
+    },
+    "thumb_index_middle_pinch": {
+      "mode": "act_lite_v1_pinch30_hand_chunk_with_rule_repair",
+      "checkpoint": "checkpoints/stage3_act_lite_chunk_policy_v1_pinch30.pth",
+      "selected_pinch_config": "metadata/stage3_pinch_grasp_training_v0_selected.json",
+      "repair_mode": "inactive_anchor_slip_close",
+      "repair_phases": [
+        "contact_settle",
+        "slow_lift",
+        "hold"
+      ],
+      "repair_inactive_alpha": 1.0,
+      "repair_close_gain": 0.08,
+      "repair_preclose_delta": 0.1,
+      "repair_close_max": 0.18,
+      "repair_max_crush": 0.25,
+      "repair_max_penetration": 0.0035
+    },
+    "final_verification": {
+      "pinch_mode": "vision_tactile_corroborated",
+      "min_corroboration_confidence": 0.3,
+      "min_corroboration_mask_pixels": 500
+    }
+  },
+  "canonical_eval": {
+    "script": "eval_stage3_act_lite_chunk_policy_v0.py",
+    "checkpoint": "checkpoints/stage3_act_lite_chunk_policy_v1_pinch30.pth",
+    "selected_pinch_config": "metadata/stage3_pinch_grasp_training_v0_selected.json",
+    "metadata": "metadata/stage3_9g_full_fallback_pinch_verify_100.json",
+    "report": "docs/stage3_9g_full_fallback_pinch_verify_100_report.md",
+    "args": [
+      "--skills",
+      "full_hand_gentle_grasp,thumb_index_middle_pinch",
+      "--trials",
+      "cycle",
+      "--episodes-per-skill",
+      "50",
+      "--random-offset-std",
+      "0.005",
+      "--execution-mode",
+      "scripted_arm_predicted_hand",
+      "--full-hand-control-mode",
+      "stage3_7d_fallback",
+      "--replan-interval",
+      "16",
+      "--pinch-repair-mode",
+      "inactive_anchor_slip_close",
+      "--pinch-repair-phases",
+      "contact_settle,slow_lift,hold",
+      "--pinch-repair-inactive-alpha",
+      "1.0",
+      "--pinch-repair-preclose-delta",
+      "0.10",
+      "--pinch-repair-close-max",
+      "0.18",
+      "--pinch-final-verification-mode",
+      "vision_tactile_corroborated"
+    ],
+    "expected": {
+      "status": "PASS",
+      "episodes": 100,
+      "success_count": 100,
+      "per_skill_success": {
+        "full_hand_gentle_grasp": "50/50",
+        "thumb_index_middle_pinch": "50/50"
+      }
+    }
+  },
+  "pinch_final_vision_check": {
+    "metadata": "metadata/stage3_9g_pinch_verify_preclose010_50.json",
+    "report": "docs/stage3_9g_pinch_verify_preclose010_50_report.md",
+    "expected": {
+      "status": "PASS",
+      "episodes": 50,
+      "success_count": 50
+    }
+  },
+  "smoke_eval": {
+    "metadata": "metadata/stage3_10a_safety_layer_v0_smoke.json",
+    "report": "docs/stage3_10a_safety_layer_v0_smoke_report.md",
+    "args": [
+      "--skills",
+      "full_hand_gentle_grasp,thumb_index_middle_pinch",
+      "--trials",
+      "cycle",
+      "--episodes-per-skill",
+      "2",
+      "--random-offset-std",
+      "0.005",
+      "--execution-mode",
+      "scripted_arm_predicted_hand",
+      "--full-hand-control-mode",
+      "stage3_7d_fallback",
+      "--replan-interval",
+      "16",
+      "--pinch-repair-mode",
+      "inactive_anchor_slip_close",
+      "--pinch-repair-phases",
+      "contact_settle,slow_lift,hold",
+      "--pinch-repair-inactive-alpha",
+      "1.0",
+      "--pinch-repair-preclose-delta",
+      "0.10",
+      "--pinch-repair-close-max",
+      "0.18",
+      "--pinch-final-verification-mode",
+      "vision_tactile_corroborated"
+    ],
+    "expected": {
+      "episodes": 4,
+      "success_count": 4
+    },
+    "latest_result": {
+      "status": "PASS",
+      "metadata": "metadata/stage3_10a_safety_layer_v0_smoke.json",
+      "report": "docs/stage3_10a_safety_layer_v0_smoke_report.md",
+      "episodes": 4,
+      "success_count": 4,
+      "full_hand_success": "2/2",
+      "pinch_success": "2/2",
+      "risk_flags_observed": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip",
+        "recovery_budget_exhausted",
+        "transient_slip_high"
+      ]
+    }
+  },
+  "thresholds_not_relaxed": {
+    "full_hand_max_hold_slip_score": 0.35,
+    "pinch_max_hold_slip_score": 0.35,
+    "max_crush_risk": 0.35,
+    "max_penetration_m": 0.004,
+    "floor_contacts": 0
+  },
+  "known_risks_to_track": [
+    "early_contact_in_approach",
+    "transient_or_hold_slip",
+    "transient_slip_high",
+    "recovery_budget_exhausted",
+    "final_vision_occluded_or_low_confidence"
+  ],
+  "frozen_for": [
+    "Stage3.10B dataset expansion",
+    "formal ACT Transformer/CVAE baseline comparison",
+    "formal Diffusion Policy baseline comparison",
+    "larger benchmark and failure taxonomy"
+  ],
+  "not_for": [
+    "claiming full-action ACT/DP success",
+    "claiming real-camera or hardware integration",
+    "silently changing safety thresholds during model comparisons"
+  ],
+  "verification_status": "check_passed_and_smoke_4_of_4_on_2026_06_07"
+}

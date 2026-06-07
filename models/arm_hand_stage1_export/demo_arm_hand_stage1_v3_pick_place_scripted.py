@@ -157,7 +157,7 @@ def run_interpolated_phase(
             counters["lifted_once"] = True
         if phase_name in {"release", "retreat", "settle_on_target"}:
             counters["release_started"] = True
-        if counters["lifted_once"] and not counters["release_started"] and phase_name in {"transport", "descend_to_target"}:
+        if counters["lifted_once"] and not counters["release_started"] and phase_name in {"transport", "transport_hold", "descend_to_target"}:
             counters["transport_floor_contacts"] += int(contact.get("ball_floor_contact_count", 0) > 0)
         if counters["release_started"] and is_stable_on_target(metrics, target_radius):
             counters["stable_target_steps"] += 1

@@ -1,0 +1,910 @@
+{
+  "version": "stage3_skill_registry_v0",
+  "stage": "Stage3.10C-SafetyACTCVAEOfflineTrained",
+  "updated_at": "2026-06-07",
+  "status": "stage3_10c_safety_act_cvae_policy_v0_offline_trained_not_closed_loop_promoted",
+  "purpose_zh": "把 Stage3.7D 全手温和抓取和 Stage3.8B 二三指捏持从单个 demo 升级为可注册、可路由、可训练、可验收的技能。",
+  "boundary": {
+    "mujoco_only": true,
+    "hardware_integration": false,
+    "real_camera_integration": false,
+    "real_tactile_or_ultrasound_integration": false,
+    "full_action_act_dp_promoted": false,
+    "formal_act_cvae_or_dp_trained": true,
+    "stage3_10a_safety_layer_config": "configs/stage3_10a_skillzoo_safety_layer_v0.json",
+    "offline_safety_act_cvae_baseline_trained": true,
+    "closed_loop_act_cvae_or_dp_passed": false,
+    "stage3_10c_checkpoint": "checkpoints/stage3_10c_safety_act_cvae_policy_v0.pth"
+  },
+  "episode_schema": {
+    "required_fields": [
+      "episode_id",
+      "skill_id",
+      "task_goal",
+      "scene_case_id",
+      "vision",
+      "tactile",
+      "action_summary",
+      "success",
+      "terminal_reason",
+      "failure_reasons",
+      "risk_flags"
+    ],
+    "notes_zh": [
+      "这不是最终 LeRobot 数据格式，而是 Stage3.9B 的统一中间格式。",
+      "视觉成功、触觉成功、真值抬升、失败原因必须一起记录，不能只保存动作 loss。"
+    ],
+    "current_exports": {
+      "jsonl": "data/stage3_skill_episode_dataset_v0.jsonl",
+      "npz": "data/stage3_skill_episode_dataset_v0.npz",
+      "metadata": "metadata/stage3_skill_episode_dataset_v0.json",
+      "report": "docs/stage3_skill_episode_dataset_v0_report.md",
+      "episode_count": 70,
+      "canonical_training_count": 40,
+      "trace_sequence_exports": {
+        "jsonl": "data/stage3_skill_trace_sequence_dataset_v0.jsonl",
+        "npz": "data/stage3_skill_trace_sequence_dataset_v0.npz",
+        "metadata": "metadata/stage3_skill_trace_sequence_dataset_v0.json",
+        "report": "docs/stage3_skill_trace_sequence_dataset_v0_report.md",
+        "sequence_count": 70,
+        "canonical_training_count": 40,
+        "sampled_timestep_count": 1161,
+        "act_dp_ready": false,
+        "act_dp_blocker_zh": "当前 trace 是稀疏状态采样，没有完整 observation/action。"
+      },
+      "act_dp_sequence_exports": {
+        "export_script": "export_stage3_skill_act_dp_sequence_dataset_v0.py",
+        "jsonl": "data/stage3_skill_act_dp_sequence_dataset_v0.jsonl",
+        "npz": "data/stage3_skill_act_dp_sequence_dataset_v0.npz",
+        "metadata": "metadata/stage3_skill_act_dp_sequence_dataset_v0.json",
+        "report": "docs/stage3_skill_act_dp_sequence_dataset_v0_report.md",
+        "readiness_definition": "docs/stage3_act_dp_readiness_definition_v0.md",
+        "episode_count": 40,
+        "success_count": 40,
+        "total_rows": 179714,
+        "obs_shape": [
+          179714,
+          130
+        ],
+        "actions_shape": [
+          179714,
+          26
+        ],
+        "padded_obs_shape": [
+          40,
+          5220,
+          130
+        ],
+        "padded_actions_shape": [
+          40,
+          5220,
+          26
+        ],
+        "per_skill_success": {
+          "full_hand_gentle_grasp": 30,
+          "thumb_index_middle_pinch": 10
+        },
+        "horizon_windows": {
+          "8": 179434,
+          "16": 179114,
+          "32": 178474,
+          "64": 177194,
+          "128": 174634,
+          "256": 169514
+        },
+        "diagnostic_attempt_count": 1,
+        "act_ready": true,
+        "dp_ready": true,
+        "act_dp_ready": true,
+        "next_step_zh": "Stage3.10C：使用 Stage3.10B-full_success_v0 训练正式 ACT/CVAE 或 Diffusion Policy baseline。",
+        "v1_pinch30_repair": {
+          "jsonl": "data/stage3_skill_act_dp_sequence_dataset_v1_pinch30.jsonl",
+          "npz": "data/stage3_skill_act_dp_sequence_dataset_v1_pinch30.npz",
+          "metadata": "metadata/stage3_skill_act_dp_sequence_dataset_v1_pinch30.json",
+          "report": "docs/stage3_skill_act_dp_sequence_dataset_v1_pinch30_report.md",
+          "episode_count": 60,
+          "success_count": 60,
+          "total_rows": 230450,
+          "per_skill_success": {
+            "full_hand_gentle_grasp": 30,
+            "thumb_index_middle_pinch": 30
+          },
+          "diagnostic_attempt_count": 3,
+          "purpose_zh": "把捏持成功样本从 10 条扩展到 30 条，用于修复 right_low_zminus hold slip 边界。"
+        },
+        "stage3_9g_final_microtuning": {
+          "status": "pass",
+          "closeout": "docs/stage3_9g_final_microtuning_closeout.md",
+          "main_metadata": "metadata/stage3_9g_full_fallback_pinch_verify_100.json",
+          "main_report": "docs/stage3_9g_full_fallback_pinch_verify_100_report.md",
+          "main_episodes": 100,
+          "main_success_count": 100,
+          "full_hand_success": "50/50",
+          "pinch_success": "50/50",
+          "full_hand_control_mode": "stage3_7d_fallback",
+          "pinch_repair_mode": "inactive_anchor_slip_close",
+          "pinch_repair_preclose_delta": 0.1,
+          "pinch_repair_close_max": 0.18,
+          "pinch_final_verification_mode": "vision_tactile_corroborated",
+          "pinch_final_verification_metadata": "metadata/stage3_9g_pinch_verify_preclose010_50.json",
+          "pinch_final_verification_report": "docs/stage3_9g_pinch_verify_preclose010_50_report.md",
+          "pinch_final_verification_success": "50/50",
+          "stage3_10_plan": "docs/stage3_10_model_training_after_microtuning_plan.md",
+          "promotion_boundary": "current SkillZoo safety layer candidate; not full-action ACT/DP and not hardware integration"
+        },
+        "stage3_10a_safety_layer_v0": {
+          "status": "frozen_candidate",
+          "config": "configs/stage3_10a_skillzoo_safety_layer_v0.json",
+          "closeout": "docs/stage3_10a_skillzoo_safety_layer_v0_closeout.md",
+          "check_script": "run_stage3_10a_safety_layer_v0.py",
+          "evidence_metadata": "metadata/stage3_9g_full_fallback_pinch_verify_100.json",
+          "evidence_report": "docs/stage3_9g_full_fallback_pinch_verify_100_report.md",
+          "success": "100/100",
+          "stage3_10b_next": "expand ACT/DP training data using this safety layer as the guardrail and baseline",
+          "smoke_metadata": "metadata/stage3_10a_safety_layer_v0_smoke.json",
+          "smoke_report": "docs/stage3_10a_safety_layer_v0_smoke_report.md",
+          "smoke_success": "4/4"
+        },
+        "stage3_10b_safety_labeled_dataset_v0": {
+          "status": "smoke_ready",
+          "export_script": "export_stage3_10b_safety_labeled_act_dp_dataset_v0.py",
+          "npz": "data/stage3_10b_safety_labeled_act_dp_dataset_v0.npz",
+          "jsonl": "data/stage3_10b_safety_labeled_act_dp_dataset_v0.jsonl",
+          "metadata": "metadata/stage3_10b_safety_labeled_act_dp_dataset_v0.json",
+          "report": "docs/stage3_10b_safety_labeled_act_dp_dataset_v0_report.md",
+          "closeout": "docs/stage3_10b_safety_labeled_dataset_v0_closeout.md",
+          "safety_layer_config": "configs/stage3_10a_skillzoo_safety_layer_v0.json",
+          "episodes": 10,
+          "success_count": 10,
+          "total_rows": 38560,
+          "obs_shape": [
+            38560,
+            130
+          ],
+          "actions_shape": [
+            38560,
+            26
+          ],
+          "safety_label_shape": [
+            38560,
+            9
+          ],
+          "safety_intervention_steps": 9860,
+          "recovery_steps": 724,
+          "repair_steps": 9136,
+          "risk_label_steps": 956,
+          "stage3_10b_smoke_ready": true,
+          "act_dp_ready": false,
+          "boundary": "schema/data smoke passed, but not a full-scale ACT/DP training dataset yet",
+          "next_step_zh": "Stage3.10B-full：扩大采集规模，并加入更多 pose-noise、遮挡和失败/恢复场景，然后进入正式 ACT/CVAE 或 Diffusion Policy dataloader。"
+        },
+        "stage3_10b_safety_labeled_dataset_full_success_v0": {
+          "status": "train_ready",
+          "export_script": "export_stage3_10b_safety_labeled_act_dp_dataset_v0.py",
+          "npz": "data/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.npz",
+          "jsonl": "data/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.jsonl",
+          "metadata": "metadata/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.json",
+          "report": "docs/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0_report.md",
+          "closeout": "docs/stage3_10b_full_safety_labeled_dataset_v0_closeout.md",
+          "safety_layer_config": "configs/stage3_10a_skillzoo_safety_layer_v0.json",
+          "episodes": 60,
+          "success_count": 60,
+          "full_hand_success": "30/30",
+          "pinch_success": "30/30",
+          "total_rows": 231421,
+          "obs_shape": [
+            231421,
+            130
+          ],
+          "actions_shape": [
+            231421,
+            26
+          ],
+          "safety_label_shape": [
+            231421,
+            9
+          ],
+          "safety_intervention_steps": 59221,
+          "recovery_steps": 4377,
+          "repair_steps": 54844,
+          "risk_label_steps": 5408,
+          "act_dp_ready": true,
+          "stage3_10b_train_ready": true,
+          "boundary": "MuJoCo-only safety-labeled training candidate; not full-action ACT/DP success and not hardware integration",
+          "next_step_zh": "Stage3.10C-A 已完成离线 safety ACT/CVAE-style 训练；下一步是 Stage3.10C-B closed-loop MuJoCo evaluator。"
+        },
+        "stage3_10b_safety_labeled_dataset_full_v0_diagnostic": {
+          "status": "diagnostic_failure_retained",
+          "metadata": "metadata/stage3_10b_safety_labeled_act_dp_dataset_full_v0.json",
+          "report": "docs/stage3_10b_safety_labeled_act_dp_dataset_full_v0_report.md",
+          "episodes": 60,
+          "success_count": 59,
+          "failed_episode": 31,
+          "failed_skill": "thumb_index_middle_pinch",
+          "failed_trial": "left_low_nominal",
+          "terminal_reason": "vision_lift_too_small",
+          "failure_summary_zh": "一次真正抓取失败：最终 lift 为负，pinch 没有保持住，鸡蛋仍触地。保留为安全层失败诊断样本，不作为主训练候选。"
+        },
+        "stage3_10b_stress_pose008_v0": {
+          "status": "stress_diagnostic_failure_retained",
+          "metadata": "metadata/stage3_10b_safety_labeled_act_dp_dataset_stress_pose008_v0.json",
+          "report": "docs/stage3_10b_safety_labeled_act_dp_dataset_stress_pose008_v0_report.md",
+          "episodes": 20,
+          "success_count": 19,
+          "random_offset_std_m": 0.008,
+          "failed_skill": "thumb_index_middle_pinch",
+          "failed_trial": "back_large_lift",
+          "terminal_reason": "final_vision_failed_or_occluded",
+          "true_lift_height_m": 0.12410922020010821,
+          "final_vision_confidence": 0.2728231187047051,
+          "final_vision_mask_pixels": 574,
+          "failure_summary_zh": "机械/触觉 hold 成功，但最终视觉 mask 太小、置信度太低；指向 final verification / 多视角 / 遮挡处理问题。"
+        },
+        "stage3_10c_safety_act_cvae_policy_v0": {
+          "status": "stage3_10c_safety_act_cvae_policy_v0_offline_trained_not_closed_loop_promoted",
+          "train_script": "train_stage3_10c_safety_act_cvae_policy_v0.py",
+          "checkpoint": "checkpoints/stage3_10c_safety_act_cvae_policy_v0.pth",
+          "metadata": "metadata/stage3_10c_safety_act_cvae_policy_v0_train.json",
+          "report": "docs/stage3_10c_safety_act_cvae_policy_v0_train_report.md",
+          "closeout": "docs/stage3_10c_safety_act_cvae_policy_v0_closeout.md",
+          "best_epoch": 8,
+          "best_val_prior_action_loss": 0.0013452473795041442,
+          "val_prior_rmse_raw": 0.00931510142982006,
+          "val_prior_hand_rmse_raw": 0.007223035674542189,
+          "val_safety_accuracy": 0.990523526469683,
+          "closed_loop_eval_completed": false,
+          "promoted_policy": false,
+          "boundary": "Offline MuJoCo training only; not closed-loop promoted, not hardware, not real camera, not real tactile or ultrasound."
+        }
+      }
+    }
+  },
+  "router_policy": {
+    "version": "stage3_skill_router_rules_v0",
+    "strategy_zh": "第一版使用规则路由器，不使用 LLM 或 VLA。路由器只选择技能，不直接输出 actuator。",
+    "thresholds": {
+      "min_vision_confidence_for_action": 0.55,
+      "min_vision_confidence_for_reacquire": 0.35,
+      "max_pose_error_for_pinch_m": 0.015,
+      "slip_recovery_threshold": 0.3,
+      "crush_abort_threshold": 0.35,
+      "penetration_abort_threshold_m": 0.004
+    },
+    "ordered_rules_zh": [
+      "如果触觉显示已经接触且滑移高，优先选择 slip_recovery。",
+      "如果视觉置信度太低且还没有接触，先选择 acquire_vision_pose。",
+      "如果任务希望捏持、空间清晰、视觉置信度和位姿误差达标，选择 thumb_index_middle_pinch。",
+      "如果可见性低、空间拥挤、用户强调 gentle，选择 full_hand_gentle_grasp。",
+      "如果安全指标超阈值，选择 release_or_abort。"
+    ]
+  },
+  "skills": [
+    {
+      "skill_id": "acquire_vision_pose",
+      "display_name_zh": "获取/刷新虚拟视觉位姿",
+      "status": "registered_sensor_primitive",
+      "skill_type": "perception",
+      "controller_type": "virtual_camera_sensor",
+      "stage_source": "Stage3.2c",
+      "inputs": [
+        "mujoco_rgbd_segmentation_camera",
+        "last_good_pose_optional"
+      ],
+      "outputs": [
+        "egg_pose_estimate",
+        "vision_confidence",
+        "accepted_or_frozen"
+      ],
+      "success_criteria": {
+        "min_confidence": 0.55,
+        "max_accepted_pose_error_m": 0.015,
+        "false_confident_bad_estimates": 0
+      },
+      "entrypoints": {
+        "test_script": "external_sensors/run_stage3_noisy_virtual_camera_perception_test.py",
+        "primary_report": "docs/stage3_perception_geometry_v0.md"
+      },
+      "failure_reasons": [
+        "vision_acquire_failed",
+        "vision_confidence_low",
+        "pose_error_too_large",
+        "mask_occluded"
+      ]
+    },
+    {
+      "skill_id": "full_hand_gentle_grasp",
+      "display_name_zh": "全手温和抓取",
+      "status": "registered_baseline",
+      "skill_type": "grasp_skill",
+      "controller_type": "scripted_arm_wrist_plus_learned_hand_plus_tactile_recovery",
+      "stage_source": "Stage3.7D",
+      "inputs": [
+        "egg_pose_estimate",
+        "vision_confidence",
+        "synthetic_tactile_slip",
+        "phase_progress"
+      ],
+      "outputs": [
+        "arm_wrist_scripted_targets",
+        "hand_policy_targets",
+        "tactile_gate_state",
+        "recovery_state"
+      ],
+      "success_criteria": {
+        "min_lift_height_m": 0.05,
+        "min_hold_stable_fraction": 0.8,
+        "max_hold_slip_score": 0.35,
+        "max_crush_risk": 0.35,
+        "max_penetration_m": 0.004,
+        "floor_contacts": 0
+      },
+      "known_strengths_zh": [
+        "低可见性或不适合捏持时更稳。",
+        "已通过固定 10/10 和随机 30/30。"
+      ],
+      "known_risks": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip",
+        "recovery_budget_exhausted"
+      ],
+      "entrypoints": {
+        "eval_script": "eval_stage3_contact_transition_recovery_v0.py",
+        "demo_script": "demo_stage3_7d_recovery_viewer.py",
+        "primary_metadata": "metadata/stage3_contact_transition_recovery_v0_randomized30.json",
+        "primary_report": "docs/stage3_contact_transition_recovery_v0_closeout.md",
+        "smoke": {
+          "script": "demo_stage3_7d_recovery_viewer.py",
+          "args": [
+            "--headless-smoke",
+            "--trial",
+            "center_nominal"
+          ]
+        }
+      },
+      "failure_reasons": [
+        "vision_acquire_failed",
+        "ik_approach_error_high",
+        "contact_not_acquired",
+        "grip_not_stable_before_lift",
+        "hold_slip_score_high",
+        "crush_risk_high",
+        "penetration_high",
+        "egg_still_touching_floor"
+      ]
+    },
+    {
+      "skill_id": "thumb_index_middle_pinch",
+      "display_name_zh": "拇指+食指+中指捏持",
+      "status": "registered_baseline",
+      "skill_type": "grasp_skill",
+      "controller_type": "scripted_pinch_candidate",
+      "stage_source": "Stage3.8B",
+      "selected_candidate": "thumb_index_middle_strong__higher_approach",
+      "inputs": [
+        "egg_pose_estimate",
+        "vision_confidence",
+        "workspace_clearance",
+        "synthetic_tactile_slip"
+      ],
+      "outputs": [
+        "pinch_hand_targets",
+        "tactile_pinch_contact_state",
+        "vision_confirmed_lift"
+      ],
+      "success_criteria": {
+        "min_vision_lift_height_m": 0.045,
+        "min_hold_stable_fraction": 0.6,
+        "min_hold_pinch_fraction": 0.55,
+        "min_hold_pinch_purity": 0.55,
+        "max_hold_slip_score": 0.35,
+        "max_crush_risk": 0.35,
+        "max_penetration_m": 0.004,
+        "floor_contacts": 0
+      },
+      "known_strengths_zh": [
+        "能展示不同抓法，不依赖 ring finger 主支撑。",
+        "选中候选 final selected 10/10。"
+      ],
+      "known_risks": [
+        "early_contact_in_approach",
+        "transient_slip_high",
+        "final_vision_occluded_or_low_confidence"
+      ],
+      "entrypoints": {
+        "training_script": "train_stage3_pinch_grasp_candidates_v0.py",
+        "eval_script": "eval_stage3_pinch_grasp_v0.py",
+        "demo_script": "demo_stage3_pinch_grasp_viewer.py",
+        "selected_config": "metadata/stage3_pinch_grasp_training_v0_selected.json",
+        "primary_metadata": "metadata/stage3_pinch_grasp_training_v0_selected.json",
+        "primary_report": "docs/stage3_pinch_grasp_training_v0_closeout.md",
+        "smoke": {
+          "script": "demo_stage3_pinch_grasp_viewer.py",
+          "args": [
+            "--candidate-config",
+            "metadata/stage3_pinch_grasp_training_v0_selected.json",
+            "--headless-smoke",
+            "--trial",
+            "center_nominal"
+          ]
+        }
+      },
+      "failure_reasons": [
+        "vision_acquire_failed",
+        "vision_lift_too_small",
+        "true_lift_too_small",
+        "pinch_not_maintained_in_hold",
+        "hold_tactile_unstable",
+        "hold_slip_score_high",
+        "final_vision_failed_or_occluded"
+      ]
+    },
+    {
+      "skill_id": "contact_settle",
+      "display_name_zh": "接触稳定等待",
+      "status": "embedded_subskill",
+      "skill_type": "tactile_gate",
+      "controller_type": "rule_gate",
+      "stage_source": "Stage3.7B-3.7D",
+      "inputs": [
+        "synthetic_tactile_slip",
+        "crush_risk",
+        "penetration_m"
+      ],
+      "outputs": [
+        "lift_permission",
+        "gate_release_reason"
+      ],
+      "success_criteria": {
+        "stable_window_steps": 300,
+        "max_slip_score": 0.18,
+        "max_crush_risk": 0.35,
+        "max_penetration_m": 0.004
+      },
+      "entrypoints": {
+        "implemented_inside": "eval_stage3_contact_transition_recovery_v0.py"
+      },
+      "failure_reasons": [
+        "stable_window_not_met",
+        "slip_high",
+        "crush_risk_high",
+        "penetration_high"
+      ]
+    },
+    {
+      "skill_id": "slow_lift_hold",
+      "display_name_zh": "慢抬升并保持",
+      "status": "embedded_subskill",
+      "skill_type": "lift_hold_skill",
+      "controller_type": "phase_control_with_tactile_checks",
+      "stage_source": "Stage3.7D and Stage3.8B",
+      "inputs": [
+        "contact_stable",
+        "synthetic_tactile_slip",
+        "egg_pose_estimate"
+      ],
+      "outputs": [
+        "lift_progress",
+        "hold_stability",
+        "final_lift_estimate"
+      ],
+      "success_criteria": {
+        "min_lift_height_m": 0.05,
+        "hold_duration_s": 3.0,
+        "max_hold_slip_score": 0.35
+      },
+      "entrypoints": {
+        "implemented_inside": "eval_stage3_contact_transition_recovery_v0.py and eval_stage3_pinch_grasp_v0.py"
+      },
+      "failure_reasons": [
+        "true_lift_too_small",
+        "vision_lift_too_small",
+        "hold_slip_score_high",
+        "egg_still_touching_floor"
+      ]
+    },
+    {
+      "skill_id": "slip_recovery",
+      "display_name_zh": "滑移恢复",
+      "status": "planned_promote_from_embedded",
+      "skill_type": "recovery_skill",
+      "controller_type": "microphase_rule_or_future_learned_policy",
+      "stage_source": "Stage3.7D",
+      "inputs": [
+        "slip_score",
+        "phase_name",
+        "crush_risk",
+        "penetration_m"
+      ],
+      "outputs": [
+        "recovery_progress_drop",
+        "retry_permission",
+        "abort_if_budget_exhausted"
+      ],
+      "success_criteria": {
+        "slip_score_reduced_below": 0.29,
+        "max_recovery_steps_per_phase": 200
+      },
+      "entrypoints": {
+        "currently_embedded_inside": "eval_stage3_contact_transition_recovery_v0.py"
+      },
+      "failure_reasons": [
+        "recovery_budget_exhausted",
+        "slip_remains_high",
+        "crush_risk_high",
+        "penetration_high"
+      ]
+    },
+    {
+      "skill_id": "release_or_abort",
+      "display_name_zh": "释放或中止",
+      "status": "planned_safety_skill",
+      "skill_type": "safety_skill",
+      "controller_type": "rule_gate_then_future_policy",
+      "stage_source": "Stage3.9",
+      "inputs": [
+        "vision_confidence",
+        "slip_score",
+        "crush_risk",
+        "penetration_m",
+        "floor_contact"
+      ],
+      "outputs": [
+        "safe_stop_reason",
+        "release_plan"
+      ],
+      "success_criteria": {
+        "finite_state": true,
+        "no_crush_escalation": true
+      },
+      "entrypoints": {},
+      "failure_reasons": [
+        "unsafe_to_continue",
+        "vision_lost",
+        "crush_risk_high",
+        "penetration_high"
+      ]
+    }
+  ],
+  "model_training": {
+    "act_lite_chunk_policy_v0": {
+      "status": "stage3_act_lite_chunk_policy_v0_trained_offline_not_closed_loop_promoted",
+      "train_script": "train_stage3_act_dp_baseline_v0.py",
+      "dataset": "data/stage3_skill_act_dp_sequence_dataset_v0.npz",
+      "checkpoint": "checkpoints/stage3_act_lite_chunk_policy_v0.pth",
+      "metadata": "metadata/stage3_act_lite_chunk_policy_v0_train.json",
+      "report": "docs/stage3_act_lite_chunk_policy_v0_train_report.md",
+      "model_type": "ACT-lite MLP action chunk predictor",
+      "horizon": 16,
+      "obs_dim": 130,
+      "action_dim": 26,
+      "output_dim": 416,
+      "train_windows": 17933,
+      "val_windows": 4478,
+      "best_epoch": 29,
+      "best_val_loss": 0.0008468306623399258,
+      "final_train_loss": 0.002376772110680571,
+      "final_val_loss": 0.0008562548900954425,
+      "train_chunk_rmse_raw": 0.0027197038289159536,
+      "val_chunk_rmse_raw": 0.004124050494283438,
+      "closed_loop_eval_completed": true,
+      "promoted_policy": false,
+      "next_step_zh": "v0 作为早期诊断保留；当前主线已转到 v1_pinch30 + Stage3.9D repair。",
+      "closed_loop_eval": {
+        "eval_script": "eval_stage3_act_lite_chunk_policy_v0.py",
+        "metadata": "metadata/stage3_act_lite_chunk_policy_v0_eval.json",
+        "report": "docs/stage3_act_lite_chunk_policy_v0_eval_report.md",
+        "execution_mode": "scripted_arm_predicted_hand",
+        "replan_interval": 16,
+        "episodes": 10,
+        "success_count": 9,
+        "full_hand_success": "5/5",
+        "pinch_success": "4/5",
+        "failed_trial": "right_low_zminus",
+        "failed_reason": "hold_slip_score_high"
+      },
+      "full_action_smoke": {
+        "metadata": "metadata/stage3_act_lite_chunk_policy_v0_eval_full_action_smoke.json",
+        "report": "docs/stage3_act_lite_chunk_policy_v0_eval_full_action_smoke_report.md",
+        "success_count": 0,
+        "episodes": 2,
+        "lesson_zh": "完整 26 actuator 端到端控制仍不稳定，当前不要把 full_action 当作主线。"
+      }
+    },
+    "act_lite_chunk_policy_v1_pinch30": {
+      "status": "mixed_control_with_stage3_10a_safety_layer_v0_100_of_100_not_full_actdp",
+      "train_script": "train_stage3_act_dp_baseline_v0.py",
+      "eval_script": "eval_stage3_act_lite_chunk_policy_v0.py",
+      "dataset": "data/stage3_skill_act_dp_sequence_dataset_v1_pinch30.npz",
+      "checkpoint": "checkpoints/stage3_act_lite_chunk_policy_v1_pinch30.pth",
+      "metadata": "metadata/stage3_act_lite_chunk_policy_v1_pinch30_train.json",
+      "report": "docs/stage3_act_lite_chunk_policy_v1_pinch30_train_report.md",
+      "closeout": "docs/stage3_act_lite_chunk_policy_v1_pinch30_closeout.md",
+      "model_type": "ACT-lite MLP action chunk predictor",
+      "horizon": 16,
+      "obs_dim": 130,
+      "action_dim": 26,
+      "output_dim": 416,
+      "train_windows": 22998,
+      "val_windows": 5734,
+      "best_epoch": 28,
+      "best_val_loss": 0.0004957450437359512,
+      "final_train_loss": 0.0019372046046125515,
+      "final_val_loss": 0.000511927530169487,
+      "train_chunk_rmse_raw": 0.0022623043041676283,
+      "val_chunk_rmse_raw": 0.003328679595142603,
+      "closed_loop_eval": {
+        "metadata": "metadata/stage3_act_lite_chunk_policy_v1_pinch30_eval.json",
+        "report": "docs/stage3_act_lite_chunk_policy_v1_pinch30_eval_report.md",
+        "execution_mode": "scripted_arm_predicted_hand",
+        "replan_interval": 16,
+        "episodes": 10,
+        "success_count": 9,
+        "full_hand_success": "5/5",
+        "pinch_success": "4/5",
+        "failed_trial": "right_low_zminus",
+        "failed_reason": "hold_slip_score_high",
+        "right_low_hold_slip": 0.6923622848671642
+      },
+      "promoted_policy": false,
+      "next_step_zh": "Stage3.10B：停止 Stage3.9 微调，把 v1_pinch30 作为捏持手指 chunk 模型放入冻结 safety layer，并扩展 ACT/DP 训练数据。",
+      "stage3_9d_pinch_hold_repair": {
+        "status": "PASS_fixed_right_low_and_cycle10",
+        "eval_script": "eval_stage3_act_lite_chunk_policy_v0.py",
+        "checkpoint": "checkpoints/stage3_act_lite_chunk_policy_v1_pinch30.pth",
+        "closeout": "docs/stage3_9d_pinch_hold_repair_closeout.md",
+        "right_low_metadata": "metadata/stage3_9d_pinch_hold_repair_right_low_x5.json",
+        "right_low_report": "docs/stage3_9d_pinch_hold_repair_right_low_x5_report.md",
+        "cycle10_metadata": "metadata/stage3_9d_pinch_hold_repair_cycle10.json",
+        "cycle10_report": "docs/stage3_9d_pinch_hold_repair_cycle10_report.md",
+        "execution_mode": "scripted_arm_predicted_hand",
+        "replan_interval": 16,
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_phases": "contact_settle,slow_lift,hold",
+        "pinch_repair_inactive_alpha": 1.0,
+        "pinch_repair_preclose_delta": 0.08,
+        "pinch_repair_close_max": 0.16,
+        "right_low_success": "5/5",
+        "right_low_hold_max_slip": 0.20269073824466327,
+        "right_low_true_lift_mean_m": 0.1029597008490031,
+        "cycle_success": "10/10",
+        "cycle_full_hand_success": "5/5",
+        "cycle_pinch_success": "5/5",
+        "cycle_pinch_hold_max_slip_max": 0.20347655500948444,
+        "cycle_pinch_max_crush_risk_max": 0.17002741085649495,
+        "cycle_pinch_max_penetration_m_max": 0.003400548217129899,
+        "threshold_changed": false,
+        "boundary_zh": "仍是混合控制：手臂/手腕脚本控制，ACT-lite 控制手指；repair 是规则触觉残差，不是 ACT Transformer/CVAE 或 Diffusion Policy。",
+        "next_step_zh": "Stage3.9E 已完成随机 pose-noise 对照；下一步进入 Stage3.9F 扩大随机评估。"
+      },
+      "stage3_9e_random_pose_repair": {
+        "status": "PASS_random_pose_noise_30_with_repair",
+        "eval_script": "eval_stage3_act_lite_chunk_policy_v0.py",
+        "checkpoint": "checkpoints/stage3_act_lite_chunk_policy_v1_pinch30.pth",
+        "closeout": "docs/stage3_9e_random_pose_repair_closeout.md",
+        "repair_metadata": "metadata/stage3_9e_random_pose_repair_30.json",
+        "repair_report": "docs/stage3_9e_random_pose_repair_30_report.md",
+        "no_repair_metadata": "metadata/stage3_9e_random_pose_no_repair_30.json",
+        "no_repair_report": "docs/stage3_9e_random_pose_no_repair_30_report.md",
+        "execution_mode": "scripted_arm_predicted_hand",
+        "replan_interval": 16,
+        "random_offset_std_m": 0.005,
+        "episodes": 30,
+        "skills": [
+          "full_hand_gentle_grasp",
+          "thumb_index_middle_pinch"
+        ],
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_phases": "contact_settle,slow_lift,hold",
+        "pinch_repair_inactive_alpha": 1.0,
+        "pinch_repair_preclose_delta": 0.08,
+        "pinch_repair_close_max": 0.16,
+        "repair_success": "30/30",
+        "repair_full_hand_success": "15/15",
+        "repair_pinch_success": "15/15",
+        "repair_pinch_true_lift_mean_m": 0.10320780477620055,
+        "repair_pinch_hold_max_slip_mean": 0.19220630264694374,
+        "repair_pinch_hold_max_slip_max": 0.2944479089599281,
+        "repair_pinch_max_crush_risk_max": 0.17251672478518576,
+        "repair_pinch_max_penetration_m_max": 0.0034503344957037153,
+        "no_repair_success": "27/30",
+        "no_repair_full_hand_success": "15/15",
+        "no_repair_pinch_success": "12/15",
+        "no_repair_pinch_true_lift_mean_m": 0.08195620845475014,
+        "no_repair_pinch_hold_max_slip_mean": 0.27970561431355423,
+        "no_repair_pinch_hold_max_slip_max": 1.0,
+        "no_repair_failed_pinch_trials": [
+          "back_large_lift",
+          "lifted_diag",
+          "right_low_zminus"
+        ],
+        "threshold_changed": false,
+        "boundary_zh": "仍是 MuJoCo 混合控制，不是完整 ACT/DP 或硬件集成。",
+        "next_step_zh": "Stage3.9G 已完成 100/100 修补；该项作为 Stage3.9E 到 Stage3.9F 的历史过渡记录保留。"
+      },
+      "stage3_9f_random_pose_baseline_comparison": {
+        "status": "historical_partial_repaired_by_stage3_9g",
+        "closeout": "docs/stage3_9f_random_pose_baseline_comparison_closeout.md",
+        "act_lite_repair_metadata": "metadata/stage3_9f_random_pose_repair_100.json",
+        "act_lite_repair_report": "docs/stage3_9f_random_pose_repair_100_report.md",
+        "act_lite_no_repair_metadata": "metadata/stage3_9f_random_pose_no_repair_100.json",
+        "act_lite_no_repair_report": "docs/stage3_9f_random_pose_no_repair_100_report.md",
+        "scripted_full_hand_metadata": "metadata/stage3_9f_scripted_full_hand_recovery_50.json",
+        "scripted_full_hand_report": "docs/stage3_9f_scripted_full_hand_recovery_50_report.md",
+        "scripted_pinch_selected_metadata": "metadata/stage3_9f_scripted_pinch_selected_50.json",
+        "scripted_pinch_selected_report": "docs/stage3_9f_scripted_pinch_selected_50_report.md",
+        "pinch_repair_preclose010_metadata": "metadata/stage3_9f_pinch_repair_preclose010_50.json",
+        "pinch_repair_preclose010_report": "docs/stage3_9f_pinch_repair_preclose010_50_report.md",
+        "random_offset_std_m": 0.005,
+        "act_lite_repair_success": "97/100",
+        "act_lite_repair_full_hand_success": "48/50",
+        "act_lite_repair_pinch_success": "49/50",
+        "act_lite_no_repair_success": "84/100",
+        "act_lite_no_repair_full_hand_success": "48/50",
+        "act_lite_no_repair_pinch_success": "36/50",
+        "scripted_full_hand_success": "50/50",
+        "scripted_pinch_selected_success": "38/50",
+        "pinch_repair_preclose010_success": "49/50",
+        "pinch_repair_preclose010_hold_max_slip_max": 0.26830961234689665,
+        "pinch_repair_preclose010_max_crush_risk_max": 0.18123069649328988,
+        "pinch_repair_preclose010_max_penetration_m_max": 0.0036246139298657977,
+        "main_lessons_zh": [
+          "repair 对捏持收益稳定：no-repair 捏持 36/50，repair 捏持 49/50。",
+          "ACT-lite + repair 捏持强于 Stage3.8B scripted selected pinch baseline 38/50。",
+          "ACT-lite full-hand branch 48/50 弱于 Stage3.7D scripted full-hand baseline 50/50。",
+          "preclose 0.10 probe 修掉捏持 hold slip，但出现 1 次 final vision failed/occluded，真实抬升和触觉保持成功。"
+        ],
+        "threshold_changed": false,
+        "promoted_policy": false,
+        "next_step_zh": "Stage3.9G 已完成 100/100 修补；该项作为历史对照保留。"
+      },
+      "stage3_9g_final_microtuning": {
+        "status": "PASS_100_of_100_closed",
+        "closeout": "docs/stage3_9g_final_microtuning_closeout.md",
+        "main_metadata": "metadata/stage3_9g_full_fallback_pinch_verify_100.json",
+        "main_report": "docs/stage3_9g_full_fallback_pinch_verify_100_report.md",
+        "success": "100/100",
+        "full_hand_success": "50/50",
+        "pinch_success": "50/50",
+        "threshold_changed": false,
+        "promoted_policy": false
+      },
+      "stage3_10a_safety_layer_v0": {
+        "status": "frozen_candidate",
+        "config": "configs/stage3_10a_skillzoo_safety_layer_v0.json",
+        "closeout": "docs/stage3_10a_skillzoo_safety_layer_v0_closeout.md",
+        "check_script": "run_stage3_10a_safety_layer_v0.py",
+        "boundary": "uses ACT-lite for pinch hand chunks only; not full-action ACT/DP"
+      }
+    },
+    "act_lite_chunk_policy_v1_pinch30_wide_diagnostic": {
+      "status": "diagnostic_failed_to_fix_right_low_hold_slip",
+      "checkpoint": "checkpoints/stage3_act_lite_chunk_policy_v1_pinch30_wide.pth",
+      "metadata": "metadata/stage3_act_lite_chunk_policy_v1_pinch30_wide_train.json",
+      "report": "docs/stage3_act_lite_chunk_policy_v1_pinch30_wide_train_report.md",
+      "right_low_eval_metadata": "metadata/stage3_act_lite_chunk_policy_v1_pinch30_wide_eval_right_low.json",
+      "right_low_eval_report": "docs/stage3_act_lite_chunk_policy_v1_pinch30_wide_eval_right_low_report.md",
+      "right_low_hold_slip": 0.6797000133601151,
+      "lesson_zh": "单纯加宽 MLP 不能解决 right_low_zminus hold slip，问题更像接触保持/触觉残差问题。"
+    },
+    "stage3_10b_safety_labeled_dataset_v0": {
+      "status": "data_schema_smoke_ready_not_model_training",
+      "export_script": "export_stage3_10b_safety_labeled_act_dp_dataset_v0.py",
+      "metadata": "metadata/stage3_10b_safety_labeled_act_dp_dataset_v0.json",
+      "report": "docs/stage3_10b_safety_labeled_act_dp_dataset_v0_report.md",
+      "closeout": "docs/stage3_10b_safety_labeled_dataset_v0_closeout.md",
+      "dataset": "data/stage3_10b_safety_labeled_act_dp_dataset_v0.npz",
+      "episode_count": 10,
+      "success_count": 10,
+      "safety_label_shape": [
+        38560,
+        9
+      ],
+      "promoted_policy": false,
+      "next_step_zh": "先扩成 Stage3.10B-full 数据，再训练正式 ACT/CVAE 或 Diffusion Policy baseline。"
+    },
+    "stage3_10b_safety_labeled_dataset_full_success_v0": {
+      "status": "train_ready_dataset_not_model_trained",
+      "dataset": "data/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.npz",
+      "metadata": "metadata/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.json",
+      "report": "docs/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0_report.md",
+      "closeout": "docs/stage3_10b_full_safety_labeled_dataset_v0_closeout.md",
+      "episode_count": 60,
+      "success_count": 60,
+      "obs_dim": 130,
+      "action_dim": 26,
+      "safety_label_dim": 9,
+      "formal_act_cvae_or_dp_trained": false,
+      "next_step_zh": "Stage3.10C：把 full_success_v0 接到正式 ACT/CVAE 或 Diffusion Policy dataloader，并与 Stage3.10A safety layer 做同场景闭环对比。"
+    },
+    "stage3_10c_safety_act_cvae_policy_v0": {
+      "status": "stage3_10c_safety_act_cvae_policy_v0_offline_trained_not_closed_loop_promoted",
+      "train_script": "train_stage3_10c_safety_act_cvae_policy_v0.py",
+      "dataset": "data/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.npz",
+      "checkpoint": "checkpoints/stage3_10c_safety_act_cvae_policy_v0.pth",
+      "metadata": "metadata/stage3_10c_safety_act_cvae_policy_v0_train.json",
+      "report": "docs/stage3_10c_safety_act_cvae_policy_v0_train_report.md",
+      "closeout": "docs/stage3_10c_safety_act_cvae_policy_v0_closeout.md",
+      "model_type": "Safety ACT/CVAE-style transformer action-chunk policy with auxiliary safety-label head",
+      "dataset_version": "stage3_10b_safety_labeled_act_dp_dataset_full_success_v0",
+      "horizon": 16,
+      "stride": 8,
+      "obs_dim": 130,
+      "action_dim": 26,
+      "safety_label_dim": 9,
+      "skill_count": 2,
+      "phase_count": 8,
+      "train_windows": 24000,
+      "val_windows": 6000,
+      "best_epoch": 8,
+      "best_val_prior_action_loss": 0.0013452473795041442,
+      "final_train_action_loss": 0.0034123266464944828,
+      "final_val_prior_action_loss": 0.0013452473795041442,
+      "train_prior_rmse_raw": 0.009061107411980629,
+      "val_prior_rmse_raw": 0.00931510142982006,
+      "train_prior_hand_rmse_raw": 0.006771658081561327,
+      "val_prior_hand_rmse_raw": 0.007223035674542189,
+      "val_safety_metrics": {
+        "accuracy": 0.990523526469683,
+        "precision": 0.9993049615055604,
+        "recall": 0.9437992324782872,
+        "positive_labels": 138628,
+        "predicted_positive_labels": 130928
+      },
+      "smoke": {
+        "checkpoint": "checkpoints/stage3_10c_safety_act_cvae_policy_v0_smoke.pth",
+        "metadata": "metadata/stage3_10c_safety_act_cvae_policy_v0_smoke_train.json",
+        "report": "docs/stage3_10c_safety_act_cvae_policy_v0_smoke_train_report.md",
+        "epochs": 1,
+        "train_windows": 512,
+        "val_windows": 128,
+        "val_prior_rmse_raw": 0.176518,
+        "val_safety_accuracy": 0.658637
+      },
+      "closed_loop_eval_completed": false,
+      "promoted_policy": false,
+      "full_action_closed_loop_promoted": false,
+      "boundary": "Offline MuJoCo training only; not closed-loop promoted, not hardware, not real camera, not real tactile or ultrasound.",
+      "next_step_zh": "Stage3.10C-B：写 MuJoCo closed-loop evaluator，先用 scripted_arm_predicted_hand，与 Stage3.10A safety layer 同场景对比。"
+    }
+  },
+  "safety_layers": {
+    "stage3_10a_skillzoo_safety_layer_v0": {
+      "status": "frozen_candidate",
+      "stage": "Stage3.10A",
+      "config": "configs/stage3_10a_skillzoo_safety_layer_v0.json",
+      "closeout": "docs/stage3_10a_skillzoo_safety_layer_v0_closeout.md",
+      "check_script": "run_stage3_10a_safety_layer_v0.py",
+      "canonical_metadata": "metadata/stage3_9g_full_fallback_pinch_verify_100.json",
+      "canonical_report": "docs/stage3_9g_full_fallback_pinch_verify_100_report.md",
+      "canonical_success": "100/100",
+      "full_hand_success": "50/50",
+      "pinch_success": "50/50",
+      "pinch_final_verification_metadata": "metadata/stage3_9g_pinch_verify_preclose010_50.json",
+      "pinch_final_verification_report": "docs/stage3_9g_pinch_verify_preclose010_50_report.md",
+      "pinch_final_verification_success": "50/50",
+      "control_modes": {
+        "arm_wrist": "scripted_visual_guided",
+        "full_hand": "stage3_7d_fallback",
+        "pinch": "act_lite_v1_pinch30_hand_chunk_with_inactive_anchor_slip_close",
+        "pinch_final_verification": "vision_tactile_corroborated"
+      },
+      "frozen_parameters": {
+        "random_offset_std_m": 0.005,
+        "replan_interval": 16,
+        "pinch_repair_mode": "inactive_anchor_slip_close",
+        "pinch_repair_phases": "contact_settle,slow_lift,hold",
+        "pinch_repair_inactive_alpha": 1.0,
+        "pinch_repair_preclose_delta": 0.1,
+        "pinch_repair_close_max": 0.18
+      },
+      "threshold_changed": false,
+      "promoted_policy": false,
+      "boundary": "MuJoCo-only mixed control safety layer; not full-action ACT/DP and not hardware integration",
+      "next_step_zh": "Stage3.10B：在这个冻结 safety layer 之上扩展 ACT/DP 数据，记录安全层介入时刻、风险标记和失败分类。",
+      "verification_status": "check_passed_and_smoke_4_of_4_on_2026_06_07",
+      "smoke_metadata": "metadata/stage3_10a_safety_layer_v0_smoke.json",
+      "smoke_report": "docs/stage3_10a_safety_layer_v0_smoke_report.md",
+      "smoke_success": "4/4"
+    }
+  }
+}
