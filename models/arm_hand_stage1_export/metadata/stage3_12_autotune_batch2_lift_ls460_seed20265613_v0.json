@@ -1,0 +1,103 @@
+{
+  "generated_at": "2026-06-13T11:40:48",
+  "stage": "Stage3.12",
+  "status": "batch_completed",
+  "classification": "diagnostic_scoreboard",
+  "args": {
+    "batch_id": "stage3_12_autotune_batch2_lift_ls460_seed20265613",
+    "selected": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11d_i_demo_quality_static_geometry_selected_v0.json",
+    "trials": 50,
+    "seed": 20265613,
+    "force": true,
+    "dry_run": false
+  },
+  "boundary": {
+    "mujoco_only": true,
+    "hardware_runtime": false,
+    "real_camera": false,
+    "direct_force_control_promoted": false,
+    "full_action_act_dp_promoted": false
+  },
+  "ranked_results": [
+    {
+      "name": "lift_ls460",
+      "family": "lift_continuation",
+      "description": "Slightly faster lift timing to test whether shorter lift reduces transition loss.",
+      "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_12_autotune_batch2_lift_ls460_seed20265613_lift_ls460_report.md",
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_12_autotune_batch2_lift_ls460_seed20265613_lift_ls460.json",
+      "command": [
+        "D:\\py\\Python3\\python.exe",
+        "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\run_stage3_11d_b_event_contact_gated_robustness_v0.py",
+        "--selected",
+        "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11d_i_demo_quality_static_geometry_selected_v0.json",
+        "--trials",
+        "50",
+        "--seed",
+        "20265613",
+        "--report",
+        "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_12_autotune_batch2_lift_ls460_seed20265613_lift_ls460_report.md",
+        "--metadata",
+        "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_12_autotune_batch2_lift_ls460_seed20265613_lift_ls460.json",
+        "--override-grasp-offset-x",
+        "-0.0014",
+        "--override-grasp-offset-z",
+        "0.0022",
+        "--override-lift-steps",
+        "460"
+      ],
+      "status": "ok",
+      "returncode": 0,
+      "stdout_tail": "True reason=success_event_contact_gated_true_pinch_release_ball\n030/050 PASS score=20.663 lift=0.1137 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n031/050 PASS score=20.757 lift=0.1155 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n032/050 PASS score=19.800 lift=0.1161 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n033/050 PASS score=20.827 lift=0.1159 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n034/050 PASS score=19.746 lift=0.1154 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n035/050 PASS score=20.727 lift=0.1148 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n036/050 PASS score=19.991 lift=0.1144 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n037/050 PASS score=20.715 lift=0.1139 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n038/050 PASS score=20.741 lift=0.1150 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n039/050 PASS score=20.848 lift=0.1149 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n040/050 PASS score=20.829 lift=0.1151 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n041/050 PASS score=20.834 lift=0.1147 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n042/050 PASS score=19.745 lift=0.1154 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n043/050 PASS score=19.763 lift=0.1157 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n044/050 PASS score=19.869 lift=0.1160 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n045/050 FAIL score=-0.037 lift=0.0000 two_tip=0.000 release=False reason=contact_gate_failed\n046/050 PASS score=20.554 lift=0.1161 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n047/050 PASS score=20.560 lift=0.1159 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n048/050 PASS score=20.758 lift=0.1151 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n049/050 PASS score=20.782 lift=0.1155 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n050/050 PASS score=20.825 lift=0.1148 two_tip=1.000 release=True reason=success_event_contact_gated_true_pinch_release_ball\n{\n  \"trials\": 50,\n  \"success_count\": 47,\n  \"contact_gate_success_count\": 48,\n  \"lift_success_count\": 47,\n  \"true_pinch_success_count\": 47,\n  \"release_success_count\": 49,\n  \"terminal_reason_counts\": {\n    \"success_event_contact_gated_true_pinch_release_ball\": 47,\n    \"contact_gate_failed\": 2,\n    \"lift_gate_failed\": 1\n  },\n  \"success_hold_lift_mean_m\": 0.11504041015425759,\n  \"success_hold_lift_min_m\": 0.11341096427386874,\n  \"success_hold_lift_max_m\": 0.11617105480275723,\n  \"motor_feedback_enabled\": true,\n  \"motor_feedback_max_iq_a\": 3.2147210430806927,\n  \"motor_feedback_max_tendon_tension_n\": 300.22678346594756,\n  \"motor_feedback_max_hand_iq_a\": 0.19684002625346775,\n  \"motor_feedback_max_hand_tendon_tension_n\": 19.412892274541793,\n  \"motor_feedback_slow_lift_pair_tension_mean_n\": 8.701958002974862,\n  \"motor_feedback_hold_pair_tension_mean_n\": 5.717026200908879,\n  \"motor_feedback_saturation_trial_fraction\": 0.0,\n  \"force_feedback_gate_enabled\": false,\n  \"force_feedback_lift_low_force_samples_total\": 0,\n  \"force_feedback_lift_wait_steps_total\": 0\n}\nSaved report: D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_12_autotune_batch2_lift_ls460_seed20265613_lift_ls460_report.md\nSaved metadata: D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_12_autotune_batch2_lift_ls460_seed20265613_lift_ls460.json\n",
+      "stderr_tail": "",
+      "summary": {
+        "trials": 50,
+        "success_count": 47,
+        "contact_gate_success_count": 48,
+        "lift_success_count": 47,
+        "true_pinch_success_count": 47,
+        "release_success_count": 49,
+        "terminal_reason_counts": {
+          "success_event_contact_gated_true_pinch_release_ball": 47,
+          "contact_gate_failed": 2,
+          "lift_gate_failed": 1
+        },
+        "success_hold_lift_mean_m": 0.11504041015425759,
+        "success_hold_lift_min_m": 0.11341096427386874,
+        "success_hold_lift_max_m": 0.11617105480275723,
+        "motor_feedback_enabled": true,
+        "motor_feedback_max_iq_a": 3.2147210430806927,
+        "motor_feedback_max_tendon_tension_n": 300.22678346594756,
+        "motor_feedback_max_hand_iq_a": 0.19684002625346775,
+        "motor_feedback_max_hand_tendon_tension_n": 19.412892274541793,
+        "motor_feedback_slow_lift_pair_tension_mean_n": 8.701958002974862,
+        "motor_feedback_hold_pair_tension_mean_n": 5.717026200908879,
+        "motor_feedback_saturation_trial_fraction": 0.0,
+        "force_feedback_gate_enabled": false,
+        "force_feedback_lift_low_force_samples_total": 0,
+        "force_feedback_lift_wait_steps_total": 0
+      },
+      "score": [
+        47.0,
+        47.0,
+        47.0,
+        48.0,
+        49.0,
+        0.94,
+        -0.0,
+        -0.08307692307692309,
+        -0.003,
+        -0.0
+      ],
+      "morphology": {
+        "hold_true_two_tip_mean": 0.94,
+        "hold_wrap_fraction_mean": 0.0,
+        "hold_non_tip_ratio_mean": 0.08307692307692309,
+        "hold_floor_contact_mean": 0.003,
+        "max_penetration_m_max": 0.005412689272363484
+      }
+    }
+  ],
+  "summary_csv": "simulations\\models\\arm_hand_stage1_export\\data\\stage3_12_autotune_batch2_lift_ls460_seed20265613_summary_v0.csv",
+  "report": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_12_autotune_batch2_lift_ls460_seed20265613_v0_report.md",
+  "metadata": "simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_12_autotune_batch2_lift_ls460_seed20265613_v0.json"
+}

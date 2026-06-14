@@ -1,0 +1,3 @@
+stage,rank,variant,family,candidate,success,trials,contact,lift,true_pinch,release,residual_events,hold_true_tip,hold_non_tip,hold_wrap,terminal_reasons,decision
+validation,1,di_directional_gx_clamp_m0025_p0000,vision_directional_teacher,baseline_di,45,50,47,45,45,49,0,0.9,0.061025641025641036,0.0,"{""success_event_contact_gated_true_pinch_release_ball"": 45, ""lift_gate_failed"": 2, ""contact_gate_failed"": 3}",advance_candidate
+validation,2,baseline_di_off,anchor,baseline_di,44,50,47,44,44,50,0,0.88,0.07794871794871795,0.0,"{""success_event_contact_gated_true_pinch_release_ball"": 44, ""lift_gate_failed"": 3, ""contact_gate_failed"": 3}",frozen_anchor

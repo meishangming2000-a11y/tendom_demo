@@ -1,0 +1,62 @@
+{
+  "selected_case": {
+    "name": "s311dc_thumb_middle_gxm0p0006_gzp0p0020_sep0p060_tmcpp0p300_aabdm0p500_apipm0p700",
+    "candidate": {
+      "name": "s311dc_thumb_middle_gxm0p0006_gzp0p0020_sep0p060_tmcpp0p300_aabdm0p500_apipm0p700",
+      "active_finger": "middle",
+      "thumb_cmc_abd": -0.35,
+      "thumb_cmc": 0.02,
+      "thumb_mcp": 0.3,
+      "thumb_ip": -0.32,
+      "active_mcp_flex": -0.04,
+      "active_mcp_abd": -0.5,
+      "active_pip": -0.7,
+      "active_dip": -0.315,
+      "inactive_scale": 0.0,
+      "tip_sliding_mu": 2.8,
+      "non_tip_sliding_mu": 0.1,
+      "ball_sliding_mu": 1.35,
+      "lift_j2": -0.95,
+      "lift_steps": 520
+    },
+    "tip_pair_separation_target": 0.06,
+    "grasp_offset_x": -0.0006,
+    "grasp_offset_y": 0.0,
+    "grasp_offset_z": 0.002,
+    "ball_radius": 0.018,
+    "ball_mass": 0.01,
+    "ball_offset_x": 0.0,
+    "ball_offset_y": 0.0,
+    "ball_offset_z": 0.0,
+    "hold_steps": 100,
+    "min_lift_height": 0.1
+  },
+  "selected_final_summary": {
+    "trials": 6,
+    "success_count": 2,
+    "contact_gate_success_count": 6,
+    "lift_success_count": 2,
+    "true_pinch_success_count": 2,
+    "release_success_count": 6,
+    "terminal_reason_counts": {
+      "lift_gate_failed": 4,
+      "success_event_contact_gated_true_pinch_release_ball": 2
+    },
+    "success_hold_lift_mean_m": 0.11260074787949571,
+    "success_hold_lift_min_m": 0.11242453667699145,
+    "success_hold_lift_max_m": 0.11277695908199997,
+    "motor_feedback_enabled": true,
+    "motor_feedback_max_iq_a": 3.055900950371601,
+    "motor_feedback_max_tendon_tension_n": 287.9887360791393,
+    "motor_feedback_max_hand_iq_a": 0.19380200338256748,
+    "motor_feedback_max_hand_tendon_tension_n": 19.12579911324172,
+    "motor_feedback_slow_lift_pair_tension_mean_n": 6.260018766727274,
+    "motor_feedback_hold_pair_tension_mean_n": 2.840192834658063,
+    "motor_feedback_saturation_trial_fraction": 0.0,
+    "force_feedback_gate_enabled": false,
+    "force_feedback_lift_low_force_samples_total": 0,
+    "force_feedback_lift_wait_steps_total": 0
+  },
+  "source_metadata": "simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11d_c_geometry_force_refine_smoke_v0.json",
+  "contact_sheet": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_c_geometry_force_refine_smoke_vis\\s311dc_thumb_middle_gxm0p0006_gzp0p0020_sep0p060_tmcpp0p300_aabdm0p500_apipm0p700_contact_sheet.png"
+}

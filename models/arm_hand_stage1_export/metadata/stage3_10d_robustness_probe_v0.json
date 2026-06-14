@@ -1,0 +1,384 @@
+{
+  "generated_at": "2026-06-08T17:45:46",
+  "status": "PASS",
+  "total_episodes": 40,
+  "total_success": 40,
+  "episodes_per_skill": 5,
+  "aggregate_existing_probes": true,
+  "cases": [
+    {
+      "case_id": "pose008",
+      "title_zh": "8mm 随机位姿噪声 + 视觉/触觉终验",
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_10d_probe_pose008_cycle10.json",
+      "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_10d_probe_pose008_cycle10_report.md",
+      "returncode": null,
+      "random_offset_std": 0.008,
+      "final_verification_mode": "vision_tactile_corroborated",
+      "status": "PASS",
+      "episodes": 10,
+      "success_count": 10,
+      "terminal_reason_counts": {
+        "success_gentle_grasp_hold": 5,
+        "success_vision_confirmed_pinch_lift_hold": 5
+      },
+      "failure_reason_counts": {},
+      "risk_flag_counts": {
+        "early_contact_in_approach": 10,
+        "transient_or_hold_slip": 5,
+        "recovery_budget_exhausted": 4,
+        "transient_slip_high": 5
+      },
+      "by_skill": {
+        "full_hand_gentle_grasp": {
+          "episodes": 5,
+          "success_count": 5,
+          "terminal_reason_counts": {
+            "success_gentle_grasp_hold": 5
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 5,
+            "transient_or_hold_slip": 5,
+            "recovery_budget_exhausted": 4
+          },
+          "final_lift_height_m_mean": 0.10111954640644157,
+          "final_lift_height_m_min": 0.09379052174056954,
+          "final_lift_height_m_max": 0.10600356788009736,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.20368186161115398,
+          "hold_max_slip_score_min": 0.08020796371125491,
+          "hold_max_slip_score_max": 0.33589164209137856,
+          "max_slip_score_mean": 0.5748943495391174,
+          "max_slip_score_min": 0.4260467249662805,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.09179696485876258,
+          "max_crush_risk_min": 0.07748342260632994,
+          "max_crush_risk_max": 0.11191534309485543,
+          "max_penetration_m_mean": 0.001835939297175252,
+          "max_penetration_m_min": 0.0015496684521265989,
+          "max_penetration_m_max": 0.0022383068618971086
+        },
+        "thumb_index_middle_pinch": {
+          "episodes": 5,
+          "success_count": 5,
+          "terminal_reason_counts": {
+            "success_vision_confirmed_pinch_lift_hold": 5
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 5,
+            "transient_slip_high": 5
+          },
+          "true_lift_height_m_mean": 0.10123272320329738,
+          "true_lift_height_m_min": 0.08795591450518853,
+          "true_lift_height_m_max": 0.10905797446604301,
+          "vision_lift_height_m_mean": 0.1037813433922562,
+          "vision_lift_height_m_min": 0.08202768940616631,
+          "vision_lift_height_m_max": 0.11981517966649649,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_pinch_fraction_mean": 0.9734285714285715,
+          "hold_pinch_fraction_min": 0.8671428571428571,
+          "hold_pinch_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.20454215978659201,
+          "hold_max_slip_score_min": 0.10984808471861693,
+          "hold_max_slip_score_max": 0.2862824239964895,
+          "max_slip_score_mean": 0.9976736434741185,
+          "max_slip_score_min": 0.9883682173705924,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.15941332806577227,
+          "max_crush_risk_min": 0.13024055924269265,
+          "max_crush_risk_max": 0.1908005760118075,
+          "max_penetration_m_mean": 0.003188266561315445,
+          "max_penetration_m_min": 0.002604811184853853,
+          "max_penetration_m_max": 0.00381601152023615
+        }
+      }
+    },
+    {
+      "case_id": "pose010",
+      "title_zh": "10mm 随机位姿噪声 + 视觉/触觉终验",
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_10d_probe_pose010_cycle10.json",
+      "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_10d_probe_pose010_cycle10_report.md",
+      "returncode": null,
+      "random_offset_std": 0.01,
+      "final_verification_mode": "vision_tactile_corroborated",
+      "status": "PASS",
+      "episodes": 10,
+      "success_count": 10,
+      "terminal_reason_counts": {
+        "success_gentle_grasp_hold": 5,
+        "success_vision_confirmed_pinch_lift_hold": 5
+      },
+      "failure_reason_counts": {},
+      "risk_flag_counts": {
+        "early_contact_in_approach": 10,
+        "transient_or_hold_slip": 5,
+        "recovery_budget_exhausted": 3,
+        "transient_slip_high": 5
+      },
+      "by_skill": {
+        "full_hand_gentle_grasp": {
+          "episodes": 5,
+          "success_count": 5,
+          "terminal_reason_counts": {
+            "success_gentle_grasp_hold": 5
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 5,
+            "transient_or_hold_slip": 5,
+            "recovery_budget_exhausted": 3
+          },
+          "final_lift_height_m_mean": 0.10104860884982388,
+          "final_lift_height_m_min": 0.09402296190321774,
+          "final_lift_height_m_max": 0.10877498794208412,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.16776036659960486,
+          "hold_max_slip_score_min": 0.06590313405096943,
+          "hold_max_slip_score_max": 0.23977431879988922,
+          "max_slip_score_mean": 0.6133415060950158,
+          "max_slip_score_min": 0.4427009756999381,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.08897327581764536,
+          "max_crush_risk_min": 0.07596086048868599,
+          "max_crush_risk_max": 0.09967917875471868,
+          "max_penetration_m_mean": 0.0017794655163529075,
+          "max_penetration_m_min": 0.0015192172097737197,
+          "max_penetration_m_max": 0.0019935835750943738
+        },
+        "thumb_index_middle_pinch": {
+          "episodes": 5,
+          "success_count": 5,
+          "terminal_reason_counts": {
+            "success_vision_confirmed_pinch_lift_hold": 5
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 5,
+            "transient_slip_high": 5
+          },
+          "true_lift_height_m_mean": 0.10478408445689687,
+          "true_lift_height_m_min": 0.10066723835769867,
+          "true_lift_height_m_max": 0.10988921439356429,
+          "vision_lift_height_m_mean": 0.11118735122416164,
+          "vision_lift_height_m_min": 0.10426113517596615,
+          "vision_lift_height_m_max": 0.12060915281583544,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_pinch_fraction_mean": 1.0,
+          "hold_pinch_fraction_min": 1.0,
+          "hold_pinch_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.1825609567707442,
+          "hold_max_slip_score_min": 0.1609429044864532,
+          "hold_max_slip_score_max": 0.20123577639109616,
+          "max_slip_score_mean": 1.0,
+          "max_slip_score_min": 1.0,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.15498581286528346,
+          "max_crush_risk_min": 0.14511899715866022,
+          "max_crush_risk_max": 0.17057424974334456,
+          "max_penetration_m_mean": 0.0030997162573056696,
+          "max_penetration_m_min": 0.0029023799431732045,
+          "max_penetration_m_max": 0.0034114849948668913
+        }
+      }
+    },
+    {
+      "case_id": "strictvision_pose005",
+      "title_zh": "5mm 随机位姿噪声 + 严格最终视觉验收",
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_10d_probe_strictvision_pose005_cycle10.json",
+      "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_10d_probe_strictvision_pose005_cycle10_report.md",
+      "returncode": null,
+      "random_offset_std": 0.005,
+      "final_verification_mode": "strict_vision",
+      "status": "PASS",
+      "episodes": 10,
+      "success_count": 10,
+      "terminal_reason_counts": {
+        "success_gentle_grasp_hold": 5,
+        "success_vision_confirmed_pinch_lift_hold": 5
+      },
+      "failure_reason_counts": {},
+      "risk_flag_counts": {
+        "early_contact_in_approach": 10,
+        "transient_or_hold_slip": 4,
+        "recovery_budget_exhausted": 2,
+        "transient_slip_high": 5
+      },
+      "by_skill": {
+        "full_hand_gentle_grasp": {
+          "episodes": 5,
+          "success_count": 5,
+          "terminal_reason_counts": {
+            "success_gentle_grasp_hold": 5
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 5,
+            "transient_or_hold_slip": 4,
+            "recovery_budget_exhausted": 2
+          },
+          "final_lift_height_m_mean": 0.10150709143730526,
+          "final_lift_height_m_min": 0.09364121050823448,
+          "final_lift_height_m_max": 0.10990165393143866,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.19134879311762767,
+          "hold_max_slip_score_min": 0.15622821098197762,
+          "hold_max_slip_score_max": 0.2675418810686824,
+          "max_slip_score_mean": 0.5450929823584414,
+          "max_slip_score_min": 0.2982287173067843,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.08717641033814504,
+          "max_crush_risk_min": 0.07194829990301672,
+          "max_crush_risk_max": 0.10258601740793802,
+          "max_penetration_m_mean": 0.0017435282067629007,
+          "max_penetration_m_min": 0.0014389659980603344,
+          "max_penetration_m_max": 0.0020517203481587604
+        },
+        "thumb_index_middle_pinch": {
+          "episodes": 5,
+          "success_count": 5,
+          "terminal_reason_counts": {
+            "success_vision_confirmed_pinch_lift_hold": 5
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 5,
+            "transient_slip_high": 5
+          },
+          "true_lift_height_m_mean": 0.1034465111605459,
+          "true_lift_height_m_min": 0.09365714695766868,
+          "true_lift_height_m_max": 0.11119727523503581,
+          "vision_lift_height_m_mean": 0.11031607781627348,
+          "vision_lift_height_m_min": 0.10113794403637262,
+          "vision_lift_height_m_max": 0.12547480615278114,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_pinch_fraction_mean": 1.0,
+          "hold_pinch_fraction_min": 1.0,
+          "hold_pinch_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.17209183173704928,
+          "hold_max_slip_score_min": 0.10663830125385852,
+          "hold_max_slip_score_max": 0.23782561659622575,
+          "max_slip_score_mean": 0.9936425355577079,
+          "max_slip_score_min": 0.9682126777885398,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.15667425983340846,
+          "max_crush_risk_min": 0.13209364004349491,
+          "max_crush_risk_max": 0.1737417017965569,
+          "max_penetration_m_mean": 0.003133485196668169,
+          "max_penetration_m_min": 0.002641872800869898,
+          "max_penetration_m_max": 0.0034748340359311383
+        }
+      }
+    },
+    {
+      "case_id": "strictvision_pose008",
+      "title_zh": "8mm 随机位姿噪声 + 严格最终视觉验收",
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_10d_probe_strictvision_pose008_cycle10.json",
+      "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_10d_probe_strictvision_pose008_cycle10_report.md",
+      "returncode": null,
+      "random_offset_std": 0.008,
+      "final_verification_mode": "strict_vision",
+      "status": "PASS",
+      "episodes": 10,
+      "success_count": 10,
+      "terminal_reason_counts": {
+        "success_gentle_grasp_hold": 5,
+        "success_vision_confirmed_pinch_lift_hold": 5
+      },
+      "failure_reason_counts": {},
+      "risk_flag_counts": {
+        "early_contact_in_approach": 10,
+        "transient_or_hold_slip": 5,
+        "recovery_budget_exhausted": 4,
+        "transient_slip_high": 5
+      },
+      "by_skill": {
+        "full_hand_gentle_grasp": {
+          "episodes": 5,
+          "success_count": 5,
+          "terminal_reason_counts": {
+            "success_gentle_grasp_hold": 5
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 5,
+            "transient_or_hold_slip": 5,
+            "recovery_budget_exhausted": 4
+          },
+          "final_lift_height_m_mean": 0.10111954640644157,
+          "final_lift_height_m_min": 0.09379052174056954,
+          "final_lift_height_m_max": 0.10600356788009736,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.20368186161115398,
+          "hold_max_slip_score_min": 0.08020796371125491,
+          "hold_max_slip_score_max": 0.33589164209137856,
+          "max_slip_score_mean": 0.5748943495391174,
+          "max_slip_score_min": 0.4260467249662805,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.09179696485876258,
+          "max_crush_risk_min": 0.07748342260632994,
+          "max_crush_risk_max": 0.11191534309485543,
+          "max_penetration_m_mean": 0.001835939297175252,
+          "max_penetration_m_min": 0.0015496684521265989,
+          "max_penetration_m_max": 0.0022383068618971086
+        },
+        "thumb_index_middle_pinch": {
+          "episodes": 5,
+          "success_count": 5,
+          "terminal_reason_counts": {
+            "success_vision_confirmed_pinch_lift_hold": 5
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 5,
+            "transient_slip_high": 5
+          },
+          "true_lift_height_m_mean": 0.10123272320329738,
+          "true_lift_height_m_min": 0.08795591450518853,
+          "true_lift_height_m_max": 0.10905797446604301,
+          "vision_lift_height_m_mean": 0.1037813433922562,
+          "vision_lift_height_m_min": 0.08202768940616631,
+          "vision_lift_height_m_max": 0.11981517966649649,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_pinch_fraction_mean": 0.9734285714285715,
+          "hold_pinch_fraction_min": 0.8671428571428571,
+          "hold_pinch_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.20454215978659201,
+          "hold_max_slip_score_min": 0.10984808471861693,
+          "hold_max_slip_score_max": 0.2862824239964895,
+          "max_slip_score_mean": 0.9976736434741185,
+          "max_slip_score_min": 0.9883682173705924,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.15941332806577227,
+          "max_crush_risk_min": 0.13024055924269265,
+          "max_crush_risk_max": 0.1908005760118075,
+          "max_penetration_m_mean": 0.003188266561315445,
+          "max_penetration_m_min": 0.002604811184853853,
+          "max_penetration_m_max": 0.00381601152023615
+        }
+      }
+    }
+  ],
+  "boundary": {
+    "full_action_act_dp_promoted": false,
+    "hardware_integration": false,
+    "real_camera": false
+  },
+  "next": "Stage3.10D-B formal expanded benchmark plus explicit occlusion/noisy-mask injection."
+}

@@ -1,10 +1,18 @@
 {
-  "generated_at": "2026-06-07T21:15:26",
+  "generated_at": "2026-06-11T01:46:22",
   "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_lift_ball_demo.xml",
   "mode": "pure_physics",
   "status": "PASS",
   "training_used": false,
   "video": null,
+  "playback": {
+    "video_fps": 30,
+    "video_speed": 1.0,
+    "capture_every": 17,
+    "viewer_speed": 2.0,
+    "viewer_sync_fps": 30,
+    "viewer_sync_every": 33
+  },
   "screenshots": {
     "default_hold": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_lift_from_default\\00_default_hold.png",
     "move_to_pre_approach": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_arm_hand_lift_from_default\\01_move_to_pre_approach.png",

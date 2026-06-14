@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-06-12",
+  "stage": "Stage3.11D-B",
+  "boundary": {
+    "mujoco_only": true,
+    "real_hardware_integrated": false,
+    "real_camera_integrated": false,
+    "real_tactile_integrated": false,
+    "demo_gallery_promoted": false,
+    "full_action_act_dp_promoted": false
+  },
+  "code_changes": [
+    {
+      "path": "simulations/models/arm_hand_stage1_export/train_stage3_11d_b_event_contact_gated_refine_v0.py",
+      "summary": "Added grasp_offset_x_values / grasp_offset_y_values search support and more precise small-offset naming."
+    },
+    {
+      "path": "simulations/models/arm_hand_stage1_export/run_stage3_11d_b_event_contact_gated_robustness_v0.py",
+      "summary": "Added absolute override flags for candidate/case parameters so local candidates can be robustness-tested without manual selected JSON edits."
+    }
+  ],
+  "local_refine": {
+    "report": "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_refine_gxm0008_local_v0_report.md",
+    "metadata": "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_gxm0008_local_v0.json",
+    "episodes": 80,
+    "success_count": 52,
+    "terminal_reason_counts": {
+      "success_event_contact_gated_true_pinch_release_ball": 52,
+      "contact_gate_failed": 28
+    },
+    "nominal_selected_randomized_50_success_count": 15,
+    "conclusion": "Nominal score overfit the center pose; randomized robustness rejected the selected local hand-geometry candidate."
+  },
+  "candidate_24_trial_probes": [
+    {
+      "name": "active_abd_minus_0p48_gx_minus_0p0010_gz_0p0020",
+      "success_count": 14,
+      "trials": 24
+    },
+    {
+      "name": "active_abd_minus_0p46_gx_minus_0p0008_gz_0p0015",
+      "success_count": 7,
+      "trials": 24
+    },
+    {
+      "name": "thumb_abd_minus_0p33_active_abd_minus_0p46_gx_minus_0p0008_gz_0p0020",
+      "success_count": 12,
+      "trials": 24
+    },
+    {
+      "name": "active_abd_minus_0p48_gx_minus_0p0008_gz_0p0020",
+      "success_count": 15,
+      "trials": 24
+    },
+    {
+      "name": "base_hand_gx_minus_0p0008_lift_j2_minus_0p93",
+      "success_count": 17,
+      "trials": 24
+    },
+    {
+      "name": "base_hand_gx_minus_0p0008_lift_j2_minus_0p91",
+      "success_count": 17,
+      "trials": 24
+    },
+    {
+      "name": "base_hand_gx_minus_0p0008_lift_steps_480",
+      "success_count": 17,
+      "trials": 24
+    },
+    {
+      "name": "base_hand_gx_minus_0p0008_lift_j2_minus_0p91_lift_steps_480",
+      "success_count": 17,
+      "trials": 24,
+      "note": "Had one true-pinch morphology failure, so it was not selected."
+    }
+  ],
+  "current_best": {
+    "name": "base_hand_gx_minus_0p0008_lift_steps_480",
+    "selected": "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_gxm0008_ls480_selected_v0.json",
+    "report": "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_50_gxm0008_ls480_v0_report.md",
+    "metadata": "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_50_gxm0008_ls480_v0.json",
+    "trials": 50,
+    "success_count": 36,
+    "contact_gate_success_count": 47,
+    "lift_success_count": 36,
+    "true_pinch_success_count": 36,
+    "release_success_count": 49,
+    "terminal_reason_counts": {
+      "contact_gate_failed": 3,
+      "success_event_contact_gated_true_pinch_release_ball": 36,
+      "lift_gate_failed": 11
+    },
+    "success_hold_lift_mean_m": 0.11471263427443838,
+    "success_hold_lift_max_m": 0.11729343461474821,
+    "motor_feedback_slow_lift_pair_tension_mean_n": 7.523549770855369,
+    "motor_feedback_hold_pair_tension_mean_n": 4.318803923529546,
+    "motor_feedback_saturation_trial_fraction": 0.0
+  },
+  "previous_references": {
+    "50_trial_baseline_success_count": 29,
+    "50_trial_gx_minus_0p0008_success_count": 34
+  },
+  "interpretation": "The robust improvement came from lift timing, not local hand-geometry changes. Keep original hand geometry, gx -0.0008, and use lift_steps 480 as the next diagnostic search center.",
+  "next_actions": [
+    "Sweep lift_steps 440/460/480/500 and lift_j2 -0.95/-0.93/-0.91 with robustness-aware selection.",
+    "Add close-up/multiview visual evidence for the current selected candidate.",
+    "Use active-pair force feedback to label lift failures and design residual micro-adjusts.",
+    "Do not promote to demo gallery or robust baseline yet."
+  ]
+}

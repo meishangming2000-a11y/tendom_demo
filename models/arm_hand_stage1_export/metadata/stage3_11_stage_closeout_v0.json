@@ -1,0 +1,81 @@
+{
+  "generated": "2026-06-13",
+  "stage": "Stage3.11",
+  "status": "closed",
+  "decision": "Close Stage3.11 and stop open-ended small-ball pinch micro-optimization.",
+  "baseline_after_closeout": {
+    "robust_mujoco_control_baseline": "Stage3.10E mixed-control safety baseline",
+    "diagnostic_demo_candidate": "Stage3.11D-I small-ball true-pinch-release",
+    "full_action_promotion": false,
+    "hardware_runtime_promotion": false,
+    "direct_force_control_promotion": false
+  },
+  "accepted_outputs": {
+    "stage3_11b": {
+      "type": "online safety-head shadow evaluator",
+      "status": "accepted_shadow_only",
+      "summary": "D-B v1 100/100, stress 13/14, unsafe hold-safe prediction 0"
+    },
+    "stage3_11c": {
+      "type": "frame-level safety labels",
+      "status": "accepted_dataset",
+      "episodes": 164,
+      "trace_frames": 2663,
+      "label_dim": 17
+    },
+    "stage3_11d_d": {
+      "type": "dense sensor-fusion capture and LiftQualityHead",
+      "status": "accepted_shadow_quality_signal",
+      "episodes": 200,
+      "rows": 329075,
+      "grasp_evidence_rows": 112875
+    },
+    "stage3_11d_i": {
+      "type": "demo-quality small-ball true-pinch-release diagnostic candidate",
+      "status": "frozen_diagnostic_candidate",
+      "success_total": 136,
+      "trial_total": 150,
+      "contact_total": 143,
+      "lift_total": 136,
+      "true_pinch_total": 136,
+      "release_total": 149,
+      "parameters": {
+        "grasp_offset_x_m": -0.0014,
+        "grasp_offset_z_m": 0.0022,
+        "lift_steps": 480,
+        "tip_pair_separation_m": 0.06,
+        "active_finger": "middle"
+      },
+      "visual_check": {
+        "regions": "middle,thumb",
+        "true2tip": true,
+        "tip": 1.0,
+        "non_tip": 0.0,
+        "wrap": false
+      }
+    }
+  },
+  "rejected_or_deferred": [
+    "unconditional bounded residual micro-adjust",
+    "direct preload force control",
+    "continued D-I parameter search without a new gate"
+  ],
+  "backlog": [
+    "D-I thumb-side viewer/demo alias",
+    "contact-conditioned repair for remaining D-I contact/lift failures",
+    "force-feedback labels for future residual-policy training",
+    "fingertip proxy geometry if future hardware contact evidence requires it"
+  ],
+  "next_mainline_options": [
+    "Stage4/readiness motor-force-feedback and sensor data contract",
+    "real-to-sim mapping from simulated force/tactile labels to hardware signals",
+    "bounded sensor-conditioned residual policy with explicit promotion gates"
+  ],
+  "source_documents": [
+    "simulations/models/arm_hand_stage1_export/docs/stage3_11_online_safety_and_residual_policy_plan.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_11b_online_safety_head_shadow_v0_closeout.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_11c_frame_safety_labels_v0_closeout.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_11d_d_dense_sensor_fusion_lift_quality_v0_closeout.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_11d_i_demo_quality_static_geometry_v0_closeout.md"
+  ]
+}

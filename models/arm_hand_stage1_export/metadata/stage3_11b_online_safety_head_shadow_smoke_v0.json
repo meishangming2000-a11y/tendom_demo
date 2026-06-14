@@ -1,0 +1,1200 @@
+{
+  "generated_at": "2026-06-09T14:00:06",
+  "stage": "Stage3.11B",
+  "status": "PASS",
+  "head": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\stage3_10d_c_occlusion_safety_head_v0.npz",
+  "shadow_threshold": 0.5,
+  "mode": "online_evaluator_shadow_no_action_effect",
+  "db_v1_summary": {
+    "episodes": 10,
+    "success_count": 10,
+    "shadow_records": 10,
+    "false_failure_on_hold_safe": 0,
+    "missed_failure_or_blocked": 0,
+    "unsafe_predicted_hold_safe": 0,
+    "unsafe_hold_safe_prediction": 0,
+    "missed_tactile_handoff": 0,
+    "total_label_mismatches": 0,
+    "action_ok": true,
+    "shadow_ok": true
+  },
+  "stress_summary": {
+    "episodes": 6,
+    "success_count": 5,
+    "shadow_records": 6,
+    "false_failure_on_hold_safe": 0,
+    "missed_failure_or_blocked": 0,
+    "unsafe_predicted_hold_safe": 0,
+    "unsafe_hold_safe_prediction": 0,
+    "missed_tactile_handoff": 0,
+    "total_label_mismatches": 2,
+    "action_ok": true,
+    "shadow_ok": true
+  },
+  "cases": [
+    {
+      "suite": "db_v1",
+      "case_id": "pose008_strictvision",
+      "title_zh": "8mm 位姿噪声 + 严格最终视觉",
+      "status": "PASS",
+      "episodes": 2,
+      "success_count": 2,
+      "returncode": null,
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_dbv1_pose008_strictvision_cycle2.json",
+      "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11b_shadow_dbv1_pose008_strictvision_cycle2_report.md",
+      "expected_boundary": false,
+      "terminal_reason_counts": {
+        "success_gentle_grasp_hold": 1,
+        "success_vision_confirmed_pinch_lift_hold": 1
+      },
+      "failure_reason_counts": {},
+      "risk_flag_counts": {
+        "early_contact_in_approach": 2,
+        "transient_or_hold_slip": 1,
+        "recovery_budget_exhausted": 1,
+        "transient_slip_high": 1
+      },
+      "by_skill": {
+        "full_hand_gentle_grasp": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_gentle_grasp_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_or_hold_slip": 1,
+            "recovery_budget_exhausted": 1
+          },
+          "final_lift_height_m_mean": 0.10118265594108428,
+          "final_lift_height_m_min": 0.10118265594108428,
+          "final_lift_height_m_max": 0.10118265594108428,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.33589164209137856,
+          "hold_max_slip_score_min": 0.33589164209137856,
+          "hold_max_slip_score_max": 0.33589164209137856,
+          "max_slip_score_mean": 0.49380813218035124,
+          "max_slip_score_min": 0.49380813218035124,
+          "max_slip_score_max": 0.49380813218035124,
+          "max_crush_risk_mean": 0.07748342260632994,
+          "max_crush_risk_min": 0.07748342260632994,
+          "max_crush_risk_max": 0.07748342260632994,
+          "max_penetration_m_mean": 0.0015496684521265989,
+          "max_penetration_m_min": 0.0015496684521265989,
+          "max_penetration_m_max": 0.0015496684521265989
+        },
+        "thumb_index_middle_pinch": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_vision_confirmed_pinch_lift_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_slip_high": 1
+          },
+          "true_lift_height_m_mean": 0.10295603999213879,
+          "true_lift_height_m_min": 0.10295603999213879,
+          "true_lift_height_m_max": 0.10295603999213879,
+          "vision_lift_height_m_mean": 0.10886115020044429,
+          "vision_lift_height_m_min": 0.10886115020044429,
+          "vision_lift_height_m_max": 0.10886115020044429,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_pinch_fraction_mean": 1.0,
+          "hold_pinch_fraction_min": 1.0,
+          "hold_pinch_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.16914171463363986,
+          "hold_max_slip_score_min": 0.16914171463363986,
+          "hold_max_slip_score_max": 0.16914171463363986,
+          "max_slip_score_mean": 1.0,
+          "max_slip_score_min": 1.0,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.15294683936784387,
+          "max_crush_risk_min": 0.15294683936784387,
+          "max_crush_risk_max": 0.15294683936784387,
+          "max_penetration_m_mean": 0.0030589367873568776,
+          "max_penetration_m_min": 0.0030589367873568776,
+          "max_penetration_m_max": 0.0030589367873568776
+        }
+      },
+      "shadow": {
+        "enabled": true,
+        "mode": "shadow_only_no_action_effect",
+        "records": 2,
+        "false_failure_on_hold_safe": 0,
+        "missed_failure_or_blocked": 0,
+        "unsafe_predicted_hold_safe": 0,
+        "unsafe_hold_safe_prediction": 0,
+        "missed_tactile_handoff": 0,
+        "total_label_mismatches": 0,
+        "per_label": {
+          "initial_quality_adapter_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "final_tactile_handoff_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "final_occlusion_aware_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "pinch_repair_required_or_active": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "strict_final_vision_safe": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "hold_safe": {
+            "truth_positive": 2,
+            "predicted_positive": 2,
+            "mismatch": 0
+          },
+          "failure_or_blocked": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "floor_or_hold_failure": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          }
+        }
+      },
+      "mismatch_label_counts": {},
+      "mismatch_examples": []
+    },
+    {
+      "suite": "db_v1",
+      "case_id": "pose010_corroborated",
+      "title_zh": "10mm 位姿噪声 + 视觉/触觉终验",
+      "status": "PASS",
+      "episodes": 2,
+      "success_count": 2,
+      "returncode": null,
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_dbv1_pose010_corroborated_cycle2.json",
+      "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11b_shadow_dbv1_pose010_corroborated_cycle2_report.md",
+      "expected_boundary": false,
+      "terminal_reason_counts": {
+        "success_gentle_grasp_hold": 1,
+        "success_vision_confirmed_pinch_lift_hold": 1
+      },
+      "failure_reason_counts": {},
+      "risk_flag_counts": {
+        "early_contact_in_approach": 2,
+        "transient_or_hold_slip": 1,
+        "recovery_budget_exhausted": 1,
+        "transient_slip_high": 1
+      },
+      "by_skill": {
+        "full_hand_gentle_grasp": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_gentle_grasp_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_or_hold_slip": 1,
+            "recovery_budget_exhausted": 1
+          },
+          "final_lift_height_m_mean": 0.09668546024705366,
+          "final_lift_height_m_min": 0.09668546024705366,
+          "final_lift_height_m_max": 0.09668546024705366,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.19264166139223626,
+          "hold_max_slip_score_min": 0.19264166139223626,
+          "hold_max_slip_score_max": 0.19264166139223626,
+          "max_slip_score_mean": 0.4427009756999381,
+          "max_slip_score_min": 0.4427009756999381,
+          "max_slip_score_max": 0.4427009756999381,
+          "max_crush_risk_mean": 0.08163376700479011,
+          "max_crush_risk_min": 0.08163376700479011,
+          "max_crush_risk_max": 0.08163376700479011,
+          "max_penetration_m_mean": 0.0016326753400958023,
+          "max_penetration_m_min": 0.0016326753400958023,
+          "max_penetration_m_max": 0.0016326753400958023
+        },
+        "thumb_index_middle_pinch": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_vision_confirmed_pinch_lift_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_slip_high": 1
+          },
+          "true_lift_height_m_mean": 0.10019229895289597,
+          "true_lift_height_m_min": 0.10019229895289597,
+          "true_lift_height_m_max": 0.10019229895289597,
+          "vision_lift_height_m_mean": 0.1066453356416287,
+          "vision_lift_height_m_min": 0.1066453356416287,
+          "vision_lift_height_m_max": 0.1066453356416287,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_pinch_fraction_mean": 1.0,
+          "hold_pinch_fraction_min": 1.0,
+          "hold_pinch_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.23333176194298968,
+          "hold_max_slip_score_min": 0.23333176194298968,
+          "hold_max_slip_score_max": 0.23333176194298968,
+          "max_slip_score_mean": 1.0,
+          "max_slip_score_min": 1.0,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.1575488130718156,
+          "max_crush_risk_min": 0.1575488130718156,
+          "max_crush_risk_max": 0.1575488130718156,
+          "max_penetration_m_mean": 0.0031509762614363116,
+          "max_penetration_m_min": 0.0031509762614363116,
+          "max_penetration_m_max": 0.0031509762614363116
+        }
+      },
+      "shadow": {
+        "enabled": true,
+        "mode": "shadow_only_no_action_effect",
+        "records": 2,
+        "false_failure_on_hold_safe": 0,
+        "missed_failure_or_blocked": 0,
+        "unsafe_predicted_hold_safe": 0,
+        "unsafe_hold_safe_prediction": 0,
+        "missed_tactile_handoff": 0,
+        "total_label_mismatches": 0,
+        "per_label": {
+          "initial_quality_adapter_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "final_tactile_handoff_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "final_occlusion_aware_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "pinch_repair_required_or_active": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "strict_final_vision_safe": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "hold_safe": {
+            "truth_positive": 2,
+            "predicted_positive": 2,
+            "mismatch": 0
+          },
+          "failure_or_blocked": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "floor_or_hold_failure": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          }
+        }
+      },
+      "mismatch_label_counts": {},
+      "mismatch_examples": []
+    },
+    {
+      "suite": "db_v1",
+      "case_id": "initial_maskdrop30_pose005",
+      "title_zh": "初始视觉 mask dropout 30% + 5mm 位姿噪声",
+      "status": "PASS",
+      "episodes": 2,
+      "success_count": 2,
+      "returncode": null,
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_dbv1_initial_maskdrop30_pose005_cycle2.json",
+      "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11b_shadow_dbv1_initial_maskdrop30_pose005_cycle2_report.md",
+      "expected_boundary": false,
+      "terminal_reason_counts": {
+        "success_gentle_grasp_hold": 1,
+        "success_vision_confirmed_pinch_lift_hold": 1
+      },
+      "failure_reason_counts": {},
+      "risk_flag_counts": {
+        "early_contact_in_approach": 2,
+        "transient_or_hold_slip": 1,
+        "recovery_budget_exhausted": 1,
+        "transient_slip_high": 1
+      },
+      "by_skill": {
+        "full_hand_gentle_grasp": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_gentle_grasp_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_or_hold_slip": 1,
+            "recovery_budget_exhausted": 1
+          },
+          "final_lift_height_m_mean": 0.09956424633918036,
+          "final_lift_height_m_min": 0.09956424633918036,
+          "final_lift_height_m_max": 0.09956424633918036,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.16546717379252132,
+          "hold_max_slip_score_min": 0.16546717379252132,
+          "hold_max_slip_score_max": 0.16546717379252132,
+          "max_slip_score_mean": 0.45038590844290816,
+          "max_slip_score_min": 0.45038590844290816,
+          "max_slip_score_max": 0.45038590844290816,
+          "max_crush_risk_mean": 0.09023327056346232,
+          "max_crush_risk_min": 0.09023327056346232,
+          "max_crush_risk_max": 0.09023327056346232,
+          "max_penetration_m_mean": 0.0018046654112692465,
+          "max_penetration_m_min": 0.0018046654112692465,
+          "max_penetration_m_max": 0.0018046654112692465
+        },
+        "thumb_index_middle_pinch": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_vision_confirmed_pinch_lift_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_slip_high": 1
+          },
+          "true_lift_height_m_mean": 0.10422644529262393,
+          "true_lift_height_m_min": 0.10422644529262393,
+          "true_lift_height_m_max": 0.10422644529262393,
+          "vision_lift_height_m_mean": 0.10842312042165392,
+          "vision_lift_height_m_min": 0.10842312042165392,
+          "vision_lift_height_m_max": 0.10842312042165392,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_pinch_fraction_mean": 1.0,
+          "hold_pinch_fraction_min": 1.0,
+          "hold_pinch_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.14750749382004455,
+          "hold_max_slip_score_min": 0.14750749382004455,
+          "hold_max_slip_score_max": 0.14750749382004455,
+          "max_slip_score_mean": 1.0,
+          "max_slip_score_min": 1.0,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.1384101493147911,
+          "max_crush_risk_min": 0.1384101493147911,
+          "max_crush_risk_max": 0.1384101493147911,
+          "max_penetration_m_mean": 0.002768202986295822,
+          "max_penetration_m_min": 0.002768202986295822,
+          "max_penetration_m_max": 0.002768202986295822
+        }
+      },
+      "shadow": {
+        "enabled": true,
+        "mode": "shadow_only_no_action_effect",
+        "records": 2,
+        "false_failure_on_hold_safe": 0,
+        "missed_failure_or_blocked": 0,
+        "unsafe_predicted_hold_safe": 0,
+        "unsafe_hold_safe_prediction": 0,
+        "missed_tactile_handoff": 0,
+        "total_label_mismatches": 0,
+        "per_label": {
+          "initial_quality_adapter_required": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "final_tactile_handoff_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "final_occlusion_aware_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "pinch_repair_required_or_active": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "strict_final_vision_safe": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "hold_safe": {
+            "truth_positive": 2,
+            "predicted_positive": 2,
+            "mismatch": 0
+          },
+          "failure_or_blocked": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "floor_or_hold_failure": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          }
+        }
+      },
+      "mismatch_label_counts": {},
+      "mismatch_examples": []
+    },
+    {
+      "suite": "db_v1",
+      "case_id": "final_maskdrop55_occlusionaware_pose005",
+      "title_zh": "最终视觉 mask dropout 55% + occlusion-aware 融合验收",
+      "status": "PASS",
+      "episodes": 2,
+      "success_count": 2,
+      "returncode": null,
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_dbv1_final_maskdrop55_occlusionaware_pose005_cycle2.json",
+      "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11b_shadow_dbv1_final_maskdrop55_occlusionaware_pose005_cycle2_report.md",
+      "expected_boundary": false,
+      "terminal_reason_counts": {
+        "success_gentle_grasp_hold": 1,
+        "success_vision_confirmed_pinch_lift_hold": 1
+      },
+      "failure_reason_counts": {},
+      "risk_flag_counts": {
+        "early_contact_in_approach": 2,
+        "transient_or_hold_slip": 1,
+        "recovery_budget_exhausted": 1,
+        "transient_slip_high": 1
+      },
+      "by_skill": {
+        "full_hand_gentle_grasp": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_gentle_grasp_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_or_hold_slip": 1,
+            "recovery_budget_exhausted": 1
+          },
+          "final_lift_height_m_mean": 0.09956424633918036,
+          "final_lift_height_m_min": 0.09956424633918036,
+          "final_lift_height_m_max": 0.09956424633918036,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.16546717379252132,
+          "hold_max_slip_score_min": 0.16546717379252132,
+          "hold_max_slip_score_max": 0.16546717379252132,
+          "max_slip_score_mean": 0.45038590844290816,
+          "max_slip_score_min": 0.45038590844290816,
+          "max_slip_score_max": 0.45038590844290816,
+          "max_crush_risk_mean": 0.09023327056346232,
+          "max_crush_risk_min": 0.09023327056346232,
+          "max_crush_risk_max": 0.09023327056346232,
+          "max_penetration_m_mean": 0.0018046654112692465,
+          "max_penetration_m_min": 0.0018046654112692465,
+          "max_penetration_m_max": 0.0018046654112692465
+        },
+        "thumb_index_middle_pinch": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_vision_confirmed_pinch_lift_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_slip_high": 1
+          },
+          "true_lift_height_m_mean": 0.10335960766562971,
+          "true_lift_height_m_min": 0.10335960766562971,
+          "true_lift_height_m_max": 0.10335960766562971,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_pinch_fraction_mean": 1.0,
+          "hold_pinch_fraction_min": 1.0,
+          "hold_pinch_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.16015657588659155,
+          "hold_max_slip_score_min": 0.16015657588659155,
+          "hold_max_slip_score_max": 0.16015657588659155,
+          "max_slip_score_mean": 1.0,
+          "max_slip_score_min": 1.0,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.18361041667058112,
+          "max_crush_risk_min": 0.18361041667058112,
+          "max_crush_risk_max": 0.18361041667058112,
+          "max_penetration_m_mean": 0.0036722083334116227,
+          "max_penetration_m_min": 0.0036722083334116227,
+          "max_penetration_m_max": 0.0036722083334116227
+        }
+      },
+      "shadow": {
+        "enabled": true,
+        "mode": "shadow_only_no_action_effect",
+        "records": 2,
+        "false_failure_on_hold_safe": 0,
+        "missed_failure_or_blocked": 0,
+        "unsafe_predicted_hold_safe": 0,
+        "unsafe_hold_safe_prediction": 0,
+        "missed_tactile_handoff": 0,
+        "total_label_mismatches": 0,
+        "per_label": {
+          "initial_quality_adapter_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "final_tactile_handoff_required": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "final_occlusion_aware_required": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "pinch_repair_required_or_active": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "strict_final_vision_safe": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "hold_safe": {
+            "truth_positive": 2,
+            "predicted_positive": 2,
+            "mismatch": 0
+          },
+          "failure_or_blocked": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "floor_or_hold_failure": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          }
+        }
+      },
+      "mismatch_label_counts": {},
+      "mismatch_examples": []
+    },
+    {
+      "suite": "db_v1",
+      "case_id": "final_occluder45_occlusionaware_pose008",
+      "title_zh": "最终视觉 synthetic occluder 45% + occlusion-aware 融合验收",
+      "status": "PASS",
+      "episodes": 2,
+      "success_count": 2,
+      "returncode": null,
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_dbv1_final_occluder45_occlusionaware_pose008_cycle2.json",
+      "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11b_shadow_dbv1_final_occluder45_occlusionaware_pose008_cycle2_report.md",
+      "expected_boundary": false,
+      "terminal_reason_counts": {
+        "success_gentle_grasp_hold": 1,
+        "success_vision_confirmed_pinch_lift_hold": 1
+      },
+      "failure_reason_counts": {},
+      "risk_flag_counts": {
+        "early_contact_in_approach": 2,
+        "transient_or_hold_slip": 1,
+        "recovery_budget_exhausted": 1,
+        "transient_slip_high": 1
+      },
+      "by_skill": {
+        "full_hand_gentle_grasp": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_gentle_grasp_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_or_hold_slip": 1,
+            "recovery_budget_exhausted": 1
+          },
+          "final_lift_height_m_mean": 0.10118265594108428,
+          "final_lift_height_m_min": 0.10118265594108428,
+          "final_lift_height_m_max": 0.10118265594108428,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.33589164209137856,
+          "hold_max_slip_score_min": 0.33589164209137856,
+          "hold_max_slip_score_max": 0.33589164209137856,
+          "max_slip_score_mean": 0.49380813218035124,
+          "max_slip_score_min": 0.49380813218035124,
+          "max_slip_score_max": 0.49380813218035124,
+          "max_crush_risk_mean": 0.07748342260632994,
+          "max_crush_risk_min": 0.07748342260632994,
+          "max_crush_risk_max": 0.07748342260632994,
+          "max_penetration_m_mean": 0.0015496684521265989,
+          "max_penetration_m_min": 0.0015496684521265989,
+          "max_penetration_m_max": 0.0015496684521265989
+        },
+        "thumb_index_middle_pinch": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_vision_confirmed_pinch_lift_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_slip_high": 1
+          },
+          "true_lift_height_m_mean": 0.10295603999213879,
+          "true_lift_height_m_min": 0.10295603999213879,
+          "true_lift_height_m_max": 0.10295603999213879,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_pinch_fraction_mean": 1.0,
+          "hold_pinch_fraction_min": 1.0,
+          "hold_pinch_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.16914171463363986,
+          "hold_max_slip_score_min": 0.16914171463363986,
+          "hold_max_slip_score_max": 0.16914171463363986,
+          "max_slip_score_mean": 1.0,
+          "max_slip_score_min": 1.0,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.15294683936784387,
+          "max_crush_risk_min": 0.15294683936784387,
+          "max_crush_risk_max": 0.15294683936784387,
+          "max_penetration_m_mean": 0.0030589367873568776,
+          "max_penetration_m_min": 0.0030589367873568776,
+          "max_penetration_m_max": 0.0030589367873568776
+        }
+      },
+      "shadow": {
+        "enabled": true,
+        "mode": "shadow_only_no_action_effect",
+        "records": 2,
+        "false_failure_on_hold_safe": 0,
+        "missed_failure_or_blocked": 0,
+        "unsafe_predicted_hold_safe": 0,
+        "unsafe_hold_safe_prediction": 0,
+        "missed_tactile_handoff": 0,
+        "total_label_mismatches": 0,
+        "per_label": {
+          "initial_quality_adapter_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "final_tactile_handoff_required": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "final_occlusion_aware_required": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "pinch_repair_required_or_active": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "strict_final_vision_safe": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "hold_safe": {
+            "truth_positive": 2,
+            "predicted_positive": 2,
+            "mismatch": 0
+          },
+          "failure_or_blocked": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "floor_or_hold_failure": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          }
+        }
+      },
+      "mismatch_label_counts": {},
+      "mismatch_examples": []
+    },
+    {
+      "suite": "stress",
+      "case_id": "initial_depthnoise5_pose005",
+      "title_zh": "新增：初始 depth noise 5mm + 5mm 位姿噪声",
+      "status": "PASS",
+      "episodes": 2,
+      "success_count": 2,
+      "returncode": null,
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_initial_depthnoise5_pose005_cycle2.json",
+      "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11b_shadow_initial_depthnoise5_pose005_cycle2_report.md",
+      "expected_boundary": false,
+      "terminal_reason_counts": {
+        "success_gentle_grasp_hold": 1,
+        "success_vision_confirmed_pinch_lift_hold": 1
+      },
+      "failure_reason_counts": {},
+      "risk_flag_counts": {
+        "early_contact_in_approach": 2,
+        "transient_or_hold_slip": 1,
+        "recovery_budget_exhausted": 1,
+        "transient_slip_high": 1
+      },
+      "by_skill": {
+        "full_hand_gentle_grasp": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_gentle_grasp_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_or_hold_slip": 1,
+            "recovery_budget_exhausted": 1
+          },
+          "final_lift_height_m_mean": 0.09956424633918036,
+          "final_lift_height_m_min": 0.09956424633918036,
+          "final_lift_height_m_max": 0.09956424633918036,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.16546717379252132,
+          "hold_max_slip_score_min": 0.16546717379252132,
+          "hold_max_slip_score_max": 0.16546717379252132,
+          "max_slip_score_mean": 0.45038590844290816,
+          "max_slip_score_min": 0.45038590844290816,
+          "max_slip_score_max": 0.45038590844290816,
+          "max_crush_risk_mean": 0.09023327056346232,
+          "max_crush_risk_min": 0.09023327056346232,
+          "max_crush_risk_max": 0.09023327056346232,
+          "max_penetration_m_mean": 0.0018046654112692465,
+          "max_penetration_m_min": 0.0018046654112692465,
+          "max_penetration_m_max": 0.0018046654112692465
+        },
+        "thumb_index_middle_pinch": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_vision_confirmed_pinch_lift_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_slip_high": 1
+          },
+          "true_lift_height_m_mean": 0.09739292588274158,
+          "true_lift_height_m_min": 0.09739292588274158,
+          "true_lift_height_m_max": 0.09739292588274158,
+          "vision_lift_height_m_mean": 0.10419950600466132,
+          "vision_lift_height_m_min": 0.10419950600466132,
+          "vision_lift_height_m_max": 0.10419950600466132,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_pinch_fraction_mean": 1.0,
+          "hold_pinch_fraction_min": 1.0,
+          "hold_pinch_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.17034580513268782,
+          "hold_max_slip_score_min": 0.17034580513268782,
+          "hold_max_slip_score_max": 0.17034580513268782,
+          "max_slip_score_mean": 1.0,
+          "max_slip_score_min": 1.0,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.15665545089818916,
+          "max_crush_risk_min": 0.15665545089818916,
+          "max_crush_risk_max": 0.15665545089818916,
+          "max_penetration_m_mean": 0.0031331090179637835,
+          "max_penetration_m_min": 0.0031331090179637835,
+          "max_penetration_m_max": 0.0031331090179637835
+        }
+      },
+      "shadow": {
+        "enabled": true,
+        "mode": "shadow_only_no_action_effect",
+        "records": 2,
+        "false_failure_on_hold_safe": 0,
+        "missed_failure_or_blocked": 0,
+        "unsafe_predicted_hold_safe": 0,
+        "unsafe_hold_safe_prediction": 0,
+        "missed_tactile_handoff": 0,
+        "total_label_mismatches": 0,
+        "per_label": {
+          "initial_quality_adapter_required": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "final_tactile_handoff_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "final_occlusion_aware_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "pinch_repair_required_or_active": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "strict_final_vision_safe": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "hold_safe": {
+            "truth_positive": 2,
+            "predicted_positive": 2,
+            "mismatch": 0
+          },
+          "failure_or_blocked": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "floor_or_hold_failure": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          }
+        }
+      },
+      "mismatch_label_counts": {},
+      "mismatch_examples": []
+    },
+    {
+      "suite": "stress",
+      "case_id": "final_falseblob_occlusionaware_pose005",
+      "title_zh": "新增：最终 false-positive blob + occlusion-aware 验收",
+      "status": "PASS",
+      "episodes": 2,
+      "success_count": 2,
+      "returncode": null,
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_final_falseblob_occlusionaware_pose005_cycle2.json",
+      "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11b_shadow_final_falseblob_occlusionaware_pose005_cycle2_report.md",
+      "expected_boundary": false,
+      "terminal_reason_counts": {
+        "success_gentle_grasp_hold": 1,
+        "success_vision_confirmed_pinch_lift_hold": 1
+      },
+      "failure_reason_counts": {},
+      "risk_flag_counts": {
+        "early_contact_in_approach": 2,
+        "transient_or_hold_slip": 1,
+        "recovery_budget_exhausted": 1,
+        "transient_slip_high": 1
+      },
+      "by_skill": {
+        "full_hand_gentle_grasp": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_gentle_grasp_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_or_hold_slip": 1,
+            "recovery_budget_exhausted": 1
+          },
+          "final_lift_height_m_mean": 0.09956424633918036,
+          "final_lift_height_m_min": 0.09956424633918036,
+          "final_lift_height_m_max": 0.09956424633918036,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.16546717379252132,
+          "hold_max_slip_score_min": 0.16546717379252132,
+          "hold_max_slip_score_max": 0.16546717379252132,
+          "max_slip_score_mean": 0.45038590844290816,
+          "max_slip_score_min": 0.45038590844290816,
+          "max_slip_score_max": 0.45038590844290816,
+          "max_crush_risk_mean": 0.09023327056346232,
+          "max_crush_risk_min": 0.09023327056346232,
+          "max_crush_risk_max": 0.09023327056346232,
+          "max_penetration_m_mean": 0.0018046654112692465,
+          "max_penetration_m_min": 0.0018046654112692465,
+          "max_penetration_m_max": 0.0018046654112692465
+        },
+        "thumb_index_middle_pinch": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_vision_confirmed_pinch_lift_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1,
+            "transient_slip_high": 1
+          },
+          "true_lift_height_m_mean": 0.10335960766562971,
+          "true_lift_height_m_min": 0.10335960766562971,
+          "true_lift_height_m_max": 0.10335960766562971,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_pinch_fraction_mean": 1.0,
+          "hold_pinch_fraction_min": 1.0,
+          "hold_pinch_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.16015657588659155,
+          "hold_max_slip_score_min": 0.16015657588659155,
+          "hold_max_slip_score_max": 0.16015657588659155,
+          "max_slip_score_mean": 1.0,
+          "max_slip_score_min": 1.0,
+          "max_slip_score_max": 1.0,
+          "max_crush_risk_mean": 0.18361041667058112,
+          "max_crush_risk_min": 0.18361041667058112,
+          "max_crush_risk_max": 0.18361041667058112,
+          "max_penetration_m_mean": 0.0036722083334116227,
+          "max_penetration_m_min": 0.0036722083334116227,
+          "max_penetration_m_max": 0.0036722083334116227
+        }
+      },
+      "shadow": {
+        "enabled": true,
+        "mode": "shadow_only_no_action_effect",
+        "records": 2,
+        "false_failure_on_hold_safe": 0,
+        "missed_failure_or_blocked": 0,
+        "unsafe_predicted_hold_safe": 0,
+        "unsafe_hold_safe_prediction": 0,
+        "missed_tactile_handoff": 0,
+        "total_label_mismatches": 0,
+        "per_label": {
+          "initial_quality_adapter_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "final_tactile_handoff_required": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "final_occlusion_aware_required": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "pinch_repair_required_or_active": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "strict_final_vision_safe": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "hold_safe": {
+            "truth_positive": 2,
+            "predicted_positive": 2,
+            "mismatch": 0
+          },
+          "failure_or_blocked": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "floor_or_hold_failure": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          }
+        }
+      },
+      "mismatch_label_counts": {},
+      "mismatch_examples": []
+    },
+    {
+      "suite": "stress",
+      "case_id": "initial_combinedhard_pose003_boundary",
+      "title_zh": "失败边界：初始 combined_hard + 3mm 位姿噪声",
+      "status": "PARTIAL",
+      "episodes": 2,
+      "success_count": 1,
+      "returncode": null,
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_initial_combinedhard_pose003_boundary_cycle2.json",
+      "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11b_shadow_initial_combinedhard_pose003_boundary_cycle2_report.md",
+      "expected_boundary": true,
+      "terminal_reason_counts": {
+        "success_gentle_grasp_hold": 1,
+        "initial_vision_failed": 1
+      },
+      "failure_reason_counts": {
+        "initial_vision_failed": 1
+      },
+      "risk_flag_counts": {
+        "early_contact_in_approach": 1
+      },
+      "by_skill": {
+        "full_hand_gentle_grasp": {
+          "episodes": 1,
+          "success_count": 1,
+          "terminal_reason_counts": {
+            "success_gentle_grasp_hold": 1
+          },
+          "failure_reason_counts": {},
+          "risk_flag_counts": {
+            "early_contact_in_approach": 1
+          },
+          "final_lift_height_m_mean": 0.10059495997303877,
+          "final_lift_height_m_min": 0.10059495997303877,
+          "final_lift_height_m_max": 0.10059495997303877,
+          "hold_stable_fraction_mean": 1.0,
+          "hold_stable_fraction_min": 1.0,
+          "hold_stable_fraction_max": 1.0,
+          "hold_max_slip_score_mean": 0.15560513154453662,
+          "hold_max_slip_score_min": 0.15560513154453662,
+          "hold_max_slip_score_max": 0.15560513154453662,
+          "max_slip_score_mean": 0.3451420363070378,
+          "max_slip_score_min": 0.3451420363070378,
+          "max_slip_score_max": 0.3451420363070378,
+          "max_crush_risk_mean": 0.09157124546262967,
+          "max_crush_risk_min": 0.09157124546262967,
+          "max_crush_risk_max": 0.09157124546262967,
+          "max_penetration_m_mean": 0.0018314249092525933,
+          "max_penetration_m_min": 0.0018314249092525933,
+          "max_penetration_m_max": 0.0018314249092525933
+        },
+        "thumb_index_middle_pinch": {
+          "episodes": 1,
+          "success_count": 0,
+          "terminal_reason_counts": {
+            "initial_vision_failed": 1
+          },
+          "failure_reason_counts": {
+            "initial_vision_failed": 1
+          },
+          "risk_flag_counts": {}
+        }
+      },
+      "shadow": {
+        "enabled": true,
+        "mode": "shadow_only_no_action_effect",
+        "records": 2,
+        "false_failure_on_hold_safe": 0,
+        "missed_failure_or_blocked": 0,
+        "unsafe_predicted_hold_safe": 0,
+        "unsafe_hold_safe_prediction": 0,
+        "missed_tactile_handoff": 0,
+        "total_label_mismatches": 2,
+        "per_label": {
+          "initial_quality_adapter_required": {
+            "truth_positive": 0,
+            "predicted_positive": 1,
+            "mismatch": 1
+          },
+          "final_tactile_handoff_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "final_occlusion_aware_required": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "pinch_repair_required_or_active": {
+            "truth_positive": 1,
+            "predicted_positive": 0,
+            "mismatch": 1
+          },
+          "strict_final_vision_safe": {
+            "truth_positive": 0,
+            "predicted_positive": 0,
+            "mismatch": 0
+          },
+          "hold_safe": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "failure_or_blocked": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          },
+          "floor_or_hold_failure": {
+            "truth_positive": 1,
+            "predicted_positive": 1,
+            "mismatch": 0
+          }
+        }
+      },
+      "mismatch_label_counts": {
+        "initial_quality_adapter_required": 1,
+        "pinch_repair_required_or_active": 1
+      },
+      "mismatch_examples": [
+        {
+          "episode_id": 1,
+          "skill_id": "thumb_index_middle_pinch",
+          "success": false,
+          "terminal_reason": "initial_vision_failed",
+          "mismatch_labels": [
+            "initial_quality_adapter_required",
+            "pinch_repair_required_or_active"
+          ]
+        }
+      ]
+    }
+  ],
+  "stage3_11b_ready_for_c": true,
+  "boundary": {
+    "mujoco_only": true,
+    "full_action_act_dp_promoted": false,
+    "hardware_runtime": false,
+    "real_camera": false,
+    "real_tactile": false,
+    "ultrasound_runtime": false,
+    "combined_hard_initial_vision_boundary": true
+  },
+  "next": "Stage3.11C frame-level noisy/occlusion safety labels if PASS; otherwise repair shadow feature/label alignment."
+}

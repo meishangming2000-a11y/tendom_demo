@@ -1,0 +1,222 @@
+{
+  "generated_at": "2026-06-09T14:44:38",
+  "stage": "Stage3.11C",
+  "status": "PASS",
+  "granularity": "trace_frame_sampled_from_evaluator",
+  "dataset": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\stage3_11c_frame_safety_labels_smoke_v0.npz",
+  "jsonl": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\stage3_11c_frame_safety_labels_smoke_v0.jsonl",
+  "label_names": [
+    "vision_degraded",
+    "vision_freeze",
+    "initial_quality_adapter_required",
+    "final_occlusion_aware_required",
+    "tactile_handoff",
+    "repair_configured",
+    "repair_active",
+    "recovery_active",
+    "safety_intervention_active",
+    "risk_slip_high",
+    "risk_crush_high",
+    "risk_penetration_high",
+    "physical_risk_any",
+    "hold_safe",
+    "failure_or_blocked",
+    "floor_or_hold_failure",
+    "risk_any"
+  ],
+  "label_definitions": {
+    "vision_degraded": "Vision is low-quality, occluded, stressed, or failed for the current early/final phase window.",
+    "vision_freeze": "Vision should be treated as frozen/adapter-selected instead of trusted as a fresh clean observation.",
+    "initial_quality_adapter_required": "Initial vision was accepted but needed quality adaptation; initial hard failure is not counted here.",
+    "final_occlusion_aware_required": "Final verification depends on occlusion-aware or non-strict final vision handling.",
+    "tactile_handoff": "Final or late-phase evidence should rely on tactile hold/contact rather than strict vision alone.",
+    "repair_configured": "A pinch repair mode is configured for this episode, regardless of whether it actually fired.",
+    "repair_active": "A sampled trace frame actually executed pinch repair.",
+    "recovery_active": "A sampled trace frame actually executed full-hand recovery.",
+    "safety_intervention_active": "Repair, recovery, or tactile handoff is active/relevant at this trace frame.",
+    "risk_slip_high": "Sampled slip is above the Stage3 success slip threshold.",
+    "risk_crush_high": "Sampled crush risk is above the Stage3 success crush threshold.",
+    "risk_penetration_high": "Sampled penetration is above the Stage3 success penetration threshold.",
+    "physical_risk_any": "Any sampled physical risk primitive is high.",
+    "hold_safe": "Episode-level safety head or outcome says hold was safe, applied to hold/late successful frames.",
+    "failure_or_blocked": "Episode failed or was intentionally blocked/rejected.",
+    "floor_or_hold_failure": "Episode-level failure includes floor/hold failure or equivalent failed hold boundary.",
+    "risk_any": "Union of physical risk, failure/blocker, unsafe shadow, repair/recovery, or tactile-handoff state."
+  },
+  "thresholds": {
+    "success_max_slip_score": 0.35,
+    "success_max_crush_risk": 0.65,
+    "success_max_penetration_m": 0.012
+  },
+  "sources": [
+    {
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_10c_safety_act_cvae_policy_v0_closed_loop_cycle50.json",
+      "source_kind": "stage3_10c_clean_cycle50",
+      "suite": "clean",
+      "case_id": "clean_cycle50",
+      "bucket": "clean",
+      "episodes": 4,
+      "frames": 84,
+      "expected_boundary": false
+    },
+    {
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_dbv1_pose008_strictvision_cycle20.json",
+      "source_kind": "stage3_11b_shadow",
+      "suite": "db_v1",
+      "case_id": "pose008_strictvision",
+      "bucket": "pose_noise",
+      "episodes": 4,
+      "frames": 88,
+      "expected_boundary": false
+    },
+    {
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_dbv1_pose010_corroborated_cycle20.json",
+      "source_kind": "stage3_11b_shadow",
+      "suite": "db_v1",
+      "case_id": "pose010_corroborated",
+      "bucket": "pose_noise",
+      "episodes": 4,
+      "frames": 88,
+      "expected_boundary": false
+    },
+    {
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_dbv1_initial_maskdrop30_pose005_cycle20.json",
+      "source_kind": "stage3_11b_shadow",
+      "suite": "db_v1",
+      "case_id": "initial_maskdrop30_pose005",
+      "bucket": "mask_dropout",
+      "episodes": 4,
+      "frames": 86,
+      "expected_boundary": false
+    },
+    {
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_dbv1_final_maskdrop55_occlusionaware_pose005_cycle20.json",
+      "source_kind": "stage3_11b_shadow",
+      "suite": "db_v1",
+      "case_id": "final_maskdrop55_occlusionaware_pose005",
+      "bucket": "mask_dropout",
+      "episodes": 4,
+      "frames": 86,
+      "expected_boundary": false
+    },
+    {
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_dbv1_final_occluder45_occlusionaware_pose008_cycle20.json",
+      "source_kind": "stage3_11b_shadow",
+      "suite": "db_v1",
+      "case_id": "final_occluder45_occlusionaware_pose008",
+      "bucket": "occlusion",
+      "episodes": 4,
+      "frames": 88,
+      "expected_boundary": false
+    },
+    {
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_initial_depthnoise5_pose005_cycle6.json",
+      "source_kind": "stage3_11b_shadow",
+      "suite": "stress",
+      "case_id": "initial_depthnoise5_pose005",
+      "bucket": "depth_noise",
+      "episodes": 4,
+      "frames": 75,
+      "expected_boundary": false
+    },
+    {
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_final_falseblob_occlusionaware_pose005_cycle6.json",
+      "source_kind": "stage3_11b_shadow",
+      "suite": "stress",
+      "case_id": "final_falseblob_occlusionaware_pose005",
+      "bucket": "false_positive",
+      "episodes": 4,
+      "frames": 75,
+      "expected_boundary": false
+    },
+    {
+      "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11b_shadow_initial_combinedhard_pose003_boundary_cycle2.json",
+      "source_kind": "stage3_11b_shadow",
+      "suite": "stress",
+      "case_id": "initial_combinedhard_pose003_boundary",
+      "bucket": "combined_hard",
+      "episodes": 2,
+      "frames": 23,
+      "expected_boundary": true
+    }
+  ],
+  "label_counts": {
+    "vision_degraded": 598,
+    "vision_freeze": 598,
+    "initial_quality_adapter_required": 329,
+    "final_occlusion_aware_required": 6,
+    "tactile_handoff": 6,
+    "repair_configured": 23,
+    "repair_active": 18,
+    "recovery_active": 14,
+    "safety_intervention_active": 32,
+    "risk_slip_high": 12,
+    "risk_crush_high": 0,
+    "risk_penetration_high": 0,
+    "physical_risk_any": 12,
+    "hold_safe": 310,
+    "failure_or_blocked": 1,
+    "floor_or_hold_failure": 1,
+    "risk_any": 37
+  },
+  "weighted_label_counts_by_span_steps": {
+    "vision_degraded": 141712,
+    "vision_freeze": 141712,
+    "initial_quality_adapter_required": 78960,
+    "final_occlusion_aware_required": 1320,
+    "tactile_handoff": 1320,
+    "repair_configured": 5280,
+    "repair_active": 4080,
+    "recovery_active": 3360,
+    "safety_intervention_active": 7440,
+    "risk_slip_high": 2880,
+    "risk_crush_high": 0,
+    "risk_penetration_high": 0,
+    "physical_risk_any": 2880,
+    "hold_safe": 72392,
+    "failure_or_blocked": 240,
+    "floor_or_hold_failure": 240,
+    "risk_any": 8640
+  },
+  "bucket_counts": {
+    "clean": 1,
+    "pose_noise": 2,
+    "mask_dropout": 2,
+    "occlusion": 1,
+    "depth_noise": 1,
+    "false_positive": 1,
+    "combined_hard": 1
+  },
+  "bucket_frame_counts": {
+    "clean": 84,
+    "pose_noise": 176,
+    "mask_dropout": 172,
+    "occlusion": 88,
+    "depth_noise": 75,
+    "false_positive": 75,
+    "combined_hard": 23
+  },
+  "checks": {
+    "row_count": 693,
+    "episode_count": 34,
+    "label_shape": [
+      693,
+      17
+    ],
+    "positive_required_missing": [],
+    "missing_required_buckets": [],
+    "split_repair_configured_vs_active_ok": true,
+    "has_synthetic_boundary_trace": true,
+    "stage3_11c_ready": true
+  },
+  "boundary": {
+    "mujoco_only": true,
+    "trace_frame_level_not_dense_obs_action": true,
+    "full_action_act_dp_promoted": false,
+    "hardware_runtime": false,
+    "real_camera": false,
+    "real_tactile": false,
+    "ultrasound_runtime": false
+  },
+  "next": "Stage3.11D safety-conditioned hand/residual policy only after reviewing Stage3.11C labels; dense obs/action alignment can be a Stage3.11C2 follow-up if needed."
+}

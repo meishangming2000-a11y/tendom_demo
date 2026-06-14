@@ -1,0 +1,6044 @@
+{
+  "generated_at": "2026-06-11T09:21:32",
+  "stage": "Stage3.11D-B",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_lift_ball_demo.xml",
+  "args": {
+    "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_lift_ball_demo.xml",
+    "seed_candidate": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11d_b_ball_true_pinch_release_selected_v0.json",
+    "report": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_b_event_contact_gated_refine_highlift_v0_report.md",
+    "metadata": "simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11d_b_event_contact_gated_refine_highlift_v0.json",
+    "selected": "simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11d_b_event_contact_gated_refine_highlift_selected_v0.json",
+    "visual_dir": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis",
+    "max_cases": 30,
+    "render_best": true,
+    "tip_mu": 2.8,
+    "non_tip_mu": 0.1,
+    "ball_mu": 1.35,
+    "ball_radius": 0.018,
+    "ball_mass": 0.01,
+    "inactive_scale": 0.0,
+    "base_tip_pair_separation_target": 0.06,
+    "base_grasp_offset_z": 0.002,
+    "base_hold_steps": 100,
+    "base_min_lift_height": 0.09,
+    "thumb_abd_values": "-0.35,-0.30,-0.40,-0.25,-0.45",
+    "thumb_mcp_values": "0.28,0.24,0.32,0.20,0.36",
+    "active_abd_values": "-0.45,-0.40,-0.50,-0.35,-0.55",
+    "active_pip_values": "-0.70,-0.62,-0.78,-0.54,-0.86",
+    "tip_pair_separation_values": "0.060,0.056,0.064,0.052,0.068",
+    "grasp_offset_x": 0.0,
+    "grasp_offset_y": 0.0,
+    "grasp_offset_z_values": "0.002,0.001,0.003,0.000,0.004",
+    "lift_j2_values": "-0.95,-0.90,-1.00,-0.85,-1.05",
+    "lift_steps_values": "520,440,620",
+    "hold_steps_values": "120,100,160,80",
+    "min_lift_height_values": "0.08,0.1,0.12",
+    "ik_maxiter": 90,
+    "approach_steps": 220,
+    "preshape_steps": 80,
+    "close_steps": 180,
+    "contact_gate_max_steps": 220,
+    "contact_gate_required_samples": 2,
+    "post_contact_settle_steps": 40,
+    "require_contact_gate": true,
+    "min_lift_steps_before_hold": 300,
+    "lifted_contact_required_samples": 3,
+    "min_hold_steps_before_release": 60,
+    "hold_release_required_samples": 8,
+    "demo_lift_goal": 0.11,
+    "release_steps": 180,
+    "release_settle_steps": 420,
+    "morphology_sample_every": 5,
+    "max_hold_floor_contact_fraction": 0.05,
+    "min_true_pinch_fraction": 0.5,
+    "max_wrap_fraction": 0.3,
+    "max_non_tip_ratio": 0.45,
+    "max_penetration_m": 0.006,
+    "final_height_tolerance": 0.018
+  },
+  "summary": {
+    "episodes": 30,
+    "success_count": 18,
+    "contact_gate_success_count": 20,
+    "lift_success_count": 18,
+    "true_pinch_success_count": 18,
+    "release_success_count": 20,
+    "terminal_reason_counts": {
+      "success_event_contact_gated_true_pinch_release_ball": 18,
+      "lift_gate_failed": 2,
+      "contact_gate_failed": 10
+    },
+    "best_score": 20.720886350016855,
+    "best_case": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100"
+  },
+  "best_result": {
+    "case": {
+      "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.5,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "tip_pair_separation_target": 0.06,
+      "grasp_offset_x": 0.0,
+      "grasp_offset_y": 0.0,
+      "grasp_offset_z": 0.002,
+      "ball_radius": 0.018,
+      "ball_mass": 0.01,
+      "hold_steps": 100,
+      "min_lift_height": 0.1
+    },
+    "candidate": {
+      "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+      "active_finger": "middle",
+      "thumb_cmc_abd": -0.35,
+      "thumb_cmc": 0.02,
+      "thumb_mcp": 0.28,
+      "thumb_ip": -0.32,
+      "active_mcp_flex": -0.04,
+      "active_mcp_abd": -0.5,
+      "active_pip": -0.7,
+      "active_dip": -0.315,
+      "inactive_scale": 0.0,
+      "tip_sliding_mu": 2.8,
+      "non_tip_sliding_mu": 0.1,
+      "ball_sliding_mu": 1.35,
+      "lift_j2": -0.95,
+      "lift_steps": 520
+    },
+    "status": "PASS",
+    "success": true,
+    "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+    "score": 20.720886350016855,
+    "contact_gate_success": true,
+    "contact_gate_step": 35,
+    "lift_break_reason": "lifted_tip_window_met",
+    "hold_break_reason": "stable_hold_window_met",
+    "lift_success": true,
+    "true_pinch_success": true,
+    "release_success": true,
+    "initial_ball": [
+      0.19022382,
+      0.187702,
+      -0.07538043999999999
+    ],
+    "final_ball": [
+      0.20261144358753266,
+      0.24706756523957799,
+      -0.0754912088625406
+    ],
+    "max_lift_m": 0.11380794656775955,
+    "hold_lift_m_max": 0.11380794656775955,
+    "hold_lift_m_mean": 0.11130769987587014,
+    "slow_lift_sample_lift_m_max": 0.10527751875530561,
+    "max_penetration_m": 0.003317700630524955,
+    "contact_gate_morphology": {
+      "frames": 8,
+      "true_two_tip_pinch_fraction": 0.25,
+      "wrap_frame_fraction": 0.75,
+      "floor_contact_fraction": 0.125,
+      "tip_contact_ratio_mean": 0.41666666666666663,
+      "non_tip_contact_ratio_mean": 0.5833333333333334,
+      "mean_hand_contacts": 2.625,
+      "region_counts": {
+        "middle": 8,
+        "thumb": 7
+      }
+    },
+    "hold_morphology": {
+      "frames": 13,
+      "true_two_tip_pinch_fraction": 1.0,
+      "wrap_frame_fraction": 0.0,
+      "floor_contact_fraction": 0.0,
+      "tip_contact_ratio_mean": 1.0,
+      "non_tip_contact_ratio_mean": 0.0,
+      "mean_hand_contacts": 2.0,
+      "region_counts": {
+        "middle": 13,
+        "thumb": 13
+      }
+    },
+    "lift_morphology": {
+      "frames": 79,
+      "true_two_tip_pinch_fraction": 1.0,
+      "wrap_frame_fraction": 0.0,
+      "floor_contact_fraction": 0.06329113924050633,
+      "tip_contact_ratio_mean": 0.810126582278481,
+      "non_tip_contact_ratio_mean": 0.18987341772151903,
+      "mean_hand_contacts": 2.569620253164557,
+      "region_counts": {
+        "middle": 79,
+        "thumb": 79
+      }
+    },
+    "final_morphology": {
+      "hand_contacts": 0,
+      "floor_contacts": 1,
+      "regions": [],
+      "tip_contact_ratio": 0.0,
+      "non_tip_contact_ratio": 0.0,
+      "true_two_tip_pinch": false,
+      "wrap_or_support": false
+    },
+    "final_sample": {
+      "label": "final",
+      "ball_position": [
+        0.20261144358753266,
+        0.24706756523957799,
+        -0.0754912088625406
+      ],
+      "lift_m": -0.00011076886254060558,
+      "morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "max_penetration_m": 0.00011076886254060211
+    },
+    "ik": {
+      "score": 0.007308751725607214,
+      "objective": 0.010375470470647737,
+      "optimizer_success": true,
+      "joints": {
+        "j1": 3.1416,
+        "j2": -1.5562206383345172,
+        "j3": 0.9769563762408924,
+        "j4": 2.620896124647359
+      },
+      "midpoint": [
+        0.1903299256182978,
+        0.18757404797466537,
+        -0.07338814069099771
+      ],
+      "target": [
+        0.19022382,
+        0.187702,
+        -0.07338043999999999
+      ],
+      "midpoint_error_m": 0.00016640139321364412,
+      "tip_separation_m": 0.05285764966760643,
+      "tip_separation_error_m": 0.00714235033239357,
+      "thumb_tip": [
+        0.18145816560546357,
+        0.2003366506561951,
+        -0.05201314059359561
+      ],
+      "active_tip": [
+        0.19920168563113202,
+        0.17481144529313566,
+        -0.0947631407883998
+      ]
+    },
+    "material_changes": {
+      "non_tip_hand": 50,
+      "tip": 5,
+      "ball": 1
+    },
+    "ball_config": {
+      "configured": true,
+      "original_radius_m": 0.028,
+      "radius_m": 0.018,
+      "original_body_mass_kg": 0.025,
+      "body_mass_kg": 0.01,
+      "floor_z_m": -0.09338044
+    },
+    "snapshots": {
+      "00_start": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\00_start.png",
+      "01_pinch_close": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\01_pinch_close.png",
+      "02_contact_gate": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\02_contact_gate.png",
+      "03_slow_lift": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\03_slow_lift.png",
+      "04_hold": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\04_hold.png",
+      "05_release_open": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\05_release_open.png",
+      "06_settle_release": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\06_settle_release.png"
+    }
+  },
+  "best_contact_sheet": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100_contact_sheet.png",
+  "results": [
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.5,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.5,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.720886350016855,
+      "contact_gate_success": true,
+      "contact_gate_step": 35,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.20261144358753266,
+        0.24706756523957799,
+        -0.0754912088625406
+      ],
+      "max_lift_m": 0.11380794656775955,
+      "hold_lift_m_max": 0.11380794656775955,
+      "hold_lift_m_mean": 0.11130769987587014,
+      "slow_lift_sample_lift_m_max": 0.10527751875530561,
+      "max_penetration_m": 0.003317700630524955,
+      "contact_gate_morphology": {
+        "frames": 8,
+        "true_two_tip_pinch_fraction": 0.25,
+        "wrap_frame_fraction": 0.75,
+        "floor_contact_fraction": 0.125,
+        "tip_contact_ratio_mean": 0.41666666666666663,
+        "non_tip_contact_ratio_mean": 0.5833333333333334,
+        "mean_hand_contacts": 2.625,
+        "region_counts": {
+          "middle": 8,
+          "thumb": 7
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 79,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.06329113924050633,
+        "tip_contact_ratio_mean": 0.810126582278481,
+        "non_tip_contact_ratio_mean": 0.18987341772151903,
+        "mean_hand_contacts": 2.569620253164557,
+        "region_counts": {
+          "middle": 79,
+          "thumb": 79
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.20261144358753266,
+          0.24706756523957799,
+          -0.0754912088625406
+        ],
+        "lift_m": -0.00011076886254060558,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254060211
+      },
+      "ik": {
+        "score": 0.007308751725607214,
+        "objective": 0.010375470470647737,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5562206383345172,
+          "j3": 0.9769563762408924,
+          "j4": 2.620896124647359
+        },
+        "midpoint": [
+          0.1903299256182978,
+          0.18757404797466537,
+          -0.07338814069099771
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00016640139321364412,
+        "tip_separation_m": 0.05285764966760643,
+        "tip_separation_error_m": 0.00714235033239357,
+        "thumb_tip": [
+          0.18145816560546357,
+          0.2003366506561951,
+          -0.05201314059359561
+        ],
+        "active_tip": [
+          0.19920168563113202,
+          0.17481144529313566,
+          -0.0947631407883998
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {
+        "00_start": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\00_start.png",
+        "01_pinch_close": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\01_pinch_close.png",
+        "02_contact_gate": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\02_contact_gate.png",
+        "03_slow_lift": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\03_slow_lift.png",
+        "04_hold": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\04_hold.png",
+        "05_release_open": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\05_release_open.png",
+        "06_settle_release": "simulations\\models\\arm_hand_stage1_export\\docs\\v11db_highlift_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p0__6e13e14729\\06_settle_release.png"
+      }
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p900_ls520_hs100_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p900_ls520_hs100_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.9,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p900_ls520_hs100_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.9,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.7155874200025,
+      "contact_gate_success": true,
+      "contact_gate_step": 175,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.14503455990558622,
+        0.2184914639830715,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.11432104146414282,
+      "hold_lift_m_max": 0.11432104146414282,
+      "hold_lift_m_mean": 0.11141365741541859,
+      "slow_lift_sample_lift_m_max": 0.10440808592218488,
+      "max_penetration_m": 0.002091627275236572,
+      "contact_gate_morphology": {
+        "frames": 36,
+        "true_two_tip_pinch_fraction": 0.05555555555555555,
+        "wrap_frame_fraction": 0.9166666666666666,
+        "floor_contact_fraction": 0.7222222222222222,
+        "tip_contact_ratio_mean": 0.449074074074074,
+        "non_tip_contact_ratio_mean": 0.5231481481481481,
+        "mean_hand_contacts": 2.111111111111111,
+        "region_counts": {
+          "middle": 35,
+          "thumb": 33
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 71,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.11267605633802817,
+        "tip_contact_ratio_mean": 0.7183098591549296,
+        "non_tip_contact_ratio_mean": 0.28169014084507055,
+        "mean_hand_contacts": 2.8450704225352115,
+        "region_counts": {
+          "middle": 71,
+          "thumb": 71
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.14503455990558622,
+          0.2184914639830715,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004437952460698427,
+        "objective": 0.00853321239352028,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5512598317416288,
+          "j3": 0.9649542530184101,
+          "j4": 2.6227158425286987
+        },
+        "midpoint": [
+          0.19034938743796748,
+          0.18755885325363159,
+          -0.07338790438222366
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00019056203576674321,
+        "tip_separation_m": 0.055752609575068314,
+        "tip_separation_error_m": 0.004247390424931684,
+        "thumb_tip": [
+          0.17967789186825733,
+          0.20162640938625992,
+          -0.051816826166971953
+        ],
+        "active_tip": [
+          0.20102088300767765,
+          0.17349129712100322,
+          -0.09495898259747537
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.66276289573487,
+      "contact_gate_success": true,
+      "contact_gate_step": 175,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.15293110143575678,
+        0.21807937565883945,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.11348542880641163,
+      "hold_lift_m_max": 0.11348542880641163,
+      "hold_lift_m_mean": 0.11098863027454854,
+      "slow_lift_sample_lift_m_max": 0.10538831458712174,
+      "max_penetration_m": 0.002091627275236572,
+      "contact_gate_morphology": {
+        "frames": 36,
+        "true_two_tip_pinch_fraction": 0.05555555555555555,
+        "wrap_frame_fraction": 0.9166666666666666,
+        "floor_contact_fraction": 0.7222222222222222,
+        "tip_contact_ratio_mean": 0.449074074074074,
+        "non_tip_contact_ratio_mean": 0.5231481481481481,
+        "mean_hand_contacts": 2.111111111111111,
+        "region_counts": {
+          "middle": 35,
+          "thumb": 33
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 77,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.11688311688311688,
+        "tip_contact_ratio_mean": 0.7359307359307359,
+        "non_tip_contact_ratio_mean": 0.2640692640692641,
+        "mean_hand_contacts": 2.792207792207792,
+        "region_counts": {
+          "middle": 77,
+          "thumb": 77
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.15293110143575678,
+          0.21807937565883945,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004437952460698427,
+        "objective": 0.00853321239352028,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5512598317416288,
+          "j3": 0.9649542530184101,
+          "j4": 2.6227158425286987
+        },
+        "midpoint": [
+          0.19034938743796748,
+          0.18755885325363159,
+          -0.07338790438222366
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00019056203576674321,
+        "tip_separation_m": 0.055752609575068314,
+        "tip_separation_error_m": 0.004247390424931684,
+        "thumb_tip": [
+          0.17967789186825733,
+          0.20162640938625992,
+          -0.051816826166971953
+        ],
+        "active_tip": [
+          0.20102088300767765,
+          0.17349129712100322,
+          -0.09495898259747537
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs120_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs120_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 120,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs120_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.66276289573487,
+      "contact_gate_success": true,
+      "contact_gate_step": 175,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.15293110143575678,
+        0.21807937565883945,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.11348542880641163,
+      "hold_lift_m_max": 0.11348542880641163,
+      "hold_lift_m_mean": 0.11098863027454854,
+      "slow_lift_sample_lift_m_max": 0.10538831458712174,
+      "max_penetration_m": 0.002091627275236572,
+      "contact_gate_morphology": {
+        "frames": 36,
+        "true_two_tip_pinch_fraction": 0.05555555555555555,
+        "wrap_frame_fraction": 0.9166666666666666,
+        "floor_contact_fraction": 0.7222222222222222,
+        "tip_contact_ratio_mean": 0.449074074074074,
+        "non_tip_contact_ratio_mean": 0.5231481481481481,
+        "mean_hand_contacts": 2.111111111111111,
+        "region_counts": {
+          "middle": 35,
+          "thumb": 33
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 77,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.11688311688311688,
+        "tip_contact_ratio_mean": 0.7359307359307359,
+        "non_tip_contact_ratio_mean": 0.2640692640692641,
+        "mean_hand_contacts": 2.792207792207792,
+        "region_counts": {
+          "middle": 77,
+          "thumb": 77
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.15293110143575678,
+          0.21807937565883945,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004437952460698427,
+        "objective": 0.00853321239352028,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5512598317416288,
+          "j3": 0.9649542530184101,
+          "j4": 2.6227158425286987
+        },
+        "midpoint": [
+          0.19034938743796748,
+          0.18755885325363159,
+          -0.07338790438222366
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00019056203576674321,
+        "tip_separation_m": 0.055752609575068314,
+        "tip_separation_error_m": 0.004247390424931684,
+        "thumb_tip": [
+          0.17967789186825733,
+          0.20162640938625992,
+          -0.051816826166971953
+        ],
+        "active_tip": [
+          0.20102088300767765,
+          0.17349129712100322,
+          -0.09495898259747537
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs80_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs80_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 80,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs80_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.66276289573487,
+      "contact_gate_success": true,
+      "contact_gate_step": 175,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.15293110143575678,
+        0.21807937565883945,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.11348542880641163,
+      "hold_lift_m_max": 0.11348542880641163,
+      "hold_lift_m_mean": 0.11098863027454854,
+      "slow_lift_sample_lift_m_max": 0.10538831458712174,
+      "max_penetration_m": 0.002091627275236572,
+      "contact_gate_morphology": {
+        "frames": 36,
+        "true_two_tip_pinch_fraction": 0.05555555555555555,
+        "wrap_frame_fraction": 0.9166666666666666,
+        "floor_contact_fraction": 0.7222222222222222,
+        "tip_contact_ratio_mean": 0.449074074074074,
+        "non_tip_contact_ratio_mean": 0.5231481481481481,
+        "mean_hand_contacts": 2.111111111111111,
+        "region_counts": {
+          "middle": 35,
+          "thumb": 33
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 77,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.11688311688311688,
+        "tip_contact_ratio_mean": 0.7359307359307359,
+        "non_tip_contact_ratio_mean": 0.2640692640692641,
+        "mean_hand_contacts": 2.792207792207792,
+        "region_counts": {
+          "middle": 77,
+          "thumb": 77
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.15293110143575678,
+          0.21807937565883945,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004437952460698427,
+        "objective": 0.00853321239352028,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5512598317416288,
+          "j3": 0.9649542530184101,
+          "j4": 2.6227158425286987
+        },
+        "midpoint": [
+          0.19034938743796748,
+          0.18755885325363159,
+          -0.07338790438222366
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00019056203576674321,
+        "tip_separation_m": 0.055752609575068314,
+        "tip_separation_error_m": 0.004247390424931684,
+        "thumb_tip": [
+          0.17967789186825733,
+          0.20162640938625992,
+          -0.051816826166971953
+        ],
+        "active_tip": [
+          0.20102088300767765,
+          0.17349129712100322,
+          -0.09495898259747537
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs100_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs100_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.003,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs100_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.641853307791997,
+      "contact_gate_success": true,
+      "contact_gate_step": 135,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.14751078556213856,
+        0.2282407891166648,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.11292634321282521,
+      "hold_lift_m_max": 0.11292634321282521,
+      "hold_lift_m_mean": 0.11036995182848577,
+      "slow_lift_sample_lift_m_max": 0.10439553432013063,
+      "max_penetration_m": 0.002144719231832324,
+      "contact_gate_morphology": {
+        "frames": 28,
+        "true_two_tip_pinch_fraction": 0.07142857142857142,
+        "wrap_frame_fraction": 0.8928571428571429,
+        "floor_contact_fraction": 0.6428571428571429,
+        "tip_contact_ratio_mean": 0.4345238095238094,
+        "non_tip_contact_ratio_mean": 0.5297619047619049,
+        "mean_hand_contacts": 2.142857142857143,
+        "region_counts": {
+          "middle": 27,
+          "thumb": 25
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 76,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.10526315789473684,
+        "tip_contact_ratio_mean": 0.6973684210526315,
+        "non_tip_contact_ratio_mean": 0.30263157894736853,
+        "mean_hand_contacts": 2.9078947368421053,
+        "region_counts": {
+          "middle": 76,
+          "thumb": 76
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.14751078556213856,
+          0.2282407891166648,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004438045518411716,
+        "objective": 0.008535653575485093,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5476731465712648,
+          "j3": 0.9652257770298238,
+          "j4": 2.62606245871813
+        },
+        "midpoint": [
+          0.1903493579670395,
+          0.18755872133162216,
+          -0.07238823786440765
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07238043999999999
+        ],
+        "midpoint_error_m": 0.00019065509347999056,
+        "tip_separation_m": 0.05575260957506827,
+        "tip_separation_error_m": 0.004247390424931725,
+        "thumb_tip": [
+          0.17969237927864096,
+          0.20163187092057894,
+          -0.050813631622592635
+        ],
+        "active_tip": [
+          0.20100633665543807,
+          0.17348557174266538,
+          -0.09396284410622266
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs120_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs120_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.003,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 120,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs120_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.641853307791997,
+      "contact_gate_success": true,
+      "contact_gate_step": 135,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.14751078556213856,
+        0.2282407891166648,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.11292634321282521,
+      "hold_lift_m_max": 0.11292634321282521,
+      "hold_lift_m_mean": 0.11036995182848577,
+      "slow_lift_sample_lift_m_max": 0.10439553432013063,
+      "max_penetration_m": 0.002144719231832324,
+      "contact_gate_morphology": {
+        "frames": 28,
+        "true_two_tip_pinch_fraction": 0.07142857142857142,
+        "wrap_frame_fraction": 0.8928571428571429,
+        "floor_contact_fraction": 0.6428571428571429,
+        "tip_contact_ratio_mean": 0.4345238095238094,
+        "non_tip_contact_ratio_mean": 0.5297619047619049,
+        "mean_hand_contacts": 2.142857142857143,
+        "region_counts": {
+          "middle": 27,
+          "thumb": 25
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 76,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.10526315789473684,
+        "tip_contact_ratio_mean": 0.6973684210526315,
+        "non_tip_contact_ratio_mean": 0.30263157894736853,
+        "mean_hand_contacts": 2.9078947368421053,
+        "region_counts": {
+          "middle": 76,
+          "thumb": 76
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.14751078556213856,
+          0.2282407891166648,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004438045518411716,
+        "objective": 0.008535653575485093,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5476731465712648,
+          "j3": 0.9652257770298238,
+          "j4": 2.62606245871813
+        },
+        "midpoint": [
+          0.1903493579670395,
+          0.18755872133162216,
+          -0.07238823786440765
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07238043999999999
+        ],
+        "midpoint_error_m": 0.00019065509347999056,
+        "tip_separation_m": 0.05575260957506827,
+        "tip_separation_error_m": 0.004247390424931725,
+        "thumb_tip": [
+          0.17969237927864096,
+          0.20163187092057894,
+          -0.050813631622592635
+        ],
+        "active_tip": [
+          0.20100633665543807,
+          0.17348557174266538,
+          -0.09396284410622266
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs80_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs80_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.003,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 80,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs80_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.641853307791997,
+      "contact_gate_success": true,
+      "contact_gate_step": 135,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.14751078556213856,
+        0.2282407891166648,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.11292634321282521,
+      "hold_lift_m_max": 0.11292634321282521,
+      "hold_lift_m_mean": 0.11036995182848577,
+      "slow_lift_sample_lift_m_max": 0.10439553432013063,
+      "max_penetration_m": 0.002144719231832324,
+      "contact_gate_morphology": {
+        "frames": 28,
+        "true_two_tip_pinch_fraction": 0.07142857142857142,
+        "wrap_frame_fraction": 0.8928571428571429,
+        "floor_contact_fraction": 0.6428571428571429,
+        "tip_contact_ratio_mean": 0.4345238095238094,
+        "non_tip_contact_ratio_mean": 0.5297619047619049,
+        "mean_hand_contacts": 2.142857142857143,
+        "region_counts": {
+          "middle": 27,
+          "thumb": 25
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 76,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.10526315789473684,
+        "tip_contact_ratio_mean": 0.6973684210526315,
+        "non_tip_contact_ratio_mean": 0.30263157894736853,
+        "mean_hand_contacts": 2.9078947368421053,
+        "region_counts": {
+          "middle": 76,
+          "thumb": 76
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.14751078556213856,
+          0.2282407891166648,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004438045518411716,
+        "objective": 0.008535653575485093,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5476731465712648,
+          "j3": 0.9652257770298238,
+          "j4": 2.62606245871813
+        },
+        "midpoint": [
+          0.1903493579670395,
+          0.18755872133162216,
+          -0.07238823786440765
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07238043999999999
+        ],
+        "midpoint_error_m": 0.00019065509347999056,
+        "tip_separation_m": 0.05575260957506827,
+        "tip_separation_error_m": 0.004247390424931725,
+        "thumb_tip": [
+          0.17969237927864096,
+          0.20163187092057894,
+          -0.050813631622592635
+        ],
+        "active_tip": [
+          0.20100633665543807,
+          0.17348557174266538,
+          -0.09396284410622266
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m1p000_ls520_hs100_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m1p000_ls520_hs100_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -1.0,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m1p000_ls520_hs100_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -1.0,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.4665179456553,
+      "contact_gate_success": true,
+      "contact_gate_step": 175,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.1604428383413781,
+        0.22398410949630995,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.11017432328802065,
+      "hold_lift_m_max": 0.11017432328802065,
+      "hold_lift_m_mean": 0.10815497851223747,
+      "slow_lift_sample_lift_m_max": 0.1038124385198092,
+      "max_penetration_m": 0.002091627275236572,
+      "contact_gate_morphology": {
+        "frames": 36,
+        "true_two_tip_pinch_fraction": 0.05555555555555555,
+        "wrap_frame_fraction": 0.9166666666666666,
+        "floor_contact_fraction": 0.7222222222222222,
+        "tip_contact_ratio_mean": 0.449074074074074,
+        "non_tip_contact_ratio_mean": 0.5231481481481481,
+        "mean_hand_contacts": 2.111111111111111,
+        "region_counts": {
+          "middle": 35,
+          "thumb": 33
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 83,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.12048192771084337,
+        "tip_contact_ratio_mean": 0.7510040160642569,
+        "non_tip_contact_ratio_mean": 0.24899598393574304,
+        "mean_hand_contacts": 2.746987951807229,
+        "region_counts": {
+          "middle": 83,
+          "thumb": 83
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.1604428383413781,
+          0.22398410949630995,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004437952460698427,
+        "objective": 0.00853321239352028,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5512598317416288,
+          "j3": 0.9649542530184101,
+          "j4": 2.6227158425286987
+        },
+        "midpoint": [
+          0.19034938743796748,
+          0.18755885325363159,
+          -0.07338790438222366
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00019056203576674321,
+        "tip_separation_m": 0.055752609575068314,
+        "tip_separation_error_m": 0.004247390424931684,
+        "thumb_tip": [
+          0.17967789186825733,
+          0.20162640938625992,
+          -0.051816826166971953
+        ],
+        "active_tip": [
+          0.20102088300767765,
+          0.17349129712100322,
+          -0.09495898259747537
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p900_ls520_hs100_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p900_ls520_hs100_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.9,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p900_ls520_hs100_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.9,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.438059160370283,
+      "contact_gate_success": true,
+      "contact_gate_step": 175,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.14478781676771094,
+        0.2255054716972501,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.09488266114446967,
+      "hold_lift_m_max": 0.09488266114446967,
+      "hold_lift_m_mean": 0.09263983949421359,
+      "slow_lift_sample_lift_m_max": 0.08723289782787752,
+      "max_penetration_m": 0.002091627275236572,
+      "contact_gate_morphology": {
+        "frames": 36,
+        "true_two_tip_pinch_fraction": 0.05555555555555555,
+        "wrap_frame_fraction": 0.9166666666666666,
+        "floor_contact_fraction": 0.7222222222222222,
+        "tip_contact_ratio_mean": 0.449074074074074,
+        "non_tip_contact_ratio_mean": 0.5231481481481481,
+        "mean_hand_contacts": 2.111111111111111,
+        "region_counts": {
+          "middle": 35,
+          "thumb": 33
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.9743589743589743,
+        "non_tip_contact_ratio_mean": 0.025641025641025644,
+        "mean_hand_contacts": 2.076923076923077,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 61,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.13114754098360656,
+        "tip_contact_ratio_mean": 0.6721311475409834,
+        "non_tip_contact_ratio_mean": 0.32786885245901637,
+        "mean_hand_contacts": 2.9836065573770494,
+        "region_counts": {
+          "middle": 61,
+          "thumb": 61
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.14478781676771094,
+          0.2255054716972501,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004437952460698427,
+        "objective": 0.00853321239352028,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5512598317416288,
+          "j3": 0.9649542530184101,
+          "j4": 2.6227158425286987
+        },
+        "midpoint": [
+          0.19034938743796748,
+          0.18755885325363159,
+          -0.07338790438222366
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00019056203576674321,
+        "tip_separation_m": 0.055752609575068314,
+        "tip_separation_error_m": 0.004247390424931684,
+        "thumb_tip": [
+          0.17967789186825733,
+          0.20162640938625992,
+          -0.051816826166971953
+        ],
+        "active_tip": [
+          0.20102088300767765,
+          0.17349129712100322,
+          -0.09495898259747537
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m1p000_ls520_hs100_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m1p000_ls520_hs100_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -1.0,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m1p000_ls520_hs100_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -1.0,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.270576672347794,
+      "contact_gate_success": true,
+      "contact_gate_step": 175,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.15295045355252454,
+        0.21076718555972443,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.09146978701941322,
+      "hold_lift_m_max": 0.09146978701941322,
+      "hold_lift_m_mean": 0.08910033658458537,
+      "slow_lift_sample_lift_m_max": 0.08338245156477941,
+      "max_penetration_m": 0.002091627275236572,
+      "contact_gate_morphology": {
+        "frames": 36,
+        "true_two_tip_pinch_fraction": 0.05555555555555555,
+        "wrap_frame_fraction": 0.9166666666666666,
+        "floor_contact_fraction": 0.7222222222222222,
+        "tip_contact_ratio_mean": 0.449074074074074,
+        "non_tip_contact_ratio_mean": 0.5231481481481481,
+        "mean_hand_contacts": 2.111111111111111,
+        "region_counts": {
+          "middle": 35,
+          "thumb": 33
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 70,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.14285714285714285,
+        "tip_contact_ratio_mean": 0.7047619047619047,
+        "non_tip_contact_ratio_mean": 0.2952380952380953,
+        "mean_hand_contacts": 2.8857142857142857,
+        "region_counts": {
+          "middle": 70,
+          "thumb": 70
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.15295045355252454,
+          0.21076718555972443,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004437952460698427,
+        "objective": 0.00853321239352028,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5512598317416288,
+          "j3": 0.9649542530184101,
+          "j4": 2.6227158425286987
+        },
+        "midpoint": [
+          0.19034938743796748,
+          0.18755885325363159,
+          -0.07338790438222366
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00019056203576674321,
+        "tip_separation_m": 0.055752609575068314,
+        "tip_separation_error_m": 0.004247390424931684,
+        "thumb_tip": [
+          0.17967789186825733,
+          0.20162640938625992,
+          -0.051816826166971953
+        ],
+        "active_tip": [
+          0.20102088300767765,
+          0.17349129712100322,
+          -0.09495898259747537
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.252059571149932,
+      "contact_gate_success": true,
+      "contact_gate_step": 175,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.1475543561270338,
+        0.2217401211239113,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.09116546477327318,
+      "hold_lift_m_max": 0.09116546477327318,
+      "hold_lift_m_mean": 0.08885800291128655,
+      "slow_lift_sample_lift_m_max": 0.08331838023236829,
+      "max_penetration_m": 0.002091627275236572,
+      "contact_gate_morphology": {
+        "frames": 36,
+        "true_two_tip_pinch_fraction": 0.05555555555555555,
+        "wrap_frame_fraction": 0.9166666666666666,
+        "floor_contact_fraction": 0.7222222222222222,
+        "tip_contact_ratio_mean": 0.449074074074074,
+        "non_tip_contact_ratio_mean": 0.5231481481481481,
+        "mean_hand_contacts": 2.111111111111111,
+        "region_counts": {
+          "middle": 35,
+          "thumb": 33
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 64,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.140625,
+        "tip_contact_ratio_mean": 0.6822916666666666,
+        "non_tip_contact_ratio_mean": 0.3177083333333334,
+        "mean_hand_contacts": 2.953125,
+        "region_counts": {
+          "middle": 64,
+          "thumb": 64
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.1475543561270338,
+          0.2217401211239113,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004437952460698427,
+        "objective": 0.00853321239352028,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5512598317416288,
+          "j3": 0.9649542530184101,
+          "j4": 2.6227158425286987
+        },
+        "midpoint": [
+          0.19034938743796748,
+          0.18755885325363159,
+          -0.07338790438222366
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00019056203576674321,
+        "tip_separation_m": 0.055752609575068314,
+        "tip_separation_error_m": 0.004247390424931684,
+        "thumb_tip": [
+          0.17967789186825733,
+          0.20162640938625992,
+          -0.051816826166971953
+        ],
+        "active_tip": [
+          0.20102088300767765,
+          0.17349129712100322,
+          -0.09495898259747537
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs120_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs120_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 120,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs120_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.252059571149932,
+      "contact_gate_success": true,
+      "contact_gate_step": 175,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.1475543561270338,
+        0.2217401211239113,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.09116546477327318,
+      "hold_lift_m_max": 0.09116546477327318,
+      "hold_lift_m_mean": 0.08885800291128655,
+      "slow_lift_sample_lift_m_max": 0.08331838023236829,
+      "max_penetration_m": 0.002091627275236572,
+      "contact_gate_morphology": {
+        "frames": 36,
+        "true_two_tip_pinch_fraction": 0.05555555555555555,
+        "wrap_frame_fraction": 0.9166666666666666,
+        "floor_contact_fraction": 0.7222222222222222,
+        "tip_contact_ratio_mean": 0.449074074074074,
+        "non_tip_contact_ratio_mean": 0.5231481481481481,
+        "mean_hand_contacts": 2.111111111111111,
+        "region_counts": {
+          "middle": 35,
+          "thumb": 33
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 64,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.140625,
+        "tip_contact_ratio_mean": 0.6822916666666666,
+        "non_tip_contact_ratio_mean": 0.3177083333333334,
+        "mean_hand_contacts": 2.953125,
+        "region_counts": {
+          "middle": 64,
+          "thumb": 64
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.1475543561270338,
+          0.2217401211239113,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004437952460698427,
+        "objective": 0.00853321239352028,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5512598317416288,
+          "j3": 0.9649542530184101,
+          "j4": 2.6227158425286987
+        },
+        "midpoint": [
+          0.19034938743796748,
+          0.18755885325363159,
+          -0.07338790438222366
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00019056203576674321,
+        "tip_separation_m": 0.055752609575068314,
+        "tip_separation_error_m": 0.004247390424931684,
+        "thumb_tip": [
+          0.17967789186825733,
+          0.20162640938625992,
+          -0.051816826166971953
+        ],
+        "active_tip": [
+          0.20102088300767765,
+          0.17349129712100322,
+          -0.09495898259747537
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs80_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs80_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 80,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs80_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.252059571149932,
+      "contact_gate_success": true,
+      "contact_gate_step": 175,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.1475543561270338,
+        0.2217401211239113,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.09116546477327318,
+      "hold_lift_m_max": 0.09116546477327318,
+      "hold_lift_m_mean": 0.08885800291128655,
+      "slow_lift_sample_lift_m_max": 0.08331838023236829,
+      "max_penetration_m": 0.002091627275236572,
+      "contact_gate_morphology": {
+        "frames": 36,
+        "true_two_tip_pinch_fraction": 0.05555555555555555,
+        "wrap_frame_fraction": 0.9166666666666666,
+        "floor_contact_fraction": 0.7222222222222222,
+        "tip_contact_ratio_mean": 0.449074074074074,
+        "non_tip_contact_ratio_mean": 0.5231481481481481,
+        "mean_hand_contacts": 2.111111111111111,
+        "region_counts": {
+          "middle": 35,
+          "thumb": 33
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 64,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.140625,
+        "tip_contact_ratio_mean": 0.6822916666666666,
+        "non_tip_contact_ratio_mean": 0.3177083333333334,
+        "mean_hand_contacts": 2.953125,
+        "region_counts": {
+          "middle": 64,
+          "thumb": 64
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.1475543561270338,
+          0.2217401211239113,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004437952460698427,
+        "objective": 0.00853321239352028,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5512598317416288,
+          "j3": 0.9649542530184101,
+          "j4": 2.6227158425286987
+        },
+        "midpoint": [
+          0.19034938743796748,
+          0.18755885325363159,
+          -0.07338790438222366
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00019056203576674321,
+        "tip_separation_m": 0.055752609575068314,
+        "tip_separation_error_m": 0.004247390424931684,
+        "thumb_tip": [
+          0.17967789186825733,
+          0.20162640938625992,
+          -0.051816826166971953
+        ],
+        "active_tip": [
+          0.20102088300767765,
+          0.17349129712100322,
+          -0.09495898259747537
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.5,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.5,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.192129377033062,
+      "contact_gate_success": true,
+      "contact_gate_step": 35,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.16086601078521792,
+        0.23970091105109267,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.08956094722007023,
+      "hold_lift_m_max": 0.08956094722007023,
+      "hold_lift_m_mean": 0.08741842661108631,
+      "slow_lift_sample_lift_m_max": 0.08263524576256119,
+      "max_penetration_m": 0.003317700630524955,
+      "contact_gate_morphology": {
+        "frames": 8,
+        "true_two_tip_pinch_fraction": 0.25,
+        "wrap_frame_fraction": 0.75,
+        "floor_contact_fraction": 0.125,
+        "tip_contact_ratio_mean": 0.41666666666666663,
+        "non_tip_contact_ratio_mean": 0.5833333333333334,
+        "mean_hand_contacts": 2.625,
+        "region_counts": {
+          "middle": 8,
+          "thumb": 7
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 65,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.07692307692307693,
+        "tip_contact_ratio_mean": 0.7692307692307693,
+        "non_tip_contact_ratio_mean": 0.23076923076923084,
+        "mean_hand_contacts": 2.6923076923076925,
+        "region_counts": {
+          "middle": 65,
+          "thumb": 65
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.16086601078521792,
+          0.23970091105109267,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.007308751725607214,
+        "objective": 0.010375470470647737,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5562206383345172,
+          "j3": 0.9769563762408924,
+          "j4": 2.620896124647359
+        },
+        "midpoint": [
+          0.1903299256182978,
+          0.18757404797466537,
+          -0.07338814069099771
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00016640139321364412,
+        "tip_separation_m": 0.05285764966760643,
+        "tip_separation_error_m": 0.00714235033239357,
+        "thumb_tip": [
+          0.18145816560546357,
+          0.2003366506561951,
+          -0.05201314059359561
+        ],
+        "active_tip": [
+          0.19920168563113202,
+          0.17481144529313566,
+          -0.0947631407883998
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs100_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs100_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.003,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs100_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.08131370224799,
+      "contact_gate_success": true,
+      "contact_gate_step": 135,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.145963704564994,
+        0.23591342062573276,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.09181665439579126,
+      "hold_lift_m_max": 0.09181665439579126,
+      "hold_lift_m_mean": 0.08944859038939502,
+      "slow_lift_sample_lift_m_max": 0.08372083423928424,
+      "max_penetration_m": 0.002144719231832324,
+      "contact_gate_morphology": {
+        "frames": 28,
+        "true_two_tip_pinch_fraction": 0.07142857142857142,
+        "wrap_frame_fraction": 0.8928571428571429,
+        "floor_contact_fraction": 0.6428571428571429,
+        "tip_contact_ratio_mean": 0.4345238095238094,
+        "non_tip_contact_ratio_mean": 0.5297619047619049,
+        "mean_hand_contacts": 2.142857142857143,
+        "region_counts": {
+          "middle": 27,
+          "thumb": 25
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.9230769230769231,
+        "non_tip_contact_ratio_mean": 0.07692307692307693,
+        "mean_hand_contacts": 2.230769230769231,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 64,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.125,
+        "tip_contact_ratio_mean": 0.6666666666666666,
+        "non_tip_contact_ratio_mean": 0.3333333333333334,
+        "mean_hand_contacts": 3.0,
+        "region_counts": {
+          "middle": 64,
+          "thumb": 64
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.145963704564994,
+          0.23591342062573276,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004438045518411716,
+        "objective": 0.008535653575485093,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5476731465712648,
+          "j3": 0.9652257770298238,
+          "j4": 2.62606245871813
+        },
+        "midpoint": [
+          0.1903493579670395,
+          0.18755872133162216,
+          -0.07238823786440765
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07238043999999999
+        ],
+        "midpoint_error_m": 0.00019065509347999056,
+        "tip_separation_m": 0.05575260957506827,
+        "tip_separation_error_m": 0.004247390424931725,
+        "thumb_tip": [
+          0.17969237927864096,
+          0.20163187092057894,
+          -0.050813631622592635
+        ],
+        "active_tip": [
+          0.20100633665543807,
+          0.17348557174266538,
+          -0.09396284410622266
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs120_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs120_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.003,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 120,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs120_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.08131370224799,
+      "contact_gate_success": true,
+      "contact_gate_step": 135,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.145963704564994,
+        0.23591342062573276,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.09181665439579126,
+      "hold_lift_m_max": 0.09181665439579126,
+      "hold_lift_m_mean": 0.08944859038939502,
+      "slow_lift_sample_lift_m_max": 0.08372083423928424,
+      "max_penetration_m": 0.002144719231832324,
+      "contact_gate_morphology": {
+        "frames": 28,
+        "true_two_tip_pinch_fraction": 0.07142857142857142,
+        "wrap_frame_fraction": 0.8928571428571429,
+        "floor_contact_fraction": 0.6428571428571429,
+        "tip_contact_ratio_mean": 0.4345238095238094,
+        "non_tip_contact_ratio_mean": 0.5297619047619049,
+        "mean_hand_contacts": 2.142857142857143,
+        "region_counts": {
+          "middle": 27,
+          "thumb": 25
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.9230769230769231,
+        "non_tip_contact_ratio_mean": 0.07692307692307693,
+        "mean_hand_contacts": 2.230769230769231,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 64,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.125,
+        "tip_contact_ratio_mean": 0.6666666666666666,
+        "non_tip_contact_ratio_mean": 0.3333333333333334,
+        "mean_hand_contacts": 3.0,
+        "region_counts": {
+          "middle": 64,
+          "thumb": 64
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.145963704564994,
+          0.23591342062573276,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004438045518411716,
+        "objective": 0.008535653575485093,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5476731465712648,
+          "j3": 0.9652257770298238,
+          "j4": 2.62606245871813
+        },
+        "midpoint": [
+          0.1903493579670395,
+          0.18755872133162216,
+          -0.07238823786440765
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07238043999999999
+        ],
+        "midpoint_error_m": 0.00019065509347999056,
+        "tip_separation_m": 0.05575260957506827,
+        "tip_separation_error_m": 0.004247390424931725,
+        "thumb_tip": [
+          0.17969237927864096,
+          0.20163187092057894,
+          -0.050813631622592635
+        ],
+        "active_tip": [
+          0.20100633665543807,
+          0.17348557174266538,
+          -0.09396284410622266
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs80_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs80_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.003,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 80,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p003_lj2m0p950_ls520_hs80_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.08131370224799,
+      "contact_gate_success": true,
+      "contact_gate_step": 135,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.145963704564994,
+        0.23591342062573276,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.09181665439579126,
+      "hold_lift_m_max": 0.09181665439579126,
+      "hold_lift_m_mean": 0.08944859038939502,
+      "slow_lift_sample_lift_m_max": 0.08372083423928424,
+      "max_penetration_m": 0.002144719231832324,
+      "contact_gate_morphology": {
+        "frames": 28,
+        "true_two_tip_pinch_fraction": 0.07142857142857142,
+        "wrap_frame_fraction": 0.8928571428571429,
+        "floor_contact_fraction": 0.6428571428571429,
+        "tip_contact_ratio_mean": 0.4345238095238094,
+        "non_tip_contact_ratio_mean": 0.5297619047619049,
+        "mean_hand_contacts": 2.142857142857143,
+        "region_counts": {
+          "middle": 27,
+          "thumb": 25
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.9230769230769231,
+        "non_tip_contact_ratio_mean": 0.07692307692307693,
+        "mean_hand_contacts": 2.230769230769231,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 64,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.125,
+        "tip_contact_ratio_mean": 0.6666666666666666,
+        "non_tip_contact_ratio_mean": 0.3333333333333334,
+        "mean_hand_contacts": 3.0,
+        "region_counts": {
+          "middle": 64,
+          "thumb": 64
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.145963704564994,
+          0.23591342062573276,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.004438045518411716,
+        "objective": 0.008535653575485093,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5476731465712648,
+          "j3": 0.9652257770298238,
+          "j4": 2.62606245871813
+        },
+        "midpoint": [
+          0.1903493579670395,
+          0.18755872133162216,
+          -0.07238823786440765
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07238043999999999
+        ],
+        "midpoint_error_m": 0.00019065509347999056,
+        "tip_separation_m": 0.05575260957506827,
+        "tip_separation_error_m": 0.004247390424931725,
+        "thumb_tip": [
+          0.17969237927864096,
+          0.20163187092057894,
+          -0.050813631622592635
+        ],
+        "active_tip": [
+          0.20100633665543807,
+          0.17348557174266538,
+          -0.09396284410622266
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p300_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p300_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.3,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p300_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.3,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "FAIL",
+      "success": false,
+      "terminal_reason": "lift_gate_failed",
+      "score": 4.379807445729603,
+      "contact_gate_success": true,
+      "contact_gate_step": 55,
+      "lift_break_reason": "lift_steps_exhausted",
+      "hold_break_reason": "hold_steps_exhausted",
+      "lift_success": false,
+      "true_pinch_success": false,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        -0.12063723756649561,
+        0.4421625256648588,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.011394522259143836,
+      "hold_lift_m_max": -0.0001107688625406611,
+      "hold_lift_m_mean": -0.0001107688625406611,
+      "slow_lift_sample_lift_m_max": 0.011394522259143836,
+      "max_penetration_m": 0.0018972800214423977,
+      "contact_gate_morphology": {
+        "frames": 12,
+        "true_two_tip_pinch_fraction": 0.16666666666666666,
+        "wrap_frame_fraction": 0.3333333333333333,
+        "floor_contact_fraction": 0.8333333333333334,
+        "tip_contact_ratio_mean": 0.4583333333333333,
+        "non_tip_contact_ratio_mean": 0.20833333333333334,
+        "mean_hand_contacts": 1.0833333333333333,
+        "region_counts": {
+          "middle": 8,
+          "thumb": 2
+        }
+      },
+      "hold_morphology": {
+        "frames": 20,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 1.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "lift_morphology": {
+        "frames": 104,
+        "true_two_tip_pinch_fraction": 0.08653846153846154,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.7980769230769231,
+        "tip_contact_ratio_mean": 0.21153846153846154,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.2980769230769231,
+        "region_counts": {
+          "middle": 22,
+          "thumb": 9
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          -0.12063723756649561,
+          0.4421625256648588,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.0029285718259959397,
+        "objective": 0.007112554652286432,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5522880684117373,
+          "j3": 0.9755773364917448,
+          "j4": 2.625926171627477
+        },
+        "midpoint": [
+          0.1903611939001648,
+          0.1875492054513096,
+          -0.07338797276857684
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.0002056076485893142,
+        "tip_separation_m": 0.05727703582259337,
+        "tip_separation_error_m": 0.0027229641774066254,
+        "thumb_tip": [
+          0.1779725532194957,
+          0.20337257019122865,
+          -0.05298435988878472
+        ],
+        "active_tip": [
+          0.20274983458083387,
+          0.17172584071139055,
+          -0.09379158564836895
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p300_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p300_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.3,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p300_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.3,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "FAIL",
+      "success": false,
+      "terminal_reason": "lift_gate_failed",
+      "score": 4.378699757104196,
+      "contact_gate_success": true,
+      "contact_gate_step": 55,
+      "lift_break_reason": "lift_steps_exhausted",
+      "hold_break_reason": "hold_steps_exhausted",
+      "lift_success": false,
+      "true_pinch_success": false,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        -0.12063723756649561,
+        0.4421625256648588,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.011394522259143836,
+      "hold_lift_m_max": -0.0001107688625406611,
+      "hold_lift_m_mean": -0.0001107688625406611,
+      "slow_lift_sample_lift_m_max": 0.011394522259143836,
+      "max_penetration_m": 0.0018972800214423977,
+      "contact_gate_morphology": {
+        "frames": 12,
+        "true_two_tip_pinch_fraction": 0.16666666666666666,
+        "wrap_frame_fraction": 0.3333333333333333,
+        "floor_contact_fraction": 0.8333333333333334,
+        "tip_contact_ratio_mean": 0.4583333333333333,
+        "non_tip_contact_ratio_mean": 0.20833333333333334,
+        "mean_hand_contacts": 1.0833333333333333,
+        "region_counts": {
+          "middle": 8,
+          "thumb": 2
+        }
+      },
+      "hold_morphology": {
+        "frames": 20,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 1.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "lift_morphology": {
+        "frames": 104,
+        "true_two_tip_pinch_fraction": 0.08653846153846154,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.7980769230769231,
+        "tip_contact_ratio_mean": 0.21153846153846154,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.2980769230769231,
+        "region_counts": {
+          "middle": 22,
+          "thumb": 9
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          -0.12063723756649561,
+          0.4421625256648588,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "ik": {
+        "score": 0.0029285718259959397,
+        "objective": 0.007112554652286432,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5522880684117373,
+          "j3": 0.9755773364917448,
+          "j4": 2.625926171627477
+        },
+        "midpoint": [
+          0.1903611939001648,
+          0.1875492054513096,
+          -0.07338797276857684
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.0002056076485893142,
+        "tip_separation_m": 0.05727703582259337,
+        "tip_separation_error_m": 0.0027229641774066254,
+        "thumb_tip": [
+          0.1779725532194957,
+          0.20337257019122865,
+          -0.05298435988878472
+        ],
+        "active_tip": [
+          0.20274983458083387,
+          0.17172584071139055,
+          -0.09379158564836895
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p400_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p400_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.4,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p400_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.4,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "FAIL",
+      "success": false,
+      "terminal_reason": "contact_gate_failed",
+      "score": -0.008445438305946889,
+      "contact_gate_success": false,
+      "contact_gate_step": null,
+      "lift_break_reason": "not_started",
+      "hold_break_reason": "not_started",
+      "lift_success": false,
+      "true_pinch_success": false,
+      "release_success": false,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.18548788464785856,
+        0.20525400135008187,
+        -0.07549131409592091
+      ],
+      "max_lift_m": 8.127971612208185e-05,
+      "hold_lift_m_max": 0.0,
+      "hold_lift_m_mean": 0.0,
+      "slow_lift_sample_lift_m_max": 0.0,
+      "max_penetration_m": 0.0004989027163791199,
+      "contact_gate_morphology": {
+        "frames": 44,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.8863636363636364,
+        "floor_contact_fraction": 0.9545454545454546,
+        "tip_contact_ratio_mean": 0.4431818181818182,
+        "non_tip_contact_ratio_mean": 0.48863636363636365,
+        "mean_hand_contacts": 1.8181818181818181,
+        "region_counts": {
+          "middle": 39,
+          "thumb": 37
+        }
+      },
+      "hold_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "lift_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "final_morphology": {
+        "hand_contacts": 1,
+        "floor_contacts": 1,
+        "regions": [
+          "thumb"
+        ],
+        "tip_regions": [
+          "thumb"
+        ],
+        "support_regions": [],
+        "tip_contact_ratio": 1.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.18548788464785856,
+          0.20525400135008187,
+          -0.07549131409592091
+        ],
+        "lift_m": -0.0001108740959209209,
+        "morphology": {
+          "hand_contacts": 1,
+          "floor_contacts": 1,
+          "regions": [
+            "thumb"
+          ],
+          "tip_regions": [
+            "thumb"
+          ],
+          "support_regions": [],
+          "tip_contact_ratio": 1.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011087409592091743
+      },
+      "ik": {
+        "score": 0.001474925495040683,
+        "objective": 0.007637047695662303,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.546663635887138,
+          "j3": 0.9529963375388053,
+          "j4": 2.6242743507906194
+        },
+        "midpoint": [
+          0.19036852798689208,
+          0.18754428607117873,
+          -0.0733876057933893
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00021416216614869482,
+        "tip_separation_m": 0.05873923667110801,
+        "tip_separation_error_m": 0.0012607633288919881,
+        "thumb_tip": [
+          0.17789133950787372,
+          0.20290651695843626,
+          -0.05168746498735411
+        ],
+        "active_tip": [
+          0.2028457164659104,
+          0.17218205518392124,
+          -0.09508774659942448
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p400_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p400_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.4,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p400_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.4,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "FAIL",
+      "success": false,
+      "terminal_reason": "contact_gate_failed",
+      "score": -0.008445438305946889,
+      "contact_gate_success": false,
+      "contact_gate_step": null,
+      "lift_break_reason": "not_started",
+      "hold_break_reason": "not_started",
+      "lift_success": false,
+      "true_pinch_success": false,
+      "release_success": false,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.18548788464785856,
+        0.20525400135008187,
+        -0.07549131409592091
+      ],
+      "max_lift_m": 8.127971612208185e-05,
+      "hold_lift_m_max": 0.0,
+      "hold_lift_m_mean": 0.0,
+      "slow_lift_sample_lift_m_max": 0.0,
+      "max_penetration_m": 0.0004989027163791199,
+      "contact_gate_morphology": {
+        "frames": 44,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.8863636363636364,
+        "floor_contact_fraction": 0.9545454545454546,
+        "tip_contact_ratio_mean": 0.4431818181818182,
+        "non_tip_contact_ratio_mean": 0.48863636363636365,
+        "mean_hand_contacts": 1.8181818181818181,
+        "region_counts": {
+          "middle": 39,
+          "thumb": 37
+        }
+      },
+      "hold_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "lift_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "final_morphology": {
+        "hand_contacts": 1,
+        "floor_contacts": 1,
+        "regions": [
+          "thumb"
+        ],
+        "tip_regions": [
+          "thumb"
+        ],
+        "support_regions": [],
+        "tip_contact_ratio": 1.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.18548788464785856,
+          0.20525400135008187,
+          -0.07549131409592091
+        ],
+        "lift_m": -0.0001108740959209209,
+        "morphology": {
+          "hand_contacts": 1,
+          "floor_contacts": 1,
+          "regions": [
+            "thumb"
+          ],
+          "tip_regions": [
+            "thumb"
+          ],
+          "support_regions": [],
+          "tip_contact_ratio": 1.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011087409592091743
+      },
+      "ik": {
+        "score": 0.001474925495040683,
+        "objective": 0.007637047695662303,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.546663635887138,
+          "j3": 0.9529963375388053,
+          "j4": 2.6242743507906194
+        },
+        "midpoint": [
+          0.19036852798689208,
+          0.18754428607117873,
+          -0.0733876057933893
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00021416216614869482,
+        "tip_separation_m": 0.05873923667110801,
+        "tip_separation_error_m": 0.0012607633288919881,
+        "thumb_tip": [
+          0.17789133950787372,
+          0.20290651695843626,
+          -0.05168746498735411
+        ],
+        "active_tip": [
+          0.2028457164659104,
+          0.17218205518392124,
+          -0.09508774659942448
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs100_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs100_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.001,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs100_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "FAIL",
+      "success": false,
+      "terminal_reason": "contact_gate_failed",
+      "score": -0.02314153966845974,
+      "contact_gate_success": false,
+      "contact_gate_step": null,
+      "lift_break_reason": "not_started",
+      "hold_break_reason": "not_started",
+      "lift_success": false,
+      "true_pinch_success": false,
+      "release_success": false,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.18708198231585135,
+        0.2051716837644118,
+        -0.07549135034900523
+      ],
+      "max_lift_m": 0.0005557198299029481,
+      "hold_lift_m_max": 0.0,
+      "hold_lift_m_mean": 0.0,
+      "slow_lift_sample_lift_m_max": 0.0,
+      "max_penetration_m": 0.0020118667369413944,
+      "contact_gate_morphology": {
+        "frames": 44,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.9772727272727273,
+        "floor_contact_fraction": 0.7954545454545454,
+        "tip_contact_ratio_mean": 0.45075757575757575,
+        "non_tip_contact_ratio_mean": 0.5265151515151515,
+        "mean_hand_contacts": 2.0454545454545454,
+        "region_counts": {
+          "middle": 43,
+          "thumb": 41
+        }
+      },
+      "hold_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "lift_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "final_morphology": {
+        "hand_contacts": 1,
+        "floor_contacts": 1,
+        "regions": [
+          "thumb"
+        ],
+        "tip_regions": [
+          "thumb"
+        ],
+        "support_regions": [],
+        "tip_contact_ratio": 1.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.18708198231585135,
+          0.2051716837644118,
+          -0.07549135034900523
+        ],
+        "lift_m": -0.00011091034900523322,
+        "morphology": {
+          "hand_contacts": 1,
+          "floor_contacts": 1,
+          "regions": [
+            "thumb"
+          ],
+          "tip_regions": [
+            "thumb"
+          ],
+          "support_regions": [],
+          "tip_contact_ratio": 1.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011091034900522975
+      },
+      "ik": {
+        "score": 0.004437849179311854,
+        "objective": 0.008530877590062826,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5548448709102805,
+          "j3": 0.964689453719759,
+          "j4": 2.619354221798589
+        },
+        "midpoint": [
+          0.19034941725172808,
+          0.18755900027452138,
+          -0.07438757764606896
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07438043999999999
+        ],
+        "midpoint_error_m": 0.0001904587543800941,
+        "tip_separation_m": 0.05575260957506824,
+        "tip_separation_error_m": 0.00424739042493176,
+        "thumb_tip": [
+          0.17966321290180043,
+          0.20162056211960516,
+          -0.052819873000558605
+        ],
+        "active_tip": [
+          0.20103562160165572,
+          0.1734974384294376,
+          -0.09595528229157932
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs100_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs100_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.001,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs100_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "FAIL",
+      "success": false,
+      "terminal_reason": "contact_gate_failed",
+      "score": -0.02314153966845974,
+      "contact_gate_success": false,
+      "contact_gate_step": null,
+      "lift_break_reason": "not_started",
+      "hold_break_reason": "not_started",
+      "lift_success": false,
+      "true_pinch_success": false,
+      "release_success": false,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.18708198231585135,
+        0.2051716837644118,
+        -0.07549135034900523
+      ],
+      "max_lift_m": 0.0005557198299029481,
+      "hold_lift_m_max": 0.0,
+      "hold_lift_m_mean": 0.0,
+      "slow_lift_sample_lift_m_max": 0.0,
+      "max_penetration_m": 0.0020118667369413944,
+      "contact_gate_morphology": {
+        "frames": 44,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.9772727272727273,
+        "floor_contact_fraction": 0.7954545454545454,
+        "tip_contact_ratio_mean": 0.45075757575757575,
+        "non_tip_contact_ratio_mean": 0.5265151515151515,
+        "mean_hand_contacts": 2.0454545454545454,
+        "region_counts": {
+          "middle": 43,
+          "thumb": 41
+        }
+      },
+      "hold_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "lift_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "final_morphology": {
+        "hand_contacts": 1,
+        "floor_contacts": 1,
+        "regions": [
+          "thumb"
+        ],
+        "tip_regions": [
+          "thumb"
+        ],
+        "support_regions": [],
+        "tip_contact_ratio": 1.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.18708198231585135,
+          0.2051716837644118,
+          -0.07549135034900523
+        ],
+        "lift_m": -0.00011091034900523322,
+        "morphology": {
+          "hand_contacts": 1,
+          "floor_contacts": 1,
+          "regions": [
+            "thumb"
+          ],
+          "tip_regions": [
+            "thumb"
+          ],
+          "support_regions": [],
+          "tip_contact_ratio": 1.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011091034900522975
+      },
+      "ik": {
+        "score": 0.004437849179311854,
+        "objective": 0.008530877590062826,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5548448709102805,
+          "j3": 0.964689453719759,
+          "j4": 2.619354221798589
+        },
+        "midpoint": [
+          0.19034941725172808,
+          0.18755900027452138,
+          -0.07438757764606896
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07438043999999999
+        ],
+        "midpoint_error_m": 0.0001904587543800941,
+        "tip_separation_m": 0.05575260957506824,
+        "tip_separation_error_m": 0.00424739042493176,
+        "thumb_tip": [
+          0.17966321290180043,
+          0.20162056211960516,
+          -0.052819873000558605
+        ],
+        "active_tip": [
+          0.20103562160165572,
+          0.1734974384294376,
+          -0.09595528229157932
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs120_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs120_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.001,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 120,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs120_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "FAIL",
+      "success": false,
+      "terminal_reason": "contact_gate_failed",
+      "score": -0.02314153966845974,
+      "contact_gate_success": false,
+      "contact_gate_step": null,
+      "lift_break_reason": "not_started",
+      "hold_break_reason": "not_started",
+      "lift_success": false,
+      "true_pinch_success": false,
+      "release_success": false,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.18708198231585135,
+        0.2051716837644118,
+        -0.07549135034900523
+      ],
+      "max_lift_m": 0.0005557198299029481,
+      "hold_lift_m_max": 0.0,
+      "hold_lift_m_mean": 0.0,
+      "slow_lift_sample_lift_m_max": 0.0,
+      "max_penetration_m": 0.0020118667369413944,
+      "contact_gate_morphology": {
+        "frames": 44,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.9772727272727273,
+        "floor_contact_fraction": 0.7954545454545454,
+        "tip_contact_ratio_mean": 0.45075757575757575,
+        "non_tip_contact_ratio_mean": 0.5265151515151515,
+        "mean_hand_contacts": 2.0454545454545454,
+        "region_counts": {
+          "middle": 43,
+          "thumb": 41
+        }
+      },
+      "hold_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "lift_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "final_morphology": {
+        "hand_contacts": 1,
+        "floor_contacts": 1,
+        "regions": [
+          "thumb"
+        ],
+        "tip_regions": [
+          "thumb"
+        ],
+        "support_regions": [],
+        "tip_contact_ratio": 1.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.18708198231585135,
+          0.2051716837644118,
+          -0.07549135034900523
+        ],
+        "lift_m": -0.00011091034900523322,
+        "morphology": {
+          "hand_contacts": 1,
+          "floor_contacts": 1,
+          "regions": [
+            "thumb"
+          ],
+          "tip_regions": [
+            "thumb"
+          ],
+          "support_regions": [],
+          "tip_contact_ratio": 1.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011091034900522975
+      },
+      "ik": {
+        "score": 0.004437849179311854,
+        "objective": 0.008530877590062826,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5548448709102805,
+          "j3": 0.964689453719759,
+          "j4": 2.619354221798589
+        },
+        "midpoint": [
+          0.19034941725172808,
+          0.18755900027452138,
+          -0.07438757764606896
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07438043999999999
+        ],
+        "midpoint_error_m": 0.0001904587543800941,
+        "tip_separation_m": 0.05575260957506824,
+        "tip_separation_error_m": 0.00424739042493176,
+        "thumb_tip": [
+          0.17966321290180043,
+          0.20162056211960516,
+          -0.052819873000558605
+        ],
+        "active_tip": [
+          0.20103562160165572,
+          0.1734974384294376,
+          -0.09595528229157932
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs80_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs80_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.001,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 80,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs80_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "FAIL",
+      "success": false,
+      "terminal_reason": "contact_gate_failed",
+      "score": -0.02314153966845974,
+      "contact_gate_success": false,
+      "contact_gate_step": null,
+      "lift_break_reason": "not_started",
+      "hold_break_reason": "not_started",
+      "lift_success": false,
+      "true_pinch_success": false,
+      "release_success": false,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.18708198231585135,
+        0.2051716837644118,
+        -0.07549135034900523
+      ],
+      "max_lift_m": 0.0005557198299029481,
+      "hold_lift_m_max": 0.0,
+      "hold_lift_m_mean": 0.0,
+      "slow_lift_sample_lift_m_max": 0.0,
+      "max_penetration_m": 0.0020118667369413944,
+      "contact_gate_morphology": {
+        "frames": 44,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.9772727272727273,
+        "floor_contact_fraction": 0.7954545454545454,
+        "tip_contact_ratio_mean": 0.45075757575757575,
+        "non_tip_contact_ratio_mean": 0.5265151515151515,
+        "mean_hand_contacts": 2.0454545454545454,
+        "region_counts": {
+          "middle": 43,
+          "thumb": 41
+        }
+      },
+      "hold_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "lift_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "final_morphology": {
+        "hand_contacts": 1,
+        "floor_contacts": 1,
+        "regions": [
+          "thumb"
+        ],
+        "tip_regions": [
+          "thumb"
+        ],
+        "support_regions": [],
+        "tip_contact_ratio": 1.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.18708198231585135,
+          0.2051716837644118,
+          -0.07549135034900523
+        ],
+        "lift_m": -0.00011091034900523322,
+        "morphology": {
+          "hand_contacts": 1,
+          "floor_contacts": 1,
+          "regions": [
+            "thumb"
+          ],
+          "tip_regions": [
+            "thumb"
+          ],
+          "support_regions": [],
+          "tip_contact_ratio": 1.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011091034900522975
+      },
+      "ik": {
+        "score": 0.004437849179311854,
+        "objective": 0.008530877590062826,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5548448709102805,
+          "j3": 0.964689453719759,
+          "j4": 2.619354221798589
+        },
+        "midpoint": [
+          0.19034941725172808,
+          0.18755900027452138,
+          -0.07438757764606896
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07438043999999999
+        ],
+        "midpoint_error_m": 0.0001904587543800941,
+        "tip_separation_m": 0.05575260957506824,
+        "tip_separation_error_m": 0.00424739042493176,
+        "thumb_tip": [
+          0.17966321290180043,
+          0.20162056211960516,
+          -0.052819873000558605
+        ],
+        "active_tip": [
+          0.20103562160165572,
+          0.1734974384294376,
+          -0.09595528229157932
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs120_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs120_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.001,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 120,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs120_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "FAIL",
+      "success": false,
+      "terminal_reason": "contact_gate_failed",
+      "score": -0.02314153966845974,
+      "contact_gate_success": false,
+      "contact_gate_step": null,
+      "lift_break_reason": "not_started",
+      "hold_break_reason": "not_started",
+      "lift_success": false,
+      "true_pinch_success": false,
+      "release_success": false,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.18708198231585135,
+        0.2051716837644118,
+        -0.07549135034900523
+      ],
+      "max_lift_m": 0.0005557198299029481,
+      "hold_lift_m_max": 0.0,
+      "hold_lift_m_mean": 0.0,
+      "slow_lift_sample_lift_m_max": 0.0,
+      "max_penetration_m": 0.0020118667369413944,
+      "contact_gate_morphology": {
+        "frames": 44,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.9772727272727273,
+        "floor_contact_fraction": 0.7954545454545454,
+        "tip_contact_ratio_mean": 0.45075757575757575,
+        "non_tip_contact_ratio_mean": 0.5265151515151515,
+        "mean_hand_contacts": 2.0454545454545454,
+        "region_counts": {
+          "middle": 43,
+          "thumb": 41
+        }
+      },
+      "hold_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "lift_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "final_morphology": {
+        "hand_contacts": 1,
+        "floor_contacts": 1,
+        "regions": [
+          "thumb"
+        ],
+        "tip_regions": [
+          "thumb"
+        ],
+        "support_regions": [],
+        "tip_contact_ratio": 1.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.18708198231585135,
+          0.2051716837644118,
+          -0.07549135034900523
+        ],
+        "lift_m": -0.00011091034900523322,
+        "morphology": {
+          "hand_contacts": 1,
+          "floor_contacts": 1,
+          "regions": [
+            "thumb"
+          ],
+          "tip_regions": [
+            "thumb"
+          ],
+          "support_regions": [],
+          "tip_contact_ratio": 1.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011091034900522975
+      },
+      "ik": {
+        "score": 0.004437849179311854,
+        "objective": 0.008530877590062826,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5548448709102805,
+          "j3": 0.964689453719759,
+          "j4": 2.619354221798589
+        },
+        "midpoint": [
+          0.19034941725172808,
+          0.18755900027452138,
+          -0.07438757764606896
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07438043999999999
+        ],
+        "midpoint_error_m": 0.0001904587543800941,
+        "tip_separation_m": 0.05575260957506824,
+        "tip_separation_error_m": 0.00424739042493176,
+        "thumb_tip": [
+          0.17966321290180043,
+          0.20162056211960516,
+          -0.052819873000558605
+        ],
+        "active_tip": [
+          0.20103562160165572,
+          0.1734974384294376,
+          -0.09595528229157932
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs80_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs80_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.001,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 80,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p001_lj2m0p950_ls520_hs80_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "FAIL",
+      "success": false,
+      "terminal_reason": "contact_gate_failed",
+      "score": -0.02314153966845974,
+      "contact_gate_success": false,
+      "contact_gate_step": null,
+      "lift_break_reason": "not_started",
+      "hold_break_reason": "not_started",
+      "lift_success": false,
+      "true_pinch_success": false,
+      "release_success": false,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.18708198231585135,
+        0.2051716837644118,
+        -0.07549135034900523
+      ],
+      "max_lift_m": 0.0005557198299029481,
+      "hold_lift_m_max": 0.0,
+      "hold_lift_m_mean": 0.0,
+      "slow_lift_sample_lift_m_max": 0.0,
+      "max_penetration_m": 0.0020118667369413944,
+      "contact_gate_morphology": {
+        "frames": 44,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.9772727272727273,
+        "floor_contact_fraction": 0.7954545454545454,
+        "tip_contact_ratio_mean": 0.45075757575757575,
+        "non_tip_contact_ratio_mean": 0.5265151515151515,
+        "mean_hand_contacts": 2.0454545454545454,
+        "region_counts": {
+          "middle": 43,
+          "thumb": 41
+        }
+      },
+      "hold_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "lift_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "final_morphology": {
+        "hand_contacts": 1,
+        "floor_contacts": 1,
+        "regions": [
+          "thumb"
+        ],
+        "tip_regions": [
+          "thumb"
+        ],
+        "support_regions": [],
+        "tip_contact_ratio": 1.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.18708198231585135,
+          0.2051716837644118,
+          -0.07549135034900523
+        ],
+        "lift_m": -0.00011091034900523322,
+        "morphology": {
+          "hand_contacts": 1,
+          "floor_contacts": 1,
+          "regions": [
+            "thumb"
+          ],
+          "tip_regions": [
+            "thumb"
+          ],
+          "support_regions": [],
+          "tip_contact_ratio": 1.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011091034900522975
+      },
+      "ik": {
+        "score": 0.004437849179311854,
+        "objective": 0.008530877590062826,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5548448709102805,
+          "j3": 0.964689453719759,
+          "j4": 2.619354221798589
+        },
+        "midpoint": [
+          0.19034941725172808,
+          0.18755900027452138,
+          -0.07438757764606896
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07438043999999999
+        ],
+        "midpoint_error_m": 0.0001904587543800941,
+        "tip_separation_m": 0.05575260957506824,
+        "tip_separation_error_m": 0.00424739042493176,
+        "thumb_tip": [
+          0.17966321290180043,
+          0.20162056211960516,
+          -0.052819873000558605
+        ],
+        "active_tip": [
+          0.20103562160165572,
+          0.1734974384294376,
+          -0.09595528229157932
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p400_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p400_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.4,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.08
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p400_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p080",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.4,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "FAIL",
+      "success": false,
+      "terminal_reason": "contact_gate_failed",
+      "score": -0.027533061921804804,
+      "contact_gate_success": false,
+      "contact_gate_step": null,
+      "lift_break_reason": "not_started",
+      "hold_break_reason": "not_started",
+      "lift_success": false,
+      "true_pinch_success": false,
+      "release_success": false,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.18737071894657603,
+        0.206604398300879,
+        -0.07549134624223257
+      ],
+      "max_lift_m": 0.0010717272942819128,
+      "hold_lift_m_max": 0.0,
+      "hold_lift_m_mean": 0.0,
+      "slow_lift_sample_lift_m_max": 0.0,
+      "max_penetration_m": 0.0038609607442227217,
+      "contact_gate_morphology": {
+        "frames": 44,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 1.0,
+        "floor_contact_fraction": 0.7045454545454546,
+        "tip_contact_ratio_mean": 0.3977272727272727,
+        "non_tip_contact_ratio_mean": 0.6022727272727273,
+        "mean_hand_contacts": 2.6136363636363638,
+        "region_counts": {
+          "middle": 44,
+          "thumb": 44
+        }
+      },
+      "hold_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "lift_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "final_morphology": {
+        "hand_contacts": 1,
+        "floor_contacts": 1,
+        "regions": [
+          "thumb"
+        ],
+        "tip_regions": [
+          "thumb"
+        ],
+        "support_regions": [],
+        "tip_contact_ratio": 1.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.18737071894657603,
+          0.206604398300879,
+          -0.07549134624223257
+        ],
+        "lift_m": -0.00011090624223257517,
+        "morphology": {
+          "hand_contacts": 1,
+          "floor_contacts": 1,
+          "regions": [
+            "thumb"
+          ],
+          "tip_regions": [
+            "thumb"
+          ],
+          "support_regions": [],
+          "tip_contact_ratio": 1.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.0001109062422325717
+      },
+      "ik": {
+        "score": 0.00533321218119592,
+        "objective": 0.00991205491720824,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5506055285001346,
+          "j3": 0.9545319158775091,
+          "j4": 2.6191167284523003
+        },
+        "midpoint": [
+          0.19033620710497037,
+          0.18757015265827176,
+          -0.07338772337650049
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00017340020316504106,
+        "tip_separation_m": 0.05484018802196912,
+        "tip_separation_error_m": 0.005159811978030879,
+        "thumb_tip": [
+          0.18134211539353154,
+          0.19988290367170847,
+          -0.050598163654150166
+        ],
+        "active_tip": [
+          0.1993302988164092,
+          0.17525740164483508,
+          -0.09617728309885082
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    },
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p400_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p400_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.4,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.45,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": 0.0,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "hold_steps": 100,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p400_tmcpp0p280_aabdm0p450_apipm0p700_sep0p060_gzp0p002_lj2m0p950_ls520_hs100_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.4,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.45,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "FAIL",
+      "success": false,
+      "terminal_reason": "contact_gate_failed",
+      "score": -0.027533061921804804,
+      "contact_gate_success": false,
+      "contact_gate_step": null,
+      "lift_break_reason": "not_started",
+      "hold_break_reason": "not_started",
+      "lift_success": false,
+      "true_pinch_success": false,
+      "release_success": false,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.18737071894657603,
+        0.206604398300879,
+        -0.07549134624223257
+      ],
+      "max_lift_m": 0.0010717272942819128,
+      "hold_lift_m_max": 0.0,
+      "hold_lift_m_mean": 0.0,
+      "slow_lift_sample_lift_m_max": 0.0,
+      "max_penetration_m": 0.0038609607442227217,
+      "contact_gate_morphology": {
+        "frames": 44,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 1.0,
+        "floor_contact_fraction": 0.7045454545454546,
+        "tip_contact_ratio_mean": 0.3977272727272727,
+        "non_tip_contact_ratio_mean": 0.6022727272727273,
+        "mean_hand_contacts": 2.6136363636363638,
+        "region_counts": {
+          "middle": 44,
+          "thumb": 44
+        }
+      },
+      "hold_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "lift_morphology": {
+        "frames": 0,
+        "true_two_tip_pinch_fraction": 0.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 0.0,
+        "region_counts": {}
+      },
+      "final_morphology": {
+        "hand_contacts": 1,
+        "floor_contacts": 1,
+        "regions": [
+          "thumb"
+        ],
+        "tip_regions": [
+          "thumb"
+        ],
+        "support_regions": [],
+        "tip_contact_ratio": 1.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.18737071894657603,
+          0.206604398300879,
+          -0.07549134624223257
+        ],
+        "lift_m": -0.00011090624223257517,
+        "morphology": {
+          "hand_contacts": 1,
+          "floor_contacts": 1,
+          "regions": [
+            "thumb"
+          ],
+          "tip_regions": [
+            "thumb"
+          ],
+          "support_regions": [],
+          "tip_contact_ratio": 1.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.0001109062422325717
+      },
+      "ik": {
+        "score": 0.00533321218119592,
+        "objective": 0.00991205491720824,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5506055285001346,
+          "j3": 0.9545319158775091,
+          "j4": 2.6191167284523003
+        },
+        "midpoint": [
+          0.19033620710497037,
+          0.18757015265827176,
+          -0.07338772337650049
+        ],
+        "target": [
+          0.19022382,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00017340020316504106,
+        "tip_separation_m": 0.05484018802196912,
+        "tip_separation_error_m": 0.005159811978030879,
+        "thumb_tip": [
+          0.18134211539353154,
+          0.19988290367170847,
+          -0.050598163654150166
+        ],
+        "active_tip": [
+          0.1993302988164092,
+          0.17525740164483508,
+          -0.09617728309885082
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {}
+    }
+  ],
+  "boundary": {
+    "mujoco_only": true,
+    "event_driven_parameter_search_not_neural_training": true,
+    "controller_promoted": false,
+    "hardware_runtime": false,
+    "full_action_act_dp_promoted": false
+  }
+}

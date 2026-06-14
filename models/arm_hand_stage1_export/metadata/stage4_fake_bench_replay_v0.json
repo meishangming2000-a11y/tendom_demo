@@ -1,0 +1,306 @@
+{
+  "generated_at": "2026-06-13T01:50:16",
+  "stage": "Stage4.0-F2",
+  "status": "stage4_fake_bench_replay_v0",
+  "input_jsonl": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\stage4_force_feedback_packets_v0.jsonl",
+  "schema": "D:\\tendon_project\\docs\\stage4_force_feedback_data_contract_v0.schema.json",
+  "outputs": {
+    "jsonl": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\stage4_fake_bench_replay_v0.jsonl",
+    "csv": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\stage4_fake_bench_replay_v0_summary.csv",
+    "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage4_fake_bench_replay_v0.json",
+    "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage4_fake_bench_replay_v0_report.md"
+  },
+  "args": {
+    "input_jsonl": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\stage4_force_feedback_packets_v0.jsonl",
+    "schema": "D:\\tendon_project\\docs\\stage4_force_feedback_data_contract_v0.schema.json",
+    "jsonl": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\stage4_fake_bench_replay_v0.jsonl",
+    "csv": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\data\\stage4_fake_bench_replay_v0_summary.csv",
+    "metadata": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage4_fake_bench_replay_v0.json",
+    "report": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\stage4_fake_bench_replay_v0_report.md",
+    "source_slots": 1200,
+    "min_emitted_packets": 1000,
+    "sample_rate_hz": 200.0,
+    "current_limit_a": 4.0,
+    "nominal_bus_voltage_v": 24.0,
+    "bus_sag_fraction": 0.62,
+    "drop_every": 97,
+    "delay_every": 83,
+    "delay_extra_ms": 12.0,
+    "delay_detect_ratio": 0.6,
+    "current_saturation_every": 149,
+    "saturate_actuator_count": 2,
+    "encoder_freeze_every": 173,
+    "bus_sag_every": 211,
+    "tension_dropout_every": 193,
+    "driver_fault_every": 127,
+    "e_stop_at": 1000,
+    "max_rate_error_fraction": 0.02,
+    "min_fault_detection_rate": 1.0,
+    "validate_schema": true
+  },
+  "summary": {
+    "source_slots": 1200,
+    "emitted_packets": 1188,
+    "schema_packets_expected_min": 1000,
+    "sequence_start": 0,
+    "sequence_end": 1199,
+    "dropped_sequence_ids_detected": 12,
+    "timestamp_monotonic": true,
+    "target_sample_rate_hz": 200.0,
+    "observed_sample_rate_hz": 200.0,
+    "rate_error_fraction": 0.0,
+    "median_step_ns": 5000000.0,
+    "expected_step_ns": 5000000,
+    "phase_counts": {
+      "approach": 81,
+      "preshape": 36,
+      "pinch_close": 67,
+      "contact_gate": 111,
+      "post_contact_settle": 15,
+      "slow_lift": 570,
+      "hold": 104,
+      "release_open": 63,
+      "release_settle": 133,
+      "final": 8
+    },
+    "fault_active_packets": 35,
+    "injected_fault_counts": {
+      "drop_packet": 12,
+      "delay_spike": 14,
+      "current_saturation": 8,
+      "encoder_freeze": 6,
+      "bus_voltage_sag": 5,
+      "tension_dropout": 6,
+      "driver_fault": 9,
+      "e_stop": 1
+    },
+    "detected_fault_counts": {
+      "drop_packet": 12,
+      "delay_spike": 14,
+      "current_saturation": 8,
+      "encoder_freeze": 6,
+      "bus_voltage_sag": 5,
+      "tension_dropout": 6,
+      "driver_fault": 9,
+      "e_stop": 1
+    },
+    "fault_detection_rates": {
+      "drop_packet": 1.0,
+      "delay_spike": 1.0,
+      "current_saturation": 1.0,
+      "encoder_freeze": 1.0,
+      "bus_voltage_sag": 1.0,
+      "tension_dropout": 1.0,
+      "driver_fault": 1.0,
+      "e_stop": 1.0
+    },
+    "gate": {
+      "packet_count_ok": true,
+      "timestamp_monotonic_ok": true,
+      "drop_count_ok": true,
+      "sample_rate_ok": true,
+      "fault_detection_ok": true,
+      "schema_ok": true,
+      "f2_pass": true
+    }
+  },
+  "injected_by_sequence": {
+    "83": [
+      "delay_spike"
+    ],
+    "97": [
+      "drop_packet"
+    ],
+    "127": [
+      "driver_fault"
+    ],
+    "149": [
+      "current_saturation"
+    ],
+    "166": [
+      "delay_spike"
+    ],
+    "173": [
+      "encoder_freeze"
+    ],
+    "193": [
+      "tension_dropout"
+    ],
+    "194": [
+      "drop_packet"
+    ],
+    "211": [
+      "bus_voltage_sag"
+    ],
+    "249": [
+      "delay_spike"
+    ],
+    "254": [
+      "driver_fault"
+    ],
+    "291": [
+      "drop_packet"
+    ],
+    "298": [
+      "current_saturation"
+    ],
+    "332": [
+      "delay_spike"
+    ],
+    "346": [
+      "encoder_freeze"
+    ],
+    "381": [
+      "driver_fault"
+    ],
+    "386": [
+      "tension_dropout"
+    ],
+    "388": [
+      "drop_packet"
+    ],
+    "415": [
+      "delay_spike"
+    ],
+    "422": [
+      "bus_voltage_sag"
+    ],
+    "447": [
+      "current_saturation"
+    ],
+    "485": [
+      "drop_packet"
+    ],
+    "498": [
+      "delay_spike"
+    ],
+    "508": [
+      "driver_fault"
+    ],
+    "519": [
+      "encoder_freeze"
+    ],
+    "579": [
+      "tension_dropout"
+    ],
+    "581": [
+      "delay_spike"
+    ],
+    "582": [
+      "drop_packet"
+    ],
+    "596": [
+      "current_saturation"
+    ],
+    "633": [
+      "bus_voltage_sag"
+    ],
+    "635": [
+      "driver_fault"
+    ],
+    "664": [
+      "delay_spike"
+    ],
+    "679": [
+      "drop_packet"
+    ],
+    "692": [
+      "encoder_freeze"
+    ],
+    "745": [
+      "current_saturation"
+    ],
+    "747": [
+      "delay_spike"
+    ],
+    "762": [
+      "driver_fault"
+    ],
+    "772": [
+      "tension_dropout"
+    ],
+    "776": [
+      "drop_packet"
+    ],
+    "830": [
+      "delay_spike"
+    ],
+    "844": [
+      "bus_voltage_sag"
+    ],
+    "865": [
+      "encoder_freeze"
+    ],
+    "873": [
+      "drop_packet"
+    ],
+    "889": [
+      "driver_fault"
+    ],
+    "894": [
+      "current_saturation"
+    ],
+    "913": [
+      "delay_spike"
+    ],
+    "965": [
+      "tension_dropout"
+    ],
+    "970": [
+      "drop_packet"
+    ],
+    "996": [
+      "delay_spike"
+    ],
+    "1000": [
+      "e_stop"
+    ],
+    "1016": [
+      "driver_fault"
+    ],
+    "1038": [
+      "encoder_freeze"
+    ],
+    "1043": [
+      "current_saturation"
+    ],
+    "1055": [
+      "bus_voltage_sag"
+    ],
+    "1067": [
+      "drop_packet"
+    ],
+    "1079": [
+      "delay_spike"
+    ],
+    "1143": [
+      "driver_fault"
+    ],
+    "1158": [
+      "tension_dropout"
+    ],
+    "1162": [
+      "delay_spike"
+    ],
+    "1164": [
+      "drop_packet"
+    ],
+    "1192": [
+      "current_saturation"
+    ]
+  },
+  "validation": {
+    "schema_checked": true,
+    "ok": true,
+    "message": "schema validation OK"
+  },
+  "boundary": {
+    "source_packets_are_mujoco": true,
+    "output_is_fake_bench_replay": true,
+    "hardware_runtime": false,
+    "real_motor": false,
+    "real_encoder": false,
+    "real_tactile": false,
+    "direct_force_control_promoted": false
+  }
+}

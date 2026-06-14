@@ -1,0 +1,102 @@
+{
+  "selected_stage": "Stage3.12C",
+  "status": "selected_robustness_teacher_candidate",
+  "classification": "mujoco_only_vision_directional_teacher",
+  "generated_at": "2026-06-13",
+  "selected_variant": {
+    "name": "di_directional_gx_clamp_m0025_p0000",
+    "family": "vision_directional_teacher",
+    "base_candidate": "baseline_di",
+    "teacher_rule": {
+      "grasp_offset_x_min": -0.0025,
+      "grasp_offset_x_max": 0.0,
+      "applied_before_ik": true
+    },
+    "residual_close_enabled": false,
+    "force_feedback_gate_enabled": false
+  },
+  "boundary": {
+    "mujoco_only": true,
+    "hardware_runtime": false,
+    "real_camera": false,
+    "real_tactile": false,
+    "full_action_act_dp": false,
+    "demo_gallery_promotion": false
+  },
+  "multiseed_gate": {
+    "seeds": [20260612, 20265612, 20265613],
+    "trials": 150,
+    "selected": {
+      "success_count": 143,
+      "contact_gate_success_count": 146,
+      "lift_success_count": 143,
+      "true_pinch_success_count": 143,
+      "release_success_count": 149,
+      "terminal_reason_counts": {
+        "success_event_contact_gated_true_pinch_release_ball": 143,
+        "lift_gate_failed": 3,
+        "contact_gate_failed": 4
+      },
+      "hold_non_tip_ratio_mean": 0.05692307692307693,
+      "hold_wrap_fraction_mean": 0.0,
+      "hold_floor_contact_fraction_mean": 0.012000000000000002,
+      "max_penetration_m_max": 0.005952395039460604
+    },
+    "frozen_d_i": {
+      "success_count": 136,
+      "contact_gate_success_count": 143,
+      "lift_success_count": 136,
+      "true_pinch_success_count": 136,
+      "release_success_count": 149,
+      "terminal_reason_counts": {
+        "success_event_contact_gated_true_pinch_release_ball": 136,
+        "lift_gate_failed": 7,
+        "contact_gate_failed": 7
+      },
+      "hold_non_tip_ratio_mean": 0.0676923076923077,
+      "hold_wrap_fraction_mean": 0.0,
+      "hold_floor_contact_fraction_mean": 0.028,
+      "max_penetration_m_max": 0.006037103889800648
+    },
+    "delta_vs_frozen_d_i": {
+      "success_count": 7,
+      "contact_gate_success_count": 3,
+      "lift_success_count": 7,
+      "true_pinch_success_count": 7,
+      "release_success_count": 0,
+      "true_pinch_morphology_failures_added": 0
+    }
+  },
+  "visual_evidence": {
+    "clean_contact_sheet": "simulations/models/arm_hand_stage1_export/docs/stage3_12c_directional_xclamp_visual_v0/trial0_seed20265613_clean_contact_sheet.png",
+    "clean_observed": {
+      "status": "PASS",
+      "contact_gate_success": true,
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "hold_true_two_tip_pinch_fraction": 1.0,
+      "hold_tip_contact_ratio_mean": 1.0,
+      "hold_non_tip_contact_ratio_mean": 0.0,
+      "hold_wrap_frame_fraction": 0.0
+    },
+    "edge_corrective_contact_sheet": "simulations/models/arm_hand_stage1_export/docs/stage3_12c_directional_xclamp_visual_v0/trial0_seed20260618_clamped_contact_sheet.png",
+    "edge_note": "Fixes a baseline contact failure but has non-tip contact mean 0.333, so it is diagnostic rather than polished demo evidence."
+  },
+  "source_reports": [
+    "simulations/models/arm_hand_stage1_export/docs/stage3_12c_quality_gated_residual_teacher_v0_report.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_12c_quality_gated_residual_teacher_seed20260612_v0_report.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_12c_quality_gated_residual_teacher_seed20265613_v0_report.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_12c_quality_gated_residual_teacher_v0_closeout.md"
+  ],
+  "decision": {
+    "promote_as": "Stage3.12C selected robustness/teacher candidate",
+    "do_not_promote": [
+      "quality-close residual",
+      "PID-like force-feedback wait/preload residual",
+      "full-action ACT/DP",
+      "hardware runtime"
+    ],
+    "next": "Export residual-policy data from the directional x-clamp teacher and compare against frozen D-I in Stage3.13."
+  }
+}

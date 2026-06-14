@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-06-13",
+  "stage": "Stage3.12",
+  "status": "closed_batch_result",
+  "classification": "diagnostic_closeout",
+  "boundary": {
+    "mujoco_only": true,
+    "hardware_runtime": false,
+    "real_camera": false,
+    "direct_force_control_promoted": false,
+    "full_action_act_dp_promoted": false
+  },
+  "runner": "simulations/models/arm_hand_stage1_export/run_stage3_12_autonomous_tuning_batch_v0.py",
+  "baseline": {
+    "name": "stage3_11d_i_demo_quality_static_geometry",
+    "classification": "frozen_diagnostic_demo_anchor",
+    "grasp_offset_x": -0.0014,
+    "grasp_offset_z": 0.0022,
+    "lift_steps": 480,
+    "multiseed": {
+      "trials": 150,
+      "success_count": 136,
+      "contact_gate_success_count": 143,
+      "lift_success_count": 136,
+      "true_pinch_success_count": 136,
+      "release_success_count": 149,
+      "terminal_reason_counts": {
+        "contact_gate_failed": 7,
+        "lift_gate_failed": 7
+      }
+    }
+  },
+  "candidate": {
+    "name": "lift_ls460",
+    "classification": "lift_timing_diagnostic_candidate_not_promoted",
+    "grasp_offset_x": -0.0014,
+    "grasp_offset_z": 0.0022,
+    "lift_steps": 460,
+    "multiseed": {
+      "trials": 150,
+      "success_count": 137,
+      "contact_gate_success_count": 143,
+      "lift_success_count": 140,
+      "true_pinch_success_count": 137,
+      "release_success_count": 149,
+      "terminal_reason_counts": {
+        "contact_gate_failed": 7,
+        "lift_gate_failed": 3,
+        "true_pinch_morphology_gate_failed": 3
+      }
+    }
+  },
+  "decision": "Do not promote lift_ls460. It improves lift continuation but introduces morphology failures.",
+  "artifacts": {
+    "plan": "simulations/models/arm_hand_stage1_export/docs/stage3_12_autonomous_tuning_training_plan_v0.md",
+    "closeout": "simulations/models/arm_hand_stage1_export/docs/stage3_12_autotune_lift_timing_v0_closeout.md",
+    "batch0_report": "simulations/models/arm_hand_stage1_export/docs/stage3_12_autotune_batch0_v0_report.md",
+    "batch1_report": "simulations/models/arm_hand_stage1_export/docs/stage3_12_autotune_batch1_v0_report.md",
+    "batch3_report": "simulations/models/arm_hand_stage1_export/docs/stage3_12_autotune_batch3_v0_report.md"
+  },
+  "next": [
+    "Stop local single-parameter tuning for now.",
+    "Use the runner as the scoreboard for future candidates.",
+    "Move to morphology/quality label extraction and bounded residual or quality-head training.",
+    "Keep PID+AI as offline side-branch signal analysis until it can pass the same gate without morphology regression."
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "version": "stage3_progress_mindmap_v1",
-  "updated_at": "2026-06-07",
+  "updated_at": "2026-06-14",
   "title": "Stage3 传感器感知 MuJoCo 操作图",
   "subtitle": "虚拟视觉 + 合成触觉/滑移 + 阶段式学习控制，用于鸡蛋/易碎物体的温和抓取与保持。",
   "legend": {
@@ -14,13 +14,59 @@
     "id": "stage3",
     "label": "Stage3 总目标",
     "status": "current",
-    "summary": "Stage3 已完成 Stage3.10C-A 第一版 safety ACT/CVAE-style 离线策略训练；下一步是 closed-loop MuJoCo 对比，而不是继续小参数微调。",
+    "summary": "Stage3.11 is closed as of 2026-06-13, Stage4.0 is paused after F2, Stage3.12C selected di_directional_gx_clamp_m0025_p0000 as a MuJoCo-only robustness/teacher candidate at 143 / 150, and Stage3.13A distilled it into a learned bounded grasp-x residual policy that matches teacher at 143 / 150. D-I remains the frozen demo-quality small-ball true-pinch-release diagnostic candidate, Stage3.10E remains the robust mixed-control baseline, and lift_ls460 remains diagnostic only.",
     "metrics": [
-      "Stage3.10A：100/100 safety layer candidate frozen。",
       "Stage3.10B-full_success_v0：60/60 episode，231421 rows，safety_labels [231421,9]。",
-      "Stage3.10C-A：SafetyACTCVAEChunkPolicy 已训练，best epoch 8，best val prior action loss 0.0013452474。",
-      "Stage3.10C-A：val prior RMSE raw 0.0093151014，val hand RMSE raw 0.0072230357，val safety accuracy 0.9905235265。",
-      "当前仍不是 full_action ACT/DP 闭环成功；下一步是 Stage3.10C-B evaluator。"
+      "Stage3.10C-C：scripted_arm_predicted_hand cycle50 50/50，random100_pose005 100/100。",
+      "Stage3.10D-B：v0 88/100 blocked；v1 5 个 stress case 合计 100/100。",
+      "Stage3.10D-C：200 个 episode-level safety-head 样本，8 个 safety label，random val F1 1.000。",
+      "Stage3.10D-D：D-B v1 rescan PASS；新增 depth/noise 与 false-positive stress 12/12；combined_hard 保留为合理拒绝边界。",
+      "当前仍不是 full_action ACT/DP 闭环成功：full_action smoke 0/1 失败。",
+      "Stage3.11B：online safety-head shadow mode PASS；D-B v1 100/100，stress 13/14，unsafe hold-safe prediction 0。",
+      "Stage3.11B 发现：combined_hard 拒绝边界中有 2 个非危险 label mismatch；Stage3.11C 已拆清 repair_configured / repair_active。",
+      "Stage3.11C：164 episodes，2663 trace frames，17 labels，覆盖 clean / pose-noise / mask dropout / occlusion / depth-noise / false-positive / combined_hard。",
+      "Stage3.11 边界：MuJoCo-only；不宣称 full_action ACT/DP 闭环成功；不接真实摄像头、真实触觉、超声或硬件 runtime。",
+      "Stage3.11D-A??? demo ????? two-finger fingertip pinch fraction ? 0?wrap/enclosure ???",
+      "Stage3.11D-B?18mm / 10g ?? search `1 / 108` full PASS?best thumb+middle?hold true two-tip `0.900`?hold lift max `0.1610 m`?clean release?",
+      "Stage3.11D-B ????????????????????????????????? close-up demo ??????",
+      "Stage3.11D-B event-gated low-lift local refine: 27 / 40 full true-pinch-release PASS, best hold lift max about 0.0643 m, true two-tip fraction 1.000, release clean.",
+      "Stage3.11D-B event-gated high-lift refine: 18 / 30 full PASS, contact gate 20 / 30, lift gate 18 / 30, true-pinch morphology 18 / 30, release 20 / 30.",
+      "Stage3.11D-B high-lift best: hold lift max 0.11381 m, hold lift mean 0.11131 m, hold true two-tip fraction 1.000, wrap 0.000, non-tip ratio 0.000, release success True.",
+      "Stage3.11D-B visual review: high-lift side views show ball lifted and released; default view still partially occluded, so no demo-gallery promotion yet.",
+      "Stage3.11D-B randomized robustness: 13 / 24 full PASS, 24 / 24 contact gate, 13 / 24 lift gate, 24 / 24 release; failures all lift_gate_failed.",
+      "Stage3.11D motor force-feedback simulation: max global |Iq| 3.0775 A, max global tendon-tension proxy 287.1294 N, max hand-side |Iq| 0.2097 A, max hand-side tendon-tension proxy 19.3552 N, saturation trial fraction 0.000.",
+      "Stage3.11D diagnosis: contact event is robust in the perturbation probe; slow-lift/hold hand-side tension continuity is the next control signal to gate on.",
+      "Stage3.11D-B force-feedback v0 preload gate: 9 / 24 PASS; raised active-pair tension but harmed true-pinch morphology, so it is not the default controller.",
+      "Stage3.11D-B force-feedback v0b wait-only gate: 13 / 24 PASS; no regression, but no lift-failure rescue.",
+      "Stage3.11D-B 50-trial baseline: 29 / 50 PASS, 49 / 50 contact gate, 29 / 50 lift gate, 49 / 50 release; failures mainly lift_gate_failed.",
+      "Stage3.11D-B gx -0.0008 m 50-trial probe: 34 / 50 PASS, 47 / 50 contact gate, 35 / 50 lift gate, 49 / 50 release; lift failures drop 20 -> 12, contact failures rise 1 -> 3.",
+      "Stage3.11D-B current interpretation: force feedback is an observation/gate/label signal first; next improvement should be coupled geometry refinement plus residual micro-adjust, not blind preload.",
+      "Stage3.11D-C local search: 36 cases, 33 / 36 full event true-pinch-release PASS, contact gate 36 / 36, lift gate 34 / 36, release 36 / 36.",
+      "Stage3.11D-C selected: gx=-0.0008 m, gz=0.0020 m, tip_pair_separation=0.060 m, thumb_mcp=0.28, active_mcp_abd=-0.50, active_pip=-0.70.",
+      "Stage3.11D-C final robustness: 43 / 50 full PASS, contact gate 49 / 50, lift gate 44 / 50, true-pinch gate 43 / 50, release 50 / 50.",
+      "Stage3.11D-C force feedback: mean slow-lift active-pair tension 7.8862 N, mean hold active-pair tension 4.3746 N, saturation trial fraction 0.000.",
+      "Stage3.11D-D dense capture: 200 episodes, 329075 per-step rows, 112875 grasp-evidence training rows, 148 / 200 randomized episode success under capture noise.",
+      "Stage3.11D-D LiftQualityHead: lift_quality_now val F1 0.9998, adjust_needed_now val F1 0.9992, hold_safe_now val F1 1.0000; offline shadow-quality evidence only.",
+      "Stage3.11D-E online shadow: 50 trials, event controller 36 / 50, evidence-phase F1 lift_quality_now 0.9992, adjust_needed_now 0.9980, hold_safe_now 1.0000; all 14 failed episodes had adjust_needed_now predicted.",
+      "Stage3.11D-F residual probe: wait-only, extra close, slow-lift x-retarget, and pre-lift x-retarget did not improve robustness; unconditional residual micro-adjust is diagnostic/rejected.",
+      "Stage3.11D-G static geometry: gx=-0.0014 m reached 42 / 50, 46 / 50, and 40 / 50 across three known seeds, improving the aggregate from 115 / 150 to 128 / 150.",
+      "Stage3.11D-H max-robustness geometry: gx=-0.0014 m, gz=0.0025 m, lift_steps=480 reached 137 / 150 but visual hold had non-tip contact.",
+      "Stage3.11D-I demo-quality geometry: gx=-0.0014 m, gz=0.0022 m, lift_steps=480 reached 136 / 150 and inspected hold_thumb_side had tip=1.00, non_tip=0.00, wrap=False.",
+      "Stage3.11 closeout: D-I viewer/contact-conditioned repair is backlog; do not continue open-ended parameter tuning without a new gate.",
+      "Stage4.0 pause: F0/F1/F2 are retained as readiness artifacts; F3/F4/PID+AI/hardware logger are backlog.",
+      "Stage3.12C selected x-clamp teacher: di_directional_gx_clamp_m0025_p0000 reached 143 / 150 vs frozen D-I 136 / 150; contact 146 vs 143, lift 143 vs 136, release 149 / 150 unchanged, no added true-pinch morphology failures.",
+      "Stage3.11D-B lift-timing diagnostic backfill: nominal gx local candidate was rejected at 15 / 50 randomized; keeping original hand geometry with gx -0.0008 and lift_steps 480 improved B-line robustness from 34 / 50 to 36 / 50. This does not supersede later Stage3.11D-C/D-D records.",
+      "Stage3.12 autonomous tuning pass: added run_stage3_12_autonomous_tuning_batch_v0.py plus Batch0/Batch1/Batch2/Batch3 reports, CSVs, and metadata.",
+      "Stage3.12 lift_ls460 diagnostic: multiseed 137 / 150 vs frozen D-I 136 / 150; lift failures reduced 7 -> 3, but true-pinch morphology failures increased 0 -> 3, so it is not promoted.",
+      "Stage3.12 decision: keep D-I frozen as demo-quality diagnostic anchor; retain lift_ls460 only as a lift-timing diagnostic candidate; Stage3.12B quality head is now complete and next work is bounded residual teacher design.",
+      "Stage3.12B dataset: 60 D-I/lift_ls460 episodes, 94586 dense rows, 50 / 60 success, with contact/lift/morphology failures represented.",
+      "Stage3.12B training: morphology_clean_now val F1 1.0000, lift_quality_now val F1 1.0000, future_success val F1 0.9400.",
+      "Stage3.12B fresh shadow: 24 episodes / 10801 evidence frames; morphology_clean_now F1 0.9999, lift_quality_now F1 0.9991, future_success F1 0.9466.",
+      "Stage3.12B boundary: quality head is diagnostic/shadow only; penetration_risk_now is not a primary trigger due rare positives; no controller or lift_ls460 promotion.",
+      "Stage3.12C rejected quality-close and PID-like force-feedback residual branches; next work is residual-policy data/training from the selected x-clamp teacher, not more D-I parameter tuning.",
+      "Stage3.13A distilled x-clamp policy: dataset 300 examples, validation MAE 0.00001579 m, learned safe policy matched teacher at 143 / 150 and beat D-I by +7 / 150 without added morphology failures.",
+      "Stage3.13B next: add residual deadband/active gating while preserving the 143 / 150 matched gate, then attack the remaining 3 lift and 4 contact failures.",
+      "Pre-Isaac Lab freeze index: docs/simulation_freeze_before_isaac_lab_20260614.md is the root-level MuJoCo evidence map and savepoint blocker list before runtime replacement."
     ],
     "sections": [
       {
@@ -29,6 +75,42 @@
           "Stage3 不是只做一个 demo，而是在建立视觉、触觉、技能库、模型训练和失败验收的闭环。",
           "当前可用的最稳候选是视觉脚本手臂/手腕 + ACT-lite 捏持手指控制 + Stage3.7D full-hand fallback + 触觉 repair + 视觉/触觉最终验收。",
           "LLM/VLA 以后只能做任务调度或技能选择，不直接输出 actuator。"
+        ]
+      },
+      {
+        "title": "Stage3.11D-D closeout",
+        "items": [
+          "Dense sensor-fusion dataset is exported from the Stage3.11D-C selected center.",
+          "LiftQualityHead is trained offline and should be used as a shadow evaluator first.",
+          "Force feedback remains a simulated sensor/label signal, not direct preload control.",
+          "Next stage is Stage3.11D-E shadow evaluation, then bounded residual micro-adjust only if shadow checks pass."
+        ]
+      },
+      {
+        "title": "Stage3.11D-E closeout",
+        "items": [
+          "LiftQualityHead now runs online in shadow mode without changing controller actions.",
+          "Evidence-phase shadow gate passed on 50 trials with F1 0.9992 / 0.9980 / 1.0000.",
+          "All failed episodes were flagged by adjust_needed_now; false windows cluster in slow_lift lift-gate boundaries.",
+          "The quality head remains shadow/label telemetry, not direct control."
+        ]
+      },
+      {
+        "title": "Stage3.11D-F/G closeout",
+        "items": [
+          "D-F unconditional residual micro-adjust was rejected: blind wait/close/x-retarget did not beat baseline and pre-lift retarget could damage successes.",
+          "D-G selected static gx=-0.0014 m and improved known-seed aggregate from 115 / 150 to 128 / 150.",
+          "D-H reached 137 / 150 as the max-robustness point but showed non-tip contact in visual inspection.",
+          "D-I selected gx=-0.0014 m, gz=0.0022 m, lift_steps=480 as the current demo-quality center with 136 / 150 and clean thumb-side tip-only visual evidence.",
+          "D-I thumb-side viewer/demo alias and contact-conditioned repair are backlog, not the next mainline."
+        ]
+      },
+      {
+        "title": "Stage3.11D-B lift-timing diagnostic backfill",
+        "items": [
+          "Nominal local geometry selected by center-pose score failed randomized robustness at 15 / 50 and was rejected.",
+          "Original hand geometry plus gx -0.0008 and lift_steps 480 reached 36 / 50 randomized robustness.",
+          "This is a B-line diagnostic artifact and does not supersede Stage3.11D-C/D-D."
         ]
       }
     ],
@@ -106,7 +188,7 @@
         "id": "stage3_control_path",
         "label": "控制和学习路线",
         "status": "current",
-        "summary": "控制路线已从冻结 safety layer 和 safety-labeled 数据推进到第一版 safety ACT/CVAE-style 离线策略；下一步做 closed-loop eval。",
+        "summary": "???????? force-feedback-aware lift gating?? MuJoCo actuator load ?? driver-side current/torque/tendon tension??? hand-side slow-lift/hold tension continuity ????? lift permission ???",
         "children": [
           {
             "id": "stage3_5_expert",
@@ -297,8 +379,8 @@
               {
                 "title": "如果成功/失败",
                 "items": [
-                  "如果 Stage3.10 模型训练成功，就进入 Stage3.11 多技能泛化控制。",
-                  "如果 Stage3.10 模型训练失败，不回到 Stage3.9 小参数微调，而按数据、视觉、动作表示和 full_action 稳定性拆原因。"
+                  "Stage3.10 已经作为 mixed-control safety baseline 收口；Stage3.11B 已完成在线 safety-head shadow 接入；Stage3.11C 已完成 trace-frame labels。",
+                  "如果 Stage3.11D 成功，就推进 constrained residual/full-action attempt；如果失败，先修标签使用方式、策略结构和 evaluator 对齐，不回退到小参数微调。"
                 ]
               }
             ],
@@ -438,32 +520,30 @@
           },
           {
             "id": "stage3_10c_safety_act_cvae_policy_v0",
-            "label": "Stage3.10C-A safety ACT/CVAE-style 离线策略",
-            "status": "current",
-            "summary": "已用 Stage3.10B-full_success_v0 训练第一版安全感知 ACT/CVAE-style action chunk policy；这是离线训练通过，不是闭环抓取通过。",
+            "label": "Stage3.10 mixed-control safety baseline",
+            "status": "done",
+            "summary": "Stage3.10 已从 safety ACT/CVAE-style 离线/闭环评估推进到遮挡/noisy-vision safety head 和新增 stress 复扫；当前作为 MuJoCo mixed-control safety baseline 收口。",
             "metrics": [
-              "训练数据：60/60 episode，231421 rows，obs [231421,130]，actions [231421,26]，safety_labels [231421,9]。",
-              "训练窗口：24000 train windows，6000 val windows，horizon 16，stride 8。",
-              "best epoch 8；best val prior action loss 0.0013452474。",
-              "val prior RMSE raw 0.0093151014；val hand RMSE raw 0.0072230357。",
-              "val safety accuracy 0.9905235265，precision 0.9993049615，recall 0.9437992325。",
-              "边界：还没有 MuJoCo closed-loop eval，也没有 full-action ACT/DP promotion。"
+              "10B-full：60/60 episode，231421 rows，safety_labels [231421,9]。",
+              "10C-C：cycle50 50/50；random100_pose005 100/100；full_action smoke 0/1 失败。",
+              "10D-A：鲁棒性探针 40/40。",
+              "10D-B：遮挡/noisy-vision v0 88/100 blocked，v1 100/100。",
+              "10D-C：200 episode safety-head dataset，random val F1 1.000，v0->v1 holdout F1 0.858399。",
+              "10D-D：D-B v1 safety-head rescan PASS；新增 stress 12/12。",
+              "视觉修复：depth_noise_5mm 初始视觉失败通过 median-depth ray fallback 修复。",
+              "保留边界：combined_hard 初始视觉拒绝；真实硬件/真实摄像头/真实触觉未接入。"
             ],
             "sections": [
               {
                 "title": "如果成功",
                 "items": [
-                  "进入 Stage3.10C-B，写 closed-loop evaluator。",
-                  "优先用 scripted_arm_predicted_hand，让模型控制手指 chunk，手臂/手腕继续由视觉脚本控制。",
-                  "与 Stage3.10A safety layer 同场景对比，报告成功率、slip、final vision 和 safety label 触发情况。"
+                  "Stage3.10 收口，进入 Stage3.11：在线 safety-head 接入、逐帧 noisy/occlusion labels、staged full-action/residual policy。"
                 ]
               },
               {
                 "title": "如果失败",
                 "items": [
-                  "先拆数据分布、动作 chunk prior、phase/skill 条件、safety label 辅助头和 final vision 遮挡。",
-                  "不回到 Stage3.9 小参数微调。",
-                  "full-action 失败时继续保留 scripted arm/wrist，只把手指或安全残差交给模型。"
+                  "不要放宽 slip/crush/penetration 阈值；若要攻克 combined_hard，应补多相机一致性、时序滤波或训练式 pose estimator。"
                 ]
               }
             ],
@@ -471,9 +551,165 @@
               "train_stage3_10c_safety_act_cvae_policy_v0.py",
               "checkpoints/stage3_10c_safety_act_cvae_policy_v0.pth",
               "metadata/stage3_10c_safety_act_cvae_policy_v0_train.json",
+              "eval_stage3_10c_safety_act_cvae_policy_v0.py",
+              "docs/stage3_10c_safety_act_cvae_policy_v0_closed_loop_closeout.md",
+              "docs/stage3_10c_safety_act_cvae_policy_v0_closed_loop_benchmark_closeout.md",
+              "docs/stage3_10c_safety_act_cvae_policy_v0_closed_loop_random100_pose005_report.md",
+              "docs/stage3_10c_safety_act_cvae_policy_v0_closed_loop_cycle50_report.md",
+              "docs/stage3_10c_safety_act_cvae_policy_v0_closed_loop_cycle10_report.md",
+              "docs/stage3_10c_safety_act_cvae_policy_v0_closed_loop_full_action_smoke.md",
               "docs/stage3_10c_safety_act_cvae_policy_v0_train_report.md",
               "docs/stage3_10c_safety_act_cvae_policy_v0_closeout.md",
-              "data/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.npz"
+              "data/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.npz",
+              "train_stage3_10d_c_occlusion_safety_head_v0.py",
+              "data/stage3_10d_c_occlusion_safety_head_dataset_v0.npz",
+              "checkpoints/stage3_10d_c_occlusion_safety_head_v0.npz",
+              "metadata/stage3_10d_c_occlusion_safety_head_v0.json",
+              "docs/stage3_10d_c_occlusion_safety_head_v0_closeout.md",
+              "run_stage3_10d_d_safety_head_rescan_v0.py",
+              "metadata/stage3_10d_d_safety_head_rescan_v0.json",
+              "docs/stage3_10d_d_safety_head_rescan_v0_closeout.md",
+              "metadata/stage3_10e_stage3_10_closeout.json",
+              "docs/stage3_10e_stage3_10_closeout.md"
+            ]
+          },
+          {
+            "id": "stage3_11_online_safety_residual_plan",
+            "label": "Stage3.11 在线 safety head 与 residual policy",
+            "status": "current",
+            "summary": "Stage3.11D-B ??????? thumb+middle true-pinch-release ? hold ?????????? event-driven contact-gated refinement ???????????????? residual/full_action ???",
+            "metrics": [
+              "Stage3.11B 结果：D-B v1 100/100；non-boundary stress 12/12；含 combined_hard 边界总 stress 13/14。",
+              "shadow 记录：114 条 episode prediction summary；false failure、missed failure、unsafe hold-safe prediction 都是 0。",
+              "Stage3.11C 结果：164 episodes，2663 trace frames，17 labels；必需正样本和覆盖桶都不缺。",
+              "C 的结构修复：`repair_configured` 900 frames，`repair_active` 652 frames，二者不再混在一个旧标签里。",
+              "Stage3.11 已收尾：D-I 冻结为 demo-quality 诊断候选，后续 D-I repair/viewer 进入 backlog。",
+              "不可宣称：full_action ACT/DP 闭环成功、真实摄像头、真实触觉、超声或硬件 runtime。",
+              "Stage3.11D-A ????? demo ??????????/??????????????",
+              "Stage3.11D-B ???provisional diagnostic candidate only??? demo gallery?????? baseline?",
+              "Stage3.11D-B lift-timing diagnostic backfill: nominal gx local candidate was rejected at 15 / 50 randomized; keeping original hand geometry with gx -0.0008 and lift_steps 480 improved B-line robustness from 34 / 50 to 36 / 50. This does not supersede later Stage3.11D-C/D-D records."
+            ],
+            "sections": [
+              {
+                "title": "Stage3.11A/B/C 产出",
+                "items": [
+                  "Stage3.11A：计划文档、metadata、Stage3 子图、项目总图、快速入口、agentic index、nervous-system capsule 同步。",
+                  "Stage3.11B：runner、evaluator shadow extension、closeout 和 metadata 已生成；shadow mode 只观察，不改变动作。",
+                  "Stage3.11C：exporter、NPZ、JSONL、metadata 和 closeout 已生成；当前粒度是 trace-frame，不是 dense obs/action。"
+                ]
+              },
+              {
+                "title": "如果成功",
+                "items": [
+                  "进入 Stage4/readiness、real-to-sim sensor contract，或一个有明确 promotion gate 的 bounded sensor-conditioned residual policy。",
+                  "如需重开 residual training，先定义 dense obs/action 与闭环 gate，不把 trace-frame 标签伪装成完整训练数据。"
+                ]
+              },
+              {
+                "title": "如果失败",
+                "items": [
+                  "如果 D 的 residual/hand policy 不提升，先修标签使用方式、策略结构、数据覆盖或 residual 注入强度，不放宽抓取阈值。",
+                  "如果后续 residual/full_action 失败，记录为边界，不回退到单 demo 微调。"
+                ]
+              },
+              {
+                "title": "Stage3.11D-A/B ??",
+                "items": [
+                  "Stage3.11D-A?pinch morphology/friction audit ??? review ????????? demo ? wrap/enclosure ???",
+                  "Stage3.11D-B????? true-pinch-release search?report?selected metadata ???? visual checks?"
+                ]
+              },
+              {
+                "title": "????",
+                "items": [
+                  "?????????? fingertip proxy geometry?object/material?phase timing ? morphology objective?",
+                  "??? hold ????? learned policy ? full-action ???"
+                ]
+              },
+              {
+                "title": "Stage3.11D-B lift-timing diagnostic backfill",
+                "items": [
+                  "Nominal local geometry selected by center-pose score failed randomized robustness at 15 / 50 and was rejected.",
+                  "Original hand geometry plus gx -0.0008 and lift_steps 480 reached 36 / 50 randomized robustness.",
+                  "This is a B-line diagnostic artifact and does not supersede Stage3.11D-C/D-D."
+                ]
+              }
+            ],
+            "links": [
+              "docs/stage3_11_online_safety_and_residual_policy_plan.md",
+              "metadata/stage3_11_online_safety_and_residual_policy_plan.json",
+              "docs/stage3_11b_online_safety_head_shadow_v0_closeout.md",
+              "metadata/stage3_11b_online_safety_head_shadow_v0.json",
+              "run_stage3_11b_online_safety_head_shadow_v0.py",
+              "export_stage3_11c_frame_safety_labels_v0.py",
+              "docs/stage3_11c_frame_safety_labels_v0_closeout.md",
+              "data/stage3_11c_frame_safety_labels_v0.npz",
+              "metadata/stage3_11c_frame_safety_labels_v0.json",
+              "docs/stage3_10e_stage3_10_closeout.md",
+              "docs/stage3_10d_d_safety_head_rescan_v0_closeout.md",
+              "docs/stage3_10d_c_occlusion_safety_head_v0_closeout.md",
+              "run_stage3_10d_d_safety_head_rescan_v0.py",
+              "train_stage3_10d_c_occlusion_safety_head_v0.py",
+              "train_stage3_11d_b_ball_true_pinch_release_candidates_v0.py",
+              "docs/stage3_11d_b_ball_true_pinch_release_v0_closeout.md",
+              "docs/stage3_11d_b_ball_true_pinch_release_candidates_v0_report.md",
+              "metadata/stage3_11d_b_ball_true_pinch_release_candidates_v0.json",
+              "metadata/stage3_11d_b_ball_true_pinch_release_selected_v0.json",
+              "docs/visual_checks_stage3_11d_b_ball_true_pinch_release_v0/multiview_hold100_thumb_middle_pass/finger_side_contact_sheet.png",
+              "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_gxm0008_lift_timing_expansion_v0_closeout.md",
+              "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_gxm0008_lift_timing_expansion_v0.json",
+              "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_50_gxm0008_ls480_v0_report.md",
+              "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_50_gxm0008_ls480_v0.json"
+            ]
+          }
+        ],
+        "links": [
+          "train_stage3_11d_b_ball_true_pinch_release_candidates_v0.py",
+          "docs/stage3_11d_b_ball_true_pinch_release_v0_closeout.md",
+          "docs/stage3_11d_b_ball_true_pinch_release_candidates_v0_report.md",
+          "metadata/stage3_11d_b_ball_true_pinch_release_candidates_v0.json",
+          "metadata/stage3_11d_b_ball_true_pinch_release_selected_v0.json",
+          "simulations/models/arm_hand_stage1_export/train_stage3_11d_b_event_contact_gated_refine_v0.py",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_refine_highlift_v0_report.md",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_highlift_v0.json",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_highlift_selected_v0.json",
+          "simulations/models/arm_hand_stage1_export/docs/v11db_highlift_vis/multiview_best/finger_side_contact_sheet.png",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_refine_v0_report.md",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_v0.json",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_selected_v0.json",
+          "simulations/models/arm_hand_stage1_export/run_stage3_11d_b_event_contact_gated_robustness_v0.py",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_v0_report.md",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_v0.json",
+          "simulations/models/arm_hand_stage1_export/external_sensors/mujoco_motor_force_feedback_sensor.py",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_motor_force_feedback_simulation_v0.md"
+        ],
+        "metrics": [
+          "Stage3.11D-B event-gated low-lift local refine: 27 / 40 full true-pinch-release PASS, best hold lift max about 0.0643 m, true two-tip fraction 1.000, release clean.",
+          "Stage3.11D-B event-gated high-lift refine: 18 / 30 full PASS, contact gate 20 / 30, lift gate 18 / 30, true-pinch morphology 18 / 30, release 20 / 30.",
+          "Stage3.11D-B high-lift best: hold lift max 0.11381 m, hold lift mean 0.11131 m, hold true two-tip fraction 1.000, wrap 0.000, non-tip ratio 0.000, release success True.",
+          "Stage3.11D-B visual review: high-lift side views show ball lifted and released; default view still partially occluded, so no demo-gallery promotion yet.",
+          "Stage3.11D-B randomized robustness: 13 / 24 full PASS, 24 / 24 contact gate, 13 / 24 lift gate, 24 / 24 release; failures all lift_gate_failed.",
+          "Stage3.11D motor force-feedback simulation: max global |Iq| 3.0775 A, max global tendon-tension proxy 287.1294 N, max hand-side |Iq| 0.2097 A, max hand-side tendon-tension proxy 19.3552 N, saturation trial fraction 0.000.",
+          "Stage3.11D diagnosis: contact event is robust in the perturbation probe; slow-lift/hold hand-side tension continuity is the next control signal to gate on.",
+          "Stage3.12B dataset: 60 D-I/lift_ls460 episodes, 94586 dense rows, 50 / 60 success, with contact/lift/morphology failures represented.",
+          "Stage3.12B training: morphology_clean_now val F1 1.0000, lift_quality_now val F1 1.0000, future_success val F1 0.9400.",
+          "Stage3.12B fresh shadow: 24 episodes / 10801 evidence frames; morphology_clean_now F1 0.9999, lift_quality_now F1 0.9991, future_success F1 0.9466.",
+          "Stage3.12B boundary: quality head is diagnostic/shadow only; penetration_risk_now is not a primary trigger due rare positives; no controller or lift_ls460 promotion."
+        ],
+        "sections": [
+          {
+            "title": "????",
+            "items": [
+              "Keep Stage3.11D-I frozen; improve label coverage, evaluator alignment, or contact-geometry modeling instead of returning to single-parameter tuning."
+            ]
+          },
+          {
+            "title": "Stage3.12B morphology-quality closeout",
+            "items": [
+              "Dataset: 60 episodes / 94586 dense rows across baseline_di and lift_ls460.",
+              "Offline head: morphology_clean_now validation F1 1.0000; future_success validation F1 0.9400.",
+              "Fresh shadow: morphology_clean_now F1 0.9999 over 10801 evidence frames.",
+              "Decision: promote as diagnostic/shadow quality asset only; next is bounded residual teacher design."
             ]
           }
         ]
@@ -619,37 +855,190 @@
         ]
       },
       {
-        "id": "next_stage3_10",
-        "label": "Stage3.10C-B 闭环评估",
-        "status": "next",
-        "summary": "Stage3.10C-A 已训练出 checkpoint；下一步必须把它放进 MuJoCo closed-loop，并与 Stage3.10A safety layer 同场景对比。",
+        "id": "next_stage3_12",
+        "label": "Stage3.12B morphology-quality shadow",
+        "status": "current",
+        "summary": "Stage3.12 selected the directional x-clamp teacher, and Stage3.13A has distilled it into a learned bounded grasp-x residual policy. The learned safe policy matches teacher at 143 / 150 and beats D-I by +7 / 150; next work is deadband/active gating plus remaining contact/lift failure reduction.",
         "metrics": [
-          "待评估 checkpoint：checkpoints/stage3_10c_safety_act_cvae_policy_v0.pth。",
-          "第一执行模式：scripted_arm_predicted_hand。",
-          "对照基线：Stage3.10A safety layer v0。",
-          "必须记录成功率、full hand/pinch 分支、hold slip、final vision、safety label 触发和失败原因。",
-          "若失败，优先分析数据分布、动作 chunk prior、phase/skill 条件和 final vision 遮挡。"
+          "?????18mm / 10g ball?thumb+middle??? broad grid `1 / 108` full PASS?",
+          "???????????????????????? release clean?",
+          "???????? slip/crush/penetration/floor-contact ? morphology gates?",
+          "?????? provisional diagnostic candidate ??? robust baseline?full_action ACT/DP ??????",
+          "Stage3.11D-B event-gated low-lift local refine: 27 / 40 full true-pinch-release PASS, best hold lift max about 0.0643 m, true two-tip fraction 1.000, release clean.",
+          "Stage3.11D-B event-gated high-lift refine: 18 / 30 full PASS, contact gate 20 / 30, lift gate 18 / 30, true-pinch morphology 18 / 30, release 20 / 30.",
+          "Stage3.11D-B high-lift best: hold lift max 0.11381 m, hold lift mean 0.11131 m, hold true two-tip fraction 1.000, wrap 0.000, non-tip ratio 0.000, release success True.",
+          "Stage3.11D-B visual review: high-lift side views show ball lifted and released; default view still partially occluded, so no demo-gallery promotion yet.",
+          "Stage3.11D-B randomized robustness: 13 / 24 full PASS, 24 / 24 contact gate, 13 / 24 lift gate, 24 / 24 release; failures all lift_gate_failed.",
+          "Stage3.11D motor force-feedback simulation: max global |Iq| 3.0775 A, max global tendon-tension proxy 287.1294 N, max hand-side |Iq| 0.2097 A, max hand-side tendon-tension proxy 19.3552 N, saturation trial fraction 0.000.",
+          "Stage3.11D diagnosis: contact event is robust in the perturbation probe; slow-lift/hold hand-side tension continuity is the next control signal to gate on.",
+          "Stage3.11D-B force-feedback v0 preload gate: 9 / 24 PASS; raised active-pair tension but harmed true-pinch morphology, so it is not the default controller.",
+          "Stage3.11D-B force-feedback v0b wait-only gate: 13 / 24 PASS; no regression, but no lift-failure rescue.",
+          "Stage3.11D-B 50-trial baseline: 29 / 50 PASS, 49 / 50 contact gate, 29 / 50 lift gate, 49 / 50 release; failures mainly lift_gate_failed.",
+          "Stage3.11D-B gx -0.0008 m 50-trial probe: 34 / 50 PASS, 47 / 50 contact gate, 35 / 50 lift gate, 49 / 50 release; lift failures drop 20 -> 12, contact failures rise 1 -> 3.",
+          "Stage3.11D-B current interpretation: force feedback is an observation/gate/label signal first; next improvement should be coupled geometry refinement plus residual micro-adjust, not blind preload.",
+          "Stage3.11D-C local search: 36 cases, 33 / 36 full event true-pinch-release PASS, contact gate 36 / 36, lift gate 34 / 36, release 36 / 36.",
+          "Stage3.11D-C selected: gx=-0.0008 m, gz=0.0020 m, tip_pair_separation=0.060 m, thumb_mcp=0.28, active_mcp_abd=-0.50, active_pip=-0.70.",
+          "Stage3.11D-C final robustness: 43 / 50 full PASS, contact gate 49 / 50, lift gate 44 / 50, true-pinch gate 43 / 50, release 50 / 50.",
+          "Stage3.11D-C force feedback: mean slow-lift active-pair tension 7.8862 N, mean hold active-pair tension 4.3746 N, saturation trial fraction 0.000.",
+          "Stage3.11D-D dense capture: 200 episodes, 329075 per-step rows, 112875 grasp-evidence training rows, 148 / 200 randomized episode success under capture noise.",
+          "Stage3.11D-D LiftQualityHead: lift_quality_now val F1 0.9998, adjust_needed_now val F1 0.9992, hold_safe_now val F1 1.0000; offline shadow-quality evidence only.",
+          "Stage3.11D-E online shadow: 50 trials, event controller 36 / 50, evidence-phase F1 lift_quality_now 0.9992, adjust_needed_now 0.9980, hold_safe_now 1.0000; all 14 failed episodes had adjust_needed_now predicted.",
+          "Stage3.11D-F residual probe rejected unconditional residual micro-adjust variants.",
+          "Stage3.11D-G static geometry gx=-0.0014 m improved known-seed aggregate from 115 / 150 to 128 / 150.",
+          "Stage3.11D-I demo-quality geometry reached 136 / 150 with clean thumb-side tip-only visual evidence.",
+          "Stage3.12 autonomous tuning pass: added run_stage3_12_autonomous_tuning_batch_v0.py plus Batch0/Batch1/Batch2/Batch3 reports, CSVs, and metadata.",
+          "Stage3.12 lift_ls460 diagnostic: multiseed 137 / 150 vs frozen D-I 136 / 150; lift failures reduced 7 -> 3, but true-pinch morphology failures increased 0 -> 3, so it is not promoted.",
+          "Stage3.12 decision: keep D-I frozen as demo-quality diagnostic anchor; retain lift_ls460 only as a lift-timing diagnostic candidate; Stage3.12B quality head is now complete and next work is bounded residual teacher design.",
+          "Stage3.12B dataset: 60 D-I/lift_ls460 episodes, 94586 dense rows, 50 / 60 success, with contact/lift/morphology failures represented.",
+          "Stage3.12B training: morphology_clean_now val F1 1.0000, lift_quality_now val F1 1.0000, future_success val F1 0.9400.",
+          "Stage3.12B fresh shadow: 24 episodes / 10801 evidence frames; morphology_clean_now F1 0.9999, lift_quality_now F1 0.9991, future_success F1 0.9466.",
+          "Stage3.12B boundary: quality head is diagnostic/shadow only; penetration_risk_now is not a primary trigger due rare positives; no controller or lift_ls460 promotion."
         ],
         "sections": [
           {
+            "title": "Stage3.12B morphology-quality closeout",
+            "items": [
+              "Dataset: 60 episodes / 94586 dense rows across baseline_di and lift_ls460.",
+              "Offline head: morphology_clean_now validation F1 1.0000; future_success validation F1 0.9400.",
+              "Fresh shadow: morphology_clean_now F1 0.9999 over 10801 evidence frames.",
+              "Decision: promote as diagnostic/shadow quality asset only; next is bounded residual teacher design."
+            ]
+          },
+          {
+            "title": "Stage3.12 autotune closeout",
+            "items": [
+              "Batch0 smoke: lift_ls460 and robust_gz0025 led D-I on 12-trial smoke, so both advanced to 50-trial validation.",
+              "Batch1 50-trial: lift_ls460 reached 43 / 50 vs D-I 41 / 50 on the same seed.",
+              "Batch2 multiseed: lift_ls460 reached 137 / 150 vs D-I 136 / 150, but morphology failures rose to 3.",
+              "Batch3 combos tied baseline and did not justify more local parameter tuning.",
+              "Decision: keep D-I frozen; Stage3.12B quality head is complete; move next work to bounded residual teacher design."
+            ]
+          },
+          {
             "title": "如果成功",
             "items": [
-              "进入 Stage3.10D 或 Stage3.11：扩大 benchmark、增加遮挡/多视角和 held-out 场景。"
+              "进入一个 bounded Stage3 controller/model branch，并和 Stage3.10E、Stage3.11D-I frozen assets 做同场对照。"
             ]
           },
           {
             "title": "如果失败",
             "items": [
-              "先修 dataloader/模型表示/安全标签设计；不要放宽成功阈值，也不要回到 Stage3.9 微调。"
+              "保留 Stage3.10E 和 Stage3.11D-I 作为当前资产；先修 gate、标签、数据覆盖或 evaluator 对齐，不回到 D-I 参数微调。"
+            ]
+          },
+          {
+            "title": "????",
+            "items": [
+              "Keep Stage3.11D-I frozen; improve label coverage, evaluator alignment, or contact-geometry modeling instead of returning to single-parameter tuning."
+            ]
+          },
+          {
+            "title": "Stage3.11D-B force-feedback/offset expansion",
+            "items": [
+              "Use gx -0.0008 m as the next local-search center, not as a promoted baseline.",
+              "Keep active-pair force feedback in observation/gate/label outputs.",
+              "Design residual micro-adjust around geometry correction rather than direct preload force control.",
+              "Rerun 50-trial robustness and close-up visual review before any demo promotion."
+            ]
+          },
+          {
+            "title": "Stage3.11D-C closeout",
+            "items": [
+              "Selected gx=-0.0008 m center is now the dense-capture center.",
+              "Neighbor variants did not beat the center under the shared final seed.",
+              "Force feedback remains observation/gate/label; direct preload is not promoted.",
+              "Next stage is dense capture, then LiftQualityHead and bounded residual micro-adjust training."
+            ]
+          },
+          {
+            "title": "Stage3.11D-D closeout",
+            "items": [
+              "Dense sensor-fusion dataset is exported from the Stage3.11D-C selected center.",
+              "LiftQualityHead is trained offline and should be used as a shadow evaluator first.",
+              "Force feedback remains a simulated sensor/label signal, not direct preload control.",
+              "Next stage is Stage3.11D-E shadow evaluation, then bounded residual micro-adjust only if shadow checks pass."
+            ]
+          },
+          {
+            "title": "Stage3.11D-E closeout",
+            "items": [
+              "LiftQualityHead now runs online in shadow mode without changing controller actions.",
+              "Evidence-phase shadow gate passed on 50 trials with F1 0.9992 / 0.9980 / 1.0000.",
+              "All failed episodes were flagged by adjust_needed_now; false windows cluster in slow_lift lift-gate boundaries.",
+              "The quality head remains shadow/label telemetry, not direct control."
+            ]
+          },
+          {
+            "title": "Stage3.11D-F/G closeout",
+            "items": [
+              "D-F unconditional residual micro-adjust was rejected: blind wait/close/x-retarget did not beat baseline and pre-lift retarget could damage successes.",
+              "D-G selected static gx=-0.0014 m and improved known-seed aggregate from 115 / 150 to 128 / 150.",
+              "D-H reached 137 / 150 as the max-robustness point but showed non-tip contact in visual inspection.",
+              "D-I selected gx=-0.0014 m, gz=0.0022 m, lift_steps=480 as the current demo-quality center with 136 / 150 and clean thumb-side tip-only visual evidence.",
+              "D-I thumb-side viewer/demo alias and contact-conditioned repair are backlog, not the next mainline."
             ]
           }
         ],
         "links": [
-          "train_stage3_10c_safety_act_cvae_policy_v0.py",
-          "checkpoints/stage3_10c_safety_act_cvae_policy_v0.pth",
-          "docs/stage3_10c_safety_act_cvae_policy_v0_closeout.md",
-          "configs/stage3_10a_skillzoo_safety_layer_v0.json",
-          "run_stage3_10a_safety_layer_v0.py"
+          "docs/stage3_11_online_safety_and_residual_policy_plan.md",
+          "metadata/stage3_11_online_safety_and_residual_policy_plan.json",
+          "docs/stage3_11b_online_safety_head_shadow_v0_closeout.md",
+          "metadata/stage3_11b_online_safety_head_shadow_v0.json",
+          "run_stage3_11b_online_safety_head_shadow_v0.py",
+          "export_stage3_11c_frame_safety_labels_v0.py",
+          "docs/stage3_11c_frame_safety_labels_v0_closeout.md",
+          "data/stage3_11c_frame_safety_labels_v0.npz",
+          "metadata/stage3_11c_frame_safety_labels_v0.json",
+          "docs/stage3_10e_stage3_10_closeout.md",
+          "docs/stage3_10d_d_safety_head_rescan_v0_closeout.md",
+          "train_stage3_11d_b_ball_true_pinch_release_candidates_v0.py",
+          "docs/stage3_11d_b_ball_true_pinch_release_v0_closeout.md",
+          "docs/stage3_11d_b_ball_true_pinch_release_candidates_v0_report.md",
+          "metadata/stage3_11d_b_ball_true_pinch_release_candidates_v0.json",
+          "metadata/stage3_11d_b_ball_true_pinch_release_selected_v0.json",
+          "docs/visual_checks_stage3_11d_b_ball_true_pinch_release_v0/multiview_hold100_thumb_middle_pass/finger_side_contact_sheet.png",
+          "simulations/models/arm_hand_stage1_export/train_stage3_11d_b_event_contact_gated_refine_v0.py",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_refine_highlift_v0_report.md",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_highlift_v0.json",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_highlift_selected_v0.json",
+          "simulations/models/arm_hand_stage1_export/docs/v11db_highlift_vis/multiview_best/finger_side_contact_sheet.png",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_refine_v0_report.md",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_v0.json",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_selected_v0.json",
+          "simulations/models/arm_hand_stage1_export/run_stage3_11d_b_event_contact_gated_robustness_v0.py",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_v0_report.md",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_v0.json",
+          "simulations/models/arm_hand_stage1_export/external_sensors/mujoco_motor_force_feedback_sensor.py",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_motor_force_feedback_simulation_v0.md",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_force_feedback_offset_expansion_v0_closeout.md",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_force_feedback_offset_expansion_v0.json",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_50_baseline_v0_report.md",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_50_baseline_v0.json",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_50_gxm0008_v0_report.md",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_50_gxm0008_v0.json",
+          "simulations/models/arm_hand_stage1_export/train_stage3_11d_c_geometry_force_refine_v0.py",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_c_geometry_force_refine_v0_closeout.md",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_c_geometry_force_refine_v0_report.md",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_c_geometry_force_refine_v0.json",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_c_geometry_force_refine_selected_v0.json",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_c_geometry_force_refine_vis/s311dc_thumb_middle_gxm0p0008_gzp0p0020_sep0p060_tmcpp0p280_aabdm0p500_apipm0p700_contact_sheet.png",
+          "simulations/models/arm_hand_stage1_export/export_stage3_11d_d_dense_sensor_fusion_dataset_v0.py",
+          "simulations/models/arm_hand_stage1_export/train_stage3_11d_d_lift_quality_head_v0.py",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_d_dense_sensor_fusion_lift_quality_v0_closeout.md",
+          "simulations/models/arm_hand_stage1_export/data/stage3_11d_d_dense_sensor_fusion_dataset_v0.npz",
+          "simulations/models/arm_hand_stage1_export/checkpoints/stage3_11d_d_lift_quality_head_v0.pth",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_d_dense_sensor_fusion_dataset_v0.json",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_d_lift_quality_head_v0_train.json",
+          "simulations/models/arm_hand_stage1_export/run_stage3_11d_e_lift_quality_shadow_v0.py",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_11d_e_lift_quality_shadow_v0_report.md",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_e_lift_quality_shadow_v0.json",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_12_autonomous_tuning_training_plan_v0.md",
+          "simulations/models/arm_hand_stage1_export/run_stage3_12_autonomous_tuning_batch_v0.py",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_12_autotune_lift_timing_v0_closeout.md",
+          "simulations/models/arm_hand_stage1_export/metadata/stage3_12_autotune_lift_timing_v0_closeout.json",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_12_autotune_batch0_v0_report.md",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_12_autotune_batch1_v0_report.md",
+          "simulations/models/arm_hand_stage1_export/docs/stage3_12_autotune_batch3_v0_report.md"
         ]
       }
     ],
@@ -657,7 +1046,43 @@
       "docs/stage3_10a_safety_layer_v0_smoke_report.md",
       "metadata/stage3_10a_safety_layer_v0_smoke.json",
       "docs/stage3_10b_full_safety_labeled_dataset_v0_closeout.md",
-      "data/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.npz"
+      "data/stage3_10b_safety_labeled_act_dp_dataset_full_success_v0.npz",
+      "simulations/models/arm_hand_stage1_export/train_stage3_11d_b_event_contact_gated_refine_v0.py",
+      "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_refine_highlift_v0_report.md",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_highlift_v0.json",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_highlift_selected_v0.json",
+      "simulations/models/arm_hand_stage1_export/docs/v11db_highlift_vis/multiview_best/finger_side_contact_sheet.png",
+      "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_refine_v0_report.md",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_v0.json",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_refine_selected_v0.json",
+      "simulations/models/arm_hand_stage1_export/run_stage3_11d_b_event_contact_gated_robustness_v0.py",
+      "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_v0_report.md",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_v0.json",
+      "simulations/models/arm_hand_stage1_export/external_sensors/mujoco_motor_force_feedback_sensor.py",
+      "simulations/models/arm_hand_stage1_export/docs/stage3_11d_motor_force_feedback_simulation_v0.md",
+      "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_force_feedback_offset_expansion_v0_closeout.md",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_force_feedback_offset_expansion_v0.json",
+      "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_50_baseline_v0_report.md",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_50_baseline_v0.json",
+      "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_50_gxm0008_v0_report.md",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_50_gxm0008_v0.json",
+      "simulations/models/arm_hand_stage1_export/train_stage3_11d_c_geometry_force_refine_v0.py",
+      "simulations/models/arm_hand_stage1_export/docs/stage3_11d_c_geometry_force_refine_v0_closeout.md",
+      "simulations/models/arm_hand_stage1_export/docs/stage3_11d_c_geometry_force_refine_v0_report.md",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_c_geometry_force_refine_v0.json",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_c_geometry_force_refine_selected_v0.json",
+      "simulations/models/arm_hand_stage1_export/docs/stage3_11d_c_geometry_force_refine_vis/s311dc_thumb_middle_gxm0p0008_gzp0p0020_sep0p060_tmcpp0p280_aabdm0p500_apipm0p700_contact_sheet.png",
+      "simulations/models/arm_hand_stage1_export/export_stage3_11d_d_dense_sensor_fusion_dataset_v0.py",
+      "simulations/models/arm_hand_stage1_export/train_stage3_11d_d_lift_quality_head_v0.py",
+      "simulations/models/arm_hand_stage1_export/docs/stage3_11d_d_dense_sensor_fusion_lift_quality_v0_closeout.md",
+      "simulations/models/arm_hand_stage1_export/data/stage3_11d_d_dense_sensor_fusion_dataset_v0.npz",
+      "simulations/models/arm_hand_stage1_export/checkpoints/stage3_11d_d_lift_quality_head_v0.pth",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_d_dense_sensor_fusion_dataset_v0.json",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_d_lift_quality_head_v0_train.json",
+      "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_gxm0008_lift_timing_expansion_v0_closeout.md",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_gxm0008_lift_timing_expansion_v0.json",
+      "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_50_gxm0008_ls480_v0_report.md",
+      "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_50_gxm0008_ls480_v0.json"
     ]
   }
 }

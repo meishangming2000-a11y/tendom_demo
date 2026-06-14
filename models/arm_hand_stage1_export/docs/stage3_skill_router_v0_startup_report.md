@@ -1,6 +1,6 @@
 # Stage3.9C Skill Router v0 启动报告
 
-- 生成时间：`2026-06-07T18:57:02`
+- 生成时间：`2026-06-14T23:12:53`
 - registry：`D:\tendon_project\simulations\models\arm_hand_stage1_export\configs\stage3_skill_registry_v0.json`
 - scene_cases：`D:\tendon_project\simulations\models\arm_hand_stage1_export\metadata\stage3_skill_router_v0_sample_scenes.json`
 - 状态：`PASS`
@@ -21,7 +21,10 @@
 
 ## Smoke 测试
 
-本次没有运行 demo smoke。使用 `--run-smoke` 可以对已注册可执行技能做无窗口检查。
+| skill | status | command | note |
+| --- | --- | --- | --- |
+| full_hand_gentle_grasp | PASS | `D:\py\Python3\python.exe D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_stage3_7d_recovery_viewer.py --headless-smoke --trial center_nominal` | Stage3.7D recovery viewer smoke: trial=center_nominal vision=ok conf=0.983 lift=0.0993 stable=True final_slip=0.010 max_slip=0.420 hold_slip=0.115 recovery_steps=200 recovery_events=37 budget_exhausted=True |
+| thumb_index_middle_pinch | PASS | `D:\py\Python3\python.exe D:\tendon_project\simulations\models\arm_hand_stage1_export\demo_stage3_pinch_grasp_viewer.py --candidate-config metadata/stage3_pinch_grasp_training_v0_selected.json --headless-smoke --trial center_nominal` | Stage3.8B pinch viewer smoke: candidate=thumb_index_middle_strong__higher_approach trial=center_nominal status=PASS reason=success_vision_confirmed_pinch_lift_hold vision_lift=0.1061 true_lift=0.1014 pinch=1.000 stable=1.000 hold_slip=0.185 |
 
 ## 结论
 

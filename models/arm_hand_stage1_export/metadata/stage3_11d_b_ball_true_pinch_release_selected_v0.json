@@ -1,0 +1,153 @@
+{
+  "selected_candidate": {
+    "name": "thumb_middle_tip_mu2p8_abdm0p45_pipm0p70_tabdm0p35_tmcpp0p28",
+    "active_finger": "middle",
+    "thumb_cmc_abd": -0.35,
+    "thumb_cmc": 0.02,
+    "thumb_mcp": 0.28,
+    "thumb_ip": -0.32,
+    "active_mcp_flex": -0.04,
+    "active_mcp_abd": -0.45,
+    "active_pip": -0.7,
+    "active_dip": -0.315,
+    "inactive_scale": 0.0,
+    "tip_sliding_mu": 2.8,
+    "non_tip_sliding_mu": 0.1,
+    "ball_sliding_mu": 1.35,
+    "lift_j2": -0.95,
+    "lift_steps": 520
+  },
+  "result": {
+    "candidate": {
+      "name": "thumb_middle_tip_mu2p8_abdm0p45_pipm0p70_tabdm0p35_tmcpp0p28",
+      "active_finger": "middle",
+      "thumb_cmc_abd": -0.35,
+      "thumb_cmc": 0.02,
+      "thumb_mcp": 0.28,
+      "thumb_ip": -0.32,
+      "active_mcp_flex": -0.04,
+      "active_mcp_abd": -0.45,
+      "active_pip": -0.7,
+      "active_dip": -0.315,
+      "inactive_scale": 0.0,
+      "tip_sliding_mu": 2.8,
+      "non_tip_sliding_mu": 0.1,
+      "ball_sliding_mu": 1.35,
+      "lift_j2": -0.95,
+      "lift_steps": 520
+    },
+    "status": "PASS",
+    "success": true,
+    "terminal_reason": "success_true_pinch_lift_release_ball",
+    "score": 16.59031896597921,
+    "lift_success": true,
+    "true_pinch_success": true,
+    "release_success": true,
+    "initial_ball": [
+      0.19022382,
+      0.187702,
+      -0.07538043999999999
+    ],
+    "final_ball": [
+      0.10411330492799847,
+      0.28079413749679916,
+      -0.07549120886254065
+    ],
+    "max_lift_m": 0.16101464963661377,
+    "hold_lift_m_max": 0.16101464963661377,
+    "hold_lift_m_mean": 0.15655794217947896,
+    "slow_lift_sample_lift_m_max": 0.15100792002278002,
+    "max_penetration_m": 0.0020909679892101816,
+    "hold_morphology": {
+      "frames": 20,
+      "true_two_tip_pinch_fraction": 0.9,
+      "wrap_frame_fraction": 0.0,
+      "floor_contact_fraction": 0.0,
+      "tip_contact_ratio_mean": 1.0,
+      "non_tip_contact_ratio_mean": 0.0,
+      "mean_hand_contacts": 1.9,
+      "region_counts": {
+        "middle": 20,
+        "thumb": 18
+      }
+    },
+    "lift_morphology": {
+      "frames": 104,
+      "true_two_tip_pinch_fraction": 0.9423076923076923,
+      "wrap_frame_fraction": 0.057692307692307696,
+      "floor_contact_fraction": 0.08653846153846154,
+      "tip_contact_ratio_mean": 0.7724358974358974,
+      "non_tip_contact_ratio_mean": 0.22756410256410262,
+      "mean_hand_contacts": 2.5961538461538463,
+      "region_counts": {
+        "middle": 104,
+        "thumb": 104
+      }
+    },
+    "final_morphology": {
+      "hand_contacts": 0,
+      "floor_contacts": 1,
+      "regions": [],
+      "tip_contact_ratio": 0.0,
+      "non_tip_contact_ratio": 0.0,
+      "true_two_tip_pinch": false,
+      "wrap_or_support": false
+    },
+    "ik": {
+      "score": 0.004437952460698427,
+      "objective": 0.00853321239352028,
+      "optimizer_success": true,
+      "joints": {
+        "j1": 3.1416,
+        "j2": -1.5512598317416288,
+        "j3": 0.9649542530184101,
+        "j4": 2.6227158425286987
+      },
+      "midpoint": [
+        0.19034938743796748,
+        0.18755885325363159,
+        -0.07338790438222366
+      ],
+      "target": [
+        0.19022382,
+        0.187702,
+        -0.07338043999999999
+      ],
+      "midpoint_error_m": 0.00019056203576674321,
+      "tip_separation_m": 0.055752609575068314,
+      "tip_separation_error_m": 0.004247390424931684,
+      "thumb_tip": [
+        0.17967789186825733,
+        0.20162640938625992,
+        -0.051816826166971953
+      ],
+      "active_tip": [
+        0.20102088300767765,
+        0.17349129712100322,
+        -0.09495898259747537
+      ]
+    },
+    "material_changes": {
+      "non_tip_hand": 50,
+      "tip": 5,
+      "ball": 1
+    },
+    "ball_config": {
+      "configured": true,
+      "original_radius_m": 0.028,
+      "radius_m": 0.018,
+      "original_body_mass_kg": 0.025,
+      "body_mass_kg": 0.01,
+      "floor_z_m": -0.09338044
+    },
+    "snapshots": {
+      "00_start": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_b_ball_true_pinch_release_v0\\thumb_middle_tip_mu2p8_abdm0p45_pipm0p70_tabdm0p35_tmcpp0p28\\00_start.png",
+      "01_pinch_close": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_b_ball_true_pinch_release_v0\\thumb_middle_tip_mu2p8_abdm0p45_pipm0p70_tabdm0p35_tmcpp0p28\\01_pinch_close.png",
+      "02_contact_settle": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_b_ball_true_pinch_release_v0\\thumb_middle_tip_mu2p8_abdm0p45_pipm0p70_tabdm0p35_tmcpp0p28\\02_contact_settle.png",
+      "03_slow_lift": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_b_ball_true_pinch_release_v0\\thumb_middle_tip_mu2p8_abdm0p45_pipm0p70_tabdm0p35_tmcpp0p28\\03_slow_lift.png",
+      "04_hold": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_b_ball_true_pinch_release_v0\\thumb_middle_tip_mu2p8_abdm0p45_pipm0p70_tabdm0p35_tmcpp0p28\\04_hold.png",
+      "05_release_open": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_b_ball_true_pinch_release_v0\\thumb_middle_tip_mu2p8_abdm0p45_pipm0p70_tabdm0p35_tmcpp0p28\\05_release_open.png",
+      "06_settle_release": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_b_ball_true_pinch_release_v0\\thumb_middle_tip_mu2p8_abdm0p45_pipm0p70_tabdm0p35_tmcpp0p28\\06_settle_release.png"
+    }
+  }
+}

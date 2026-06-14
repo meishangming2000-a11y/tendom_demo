@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-06-13",
+  "stage": "Stage3.12",
+  "status": "planning_evaluation_lane",
+  "decision": "Return active work to Stage3 after Stage4.0-F2 pause.",
+  "baselines": {
+    "robust_control_baseline": "Stage3.10E mixed-control safety baseline",
+    "frozen_diagnostic_demo": "Stage3.11D-I small-ball true-pinch-release candidate",
+    "shadow_data_assets": [
+      "Stage3.11D-D dense sensor-fusion dataset",
+      "Stage3.11D-E LiftQualityHead shadow evaluation"
+    ],
+    "stage4_readiness_artifacts": [
+      "Stage4.0-F0 contract/schema/sample",
+      "Stage4.0-F1 MuJoCo packet export",
+      "Stage4.0-F2 fake bench replay"
+    ]
+  },
+  "do_not_reopen": [
+    "open-ended Stage3.11D-I parameter microtuning",
+    "direct force control promotion",
+    "full-action 26-actuator ACT/DP promotion",
+    "hardware runtime claims",
+    "Stage4 F3/F4/PID+AI as current lane"
+  ],
+  "candidate_branches": [
+    "Stage3.12-A baseline refresh / evidence audit",
+    "Stage3.12-B sensor-conditioned evaluation gate",
+    "Stage3.12-C bounded controller/model branch"
+  ],
+  "required_gate_before_implementation": [
+    "baseline command and artifact",
+    "candidate command and artifact",
+    "seed list",
+    "object/task set",
+    "success metrics",
+    "failure taxonomy",
+    "visual inspection requirement",
+    "output report path",
+    "output metadata path",
+    "rollback condition"
+  ],
+  "minimum_metrics": [
+    "full success rate",
+    "contact gate",
+    "lift gate",
+    "release gate",
+    "true-pinch/contact morphology",
+    "hold slip",
+    "crush risk",
+    "penetration",
+    "floor contact",
+    "visual confidence / final vision evidence"
+  ],
+  "boundary": {
+    "hardware_runtime": false,
+    "real_camera": false,
+    "real_tactile": false,
+    "ultrasound_runtime": false,
+    "direct_force_control_promoted": false,
+    "full_action_act_dp_promoted": false
+  }
+}

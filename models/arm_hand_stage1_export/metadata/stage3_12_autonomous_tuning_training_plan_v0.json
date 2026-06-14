@@ -1,0 +1,77 @@
+{
+  "generated_at": "2026-06-13",
+  "stage": "Stage3.12",
+  "status": "active_plan",
+  "classification": "official_stage3_planning_artifact",
+  "lane": "simulation_stage3",
+  "decision": "Run autonomous batch tuning and bounded training research without per-parameter user confirmation.",
+  "boundary": {
+    "mujoco_only": true,
+    "hardware_runtime": false,
+    "real_camera": false,
+    "real_tactile": false,
+    "ultrasound_runtime": false,
+    "direct_force_control_promoted": false,
+    "full_action_act_dp_promoted": false
+  },
+  "anchors": {
+    "rollback_baseline": "Stage3.10E mixed-control safety baseline",
+    "diagnostic_demo_anchor": "Stage3.11D-I small-ball true-pinch-release candidate",
+    "stage3_11d_i_success": {
+      "success_count": 136,
+      "trials": 150,
+      "contact_gate_success_count": 143,
+      "lift_success_count": 136,
+      "true_pinch_success_count": 136,
+      "release_success_count": 149,
+      "failure_pool": {
+        "contact_gate_failed": 7,
+        "lift_gate_failed": 7
+      }
+    }
+  },
+  "autonomy_rule": {
+    "agent_may_run_batches_without_confirmation": true,
+    "must_report_when": [
+      "two consecutive batches fail to beat or complement D-I",
+      "a candidate improves success through wrap, non-tip contact, floor contact, crush, or unsafe force/current proxy",
+      "a source-of-truth or mainline boundary would change"
+    ]
+  },
+  "batch_plan": [
+    {
+      "id": "stage3_12_batch0",
+      "purpose": "fast smoke scoreboard around D-I",
+      "families": [
+        "baseline",
+        "contact_entry",
+        "lift_continuation",
+        "morphology_clean",
+        "force_feedback_observation"
+      ],
+      "outputs": [
+        "simulations/models/arm_hand_stage1_export/run_stage3_12_autonomous_tuning_batch_v0.py",
+        "simulations/models/arm_hand_stage1_export/data/stage3_12_autotune_batch0_summary_v0.csv",
+        "simulations/models/arm_hand_stage1_export/metadata/stage3_12_autotune_batch0_v0.json",
+        "simulations/models/arm_hand_stage1_export/docs/stage3_12_autotune_batch0_v0_report.md"
+      ]
+    },
+    {
+      "id": "stage3_12_batch1",
+      "purpose": "50 to 150 trial validation for best smoke candidates",
+      "requires_visual_check": true
+    },
+    {
+      "id": "stage3_12_batch2_training",
+      "purpose": "bounded residual or quality/gain head training after the target signal is proven"
+    }
+  ],
+  "pid_ai_decision": {
+    "mainline_now": false,
+    "side_branch_allowed": true,
+    "first_step": "offline signal analysis only",
+    "controller_surface_if_unlocked": "active thumb/finger pair bounded PD/PID wrapper with anti-windup, saturation, and rate limits"
+  },
+  "success_policy": "Promote only a bounded Stage3.12 candidate with matched metrics, metadata, report, and visual evidence.",
+  "failure_policy": "Keep Stage3.10E and D-I, stop local tuning, and move to contact geometry, morphology labels, or bounded residual data improvement."
+}

@@ -1,0 +1,10 @@
+scope,mode,seed,success,trials,contact,lift,true_pinch,release,terminal_reasons,hold_true_two_tip_mean,hold_non_tip_ratio_mean,hold_wrap_fraction_mean,hold_floor_contact_fraction_mean,residual_active_fraction,safety_clip_fraction
+seed,baseline_di,20260612,4,4,4,4,4,4,"{""success_event_contact_gated_true_pinch_release_ball"": 4}",1.000000,0.096154,0.000000,0.000000,0.000000,0.000000
+seed,teacher_xclamp,20260612,4,4,4,4,4,4,"{""success_event_contact_gated_true_pinch_release_ball"": 4}",1.000000,0.044872,0.000000,0.000000,0.500000,0.000000
+seed,learned_xresidual_safe,20260612,4,4,4,4,4,4,"{""success_event_contact_gated_true_pinch_release_ball"": 4}",1.000000,0.038462,0.000000,0.000000,1.000000,0.250000
+seed,baseline_di,20265612,4,4,4,4,4,4,"{""success_event_contact_gated_true_pinch_release_ball"": 4}",1.000000,0.230769,0.000000,0.000000,0.000000,0.000000
+seed,teacher_xclamp,20265612,4,4,4,4,4,4,"{""success_event_contact_gated_true_pinch_release_ball"": 4}",1.000000,0.147436,0.000000,0.000000,0.250000,0.000000
+seed,learned_xresidual_safe,20265612,4,4,4,4,4,4,"{""success_event_contact_gated_true_pinch_release_ball"": 4}",1.000000,0.160256,0.000000,0.000000,1.000000,0.250000
+aggregate,baseline_di,all,8,8,8,8,8,8,"{""success_event_contact_gated_true_pinch_release_ball"": 8}",1.000000,0.163462,0.000000,0.000000,0.000000,0.000000
+aggregate,teacher_xclamp,all,8,8,8,8,8,8,"{""success_event_contact_gated_true_pinch_release_ball"": 8}",1.000000,0.096154,0.000000,0.000000,0.375000,0.000000
+aggregate,learned_xresidual_safe,all,8,8,8,8,8,8,"{""success_event_contact_gated_true_pinch_release_ball"": 8}",1.000000,0.099359,0.000000,0.000000,1.000000,0.250000

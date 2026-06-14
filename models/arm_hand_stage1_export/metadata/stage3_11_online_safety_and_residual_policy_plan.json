@@ -1,0 +1,129 @@
+{
+  "stage": "Stage3.11",
+  "status": "STAGE3_11C_PASS_READY_FOR_D",
+  "generated_at": "2026-06-09",
+  "current_baseline": "Stage3.10E MuJoCo mixed-control safety baseline plus Stage3.11B online safety-head shadow observer plus Stage3.11C trace-frame safety labels",
+  "next_step": "Stage3.11D safety-conditioned hand/residual policy",
+  "boundary": {
+    "mujoco_only": true,
+    "full_action_promoted": false,
+    "hardware_runtime": false,
+    "real_camera": false,
+    "real_tactile": false,
+    "ultrasound_runtime": false
+  },
+  "baseline_evidence": {
+    "stage3_10b_full_success": "60/60 episodes, 231421 rows, obs [231421,130], actions [231421,26], safety_labels [231421,9]",
+    "stage3_10c_closed_loop": "scripted_arm_predicted_hand cycle50 50/50 and random100_pose005 100/100",
+    "stage3_10d_b_occlusion": "v0 88/100 blocked, v1 100/100",
+    "stage3_10d_c_safety_head": "200 episode-level samples, random validation F1 1.000",
+    "stage3_10d_d_rescan": "D-B v1 rescan PASS, new depth/noise and false-positive stress 12/12",
+    "stage3_11b_shadow": "PASS: D-B v1 100/100, stress 13/14 including combined_hard reject boundary, 114 shadow records, unsafe hold-safe predictions 0, false/missed failure counts 0",
+    "stage3_11b_label_finding": "Two non-danger label mismatches appear only in combined_hard boundary; Stage3.11C should split repair_configured vs repair_active and refine initial adapter labels",
+    "stage3_11c_frame_labels": "PASS: 164 episodes, 2663 trace frames, labels [2663,17], clean/pose_noise/mask_dropout/occlusion/depth_noise/false_positive/combined_hard coverage complete, repair_configured split from repair_active",
+    "known_boundaries": "combined_hard remains a reject boundary; full_action 26-actuator smoke is not promoted"
+  },
+  "substeps": [
+    {
+      "id": "Stage3.11A",
+      "name": "plan and mind-map contract",
+      "status": "done",
+      "acceptance": [
+        "plan doc exists",
+        "metadata exists",
+        "Stage3 and project mind maps reference Stage3.11A",
+        "quick entrypoints and nervous-system capsule reference Stage3.11A",
+        "mind-map and nervous-system checks pass"
+      ],
+      "success_branch": "Completed; Stage3.11B online safety-head shadow mode was implemented and passed.",
+      "failure_branch": "Fix documentation/index consistency before implementation."
+    },
+    {
+      "id": "Stage3.11B",
+      "name": "online safety-head shadow mode",
+      "status": "done",
+      "acceptance": [
+        "D-B v1 rescan still passes",
+        "new non-boundary stress cases remain 12/12",
+        "unsafe hold-safe predictions are zero",
+        "combined_hard remains a reject boundary"
+      ],
+      "success_branch": "Export frame-level labels in Stage3.11C, with label-definition repair for repair_configured vs repair_active.",
+      "failure_branch": "Debug feature alignment, checkpoint loading, label definition, or online/offline distribution shift."
+    },
+    {
+      "id": "Stage3.11C",
+      "name": "frame-level noisy/occlusion safety labels",
+      "status": "done",
+      "acceptance": [
+        "NPZ/JSONL labels are exported",
+        "positive label samples are nonzero",
+        "episode/frame/skill/phase counts align with source data",
+        "clean, pose-noise, dropout, occlusion, depth-noise, and false-positive stress are covered"
+      ],
+      "success_branch": "Completed; train or evaluate a safety-conditioned hand/residual policy in Stage3.11D.",
+      "failure_branch": "Repair label definitions and data coverage before policy training."
+    },
+    {
+      "id": "Stage3.11D",
+      "name": "safety-conditioned hand or residual policy",
+      "status": "next",
+      "acceptance": [
+        "Stage3.10E canonical success does not regress",
+        "D-D stress does not regress",
+        "hold slip, crush, and penetration do not worsen",
+        "ablation compares labels vs no labels"
+      ],
+      "success_branch": "Keep as Stage3.11 candidate and prepare staged residual/full-action attempt.",
+      "failure_branch": "Diagnose policy representation, label noise, data coverage, or residual injection strength."
+    },
+    {
+      "id": "Stage3.11E",
+      "name": "staged full-action or constrained residual attempt",
+      "status": "planned",
+      "acceptance": [
+        "smoke 2/2 before cycle10",
+        "cycle10 10/10 before random30/50",
+        "no success-threshold relaxation",
+        "failed stages are recorded as boundaries rather than promoted"
+      ],
+      "success_branch": "Visualize safety/residual behavior in Stage3.11F.",
+      "failure_branch": "Record reproducible full_action/residual boundary and keep Stage3.10E as baseline."
+    },
+    {
+      "id": "Stage3.11F",
+      "name": "visualization",
+      "status": "planned",
+      "acceptance": [
+        "MuJoCo viewer command exists",
+        "vision/tactile/safety/repair/residual states are visible",
+        "Demo Gallery and open_demo are updated if a viewer is promoted"
+      ],
+      "success_branch": "Proceed to closeout and promotion decision.",
+      "failure_branch": "Keep visualization as diagnostic until overlays and logs align."
+    },
+    {
+      "id": "Stage3.11G",
+      "name": "closeout and promotion decision",
+      "status": "planned",
+      "acceptance": [
+        "Stage3.11 evidence is summarized",
+        "promotion or rollback boundary is explicit",
+        "mind maps, quick entrypoints, gallery, and skills are updated"
+      ],
+      "success_branch": "Promote Stage3.11 as the new MuJoCo safety/residual baseline.",
+      "failure_branch": "Keep Stage3.10E as baseline and retain Stage3.11 outputs as data/diagnostic assets."
+    }
+  ],
+  "source_files": [
+    "simulations/models/arm_hand_stage1_export/docs/stage3_11_online_safety_and_residual_policy_plan.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_11b_online_safety_head_shadow_v0_closeout.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_11c_frame_safety_labels_v0_closeout.md",
+    "simulations/models/arm_hand_stage1_export/data/stage3_11c_frame_safety_labels_v0.npz",
+    "simulations/models/arm_hand_stage1_export/metadata/stage3_11c_frame_safety_labels_v0.json",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_10e_stage3_10_closeout.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_10d_d_safety_head_rescan_v0_closeout.md",
+    "simulations/models/arm_hand_stage1_export/metadata/stage3_11b_online_safety_head_shadow_v0.json",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_10d_c_occlusion_safety_head_v0_closeout.md"
+  ]
+}

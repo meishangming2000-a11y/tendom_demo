@@ -114,6 +114,64 @@ def corrupt_depth(depth: np.ndarray, mask: np.ndarray, std_m: float, rng: np.ran
     return out
 
 
+def median_depth_ray_center(
+    depth: np.ndarray,
+    mask: np.ndarray,
+    intrinsics,
+    camera_pos_world: np.ndarray,
+    camera_xmat_world: np.ndarray,
+    *,
+    max_depth_m: float,
+    depth_noise_std_m: float,
+    min_points: int,
+) -> tuple[np.ndarray, float, int] | None:
+    """Robust center fallback for depth-noisy masks.
+
+    Least-squares ellipsoid fitting is sensitive when every visible point has
+    independent depth noise. This fallback uses the median inlier depth and the
+    mask centroid ray to estimate the near surface, then moves one approximate
+    egg radius along the camera ray.
+    """
+
+    ys, xs = np.nonzero(mask)
+    if ys.size == 0:
+        return None
+    z = depth[ys, xs].astype(np.float64)
+    valid = np.isfinite(z) & (z > 0.0) & (z < float(max_depth_m))
+    if int(valid.sum()) < int(min_points):
+        return None
+    ys = ys[valid].astype(np.float64)
+    xs = xs[valid].astype(np.float64)
+    z = z[valid]
+    med_z = float(np.median(z))
+    abs_dev = np.abs(z - med_z)
+    mad = float(np.median(abs_dev))
+    robust_sigma = 1.4826 * mad
+    depth_window = max(0.012, 4.0 * float(depth_noise_std_m), 4.0 * robust_sigma)
+    inlier = abs_dev <= depth_window
+    if int(inlier.sum()) < int(min_points):
+        return None
+    xs_i = xs[inlier]
+    ys_i = ys[inlier]
+    z_i = z[inlier]
+    u = float(np.mean(xs_i))
+    v = float(np.mean(ys_i))
+    z_forward = float(np.median(z_i))
+    x_cam = (u - intrinsics.cx) * z_forward / intrinsics.fx
+    y_cam = -(v - intrinsics.cy) * z_forward / intrinsics.fy
+    surface_camera = np.asarray([x_cam, y_cam, -z_forward], dtype=np.float64)
+    ray_camera = surface_camera / max(1e-9, float(np.linalg.norm(surface_camera)))
+    camera_xmat_world = np.asarray(camera_xmat_world, dtype=np.float64).reshape(3, 3)
+    camera_pos_world = np.asarray(camera_pos_world, dtype=np.float64).reshape(3)
+    surface_world = camera_pos_world + surface_camera @ camera_xmat_world.T
+    ray_world = ray_camera @ camera_xmat_world.T
+    ray_world = ray_world / max(1e-9, float(np.linalg.norm(ray_world)))
+    radius_along_ray = float(np.median(DEFAULT_EGG_RADII_M))
+    center_world = surface_world + ray_world * radius_along_ray
+    residual = float(np.sqrt(np.mean(np.square(z_i - z_forward))))
+    return center_world, residual, int(inlier.sum())
+
+
 def write_debug_images(output_dir: Path, label: str, rgb: np.ndarray, depth: np.ndarray, clean_mask: np.ndarray, noisy_mask: np.ndarray) -> dict[str, str]:
     output_dir.mkdir(parents=True, exist_ok=True)
     safe = "".join(ch if ch.isalnum() or ch in "-_" else "_" for ch in label)
@@ -171,6 +229,10 @@ def estimate_noisy_pose(
     clean_pixels = int(clean_mask.sum())
     noisy_pixels = int(noisy_mask.sum())
     retained_clean_pixels = int((clean_mask & noisy_mask).sum())
+    image_pixels = int(config.width) * int(config.height)
+    visibility = float(noisy_pixels / max(1, image_pixels))
+    clean_visibility = float(clean_pixels / max(1, image_pixels))
+    mask_retention = float(retained_clean_pixels / max(1, clean_pixels))
     if noisy_pixels < int(config.min_mask_pixels):
         return {
             "status": "failed",
@@ -179,6 +241,9 @@ def estimate_noisy_pose(
             "mask_pixels": noisy_pixels,
             "clean_mask_pixels": clean_pixels,
             "retained_clean_pixels": retained_clean_pixels,
+            "mask_retention_ratio": mask_retention,
+            "visibility_fraction": visibility,
+            "clean_visibility_fraction": clean_visibility,
             "confidence": 0.0,
             "debug_images": debug_images,
         }
@@ -201,13 +266,36 @@ def estimate_noisy_pose(
             "mask_pixels": noisy_pixels,
             "clean_mask_pixels": clean_pixels,
             "retained_clean_pixels": retained_clean_pixels,
+            "mask_retention_ratio": mask_retention,
+            "visibility_fraction": visibility,
+            "clean_visibility_fraction": clean_visibility,
             "valid_depth_points": int(points_world.shape[0]),
             "confidence": 0.0,
             "debug_images": debug_images,
         }
 
     center_world, fit_residual_rms = estimate_ellipsoid_center_known_shape(points_world, DEFAULT_EGG_RADII_M)
-    mask_retention = float(retained_clean_pixels / max(1, clean_pixels))
+    estimator = "ellipsoid_lstsq"
+    robust_depth_inliers = 0
+    robust_depth_residual = float("nan")
+    robust_center = median_depth_ray_center(
+        noisy_depth,
+        noisy_mask,
+        intrinsics,
+        camera_pos,
+        camera_xmat,
+        max_depth_m=float(config.max_depth_m),
+        depth_noise_std_m=float(scenario.depth_noise_std_m),
+        min_points=int(config.min_mask_pixels),
+    )
+    if robust_center is not None:
+        robust_position, robust_residual, robust_inliers = robust_center
+        robust_depth_residual = float(robust_residual)
+        robust_depth_inliers = int(robust_inliers)
+        if float(scenario.depth_noise_std_m) > 0.0 and (fit_residual_rms > 0.050):
+            center_world = robust_position
+            fit_residual_rms = robust_residual
+            estimator = "median_depth_ray_fallback"
     contamination = float(max(0, noisy_pixels - retained_clean_pixels) / max(1, noisy_pixels))
     residual_score = float(np.exp(-min(fit_residual_rms / 0.020, 20.0)))
     pixel_score = float(min(1.0, retained_clean_pixels / 1500.0))
@@ -224,9 +312,14 @@ def estimate_noisy_pose(
         "retained_clean_pixels": retained_clean_pixels,
         "mask_retention_ratio": mask_retention,
         "mask_contamination_ratio": contamination,
+        "visibility_fraction": visibility,
+        "clean_visibility_fraction": clean_visibility,
         "valid_depth_points": int(points_world.shape[0]),
         "confidence": confidence,
         "fit_residual_rms": fit_residual_rms,
+        "estimator": estimator,
+        "robust_depth_inliers": robust_depth_inliers,
+        "robust_depth_residual": robust_depth_residual,
         "depth_noise_std_m": float(scenario.depth_noise_std_m),
         "calibration_bias_m": list(scenario.calibration_bias_m),
         "debug_images": debug_images,

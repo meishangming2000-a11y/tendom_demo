@@ -1,0 +1,106 @@
+{
+  "selected_stage": "Stage3.13A",
+  "status": "selected_distilled_residual_policy_candidate",
+  "classification": "mujoco_only_bounded_grasp_x_residual_policy",
+  "generated_at": "2026-06-14",
+  "source_teacher": {
+    "stage": "Stage3.12C",
+    "variant": "di_directional_gx_clamp_m0025_p0000",
+    "teacher_rule": {
+      "grasp_offset_x_min": -0.0025,
+      "grasp_offset_x_max": 0.0,
+      "applied_before_ik": true
+    }
+  },
+  "policy": {
+    "runner": "simulations/models/arm_hand_stage1_export/run_stage3_13_xclamp_residual_policy_v0.py",
+    "checkpoint": "simulations/models/arm_hand_stage1_export/checkpoints/stage3_13_xclamp_residual_policy_v0.pth",
+    "dataset": "simulations/models/arm_hand_stage1_export/data/stage3_13_xclamp_residual_policy_dataset_v0.npz",
+    "action_surface": "bounded_grasp_offset_x_residual_before_ik",
+    "safety_clip_to_teacher_corridor": true,
+    "validation_mae_m": 0.000015790988982189447,
+    "validation_max_abs_error_m": 0.00008204783080145717
+  },
+  "matched_multiseed_gate": {
+    "seeds": [20260612, 20265612, 20265613],
+    "trials": 150,
+    "frozen_d_i": {
+      "success_count": 136,
+      "contact_gate_success_count": 143,
+      "lift_success_count": 136,
+      "true_pinch_success_count": 136,
+      "release_success_count": 149,
+      "terminal_reason_counts": {
+        "success_event_contact_gated_true_pinch_release_ball": 136,
+        "lift_gate_failed": 7,
+        "contact_gate_failed": 7
+      }
+    },
+    "stage3_12c_teacher_xclamp": {
+      "success_count": 143,
+      "contact_gate_success_count": 146,
+      "lift_success_count": 143,
+      "true_pinch_success_count": 143,
+      "release_success_count": 149,
+      "terminal_reason_counts": {
+        "success_event_contact_gated_true_pinch_release_ball": 143,
+        "lift_gate_failed": 3,
+        "contact_gate_failed": 4
+      },
+      "hold_non_tip_ratio_mean": 0.05692307692307694,
+      "hold_floor_contact_fraction_mean": 0.012,
+      "hold_wrap_fraction_mean": 0.0
+    },
+    "stage3_13_learned_xresidual_safe": {
+      "success_count": 143,
+      "contact_gate_success_count": 146,
+      "lift_success_count": 143,
+      "true_pinch_success_count": 143,
+      "release_success_count": 149,
+      "terminal_reason_counts": {
+        "success_event_contact_gated_true_pinch_release_ball": 143,
+        "lift_gate_failed": 3,
+        "contact_gate_failed": 4
+      },
+      "hold_non_tip_ratio_mean": 0.05726495726495728,
+      "hold_floor_contact_fraction_mean": 0.012333333333333333,
+      "hold_wrap_fraction_mean": 0.0,
+      "residual_active_fraction": 1.0,
+      "safety_clip_fraction": 0.2866666666666667
+    }
+  },
+  "decision": {
+    "advance_as": "Stage3.13A distilled residual-policy candidate",
+    "success_delta_vs_frozen_d_i": 7,
+    "success_delta_vs_stage3_12c_teacher": 0,
+    "true_pinch_morphology_failures_added_vs_teacher": 0,
+    "do_not_claim": [
+      "stronger_than_stage3_12c_teacher",
+      "full_action_act_dp",
+      "hardware_runtime",
+      "real_camera",
+      "real_tactile",
+      "demo_gallery_promotion"
+    ],
+    "next": "Stage3.13B should keep this matched gate while adding deadband/active gating and then try to reduce the remaining 3 lift and 4 contact failures."
+  },
+  "visual_evidence": {
+    "learned_safe_contact_sheet": "simulations/models/arm_hand_stage1_export/docs/stage3_13_xclamp_residual_policy_visual_v0/trial0_seed20265613_learned_safe_contact_sheet.png",
+    "learned_safe_summary": "simulations/models/arm_hand_stage1_export/docs/stage3_13_xclamp_residual_policy_visual_v0/trial0_seed20265613_learned_safe_summary.json",
+    "observed": {
+      "status": "PASS",
+      "contact_gate_success": true,
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "hold_true_two_tip_pinch_fraction": 1.0,
+      "hold_tip_contact_ratio_mean": 1.0,
+      "hold_non_tip_contact_ratio_mean": 0.0,
+      "hold_wrap_frame_fraction": 0.0
+    }
+  },
+  "source_reports": [
+    "simulations/models/arm_hand_stage1_export/docs/stage3_13_xclamp_residual_policy_v0_report.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_13_xclamp_residual_policy_v0_closeout.md"
+  ]
+}

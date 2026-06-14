@@ -1,0 +1,28 @@
+{
+  "stage": "Stage3.12C",
+  "status": "closed_with_selected_candidate",
+  "generated_at": "2026-06-13",
+  "closeout_doc": "simulations/models/arm_hand_stage1_export/docs/stage3_12c_quality_gated_residual_teacher_v0_closeout.md",
+  "selected_metadata": "simulations/models/arm_hand_stage1_export/metadata/stage3_12c_directional_xclamp_selected_v0.json",
+  "selected_variant": "di_directional_gx_clamp_m0025_p0000",
+  "summary": {
+    "selected_success_count": 143,
+    "selected_trials": 150,
+    "baseline_success_count": 136,
+    "baseline_trials": 150,
+    "success_delta": 7,
+    "contact_failures_reduced": 3,
+    "lift_failures_reduced": 4,
+    "true_pinch_morphology_failures_added": 0,
+    "release_delta": 0
+  },
+  "boundary": {
+    "mujoco_only": true,
+    "controller_candidate_promoted": true,
+    "promoted_controller_type": "bounded vision-directional teacher candidate",
+    "base_controller_replaced": false,
+    "full_action_policy": false,
+    "hardware_runtime": false,
+    "demo_gallery_promotion": false
+  }
+}

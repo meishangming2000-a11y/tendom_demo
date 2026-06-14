@@ -1,0 +1,117 @@
+{
+  "generated_at": "2026-06-11",
+  "stage": "Stage3.11D-B",
+  "boundary": {
+    "mujoco_only": true,
+    "real_hardware_integrated": false,
+    "real_tactile_integrated": false,
+    "real_camera_integrated": false,
+    "demo_gallery_promoted": false,
+    "full_action_act_dp_promoted": false
+  },
+  "code_changes": [
+    {
+      "path": "simulations/models/arm_hand_stage1_export/external_sensors/mujoco_motor_force_feedback_sensor.py",
+      "summary": "Added group summaries, active thumb + active-finger pair summaries, pair tension/balance/current/saturation metrics, and phase-level pair aggregation."
+    },
+    {
+      "path": "simulations/models/arm_hand_stage1_export/train_stage3_11d_b_event_contact_gated_refine_v0.py",
+      "summary": "Added force-feedback lift/hold gate plumbing, opt-in preload mode, wait-only v0b mode, active-pair sensor sampling, and report fields."
+    },
+    {
+      "path": "simulations/models/arm_hand_stage1_export/run_stage3_11d_b_event_contact_gated_robustness_v0.py",
+      "summary": "Forwarded force-feedback args, added base grasp/ball offset probes, and extended summary/report metrics."
+    }
+  ],
+  "probes": [
+    {
+      "name": "24_trial_pair_baseline",
+      "trials": 24,
+      "success_count": 13,
+      "contact_gate_success_count": 24,
+      "lift_success_count": 13,
+      "release_success_count": 24,
+      "report": "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_pair_baseline_v0_report.md",
+      "metadata": "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_pair_baseline_v0.json"
+    },
+    {
+      "name": "24_trial_forcegate_preload_v0",
+      "trials": 24,
+      "success_count": 9,
+      "contact_gate_success_count": 24,
+      "lift_success_count": 11,
+      "release_success_count": 24,
+      "conclusion": "Regressed. Raised pair tension but harmed two-tip morphology.",
+      "report": "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_forcegate_v0_report.md",
+      "metadata": "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_forcegate_v0.json"
+    },
+    {
+      "name": "24_trial_forcegate_wait_v0b",
+      "trials": 24,
+      "success_count": 13,
+      "contact_gate_success_count": 24,
+      "lift_success_count": 13,
+      "release_success_count": 24,
+      "conclusion": "No regression but no rescue; useful as diagnostic/gating signal.",
+      "report": "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_forcegate_wait_v0_report.md",
+      "metadata": "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_forcegate_wait_v0.json"
+    },
+    {
+      "name": "24_trial_gx_minus_0p0008",
+      "trials": 24,
+      "base_grasp_offset_x_delta_m": -0.0008,
+      "success_count": 16,
+      "contact_gate_success_count": 22,
+      "lift_success_count": 17,
+      "release_success_count": 23,
+      "report": "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_gxm0008_v0_report.md",
+      "metadata": "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_gxm0008_v0.json"
+    },
+    {
+      "name": "50_trial_baseline",
+      "trials": 50,
+      "success_count": 29,
+      "contact_gate_success_count": 49,
+      "lift_success_count": 29,
+      "true_pinch_success_count": 29,
+      "release_success_count": 49,
+      "terminal_reason_counts": {
+        "lift_gate_failed": 20,
+        "success_event_contact_gated_true_pinch_release_ball": 29,
+        "contact_gate_failed": 1
+      },
+      "report": "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_50_baseline_v0_report.md",
+      "metadata": "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_50_baseline_v0.json"
+    },
+    {
+      "name": "50_trial_gx_minus_0p0008",
+      "trials": 50,
+      "base_grasp_offset_x_delta_m": -0.0008,
+      "success_count": 34,
+      "contact_gate_success_count": 47,
+      "lift_success_count": 35,
+      "true_pinch_success_count": 34,
+      "release_success_count": 49,
+      "terminal_reason_counts": {
+        "contact_gate_failed": 3,
+        "success_event_contact_gated_true_pinch_release_ball": 34,
+        "lift_gate_failed": 12,
+        "true_pinch_morphology_gate_failed": 1
+      },
+      "success_hold_lift_mean_m": 0.11278552713798795,
+      "motor_feedback_slow_lift_pair_tension_mean_n": 7.292221032531695,
+      "motor_feedback_hold_pair_tension_mean_n": 4.012635026047275,
+      "motor_feedback_saturation_trial_fraction": 0.0,
+      "report": "simulations/models/arm_hand_stage1_export/docs/stage3_11d_b_event_contact_gated_robustness_50_gxm0008_v0_report.md",
+      "metadata": "simulations/models/arm_hand_stage1_export/metadata/stage3_11d_b_event_contact_gated_robustness_50_gxm0008_v0.json"
+    }
+  ],
+  "current_best_probe": "50_trial_gx_minus_0p0008",
+  "current_interpretation": "Force feedback is validated as an observation, gate, and label source. Direct preload force control regressed. The verified improvement came from a small base grasp x-offset, which should become the next refine search center.",
+  "next_actions": [
+    "Run a local refine around grasp_offset_x -0.0006 to -0.0010 with grasp_offset_z and tip_pair_separation_target coupled.",
+    "Keep active-pair tension/balance/current in the observation and gate summary.",
+    "Design a residual micro-adjust that uses force feedback to choose small geometry corrections instead of blindly adding closure.",
+    "Repeat 50-trial randomized robustness and close-up visual review before any promotion."
+  ]
+}

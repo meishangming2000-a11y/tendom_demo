@@ -1,0 +1,651 @@
+{
+  "generated_at": "2026-06-12T15:18:52",
+  "stage": "Stage3.11D-B",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_lift_ball_demo.xml",
+  "args": {
+    "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_lift_ball_demo.xml",
+    "seed_candidate": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11d_b_ball_true_pinch_release_selected_v0.json",
+    "report": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_visual_side_v0_report.md",
+    "metadata": "simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11d_g_static_geometry_visual_side_v0.json",
+    "selected": "simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_11d_g_static_geometry_visual_side_selected_v0.json",
+    "visual_dir": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis",
+    "max_cases": 1,
+    "render_best": true,
+    "render_extra_side_views": true,
+    "tip_mu": 2.8,
+    "non_tip_mu": 0.1,
+    "ball_mu": 1.35,
+    "ball_radius": 0.018,
+    "ball_mass": 0.01,
+    "inactive_scale": 0.0,
+    "base_tip_pair_separation_target": 0.06,
+    "base_grasp_offset_z": 0.002,
+    "base_hold_steps": 100,
+    "base_min_lift_height": 0.05,
+    "thumb_abd_values": "-0.35,-0.30,-0.40,-0.25,-0.45",
+    "thumb_mcp_values": "0.28",
+    "active_abd_values": "-0.5",
+    "active_pip_values": "-0.7",
+    "tip_pair_separation_values": "0.060",
+    "grasp_offset_x": 0.0,
+    "grasp_offset_y": 0.0,
+    "grasp_offset_x_values": "-0.0014",
+    "grasp_offset_y_values": null,
+    "grasp_offset_z_values": "0.0020",
+    "lift_j2_values": "-0.95",
+    "lift_steps_values": "520",
+    "hold_steps_values": "100",
+    "min_lift_height_values": "0.100",
+    "ik_maxiter": 90,
+    "approach_steps": 220,
+    "preshape_steps": 80,
+    "close_steps": 180,
+    "contact_gate_max_steps": 220,
+    "contact_gate_required_samples": 2,
+    "post_contact_settle_steps": 40,
+    "require_contact_gate": true,
+    "min_lift_steps_before_hold": 300,
+    "lifted_contact_required_samples": 3,
+    "min_hold_steps_before_release": 60,
+    "hold_release_required_samples": 8,
+    "demo_lift_goal": 0.11,
+    "release_steps": 180,
+    "release_settle_steps": 420,
+    "morphology_sample_every": 5,
+    "max_hold_floor_contact_fraction": 0.05,
+    "min_true_pinch_fraction": 0.5,
+    "max_wrap_fraction": 0.3,
+    "max_non_tip_ratio": 0.45,
+    "max_penetration_m": 0.006,
+    "final_height_tolerance": 0.018,
+    "enable_motor_force_feedback": false,
+    "motor_torque_constant_nm_per_a": 0.035,
+    "motor_gear_ratio": 30.0,
+    "motor_gear_efficiency": 0.72,
+    "motor_spool_radius_m": 0.008,
+    "motor_current_limit_a": 4.0,
+    "motor_bus_voltage_v": 24.0,
+    "motor_current_noise_a": 0.025,
+    "motor_feedback_seed": 20260611,
+    "enable_force_feedback_lift_gate": false,
+    "force_feedback_enable_preload": false,
+    "force_feedback_preload_steps": 80,
+    "force_feedback_required_samples": 2,
+    "force_feedback_min_preload_delta": 0.035,
+    "force_feedback_max_preload_delta": 0.08,
+    "force_feedback_lift_wait_close_delta": 0.015,
+    "force_feedback_check_after_lift_steps": 120,
+    "force_feedback_max_lift_wait_steps": 180,
+    "force_feedback_min_slow_lift_pair_tension_n": 4.0,
+    "force_feedback_min_hold_pair_tension_n": 2.0,
+    "force_feedback_min_pair_balance": 0.01,
+    "force_feedback_max_pair_iq_a": 4.0,
+    "enable_residual_micro_adjust": false,
+    "residual_micro_adjust_check_after_lift_steps": 80,
+    "residual_micro_adjust_required_samples": 1,
+    "residual_micro_adjust_max_wait_steps": 160,
+    "residual_micro_adjust_close_delta": 0.006,
+    "residual_micro_adjust_max_close_delta": 0.03,
+    "residual_micro_adjust_grasp_x_delta": 0.0,
+    "residual_micro_adjust_max_grasp_x_delta": 0.0,
+    "residual_micro_adjust_enable_prelift": false,
+    "residual_micro_adjust_prelift_steps": 40,
+    "residual_micro_adjust_prelift_grasp_x_delta": 0.0,
+    "residual_micro_adjust_prelift_max_grasp_x_delta": 0.0,
+    "residual_micro_adjust_progress_drop_steps": 0,
+    "residual_micro_adjust_allow_wrap": false,
+    "capture_dense_sensor_trace": false,
+    "dense_trace_sample_every": 1
+  },
+  "summary": {
+    "episodes": 1,
+    "success_count": 1,
+    "contact_gate_success_count": 1,
+    "lift_success_count": 1,
+    "true_pinch_success_count": 1,
+    "release_success_count": 1,
+    "terminal_reason_counts": {
+      "success_event_contact_gated_true_pinch_release_ball": 1
+    },
+    "best_score": 20.617535535845175,
+    "best_case": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0014_gyp0p0000_gzp0p0020_lj2m0p950_ls520_hs100_ml0p100"
+  },
+  "best_result": {
+    "case": {
+      "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0014_gyp0p0000_gzp0p0020_lj2m0p950_ls520_hs100_ml0p100",
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0014_gyp0p0000_gzp0p0020_lj2m0p950_ls520_hs100_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.5,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "tip_pair_separation_target": 0.06,
+      "grasp_offset_x": -0.0014,
+      "grasp_offset_y": 0.0,
+      "grasp_offset_z": 0.002,
+      "ball_radius": 0.018,
+      "ball_mass": 0.01,
+      "ball_offset_x": 0.0,
+      "ball_offset_y": 0.0,
+      "ball_offset_z": 0.0,
+      "hold_steps": 100,
+      "min_lift_height": 0.1
+    },
+    "candidate": {
+      "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0014_gyp0p0000_gzp0p0020_lj2m0p950_ls520_hs100_ml0p100",
+      "active_finger": "middle",
+      "thumb_cmc_abd": -0.35,
+      "thumb_cmc": 0.02,
+      "thumb_mcp": 0.28,
+      "thumb_ip": -0.32,
+      "active_mcp_flex": -0.04,
+      "active_mcp_abd": -0.5,
+      "active_pip": -0.7,
+      "active_dip": -0.315,
+      "inactive_scale": 0.0,
+      "tip_sliding_mu": 2.8,
+      "non_tip_sliding_mu": 0.1,
+      "ball_sliding_mu": 1.35,
+      "lift_j2": -0.95,
+      "lift_steps": 520
+    },
+    "status": "PASS",
+    "success": true,
+    "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+    "score": 20.617535535845175,
+    "contact_gate_success": true,
+    "contact_gate_step": 60,
+    "lift_break_reason": "lifted_tip_window_met",
+    "hold_break_reason": "stable_hold_window_met",
+    "lift_success": true,
+    "true_pinch_success": true,
+    "release_success": true,
+    "initial_ball": [
+      0.19022382,
+      0.187702,
+      -0.07538043999999999
+    ],
+    "final_ball": [
+      0.15385003188769866,
+      0.23498605095023484,
+      -0.07549120886254065
+    ],
+    "max_lift_m": 0.11295256509464727,
+    "hold_lift_m_max": 0.11295256509464727,
+    "hold_lift_m_mean": 0.11040209962898045,
+    "slow_lift_sample_lift_m_max": 0.10466161082721274,
+    "max_penetration_m": 0.004044490302806535,
+    "contact_gate_morphology": {
+      "frames": 13,
+      "true_two_tip_pinch_fraction": 0.15384615384615385,
+      "wrap_frame_fraction": 0.8461538461538461,
+      "floor_contact_fraction": 0.0,
+      "tip_contact_ratio_mean": 0.39743589743589747,
+      "non_tip_contact_ratio_mean": 0.6025641025641025,
+      "mean_hand_contacts": 2.6923076923076925,
+      "region_counts": {
+        "middle": 13,
+        "thumb": 12
+      }
+    },
+    "hold_morphology": {
+      "frames": 13,
+      "true_two_tip_pinch_fraction": 1.0,
+      "wrap_frame_fraction": 0.0,
+      "floor_contact_fraction": 0.0,
+      "tip_contact_ratio_mean": 1.0,
+      "non_tip_contact_ratio_mean": 0.0,
+      "mean_hand_contacts": 2.0,
+      "region_counts": {
+        "middle": 13,
+        "thumb": 13
+      }
+    },
+    "lift_morphology": {
+      "frames": 77,
+      "true_two_tip_pinch_fraction": 1.0,
+      "wrap_frame_fraction": 0.0,
+      "floor_contact_fraction": 0.11688311688311688,
+      "tip_contact_ratio_mean": 0.7056277056277056,
+      "non_tip_contact_ratio_mean": 0.29437229437229445,
+      "mean_hand_contacts": 2.883116883116883,
+      "region_counts": {
+        "middle": 77,
+        "thumb": 77
+      }
+    },
+    "final_morphology": {
+      "hand_contacts": 0,
+      "floor_contacts": 1,
+      "regions": [],
+      "tip_contact_ratio": 0.0,
+      "non_tip_contact_ratio": 0.0,
+      "true_two_tip_pinch": false,
+      "wrap_or_support": false
+    },
+    "final_sample": {
+      "label": "final",
+      "ball_position": [
+        0.15385003188769866,
+        0.23498605095023484,
+        -0.07549120886254065
+      ],
+      "lift_m": -0.0001107688625406611,
+      "morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "max_penetration_m": 0.00011076886254065763
+    },
+    "motor_force_feedback_summary": {
+      "samples": 0
+    },
+    "force_feedback_gate": {
+      "enabled": false,
+      "preload_enabled": false,
+      "preload_level": 0.0,
+      "preload_break_reason": "disabled",
+      "preload_samples": 0,
+      "lift_low_force_samples": 0,
+      "lift_wait_steps": 0,
+      "min_slow_lift_pair_tension_n": 4.0,
+      "min_hold_pair_tension_n": 2.0,
+      "min_pair_balance": 0.01
+    },
+    "residual_micro_adjust": {
+      "enabled": false,
+      "quality_bad_samples": 0,
+      "events": 0,
+      "close_events": 0,
+      "wait_steps": 0,
+      "progress_drop_steps": 0,
+      "prelift_events": 0,
+      "final_close_level": 0.0,
+      "grasp_x_delta_total": 0.0,
+      "ik_solves": 0,
+      "check_after_lift_steps": 80,
+      "max_wait_steps": 160,
+      "close_delta": 0.006,
+      "max_close_delta": 0.03,
+      "grasp_x_delta": 0.0,
+      "max_grasp_x_delta": 0.0
+    },
+    "dense_sensor_trace": [],
+    "dense_sensor_trace_schema": {
+      "enabled": false,
+      "sample_every": 1,
+      "fields": [
+        "dense_step_index",
+        "label",
+        "phase_step",
+        "phase_progress",
+        "time_s",
+        "ball_position",
+        "lift_m",
+        "morphology",
+        "max_penetration_m",
+        "motor_force_feedback",
+        "ctrl",
+        "qpos",
+        "qvel"
+      ]
+    },
+    "ik": {
+      "score": 0.007307870444042626,
+      "objective": 0.010422587463495055,
+      "optimizer_success": true,
+      "joints": {
+        "j1": 3.1416,
+        "j2": -1.5540381480234224,
+        "j3": 0.9707301955371285,
+        "j4": 2.62524965584382
+      },
+      "midpoint": [
+        0.18892787370029293,
+        0.187573502270296,
+        -0.073388060254365
+      ],
+      "target": [
+        0.18882381999999998,
+        0.187702,
+        -0.07338043999999999
+      ],
+      "midpoint_error_m": 0.00016552011164908372,
+      "tip_separation_m": 0.052857649667606456,
+      "tip_separation_error_m": 0.007142350332393542,
+      "thumb_tip": [
+        0.1802248848816067,
+        0.20033682477416415,
+        -0.05194421809909979
+      ],
+      "active_tip": [
+        0.19763086251897916,
+        0.17481017976642785,
+        -0.09483190240963023
+      ]
+    },
+    "material_changes": {
+      "non_tip_hand": 50,
+      "tip": 5,
+      "ball": 1
+    },
+    "ball_config": {
+      "configured": true,
+      "original_radius_m": 0.028,
+      "radius_m": 0.018,
+      "original_body_mass_kg": 0.025,
+      "body_mass_kg": 0.01,
+      "floor_z_m": -0.09338044
+    },
+    "snapshots": {
+      "00_start": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\00_start.png",
+      "01_pinch_close": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\01_pinch_close.png",
+      "02_contact_gate": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\02_contact_gate.png",
+      "02_contact_gate_finger_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\02_contact_gate_finger_side.png",
+      "02_contact_gate_thumb_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\02_contact_gate_thumb_side.png",
+      "03_slow_lift": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\03_slow_lift.png",
+      "03_slow_lift_finger_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\03_slow_lift_finger_side.png",
+      "03_slow_lift_thumb_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\03_slow_lift_thumb_side.png",
+      "04_hold": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\04_hold.png",
+      "04_hold_finger_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\04_hold_finger_side.png",
+      "04_hold_thumb_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\04_hold_thumb_side.png",
+      "05_release_open": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\05_release_open.png",
+      "05_release_open_finger_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\05_release_open_finger_side.png",
+      "05_release_open_thumb_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\05_release_open_thumb_side.png",
+      "06_settle_release": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\06_settle_release.png",
+      "06_settle_release_finger_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\06_settle_release_finger_side.png",
+      "06_settle_release_thumb_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\06_settle_release_thumb_side.png"
+    }
+  },
+  "best_contact_sheet": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0014_gyp0p0000_gzp0p0020_lj2m0p950_ls520_hs100_ml0p100_contact_sheet.png",
+  "results": [
+    {
+      "case": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0014_gyp0p0000_gzp0p0020_lj2m0p950_ls520_hs100_ml0p100",
+        "candidate": {
+          "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0014_gyp0p0000_gzp0p0020_lj2m0p950_ls520_hs100_ml0p100",
+          "active_finger": "middle",
+          "thumb_cmc_abd": -0.35,
+          "thumb_cmc": 0.02,
+          "thumb_mcp": 0.28,
+          "thumb_ip": -0.32,
+          "active_mcp_flex": -0.04,
+          "active_mcp_abd": -0.5,
+          "active_pip": -0.7,
+          "active_dip": -0.315,
+          "inactive_scale": 0.0,
+          "tip_sliding_mu": 2.8,
+          "non_tip_sliding_mu": 0.1,
+          "ball_sliding_mu": 1.35,
+          "lift_j2": -0.95,
+          "lift_steps": 520
+        },
+        "tip_pair_separation_target": 0.06,
+        "grasp_offset_x": -0.0014,
+        "grasp_offset_y": 0.0,
+        "grasp_offset_z": 0.002,
+        "ball_radius": 0.018,
+        "ball_mass": 0.01,
+        "ball_offset_x": 0.0,
+        "ball_offset_y": 0.0,
+        "ball_offset_z": 0.0,
+        "hold_steps": 100,
+        "min_lift_height": 0.1
+      },
+      "candidate": {
+        "name": "event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0014_gyp0p0000_gzp0p0020_lj2m0p950_ls520_hs100_ml0p100",
+        "active_finger": "middle",
+        "thumb_cmc_abd": -0.35,
+        "thumb_cmc": 0.02,
+        "thumb_mcp": 0.28,
+        "thumb_ip": -0.32,
+        "active_mcp_flex": -0.04,
+        "active_mcp_abd": -0.5,
+        "active_pip": -0.7,
+        "active_dip": -0.315,
+        "inactive_scale": 0.0,
+        "tip_sliding_mu": 2.8,
+        "non_tip_sliding_mu": 0.1,
+        "ball_sliding_mu": 1.35,
+        "lift_j2": -0.95,
+        "lift_steps": 520
+      },
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_event_contact_gated_true_pinch_release_ball",
+      "score": 20.617535535845175,
+      "contact_gate_success": true,
+      "contact_gate_step": 60,
+      "lift_break_reason": "lifted_tip_window_met",
+      "hold_break_reason": "stable_hold_window_met",
+      "lift_success": true,
+      "true_pinch_success": true,
+      "release_success": true,
+      "initial_ball": [
+        0.19022382,
+        0.187702,
+        -0.07538043999999999
+      ],
+      "final_ball": [
+        0.15385003188769866,
+        0.23498605095023484,
+        -0.07549120886254065
+      ],
+      "max_lift_m": 0.11295256509464727,
+      "hold_lift_m_max": 0.11295256509464727,
+      "hold_lift_m_mean": 0.11040209962898045,
+      "slow_lift_sample_lift_m_max": 0.10466161082721274,
+      "max_penetration_m": 0.004044490302806535,
+      "contact_gate_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 0.15384615384615385,
+        "wrap_frame_fraction": 0.8461538461538461,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 0.39743589743589747,
+        "non_tip_contact_ratio_mean": 0.6025641025641025,
+        "mean_hand_contacts": 2.6923076923076925,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 12
+        }
+      },
+      "hold_morphology": {
+        "frames": 13,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.0,
+        "tip_contact_ratio_mean": 1.0,
+        "non_tip_contact_ratio_mean": 0.0,
+        "mean_hand_contacts": 2.0,
+        "region_counts": {
+          "middle": 13,
+          "thumb": 13
+        }
+      },
+      "lift_morphology": {
+        "frames": 77,
+        "true_two_tip_pinch_fraction": 1.0,
+        "wrap_frame_fraction": 0.0,
+        "floor_contact_fraction": 0.11688311688311688,
+        "tip_contact_ratio_mean": 0.7056277056277056,
+        "non_tip_contact_ratio_mean": 0.29437229437229445,
+        "mean_hand_contacts": 2.883116883116883,
+        "region_counts": {
+          "middle": 77,
+          "thumb": 77
+        }
+      },
+      "final_morphology": {
+        "hand_contacts": 0,
+        "floor_contacts": 1,
+        "regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "true_two_tip_pinch": false,
+        "wrap_or_support": false
+      },
+      "final_sample": {
+        "label": "final",
+        "ball_position": [
+          0.15385003188769866,
+          0.23498605095023484,
+          -0.07549120886254065
+        ],
+        "lift_m": -0.0001107688625406611,
+        "morphology": {
+          "hand_contacts": 0,
+          "floor_contacts": 1,
+          "regions": [],
+          "tip_contact_ratio": 0.0,
+          "non_tip_contact_ratio": 0.0,
+          "true_two_tip_pinch": false,
+          "wrap_or_support": false
+        },
+        "max_penetration_m": 0.00011076886254065763
+      },
+      "motor_force_feedback_summary": {
+        "samples": 0
+      },
+      "force_feedback_gate": {
+        "enabled": false,
+        "preload_enabled": false,
+        "preload_level": 0.0,
+        "preload_break_reason": "disabled",
+        "preload_samples": 0,
+        "lift_low_force_samples": 0,
+        "lift_wait_steps": 0,
+        "min_slow_lift_pair_tension_n": 4.0,
+        "min_hold_pair_tension_n": 2.0,
+        "min_pair_balance": 0.01
+      },
+      "residual_micro_adjust": {
+        "enabled": false,
+        "quality_bad_samples": 0,
+        "events": 0,
+        "close_events": 0,
+        "wait_steps": 0,
+        "progress_drop_steps": 0,
+        "prelift_events": 0,
+        "final_close_level": 0.0,
+        "grasp_x_delta_total": 0.0,
+        "ik_solves": 0,
+        "check_after_lift_steps": 80,
+        "max_wait_steps": 160,
+        "close_delta": 0.006,
+        "max_close_delta": 0.03,
+        "grasp_x_delta": 0.0,
+        "max_grasp_x_delta": 0.0
+      },
+      "dense_sensor_trace": [],
+      "dense_sensor_trace_schema": {
+        "enabled": false,
+        "sample_every": 1,
+        "fields": [
+          "dense_step_index",
+          "label",
+          "phase_step",
+          "phase_progress",
+          "time_s",
+          "ball_position",
+          "lift_m",
+          "morphology",
+          "max_penetration_m",
+          "motor_force_feedback",
+          "ctrl",
+          "qpos",
+          "qvel"
+        ]
+      },
+      "ik": {
+        "score": 0.007307870444042626,
+        "objective": 0.010422587463495055,
+        "optimizer_success": true,
+        "joints": {
+          "j1": 3.1416,
+          "j2": -1.5540381480234224,
+          "j3": 0.9707301955371285,
+          "j4": 2.62524965584382
+        },
+        "midpoint": [
+          0.18892787370029293,
+          0.187573502270296,
+          -0.073388060254365
+        ],
+        "target": [
+          0.18882381999999998,
+          0.187702,
+          -0.07338043999999999
+        ],
+        "midpoint_error_m": 0.00016552011164908372,
+        "tip_separation_m": 0.052857649667606456,
+        "tip_separation_error_m": 0.007142350332393542,
+        "thumb_tip": [
+          0.1802248848816067,
+          0.20033682477416415,
+          -0.05194421809909979
+        ],
+        "active_tip": [
+          0.19763086251897916,
+          0.17481017976642785,
+          -0.09483190240963023
+        ]
+      },
+      "material_changes": {
+        "non_tip_hand": 50,
+        "tip": 5,
+        "ball": 1
+      },
+      "ball_config": {
+        "configured": true,
+        "original_radius_m": 0.028,
+        "radius_m": 0.018,
+        "original_body_mass_kg": 0.025,
+        "body_mass_kg": 0.01,
+        "floor_z_m": -0.09338044
+      },
+      "snapshots": {
+        "00_start": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\00_start.png",
+        "01_pinch_close": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\01_pinch_close.png",
+        "02_contact_gate": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\02_contact_gate.png",
+        "02_contact_gate_finger_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\02_contact_gate_finger_side.png",
+        "02_contact_gate_thumb_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\02_contact_gate_thumb_side.png",
+        "03_slow_lift": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\03_slow_lift.png",
+        "03_slow_lift_finger_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\03_slow_lift_finger_side.png",
+        "03_slow_lift_thumb_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\03_slow_lift_thumb_side.png",
+        "04_hold": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\04_hold.png",
+        "04_hold_finger_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\04_hold_finger_side.png",
+        "04_hold_thumb_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\04_hold_thumb_side.png",
+        "05_release_open": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\05_release_open.png",
+        "05_release_open_finger_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\05_release_open_finger_side.png",
+        "05_release_open_thumb_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\05_release_open_thumb_side.png",
+        "06_settle_release": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\06_settle_release.png",
+        "06_settle_release_finger_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\06_settle_release_finger_side.png",
+        "06_settle_release_thumb_side": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_11d_g_static_geometry_side_vis\\event_thumb_middle_tabdm0p350_tmcpp0p280_aabdm0p500_apipm0p700_sep0p060_gxm0p0__7303e206e5\\06_settle_release_thumb_side.png"
+      }
+    }
+  ],
+  "boundary": {
+    "mujoco_only": true,
+    "event_driven_parameter_search_not_neural_training": true,
+    "controller_promoted": false,
+    "hardware_runtime": false,
+    "full_action_act_dp_promoted": false
+  }
+}

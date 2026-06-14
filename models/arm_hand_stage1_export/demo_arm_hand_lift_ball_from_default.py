@@ -76,8 +76,11 @@ def run_interpolated_phase(
     speed: float = 1.0,
     video_writer: FrameWriter | None = None,
     renderer=None,
-    capture_every: int = 4,
+    capture_every: int = 17,
+    viewer_sync_every: int = 17,
 ) -> None:
+    phase_wall_start = time.perf_counter()
+    sim_dt = float(model.opt.timestep)
     for i in range(max(1, steps)):
         alpha = i / max(1, steps - 1)
         targets = base.blend_targets(start_targets, end_targets, alpha)
@@ -90,11 +93,24 @@ def run_interpolated_phase(
             mujoco.mj_forward(model, data)
             base.set_ball_pose(model, data, mujoco, base.palm_relative_ball_position(model, data, mujoco))
             mujoco.mj_forward(model, data)
-        if viewer is not None:
+        if viewer is not None and (i % max(1, viewer_sync_every) == 0 or i + 1 >= max(1, steps)):
             viewer.sync()
-            time.sleep(model.opt.timestep / max(speed, 1e-6))
+            target_elapsed = ((i + 1) * sim_dt) / max(speed, 1e-6)
+            sleep_s = phase_wall_start + target_elapsed - time.perf_counter()
+            if sleep_s > 0.0:
+                time.sleep(sleep_s)
+            if not viewer.is_running():
+                break
         if video_writer is not None and renderer is not None and i % max(1, capture_every) == 0:
             append_video_frame(video_writer, renderer, model, data, mujoco)
+
+
+def auto_capture_every(model, fps: int, video_speed: float) -> int:
+    return max(1, int(round(max(video_speed, 1e-6) / (float(model.opt.timestep) * max(1, fps)))))
+
+
+def auto_viewer_sync_every(model, fps: int, speed: float) -> int:
+    return max(1, int(round(max(speed, 1e-6) / (float(model.opt.timestep) * max(1, fps)))))
 
 
 def write_contact_sheet(screenshots: dict[str, str]) -> str:
@@ -126,6 +142,12 @@ def run_demo(args) -> dict[str, Any]:
     model = mujoco.MjModel.from_xml_path(str(scene))
     data = mujoco.MjData(model)
     names = base.actuator_names(model, mujoco)
+    capture_every = int(args.capture_every) if args.capture_every is not None else auto_capture_every(model, int(args.fps), float(args.video_speed))
+    viewer_sync_every = (
+        int(args.viewer_sync_every)
+        if args.viewer_sync_every is not None
+        else auto_viewer_sync_every(model, int(args.viewer_sync_fps), float(args.speed))
+    )
 
     data.qpos[:] = model.qpos0
     data.qvel[:] = 0.0
@@ -190,7 +212,8 @@ def run_demo(args) -> dict[str, Any]:
                 speed=args.speed,
                 video_writer=writer,
                 renderer=renderer,
-                capture_every=args.capture_every,
+                capture_every=capture_every,
+                viewer_sync_every=viewer_sync_every,
             )
             metrics = base.scalar_metrics(model, data, mujoco, initial_ball)
             phase_rows.append({"phase": phase, "assist_ball": assist, "metrics": metrics})
@@ -225,6 +248,14 @@ def run_demo(args) -> dict[str, Any]:
         "status": "PASS" if success else "PARTIAL",
         "training_used": False,
         "video": video_path,
+        "playback": {
+            "video_fps": int(args.fps),
+            "video_speed": float(args.video_speed),
+            "capture_every": int(capture_every),
+            "viewer_speed": float(args.speed),
+            "viewer_sync_fps": int(args.viewer_sync_fps),
+            "viewer_sync_every": int(viewer_sync_every),
+        },
         "screenshots": screenshots,
         "contact_sheet": contact_sheet,
         "model_summary": {
@@ -297,8 +328,11 @@ def main() -> None:
     parser.add_argument("--output", default=str(VIDEO))
     parser.add_argument("--assist-after-grasp", action="store_true")
     parser.add_argument("--speed", type=float, default=2.0)
+    parser.add_argument("--viewer-sync-fps", type=int, default=30)
+    parser.add_argument("--viewer-sync-every", type=int, default=None)
+    parser.add_argument("--video-speed", type=float, default=1.0, help="Target rendered-video speed multiplier; 1.0 is real-time.")
     parser.add_argument("--fps", type=int, default=30)
-    parser.add_argument("--capture-every", type=int, default=4)
+    parser.add_argument("--capture-every", type=int, default=None, help="Override automatic video sampling stride.")
     parser.add_argument("--width", type=int, default=960)
     parser.add_argument("--height", type=int, default=676)
     parser.add_argument("--default-hold-steps", type=int, default=90)

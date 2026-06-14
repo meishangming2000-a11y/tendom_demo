@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-06-13",
+  "stage": "Stage3.12B",
+  "status": "closed_shadow_quality_asset",
+  "classification": "diagnostic_shadow_quality_asset",
+  "boundary": {
+    "mujoco_only": true,
+    "offline_classifier": true,
+    "shadow_only": true,
+    "controller_actions_changed": false,
+    "hardware_runtime": false,
+    "real_camera": false,
+    "real_tactile": false,
+    "full_action_act_dp_promoted": false
+  },
+  "dataset": {
+    "path": "simulations/models/arm_hand_stage1_export/data/stage3_12b_morphology_quality_dataset_v0.npz",
+    "episodes": 60,
+    "dense_rows": 94586,
+    "success_count": 50,
+    "candidates": {
+      "baseline_di": {
+        "episodes": 30,
+        "rows": 48000,
+        "success_count": 25,
+        "contact_gate_success_count": 28,
+        "lift_success_count": 27,
+        "true_pinch_success_count": 25,
+        "release_success_count": 30,
+        "hold_true_two_tip_mean": 0.838,
+        "hold_non_tip_ratio_mean": 0.05,
+        "hold_wrap_fraction_mean": 0.0
+      },
+      "lift_ls460": {
+        "episodes": 30,
+        "rows": 46586,
+        "success_count": 25,
+        "contact_gate_success_count": 26,
+        "lift_success_count": 25,
+        "true_pinch_success_count": 25,
+        "release_success_count": 29,
+        "hold_true_two_tip_mean": 0.833,
+        "hold_non_tip_ratio_mean": 0.09,
+        "hold_wrap_fraction_mean": 0.0
+      }
+    }
+  },
+  "training": {
+    "script": "simulations/models/arm_hand_stage1_export/train_stage3_12b_morphology_quality_head_v0.py",
+    "checkpoint": "simulations/models/arm_hand_stage1_export/checkpoints/stage3_12b_morphology_quality_head_v0.pth",
+    "grasp_evidence_rows": 29726,
+    "train_rows": 24147,
+    "val_rows": 5579,
+    "input_dim": 139,
+    "primary_target": "morphology_clean_now",
+    "primary_val_f1": 1.0,
+    "future_success_val_f1": 0.9400407594122063,
+    "penetration_risk_primary_trigger": false
+  },
+  "fresh_shadow": {
+    "script": "simulations/models/arm_hand_stage1_export/run_stage3_12b_morphology_quality_shadow_v0.py",
+    "episodes": 24,
+    "success_count": 18,
+    "shadow_frames": 10801,
+    "morphology_clean_f1": 0.9999345849414535,
+    "lift_quality_f1": 0.9991489361702127,
+    "future_success_f1": 0.9466476774758983,
+    "penetration_risk_f1": 0.0,
+    "candidate_slices": {
+      "baseline_di": {
+        "episodes": 12,
+        "success_count": 8,
+        "morphology_clean_f1": 1.0,
+        "future_success_f1": 0.9130
+      },
+      "lift_ls460": {
+        "episodes": 12,
+        "success_count": 10,
+        "morphology_clean_f1": 0.9999,
+        "future_success_f1": 0.9734
+      }
+    }
+  },
+  "decision": "Promote Stage3.12B as a diagnostic/shadow quality asset only. Do not promote controller actions or lift_ls460.",
+  "next": [
+    "Mine high-confidence low-quality windows from the Stage3.12B shadow head.",
+    "Design 2-4 bounded residual teacher variants gated by morphology-quality predictions.",
+    "Run smoke before 50-trial validation.",
+    "Promote only if the same multiseed gate beats frozen D-I without increasing true-pinch morphology failures."
+  ],
+  "artifacts": {
+    "dataset_report": "simulations/models/arm_hand_stage1_export/docs/stage3_12b_morphology_quality_dataset_v0_report.md",
+    "train_report": "simulations/models/arm_hand_stage1_export/docs/stage3_12b_morphology_quality_head_v0_train_report.md",
+    "shadow_report": "simulations/models/arm_hand_stage1_export/docs/stage3_12b_morphology_quality_shadow_v0_report.md",
+    "closeout": "simulations/models/arm_hand_stage1_export/docs/stage3_12b_morphology_quality_head_v0_closeout.md"
+  }
+}

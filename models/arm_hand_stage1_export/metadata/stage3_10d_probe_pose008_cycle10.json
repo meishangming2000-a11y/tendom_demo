@@ -1,0 +1,4725 @@
+{
+  "generated_at": "2026-06-08T17:06:06",
+  "checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\stage3_10c_safety_act_cvae_policy_v0.pth",
+  "checkpoint_status": "stage3_10c_safety_act_cvae_policy_v0_offline_trained_not_closed_loop_promoted",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_stage3_egg_gentle_grasp_hold_v0.xml",
+  "selected_pinch_config": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_pinch_grasp_training_v0_selected.json",
+  "execution_mode": "scripted_arm_predicted_hand",
+  "full_hand_control_mode": "stage3_7d_fallback",
+  "full_hand_fallback_checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\stage3_phase_hand_policy_v0.pth",
+  "replan_interval": 16,
+  "device": "cpu",
+  "args": {
+    "checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\stage3_10c_safety_act_cvae_policy_v0.pth",
+    "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_stage3_egg_gentle_grasp_hold_v0.xml",
+    "selected_pinch_config": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_pinch_grasp_training_v0_selected.json",
+    "report": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_10d_probe_pose008_cycle10_report.md",
+    "metadata": "simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_10d_probe_pose008_cycle10.json",
+    "skills": "full_hand_gentle_grasp,thumb_index_middle_pinch",
+    "trials": "cycle",
+    "episodes_per_skill": 5,
+    "execution_mode": "scripted_arm_predicted_hand",
+    "replan_interval": 16,
+    "hand_start_index": 6,
+    "full_hand_control_mode": "stage3_7d_fallback",
+    "full_hand_fallback_checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\stage3_phase_hand_policy_v0.pth",
+    "full_hand_fallback_transition_slip_threshold": 0.29,
+    "full_hand_fallback_max_transition_hold_steps_per_phase": 200,
+    "full_hand_fallback_recovery_progress_drop": 0.01,
+    "full_hand_fallback_recovery_stable_window_steps": 0,
+    "pinch_repair_mode": "inactive_anchor_slip_close",
+    "pinch_repair_phases": "slow_lift,hold",
+    "pinch_repair_slip_threshold": 0.28,
+    "pinch_repair_inactive_alpha": 0.75,
+    "pinch_repair_expert_alpha": 0.2,
+    "pinch_repair_close_gain": 0.08,
+    "pinch_repair_close_max": 0.18,
+    "pinch_repair_preclose_delta": 0.1,
+    "pinch_repair_max_crush": 0.25,
+    "pinch_repair_max_penetration": 0.0035,
+    "pinch_final_verification_mode": "vision_tactile_corroborated",
+    "pinch_final_corroboration_min_confidence": 0.3,
+    "pinch_final_corroboration_min_mask_pixels": 500,
+    "seed": 270,
+    "random_offset_std": 0.008,
+    "camera": "stage3_egg_closeup",
+    "width": 640,
+    "height": 480,
+    "sample_every": 240,
+    "device": "cpu",
+    "capture_sequence": false
+  },
+  "summary": {
+    "status": "PASS",
+    "episodes": 10,
+    "success_count": 10,
+    "terminal_reason_counts": {
+      "success_gentle_grasp_hold": 5,
+      "success_vision_confirmed_pinch_lift_hold": 5
+    },
+    "failure_reason_counts": {},
+    "risk_flag_counts": {
+      "early_contact_in_approach": 10,
+      "transient_or_hold_slip": 5,
+      "recovery_budget_exhausted": 4,
+      "transient_slip_high": 5
+    },
+    "by_skill": {
+      "full_hand_gentle_grasp": {
+        "episodes": 5,
+        "success_count": 5,
+        "terminal_reason_counts": {
+          "success_gentle_grasp_hold": 5
+        },
+        "failure_reason_counts": {},
+        "risk_flag_counts": {
+          "early_contact_in_approach": 5,
+          "transient_or_hold_slip": 5,
+          "recovery_budget_exhausted": 4
+        },
+        "final_lift_height_m_mean": 0.10111954640644157,
+        "final_lift_height_m_min": 0.09379052174056954,
+        "final_lift_height_m_max": 0.10600356788009736,
+        "hold_stable_fraction_mean": 1.0,
+        "hold_stable_fraction_min": 1.0,
+        "hold_stable_fraction_max": 1.0,
+        "hold_max_slip_score_mean": 0.20368186161115398,
+        "hold_max_slip_score_min": 0.08020796371125491,
+        "hold_max_slip_score_max": 0.33589164209137856,
+        "max_slip_score_mean": 0.5748943495391174,
+        "max_slip_score_min": 0.4260467249662805,
+        "max_slip_score_max": 1.0,
+        "max_crush_risk_mean": 0.09179696485876258,
+        "max_crush_risk_min": 0.07748342260632994,
+        "max_crush_risk_max": 0.11191534309485543,
+        "max_penetration_m_mean": 0.001835939297175252,
+        "max_penetration_m_min": 0.0015496684521265989,
+        "max_penetration_m_max": 0.0022383068618971086
+      },
+      "thumb_index_middle_pinch": {
+        "episodes": 5,
+        "success_count": 5,
+        "terminal_reason_counts": {
+          "success_vision_confirmed_pinch_lift_hold": 5
+        },
+        "failure_reason_counts": {},
+        "risk_flag_counts": {
+          "early_contact_in_approach": 5,
+          "transient_slip_high": 5
+        },
+        "true_lift_height_m_mean": 0.10123272320329738,
+        "true_lift_height_m_min": 0.08795591450518853,
+        "true_lift_height_m_max": 0.10905797446604301,
+        "vision_lift_height_m_mean": 0.1037813433922562,
+        "vision_lift_height_m_min": 0.08202768940616631,
+        "vision_lift_height_m_max": 0.11981517966649649,
+        "hold_stable_fraction_mean": 1.0,
+        "hold_stable_fraction_min": 1.0,
+        "hold_stable_fraction_max": 1.0,
+        "hold_pinch_fraction_mean": 0.9734285714285715,
+        "hold_pinch_fraction_min": 0.8671428571428571,
+        "hold_pinch_fraction_max": 1.0,
+        "hold_max_slip_score_mean": 0.20454215978659201,
+        "hold_max_slip_score_min": 0.10984808471861693,
+        "hold_max_slip_score_max": 0.2862824239964895,
+        "max_slip_score_mean": 0.9976736434741185,
+        "max_slip_score_min": 0.9883682173705924,
+        "max_slip_score_max": 1.0,
+        "max_crush_risk_mean": 0.15941332806577227,
+        "max_crush_risk_min": 0.13024055924269265,
+        "max_crush_risk_max": 0.1908005760118075,
+        "max_penetration_m_mean": 0.003188266561315445,
+        "max_penetration_m_min": 0.002604811184853853,
+        "max_penetration_m_max": 0.00381601152023615
+      }
+    }
+  },
+  "results": [
+    {
+      "episode_id": 0,
+      "trial": "center_nominal",
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip",
+        "recovery_budget_exhausted"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 1.5819502382013648e-08,
+        "ik_approach_dz_m": 1.0736430383628814e-08,
+        "ik_lift_dxy_m": 3.0379731630635705e-08,
+        "ik_lift_dz_m": 9.186377139536184e-08,
+        "approach_true_proxy_error_m": 0.010665001566752215,
+        "approach_est_proxy_error_m": 0.010678618130811854,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.10118265594108428,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.33589164209137856,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.49380813218035124,
+        "pre_lift_max_slip_score": 0.20863712725512637,
+        "post_lift_max_slip_score": 0.49380813218035124,
+        "max_crush_risk": 0.07748342260632994,
+        "max_penetration_m": 0.0015496684521265989,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4760,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 1942,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.023047929049957228,
+        "pre_lift_crush_risk": 0.03197954518351035,
+        "pre_lift_penetration_m": 0.000639590903670207,
+        "recovery_steps": 200,
+        "recovery_events": 401,
+        "recovery_counts": {
+          "slow_lift": 200
+        },
+        "recovery_reason_counts": {
+          "slip_high": 561
+        },
+        "recovery_budget_exhausted_counts": {
+          "slow_lift": 361
+        },
+        "recovery_control_progress_min": 0.020042918454935624,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5220,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.18185162612008104,
+            "max_crush_risk": 0.04067480694266995,
+            "max_penetration_m": 0.000813496138853399
+          },
+          "preshape": {
+            "max_slip_score": 0.20568645968339927,
+            "max_crush_risk": 0.03874638177511423,
+            "max_penetration_m": 0.0007749276355022847
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.10531860883784418,
+            "max_crush_risk": 0.07747668164824142,
+            "max_penetration_m": 0.0015495336329648286
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.20863712725512637,
+            "max_crush_risk": 0.07748342260632994,
+            "max_penetration_m": 0.0015496684521265989
+          },
+          "contact_settle": {
+            "max_slip_score": 0.20763135184555637,
+            "max_crush_risk": 0.04342368728462156,
+            "max_penetration_m": 0.0008684737456924312
+          },
+          "slow_lift": {
+            "max_slip_score": 0.49380813218035124,
+            "max_crush_risk": 0.03213162997140672,
+            "max_penetration_m": 0.0006426325994281345
+          },
+          "hold": {
+            "max_slip_score": 0.33589164209137856,
+            "max_crush_risk": 0.02954324561494628,
+            "max_penetration_m": 0.0005908649122989256
+          }
+        },
+        "gate_block_reason_counts": {
+          "slip_high": 58
+        },
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "trace": [
+        {
+          "step": 0,
+          "phase": "approach",
+          "nominal_progress": 0.0,
+          "control_progress": 0.0,
+          "learned_hand": false,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.0,
+          "contact": false,
+          "stable": false,
+          "slip": 0.0,
+          "crush": 6.938893903907228e-16,
+          "penetration": 1.3877787807814457e-17,
+          "gate_window": 0
+        },
+        {
+          "step": 240,
+          "phase": "approach",
+          "nominal_progress": 0.7523510971786834,
+          "control_progress": 0.7523510971786834,
+          "learned_hand": false,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -9.6264328343941e-05,
+          "contact": false,
+          "stable": false,
+          "slip": 0.0,
+          "crush": 0.004813216417197397,
+          "penetration": 9.626432834394794e-05,
+          "gate_window": 0
+        },
+        {
+          "step": 480,
+          "phase": "gentle_close_fingers",
+          "nominal_progress": 0.11173184357541899,
+          "control_progress": 0.11173184357541899,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.0008073802113203049,
+          "contact": true,
+          "stable": true,
+          "slip": 0.053425800092298734,
+          "crush": 0.03862262821766581,
+          "penetration": 0.0007724525643533162,
+          "gate_window": 0
+        },
+        {
+          "step": 720,
+          "phase": "gentle_close_thumb",
+          "nominal_progress": 0.44692737430167595,
+          "control_progress": 0.44692737430167595,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.003469297626389388,
+          "contact": true,
+          "stable": true,
+          "slip": 0.19353889329379553,
+          "crush": 0.05992564535998463,
+          "penetration": 0.0011985129071996926,
+          "gate_window": 0
+        },
+        {
+          "step": 960,
+          "phase": "contact_settle",
+          "nominal_progress": 0.07003501750875438,
+          "control_progress": 0.07003501750875438,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.006337437980078152,
+          "contact": true,
+          "stable": true,
+          "slip": 0.12054067121316685,
+          "crush": 0.04097098354772328,
+          "penetration": 0.0008194196709544656,
+          "gate_window": 83
+        },
+        {
+          "step": 1200,
+          "phase": "contact_settle",
+          "nominal_progress": 0.19009504752376188,
+          "control_progress": 0.19009504752376188,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.006947905011462703,
+          "contact": true,
+          "stable": true,
+          "slip": 0.04880090179456878,
+          "crush": 0.03978391422247021,
+          "penetration": 0.0007956782844494043,
+          "gate_window": 323
+        },
+        {
+          "step": 1440,
+          "phase": "contact_settle",
+          "nominal_progress": 0.31015507753876936,
+          "control_progress": 0.31015507753876936,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.007022263185055576,
+          "contact": true,
+          "stable": true,
+          "slip": 0.04132534216089911,
+          "crush": 0.03851035996822582,
+          "penetration": 0.0007702071993645164,
+          "gate_window": 563
+        },
+        {
+          "step": 1680,
+          "phase": "contact_settle",
+          "nominal_progress": 0.4302151075537769,
+          "control_progress": 0.4302151075537769,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.007109615613244823,
+          "contact": true,
+          "stable": true,
+          "slip": 0.03690143791815358,
+          "crush": 0.03726047244880116,
+          "penetration": 0.0007452094489760232,
+          "gate_window": 803
+        },
+        {
+          "step": 1920,
+          "phase": "contact_settle",
+          "nominal_progress": 0.5502751375687844,
+          "control_progress": 0.5502751375687844,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.007186777394602398,
+          "contact": true,
+          "stable": true,
+          "slip": 0.03168871626589813,
+          "crush": 0.03637171221602723,
+          "penetration": 0.0007274342443205446,
+          "gate_window": 1043
+        },
+        {
+          "step": 2160,
+          "phase": "contact_settle",
+          "nominal_progress": 0.6703351675837919,
+          "control_progress": 0.6703351675837919,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.00727454230841261,
+          "contact": true,
+          "stable": true,
+          "slip": 0.030807249539898,
+          "crush": 0.03538210726071679,
+          "penetration": 0.0007076421452143359,
+          "gate_window": 1283
+        },
+        {
+          "step": 2400,
+          "phase": "contact_settle",
+          "nominal_progress": 0.7903951975987994,
+          "control_progress": 0.7903951975987994,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.0073621952126654705,
+          "contact": true,
+          "stable": true,
+          "slip": 0.029120561690211683,
+          "crush": 0.0337176809581014,
+          "penetration": 0.000674353619162028,
+          "gate_window": 1523
+        },
+        {
+          "step": 2640,
+          "phase": "contact_settle",
+          "nominal_progress": 0.9104552276138069,
+          "control_progress": 0.9104552276138069,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.007455429146078135,
+          "contact": true,
+          "stable": true,
+          "slip": 0.025451568422500313,
+          "crush": 0.03249673174609332,
+          "penetration": 0.0006499346349218664,
+          "gate_window": 1763
+        },
+        {
+          "step": 2880,
+          "phase": "slow_lift",
+          "nominal_progress": 0.04005722460658083,
+          "control_progress": 0.04005722460658083,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.007574495493969852,
+          "contact": true,
+          "stable": true,
+          "slip": 0.021260126098897904,
+          "crush": 0.03188858733146069,
+          "penetration": 0.0006377717466292138,
+          "gate_window": 0
+        },
+        {
+          "step": 3120,
+          "phase": "slow_lift",
+          "nominal_progress": 0.2474964234620887,
+          "control_progress": 0.23749642346208868,
+          "learned_hand": true,
+          "recovery_active": true,
+          "recovery_reasons": [
+            "slip_high"
+          ],
+          "lift_height_m": 0.012068424386480855,
+          "contact": true,
+          "stable": true,
+          "slip": 0.29472165550533935,
+          "crush": 0.03099114652265946,
+          "penetration": 0.0006198229304531892,
+          "gate_window": 0
+        },
+        {
+          "step": 3360,
+          "phase": "slow_lift",
+          "nominal_progress": 0.4864091559370529,
+          "control_progress": 0.4864091559370529,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [
+            "slip_high"
+          ],
+          "lift_height_m": 0.03696623813547109,
+          "contact": true,
+          "stable": true,
+          "slip": 0.3001240656097566,
+          "crush": 0.030415309542335383,
+          "penetration": 0.0006083061908467077,
+          "gate_window": 0
+        },
+        {
+          "step": 3600,
+          "phase": "slow_lift",
+          "nominal_progress": 0.8297567954220315,
+          "control_progress": 0.8297567954220315,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [
+            "slip_high"
+          ],
+          "lift_height_m": 0.07777166086808911,
+          "contact": true,
+          "stable": false,
+          "slip": 0.3610414194739898,
+          "crush": 0.029826086314978326,
+          "penetration": 0.0005965217262995665,
+          "gate_window": 0
+        },
+        {
+          "step": 3840,
+          "phase": "hold",
+          "nominal_progress": 0.0800533689126084,
+          "control_progress": 0.0800533689126084,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.09976805373445449,
+          "contact": true,
+          "stable": true,
+          "slip": 0.10332111649340402,
+          "crush": 0.029259462265233006,
+          "penetration": 0.0005851892453046601,
+          "gate_window": 0
+        },
+        {
+          "step": 4080,
+          "phase": "hold",
+          "nominal_progress": 0.24016010673782523,
+          "control_progress": 0.24016010673782523,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10055966037127895,
+          "contact": true,
+          "stable": true,
+          "slip": 0.013685724803197193,
+          "crush": 0.02869042820273643,
+          "penetration": 0.0005738085640547286,
+          "gate_window": 0
+        },
+        {
+          "step": 4320,
+          "phase": "hold",
+          "nominal_progress": 0.400266844563042,
+          "control_progress": 0.400266844563042,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10063878139347061,
+          "contact": true,
+          "stable": true,
+          "slip": 0.014418330940200577,
+          "crush": 0.02818493556278447,
+          "penetration": 0.0005636987112556894,
+          "gate_window": 0
+        },
+        {
+          "step": 4560,
+          "phase": "hold",
+          "nominal_progress": 0.5603735823882589,
+          "control_progress": 0.5603735823882589,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10074890417870017,
+          "contact": true,
+          "stable": true,
+          "slip": 0.014388085396858085,
+          "crush": 0.02771506992369152,
+          "penetration": 0.0005543013984738304,
+          "gate_window": 0
+        },
+        {
+          "step": 4800,
+          "phase": "hold",
+          "nominal_progress": 0.7204803202134756,
+          "control_progress": 0.7204803202134756,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.1008920340931583,
+          "contact": true,
+          "stable": true,
+          "slip": 0.014692547818339114,
+          "crush": 0.027271708124230153,
+          "penetration": 0.000545434162484603,
+          "gate_window": 0
+        },
+        {
+          "step": 5040,
+          "phase": "hold",
+          "nominal_progress": 0.8805870580386924,
+          "control_progress": 0.8805870580386924,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.1010536259075466,
+          "contact": true,
+          "stable": true,
+          "slip": 0.009247568721460242,
+          "crush": 0.027009137511581262,
+          "penetration": 0.0005401827502316252,
+          "gate_window": 0
+        }
+      ],
+      "policy_scope": "stage3_7d_full_hand_fallback_inside_stage3_10c_eval",
+      "learned_phases": [
+        "contact_settle",
+        "gentle_close_fingers",
+        "gentle_close_thumb",
+        "hold",
+        "slow_lift"
+      ],
+      "skill_id": "full_hand_gentle_grasp",
+      "full_hand_control_mode": "stage3_7d_fallback"
+    },
+    {
+      "episode_id": 1,
+      "trial": "left_low_nominal",
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip",
+        "recovery_budget_exhausted"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 2.345458936411545e-09,
+        "ik_approach_dz_m": 3.4786894961835735e-09,
+        "ik_lift_dxy_m": 2.2976373234728017e-08,
+        "ik_lift_dz_m": 1.415209693184094e-08,
+        "approach_true_proxy_error_m": 0.00875122115948227,
+        "approach_est_proxy_error_m": 0.008734971580308424,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.10347874123442978,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.08020796371125491,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.45662129562453,
+        "pre_lift_max_slip_score": 0.26848064499215407,
+        "post_lift_max_slip_score": 0.45662129562453,
+        "max_crush_risk": 0.08093069106435861,
+        "max_penetration_m": 0.0016186138212871723,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4760,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 1362,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.00028196477513832386,
+        "pre_lift_crush_risk": 0.033050154800057845,
+        "pre_lift_penetration_m": 0.000661003096001157,
+        "recovery_steps": 200,
+        "recovery_events": 32,
+        "recovery_counts": {
+          "slow_lift": 200
+        },
+        "recovery_reason_counts": {
+          "slip_high": 226
+        },
+        "recovery_budget_exhausted_counts": {
+          "slow_lift": 26
+        },
+        "recovery_control_progress_min": 0.09014306151645209,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5220,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.26848064499215407,
+            "max_crush_risk": 0.04131054328565931,
+            "max_penetration_m": 0.0008262108657131862
+          },
+          "preshape": {
+            "max_slip_score": 0.25061946797434803,
+            "max_crush_risk": 0.0483003647812285,
+            "max_penetration_m": 0.0009660072956245699
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.20527265280457951,
+            "max_crush_risk": 0.08093069106435861,
+            "max_penetration_m": 0.0016186138212871723
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.10367171467601846,
+            "max_crush_risk": 0.07555104610878416,
+            "max_penetration_m": 0.0015110209221756833
+          },
+          "contact_settle": {
+            "max_slip_score": 0.24654256404496486,
+            "max_crush_risk": 0.049524322159440574,
+            "max_penetration_m": 0.0009904864431888114
+          },
+          "slow_lift": {
+            "max_slip_score": 0.45662129562453,
+            "max_crush_risk": 0.033080374264380166,
+            "max_penetration_m": 0.0006616074852876033
+          },
+          "hold": {
+            "max_slip_score": 0.08020796371125491,
+            "max_crush_risk": 0.03304490612919359,
+            "max_penetration_m": 0.0006608981225838719
+          }
+        },
+        "gate_block_reason_counts": {
+          "slip_high": 3
+        },
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "trace": [
+        {
+          "step": 0,
+          "phase": "approach",
+          "nominal_progress": 0.0,
+          "control_progress": 0.0,
+          "learned_hand": false,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.0,
+          "contact": false,
+          "stable": false,
+          "slip": 0.0,
+          "crush": 6.938893903907228e-16,
+          "penetration": 1.3877787807814457e-17,
+          "gate_window": 0
+        },
+        {
+          "step": 240,
+          "phase": "approach",
+          "nominal_progress": 0.7523510971786834,
+          "control_progress": 0.7523510971786834,
+          "learned_hand": false,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -9.6264328343941e-05,
+          "contact": false,
+          "stable": false,
+          "slip": 0.0,
+          "crush": 0.004813216417197397,
+          "penetration": 9.626432834394794e-05,
+          "gate_window": 0
+        },
+        {
+          "step": 480,
+          "phase": "gentle_close_fingers",
+          "nominal_progress": 0.11173184357541899,
+          "control_progress": 0.11173184357541899,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.0020955425656204035,
+          "contact": true,
+          "stable": true,
+          "slip": 0.1928609722521283,
+          "crush": 0.052100854146533426,
+          "penetration": 0.0010420170829306685,
+          "gate_window": 0
+        },
+        {
+          "step": 720,
+          "phase": "gentle_close_thumb",
+          "nominal_progress": 0.44692737430167595,
+          "control_progress": 0.44692737430167595,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.003176746841074371,
+          "contact": true,
+          "stable": true,
+          "slip": 0.09730922942572107,
+          "crush": 0.060762891289080835,
+          "penetration": 0.0012152578257816167,
+          "gate_window": 0
+        },
+        {
+          "step": 960,
+          "phase": "contact_settle",
+          "nominal_progress": 0.07003501750875438,
+          "control_progress": 0.07003501750875438,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.0033210154612047862,
+          "contact": true,
+          "stable": true,
+          "slip": 0.05554508339594707,
+          "crush": 0.04294223810013939,
+          "penetration": 0.0008588447620027878,
+          "gate_window": 141
+        },
+        {
+          "step": 1200,
+          "phase": "contact_settle",
+          "nominal_progress": 0.19009504752376188,
+          "control_progress": 0.19009504752376188,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.004532314416353607,
+          "contact": true,
+          "stable": true,
+          "slip": 0.0602755689777621,
+          "crush": 0.04057869869197182,
+          "penetration": 0.0008115739738394365,
+          "gate_window": 381
+        },
+        {
+          "step": 1440,
+          "phase": "contact_settle",
+          "nominal_progress": 0.31015507753876936,
+          "control_progress": 0.31015507753876936,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.006335419337640494,
+          "contact": true,
+          "stable": true,
+          "slip": 0.24654256404496486,
+          "crush": 0.0344120530095545,
+          "penetration": 0.00068824106019109,
+          "gate_window": 0
+        },
+        {
+          "step": 1680,
+          "phase": "contact_settle",
+          "nominal_progress": 0.4302151075537769,
+          "control_progress": 0.4302151075537769,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.007390617351159645,
+          "contact": true,
+          "stable": true,
+          "slip": 0.0634621665611384,
+          "crush": 0.03261013611205116,
+          "penetration": 0.0006522027222410232,
+          "gate_window": 223
+        },
+        {
+          "step": 1920,
+          "phase": "contact_settle",
+          "nominal_progress": 0.5502751375687844,
+          "control_progress": 0.5502751375687844,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.007312184676889433,
+          "contact": true,
+          "stable": true,
+          "slip": 0.0020862897938082846,
+          "crush": 0.032928277737648455,
+          "penetration": 0.0006585655547529691,
+          "gate_window": 463
+        },
+        {
+          "step": 2160,
+          "phase": "contact_settle",
+          "nominal_progress": 0.6703351675837919,
+          "control_progress": 0.6703351675837919,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.007271378357652819,
+          "contact": true,
+          "stable": true,
+          "slip": 0.0006316209209881273,
+          "crush": 0.03301647538989883,
+          "penetration": 0.0006603295077979767,
+          "gate_window": 703
+        },
+        {
+          "step": 2400,
+          "phase": "contact_settle",
+          "nominal_progress": 0.7903951975987994,
+          "control_progress": 0.7903951975987994,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.0072462133008200785,
+          "contact": true,
+          "stable": true,
+          "slip": 0.0003110159229590395,
+          "crush": 0.033041737929178326,
+          "penetration": 0.0006608347585835665,
+          "gate_window": 943
+        },
+        {
+          "step": 2640,
+          "phase": "contact_settle",
+          "nominal_progress": 0.9104552276138069,
+          "control_progress": 0.9104552276138069,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.007226904626894279,
+          "contact": true,
+          "stable": true,
+          "slip": 0.0002942719131946553,
+          "crush": 0.033048849421103005,
+          "penetration": 0.0006609769884220601,
+          "gate_window": 1183
+        },
+        {
+          "step": 2880,
+          "phase": "slow_lift",
+          "nominal_progress": 0.08583690987124463,
+          "control_progress": 0.08583690987124463,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.00012607391308711025,
+          "contact": true,
+          "stable": true,
+          "slip": 0.2101693266615369,
+          "crush": 0.03305469990415293,
+          "penetration": 0.0006610939980830587,
+          "gate_window": 0
+        },
+        {
+          "step": 3120,
+          "phase": "slow_lift",
+          "nominal_progress": 0.32045779685264664,
+          "control_progress": 0.31045779685264663,
+          "learned_hand": true,
+          "recovery_active": true,
+          "recovery_reasons": [
+            "slip_high"
+          ],
+          "lift_height_m": 0.03016025107876888,
+          "contact": true,
+          "stable": false,
+          "slip": 0.45620606372217276,
+          "crush": 0.03300775648621421,
+          "penetration": 0.0006601551297242842,
+          "gate_window": 0
+        },
+        {
+          "step": 3360,
+          "phase": "slow_lift",
+          "nominal_progress": 0.547925608011445,
+          "control_progress": 0.547925608011445,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.05435357891771609,
+          "contact": true,
+          "stable": true,
+          "slip": 0.11505225836958428,
+          "crush": 0.03304517490355348,
+          "penetration": 0.0006609034980710696,
+          "gate_window": 0
+        },
+        {
+          "step": 3600,
+          "phase": "slow_lift",
+          "nominal_progress": 0.8297567954220315,
+          "control_progress": 0.8297567954220315,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.08254242736370272,
+          "contact": true,
+          "stable": true,
+          "slip": 0.15090891664899733,
+          "crush": 0.03306743220390651,
+          "penetration": 0.0006613486440781302,
+          "gate_window": 0
+        },
+        {
+          "step": 3840,
+          "phase": "hold",
+          "nominal_progress": 0.0800533689126084,
+          "control_progress": 0.0800533689126084,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10293656786707583,
+          "contact": true,
+          "stable": true,
+          "slip": 0.042134796341426715,
+          "crush": 0.033034963789007034,
+          "penetration": 0.0006606992757801407,
+          "gate_window": 0
+        },
+        {
+          "step": 4080,
+          "phase": "hold",
+          "nominal_progress": 0.24016010673782523,
+          "control_progress": 0.24016010673782523,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10354107721964176,
+          "contact": true,
+          "stable": true,
+          "slip": 0.0005505272988695988,
+          "crush": 0.033033903481349214,
+          "penetration": 0.0006606780696269843,
+          "gate_window": 0
+        },
+        {
+          "step": 4320,
+          "phase": "hold",
+          "nominal_progress": 0.400266844563042,
+          "control_progress": 0.400266844563042,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10351885153893342,
+          "contact": true,
+          "stable": true,
+          "slip": 0.0003054768114305795,
+          "crush": 0.033032451228426435,
+          "penetration": 0.0006606490245685288,
+          "gate_window": 0
+        },
+        {
+          "step": 4560,
+          "phase": "hold",
+          "nominal_progress": 0.5603735823882589,
+          "control_progress": 0.5603735823882589,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10350303549612447,
+          "contact": true,
+          "stable": true,
+          "slip": 0.0002378106842804611,
+          "crush": 0.03303089736184754,
+          "penetration": 0.0006606179472369508,
+          "gate_window": 0
+        },
+        {
+          "step": 4800,
+          "phase": "hold",
+          "nominal_progress": 0.7204803202134756,
+          "control_progress": 0.7204803202134756,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10349166351871064,
+          "contact": true,
+          "stable": true,
+          "slip": 0.00018696424819954481,
+          "crush": 0.033029288093135066,
+          "penetration": 0.0006605857618627014,
+          "gate_window": 0
+        },
+        {
+          "step": 5040,
+          "phase": "hold",
+          "nominal_progress": 0.8805870580386924,
+          "control_progress": 0.8805870580386924,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10348341287105736,
+          "contact": true,
+          "stable": true,
+          "slip": 0.00014780934742836358,
+          "crush": 0.0330278269464461,
+          "penetration": 0.000660556538928922,
+          "gate_window": 0
+        }
+      ],
+      "policy_scope": "stage3_7d_full_hand_fallback_inside_stage3_10c_eval",
+      "learned_phases": [
+        "contact_settle",
+        "gentle_close_fingers",
+        "gentle_close_thumb",
+        "hold",
+        "slow_lift"
+      ],
+      "skill_id": "full_hand_gentle_grasp",
+      "full_hand_control_mode": "stage3_7d_fallback"
+    },
+    {
+      "episode_id": 2,
+      "trial": "right_high_nominal",
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 5.429934016643797e-09,
+        "ik_approach_dz_m": 1.6352344776870975e-08,
+        "ik_lift_dxy_m": 9.332437621197449e-08,
+        "ik_lift_dz_m": 1.0983981613837956e-07,
+        "approach_true_proxy_error_m": 0.013916702582992898,
+        "approach_est_proxy_error_m": 0.013917189106256745,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.09379052174056954,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.27555719408993923,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.4260467249662805,
+        "pre_lift_max_slip_score": 0.4260467249662805,
+        "post_lift_max_slip_score": 0.41985364874769593,
+        "max_crush_risk": 0.11191534309485543,
+        "max_penetration_m": 0.0022383068618971086,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4664,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": false,
+        "gate_release_reason": "max_steps_reached_stable",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 26,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.029449850171650492,
+        "pre_lift_crush_risk": 0.047199179762053185,
+        "pre_lift_penetration_m": 0.0009439835952410637,
+        "recovery_steps": 104,
+        "recovery_events": 23,
+        "recovery_counts": {
+          "slow_lift": 104
+        },
+        "recovery_reason_counts": {
+          "slip_high": 104
+        },
+        "recovery_budget_exhausted_counts": {},
+        "recovery_control_progress_min": 0.020042918454935624,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5124,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.4260467249662805,
+            "max_crush_risk": 0.03783227082239777,
+            "max_penetration_m": 0.0007566454164479553
+          },
+          "preshape": {
+            "max_slip_score": 0.18095890283884986,
+            "max_crush_risk": 0.05758142608736904,
+            "max_penetration_m": 0.0011516285217473808
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.13422608721706542,
+            "max_crush_risk": 0.11186320732185653,
+            "max_penetration_m": 0.0022372641464371307
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.09562422020029775,
+            "max_crush_risk": 0.11191534309485543,
+            "max_penetration_m": 0.0022383068618971086
+          },
+          "contact_settle": {
+            "max_slip_score": 0.29997311750085265,
+            "max_crush_risk": 0.08226094810246742,
+            "max_penetration_m": 0.0016452189620493485
+          },
+          "slow_lift": {
+            "max_slip_score": 0.41985364874769593,
+            "max_crush_risk": 0.047251815124054256,
+            "max_penetration_m": 0.0009450363024810851
+          },
+          "hold": {
+            "max_slip_score": 0.27555719408993923,
+            "max_crush_risk": 0.04337384657052108,
+            "max_penetration_m": 0.0008674769314104217
+          }
+        },
+        "gate_block_reason_counts": {
+          "slip_high": 80
+        },
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "trace": [
+        {
+          "step": 0,
+          "phase": "approach",
+          "nominal_progress": 0.0,
+          "control_progress": 0.0,
+          "learned_hand": false,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.0,
+          "contact": false,
+          "stable": false,
+          "slip": 0.0,
+          "crush": 6.938893903907228e-16,
+          "penetration": 1.3877787807814457e-17,
+          "gate_window": 0
+        },
+        {
+          "step": 240,
+          "phase": "approach",
+          "nominal_progress": 0.7523510971786834,
+          "control_progress": 0.7523510971786834,
+          "learned_hand": false,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -9.6264328343941e-05,
+          "contact": false,
+          "stable": false,
+          "slip": 0.0,
+          "crush": 0.004813216417197397,
+          "penetration": 9.626432834394794e-05,
+          "gate_window": 0
+        },
+        {
+          "step": 480,
+          "phase": "gentle_close_fingers",
+          "nominal_progress": 0.11173184357541899,
+          "control_progress": 0.11173184357541899,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.0007693160271158989,
+          "contact": true,
+          "stable": true,
+          "slip": 0.12893471972922854,
+          "crush": 0.06530718023203749,
+          "penetration": 0.0013061436046407499,
+          "gate_window": 0
+        },
+        {
+          "step": 720,
+          "phase": "gentle_close_thumb",
+          "nominal_progress": 0.44692737430167595,
+          "control_progress": 0.44692737430167595,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.001152510591885439,
+          "contact": true,
+          "stable": true,
+          "slip": 0.05997289165117993,
+          "crush": 0.09417578340244319,
+          "penetration": 0.001883515668048864,
+          "gate_window": 0
+        },
+        {
+          "step": 960,
+          "phase": "contact_settle",
+          "nominal_progress": 0.07003501750875438,
+          "control_progress": 0.07003501750875438,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.0017046804006461136,
+          "contact": true,
+          "stable": true,
+          "slip": 0.04605997754557754,
+          "crush": 0.07999792977836756,
+          "penetration": 0.0015999585955673514,
+          "gate_window": 141
+        },
+        {
+          "step": 1200,
+          "phase": "contact_settle",
+          "nominal_progress": 0.19009504752376188,
+          "control_progress": 0.19009504752376188,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.00216521444601548,
+          "contact": true,
+          "stable": true,
+          "slip": 0.03884275548639898,
+          "crush": 0.08122856831990523,
+          "penetration": 0.0016245713663981046,
+          "gate_window": 381
+        },
+        {
+          "step": 1440,
+          "phase": "contact_settle",
+          "nominal_progress": 0.31015507753876936,
+          "control_progress": 0.31015507753876936,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.002745701295937049,
+          "contact": true,
+          "stable": true,
+          "slip": 0.022252133486815293,
+          "crush": 0.07831202337138116,
+          "penetration": 0.001566240467427623,
+          "gate_window": 621
+        },
+        {
+          "step": 1680,
+          "phase": "contact_settle",
+          "nominal_progress": 0.4302151075537769,
+          "control_progress": 0.4302151075537769,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.003627062515440746,
+          "contact": true,
+          "stable": true,
+          "slip": 0.009605234935962883,
+          "crush": 0.07346881064595202,
+          "penetration": 0.0014693762129190406,
+          "gate_window": 861
+        },
+        {
+          "step": 1920,
+          "phase": "contact_settle",
+          "nominal_progress": 0.5502751375687844,
+          "control_progress": 0.5502751375687844,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.005002182227803978,
+          "contact": true,
+          "stable": true,
+          "slip": 0.012404830002348153,
+          "crush": 0.06663690281403152,
+          "penetration": 0.0013327380562806303,
+          "gate_window": 1101
+        },
+        {
+          "step": 2160,
+          "phase": "contact_settle",
+          "nominal_progress": 0.6703351675837919,
+          "control_progress": 0.6703351675837919,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.006928607097859724,
+          "contact": true,
+          "stable": true,
+          "slip": 0.020737505691524327,
+          "crush": 0.060769086056878335,
+          "penetration": 0.0012153817211375667,
+          "gate_window": 1341
+        },
+        {
+          "step": 2400,
+          "phase": "contact_settle",
+          "nominal_progress": 0.7903951975987994,
+          "control_progress": 0.7903951975987994,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.009003714004072239,
+          "contact": true,
+          "stable": true,
+          "slip": 0.03673095298906147,
+          "crush": 0.05267655497619495,
+          "penetration": 0.001053531099523899,
+          "gate_window": 1581
+        },
+        {
+          "step": 2640,
+          "phase": "contact_settle",
+          "nominal_progress": 0.9104552276138069,
+          "control_progress": 0.9104552276138069,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.010991695977716917,
+          "contact": true,
+          "stable": true,
+          "slip": 0.16255458950107904,
+          "crush": 0.04700401813711678,
+          "penetration": 0.0009400803627423356,
+          "gate_window": 1
+        },
+        {
+          "step": 2880,
+          "phase": "slow_lift",
+          "nominal_progress": 0.06151645207439199,
+          "control_progress": 0.06151645207439199,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.009976913601623574,
+          "contact": true,
+          "stable": true,
+          "slip": 0.26968087491118486,
+          "crush": 0.0470854292202786,
+          "penetration": 0.000941708584405572,
+          "gate_window": 0
+        },
+        {
+          "step": 3120,
+          "phase": "slow_lift",
+          "nominal_progress": 0.33047210300429186,
+          "control_progress": 0.33047210300429186,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.01946261835850798,
+          "contact": true,
+          "stable": true,
+          "slip": 0.2524998473402682,
+          "crush": 0.046334681982971526,
+          "penetration": 0.0009266936396594306,
+          "gate_window": 0
+        },
+        {
+          "step": 3360,
+          "phase": "slow_lift",
+          "nominal_progress": 0.630901287553648,
+          "control_progress": 0.630901287553648,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.051697149331166585,
+          "contact": true,
+          "stable": true,
+          "slip": 0.25511084225882624,
+          "crush": 0.04522841881620058,
+          "penetration": 0.0009045683763240116,
+          "gate_window": 0
+        },
+        {
+          "step": 3600,
+          "phase": "slow_lift",
+          "nominal_progress": 0.9670958512160229,
+          "control_progress": 0.9670958512160229,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.08950901324633245,
+          "contact": true,
+          "stable": true,
+          "slip": 0.234989412523071,
+          "crush": 0.043607470375197924,
+          "penetration": 0.0008721494075039585,
+          "gate_window": 0
+        },
+        {
+          "step": 3840,
+          "phase": "hold",
+          "nominal_progress": 0.14409606404269512,
+          "control_progress": 0.14409606404269512,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.09480497390502621,
+          "contact": true,
+          "stable": true,
+          "slip": 0.09288951610226394,
+          "crush": 0.040834974689223,
+          "penetration": 0.0008166994937844601,
+          "gate_window": 0
+        },
+        {
+          "step": 4080,
+          "phase": "hold",
+          "nominal_progress": 0.30420280186791193,
+          "control_progress": 0.30420280186791193,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.0948754213011745,
+          "contact": true,
+          "stable": true,
+          "slip": 0.06932660924912595,
+          "crush": 0.03698720669456559,
+          "penetration": 0.0007397441338913117,
+          "gate_window": 0
+        },
+        {
+          "step": 4320,
+          "phase": "hold",
+          "nominal_progress": 0.46430953969312877,
+          "control_progress": 0.46430953969312877,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.09463660622376083,
+          "contact": true,
+          "stable": true,
+          "slip": 0.07083734425481619,
+          "crush": 0.033814725634147974,
+          "penetration": 0.0006762945126829595,
+          "gate_window": 0
+        },
+        {
+          "step": 4560,
+          "phase": "hold",
+          "nominal_progress": 0.6244162775183456,
+          "control_progress": 0.6244162775183456,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.09437204409738825,
+          "contact": true,
+          "stable": true,
+          "slip": 0.041475545713743345,
+          "crush": 0.03194772029848766,
+          "penetration": 0.0006389544059697532,
+          "gate_window": 0
+        },
+        {
+          "step": 4800,
+          "phase": "hold",
+          "nominal_progress": 0.7845230153435624,
+          "control_progress": 0.7845230153435624,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.0941372903986667,
+          "contact": true,
+          "stable": true,
+          "slip": 0.03688017132505211,
+          "crush": 0.030439037311427893,
+          "penetration": 0.0006087807462285579,
+          "gate_window": 0
+        },
+        {
+          "step": 5040,
+          "phase": "hold",
+          "nominal_progress": 0.9446297531687792,
+          "control_progress": 0.9446297531687792,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.09388254537294315,
+          "contact": true,
+          "stable": true,
+          "slip": 0.030986913685412013,
+          "crush": 0.029002654211284472,
+          "penetration": 0.0005800530842256894,
+          "gate_window": 0
+        }
+      ],
+      "policy_scope": "stage3_7d_full_hand_fallback_inside_stage3_10c_eval",
+      "learned_phases": [
+        "contact_settle",
+        "gentle_close_fingers",
+        "gentle_close_thumb",
+        "hold",
+        "slow_lift"
+      ],
+      "skill_id": "full_hand_gentle_grasp",
+      "full_hand_control_mode": "stage3_7d_fallback"
+    },
+    {
+      "episode_id": 3,
+      "trial": "left_high_zplus",
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip",
+        "recovery_budget_exhausted"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 5.77593378897689e-09,
+        "ik_approach_dz_m": 1.7873772607812644e-08,
+        "ik_lift_dxy_m": 3.0343366751738207e-09,
+        "ik_lift_dz_m": 1.1214688344640678e-08,
+        "approach_true_proxy_error_m": 0.010305419750725988,
+        "approach_est_proxy_error_m": 0.008541190319686354,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.10600356788009736,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.15002662171735798,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 1.0,
+        "pre_lift_max_slip_score": 1.0,
+        "post_lift_max_slip_score": 0.4330304661554424,
+        "max_crush_risk": 0.09813284088097388,
+        "max_penetration_m": 0.0019626568176194775,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4760,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 1858,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.01782580683338728,
+        "pre_lift_crush_risk": 0.03288565504204182,
+        "pre_lift_penetration_m": 0.0006577131008408364,
+        "recovery_steps": 200,
+        "recovery_events": 45,
+        "recovery_counts": {
+          "slow_lift": 200
+        },
+        "recovery_reason_counts": {
+          "slip_high": 238
+        },
+        "recovery_budget_exhausted_counts": {
+          "slow_lift": 38
+        },
+        "recovery_control_progress_min": 0.08871244635193133,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5220,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.24786880970513828,
+            "max_crush_risk": 0.04592251576403935,
+            "max_penetration_m": 0.0009184503152807871
+          },
+          "preshape": {
+            "max_slip_score": 0.23541526250674372,
+            "max_crush_risk": 0.04358320859843292,
+            "max_penetration_m": 0.0008716641719686584
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.2389197350811682,
+            "max_crush_risk": 0.09758803397229218,
+            "max_penetration_m": 0.0019517606794458436
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 1.0,
+            "max_crush_risk": 0.09813284088097388,
+            "max_penetration_m": 0.0019626568176194775
+          },
+          "contact_settle": {
+            "max_slip_score": 0.5141077142117825,
+            "max_crush_risk": 0.0485318044532214,
+            "max_penetration_m": 0.0009706360890644281
+          },
+          "slow_lift": {
+            "max_slip_score": 0.4330304661554424,
+            "max_crush_risk": 0.03288858277889833,
+            "max_penetration_m": 0.0006577716555779666
+          },
+          "hold": {
+            "max_slip_score": 0.15002662171735798,
+            "max_crush_risk": 0.03141140885397475,
+            "max_penetration_m": 0.0006282281770794949
+          }
+        },
+        "gate_block_reason_counts": {
+          "grip_not_stable": 36,
+          "slip_high": 139
+        },
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "trace": [
+        {
+          "step": 0,
+          "phase": "approach",
+          "nominal_progress": 0.0,
+          "control_progress": 0.0,
+          "learned_hand": false,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.0,
+          "contact": false,
+          "stable": false,
+          "slip": 0.0,
+          "crush": 6.938893903907228e-16,
+          "penetration": 1.3877787807814457e-17,
+          "gate_window": 0
+        },
+        {
+          "step": 240,
+          "phase": "approach",
+          "nominal_progress": 0.7523510971786834,
+          "control_progress": 0.7523510971786834,
+          "learned_hand": false,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -9.6264328343941e-05,
+          "contact": false,
+          "stable": false,
+          "slip": 0.0,
+          "crush": 0.004813216417197397,
+          "penetration": 9.626432834394794e-05,
+          "gate_window": 0
+        },
+        {
+          "step": 480,
+          "phase": "gentle_close_fingers",
+          "nominal_progress": 0.11173184357541899,
+          "control_progress": 0.11173184357541899,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.0007008011825504062,
+          "contact": true,
+          "stable": true,
+          "slip": 0.0355639836463922,
+          "crush": 0.04235346657926892,
+          "penetration": 0.0008470693315853784,
+          "gate_window": 0
+        },
+        {
+          "step": 720,
+          "phase": "gentle_close_thumb",
+          "nominal_progress": 0.44692737430167595,
+          "control_progress": 0.44692737430167595,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.003837131836383366,
+          "contact": true,
+          "stable": true,
+          "slip": 0.17364978286728813,
+          "crush": 0.0681960501352108,
+          "penetration": 0.001363921002704216,
+          "gate_window": 0
+        },
+        {
+          "step": 960,
+          "phase": "contact_settle",
+          "nominal_progress": 0.07003501750875438,
+          "control_progress": 0.07003501750875438,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.009735462224238545,
+          "contact": true,
+          "stable": true,
+          "slip": 0.18637941840253255,
+          "crush": 0.0447895803853432,
+          "penetration": 0.000895791607706864,
+          "gate_window": 0
+        },
+        {
+          "step": 1200,
+          "phase": "contact_settle",
+          "nominal_progress": 0.19009504752376188,
+          "control_progress": 0.19009504752376188,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.007657233726027113,
+          "contact": true,
+          "stable": true,
+          "slip": 0.03653973791094609,
+          "crush": 0.043343615383815544,
+          "penetration": 0.000866872307676311,
+          "gate_window": 239
+        },
+        {
+          "step": 1440,
+          "phase": "contact_settle",
+          "nominal_progress": 0.31015507753876936,
+          "control_progress": 0.31015507753876936,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.006627071014479527,
+          "contact": true,
+          "stable": true,
+          "slip": 0.041114483287809124,
+          "crush": 0.03958956084339172,
+          "penetration": 0.0007917912168678345,
+          "gate_window": 479
+        },
+        {
+          "step": 1680,
+          "phase": "contact_settle",
+          "nominal_progress": 0.4302151075537769,
+          "control_progress": 0.4302151075537769,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.006481970458212083,
+          "contact": true,
+          "stable": true,
+          "slip": 0.029555625998561957,
+          "crush": 0.03651596963206828,
+          "penetration": 0.0007303193926413657,
+          "gate_window": 719
+        },
+        {
+          "step": 1920,
+          "phase": "contact_settle",
+          "nominal_progress": 0.5502751375687844,
+          "control_progress": 0.5502751375687844,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.0065796951244460125,
+          "contact": true,
+          "stable": true,
+          "slip": 0.019223854853521224,
+          "crush": 0.0343274658312488,
+          "penetration": 0.0006865493166249761,
+          "gate_window": 959
+        },
+        {
+          "step": 2160,
+          "phase": "contact_settle",
+          "nominal_progress": 0.6703351675837919,
+          "control_progress": 0.6703351675837919,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.006572138963671426,
+          "contact": true,
+          "stable": true,
+          "slip": 0.01653638636790898,
+          "crush": 0.03362695988913125,
+          "penetration": 0.0006725391977826251,
+          "gate_window": 1199
+        },
+        {
+          "step": 2400,
+          "phase": "contact_settle",
+          "nominal_progress": 0.7903951975987994,
+          "control_progress": 0.7903951975987994,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.006451362455371451,
+          "contact": true,
+          "stable": true,
+          "slip": 0.016989769009032565,
+          "crush": 0.03332916620907775,
+          "penetration": 0.000666583324181555,
+          "gate_window": 1439
+        },
+        {
+          "step": 2640,
+          "phase": "contact_settle",
+          "nominal_progress": 0.9104552276138069,
+          "control_progress": 0.9104552276138069,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.006316854328243138,
+          "contact": true,
+          "stable": true,
+          "slip": 0.017464143706146,
+          "crush": 0.03308041233439111,
+          "penetration": 0.0006616082466878222,
+          "gate_window": 1679
+        },
+        {
+          "step": 2880,
+          "phase": "slow_lift",
+          "nominal_progress": 0.08583690987124463,
+          "control_progress": 0.08583690987124463,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.0012591026948668219,
+          "contact": true,
+          "stable": true,
+          "slip": 0.19332999237290646,
+          "crush": 0.03286614983712636,
+          "penetration": 0.0006573229967425272,
+          "gate_window": 0
+        },
+        {
+          "step": 3120,
+          "phase": "slow_lift",
+          "nominal_progress": 0.31187410586552217,
+          "control_progress": 0.30187410586552216,
+          "learned_hand": true,
+          "recovery_active": true,
+          "recovery_reasons": [
+            "slip_high"
+          ],
+          "lift_height_m": 0.029242017654161217,
+          "contact": true,
+          "stable": false,
+          "slip": 0.35763784582609637,
+          "crush": 0.032558709353801715,
+          "penetration": 0.0006511741870760344,
+          "gate_window": 0
+        },
+        {
+          "step": 3360,
+          "phase": "slow_lift",
+          "nominal_progress": 0.5264663805436338,
+          "control_progress": 0.5164663805436338,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.05632546899798451,
+          "contact": true,
+          "stable": true,
+          "slip": 0.28610892457748666,
+          "crush": 0.03216372325419445,
+          "penetration": 0.000643274465083889,
+          "gate_window": 0
+        },
+        {
+          "step": 3600,
+          "phase": "slow_lift",
+          "nominal_progress": 0.8297567954220315,
+          "control_progress": 0.8297567954220315,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.08805564563085805,
+          "contact": true,
+          "stable": true,
+          "slip": 0.04409310737943832,
+          "crush": 0.031652798309079584,
+          "penetration": 0.0006330559661815918,
+          "gate_window": 0
+        },
+        {
+          "step": 3840,
+          "phase": "hold",
+          "nominal_progress": 0.0800533689126084,
+          "control_progress": 0.0800533689126084,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10612401716829871,
+          "contact": true,
+          "stable": true,
+          "slip": 0.07910352526651035,
+          "crush": 0.031133873246490425,
+          "penetration": 0.0006226774649298085,
+          "gate_window": 0
+        },
+        {
+          "step": 4080,
+          "phase": "hold",
+          "nominal_progress": 0.24016010673782523,
+          "control_progress": 0.24016010673782523,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10657283916674071,
+          "contact": true,
+          "stable": true,
+          "slip": 0.027034505776557933,
+          "crush": 0.030467140784712007,
+          "penetration": 0.0006093428156942401,
+          "gate_window": 0
+        },
+        {
+          "step": 4320,
+          "phase": "hold",
+          "nominal_progress": 0.400266844563042,
+          "control_progress": 0.400266844563042,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10642905077940801,
+          "contact": true,
+          "stable": true,
+          "slip": 0.02582712532459791,
+          "crush": 0.02975141300826916,
+          "penetration": 0.0005950282601653832,
+          "gate_window": 0
+        },
+        {
+          "step": 4560,
+          "phase": "hold",
+          "nominal_progress": 0.5603735823882589,
+          "control_progress": 0.5603735823882589,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10628912768802021,
+          "contact": true,
+          "stable": true,
+          "slip": 0.020514218062792435,
+          "crush": 0.02907769414803134,
+          "penetration": 0.0005815538829606268,
+          "gate_window": 0
+        },
+        {
+          "step": 4800,
+          "phase": "hold",
+          "nominal_progress": 0.7204803202134756,
+          "control_progress": 0.7204803202134756,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10618537582165698,
+          "contact": true,
+          "stable": true,
+          "slip": 0.018108813975522567,
+          "crush": 0.028483966812722222,
+          "penetration": 0.0005696793362544444,
+          "gate_window": 0
+        },
+        {
+          "step": 5040,
+          "phase": "hold",
+          "nominal_progress": 0.8805870580386924,
+          "control_progress": 0.8805870580386924,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10608839263459574,
+          "contact": true,
+          "stable": true,
+          "slip": 0.01712659244083773,
+          "crush": 0.027961892297153224,
+          "penetration": 0.0005592378459430645,
+          "gate_window": 0
+        }
+      ],
+      "policy_scope": "stage3_7d_full_hand_fallback_inside_stage3_10c_eval",
+      "learned_phases": [
+        "contact_settle",
+        "gentle_close_fingers",
+        "gentle_close_thumb",
+        "hold",
+        "slow_lift"
+      ],
+      "skill_id": "full_hand_gentle_grasp",
+      "full_hand_control_mode": "stage3_7d_fallback"
+    },
+    {
+      "episode_id": 4,
+      "trial": "right_low_zminus",
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_gentle_grasp_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_or_hold_slip",
+        "recovery_budget_exhausted"
+      ],
+      "summary": {
+        "vision_accepted": true,
+        "ik_approach_dxy_m": 1.1215108926507668e-08,
+        "ik_approach_dz_m": 2.6027967003905417e-09,
+        "ik_lift_dxy_m": 1.444608621391455e-08,
+        "ik_lift_dz_m": 8.150694438824324e-09,
+        "approach_true_proxy_error_m": 0.011386959467436895,
+        "approach_est_proxy_error_m": 0.013024350424878093,
+        "contact_acquired": true,
+        "grip_stable_before_lift": true,
+        "first_contact_phase": "approach",
+        "final_lift_height_m": 0.10114224523602683,
+        "hold_duration_s": 3.0,
+        "hold_stable_fraction": 1.0,
+        "hold_max_slip_score": 0.1767258864458391,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.49799559492442513,
+        "pre_lift_max_slip_score": 0.2005145827576135,
+        "post_lift_max_slip_score": 0.49799559492442513,
+        "max_crush_risk": 0.09052252664729508,
+        "max_penetration_m": 0.0018104505329459017,
+        "final_floor_contacts": 0,
+        "finite_state": true,
+        "learned_control_steps": 4760,
+        "contact_settle_steps_actual": 2000,
+        "gate_opened_before_lift": true,
+        "gate_release_reason": "stable_window_met",
+        "gate_release_step": 2000,
+        "gate_stable_window_at_release": 2000,
+        "pre_lift_contact_present": true,
+        "pre_lift_grip_stable": true,
+        "pre_lift_slip_score": 0.03606103215423976,
+        "pre_lift_crush_risk": 0.0319965576778743,
+        "pre_lift_penetration_m": 0.000639931153557486,
+        "recovery_steps": 200,
+        "recovery_events": 69,
+        "recovery_counts": {
+          "slow_lift": 200
+        },
+        "recovery_reason_counts": {
+          "slip_high": 262
+        },
+        "recovery_budget_exhausted_counts": {
+          "slow_lift": 62
+        },
+        "recovery_control_progress_min": 0.042932761087267526,
+        "approach_contact_stop_events": 0,
+        "approach_contact_stop_step": 0,
+        "approach_contact_stop_error_m": NaN,
+        "total_steps": 5220,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.2005145827576135,
+            "max_crush_risk": 0.0414281354870681,
+            "max_penetration_m": 0.0008285627097413621
+          },
+          "preshape": {
+            "max_slip_score": 0.19556024461089397,
+            "max_crush_risk": 0.04252896210356246,
+            "max_penetration_m": 0.0008505792420712493
+          },
+          "gentle_close_fingers": {
+            "max_slip_score": 0.1472735215695136,
+            "max_crush_risk": 0.08760202238720805,
+            "max_penetration_m": 0.001752040447744161
+          },
+          "gentle_close_thumb": {
+            "max_slip_score": 0.14913704105834752,
+            "max_crush_risk": 0.09052252664729508,
+            "max_penetration_m": 0.0018104505329459017
+          },
+          "contact_settle": {
+            "max_slip_score": 0.13702336321392017,
+            "max_crush_risk": 0.051960547149333854,
+            "max_penetration_m": 0.001039210942986677
+          },
+          "slow_lift": {
+            "max_slip_score": 0.49799559492442513,
+            "max_crush_risk": 0.0320126040054376,
+            "max_penetration_m": 0.0006402520801087521
+          },
+          "hold": {
+            "max_slip_score": 0.1767258864458391,
+            "max_crush_risk": 0.02669743223141976,
+            "max_penetration_m": 0.0005339486446283952
+          }
+        },
+        "gate_block_reason_counts": {},
+        "full_hand_control_mode": "stage3_7d_fallback"
+      },
+      "trace": [
+        {
+          "step": 0,
+          "phase": "approach",
+          "nominal_progress": 0.0,
+          "control_progress": 0.0,
+          "learned_hand": false,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.0,
+          "contact": false,
+          "stable": false,
+          "slip": 0.0,
+          "crush": 6.938893903907228e-16,
+          "penetration": 1.3877787807814457e-17,
+          "gate_window": 0
+        },
+        {
+          "step": 240,
+          "phase": "approach",
+          "nominal_progress": 0.7523510971786834,
+          "control_progress": 0.7523510971786834,
+          "learned_hand": false,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -9.6264328343941e-05,
+          "contact": false,
+          "stable": false,
+          "slip": 0.0,
+          "crush": 0.004813216417197397,
+          "penetration": 9.626432834394794e-05,
+          "gate_window": 0
+        },
+        {
+          "step": 480,
+          "phase": "gentle_close_fingers",
+          "nominal_progress": 0.11173184357541899,
+          "control_progress": 0.11173184357541899,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.0007904002044774386,
+          "contact": true,
+          "stable": true,
+          "slip": 0.08008950112034591,
+          "crush": 0.044840404919126345,
+          "penetration": 0.000896808098382527,
+          "gate_window": 0
+        },
+        {
+          "step": 720,
+          "phase": "gentle_close_thumb",
+          "nominal_progress": 0.44692737430167595,
+          "control_progress": 0.44692737430167595,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.0027337454917931783,
+          "contact": true,
+          "stable": true,
+          "slip": 0.04043965438293605,
+          "crush": 0.07105374902459036,
+          "penetration": 0.0014210749804918071,
+          "gate_window": 0
+        },
+        {
+          "step": 960,
+          "phase": "contact_settle",
+          "nominal_progress": 0.07003501750875438,
+          "control_progress": 0.07003501750875438,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.0046638512781989674,
+          "contact": true,
+          "stable": true,
+          "slip": 0.11104840805724955,
+          "crush": 0.04499977395420436,
+          "penetration": 0.0008999954790840873,
+          "gate_window": 141
+        },
+        {
+          "step": 1200,
+          "phase": "contact_settle",
+          "nominal_progress": 0.19009504752376188,
+          "control_progress": 0.19009504752376188,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.005500724105168185,
+          "contact": true,
+          "stable": true,
+          "slip": 0.08339653892088726,
+          "crush": 0.04294309843003467,
+          "penetration": 0.0008588619686006934,
+          "gate_window": 381
+        },
+        {
+          "step": 1440,
+          "phase": "contact_settle",
+          "nominal_progress": 0.31015507753876936,
+          "control_progress": 0.31015507753876936,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.005969957525404301,
+          "contact": true,
+          "stable": true,
+          "slip": 0.06176132587785972,
+          "crush": 0.04130432055790903,
+          "penetration": 0.0008260864111581806,
+          "gate_window": 621
+        },
+        {
+          "step": 1680,
+          "phase": "contact_settle",
+          "nominal_progress": 0.4302151075537769,
+          "control_progress": 0.4302151075537769,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.006278406917575023,
+          "contact": true,
+          "stable": true,
+          "slip": 0.05498453941135845,
+          "crush": 0.03990363540936252,
+          "penetration": 0.0007980727081872505,
+          "gate_window": 861
+        },
+        {
+          "step": 1920,
+          "phase": "contact_settle",
+          "nominal_progress": 0.5502751375687844,
+          "control_progress": 0.5502751375687844,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.006470695817183472,
+          "contact": true,
+          "stable": true,
+          "slip": 0.0473051901291887,
+          "crush": 0.03932195113379431,
+          "penetration": 0.0007864390226758862,
+          "gate_window": 1101
+        },
+        {
+          "step": 2160,
+          "phase": "contact_settle",
+          "nominal_progress": 0.6703351675837919,
+          "control_progress": 0.6703351675837919,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.006612301064990514,
+          "contact": true,
+          "stable": true,
+          "slip": 0.0440393570923566,
+          "crush": 0.03752116911047565,
+          "penetration": 0.000750423382209513,
+          "gate_window": 1341
+        },
+        {
+          "step": 2400,
+          "phase": "contact_settle",
+          "nominal_progress": 0.7903951975987994,
+          "control_progress": 0.7903951975987994,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.006780767533291911,
+          "contact": true,
+          "stable": true,
+          "slip": 0.04471865998402905,
+          "crush": 0.03557267294809173,
+          "penetration": 0.0007114534589618346,
+          "gate_window": 1581
+        },
+        {
+          "step": 2640,
+          "phase": "contact_settle",
+          "nominal_progress": 0.9104552276138069,
+          "control_progress": 0.9104552276138069,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": -0.0069623777689035785,
+          "contact": true,
+          "stable": true,
+          "slip": 0.04095363330147221,
+          "crush": 0.03309233133864924,
+          "penetration": 0.0006618466267729849,
+          "gate_window": 1821
+        },
+        {
+          "step": 2880,
+          "phase": "slow_lift",
+          "nominal_progress": 0.05293276108726753,
+          "control_progress": 0.042932761087267526,
+          "learned_hand": true,
+          "recovery_active": true,
+          "recovery_reasons": [
+            "slip_high"
+          ],
+          "lift_height_m": -0.005058477797261887,
+          "contact": true,
+          "stable": true,
+          "slip": 0.3050597060572016,
+          "crush": 0.03143651169955777,
+          "penetration": 0.0006287302339911555,
+          "gate_window": 0
+        },
+        {
+          "step": 3120,
+          "phase": "slow_lift",
+          "nominal_progress": 0.28183118741058655,
+          "control_progress": 0.28183118741058655,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.018013690034360763,
+          "contact": true,
+          "stable": true,
+          "slip": 0.23221362786760377,
+          "crush": 0.029193269343099314,
+          "penetration": 0.0005838653868619863,
+          "gate_window": 0
+        },
+        {
+          "step": 3360,
+          "phase": "slow_lift",
+          "nominal_progress": 0.5236051502145923,
+          "control_progress": 0.5236051502145923,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.046049450158709565,
+          "contact": true,
+          "stable": true,
+          "slip": 0.1103308448390213,
+          "crush": 0.02784162936010446,
+          "penetration": 0.0005568325872020892,
+          "gate_window": 0
+        },
+        {
+          "step": 3600,
+          "phase": "slow_lift",
+          "nominal_progress": 0.8297567954220315,
+          "control_progress": 0.8297567954220315,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.08126002233744455,
+          "contact": true,
+          "stable": true,
+          "slip": 0.2607454399015507,
+          "crush": 0.026987011038984154,
+          "penetration": 0.0005397402207796831,
+          "gate_window": 0
+        },
+        {
+          "step": 3840,
+          "phase": "hold",
+          "nominal_progress": 0.0800533689126084,
+          "control_progress": 0.0800533689126084,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.1008667132612938,
+          "contact": true,
+          "stable": true,
+          "slip": 0.10312201181742585,
+          "crush": 0.026480586779485758,
+          "penetration": 0.0005296117355897152,
+          "gate_window": 0
+        },
+        {
+          "step": 4080,
+          "phase": "hold",
+          "nominal_progress": 0.24016010673782523,
+          "control_progress": 0.24016010673782523,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10141486582796735,
+          "contact": true,
+          "stable": true,
+          "slip": 0.01678255178751647,
+          "crush": 0.02615233884264174,
+          "penetration": 0.0005230467768528348,
+          "gate_window": 0
+        },
+        {
+          "step": 4320,
+          "phase": "hold",
+          "nominal_progress": 0.400266844563042,
+          "control_progress": 0.400266844563042,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10132872444152687,
+          "contact": true,
+          "stable": true,
+          "slip": 0.014866269908932984,
+          "crush": 0.025856154492960234,
+          "penetration": 0.0005171230898592047,
+          "gate_window": 0
+        },
+        {
+          "step": 4560,
+          "phase": "hold",
+          "nominal_progress": 0.5603735823882589,
+          "control_progress": 0.5603735823882589,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10126303346955141,
+          "contact": true,
+          "stable": true,
+          "slip": 0.0135159475962402,
+          "crush": 0.02559680354432296,
+          "penetration": 0.0005119360708864592,
+          "gate_window": 0
+        },
+        {
+          "step": 4800,
+          "phase": "hold",
+          "nominal_progress": 0.7204803202134756,
+          "control_progress": 0.7204803202134756,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10121029222204367,
+          "contact": true,
+          "stable": true,
+          "slip": 0.012371362286221148,
+          "crush": 0.025372759794828684,
+          "penetration": 0.0005074551958965737,
+          "gate_window": 0
+        },
+        {
+          "step": 5040,
+          "phase": "hold",
+          "nominal_progress": 0.8805870580386924,
+          "control_progress": 0.8805870580386924,
+          "learned_hand": true,
+          "recovery_active": false,
+          "recovery_reasons": [],
+          "lift_height_m": 0.10116796514374467,
+          "contact": true,
+          "stable": true,
+          "slip": 0.011368785984261259,
+          "crush": 0.025176402710039465,
+          "penetration": 0.0005035280542007893,
+          "gate_window": 0
+        }
+      ],
+      "policy_scope": "stage3_7d_full_hand_fallback_inside_stage3_10c_eval",
+      "learned_phases": [
+        "contact_settle",
+        "gentle_close_fingers",
+        "gentle_close_thumb",
+        "hold",
+        "slow_lift"
+      ],
+      "skill_id": "full_hand_gentle_grasp",
+      "full_hand_control_mode": "stage3_7d_fallback"
+    },
+    {
+      "episode_id": 5,
+      "skill_id": "thumb_index_middle_pinch",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "trial": "center_nominal",
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.982555009880685,
+        "initial_vision_mask_pixels": 14954,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.40284136856773417,
+        "final_vision_mask_pixels": 12910,
+        "vision_lift_height_m": 0.10714285974048002,
+        "true_lift_height_m": 0.10276626737433217,
+        "vision_true_lift_error_m": 0.004376592366147847,
+        "approach_true_proxy_error_m": 0.009569886511364352,
+        "ik_approach_dxy_m": 2.5132629020400297e-08,
+        "ik_approach_dz_m": 9.459057349892053e-09,
+        "ik_lift_dxy_m": 2.529409883788196e-09,
+        "ik_lift_dz_m": 1.1632661993388194e-08,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 404,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 120,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.7493820861678011,
+        "hold_max_slip_score": 0.24984726838921661,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 1.0,
+        "max_crush_risk": 0.16576955944070554,
+        "max_penetration_m": 0.003315391188814111,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 8,
+        "final_contact_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 1084,
+          "palm": 3309,
+          "middle": 4971,
+          "index": 3489,
+          "thumb": 3655
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1400,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 0.75,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.23894081177071574,
+            "max_crush_risk": 0.04216269879081714,
+            "max_penetration_m": 0.0008432539758163428
+          },
+          "preshape": {
+            "max_slip_score": 0.20681877098811785,
+            "max_crush_risk": 0.03744704609960461,
+            "max_penetration_m": 0.0007489409219920922
+          },
+          "pinch_close": {
+            "max_slip_score": 0.1510899046228158,
+            "max_crush_risk": 0.036505894357876524,
+            "max_penetration_m": 0.0007301178871575306
+          },
+          "contact_settle": {
+            "max_slip_score": 1.0,
+            "max_crush_risk": 0.16576955944070554,
+            "max_penetration_m": 0.003315391188814111
+          },
+          "slow_lift": {
+            "max_slip_score": 0.7091343688669975,
+            "max_crush_risk": 0.11807311418686435,
+            "max_penetration_m": 0.002361462283737287
+          },
+          "hold": {
+            "max_slip_score": 0.24984726838921661,
+            "max_crush_risk": 0.10674303992722431,
+            "max_penetration_m": 0.0021348607985444863
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2524
+      },
+      "trace": [
+        {
+          "step": 0,
+          "phase": "approach",
+          "progress": 0.0,
+          "true_lift_height_m": 0.0,
+          "contact": false,
+          "pinch_contact": false,
+          "slip": 0.0,
+          "stable": false,
+          "crush": 6.938893903907228e-16,
+          "penetration": 1.3877787807814457e-17,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 240,
+          "phase": "approach",
+          "progress": 0.7523510971786834,
+          "true_lift_height_m": -9.6264328343941e-05,
+          "contact": false,
+          "pinch_contact": false,
+          "slip": 0.0,
+          "stable": false,
+          "crush": 0.004813216417197397,
+          "penetration": 9.626432834394794e-05,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 480,
+          "phase": "pinch_close",
+          "progress": 0.07722007722007722,
+          "true_lift_height_m": -0.0007307093252852462,
+          "contact": true,
+          "pinch_contact": false,
+          "slip": 0.10417187253703332,
+          "stable": true,
+          "crush": 0.03543111783012473,
+          "penetration": 0.0007086223566024946,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 720,
+          "phase": "contact_settle",
+          "progress": 0.0,
+          "true_lift_height_m": -0.0009958645530533106,
+          "contact": true,
+          "pinch_contact": false,
+          "slip": 0.07654364417547224,
+          "stable": true,
+          "crush": 0.036263795784902686,
+          "penetration": 0.0007252759156980538,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 960,
+          "phase": "contact_settle",
+          "progress": 0.24024024024024024,
+          "true_lift_height_m": -0.006568456355254472,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.27552078640269795,
+          "stable": true,
+          "crush": 0.12871497765882578,
+          "penetration": 0.0025742995531765154,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 1200,
+          "phase": "slow_lift",
+          "progress": 0.10872675250357654,
+          "true_lift_height_m": 0.0002298030780539459,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.3271805428434491,
+          "stable": true,
+          "crush": 0.11510359862819206,
+          "penetration": 0.0023020719725638412,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1440,
+          "phase": "slow_lift",
+          "progress": 0.4520743919885551,
+          "true_lift_height_m": 0.03685190091073204,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.29899269443461196,
+          "stable": true,
+          "crush": 0.11000351998652373,
+          "penetration": 0.0022000703997304746,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1680,
+          "phase": "slow_lift",
+          "progress": 0.7954220314735336,
+          "true_lift_height_m": 0.07685892774067662,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.2555820823178214,
+          "stable": true,
+          "crush": 0.10722321549351456,
+          "penetration": 0.0021444643098702913,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1920,
+          "phase": "hold",
+          "progress": 0.13733905579399142,
+          "true_lift_height_m": 0.1015605079390845,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.09331714199758566,
+          "stable": true,
+          "crush": 0.10626032834104363,
+          "penetration": 0.0021252065668208725,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 2160,
+          "phase": "hold",
+          "progress": 0.48068669527896996,
+          "true_lift_height_m": 0.10272525055840864,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.004118601515251612,
+          "stable": true,
+          "crush": 0.10544482528547089,
+          "penetration": 0.0021088965057094178,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 2400,
+          "phase": "hold",
+          "progress": 0.8240343347639485,
+          "true_lift_height_m": 0.10274723690919588,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.002846652222925187,
+          "stable": true,
+          "crush": 0.10483539529054335,
+          "penetration": 0.002096707905810867,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        }
+      ],
+      "final_vision": {
+        "status": "ok",
+        "camera": "stage3_egg_closeup",
+        "position_world_est": [
+          0.1983535167004096,
+          0.19277149401544874,
+          0.05178226595024324
+        ],
+        "surface_centroid_world": [
+          0.2107743275373028,
+          0.2009840998715303,
+          0.047471496401423494
+        ],
+        "mask_pixels": 12910,
+        "valid_depth_points": 12910,
+        "visibility_fraction": 0.04202473958333333,
+        "confidence": 0.40284136856773417,
+        "fit_residual_rms": 0.227303105227362,
+        "depth_m": {
+          "min": 0.2789348363876343,
+          "mean": 0.2882551848888397,
+          "max": 0.3155602216720581
+        },
+        "intrinsics": {
+          "width": 640,
+          "height": 480,
+          "fx": 697.0106106421974,
+          "fy": 697.0106106421974,
+          "cx": 319.5,
+          "cy": 239.5,
+          "fovy_deg": 38.0
+        },
+        "camera_pose": {
+          "position_world": [
+            0.497656,
+            0.293545,
+            0.059685
+          ],
+          "xmat_world": [
+            [
+              -0.4226179651788168,
+              -0.28006470956070706,
+              0.8619500066516579
+            ],
+            [
+              0.906307925325668,
+              -0.1305962072773571,
+              0.40193354567223316
+            ],
+            [
+              5.551115123125783e-17,
+              0.951056459472016,
+              0.3090171692585278
+            ]
+          ]
+        },
+        "assumptions": {
+          "object_shape": "known upright ellipsoid",
+          "radii_m": [
+            0.022,
+            0.032,
+            0.038
+          ],
+          "mask_source": "MuJoCo segmentation for egg_geom"
+        },
+        "debug_images": {},
+        "accepted": true
+      },
+      "final_vision_all": [
+        {
+          "status": "ok",
+          "camera": "stage3_egg_closeup",
+          "position_world_est": [
+            0.1983535167004096,
+            0.19277149401544874,
+            0.05178226595024324
+          ],
+          "surface_centroid_world": [
+            0.2107743275373028,
+            0.2009840998715303,
+            0.047471496401423494
+          ],
+          "mask_pixels": 12910,
+          "valid_depth_points": 12910,
+          "visibility_fraction": 0.04202473958333333,
+          "confidence": 0.40284136856773417,
+          "fit_residual_rms": 0.227303105227362,
+          "depth_m": {
+            "min": 0.2789348363876343,
+            "mean": 0.2882551848888397,
+            "max": 0.3155602216720581
+          },
+          "intrinsics": {
+            "width": 640,
+            "height": 480,
+            "fx": 697.0106106421974,
+            "fy": 697.0106106421974,
+            "cx": 319.5,
+            "cy": 239.5,
+            "fovy_deg": 38.0
+          },
+          "camera_pose": {
+            "position_world": [
+              0.497656,
+              0.293545,
+              0.059685
+            ],
+            "xmat_world": [
+              [
+                -0.4226179651788168,
+                -0.28006470956070706,
+                0.8619500066516579
+              ],
+              [
+                0.906307925325668,
+                -0.1305962072773571,
+                0.40193354567223316
+              ],
+              [
+                5.551115123125783e-17,
+                0.951056459472016,
+                0.3090171692585278
+              ]
+            ]
+          },
+          "assumptions": {
+            "object_shape": "known upright ellipsoid",
+            "radii_m": [
+              0.022,
+              0.032,
+              0.038
+            ],
+            "mask_source": "MuJoCo segmentation for egg_geom"
+          },
+          "debug_images": {},
+          "accepted": true
+        },
+        {
+          "status": "failed",
+          "reason": "too_few_mask_pixels",
+          "camera": "stage3_egg_overview",
+          "mask_pixels": 0,
+          "min_mask_pixels": 80,
+          "confidence": 0.0,
+          "debug_images": {},
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "episode_id": 6,
+      "skill_id": "thumb_index_middle_pinch",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "trial": "left_low_nominal",
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.9825342501658869,
+        "initial_vision_mask_pixels": 12291,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.5645788602694817,
+        "final_vision_mask_pixels": 7864,
+        "vision_lift_height_m": 0.10504548042631483,
+        "true_lift_height_m": 0.10584806957365173,
+        "vision_true_lift_error_m": 0.000802589147336899,
+        "approach_true_proxy_error_m": 0.0077923284683131516,
+        "ik_approach_dxy_m": 2.5186990334923338e-08,
+        "ik_approach_dz_m": 1.6074014619338328e-09,
+        "ik_lift_dxy_m": 7.577263646713383e-10,
+        "ik_lift_dz_m": 4.358062466458534e-09,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 400,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 129,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.7777777777777757,
+        "hold_max_slip_score": 0.10984808471861693,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 1.0,
+        "max_crush_risk": 0.13024055924269265,
+        "max_penetration_m": 0.002604811184853853,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 9,
+        "final_contact_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 841,
+          "palm": 3593,
+          "index": 5619,
+          "thumb": 3498,
+          "middle": 4285
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1400,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 0.75,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.2289212420276983,
+            "max_crush_risk": 0.042182282591451715,
+            "max_penetration_m": 0.0008436456518290344
+          },
+          "preshape": {
+            "max_slip_score": 0.31771213322214237,
+            "max_crush_risk": 0.03861582370249238,
+            "max_penetration_m": 0.0007723164740498475
+          },
+          "pinch_close": {
+            "max_slip_score": 0.3433865647570798,
+            "max_crush_risk": 0.0916433258317413,
+            "max_penetration_m": 0.001832866516634826
+          },
+          "contact_settle": {
+            "max_slip_score": 1.0,
+            "max_crush_risk": 0.13024055924269265,
+            "max_penetration_m": 0.002604811184853853
+          },
+          "slow_lift": {
+            "max_slip_score": 0.43271038264614836,
+            "max_crush_risk": 0.12944825506919475,
+            "max_penetration_m": 0.0025889651013838947
+          },
+          "hold": {
+            "max_slip_score": 0.10984808471861693,
+            "max_crush_risk": 0.12674486811940394,
+            "max_penetration_m": 0.002534897362388079
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2520
+      },
+      "trace": [
+        {
+          "step": 0,
+          "phase": "approach",
+          "progress": 0.0,
+          "true_lift_height_m": 0.0,
+          "contact": false,
+          "pinch_contact": false,
+          "slip": 0.0,
+          "stable": false,
+          "crush": 6.938893903907228e-16,
+          "penetration": 1.3877787807814457e-17,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 240,
+          "phase": "approach",
+          "progress": 0.7523510971786834,
+          "true_lift_height_m": -9.6264328343941e-05,
+          "contact": false,
+          "pinch_contact": false,
+          "slip": 0.0,
+          "stable": false,
+          "crush": 0.004813216417197397,
+          "penetration": 9.626432834394794e-05,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 480,
+          "phase": "pinch_close",
+          "progress": 0.07722007722007722,
+          "true_lift_height_m": -0.0023696152970796094,
+          "contact": true,
+          "pinch_contact": false,
+          "slip": 0.3029414337750767,
+          "stable": true,
+          "crush": 0.036048112692901986,
+          "penetration": 0.0007209622538580397,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 720,
+          "phase": "contact_settle",
+          "progress": 0.0,
+          "true_lift_height_m": -0.0016719205452833258,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.15950422220012475,
+          "stable": true,
+          "crush": 0.09204001871014801,
+          "penetration": 0.0018408003742029604,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 960,
+          "phase": "contact_settle",
+          "progress": 0.24024024024024024,
+          "true_lift_height_m": -0.003366020313477866,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.06699482584370463,
+          "stable": true,
+          "crush": 0.11491026219073754,
+          "penetration": 0.0022982052438147507,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 1200,
+          "phase": "slow_lift",
+          "progress": 0.11444921316165951,
+          "true_lift_height_m": 0.006748485374962761,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.41245232303288104,
+          "stable": false,
+          "crush": 0.12940571647550295,
+          "penetration": 0.002588114329510059,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1440,
+          "phase": "slow_lift",
+          "progress": 0.45779685264663805,
+          "true_lift_height_m": 0.04454798479324579,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.15805557425308564,
+          "stable": true,
+          "crush": 0.12872515951228083,
+          "penetration": 0.0025745031902456167,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1680,
+          "phase": "slow_lift",
+          "progress": 0.8011444921316166,
+          "true_lift_height_m": 0.08294035710454521,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.11006042447743605,
+          "stable": true,
+          "crush": 0.12812968486630255,
+          "penetration": 0.0025625936973260512,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1920,
+          "phase": "hold",
+          "progress": 0.1430615164520744,
+          "true_lift_height_m": 0.10486076437615385,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.01032027214881563,
+          "stable": true,
+          "crush": 0.12580643527734015,
+          "penetration": 0.0025161287055468027,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 2160,
+          "phase": "hold",
+          "progress": 0.4864091559370529,
+          "true_lift_height_m": 0.10585812951132452,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.0037920516927511952,
+          "stable": true,
+          "crush": 0.12386953055170957,
+          "penetration": 0.0024773906110341914,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 2400,
+          "phase": "hold",
+          "progress": 0.8297567954220315,
+          "true_lift_height_m": 0.10585186643843966,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.0037975227343099898,
+          "stable": true,
+          "crush": 0.12221467586816152,
+          "penetration": 0.0024442935173632305,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        }
+      ],
+      "final_vision": {
+        "status": "ok",
+        "camera": "stage3_egg_closeup",
+        "position_world_est": [
+          0.17976508758577917,
+          0.16594676853817886,
+          0.04968258225583583
+        ],
+        "surface_centroid_world": [
+          0.18840309898468244,
+          0.1720221465012948,
+          0.04758843778290535
+        ],
+        "mask_pixels": 7864,
+        "valid_depth_points": 7864,
+        "visibility_fraction": 0.025598958333333335,
+        "confidence": 0.5645788602694817,
+        "fit_residual_rms": 0.14291880145588567,
+        "depth_m": {
+          "min": 0.30991417169570923,
+          "mean": 0.3191426992416382,
+          "max": 0.3453265428543091
+        },
+        "intrinsics": {
+          "width": 640,
+          "height": 480,
+          "fx": 697.0106106421974,
+          "fy": 697.0106106421974,
+          "cx": 319.5,
+          "cy": 239.5,
+          "fovy_deg": 38.0
+        },
+        "camera_pose": {
+          "position_world": [
+            0.497656,
+            0.293545,
+            0.059685
+          ],
+          "xmat_world": [
+            [
+              -0.4226179651788168,
+              -0.28006470956070706,
+              0.8619500066516579
+            ],
+            [
+              0.906307925325668,
+              -0.1305962072773571,
+              0.40193354567223316
+            ],
+            [
+              5.551115123125783e-17,
+              0.951056459472016,
+              0.3090171692585278
+            ]
+          ]
+        },
+        "assumptions": {
+          "object_shape": "known upright ellipsoid",
+          "radii_m": [
+            0.022,
+            0.032,
+            0.038
+          ],
+          "mask_source": "MuJoCo segmentation for egg_geom"
+        },
+        "debug_images": {},
+        "accepted": true
+      },
+      "final_vision_all": [
+        {
+          "status": "ok",
+          "camera": "stage3_egg_closeup",
+          "position_world_est": [
+            0.17976508758577917,
+            0.16594676853817886,
+            0.04968258225583583
+          ],
+          "surface_centroid_world": [
+            0.18840309898468244,
+            0.1720221465012948,
+            0.04758843778290535
+          ],
+          "mask_pixels": 7864,
+          "valid_depth_points": 7864,
+          "visibility_fraction": 0.025598958333333335,
+          "confidence": 0.5645788602694817,
+          "fit_residual_rms": 0.14291880145588567,
+          "depth_m": {
+            "min": 0.30991417169570923,
+            "mean": 0.3191426992416382,
+            "max": 0.3453265428543091
+          },
+          "intrinsics": {
+            "width": 640,
+            "height": 480,
+            "fx": 697.0106106421974,
+            "fy": 697.0106106421974,
+            "cx": 319.5,
+            "cy": 239.5,
+            "fovy_deg": 38.0
+          },
+          "camera_pose": {
+            "position_world": [
+              0.497656,
+              0.293545,
+              0.059685
+            ],
+            "xmat_world": [
+              [
+                -0.4226179651788168,
+                -0.28006470956070706,
+                0.8619500066516579
+              ],
+              [
+                0.906307925325668,
+                -0.1305962072773571,
+                0.40193354567223316
+              ],
+              [
+                5.551115123125783e-17,
+                0.951056459472016,
+                0.3090171692585278
+              ]
+            ]
+          },
+          "assumptions": {
+            "object_shape": "known upright ellipsoid",
+            "radii_m": [
+              0.022,
+              0.032,
+              0.038
+            ],
+            "mask_source": "MuJoCo segmentation for egg_geom"
+          },
+          "debug_images": {},
+          "accepted": true
+        },
+        {
+          "status": "failed",
+          "reason": "too_few_mask_pixels",
+          "camera": "stage3_egg_overview",
+          "mask_pixels": 0,
+          "min_mask_pixels": 80,
+          "confidence": 0.0,
+          "debug_images": {},
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "episode_id": 7,
+      "skill_id": "thumb_index_middle_pinch",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "trial": "right_high_nominal",
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.9826236843368273,
+        "initial_vision_mask_pixels": 16046,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.5962013522001149,
+        "final_vision_mask_pixels": 21096,
+        "vision_lift_height_m": 0.08202768940616631,
+        "true_lift_height_m": 0.08795591450518853,
+        "vision_true_lift_error_m": 0.005928225099022216,
+        "approach_true_proxy_error_m": 0.01257977807651702,
+        "ik_approach_dxy_m": 2.6945618024987604e-09,
+        "ik_approach_dz_m": 1.517896051905776e-08,
+        "ik_lift_dxy_m": 6.3114037980820816e-09,
+        "ik_lift_dz_m": 4.824849332563108e-08,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 400,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 400,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 0.8671428571428571,
+        "hold_pinch_purity_mean": 0.7183605442176848,
+        "hold_max_slip_score": 0.2862824239964895,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 1.0,
+        "max_crush_risk": 0.1908005760118075,
+        "max_penetration_m": 0.00381601152023615,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 5,
+        "final_contact_regions": [
+          "index",
+          "palm"
+        ],
+        "region_counts_total": {
+          "support": 1245,
+          "palm": 3284,
+          "middle": 725,
+          "index": 5656,
+          "thumb": 2497
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1400,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 0.75,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.43263268523589865,
+            "max_crush_risk": 0.03953733907817504,
+            "max_penetration_m": 0.0007907467815635008
+          },
+          "preshape": {
+            "max_slip_score": 0.08233971419479975,
+            "max_crush_risk": 0.03889989592251642,
+            "max_penetration_m": 0.0007779979184503284
+          },
+          "pinch_close": {
+            "max_slip_score": 0.1442587839693003,
+            "max_crush_risk": 0.04648626110787578,
+            "max_penetration_m": 0.0009297252221575155
+          },
+          "contact_settle": {
+            "max_slip_score": 0.21799883319000682,
+            "max_crush_risk": 0.1908005760118075,
+            "max_penetration_m": 0.00381601152023615
+          },
+          "slow_lift": {
+            "max_slip_score": 1.0,
+            "max_crush_risk": 0.1505152480761891,
+            "max_penetration_m": 0.003010304961523782
+          },
+          "hold": {
+            "max_slip_score": 0.2862824239964895,
+            "max_crush_risk": 0.11545820427118604,
+            "max_penetration_m": 0.002309164085423721
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2520
+      },
+      "trace": [
+        {
+          "step": 0,
+          "phase": "approach",
+          "progress": 0.0,
+          "true_lift_height_m": 0.0,
+          "contact": false,
+          "pinch_contact": false,
+          "slip": 0.0,
+          "stable": false,
+          "crush": 6.938893903907228e-16,
+          "penetration": 1.3877787807814457e-17,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 240,
+          "phase": "approach",
+          "progress": 0.7523510971786834,
+          "true_lift_height_m": -9.6264328343941e-05,
+          "contact": false,
+          "pinch_contact": false,
+          "slip": 0.0,
+          "stable": false,
+          "crush": 0.004813216417197397,
+          "penetration": 9.626432834394794e-05,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 480,
+          "phase": "pinch_close",
+          "progress": 0.07722007722007722,
+          "true_lift_height_m": -0.0010517351126441907,
+          "contact": true,
+          "pinch_contact": false,
+          "slip": 0.028111455994182796,
+          "stable": true,
+          "crush": 0.03823733420125613,
+          "penetration": 0.0007647466840251225,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 720,
+          "phase": "contact_settle",
+          "progress": 0.0,
+          "true_lift_height_m": -0.001407843227677355,
+          "contact": true,
+          "pinch_contact": false,
+          "slip": 0.12817558096684334,
+          "stable": true,
+          "crush": 0.04660981032635986,
+          "penetration": 0.0009321962065271972,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 960,
+          "phase": "contact_settle",
+          "progress": 0.24024024024024024,
+          "true_lift_height_m": -0.0015678676553656512,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.03895916636885662,
+          "stable": true,
+          "crush": 0.14932350363770505,
+          "penetration": 0.002986470072754101,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 1200,
+          "phase": "slow_lift",
+          "progress": 0.11444921316165951,
+          "true_lift_height_m": -0.0026979116250196652,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.25918159884013603,
+          "stable": true,
+          "crush": 0.1322879904779746,
+          "penetration": 0.002645759809559492,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1440,
+          "phase": "slow_lift",
+          "progress": 0.45779685264663805,
+          "true_lift_height_m": 0.02692077267868235,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.39867055697308706,
+          "stable": false,
+          "crush": 0.10461196533878982,
+          "penetration": 0.0020922393067757963,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1680,
+          "phase": "slow_lift",
+          "progress": 0.8011444921316166,
+          "true_lift_height_m": 0.06656961589659806,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.2915448812567509,
+          "stable": true,
+          "crush": 0.10232595504213321,
+          "penetration": 0.002046519100842664,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1920,
+          "phase": "hold",
+          "progress": 0.1430615164520744,
+          "true_lift_height_m": 0.08912424680661563,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.08172313175449213,
+          "stable": true,
+          "crush": 0.11498319888269817,
+          "penetration": 0.0022996639776539634,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 2160,
+          "phase": "hold",
+          "progress": 0.4864091559370529,
+          "true_lift_height_m": 0.08969275864929688,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.07413283862940978,
+          "stable": true,
+          "crush": 0.10840142221757434,
+          "penetration": 0.002168028444351487,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 2400,
+          "phase": "hold",
+          "progress": 0.8297567954220315,
+          "true_lift_height_m": 0.08901146843993246,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.08544365945836264,
+          "stable": true,
+          "crush": 0.0886956821088984,
+          "penetration": 0.0017739136421779681,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        }
+      ],
+      "final_vision": {
+        "status": "ok",
+        "camera": "stage3_egg_closeup",
+        "position_world_est": [
+          0.22025811111919272,
+          0.17795900791036434,
+          0.02666794797275066
+        ],
+        "surface_centroid_world": [
+          0.23543647788363356,
+          0.19470107723105293,
+          0.03353951943418081
+        ],
+        "mask_pixels": 21096,
+        "valid_depth_points": 21096,
+        "visibility_fraction": 0.068671875,
+        "confidence": 0.5962013522001149,
+        "fit_residual_rms": 0.12929420742742076,
+        "depth_m": {
+          "min": 0.2663375437259674,
+          "mean": 0.2738282084465027,
+          "max": 0.2951884865760803
+        },
+        "intrinsics": {
+          "width": 640,
+          "height": 480,
+          "fx": 697.0106106421974,
+          "fy": 697.0106106421974,
+          "cx": 319.5,
+          "cy": 239.5,
+          "fovy_deg": 38.0
+        },
+        "camera_pose": {
+          "position_world": [
+            0.497656,
+            0.293545,
+            0.059685
+          ],
+          "xmat_world": [
+            [
+              -0.4226179651788168,
+              -0.28006470956070706,
+              0.8619500066516579
+            ],
+            [
+              0.906307925325668,
+              -0.1305962072773571,
+              0.40193354567223316
+            ],
+            [
+              5.551115123125783e-17,
+              0.951056459472016,
+              0.3090171692585278
+            ]
+          ]
+        },
+        "assumptions": {
+          "object_shape": "known upright ellipsoid",
+          "radii_m": [
+            0.022,
+            0.032,
+            0.038
+          ],
+          "mask_source": "MuJoCo segmentation for egg_geom"
+        },
+        "debug_images": {},
+        "accepted": true
+      },
+      "final_vision_all": [
+        {
+          "status": "ok",
+          "camera": "stage3_egg_closeup",
+          "position_world_est": [
+            0.22025811111919272,
+            0.17795900791036434,
+            0.02666794797275066
+          ],
+          "surface_centroid_world": [
+            0.23543647788363356,
+            0.19470107723105293,
+            0.03353951943418081
+          ],
+          "mask_pixels": 21096,
+          "valid_depth_points": 21096,
+          "visibility_fraction": 0.068671875,
+          "confidence": 0.5962013522001149,
+          "fit_residual_rms": 0.12929420742742076,
+          "depth_m": {
+            "min": 0.2663375437259674,
+            "mean": 0.2738282084465027,
+            "max": 0.2951884865760803
+          },
+          "intrinsics": {
+            "width": 640,
+            "height": 480,
+            "fx": 697.0106106421974,
+            "fy": 697.0106106421974,
+            "cx": 319.5,
+            "cy": 239.5,
+            "fovy_deg": 38.0
+          },
+          "camera_pose": {
+            "position_world": [
+              0.497656,
+              0.293545,
+              0.059685
+            ],
+            "xmat_world": [
+              [
+                -0.4226179651788168,
+                -0.28006470956070706,
+                0.8619500066516579
+              ],
+              [
+                0.906307925325668,
+                -0.1305962072773571,
+                0.40193354567223316
+              ],
+              [
+                5.551115123125783e-17,
+                0.951056459472016,
+                0.3090171692585278
+              ]
+            ]
+          },
+          "assumptions": {
+            "object_shape": "known upright ellipsoid",
+            "radii_m": [
+              0.022,
+              0.032,
+              0.038
+            ],
+            "mask_source": "MuJoCo segmentation for egg_geom"
+          },
+          "debug_images": {},
+          "accepted": true
+        },
+        {
+          "status": "failed",
+          "reason": "too_few_mask_pixels",
+          "camera": "stage3_egg_overview",
+          "mask_pixels": 69,
+          "min_mask_pixels": 80,
+          "confidence": 0.0,
+          "debug_images": {},
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "episode_id": 8,
+      "skill_id": "thumb_index_middle_pinch",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "trial": "left_high_zplus",
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.9825918060079228,
+        "initial_vision_mask_pixels": 14017,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.5187470123377484,
+        "final_vision_mask_pixels": 9332,
+        "vision_lift_height_m": 0.11981517966649649,
+        "true_lift_height_m": 0.10905797446604301,
+        "vision_true_lift_error_m": 0.010757205200453479,
+        "approach_true_proxy_error_m": 0.00972829782723057,
+        "ik_approach_dxy_m": 1.7944808708965857e-08,
+        "ik_approach_dz_m": 2.0297889855025453e-08,
+        "ik_lift_dxy_m": 4.290628445098234e-09,
+        "ik_lift_dz_m": 3.368064188657982e-09,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 400,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 138,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.75,
+        "hold_max_slip_score": 0.17223527548366807,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 1.0,
+        "max_crush_risk": 0.16479376545419203,
+        "max_penetration_m": 0.0032958753090838403,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 8,
+        "final_contact_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 872,
+          "palm": 3585,
+          "index": 3630,
+          "middle": 3799,
+          "thumb": 3590
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1400,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 0.75,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.2932879794510044,
+            "max_crush_risk": 0.04671169754249679,
+            "max_penetration_m": 0.0009342339508499357
+          },
+          "preshape": {
+            "max_slip_score": 0.09589371118242072,
+            "max_crush_risk": 0.03742612125731401,
+            "max_penetration_m": 0.0007485224251462802
+          },
+          "pinch_close": {
+            "max_slip_score": 0.17104864706453132,
+            "max_crush_risk": 0.04104704441804139,
+            "max_penetration_m": 0.0008209408883608279
+          },
+          "contact_settle": {
+            "max_slip_score": 1.0,
+            "max_crush_risk": 0.16479376545419203,
+            "max_penetration_m": 0.0032958753090838403
+          },
+          "slow_lift": {
+            "max_slip_score": 0.39603011869403587,
+            "max_crush_risk": 0.12441499978381176,
+            "max_penetration_m": 0.0024882999956762353
+          },
+          "hold": {
+            "max_slip_score": 0.17223527548366807,
+            "max_crush_risk": 0.10960240776986055,
+            "max_penetration_m": 0.002192048155397211
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2520
+      },
+      "trace": [
+        {
+          "step": 0,
+          "phase": "approach",
+          "progress": 0.0,
+          "true_lift_height_m": 0.0,
+          "contact": false,
+          "pinch_contact": false,
+          "slip": 0.0,
+          "stable": false,
+          "crush": 6.938893903907228e-16,
+          "penetration": 1.3877787807814457e-17,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 240,
+          "phase": "approach",
+          "progress": 0.7523510971786834,
+          "true_lift_height_m": -9.6264328343941e-05,
+          "contact": false,
+          "pinch_contact": false,
+          "slip": 0.0,
+          "stable": false,
+          "crush": 0.004813216417197397,
+          "penetration": 9.626432834394794e-05,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 480,
+          "phase": "pinch_close",
+          "progress": 0.07722007722007722,
+          "true_lift_height_m": -0.0007369683680064631,
+          "contact": true,
+          "pinch_contact": false,
+          "slip": 0.06935912927901808,
+          "stable": true,
+          "crush": 0.03634337014024957,
+          "penetration": 0.0007268674028049914,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 720,
+          "phase": "contact_settle",
+          "progress": 0.0,
+          "true_lift_height_m": -0.0007419813361371694,
+          "contact": true,
+          "pinch_contact": false,
+          "slip": 0.0816437458428927,
+          "stable": true,
+          "crush": 0.04117508763896117,
+          "penetration": 0.0008235017527792234,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 960,
+          "phase": "contact_settle",
+          "progress": 0.24024024024024024,
+          "true_lift_height_m": -0.006421707076340127,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.1990796707665706,
+          "stable": true,
+          "crush": 0.14929058318608632,
+          "penetration": 0.0029858116637217266,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 1200,
+          "phase": "slow_lift",
+          "progress": 0.11444921316165951,
+          "true_lift_height_m": 0.006769784577574579,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.39603011869403587,
+          "stable": false,
+          "crush": 0.118477800643731,
+          "penetration": 0.00236955601287462,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1440,
+          "phase": "slow_lift",
+          "progress": 0.45779685264663805,
+          "true_lift_height_m": 0.04534796868874712,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.18664066770870347,
+          "stable": true,
+          "crush": 0.11306405034669656,
+          "penetration": 0.0022612810069339313,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1680,
+          "phase": "slow_lift",
+          "progress": 0.8011444921316166,
+          "true_lift_height_m": 0.08550126432624525,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.1496879646881095,
+          "stable": true,
+          "crush": 0.11065472899344074,
+          "penetration": 0.002213094579868815,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1920,
+          "phase": "hold",
+          "progress": 0.1430615164520744,
+          "true_lift_height_m": 0.1083550845094204,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.06778586928145572,
+          "stable": true,
+          "crush": 0.108911539073872,
+          "penetration": 0.00217823078147744,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 2160,
+          "phase": "hold",
+          "progress": 0.4864091559370529,
+          "true_lift_height_m": 0.10932526566357037,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.013061729470725068,
+          "stable": true,
+          "crush": 0.10779153080008327,
+          "penetration": 0.0021558306160016655,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 2400,
+          "phase": "hold",
+          "progress": 0.8297567954220315,
+          "true_lift_height_m": 0.109142192949765,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.011514782199431188,
+          "stable": true,
+          "crush": 0.10705692278801067,
+          "penetration": 0.0021411384557602133,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        }
+      ],
+      "final_vision": {
+        "status": "ok",
+        "camera": "stage3_egg_closeup",
+        "position_world_est": [
+          0.16834247779040445,
+          0.21304457821330908,
+          0.0644528578671212
+        ],
+        "surface_centroid_world": [
+          0.18070727496780842,
+          0.22015189390812476,
+          0.04930537019703691
+        ],
+        "mask_pixels": 9332,
+        "valid_depth_points": 9332,
+        "visibility_fraction": 0.030377604166666666,
+        "confidence": 0.5187470123377484,
+        "fit_residual_rms": 0.16408474170068318,
+        "depth_m": {
+          "min": 0.29531699419021606,
+          "mean": 0.30590060353279114,
+          "max": 0.3360384404659271
+        },
+        "intrinsics": {
+          "width": 640,
+          "height": 480,
+          "fx": 697.0106106421974,
+          "fy": 697.0106106421974,
+          "cx": 319.5,
+          "cy": 239.5,
+          "fovy_deg": 38.0
+        },
+        "camera_pose": {
+          "position_world": [
+            0.497656,
+            0.293545,
+            0.059685
+          ],
+          "xmat_world": [
+            [
+              -0.4226179651788168,
+              -0.28006470956070706,
+              0.8619500066516579
+            ],
+            [
+              0.906307925325668,
+              -0.1305962072773571,
+              0.40193354567223316
+            ],
+            [
+              5.551115123125783e-17,
+              0.951056459472016,
+              0.3090171692585278
+            ]
+          ]
+        },
+        "assumptions": {
+          "object_shape": "known upright ellipsoid",
+          "radii_m": [
+            0.022,
+            0.032,
+            0.038
+          ],
+          "mask_source": "MuJoCo segmentation for egg_geom"
+        },
+        "debug_images": {},
+        "accepted": true
+      },
+      "final_vision_all": [
+        {
+          "status": "ok",
+          "camera": "stage3_egg_closeup",
+          "position_world_est": [
+            0.16834247779040445,
+            0.21304457821330908,
+            0.0644528578671212
+          ],
+          "surface_centroid_world": [
+            0.18070727496780842,
+            0.22015189390812476,
+            0.04930537019703691
+          ],
+          "mask_pixels": 9332,
+          "valid_depth_points": 9332,
+          "visibility_fraction": 0.030377604166666666,
+          "confidence": 0.5187470123377484,
+          "fit_residual_rms": 0.16408474170068318,
+          "depth_m": {
+            "min": 0.29531699419021606,
+            "mean": 0.30590060353279114,
+            "max": 0.3360384404659271
+          },
+          "intrinsics": {
+            "width": 640,
+            "height": 480,
+            "fx": 697.0106106421974,
+            "fy": 697.0106106421974,
+            "cx": 319.5,
+            "cy": 239.5,
+            "fovy_deg": 38.0
+          },
+          "camera_pose": {
+            "position_world": [
+              0.497656,
+              0.293545,
+              0.059685
+            ],
+            "xmat_world": [
+              [
+                -0.4226179651788168,
+                -0.28006470956070706,
+                0.8619500066516579
+              ],
+              [
+                0.906307925325668,
+                -0.1305962072773571,
+                0.40193354567223316
+              ],
+              [
+                5.551115123125783e-17,
+                0.951056459472016,
+                0.3090171692585278
+              ]
+            ]
+          },
+          "assumptions": {
+            "object_shape": "known upright ellipsoid",
+            "radii_m": [
+              0.022,
+              0.032,
+              0.038
+            ],
+            "mask_source": "MuJoCo segmentation for egg_geom"
+          },
+          "debug_images": {},
+          "accepted": true
+        },
+        {
+          "status": "failed",
+          "reason": "too_few_mask_pixels",
+          "camera": "stage3_egg_overview",
+          "mask_pixels": 0,
+          "min_mask_pixels": 80,
+          "confidence": 0.0,
+          "debug_images": {},
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "episode_id": 9,
+      "skill_id": "thumb_index_middle_pinch",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "trial": "right_low_zminus",
+      "status": "PASS",
+      "success": true,
+      "terminal_reason": "success_vision_confirmed_pinch_lift_hold",
+      "failure_reasons": [],
+      "risk_flags": [
+        "early_contact_in_approach",
+        "transient_slip_high"
+      ],
+      "summary": {
+        "initial_vision_accepted": true,
+        "initial_vision_status": "ok",
+        "initial_vision_confidence": 0.9826093942023688,
+        "initial_vision_mask_pixels": 15448,
+        "final_vision_accepted": true,
+        "final_vision_primary_accepted": true,
+        "final_vision_corroborated": false,
+        "final_verification_mode": "vision_tactile_corroborated",
+        "final_vision_camera": "stage3_egg_closeup",
+        "final_vision_status": "ok",
+        "final_vision_accepted_by": "strict_vision",
+        "final_vision_confidence": 0.6068842986825186,
+        "final_vision_mask_pixels": 3345,
+        "vision_lift_height_m": 0.10487550772182341,
+        "true_lift_height_m": 0.10053539009727146,
+        "vision_true_lift_error_m": 0.004340117624551956,
+        "approach_true_proxy_error_m": 0.011994844121787578,
+        "ik_approach_dxy_m": 2.18601698934859e-10,
+        "ik_approach_dz_m": 1.1565050396511456e-08,
+        "ik_lift_dxy_m": 1.3513085355793175e-09,
+        "ik_lift_dz_m": 5.008491746338883e-10,
+        "contact_acquired": true,
+        "pinch_contact_before_lift": true,
+        "first_contact_phase": "approach",
+        "contact_settle_steps_actual": 518,
+        "gate_release_reason": "stable_window_met",
+        "gate_stable_window_at_release": 120,
+        "hold_stable_fraction": 1.0,
+        "hold_pinch_fraction": 1.0,
+        "hold_pinch_purity_mean": 0.7397142857142931,
+        "hold_max_slip_score": 0.2044977463449689,
+        "hold_final_slip_score": 0.0,
+        "max_slip_score": 0.9883682173705924,
+        "max_crush_risk": 0.14546218017946355,
+        "max_penetration_m": 0.002909243603589271,
+        "final_floor_contacts": 0,
+        "final_hand_contacts": 3,
+        "final_contact_regions": [
+          "middle",
+          "ring",
+          "thumb"
+        ],
+        "region_counts_total": {
+          "support": 1015,
+          "palm": 2201,
+          "middle": 4786,
+          "index": 1625,
+          "thumb": 3529,
+          "ring": 286
+        },
+        "repair_mode": "inactive_anchor_slip_close",
+        "repair_event_counts": {
+          "inactive_anchor_slip_close": 1400,
+          "inactive_anchor_slip_close:slow_lift": 700,
+          "inactive_anchor_slip_close:hold": 700
+        },
+        "repair_max_close_delta": 0.1,
+        "repair_max_expert_alpha": 0.0,
+        "repair_max_inactive_alpha": 0.75,
+        "phase_metrics": {
+          "approach": {
+            "max_slip_score": 0.2027476065171393,
+            "max_crush_risk": 0.041618170720988244,
+            "max_penetration_m": 0.0008323634144197649
+          },
+          "preshape": {
+            "max_slip_score": 0.16834188097855737,
+            "max_crush_risk": 0.04008333464548785,
+            "max_penetration_m": 0.000801666692909757
+          },
+          "pinch_close": {
+            "max_slip_score": 0.13455505906190868,
+            "max_crush_risk": 0.04911311362622715,
+            "max_penetration_m": 0.000982262272524543
+          },
+          "contact_settle": {
+            "max_slip_score": 0.9883682173705924,
+            "max_crush_risk": 0.14546218017946355,
+            "max_penetration_m": 0.002909243603589271
+          },
+          "slow_lift": {
+            "max_slip_score": 0.2520964418705797,
+            "max_crush_risk": 0.11218353258820156,
+            "max_penetration_m": 0.0022436706517640313
+          },
+          "hold": {
+            "max_slip_score": 0.2044977463449689,
+            "max_crush_risk": 0.04383885921219353,
+            "max_penetration_m": 0.0008767771842438706
+          }
+        },
+        "finite_state": true,
+        "total_steps": 2638
+      },
+      "trace": [
+        {
+          "step": 0,
+          "phase": "approach",
+          "progress": 0.0,
+          "true_lift_height_m": 0.0,
+          "contact": false,
+          "pinch_contact": false,
+          "slip": 0.0,
+          "stable": false,
+          "crush": 6.938893903907228e-16,
+          "penetration": 1.3877787807814457e-17,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 240,
+          "phase": "approach",
+          "progress": 0.7523510971786834,
+          "true_lift_height_m": -9.6264328343941e-05,
+          "contact": false,
+          "pinch_contact": false,
+          "slip": 0.0,
+          "stable": false,
+          "crush": 0.004813216417197397,
+          "penetration": 9.626432834394794e-05,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 480,
+          "phase": "pinch_close",
+          "progress": 0.07722007722007722,
+          "true_lift_height_m": -0.0007713351706220908,
+          "contact": true,
+          "pinch_contact": false,
+          "slip": 0.1001180229522233,
+          "stable": true,
+          "crush": 0.03836062644379715,
+          "penetration": 0.0007672125288759429,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 720,
+          "phase": "contact_settle",
+          "progress": 0.0,
+          "true_lift_height_m": -0.0010754201510080816,
+          "contact": true,
+          "pinch_contact": false,
+          "slip": 0.05772806742606123,
+          "stable": true,
+          "crush": 0.04938721643997232,
+          "penetration": 0.0009877443287994465,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 960,
+          "phase": "contact_settle",
+          "progress": 0.24024024024024024,
+          "true_lift_height_m": -0.006887979176773258,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.21551904639843414,
+          "stable": true,
+          "crush": 0.12642768103935612,
+          "penetration": 0.0025285536207871225,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 1200,
+          "phase": "contact_settle",
+          "progress": 0.4804804804804805,
+          "true_lift_height_m": -0.010496298486783129,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.08630294751643398,
+          "stable": true,
+          "crush": 0.10720446956144222,
+          "penetration": 0.0021440893912288445,
+          "repair_active": false,
+          "repair_close_delta": 0.0,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.0
+        },
+        {
+          "step": 1440,
+          "phase": "slow_lift",
+          "progress": 0.28898426323319026,
+          "true_lift_height_m": 0.02272514806982475,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.12570110303456838,
+          "stable": true,
+          "crush": 0.10179343365637203,
+          "penetration": 0.0020358686731274406,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1680,
+          "phase": "slow_lift",
+          "progress": 0.6323319027181689,
+          "true_lift_height_m": 0.0612782716354291,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.0594439656076209,
+          "stable": true,
+          "crush": 0.053822462651385156,
+          "penetration": 0.0010764492530277031,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 1920,
+          "phase": "slow_lift",
+          "progress": 0.9756795422031473,
+          "true_lift_height_m": 0.09898748235282083,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.06624270376670936,
+          "stable": true,
+          "crush": 0.04112889070331639,
+          "penetration": 0.0008225778140663279,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 2160,
+          "phase": "hold",
+          "progress": 0.31759656652360513,
+          "true_lift_height_m": 0.10287960338911835,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.11181465043869185,
+          "stable": true,
+          "crush": 0.04249923702884708,
+          "penetration": 0.0008499847405769416,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        },
+        {
+          "step": 2400,
+          "phase": "hold",
+          "progress": 0.6609442060085837,
+          "true_lift_height_m": 0.10249050579935615,
+          "contact": true,
+          "pinch_contact": true,
+          "slip": 0.13245201188665218,
+          "stable": true,
+          "crush": 0.041204880850314714,
+          "penetration": 0.0008240976170062943,
+          "repair_active": true,
+          "repair_close_delta": 0.1,
+          "repair_expert_alpha": 0.0,
+          "repair_inactive_alpha": 0.75
+        }
+      ],
+      "final_vision": {
+        "status": "ok",
+        "camera": "stage3_egg_closeup",
+        "position_world_est": [
+          0.17784141363298872,
+          0.1462806411583844,
+          0.049516088464649485
+        ],
+        "surface_centroid_world": [
+          0.1885917012621312,
+          0.15723443715713822,
+          0.05177235249414906
+        ],
+        "mask_pixels": 3345,
+        "valid_depth_points": 3345,
+        "visibility_fraction": 0.010888671875,
+        "confidence": 0.6068842986825186,
+        "fit_residual_rms": 0.12485427945425803,
+        "depth_m": {
+          "min": 0.31309548020362854,
+          "mean": 0.3236309289932251,
+          "max": 0.36824867129325867
+        },
+        "intrinsics": {
+          "width": 640,
+          "height": 480,
+          "fx": 697.0106106421974,
+          "fy": 697.0106106421974,
+          "cx": 319.5,
+          "cy": 239.5,
+          "fovy_deg": 38.0
+        },
+        "camera_pose": {
+          "position_world": [
+            0.497656,
+            0.293545,
+            0.059685
+          ],
+          "xmat_world": [
+            [
+              -0.4226179651788168,
+              -0.28006470956070706,
+              0.8619500066516579
+            ],
+            [
+              0.906307925325668,
+              -0.1305962072773571,
+              0.40193354567223316
+            ],
+            [
+              5.551115123125783e-17,
+              0.951056459472016,
+              0.3090171692585278
+            ]
+          ]
+        },
+        "assumptions": {
+          "object_shape": "known upright ellipsoid",
+          "radii_m": [
+            0.022,
+            0.032,
+            0.038
+          ],
+          "mask_source": "MuJoCo segmentation for egg_geom"
+        },
+        "debug_images": {},
+        "accepted": true
+      },
+      "final_vision_all": [
+        {
+          "status": "ok",
+          "camera": "stage3_egg_closeup",
+          "position_world_est": [
+            0.17784141363298872,
+            0.1462806411583844,
+            0.049516088464649485
+          ],
+          "surface_centroid_world": [
+            0.1885917012621312,
+            0.15723443715713822,
+            0.05177235249414906
+          ],
+          "mask_pixels": 3345,
+          "valid_depth_points": 3345,
+          "visibility_fraction": 0.010888671875,
+          "confidence": 0.6068842986825186,
+          "fit_residual_rms": 0.12485427945425803,
+          "depth_m": {
+            "min": 0.31309548020362854,
+            "mean": 0.3236309289932251,
+            "max": 0.36824867129325867
+          },
+          "intrinsics": {
+            "width": 640,
+            "height": 480,
+            "fx": 697.0106106421974,
+            "fy": 697.0106106421974,
+            "cx": 319.5,
+            "cy": 239.5,
+            "fovy_deg": 38.0
+          },
+          "camera_pose": {
+            "position_world": [
+              0.497656,
+              0.293545,
+              0.059685
+            ],
+            "xmat_world": [
+              [
+                -0.4226179651788168,
+                -0.28006470956070706,
+                0.8619500066516579
+              ],
+              [
+                0.906307925325668,
+                -0.1305962072773571,
+                0.40193354567223316
+              ],
+              [
+                5.551115123125783e-17,
+                0.951056459472016,
+                0.3090171692585278
+              ]
+            ]
+          },
+          "assumptions": {
+            "object_shape": "known upright ellipsoid",
+            "radii_m": [
+              0.022,
+              0.032,
+              0.038
+            ],
+            "mask_source": "MuJoCo segmentation for egg_geom"
+          },
+          "debug_images": {},
+          "accepted": true
+        },
+        {
+          "status": "ok",
+          "camera": "stage3_egg_overview",
+          "position_world_est": [
+            0.1627121482378359,
+            0.12783482339105642,
+            0.04256783098247907
+          ],
+          "surface_centroid_world": [
+            0.16126644468993762,
+            0.11252197282129588,
+            0.04739284035928461
+          ],
+          "mask_pixels": 181,
+          "valid_depth_points": 181,
+          "visibility_fraction": 0.0005891927083333334,
+          "confidence": 0.09941560253681045,
+          "fit_residual_rms": 0.048430713660514775,
+          "depth_m": {
+            "min": 0.9291821122169495,
+            "mean": 0.9337484240531921,
+            "max": 0.9460912942886353
+          },
+          "intrinsics": {
+            "width": 640,
+            "height": 480,
+            "fx": 579.4112549695428,
+            "fy": 579.4112549695428,
+            "cx": 319.5,
+            "cy": 239.5,
+            "fovy_deg": 45.0
+          },
+          "camera_pose": {
+            "position_world": [
+              -0.47,
+              -0.55,
+              0.28
+            ],
+            "xmat_world": [
+              [
+                0.7548637593860368,
+                0.2502319549670107,
+                -0.6062711220889277
+              ],
+              [
+                -0.6558816240493246,
+                0.28799561890258096,
+                -0.6977663066724702
+              ],
+              [
+                0.0,
+                0.9243605855975834,
+                0.381519996584311
+              ]
+            ]
+          },
+          "assumptions": {
+            "object_shape": "known upright ellipsoid",
+            "radii_m": [
+              0.022,
+              0.032,
+              0.038
+            ],
+            "mask_source": "MuJoCo segmentation for egg_geom"
+          },
+          "debug_images": {},
+          "accepted": false
+        }
+      ]
+    }
+  ],
+  "training_status": "closed_loop_eval_completed",
+  "promoted_policy": false
+}

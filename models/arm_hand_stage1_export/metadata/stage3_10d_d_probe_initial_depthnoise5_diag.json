@@ -1,0 +1,168 @@
+{
+  "generated_at": "2026-06-09T02:54:15",
+  "checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\stage3_10c_safety_act_cvae_policy_v0.pth",
+  "checkpoint_status": "stage3_10c_safety_act_cvae_policy_v0_offline_trained_not_closed_loop_promoted",
+  "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_stage3_egg_gentle_grasp_hold_v0.xml",
+  "selected_pinch_config": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_pinch_grasp_training_v0_selected.json",
+  "execution_mode": "scripted_arm_predicted_hand",
+  "full_hand_control_mode": "stage3_7d_fallback",
+  "full_hand_fallback_checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\stage3_phase_hand_policy_v0.pth",
+  "replan_interval": 16,
+  "device": "cpu",
+  "args": {
+    "checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\stage3_10c_safety_act_cvae_policy_v0.pth",
+    "scene": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\mjcf\\scene_arm_hand_export4_stage3_egg_gentle_grasp_hold_v0.xml",
+    "selected_pinch_config": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_pinch_grasp_training_v0_selected.json",
+    "report": "simulations\\models\\arm_hand_stage1_export\\docs\\stage3_10d_d_probe_initial_depthnoise5_diag_report.md",
+    "metadata": "simulations\\models\\arm_hand_stage1_export\\metadata\\stage3_10d_d_probe_initial_depthnoise5_diag.json",
+    "skills": "thumb_index_middle_pinch",
+    "trials": "cycle",
+    "episodes_per_skill": 1,
+    "execution_mode": "scripted_arm_predicted_hand",
+    "replan_interval": 16,
+    "hand_start_index": 6,
+    "full_hand_control_mode": "stage3_7d_fallback",
+    "full_hand_fallback_checkpoint": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\checkpoints\\stage3_phase_hand_policy_v0.pth",
+    "full_hand_fallback_transition_slip_threshold": 0.29,
+    "full_hand_fallback_max_transition_hold_steps_per_phase": 200,
+    "full_hand_fallback_recovery_progress_drop": 0.01,
+    "full_hand_fallback_recovery_stable_window_steps": 0,
+    "pinch_repair_mode": "all",
+    "pinch_repair_phases": "pinch_close,contact_settle,slow_lift,hold",
+    "pinch_repair_slip_threshold": 0.28,
+    "pinch_repair_inactive_alpha": 0.75,
+    "pinch_repair_expert_alpha": 0.35,
+    "pinch_repair_close_gain": 0.08,
+    "pinch_repair_close_max": 0.18,
+    "pinch_repair_preclose_delta": 0.1,
+    "pinch_repair_max_crush": 0.25,
+    "pinch_repair_max_penetration": 0.0035,
+    "pinch_final_verification_mode": "strict_vision",
+    "pinch_final_corroboration_min_confidence": 0.3,
+    "pinch_final_corroboration_min_mask_pixels": 500,
+    "pinch_final_occlusion_aware_min_mask_pixels": 120,
+    "seed": 270,
+    "random_offset_std": 0.005,
+    "camera": "stage3_egg_closeup",
+    "width": 640,
+    "height": 480,
+    "initial_vision_stress_scenario": "depth_noise_5mm",
+    "final_vision_stress_scenario": "none",
+    "initial_vision_stress_samples": 15,
+    "final_vision_stress_samples": 5,
+    "policy_vision_quality_mode": "accepted_nominal",
+    "policy_vision_nominal_min_confidence": 0.95,
+    "policy_vision_nominal_max_occlusion": 0.05,
+    "policy_vision_nominal_max_noise_std": 0.0,
+    "vision_stress_min_mask_pixels": 80,
+    "sample_every": 240,
+    "device": "cpu",
+    "capture_sequence": false
+  },
+  "summary": {
+    "status": "FAIL",
+    "episodes": 1,
+    "success_count": 0,
+    "terminal_reason_counts": {
+      "initial_vision_failed": 1
+    },
+    "failure_reason_counts": {
+      "initial_vision_failed": 1
+    },
+    "risk_flag_counts": {},
+    "by_skill": {
+      "thumb_index_middle_pinch": {
+        "episodes": 1,
+        "success_count": 0,
+        "terminal_reason_counts": {
+          "initial_vision_failed": 1
+        },
+        "failure_reason_counts": {
+          "initial_vision_failed": 1
+        },
+        "risk_flag_counts": {}
+      }
+    }
+  },
+  "results": [
+    {
+      "episode_id": 0,
+      "skill_id": "thumb_index_middle_pinch",
+      "candidate": "thumb_index_middle_strong__higher_approach",
+      "trial": "center_nominal",
+      "status": "FAIL",
+      "success": false,
+      "terminal_reason": "initial_vision_failed",
+      "failure_reasons": [
+        "initial_vision_failed"
+      ],
+      "risk_flags": [],
+      "summary": {
+        "initial_vision_accepted": false,
+        "initial_vision_stress_scenario": "depth_noise_5mm",
+        "initial_vision_stress_samples": 15,
+        "initial_vision_stress_sample_index": 11,
+        "initial_vision_status": "ok",
+        "initial_vision_failure_reason": "ok",
+        "initial_vision_confidence": 8.83779946711202e-06,
+        "initial_vision_mask_pixels": 14467,
+        "initial_vision_mask_retention_ratio": 1.0,
+        "initial_vision_visibility_fraction": 0.047093098958333336,
+        "policy_vision_quality_mode": "accepted_nominal"
+      },
+      "initial_vision": {
+        "status": "ok",
+        "scenario": {
+          "name": "depth_noise_5mm",
+          "mask_dropout": 0.0,
+          "occluder_fraction": 0.0,
+          "false_positive_blobs": 0,
+          "false_positive_radius_px": 0,
+          "depth_noise_std_m": 0.005,
+          "calibration_bias_m": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "position_world_est": [
+          0.19688590072962467,
+          0.1826049853758197,
+          -0.05281199030862295
+        ],
+        "surface_centroid_world": [
+          0.20451156323092276,
+          0.18582842702562638,
+          -0.049429590617771864
+        ],
+        "mask_pixels": 14467,
+        "clean_mask_pixels": 14467,
+        "retained_clean_pixels": 14467,
+        "mask_retention_ratio": 1.0,
+        "mask_contamination_ratio": 0.0,
+        "visibility_fraction": 0.047093098958333336,
+        "clean_visibility_fraction": 0.047093098958333336,
+        "valid_depth_points": 14467,
+        "confidence": 8.83779946711202e-06,
+        "fit_residual_rms": 0.23272945282724858,
+        "depth_noise_std_m": 0.005,
+        "calibration_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "debug_images": {},
+        "vision_stress_scenario": "depth_noise_5mm",
+        "vision_stress_sample_index": 11,
+        "vision_stress_samples": 15,
+        "camera": "stage3_egg_closeup",
+        "accepted": false,
+        "vision_stress_candidate_count": 15,
+        "vision_stress_best_confidence": 8.83779946711202e-06,
+        "vision_stress_best_mask_pixels": 14467
+      }
+    }
+  ],
+  "training_status": "closed_loop_eval_completed",
+  "promoted_policy": false
+}

@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-06-09",
+  "stage": "Stage3.10E",
+  "status": "PASS",
+  "summary": "Stage3.10 is closed as a MuJoCo mixed-control safety baseline: scripted arm/wrist, learned hand/fingers, safety/fallback, virtual vision, and synthetic tactile/slip.",
+  "key_results": {
+    "stage3_10b_full_success_episodes": "60/60",
+    "stage3_10c_random100_pose005": "100/100",
+    "stage3_10d_a_robustness": "40/40",
+    "stage3_10d_b_v1_occlusion": "100/100",
+    "stage3_10d_c_records": 200,
+    "stage3_10d_c_random_val_f1": 1.0,
+    "stage3_10d_d_new_stress": "12/12"
+  },
+  "new_fix": "Noisy virtual-camera depth_noise_5mm now uses median-depth ray fallback when ellipsoid fitting is unstable.",
+  "known_boundary": {
+    "combined_hard_initial_vision": "rejected; do not force-pass by relaxing grasp thresholds",
+    "full_action_act_dp": "not promoted",
+    "hardware_integration": false,
+    "real_camera": false
+  },
+  "reports": [
+    "simulations/models/arm_hand_stage1_export/docs/stage3_10e_stage3_10_closeout.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_10d_d_safety_head_rescan_v0_closeout.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_10d_c_occlusion_safety_head_v0_closeout.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_10d_b_occlusion_benchmark_v1_closeout.md",
+    "simulations/models/arm_hand_stage1_export/docs/stage3_10c_safety_act_cvae_policy_v0_closed_loop_benchmark_closeout.md"
+  ],
+  "next": "Stage3.11 should handle online safety-head integration, frame-level noisy/occlusion labels, and staged full-action/residual policy repair."
+}

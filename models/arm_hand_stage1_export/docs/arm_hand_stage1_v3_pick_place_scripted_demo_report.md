@@ -1,6 +1,6 @@
 # Arm-Hand Stage1 V3 Pick-Place Scripted Demo Report
 
-Generated: 2026-06-01T00:14:46
+Generated: 2026-06-11T01:46:00
 
 - Status: **PASS**
 - Terminal reason: `success_pick_place_ball`
@@ -10,8 +10,8 @@ Generated: 2026-06-01T00:14:46
 - Mode: `pure_physics_scripted_same_platform`
 - Training used: **No**
 - Dataset ready: **No**
-- Video: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v3_pick_place\pick_place_same_platform_scripted_demo.mp4`
-- Contact sheet: `D:\tendon_project\simulations\models\arm_hand_stage1_export\docs\visual_checks_arm_hand_stage1_v3_pick_place\pick_place_same_platform_contact_sheet.png`
+- Video: `None`
+- Contact sheet: `None`
 - Target center: `[0.165, 0.23, -0.06538044]`
 - Target radius: `0.035 m`
 - Stable target steps: `1169 / 240`

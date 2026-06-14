@@ -1,0 +1,620 @@
+{
+  "candidate": "thumb_index_middle_strong__higher_approach",
+  "active_fingers": [
+    "thumb",
+    "index",
+    "middle"
+  ],
+  "trial": "center_nominal",
+  "initial_egg_z_m": -0.05538044,
+  "final_egg_z_m": 0.04600170622681396,
+  "final_true_lift_m": 0.10138214622681396,
+  "min_success_lift_m": 0.05,
+  "final_floor_contacts": 0,
+  "hold_stable_fraction_observed": 1.0,
+  "hold_pinch_fraction_observed": 1.0,
+  "hold_purity_mean_observed": 0.7909100529100558,
+  "max_slip_score": 1.0,
+  "max_crush_risk": 0.11177027011155578,
+  "max_penetration_m": 0.002235405402231116,
+  "rows": [
+    {
+      "label": "start_preapproach",
+      "phase": "start",
+      "lift_m": 0.0,
+      "egg_z_m": -0.05538044,
+      "floor_contacts": 1,
+      "hand_contacts": 0,
+      "regions": [
+        "support"
+      ],
+      "region_counts": {
+        "support": 1
+      },
+      "pinch_contact_ok": false,
+      "pinch_purity": 0.0,
+      "slip": 0.0,
+      "grip_stable": false,
+      "morphology": {
+        "hand_contact_count": 0,
+        "unique_hand_regions": [],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 0.0,
+        "support_contact_ratio": 0.0,
+        "two_finger_tip_pinch": false,
+        "three_digit_clamp": false,
+        "multi_segment_or_support_wrap": false,
+        "wrap_score": 0.0
+      }
+    },
+    {
+      "label": "approach_end",
+      "phase": "approach",
+      "lift_m": -0.0007246812721004026,
+      "egg_z_m": -0.056105121272100406,
+      "floor_contacts": 1,
+      "hand_contacts": 1,
+      "regions": [
+        "palm",
+        "support"
+      ],
+      "region_counts": {
+        "support": 1,
+        "palm": 1
+      },
+      "pinch_contact_ok": false,
+      "pinch_purity": 0.0,
+      "slip": 0.10846838286834909,
+      "grip_stable": true,
+      "morphology": {
+        "hand_contact_count": 1,
+        "unique_hand_regions": [
+          "palm"
+        ],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 1.0,
+        "support_contact_ratio": 1.0,
+        "desired_contact_ratio": 0.0,
+        "desired_tip_regions": [],
+        "active_regions": [],
+        "two_finger_tip_pinch": false,
+        "three_digit_clamp": false,
+        "multi_segment_or_support_wrap": true,
+        "wrap_score": 0.75
+      }
+    },
+    {
+      "label": "preshape_end",
+      "phase": "preshape",
+      "lift_m": -0.0007286409846626388,
+      "egg_z_m": -0.05610908098466264,
+      "floor_contacts": 1,
+      "hand_contacts": 3,
+      "regions": [
+        "index",
+        "middle",
+        "palm",
+        "support"
+      ],
+      "region_counts": {
+        "support": 1,
+        "palm": 1,
+        "index": 1,
+        "middle": 1
+      },
+      "pinch_contact_ok": false,
+      "pinch_purity": 0.6666666666666666,
+      "slip": 0.13170899776872638,
+      "grip_stable": true,
+      "morphology": {
+        "hand_contact_count": 3,
+        "unique_hand_regions": [
+          "index",
+          "middle",
+          "palm"
+        ],
+        "tip_contact_ratio": 0.0,
+        "non_tip_contact_ratio": 1.0,
+        "support_contact_ratio": 0.3333333333333333,
+        "desired_contact_ratio": 0.6666666666666666,
+        "desired_tip_regions": [],
+        "active_regions": [
+          "index",
+          "middle"
+        ],
+        "two_finger_tip_pinch": false,
+        "three_digit_clamp": false,
+        "multi_segment_or_support_wrap": true,
+        "wrap_score": 0.6166666666666667
+      }
+    },
+    {
+      "label": "pinch_close_end",
+      "phase": "pinch_close",
+      "lift_m": -0.002587318127136612,
+      "egg_z_m": -0.057967758127136615,
+      "floor_contacts": 1,
+      "hand_contacts": 5,
+      "regions": [
+        "index",
+        "middle",
+        "palm",
+        "support",
+        "thumb"
+      ],
+      "region_counts": {
+        "support": 1,
+        "palm": 1,
+        "index": 1,
+        "middle": 2,
+        "thumb": 1
+      },
+      "pinch_contact_ok": true,
+      "pinch_purity": 0.8,
+      "slip": 0.08264504853204128,
+      "grip_stable": true,
+      "morphology": {
+        "hand_contact_count": 5,
+        "unique_hand_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "tip_contact_ratio": 0.4,
+        "non_tip_contact_ratio": 0.6,
+        "support_contact_ratio": 0.2,
+        "desired_contact_ratio": 0.8,
+        "desired_tip_regions": [
+          "index",
+          "thumb"
+        ],
+        "active_regions": [
+          "index",
+          "middle"
+        ],
+        "two_finger_tip_pinch": false,
+        "three_digit_clamp": true,
+        "multi_segment_or_support_wrap": true,
+        "wrap_score": 0.6133333333333334
+      }
+    },
+    {
+      "label": "contact_settle_release",
+      "phase": "contact_settle",
+      "lift_m": -0.008593003743533528,
+      "egg_z_m": -0.06397344374353353,
+      "floor_contacts": 0,
+      "hand_contacts": 5,
+      "regions": [
+        "index",
+        "middle",
+        "palm",
+        "thumb"
+      ],
+      "region_counts": {
+        "palm": 1,
+        "index": 1,
+        "middle": 2,
+        "thumb": 1
+      },
+      "pinch_contact_ok": true,
+      "pinch_purity": 0.8,
+      "slip": 0.06780871061990068,
+      "grip_stable": true,
+      "morphology": {
+        "hand_contact_count": 5,
+        "unique_hand_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "tip_contact_ratio": 0.6,
+        "non_tip_contact_ratio": 0.4,
+        "support_contact_ratio": 0.2,
+        "desired_contact_ratio": 0.8,
+        "desired_tip_regions": [
+          "index",
+          "middle",
+          "thumb"
+        ],
+        "active_regions": [
+          "index",
+          "middle"
+        ],
+        "two_finger_tip_pinch": false,
+        "three_digit_clamp": true,
+        "multi_segment_or_support_wrap": true,
+        "wrap_score": 0.5233333333333333
+      }
+    },
+    {
+      "label": "slow_lift_mid",
+      "phase": "slow_lift",
+      "lift_m": 0.044328437927371116,
+      "egg_z_m": -0.011052002072628889,
+      "floor_contacts": 0,
+      "hand_contacts": 5,
+      "regions": [
+        "index",
+        "middle",
+        "palm",
+        "thumb"
+      ],
+      "region_counts": {
+        "palm": 1,
+        "index": 1,
+        "middle": 2,
+        "thumb": 1
+      },
+      "pinch_contact_ok": true,
+      "pinch_purity": 0.8,
+      "slip": 0.19054228007522406,
+      "grip_stable": true,
+      "morphology": {
+        "hand_contact_count": 5,
+        "unique_hand_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "tip_contact_ratio": 0.6,
+        "non_tip_contact_ratio": 0.4,
+        "support_contact_ratio": 0.2,
+        "desired_contact_ratio": 0.8,
+        "desired_tip_regions": [
+          "index",
+          "middle",
+          "thumb"
+        ],
+        "active_regions": [
+          "index",
+          "middle"
+        ],
+        "two_finger_tip_pinch": false,
+        "three_digit_clamp": true,
+        "multi_segment_or_support_wrap": true,
+        "wrap_score": 0.5233333333333333
+      }
+    },
+    {
+      "label": "slow_lift_end",
+      "phase": "slow_lift",
+      "lift_m": 0.09681658699106474,
+      "egg_z_m": 0.04143614699106474,
+      "floor_contacts": 0,
+      "hand_contacts": 6,
+      "regions": [
+        "index",
+        "middle",
+        "palm",
+        "thumb"
+      ],
+      "region_counts": {
+        "palm": 1,
+        "index": 2,
+        "middle": 2,
+        "thumb": 1
+      },
+      "pinch_contact_ok": true,
+      "pinch_purity": 0.8333333333333334,
+      "slip": 0.16119411569156664,
+      "grip_stable": true,
+      "morphology": {
+        "hand_contact_count": 6,
+        "unique_hand_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "tip_contact_ratio": 0.3333333333333333,
+        "non_tip_contact_ratio": 0.6666666666666667,
+        "support_contact_ratio": 0.16666666666666666,
+        "desired_contact_ratio": 0.8333333333333334,
+        "desired_tip_regions": [
+          "index",
+          "thumb"
+        ],
+        "active_regions": [
+          "index",
+          "middle"
+        ],
+        "two_finger_tip_pinch": false,
+        "three_digit_clamp": true,
+        "multi_segment_or_support_wrap": true,
+        "wrap_score": 0.6333333333333334
+      }
+    },
+    {
+      "label": "hold_mid",
+      "phase": "hold",
+      "lift_m": 0.09932293708682693,
+      "egg_z_m": 0.04394249708682694,
+      "floor_contacts": 0,
+      "hand_contacts": 5,
+      "regions": [
+        "index",
+        "middle",
+        "palm",
+        "thumb"
+      ],
+      "region_counts": {
+        "palm": 1,
+        "index": 1,
+        "middle": 2,
+        "thumb": 1
+      },
+      "pinch_contact_ok": true,
+      "pinch_purity": 0.8,
+      "slip": 0.05293992489623923,
+      "grip_stable": true,
+      "morphology": {
+        "hand_contact_count": 5,
+        "unique_hand_regions": [
+          "index",
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "tip_contact_ratio": 0.2,
+        "non_tip_contact_ratio": 0.8,
+        "support_contact_ratio": 0.2,
+        "desired_contact_ratio": 0.8,
+        "desired_tip_regions": [
+          "thumb"
+        ],
+        "active_regions": [
+          "index",
+          "middle"
+        ],
+        "two_finger_tip_pinch": false,
+        "three_digit_clamp": true,
+        "multi_segment_or_support_wrap": true,
+        "wrap_score": 0.7033333333333334
+      }
+    },
+    {
+      "label": "hold_end",
+      "phase": "hold",
+      "lift_m": 0.10138214622681396,
+      "egg_z_m": 0.04600170622681396,
+      "floor_contacts": 0,
+      "hand_contacts": 4,
+      "regions": [
+        "middle",
+        "palm",
+        "thumb"
+      ],
+      "region_counts": {
+        "palm": 1,
+        "middle": 2,
+        "thumb": 1
+      },
+      "pinch_contact_ok": true,
+      "pinch_purity": 0.75,
+      "slip": 0.11693813523421127,
+      "grip_stable": true,
+      "morphology": {
+        "hand_contact_count": 4,
+        "unique_hand_regions": [
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "tip_contact_ratio": 0.25,
+        "non_tip_contact_ratio": 0.75,
+        "support_contact_ratio": 0.25,
+        "desired_contact_ratio": 0.75,
+        "desired_tip_regions": [
+          "thumb"
+        ],
+        "active_regions": [
+          "middle"
+        ],
+        "two_finger_tip_pinch": false,
+        "three_digit_clamp": false,
+        "multi_segment_or_support_wrap": true,
+        "wrap_score": 0.4791666666666667
+      }
+    },
+    {
+      "label": "final_hold",
+      "phase": "hold",
+      "lift_m": 0.10138214622681396,
+      "egg_z_m": 0.04600170622681396,
+      "floor_contacts": 0,
+      "hand_contacts": 4,
+      "regions": [
+        "middle",
+        "palm",
+        "thumb"
+      ],
+      "region_counts": {
+        "palm": 1,
+        "middle": 2,
+        "thumb": 1
+      },
+      "pinch_contact_ok": true,
+      "pinch_purity": 0.75,
+      "slip": 0.0,
+      "grip_stable": true,
+      "morphology": {
+        "hand_contact_count": 4,
+        "unique_hand_regions": [
+          "middle",
+          "palm",
+          "thumb"
+        ],
+        "tip_contact_ratio": 0.25,
+        "non_tip_contact_ratio": 0.75,
+        "support_contact_ratio": 0.25,
+        "desired_contact_ratio": 0.75,
+        "desired_tip_regions": [
+          "thumb"
+        ],
+        "active_regions": [
+          "middle"
+        ],
+        "two_finger_tip_pinch": false,
+        "three_digit_clamp": false,
+        "multi_segment_or_support_wrap": true,
+        "wrap_score": 0.4791666666666667
+      }
+    }
+  ],
+  "rendered": [
+    {
+      "label": "start_preapproach",
+      "view": "side_a",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\00_start_preapproach_side_a.png"
+    },
+    {
+      "label": "start_preapproach",
+      "view": "side_b",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\00_start_preapproach_side_b.png"
+    },
+    {
+      "label": "start_preapproach",
+      "view": "overview",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\00_start_preapproach_overview.png"
+    },
+    {
+      "label": "approach_end",
+      "view": "side_a",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\01_approach_end_side_a.png"
+    },
+    {
+      "label": "approach_end",
+      "view": "side_b",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\01_approach_end_side_b.png"
+    },
+    {
+      "label": "approach_end",
+      "view": "overview",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\01_approach_end_overview.png"
+    },
+    {
+      "label": "preshape_end",
+      "view": "side_a",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\02_preshape_end_side_a.png"
+    },
+    {
+      "label": "preshape_end",
+      "view": "side_b",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\02_preshape_end_side_b.png"
+    },
+    {
+      "label": "preshape_end",
+      "view": "overview",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\02_preshape_end_overview.png"
+    },
+    {
+      "label": "pinch_close_end",
+      "view": "side_a",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\03_pinch_close_end_side_a.png"
+    },
+    {
+      "label": "pinch_close_end",
+      "view": "side_b",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\03_pinch_close_end_side_b.png"
+    },
+    {
+      "label": "pinch_close_end",
+      "view": "overview",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\03_pinch_close_end_overview.png"
+    },
+    {
+      "label": "contact_settle_release",
+      "view": "side_a",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\04_contact_settle_release_side_a.png"
+    },
+    {
+      "label": "contact_settle_release",
+      "view": "side_b",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\04_contact_settle_release_side_b.png"
+    },
+    {
+      "label": "contact_settle_release",
+      "view": "overview",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\04_contact_settle_release_overview.png"
+    },
+    {
+      "label": "slow_lift_mid",
+      "view": "side_a",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\05_slow_lift_mid_side_a.png"
+    },
+    {
+      "label": "slow_lift_mid",
+      "view": "side_b",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\05_slow_lift_mid_side_b.png"
+    },
+    {
+      "label": "slow_lift_mid",
+      "view": "overview",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\05_slow_lift_mid_overview.png"
+    },
+    {
+      "label": "slow_lift_end",
+      "view": "side_a",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\06_slow_lift_end_side_a.png"
+    },
+    {
+      "label": "slow_lift_end",
+      "view": "side_b",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\06_slow_lift_end_side_b.png"
+    },
+    {
+      "label": "slow_lift_end",
+      "view": "overview",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\06_slow_lift_end_overview.png"
+    },
+    {
+      "label": "hold_mid",
+      "view": "side_a",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\07_hold_mid_side_a.png"
+    },
+    {
+      "label": "hold_mid",
+      "view": "side_b",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\07_hold_mid_side_b.png"
+    },
+    {
+      "label": "hold_mid",
+      "view": "overview",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\07_hold_mid_overview.png"
+    },
+    {
+      "label": "hold_end",
+      "view": "side_a",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\08_hold_end_side_a.png"
+    },
+    {
+      "label": "hold_end",
+      "view": "side_b",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\08_hold_end_side_b.png"
+    },
+    {
+      "label": "hold_end",
+      "view": "overview",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\08_hold_end_overview.png"
+    },
+    {
+      "label": "final_hold",
+      "view": "side_a",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\09_final_hold_side_a.png"
+    },
+    {
+      "label": "final_hold",
+      "view": "side_b",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\09_final_hold_side_b.png"
+    },
+    {
+      "label": "final_hold",
+      "view": "overview",
+      "path": "D:\\tendon_project\\simulations\\models\\arm_hand_stage1_export\\docs\\visual_checks_stage3_11d_pinch_demo_visual_review_v0\\09_final_hold_overview.png"
+    }
+  ]
+}
