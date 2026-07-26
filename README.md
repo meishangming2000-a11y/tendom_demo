@@ -1,5 +1,14 @@
 # Simulations
 
+> Status note, applied 2026-07-01: this document contains older
+> pre_grasp/MuJoCo mainline framing. For current project routing, read
+> `docs/agentic_project_index.md`, `docs/project_path_summary_20260630.md`,
+> `docs/nervous_system/root_project.json`, the relevant
+> `docs/nervous_system/lanes/*.json` capsule, and `docs/INDEX.md` first.
+> Treat pre_grasp/MuJoCo details here as legacy MuJoCo baseline,
+> teacher/evidence, or historical task-definition context unless a newer
+> source-of-truth file says otherwise.
+
 `simulations/` is the active runtime workspace for the tendon-driven hand project. If you are working on the current software mainline, treat this directory as the local project root.
 
 ## Canonical Mainline
