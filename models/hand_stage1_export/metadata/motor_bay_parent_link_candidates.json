@@ -1,0 +1,135 @@
+{
+  "schema": "motor_bay_parent_link_candidates_v0",
+  "generated_at": "2026-06-25",
+  "status": "preflight_only_no_mjcf_written",
+  "scene": "simulations/models/hand_stage1_export/mjcf/scene_export4_connected_to_body_corrected_v10.xml",
+  "default_state": "qpos_zero_mj_forward",
+  "final_parent_link": "UNKNOWN",
+  "provisional_recommendation": {
+    "body_fixed_motor_bay": "rough_body_support_link",
+    "wrist_side_forearm_housing": "ee_mount",
+    "note": "Do not finalize until the user provides the intended parent link and motor_bay_mount_csys transform."
+  },
+  "candidates": [
+    {
+      "candidate_parent_link": "rough_body_support_link",
+      "exists": true,
+      "body_path": "/world/rough_body_support_link",
+      "world_pose": {
+        "pos": [0.0, 0.0, 0.18],
+        "quat_wxyz": [1.0, 0.0, 0.0, 0.0]
+      },
+      "reason_for_candidate": "Body/root support link; best candidate if motor bay is fixed to the body/support frame.",
+      "risk": "Wrong if the motor bay actually moves with an arm/forearm segment; body is still PARTIAL / needs final CAD confirmation.",
+      "recommended_or_not": "provisional_recommended_for_body_fixed_motor_bay"
+    },
+    {
+      "candidate_parent_link": "base_link",
+      "exists": true,
+      "body_path": "/world/rough_body_support_link/base_link",
+      "world_pose": {
+        "pos": [0.0, 0.0, 0.18],
+        "quat_wxyz": [0.5, 0.5, -0.5, 0.5]
+      },
+      "reason_for_candidate": "Arm root; candidate if motor bay is fixed to the arm root after the body mount.",
+      "risk": "May give body-mounted geometry arm-root semantics; parent choice must be confirmed by CAD.",
+      "recommended_or_not": "conditional_not_default"
+    },
+    {
+      "candidate_parent_link": "link_1",
+      "exists": true,
+      "body_path": "/world/rough_body_support_link/base_link/link_1",
+      "world_pose": {
+        "pos": [0.0, 0.0, 0.18],
+        "quat_wxyz": [0.5, 0.5, -0.5, 0.5]
+      },
+      "reason_for_candidate": "First actuated arm link; candidate only if physically mounted on link_1.",
+      "risk": "Would move with joint j1; likely wrong for body-side fixed motor bay.",
+      "recommended_or_not": "not_recommended_unless_cad_says_link_1"
+    },
+    {
+      "candidate_parent_link": "link_2",
+      "exists": true,
+      "body_path": "/world/rough_body_support_link/base_link/link_1/link_2",
+      "world_pose": {
+        "pos": [-0.014755, -0.133, 0.143629],
+        "quat_wxyz": [0.6940200699, 0.1354100136, 0.1354120136, 0.6940200699]
+      },
+      "reason_for_candidate": "Moving arm segment candidate.",
+      "risk": "Would move with upstream joints; high risk unless motor bay is physically on link_2.",
+      "recommended_or_not": "not_recommended_unless_cad_says_link_2"
+    },
+    {
+      "candidate_parent_link": "link_3",
+      "exists": true,
+      "body_path": "/world/rough_body_support_link/base_link/link_1/link_2/link_3",
+      "world_pose": {
+        "pos": [0.0061697879, -0.2638298946, 0.1775061959],
+        "quat_wxyz": [0.4929366242, -0.5069475003, 0.4831598263, 0.5163083368]
+      },
+      "reason_for_candidate": "Moving distal arm segment candidate.",
+      "risk": "Would move with upstream joints; high risk unless motor bay is physically on link_3.",
+      "recommended_or_not": "not_recommended_unless_cad_says_link_3"
+    },
+    {
+      "candidate_parent_link": "ee_mount",
+      "exists": true,
+      "body_path": "/world/rough_body_support_link/base_link/link_1/link_2/link_3/ee_mount",
+      "world_pose": {
+        "pos": [0.0084844505, -0.4093065967, 0.1198449446],
+        "quat_wxyz": [0.706231354, 0.0349275511, 0.0241971882, 0.706704915]
+      },
+      "reason_for_candidate": "Existing arm/hand mounting body; candidate if motor bay is distal forearm/wrist-side housing between arm and hand.",
+      "risk": "Could crowd or obscure wrist/hand mount; must preserve existing hand_base_link and active joint tree.",
+      "recommended_or_not": "conditional_recommended_for_wrist_side_motor_bay_only"
+    },
+    {
+      "candidate_parent_link": "ee_tool_frame",
+      "exists": true,
+      "body_path": "/world/rough_body_support_link/base_link/link_1/link_2/link_3/ee_mount/ee_tool_frame",
+      "world_pose": {
+        "pos": [-0.006282642, -0.3884405437, 0.1781650142],
+        "quat_wxyz": [0.6819651818, -0.2538650332, -0.6275246381, 0.2769275435]
+      },
+      "reason_for_candidate": "Useful reference frame for measurement.",
+      "risk": "Not preferred load-bearing parent; may create confusing frame semantics.",
+      "recommended_or_not": "not_recommended_as_parent"
+    },
+    {
+      "candidate_parent_link": "hand_base_link",
+      "exists": true,
+      "body_path": "/world/rough_body_support_link/base_link/link_1/link_2/link_3/ee_mount/hand_base_link",
+      "world_pose": {
+        "pos": [-0.0110737006, -0.431056569, 0.1764019929],
+        "quat_wxyz": [0.652955336, 0.6321888304, -0.2713901172, -0.3167554516]
+      },
+      "reason_for_candidate": "Hand root; candidate only if motor bay is physically part of the hand base.",
+      "risk": "Would couple motor bay to hand root and may confuse future hand-only assumptions.",
+      "recommended_or_not": "not_recommended"
+    },
+    {
+      "candidate_parent_link": "wrist_middle_link",
+      "exists": true,
+      "body_path": "/world/rough_body_support_link/base_link/link_1/link_2/link_3/ee_mount/hand_base_link/wrist_middle_link",
+      "world_pose": {
+        "pos": [-0.0223973471, -0.4408613722, 0.1772025335],
+        "quat_wxyz": [-0.4213059235, 0.002360024, -0.0303124941, -0.906408794]
+      },
+      "reason_for_candidate": "Wrist-local visual/reference candidate.",
+      "risk": "Moves with wrist_1_joint; not appropriate for a fixed motor bay housing.",
+      "recommended_or_not": "not_recommended"
+    },
+    {
+      "candidate_parent_link": "palm_link",
+      "exists": true,
+      "body_path": "/world/rough_body_support_link/base_link/link_1/link_2/link_3/ee_mount/hand_base_link/wrist_middle_link/palm_link",
+      "world_pose": {
+        "pos": [-0.0373757354, -0.4545451699, 0.1776009112],
+        "quat_wxyz": [-0.2599184543, -0.611635522, 0.3331546314, -0.6688440602]
+      },
+      "reason_for_candidate": "Hand-side reference only.",
+      "risk": "Moves with wrist joints; would alter hand-local geometry semantics.",
+      "recommended_or_not": "not_recommended"
+    }
+  ]
+}
