@@ -71,6 +71,8 @@ models/vec_normalize.pkl
 # Local datasets and generated media
 data/archive/
 reports/archive/
+reports/*/workers/
+reports/**/*.pid
 figures/*.gif
 figures/*.mp4
 
